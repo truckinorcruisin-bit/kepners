@@ -1,0 +1,91 @@
+"""
+espn_zimmer_history.py
+Pulls every historical Zimmer league draft from ESPN and writes zimmer_draft_history.json.
+
+Uses the `espn_api` package (pip install espn_api) which wraps ESPN's unofficial
+Fantasy API and already handles player-name resolution and team/owner mapping --
+no need to hand-roll the raw requests + cookie logic.
+
+REQUIRED environment variables (set locally for a test run, or as GitHub Secrets
+for the Actions workflow):
+    ESPN_LEAGUE_ID   -- numeric ID from your league's URL, e.g. .../leagueId=899513
+    ESPN_S2          -- cookie value (see setup notes below)
+    ESPN_SWID        -- cookie value, looks like {XXXXXXXX-XXXX-...}
+
+HOW TO GET ESPN_S2 / ESPN_SWID (no coding needed, just your browser):
+1. Log into https://fantasy.espn.com and open your Zimmer league
+2. Right-click anywhere on the page -> Inspect (opens developer tools)
+3. Click the "Application" tab (Chrome/Edge) or "Storage" tab (Firefox)
+4. In the left sidebar: Cookies -> https://fantasy.espn.com
+5. Find the row named "espn_s2" -> copy its Value -> that's ESPN_S2
+6. Find the row named "SWID" -> copy its Value (keep the curly braces {}) -> that's ESPN_SWID
+
+These don't require any app registration or approval process (unlike Yahoo) --
+they're just your existing login session cookies.
+
+SEASONS PULLED: edit ZIMMER_YEARS below to match how far back the league goes.
+"""
+import os
+import json
+from espn_api.football import League
+
+ZIMMER_YEARS = list(range(2020, 2026))  # 2020 through 2025; add 2026 once that draft happens
+
+
+def get_credentials():
+    league_id = os.environ.get("ESPN_LEAGUE_ID")
+    espn_s2 = os.environ.get("ESPN_S2")
+    swid = os.environ.get("ESPN_SWID")
+    if not league_id:
+        raise SystemExit("Set ESPN_LEAGUE_ID (env var or GitHub Secret) first.")
+    return int(league_id), espn_s2, swid
+
+
+def pull_season(league_id, year, espn_s2, swid):
+    try:
+        league = League(league_id=league_id, year=year, espn_s2=espn_s2, swid=swid)
+    except Exception as e:
+        print(f"  {year}: could not load ({e})")
+        return None
+
+    teams = {}
+    for team in league.teams:
+        owner_names = [o.get("displayName", "Unknown") for o in team.owners]
+        teams[team.team_id] = {
+            "team_name": team.team_name,
+            "owners": owner_names,
+        }
+
+    picks = []
+    for pick in league.draft:
+        picks.append({
+            "round": pick.round_num,
+            "round_pick": pick.round_pick,
+            "team_id": pick.team.team_id if pick.team else None,
+            "team_name": pick.team.team_name if pick.team else None,
+            "player": pick.playerName,
+            "player_id": pick.playerId,
+            "keeper": pick.keeper_status,
+        })
+
+    return {"teams": teams, "picks": picks}
+
+
+def main():
+    league_id, espn_s2, swid = get_credentials()
+    history = {"league_id": league_id, "seasons": {}}
+
+    for year in ZIMMER_YEARS:
+        print(f"Pulling {year}...")
+        season_data = pull_season(league_id, year, espn_s2, swid)
+        if season_data:
+            history["seasons"][year] = season_data
+            print(f"  {year}: {len(season_data['picks'])} picks, {len(season_data['teams'])} teams")
+
+    with open("zimmer_draft_history.json", "w") as f:
+        json.dump(history, f, indent=2)
+    print(f"\nWrote zimmer_draft_history.json -- {len(history['seasons'])} season(s).")
+
+
+if __name__ == "__main__":
+    main()

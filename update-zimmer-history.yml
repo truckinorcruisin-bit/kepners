@@ -1,0 +1,39 @@
+name: Update Zimmer Draft History
+
+# Run manually from the Actions tab.
+# Requires three repo secrets (Settings > Secrets and variables > Actions):
+#   ESPN_LEAGUE_ID, ESPN_S2, ESPN_SWID
+# See espn_zimmer_history.py docstring for how to find these (browser cookies --
+# no OAuth app or approval process needed, unlike Yahoo).
+on:
+  workflow_dispatch:
+
+jobs:
+  fetch-history:
+    runs-on: ubuntu-latest
+    env:
+      ESPN_LEAGUE_ID: ${{ secrets.ESPN_LEAGUE_ID }}
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install espn_api
+
+      - name: Pull Zimmer draft history from ESPN
+        run: python espn_zimmer_history.py
+
+      - name: Commit updated history
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add zimmer_draft_history.json
+          git diff --staged --quiet || git commit -m "Update Zimmer draft history"
+          git push
