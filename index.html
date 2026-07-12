@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DRAFT CONTROL</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Inter:wght@500;600;700&display=swap');
+  :root{
+    --bg:#0a0e14; --panel:#12181f; --line:#1f2833; --line-2:#2a3542;
+    --amber:#ffb703; --cyan:#00d9ff; --red:#ff4d4d; --green:#3ddc84;
+    --txt:#e8eef2; --dim:#7d8b99;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{background:var(--bg);color:var(--txt);font-family:'IBM Plex Mono',monospace;
+    -webkit-font-smoothing:antialiased;padding-bottom:40px;}
+  .wrap{max-width:780px;margin:0 auto;padding:0 14px;}
+
+  /* header */
+  header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);}
+  .hbar{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;max-width:780px;margin:0 auto;}
+  .logo{font-weight:700;letter-spacing:0.18em;font-size:13px;color:var(--amber);}
+  .logo b{color:var(--cyan);}
+  .status{font-size:10px;color:var(--dim);letter-spacing:0.1em;}
+  .status .dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);
+    box-shadow:0 0 8px var(--green);margin-right:5px;animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+
+  /* league tabs */
+  .leagues{display:flex;gap:0;border-bottom:1px solid var(--line);background:var(--bg);}
+  .leagues button{flex:1;background:none;border:none;border-bottom:2px solid transparent;
+    color:var(--dim);font-family:inherit;font-size:11px;font-weight:600;letter-spacing:0.04em;
+    padding:11px 6px;cursor:pointer;}
+  .leagues button .plat{display:block;font-size:8.5px;letter-spacing:0.14em;margin-top:3px;opacity:.6;}
+  .leagues button.on{color:var(--amber);border-bottom-color:var(--amber);}
+
+  /* clock row */
+  .clockrow{display:flex;align-items:center;gap:16px;padding:18px 0 6px;}
+  .radar{width:64px;height:64px;border-radius:50%;border:1px solid var(--line);position:relative;flex-shrink:0;
+    background:repeating-radial-gradient(circle,transparent 0 11px,var(--line) 11px 12px);}
+  .radar .sweep{position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from 0deg,rgba(255,183,3,.55),transparent 65deg);animation:spin 3s linear infinite;}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .clock .big{font-size:26px;font-weight:700;color:var(--amber);line-height:1;}
+  .clock .lbl{font-size:10px;color:var(--dim);letter-spacing:0.1em;margin-top:5px;}
+
+  /* section label */
+  .seclabel{font-size:10px;letter-spacing:0.16em;color:var(--cyan);margin:22px 0 10px;text-transform:uppercase;}
+  .seclabel::before{content:'◈ ';}
+
+  /* recommendation card */
+  .card{background:var(--panel);border:1px solid var(--line);position:relative;padding:15px;margin-bottom:11px;}
+  .card::before,.card::after{content:'';position:absolute;width:9px;height:9px;border:1px solid var(--amber);}
+  .card::before{top:-1px;left:-1px;border-right:none;border-bottom:none;}
+  .card::after{bottom:-1px;right:-1px;border-left:none;border-top:none;}
+  .rec .top{display:flex;justify-content:space-between;align-items:baseline;}
+  .rec .name{font-size:18px;font-weight:700;color:var(--amber);}
+  .rec .posbadge{font-size:10px;padding:2px 7px;border:1px solid var(--line-2);color:var(--cyan);}
+  .rec .meta{font-size:10.5px;color:var(--dim);margin:4px 0 12px;letter-spacing:0.02em;}
+  .rec .row{display:flex;justify-content:space-between;font-size:11px;padding:7px 0;border-top:1px solid var(--line);}
+  .rec .row .why{color:var(--cyan);text-align:right;max-width:62%;}
+  .rec .row .why.warn{color:var(--red);}
+  .tierpill{display:inline-block;font-size:9px;padding:2px 6px;border-radius:2px;margin-left:6px;
+    background:rgba(0,217,255,.1);color:var(--cyan);vertical-align:middle;}
+
+  /* feed ticker */
+  .ticker{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    overflow:hidden;white-space:nowrap;padding:8px 0;margin:6px 0 0;}
+  .ticker .track{display:inline-block;animation:scroll 26s linear infinite;}
+  .ticker span{font-size:10.5px;color:var(--dim);padding-right:34px;}
+  .ticker span b{color:var(--cyan);}
+  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* roster grid */
+  .roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:7px;}
+  .slot{background:var(--panel);border:1px solid var(--line);padding:9px 10px;}
+  .slot .s-pos{font-size:9px;letter-spacing:0.12em;color:var(--dim);}
+  .slot .s-val{font-size:12px;margin-top:3px;}
+  .slot.filled .s-val{color:var(--txt);}
+  .slot.empty .s-val{color:var(--line-2);}
+  .slot.need{border-color:var(--red);}
+  .slot.need .s-pos{color:var(--red);}
+  .slot.keeper{border-color:var(--amber);}
+  .slot.keeper .s-pos{color:var(--amber);}
+
+  /* board table */
+  table{width:100%;border-collapse:collapse;font-size:11px;}
+  th{text-align:left;font-size:9px;letter-spacing:0.1em;color:var(--dim);text-transform:uppercase;
+    padding:6px 6px;border-bottom:1px solid var(--line-2);font-weight:500;}
+  td{padding:7px 6px;border-bottom:1px solid var(--line);}
+  td.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .diff-pos{color:var(--green);} .diff-neg{color:var(--red);}
+  tr.gone td{opacity:.32;text-decoration:line-through;}
+  .foot{font-size:9.5px;color:var(--dim);margin-top:14px;line-height:1.6;}
+  .empty-note{font-size:11px;color:var(--dim);padding:20px;text-align:center;border:1px dashed var(--line-2);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hbar">
+    <div class="logo">DRAFT<b>CONTROL</b></div>
+    <div class="status"><span class="dot"></span><span id="statustxt">DATA LOADED · MOCK MODE</span></div>
+  </div>
+  <div class="leagues" id="leagues"></div>
+</header>
+
+<div class="wrap">
+  <div class="clockrow">
+    <div class="radar"><div class="sweep"></div></div>
+    <div class="clock">
+      <div class="big" id="clock">--:--</div>
+      <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
+    </div>
+  </div>
+
+  <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
+  <div id="recArea"></div>
+
+  <div class="seclabel">Live Feed</div>
+  <div class="ticker"><div class="track" id="ticker"></div></div>
+
+  <div class="seclabel">Your Roster</div>
+  <div class="roster" id="roster"></div>
+
+  <div class="seclabel">Board — Best Available</div>
+  <div id="boardArea"></div>
+
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+let DATA=null, activeLeague='kepners';
+
+// ---- data load: bigboard.json sits alongside this file ----
+async function boot(){
+  try{
+    const r = await fetch('bigboard.json');
+    DATA = await r.json();
+  }catch(e){
+    document.getElementById('statustxt').textContent='bigboard.json NOT FOUND — run converter';
+    return;
+  }
+  renderLeagueTabs();
+  render();
+}
+
+function renderLeagueTabs(){
+  const el=document.getElementById('leagues');
+  const names={kepners:'KEPNERS KEEPERS',miami:'MIAMI DOMERS',zimmer:'ZIMMER'};
+  el.innerHTML=Object.keys(DATA.leagues).map(k=>{
+    const lg=DATA.leagues[k];
+    return `<button data-k="${k}" class="${k===activeLeague?'on':''}">${names[k]||k}
+      <span class="plat">${lg.platform.toUpperCase()} · ${lg.myTeam}</span></button>`;
+  }).join('');
+  el.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    activeLeague=b.dataset.k;
+    el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
+    render();
+  });
+}
+
+// ---------- recommendation engine (v1 heuristic) ----------
+// Score = your-rank priority + positional need bump + scarcity-before-turn.
+// Live draft state (drafted[], myRoster) is empty in mock mode; wire the
+// proxy poll here later — everything below already reacts to it.
+function computeRecs(lg){
+  const drafted=new Set();            // playerIds already gone (from live feed)
+  const rosterCounts={};              // your filled counts by position
+  const need=neededPositions(lg,rosterCounts);
+  const pool=DATA.players
+    .filter(p=>p.pos!=='NA' && p.seanPosRank!=null && !drafted.has(p.id))
+    .map(p=>{
+      let score=1000-(p.avgRank||300);           // consensus baseline
+      if(need.has(p.pos)) score+=120;            // fills a need
+      if(p.tierGroup==='avoid') score-=400;
+      if(p.tierGroup==='handcuff') score-=150;
+      if(typeof p.myDiff==='number') score+=p.myDiff*4; // you rate above ADP
+      // keeper lock: if a player is kept in THIS league, remove from pool
+      if(lg.keepers.some(k=>k.playerId===p.id)) score=-1e9;
+      return {...p,_score:score};
+    })
+    .filter(p=>p._score>-1e8)
+    .sort((a,b)=>b._score-a._score);
+  return {pool,need};
+}
+
+function neededPositions(lg,counts){
+  // crude v1: any starter slot type not yet filled is a need
+  const starters=lg.rosterSlots.filter(s=>!['BEN','K','DEF'].includes(s));
+  const need=new Set();
+  starters.forEach(s=>{ const key=s==='FLEX'?'RB':s; if(!(counts[key]>0)) need.add(key); });
+  return need;
+}
+
+function render(){
+  const lg=DATA.leagues[activeLeague];
+  document.getElementById('myteamlbl').textContent=lg.myTeam;
+
+  if(!lg.teams.length){
+    document.getElementById('recArea').innerHTML=
+      `<div class="empty-note">${activeLeague.toUpperCase()} team sheet not yet in the workbook.<br>
+       Recommendations activate once the FY26 Team tab is populated.</div>`;
+    document.getElementById('roster').innerHTML='';
+    document.getElementById('boardArea').innerHTML='';
+    renderTicker(lg); renderFoot(lg); return;
+  }
+
+  const {pool,need}=computeRecs(lg);
+  renderRec(pool[0],need,lg);
+  renderTicker(lg);
+  renderRoster(lg);
+  renderBoard(pool.slice(0,12));
+  renderFoot(lg);
+}
+
+function renderRec(p,need,lg){
+  if(!p){document.getElementById('recArea').innerHTML='';return;}
+  const survives=p.avgRank!=null && p.avgRank<24 ? 'likely gone by your next pick'
+                 : 'expected to survive to your next pick';
+  const survClass = p.avgRank!=null && p.avgRank<24 ? 'warn':'';
+  document.getElementById('recArea').innerHTML=`
+    <div class="card rec">
+      <div class="top">
+        <div class="name">${p.name.toUpperCase()}
+          <span class="tierpill">${p.tier||'—'}</span></div>
+        <div class="posbadge">${p.pos}</div>
+      </div>
+      <div class="meta">${p.team||''} · YOUR POS RANK #${p.seanPosRank} · CONSENSUS ADP #${p.avgRank??'—'}${
+        typeof p.myDiff==='number'?` · YOUR DIFF ${p.myDiff>0?'+':''}${p.myDiff}`:''}</div>
+      <div class="row"><span>Positional need</span>
+        <span class="why">${need.has(p.pos)?'fills open '+p.pos+' starter':'depth / BPA'}</span></div>
+      <div class="row"><span>Survival to next pick</span>
+        <span class="why ${survClass}">${survives}</span></div>
+      <div class="row"><span>Keeper impact (this league)</span>
+        <span class="why">${lg.keepers.length} players kept league-wide</span></div>
+    </div>`;
+}
+
+function renderTicker(lg){
+  // mock feed from keepers so it looks live; replace with poll results
+  const items = lg.keepers.length
+    ? lg.keepers.slice(0,8).map(k=>`<span><b>${k.team}</b> keeps ${k.player} (R${k.round})</span>`)
+    : [`<span>NO PICKS YET · <b>${lg.myTeam}</b> ON DECK</span>`];
+  const track=[...items,...items].join('');
+  document.getElementById('ticker').innerHTML=track;
+}
+
+function renderRoster(lg){
+  const keptForMe=lg.keepers.filter(k=>{
+    const me=lg.teams.find(t=>t.isMe); return me && k.team===me.team;
+  });
+  document.getElementById('roster').innerHTML=lg.rosterSlots.map((slot,i)=>{
+    const kept=keptForMe[i];
+    const cls = kept?'filled keeper':(['BEN'].includes(slot)?'empty':'empty need');
+    return `<div class="slot ${cls}">
+      <div class="s-pos">${slot}</div>
+      <div class="s-val">${kept?kept.player:'—'}</div></div>`;
+  }).join('');
+}
+
+function renderBoard(list){
+  document.getElementById('boardArea').innerHTML=`
+    <table><thead><tr>
+      <th>Player</th><th>Pos</th><th class="num">You</th>
+      <th class="num">ADP</th><th class="num">Diff</th><th>Tier</th>
+    </tr></thead><tbody>${
+      list.map(p=>{
+        const d=typeof p.myDiff==='number'?p.myDiff:null;
+        const dc=d==null?'':(d>0?'diff-pos':'diff-neg');
+        return `<tr>
+          <td>${p.name}</td><td>${p.pos}</td>
+          <td class="num">${p.seanPosRank}</td>
+          <td class="num">${p.avgRank??'—'}</td>
+          <td class="num ${dc}">${d==null?'—':(d>0?'+':'')+d}</td>
+          <td style="color:var(--dim)">${(p.tier||'').split(' - ')[0]||'—'}</td>
+        </tr>`;
+      }).join('')
+    }</tbody></table>`;
+}
+
+function renderFoot(lg){
+  document.getElementById('foot').innerHTML=
+    `SOURCE · ${DATA.players.length} players from FY${DATA.meta.season} Big Board · `+
+    `${lg.teams.length} teams · ${lg.keepers.length} keepers · platform ${lg.platform.toUpperCase()}.<br>`+
+    `MOCK MODE — live draft feed & roster fill activate when the ${lg.platform.toUpperCase()} poll is wired in.`;
+}
+
+boot();
+</script>
+</body>
+</html>
