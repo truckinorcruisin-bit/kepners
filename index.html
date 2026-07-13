@@ -93,6 +93,40 @@
   tr.gone td{opacity:.32;text-decoration:line-through;}
   .foot{font-size:9.5px;color:var(--dim);margin-top:14px;line-height:1.6;}
   .empty-note{font-size:11px;color:var(--dim);padding:20px;text-align:center;border:1px dashed var(--line-2);}
+
+  /* mode toggle (Draft / History) */
+  .modes{display:flex;gap:8px;padding:12px 0 2px;}
+  .modes button{background:var(--panel);border:1px solid var(--line);color:var(--dim);
+    font-family:inherit;font-size:10px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;
+    padding:8px 14px;cursor:pointer;}
+  .modes button.on{color:var(--bg);background:var(--amber);border-color:var(--amber);}
+
+  /* headline cards */
+  .headline{background:var(--panel);border-left:2px solid var(--cyan);padding:10px 12px;margin-bottom:8px;
+    font-size:11.5px;line-height:1.5;color:var(--txt);}
+  .headline b{color:var(--amber);}
+
+  /* tier spread heatmap-ish table */
+  .tiertbl td.bar-cell{padding:4px 6px;min-width:120px;}
+  .barwrap{position:relative;height:16px;background:var(--line);border-radius:2px;overflow:hidden;}
+  .barfill{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,rgba(0,217,255,.35),rgba(255,183,3,.55));}
+  .barlbl{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;
+    padding:0 5px;font-size:9px;color:var(--txt);}
+  .pos-head{color:var(--amber);font-weight:700;font-size:11px;padding-top:12px;}
+
+  /* owner cards */
+  .ownercard{background:var(--panel);border:1px solid var(--line);padding:12px;margin-bottom:9px;}
+  .ownercard .oname{font-size:14px;font-weight:700;color:var(--amber);}
+  .ownercard .otag{display:inline-block;font-size:9px;padding:2px 7px;border-radius:10px;margin-left:8px;
+    vertical-align:middle;letter-spacing:0.06em;}
+  .otag.stars{background:rgba(255,77,77,.15);color:var(--red);}
+  .otag.balanced{background:rgba(61,220,132,.15);color:var(--green);}
+  .otag.value{background:rgba(0,217,255,.15);color:var(--cyan);}
+  .ownercard .ostats{display:flex;flex-wrap:wrap;gap:14px;margin-top:9px;}
+  .ostat{font-size:10px;color:var(--dim);}
+  .ostat b{display:block;font-size:15px;color:var(--txt);font-weight:700;margin-top:2px;}
+  .posspend{margin-top:9px;font-size:10px;color:var(--dim);line-height:1.7;}
+  .posspend .pchip{display:inline-block;background:var(--line);border-radius:3px;padding:2px 6px;margin:2px 4px 0 0;color:var(--txt);}
 </style>
 </head>
 <body>
@@ -106,33 +140,44 @@
 </header>
 
 <div class="wrap">
-  <div class="clockrow">
-    <div class="radar"><div class="sweep"></div></div>
-    <div class="clock">
-      <div class="big" id="clock">--:--</div>
-      <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
-    </div>
+  <div class="modes" id="modes">
+    <button data-mode="draft" class="on">Draft</button>
+    <button data-mode="history">History</button>
   </div>
 
-  <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
-  <div id="recArea"></div>
+  <!-- DRAFT VIEW -->
+  <div id="draftView">
+    <div class="clockrow">
+      <div class="radar"><div class="sweep"></div></div>
+      <div class="clock">
+        <div class="big" id="clock">--:--</div>
+        <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
+      </div>
+    </div>
 
-  <div class="seclabel">Live Feed</div>
-  <div class="ticker"><div class="track" id="ticker"></div></div>
+    <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
+    <div id="recArea"></div>
 
-  <div class="seclabel">Your Roster</div>
-  <div class="roster" id="roster"></div>
+    <div class="seclabel">Live Feed</div>
+    <div class="ticker"><div class="track" id="ticker"></div></div>
 
-  <div class="seclabel">Board — Best Available</div>
-  <div id="boardArea"></div>
+    <div class="seclabel">Your Roster</div>
+    <div class="roster" id="roster"></div>
 
-  <div class="foot" id="foot"></div>
+    <div class="seclabel">Board — Best Available</div>
+    <div id="boardArea"></div>
+
+    <div class="foot" id="foot"></div>
+  </div>
+
+  <!-- HISTORY VIEW -->
+  <div id="historyView" style="display:none;"></div>
 </div>
 
 <script>
-let DATA=null, activeLeague='kepners';
+let DATA=null, ZHIST=null, activeLeague='kepners', activeMode='draft';
 
-// ---- data load: bigboard.json sits alongside this file ----
+// ---- data load: bigboard.json (+ optional zimmer_analysis.json) alongside this file ----
 async function boot(){
   try{
     const r = await fetch('bigboard.json');
@@ -141,8 +186,27 @@ async function boot(){
     document.getElementById('statustxt').textContent='bigboard.json NOT FOUND — run converter';
     return;
   }
+  // Zimmer analysis is optional — only present after the analysis workflow runs.
+  try{
+    const r2 = await fetch('zimmer_analysis.json');
+    if(r2.ok) ZHIST = await r2.json();
+  }catch(e){ /* history view will show an empty state */ }
+
   renderLeagueTabs();
+  wireModes();
   render();
+}
+
+function wireModes(){
+  document.querySelectorAll('#modes button').forEach(b=>{
+    b.onclick=()=>{
+      activeMode=b.dataset.mode;
+      document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x===b));
+      document.getElementById('draftView').style.display = activeMode==='draft'?'':'none';
+      document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
+      render();
+    };
+  });
 }
 
 function renderLeagueTabs(){
@@ -195,6 +259,22 @@ function neededPositions(lg,counts){
 
 function render(){
   const lg=DATA.leagues[activeLeague];
+
+  // History view is Zimmer-only (auction analysis). For other leagues, force draft mode.
+  const historyBtn=document.querySelector('#modes button[data-mode="history"]');
+  if(activeLeague!=='zimmer'){
+    historyBtn.style.display='none';
+    if(activeMode==='history'){ activeMode='draft';
+      document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x.dataset.mode==='draft'));
+      document.getElementById('draftView').style.display='';
+      document.getElementById('historyView').style.display='none';
+    }
+  } else {
+    historyBtn.style.display='';
+  }
+
+  if(activeMode==='history'){ renderHistory(); return; }
+
   document.getElementById('myteamlbl').textContent=lg.myTeam;
 
   if(!lg.teams.length){
@@ -284,6 +364,106 @@ function renderFoot(lg){
     `SOURCE · ${DATA.players.length} players from FY${DATA.meta.season} Big Board · `+
     `${lg.teams.length} teams · ${lg.keepers.length} keepers · platform ${lg.platform.toUpperCase()}.<br>`+
     `MOCK MODE — live draft feed & roster fill activate when the ${lg.platform.toUpperCase()} poll is wired in.`;
+}
+
+// ---------- Zimmer History view ----------
+function ownerStyle(o){
+  // classify build style from top-3 concentration for a quick visual tag
+  if(o.top3_spend_share_pct>=45) return 'stars';
+  if(o.top3_spend_share_pct<=30) return 'value';
+  return 'balanced';
+}
+function styleLabel(s){
+  return {stars:'STARS & SCRUBS',balanced:'BALANCED',value:'VALUE HUNTER'}[s]||s;
+}
+
+function renderHistory(){
+  const el=document.getElementById('historyView');
+  if(!ZHIST){
+    el.innerHTML=`<div class="seclabel">Zimmer Auction History</div>
+      <div class="empty-note">zimmer_analysis.json not found.<br>
+      Run the "Update Zimmer Draft History" workflow, then the analysis step, to populate this view.</div>`;
+    return;
+  }
+
+  // headlines
+  const headlinesHtml = (ZHIST.headlines||[]).map(h=>{
+    // bold any $-amounts and position-tier tokens for scannability
+    const withBold=h.replace(/(\$\d+)/g,'<b>$1</b>');
+    return `<div class="headline">${withBold}</div>`;
+  }).join('');
+
+  // tier spread table, grouped by position with an inline range bar
+  const tiers=ZHIST.tier_spreads||[];
+  const globalMax=Math.max(1,...tiers.map(t=>t.high));
+  let tierRows=''; let curPos=null;
+  tiers.forEach(t=>{
+    if(t.position!==curPos){
+      curPos=t.position;
+      tierRows+=`<tr><td colspan="5" class="pos-head">${curPos}</td></tr>`;
+    }
+    const leftPct=100*t.low/globalMax;
+    const widthPct=Math.max(2,100*(t.high-t.low)/globalMax);
+    tierRows+=`<tr>
+      <td>${t.tier}</td>
+      <td class="bar-cell">
+        <div class="barwrap">
+          <div class="barfill" style="left:${leftPct}%;width:${widthPct}%;"></div>
+          <div class="barlbl"><span>$${t.low}</span><span>$${t.high}</span></div>
+        </div>
+      </td>
+      <td class="num">$${t.avg}</td>
+      <td class="num">$${t.spread}</td>
+      <td class="num">${t.n}</td>
+    </tr>`;
+  });
+
+  // owner cards
+  const owners=ZHIST.owners||[];
+  const ownerCards=owners.map(o=>{
+    const st=ownerStyle(o);
+    const posChips=Object.entries(o.pos_avg_spend||{})
+      .sort((a,b)=>b[1]-a[1])
+      .map(([pos,avg])=>`<span class="pchip">${pos} avg $${avg}</span>`).join('');
+    return `<div class="ownercard">
+      <div class="oname">${o.owner}<span class="otag ${st}">${styleLabel(st)}</span></div>
+      <div class="ostats">
+        <div class="ostat">TOP-3 SPEND<b>${o.top3_spend_share_pct}%</b></div>
+        <div class="ostat">STUDS / DRAFT<b>${o.avg_studs_per_draft}</b></div>
+        <div class="ostat">BARGAINS / DRAFT<b>${o.avg_bargains_per_draft}</b></div>
+        <div class="ostat">MAX BID EVER<b>$${o.max_bid_ever}</b></div>
+        <div class="ostat">SEASONS<b>${o.seasons}</b></div>
+      </div>
+      <div class="posspend">Avg spend by position: ${posChips||'—'}</div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML=`
+    <div class="seclabel">Zimmer Auction — Key Trends</div>
+    ${headlinesHtml}
+
+    <div class="seclabel">Winning-Bid Spread by Position Tier</div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      Tiers derived per season by ranking each position's players on price paid
+      (WR1 = the priciest WRs that year). Pooled across ${ (ZHIST.seasons_analyzed||[]).length } drafts:
+      ${(ZHIST.seasons_analyzed||[]).join(', ')}.
+    </div>
+    <table class="tiertbl"><thead><tr>
+      <th>Tier</th><th>Low → High Range</th><th class="num">Avg</th>
+      <th class="num">Spread</th><th class="num">N</th>
+    </tr></thead><tbody>${tierRows}</tbody></table>
+
+    <div class="seclabel">Per-Owner Auction Tendencies</div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      Aggregated by owner (team names change year to year). Top-3 spend share is the
+      key tell: high = stars-and-scrubs, low = balanced roster building.
+    </div>
+    ${ownerCards}
+
+    <div class="foot">
+      SOURCE · zimmer_analysis.json · ${owners.length} owners across
+      ${(ZHIST.seasons_analyzed||[]).length} auction seasons.
+    </div>`;
 }
 
 boot();

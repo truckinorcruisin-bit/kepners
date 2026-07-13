@@ -61,6 +61,23 @@ def pull_season(league_id, year, espn_s2, swid):
             "owners": owner_names,
         }
 
+    # Resolve positions for every drafted player in one batched call. The draft
+    # objects only carry playerId + name; position comes from the player card.
+    pos_map = {}
+    drafted_ids = [p.playerId for p in league.draft if p.playerId]
+    if drafted_ids:
+        try:
+            infos = league.player_info(playerId=drafted_ids)
+            if infos is None:
+                infos = []
+            if not isinstance(infos, list):
+                infos = [infos]
+            for pl in infos:
+                if pl:
+                    pos_map[pl.playerId] = pl.position
+        except Exception as e:
+            print(f"  {year}: position lookup failed, positions will be blank ({e})")
+
     # Auction leagues populate bid_amount on every pick; snake drafts leave it
     # None/0. Detect from the data itself rather than trusting settings fields,
     # since espn_api doesn't expose draft type directly.
@@ -73,6 +90,7 @@ def pull_season(league_id, year, espn_s2, swid):
             "team_name": pick.team.team_name if pick.team else None,
             "player": pick.playerName,
             "player_id": pick.playerId,
+            "position": pos_map.get(pick.playerId, ""),
             "keeper": pick.keeper_status,
         }
         if is_auction:
