@@ -11,17 +11,57 @@
   "tier_spreads": [
     {
       "position": "QB",
-      "tier": "QB1",
-      "n": 72,
+      "tier": "QB1-4",
+      "n": 24,
       "high": 39,
-      "low": 1,
-      "avg": 12.4,
-      "median": 8.5,
-      "spread": 38,
+      "low": 9,
+      "avg": 24.0,
+      "median": 24.0,
+      "spread": 30,
       "high_example": {
         "player": "Josh Allen",
         "cost": 39,
         "season": "2023"
+      },
+      "low_example": {
+        "player": "Dak Prescott",
+        "cost": 9,
+        "season": "2020"
+      }
+    },
+    {
+      "position": "QB",
+      "tier": "QB5-8",
+      "n": 24,
+      "high": 22,
+      "low": 3,
+      "avg": 9.6,
+      "median": 8.5,
+      "spread": 19,
+      "high_example": {
+        "player": "Joe Burrow",
+        "cost": 22,
+        "season": "2025"
+      },
+      "low_example": {
+        "player": "Jared Goff",
+        "cost": 3,
+        "season": "2025"
+      }
+    },
+    {
+      "position": "QB",
+      "tier": "QB9-12",
+      "n": 24,
+      "high": 8,
+      "low": 1,
+      "avg": 3.5,
+      "median": 3.0,
+      "spread": 7,
+      "high_example": {
+        "player": "Tom Brady",
+        "cost": 8,
+        "season": "2021"
       },
       "low_example": {
         "player": "Tua Tagovailoa",
@@ -31,7 +71,7 @@
     },
     {
       "position": "QB",
-      "tier": "QB2",
+      "tier": "QB13+",
       "n": 54,
       "high": 3,
       "low": 1,
@@ -131,7 +171,7 @@
     },
     {
       "position": "RB",
-      "tier": "RB5+",
+      "tier": "RB49+",
       "n": 57,
       "high": 1,
       "low": 1,
@@ -231,7 +271,7 @@
     },
     {
       "position": "WR",
-      "tier": "WR5+",
+      "tier": "WR49+",
       "n": 128,
       "high": 2,
       "low": 1,
@@ -251,17 +291,57 @@
     },
     {
       "position": "TE",
-      "tier": "TE1",
-      "n": 72,
+      "tier": "TE1-4",
+      "n": 24,
       "high": 52,
-      "low": 1,
-      "avg": 12.2,
-      "median": 6.0,
-      "spread": 51,
+      "low": 9,
+      "avg": 27.7,
+      "median": 27.0,
+      "spread": 43,
       "high_example": {
         "player": "Travis Kelce",
         "cost": 52,
         "season": "2023"
+      },
+      "low_example": {
+        "player": "Sam LaPorta",
+        "cost": 9,
+        "season": "2025"
+      }
+    },
+    {
+      "position": "TE",
+      "tier": "TE5-8",
+      "n": 24,
+      "high": 12,
+      "low": 3,
+      "avg": 6.7,
+      "median": 6.0,
+      "spread": 9,
+      "high_example": {
+        "player": "Darren Waller",
+        "cost": 12,
+        "season": "2020"
+      },
+      "low_example": {
+        "player": "Pat Freiermuth",
+        "cost": 3,
+        "season": "2023"
+      }
+    },
+    {
+      "position": "TE",
+      "tier": "TE9-12",
+      "n": 24,
+      "high": 4,
+      "low": 1,
+      "avg": 2.2,
+      "median": 2.0,
+      "spread": 3,
+      "high_example": {
+        "player": "Rob Gronkowski",
+        "cost": 4,
+        "season": "2020"
       },
       "low_example": {
         "player": "Robert Tonyan",
@@ -271,7 +351,7 @@
     },
     {
       "position": "TE",
-      "tier": "TE2",
+      "tier": "TE13+",
       "n": 39,
       "high": 2,
       "low": 1,
@@ -311,7 +391,7 @@
     },
     {
       "position": "K",
-      "tier": "K2+",
+      "tier": "K13+",
       "n": 3,
       "high": 1,
       "low": 1,
@@ -351,7 +431,7 @@
     },
     {
       "position": "D/ST",
-      "tier": "D/ST2+",
+      "tier": "D/ST13+",
       "n": 7,
       "high": 1,
       "low": 1,
@@ -374,7 +454,8 @@
     {
       "owner": "SeanyWilks",
       "seasons": 6,
-      "avg_studs_per_draft": 1.8,
+      "concentration_style": "stars",
+      "avg_studs_per_draft": 1.3,
       "avg_bargains_per_draft": 10.7,
       "top3_spend_share_pct": 18.5,
       "max_bid_ever": 76,
@@ -393,14 +474,15 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter"
+        "Stars & Scrubs"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 18.5% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~10.7 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "One of the most top-heavy spenders in the league (18.5% of budget on their top 3) -- let bidding wars run long on their early targets, then attack the middle rounds once they're down to scraps."
     },
     {
       "owner": "zzim61288",
       "seasons": 6,
-      "avg_studs_per_draft": 1.3,
+      "concentration_style": "stars",
+      "avg_studs_per_draft": 1.2,
       "avg_bargains_per_draft": 9.2,
       "top3_spend_share_pct": 17.8,
       "max_bid_ever": 75,
@@ -419,16 +501,17 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter",
+        "Stars & Scrubs",
         "RB-Priority",
         "Punts WR"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 17.8% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~9.2 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "One of the most top-heavy spenders in the league (17.8% of budget on their top 3) -- let bidding wars run long on their early targets, especially at RB, then attack the middle rounds once they're down to scraps (they routinely go cheap at WR, so contest that position early instead)."
     },
     {
       "owner": "Omreed7",
       "seasons": 6,
-      "avg_studs_per_draft": 1.5,
+      "concentration_style": "stars",
+      "avg_studs_per_draft": 0.8,
       "avg_bargains_per_draft": 9.0,
       "top3_spend_share_pct": 17.6,
       "max_bid_ever": 71,
@@ -447,14 +530,15 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter"
+        "Stars & Scrubs"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 17.6% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~9.0 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "One of the most top-heavy spenders in the league (17.6% of budget on their top 3) -- let bidding wars run long on their early targets, then attack the middle rounds once they're down to scraps."
     },
     {
       "owner": "mvioli",
       "seasons": 6,
-      "avg_studs_per_draft": 1.7,
+      "concentration_style": "stars",
+      "avg_studs_per_draft": 1.2,
       "avg_bargains_per_draft": 9.7,
       "top3_spend_share_pct": 17.2,
       "max_bid_ever": 73,
@@ -473,15 +557,16 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter",
+        "Stars & Scrubs",
         "QB-Priority"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 17.2% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~9.7 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "One of the most top-heavy spenders in the league (17.2% of budget on their top 3) -- let bidding wars run long on their early targets, especially at QB, then attack the middle rounds once they're down to scraps."
     },
     {
       "owner": "DC Matt",
       "seasons": 5,
-      "avg_studs_per_draft": 1.0,
+      "concentration_style": "balanced",
+      "avg_studs_per_draft": 0.4,
       "avg_bargains_per_draft": 7.8,
       "top3_spend_share_pct": 17.2,
       "max_bid_ever": 64,
@@ -500,15 +585,16 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter",
+        "Balanced",
         "QB-Priority"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 17.2% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~7.8 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "A middle-of-the-pack, balanced spender -- expect steady competitive bids across the board rather than one clear window to exploit, though they lean QB-heavy."
     },
     {
       "owner": "mletten",
       "seasons": 6,
-      "avg_studs_per_draft": 1.2,
+      "concentration_style": "balanced",
+      "avg_studs_per_draft": 0.7,
       "avg_bargains_per_draft": 9.0,
       "top3_spend_share_pct": 17.1,
       "max_bid_ever": 74,
@@ -527,14 +613,15 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter"
+        "Balanced"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 17.1% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~9.0 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "A middle-of-the-pack, balanced spender -- expect steady competitive bids across the board rather than one clear window to exploit."
     },
     {
       "owner": "PetyPabs23",
       "seasons": 6,
-      "avg_studs_per_draft": 1.5,
+      "concentration_style": "balanced",
+      "avg_studs_per_draft": 1.2,
       "avg_bargains_per_draft": 8.8,
       "top3_spend_share_pct": 17.0,
       "max_bid_ever": 70,
@@ -553,15 +640,16 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter",
+        "Balanced",
         "Punts RB"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 17.0% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~8.8 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "A middle-of-the-pack, balanced spender -- expect steady competitive bids across the board rather than one clear window to exploit."
     },
     {
       "owner": "burningcole",
       "seasons": 6,
-      "avg_studs_per_draft": 2.0,
+      "concentration_style": "balanced",
+      "avg_studs_per_draft": 1.8,
       "avg_bargains_per_draft": 10.7,
       "top3_spend_share_pct": 16.6,
       "max_bid_ever": 71,
@@ -580,16 +668,17 @@
       "avg_nomination_result_cost": null,
       "nomination_style": null,
       "tags": [
-        "Value Hunter",
+        "Balanced",
         "WR-Priority",
         "Punts RB"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 16.6% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~10.7 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "A middle-of-the-pack, balanced spender -- expect steady competitive bids across the board rather than one clear window to exploit, though they lean WR-heavy."
     },
     {
       "owner": "IrishAJP",
       "seasons": 6,
-      "avg_studs_per_draft": 2.2,
+      "concentration_style": "value",
+      "avg_studs_per_draft": 1.3,
       "avg_bargains_per_draft": 10.2,
       "top3_spend_share_pct": 15.8,
       "max_bid_ever": 67,
@@ -611,12 +700,13 @@
         "Value Hunter",
         "WR-Priority"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 15.8% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~10.2 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "Among the most spread-out spenders (only 15.8% on their top 3) -- unlikely to be your ceiling competition on marquee names, but hits ~10.2 bargains a draft, so expect stiff competition on the $1-5 tier late."
     },
     {
       "owner": "fuschdannon",
       "seasons": 6,
-      "avg_studs_per_draft": 2.2,
+      "concentration_style": "value",
+      "avg_studs_per_draft": 1.2,
       "avg_bargains_per_draft": 9.7,
       "top3_spend_share_pct": 15.6,
       "max_bid_ever": 64,
@@ -638,12 +728,13 @@
         "Value Hunter",
         "RB-Priority"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 15.6% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~9.7 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "Among the most spread-out spenders (only 15.6% on their top 3) -- unlikely to be your ceiling competition on marquee names, but hits ~9.7 bargains a draft, so expect stiff competition on the $1-5 tier late."
     },
     {
       "owner": "dberinger87",
       "seasons": 6,
-      "avg_studs_per_draft": 1.8,
+      "concentration_style": "value",
+      "avg_studs_per_draft": 1.3,
       "avg_bargains_per_draft": 9.8,
       "top3_spend_share_pct": 15.2,
       "max_bid_ever": 64,
@@ -664,12 +755,13 @@
       "tags": [
         "Value Hunter"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 15.2% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~9.8 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "Among the most spread-out spenders (only 15.2% on their top 3) -- unlikely to be your ceiling competition on marquee names, but hits ~9.8 bargains a draft, so expect stiff competition on the $1-5 tier late."
     },
     {
       "owner": "Young-Jim",
       "seasons": 6,
-      "avg_studs_per_draft": 0.7,
+      "concentration_style": "value",
+      "avg_studs_per_draft": 0.3,
       "avg_bargains_per_draft": 7.3,
       "top3_spend_share_pct": 12.7,
       "max_bid_ever": 59,
@@ -690,23 +782,95 @@
       "tags": [
         "Value Hunter"
       ],
-      "strategy_note": "Rarely commits big money (top 3 players are only 12.7% of budget) -- they're unlikely to be your ceiling competition on premium names, but they hit ~7.3 bargains a draft, so expect stiff competition on the $1-5 tier late."
+      "strategy_note": "Among the most spread-out spenders (only 12.7% on their top 3) -- unlikely to be your ceiling competition on marquee names, but hits ~7.3 bargains a draft, so expect stiff competition on the $1-5 tier late."
     }
   ],
+  "latest_season_trends": {
+    "season": "2025",
+    "prior_seasons": [
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "2024"
+    ],
+    "position_share_moves": [
+      {
+        "position": "RB",
+        "latest_share_pct": 40.7,
+        "prior_avg_share_pct": 45.3,
+        "delta_pct": -4.6
+      },
+      {
+        "position": "WR",
+        "latest_share_pct": 43.7,
+        "prior_avg_share_pct": 40.4,
+        "delta_pct": 3.3
+      },
+      {
+        "position": "QB",
+        "latest_share_pct": 8.0,
+        "prior_avg_share_pct": 6.4,
+        "delta_pct": 1.5
+      },
+      {
+        "position": "TE",
+        "latest_share_pct": 6.3,
+        "prior_avg_share_pct": 6.5,
+        "delta_pct": -0.1
+      }
+    ],
+    "elite_tier_moves": [
+      {
+        "position": "QB",
+        "tier": "QB1-4",
+        "latest_avg": 32.5,
+        "prior_avg": 22.4,
+        "delta": 10.1
+      },
+      {
+        "position": "WR",
+        "tier": "WR1",
+        "latest_avg": 49.5,
+        "prior_avg": 44.6,
+        "delta": 4.9
+      },
+      {
+        "position": "RB",
+        "tier": "RB1",
+        "latest_avg": 51.7,
+        "prior_avg": 56.0,
+        "delta": -4.3
+      },
+      {
+        "position": "TE",
+        "tier": "TE1-4",
+        "latest_avg": 28,
+        "prior_avg": 27.7,
+        "delta": 0.3
+      }
+    ],
+    "notes": [
+      "RBs took 4.6 pts less of total budget in 2025 (40.7% vs 45.3% prior-year avg).",
+      "WRs took 3.3 pts more of total budget in 2025 (43.7% vs 40.4% prior-year avg).",
+      "Elite QB (QB1-4) went up $10.1 in 2025 ($32.5 vs $22.4 prior-year avg).",
+      "Elite WR (WR1) went up $4.9 in 2025 ($49.5 vs $44.6 prior-year avg).",
+      "Elite RB (RB1) went down $4.3 in 2025 ($51.7 vs $56.0 prior-year avg)."
+    ]
+  },
   "headlines": [
-    "Widest bid volatility: TE TE1 ranged $1-$52 (spread $51), meaning there's real value to be had if you wait out the top of the market here.",
+    "Widest bid volatility: WR WR1 ranged $26-$74 (spread $48), meaning there's real value to be had if you wait out the top of the market here.",
     "RB1-tier players have averaged $55.3 (low $30, high $76) -- budget anchor for elite RB.",
     "WR1-tier players have averaged $45.4 (low $26, high $74) -- budget anchor for elite WR.",
-    "QB1-tier players have averaged $12.4 (low $1, high $39) -- budget anchor for elite QB.",
-    "TE1-tier players have averaged $12.2 (low $1, high $52) -- budget anchor for elite TE.",
     "SeanyWilks runs the most top-heavy builds -- 18.5% of budget on their 3 priciest players on average.",
     "Young-Jim spreads spend the most evenly (12.7% on top 3) -- a balanced-roster drafter."
   ],
   "config": {
     "tier_sizes": {
       "QB": [
-        12,
-        12
+        4,
+        4,
+        4
       ],
       "RB": [
         12,
@@ -721,8 +885,9 @@
         12
       ],
       "TE": [
-        12,
-        12
+        4,
+        4,
+        4
       ],
       "K": [
         12
@@ -734,7 +899,8 @@
         12
       ]
     },
-    "stud_threshold": 40,
+    "stud_definition": "top ~7% of winning bids per season (relative)",
+    "concentration_tiers": "relative terciles across owners",
     "bargain_threshold": 5,
     "owner_aliases": {
       "mmckenn5": "DC Matt"
