@@ -111,6 +111,7 @@ def build():
     tier_examples = defaultdict(list)
 
     owner_spend = defaultdict(list)
+    owner_season_spend = defaultdict(lambda: defaultdict(list))  # owner -> season -> [costs], for per-draft ratios
     owner_studs = defaultdict(int)
     owner_bargains = defaultdict(int)
     owner_pos_spend = defaultdict(lambda: defaultdict(list))
@@ -172,6 +173,7 @@ def build():
             pos = (p.get("position") or "").upper()
 
             owner_spend[ok].append(cost)
+            owner_season_spend[ok][season].append(cost)
             owner_seasons[ok].add(season)
             if cost >= stud_cut:
                 owner_studs[ok] += 1
@@ -221,8 +223,21 @@ def build():
     for owner, spend in owner_spend.items():
         total = sum(spend)
         n_seasons = len(owner_seasons[owner])
-        spend_sorted = sorted(spend, reverse=True)
-        top3_share = round(100 * sum(spend_sorted[:3]) / total, 1) if total else 0
+
+        # Top-3 share is computed PER SEASON then averaged -- "in a typical
+        # draft, what % of that year's ~$200 budget went to their top 3
+        # players." Pooling top-3-ever against total-spend-across-all-years
+        # dilutes the number (a $70 anchor bid looks tiny against 6 seasons'
+        # worth of combined spend) and made every owner look like a value
+        # buyer regardless of actual in-draft behavior.
+        season_shares = []
+        for season, costs in owner_season_spend[owner].items():
+            season_total_spend = sum(costs)
+            if season_total_spend <= 0:
+                continue
+            top3 = sum(sorted(costs, reverse=True)[:3])
+            season_shares.append(100 * top3 / season_total_spend)
+        top3_share = round(mean(season_shares), 1) if season_shares else 0
 
         pos_avg = {pos: round(mean(b), 1) for pos, b in owner_pos_spend[owner].items() if b}
         pos_share = {pos: 100 * sum(b) / total for pos, b in owner_pos_spend[owner].items() if total}
