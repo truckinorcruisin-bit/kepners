@@ -378,6 +378,24 @@ function tagClass(tag){
   return 'balanced'; // e.g. "RB-Priority"
 }
 
+function renderLatestTrends(){
+  const lt = ZHIST.latest_season_trends;
+  if(!lt || !(lt.notes||[]).length) return '';
+  const noteHtml = lt.notes.map(n=>{
+    // color up/down and dollar/point movements
+    let s = n.replace(/(\$\d+(?:\.\d+)?)/g,'<b>$1</b>')
+             .replace(/\b(more|up)\b/g,'<span style="color:var(--green)">$1</span>')
+             .replace(/\b(less|down)\b/g,'<span style="color:var(--red)">$1</span>');
+    return `<div class="headline" style="border-left-color:var(--amber)">${s}</div>`;
+  }).join('');
+  return `<div class="seclabel">${lt.season} vs Prior Years — What Moved</div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      How last season's market differed from the ${lt.prior_seasons.length}-year baseline before it —
+      where the money shifted, and how elite-tier prices moved.
+    </div>
+    ${noteHtml}`;
+}
+
 function renderHistory(){
   const el=document.getElementById('historyView');
   if(!ZHIST){
@@ -443,6 +461,8 @@ function renderHistory(){
   el.innerHTML=`
     <div class="seclabel">Zimmer Auction — Key Trends</div>
     ${headlinesHtml}
+
+    ${renderLatestTrends()}
 
     <div class="seclabel">Winning-Bid Spread by Position Tier</div>
     <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">

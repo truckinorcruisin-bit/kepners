@@ -58,18 +58,20 @@ EXCLUDED_OWNERS = {
 }
 
 # How many players per position make up each tier bucket, per season.
-# Tuned to a 12-team league's rough starting-lineup demand.
+# Tuned to a 12-team league's rough starting-lineup demand. QB and TE are
+# broken into 4-player sub-tiers (QB1-4, QB5-8, QB9-12) because in a 1-QB/1-TE
+# league the spend range across the top 12 is too wide to be one meaningful tier.
 TIER_SIZES = {
-    "QB": [12, 12],                # QB1, QB2
+    "QB": [4, 4, 4],               # QB1-4, QB5-8, QB9-12
     "RB": [12, 12, 12, 12],        # RB1..RB4
     "WR": [12, 12, 12, 12],        # WR1..WR4
-    "TE": [12, 12],                # TE1, TE2
+    "TE": [4, 4, 4],               # TE1-4, TE5-8, TE9-12
     "K":  [12],
     "DEF": [12], "D/ST": [12],
 }
-STUD_THRESHOLD = 40    # $ -- a marquee/anchor buy
-BARGAIN_THRESHOLD = 5  # $ -- a value dart
-LEAN_NOTABLE_PCT = 4.0 # percentage-point deviation from league avg to call out a position lean
+STUD_PERCENTILE = 0.07  # top ~7% of a season's bids count as "studs" (relative)
+BARGAIN_THRESHOLD = 5   # $ -- a value dart
+LEAN_NOTABLE_PCT = 4.0  # percentage-point deviation from league avg to call out a position lean
 
 
 def normalize_owner(name):
@@ -77,14 +79,19 @@ def normalize_owner(name):
 
 
 def tier_label(position, rank_within_pos):
-    """rank_within_pos is 0-indexed (0 = most expensive at that position)."""
+    """rank_within_pos is 0-indexed (0 = most expensive at that position).
+    For small sub-tiers (size < 12) the label is a range like 'QB1-4'; for
+    full-position tiers it's the compact form like 'RB1'."""
     sizes = TIER_SIZES.get(position, [12, 12, 12, 12, 12])
-    cum = 0
+    start = 1
     for i, size in enumerate(sizes):
-        cum += size
-        if rank_within_pos < cum:
+        end = start + size - 1
+        if rank_within_pos <= end - 1:
+            if size < 12:
+                return f"{position}{start}-{end}"
             return f"{position}{i+1}"
-    return f"{position}{len(sizes)+1}+"
+        start = end + 1
+    return f"{position}{start}+"
 
 
 def owner_key(pick, teams):
@@ -113,11 +120,29 @@ def build():
     league_pos_spend = defaultdict(list)  # pos -> all winning bids league-wide (included owners only)
     league_all_costs = []
 
+    # per-season captures for year-over-year trend analysis
+    # season -> {pos -> [costs]}, and season -> {tier -> avg} etc.
+    season_pos_spend = defaultdict(lambda: defaultdict(list))
+    season_tier_avg = defaultdict(dict)   # season -> {(pos,tier): avg}
+    season_total = defaultdict(float)
+
+    auction_seasons = [
+        s for s, d in history.get("seasons", {}).items()
+        if d.get("draft_type") == "auction"
+    ]
+
     for season, sdata in history.get("seasons", {}).items():
         if sdata.get("draft_type") != "auction":
             continue
         teams = sdata.get("teams", {})
         picks = [p for p in sdata.get("picks", []) if (p.get("cost") or 0) > 0]
+
+        # A "stud" is defined RELATIVE to each season's own price distribution:
+        # the top ~7% of winning bids that year (roughly the marquee anchors in a
+        # 12-team, ~$200 auction). Avoids a hardcoded dollar figure that skews
+        # everyone toward one label when the market runs cheap or hot.
+        season_costs = sorted((p["cost"] for p in picks), reverse=True)
+        stud_cut = season_costs[max(0, int(len(season_costs) * 0.07) - 1)] if season_costs else 9999
 
         # -- tier spreads: every pick counts, regardless of owner exclusions --
         by_pos = defaultdict(list)
@@ -125,6 +150,7 @@ def build():
             pos = (p.get("position") or "").upper()
             if pos:
                 by_pos[pos].append(p)
+        per_season_tier = defaultdict(list)
         for pos, plist in by_pos.items():
             plist.sort(key=lambda p: p.get("cost") or 0, reverse=True)
             for rank, p in enumerate(plist):
@@ -132,6 +158,10 @@ def build():
                 cost = p["cost"]
                 tier_bids[(pos, tier)].append(cost)
                 tier_examples[(pos, tier)].append((cost, p.get("player"), season))
+                per_season_tier[(pos, tier)].append(cost)
+            season_pos_spend[season][pos].extend(pp["cost"] for pp in plist)
+        for key, costs in per_season_tier.items():
+            season_tier_avg[season][key] = round(mean(costs), 1)
 
         # -- per-owner tendencies: excluded owners skipped entirely --
         for p in picks:
@@ -143,13 +173,14 @@ def build():
 
             owner_spend[ok].append(cost)
             owner_seasons[ok].add(season)
-            if cost >= STUD_THRESHOLD:
+            if cost >= stud_cut:
                 owner_studs[ok] += 1
             if cost <= BARGAIN_THRESHOLD:
                 owner_bargains[ok] += 1
             if pos:
                 owner_pos_spend[ok][pos].append(cost)
                 league_pos_spend[pos].append(cost)
+                season_total[season] += cost
             league_all_costs.append(cost)
 
             nom = normalize_owner(p.get("nominated_by")) if p.get("nominated_by") else None
@@ -170,7 +201,12 @@ def build():
             "low_example": {"player": low_ex[1], "cost": low_ex[0], "season": low_ex[2]},
         })
     pos_order = {"QB": 0, "RB": 1, "WR": 2, "TE": 3, "K": 4, "DEF": 5, "D/ST": 5}
-    tiers_out.sort(key=lambda t: (pos_order.get(t["position"], 9), t["tier"]))
+    def tier_start_num(label):
+        # extract the first integer in the tier label ("QB5-8" -> 5, "RB2" -> 2)
+        import re
+        m = re.search(r"(\d+)", label)
+        return int(m.group(1)) if m else 999
+    tiers_out.sort(key=lambda t: (pos_order.get(t["position"], 9), tier_start_num(t["tier"])))
 
     # ---- league-wide baselines for positional lean ----
     league_total = sum(league_all_costs) or 1
@@ -180,7 +216,8 @@ def build():
     league_avg_pick_cost = mean(league_all_costs) if league_all_costs else 0
 
     # ---- per-owner output ----
-    owners_out = []
+    # First pass: compute raw stats for every owner.
+    raw = []
     for owner, spend in owner_spend.items():
         total = sum(spend)
         n_seasons = len(owner_seasons[owner])
@@ -189,7 +226,6 @@ def build():
 
         pos_avg = {pos: round(mean(b), 1) for pos, b in owner_pos_spend[owner].items() if b}
         pos_share = {pos: 100 * sum(b) / total for pos, b in owner_pos_spend[owner].items() if total}
-        # deviation from league-average share, per position
         pos_deviation = {
             pos: round(share - league_pos_share.get(pos, 0), 1)
             for pos, share in pos_share.items()
@@ -201,9 +237,36 @@ def build():
         avg_nom_cost = round(mean(nom_costs), 1) if nom_costs else None
         nom_deviation = round((avg_nom_cost - league_avg_pick_cost), 1) if avg_nom_cost is not None else None
 
-        concentration_style = (
-            "stars" if top3_share >= 45 else "value" if top3_share <= 30 else "balanced"
-        )
+        raw.append({
+            "owner": owner, "spend": spend, "total": total, "n_seasons": n_seasons,
+            "top3_share": top3_share, "pos_avg": pos_avg, "pos_deviation": pos_deviation,
+            "priority_pos": priority_pos, "punt_pos": punt_pos,
+            "avg_nom_cost": avg_nom_cost, "nom_deviation": nom_deviation,
+        })
+
+    # Concentration style is RELATIVE: rank owners by top-3 share, split into
+    # thirds. Top third = Stars & Scrubs, bottom third = Value Hunter, middle =
+    # Balanced. This guarantees the labels actually separate the field instead
+    # of collapsing everyone into one bucket against an arbitrary dollar line.
+    by_conc = sorted(raw, key=lambda r: r["top3_share"], reverse=True)
+    n = len(by_conc)
+    third = max(1, round(n / 3))
+    style_by_owner = {}
+    for idx, r in enumerate(by_conc):
+        if idx < third:
+            style_by_owner[r["owner"]] = "stars"
+        elif idx >= n - third:
+            style_by_owner[r["owner"]] = "value"
+        else:
+            style_by_owner[r["owner"]] = "balanced"
+
+    owners_out = []
+    for r in raw:
+        owner = r["owner"]
+        priority_pos, punt_pos = r["priority_pos"], r["punt_pos"]
+        nom_deviation = r["nom_deviation"]
+
+        concentration_style = style_by_owner[owner]
         nomination_style = (
             None if nom_deviation is None else
             "driver" if nom_deviation >= 5 else
@@ -222,17 +285,18 @@ def build():
 
         owners_out.append({
             "owner": owner,
-            "seasons": n_seasons,
-            "avg_studs_per_draft": round(owner_studs[owner] / n_seasons, 1) if n_seasons else 0,
-            "avg_bargains_per_draft": round(owner_bargains[owner] / n_seasons, 1) if n_seasons else 0,
-            "top3_spend_share_pct": top3_share,
-            "max_bid_ever": max(spend) if spend else 0,
-            "pos_avg_spend": pos_avg,
+            "seasons": r["n_seasons"],
+            "concentration_style": concentration_style,
+            "avg_studs_per_draft": round(owner_studs[owner] / r["n_seasons"], 1) if r["n_seasons"] else 0,
+            "avg_bargains_per_draft": round(owner_bargains[owner] / r["n_seasons"], 1) if r["n_seasons"] else 0,
+            "top3_spend_share_pct": r["top3_share"],
+            "max_bid_ever": max(r["spend"]) if r["spend"] else 0,
+            "pos_avg_spend": r["pos_avg"],
             "priority_position": priority_pos[0] if priority_pos and priority_pos[1] >= LEAN_NOTABLE_PCT else None,
             "priority_position_deviation_pct": priority_pos[1] if priority_pos and priority_pos[1] >= LEAN_NOTABLE_PCT else None,
             "punt_position": punt_pos[0] if punt_pos and punt_pos[1] <= -LEAN_NOTABLE_PCT else None,
             "punt_position_deviation_pct": punt_pos[1] if punt_pos and punt_pos[1] <= -LEAN_NOTABLE_PCT else None,
-            "avg_nomination_result_cost": avg_nom_cost,
+            "avg_nomination_result_cost": r["avg_nom_cost"],
             "nomination_style": nomination_style,
             "tags": tags,
         })
@@ -240,6 +304,11 @@ def build():
 
     for o in owners_out:
         o["strategy_note"] = strategy_note(o, league_avg_pick_cost)
+
+    # ---- enhancement 2: 2025-specific (latest season) league trends ----
+    latest_trends = compute_latest_season_trends(
+        auction_seasons, season_pos_spend, season_total, season_tier_avg
+    )
 
     headlines = derive_headlines(tiers_out, owners_out)
 
@@ -251,10 +320,12 @@ def build():
         ),
         "tier_spreads": tiers_out,
         "owners": owners_out,
+        "latest_season_trends": latest_trends,
         "headlines": headlines,
         "config": {
             "tier_sizes": TIER_SIZES,
-            "stud_threshold": STUD_THRESHOLD,
+            "stud_definition": "top ~7% of winning bids per season (relative)",
+            "concentration_tiers": "relative terciles across owners",
             "bargain_threshold": BARGAIN_THRESHOLD,
             "owner_aliases": OWNER_ALIASES,
             "excluded_owners": sorted(EXCLUDED_OWNERS),
@@ -269,25 +340,26 @@ def build():
 def strategy_note(o, league_avg_pick_cost):
     """One concrete, tactical sentence for head-to-head bidding against this owner."""
     parts = []
-    style = "stars" if o["top3_spend_share_pct"] >= 45 else "value" if o["top3_spend_share_pct"] <= 30 else "balanced"
+    style = o["concentration_style"]  # relative tercile: stars / balanced / value
 
     if style == "stars":
-        base = (f"Puts {o['top3_spend_share_pct']}% of budget into their top 3 players -- "
+        base = (f"One of the most top-heavy spenders in the league "
+                f"({o['top3_spend_share_pct']}% of budget on their top 3) -- "
                 f"let bidding wars run long on their early targets")
         if o["priority_position"]:
             base += f", especially at {o['priority_position']}"
-        base += ", then attack them late once they're down to scraps"
+        base += ", then attack the middle rounds once they're down to scraps"
         if o["punt_position"]:
-            base += f" (they consistently go cheap at {o['punt_position']}, so contest that position early instead)"
+            base += f" (they routinely go cheap at {o['punt_position']}, so contest that position early instead)"
         parts.append(base + ".")
     elif style == "value":
-        base = (f"Rarely commits big money (top 3 players are only {o['top3_spend_share_pct']}% of budget) -- "
-                f"they're unlikely to be your ceiling competition on premium names")
+        base = (f"Among the most spread-out spenders (only {o['top3_spend_share_pct']}% on their top 3) -- "
+                f"unlikely to be your ceiling competition on marquee names")
         if o["avg_bargains_per_draft"]:
-            base += f", but they hit ~{o['avg_bargains_per_draft']} bargains a draft, so expect stiff competition on the $1-5 tier late"
+            base += f", but hits ~{o['avg_bargains_per_draft']} bargains a draft, so expect stiff competition on the $1-5 tier late"
         parts.append(base + ".")
     else:
-        base = "Spends fairly evenly across the roster -- expect steady, competitive bids on most players rather than a clear window to exploit"
+        base = "A middle-of-the-pack, balanced spender -- expect steady competitive bids across the board rather than one clear window to exploit"
         if o["priority_position"]:
             base += f", though they lean {o['priority_position']}-heavy"
         parts.append(base + ".")
@@ -304,6 +376,82 @@ def strategy_note(o, league_avg_pick_cost):
         )
 
     return " ".join(parts)
+
+
+def compute_latest_season_trends(auction_seasons, season_pos_spend, season_total, season_tier_avg):
+    """Enhancement 2: how did the most recent season differ from prior years?
+    Compares the latest season's share-of-budget by position (and elite-tier
+    prices) against the average of all earlier auction seasons."""
+    if len(auction_seasons) < 2:
+        return None
+    seasons_sorted = sorted(auction_seasons)
+    latest = seasons_sorted[-1]
+    prior = seasons_sorted[:-1]
+
+    def pos_share_for(season):
+        tot = sum(sum(v) for v in season_pos_spend[season].values()) or 1
+        return {pos: 100 * sum(v) / tot for pos, v in season_pos_spend[season].items()}
+
+    latest_share = pos_share_for(latest)
+    # average prior-year share per position
+    prior_shares = defaultdict(list)
+    for s in prior:
+        for pos, share in pos_share_for(s).items():
+            prior_shares[pos].append(share)
+    prior_avg = {pos: mean(v) for pos, v in prior_shares.items()}
+
+    pos_moves = []
+    for pos in ["QB", "RB", "WR", "TE"]:
+        if pos in latest_share and pos in prior_avg:
+            delta = latest_share[pos] - prior_avg[pos]
+            pos_moves.append({
+                "position": pos,
+                "latest_share_pct": round(latest_share[pos], 1),
+                "prior_avg_share_pct": round(prior_avg[pos], 1),
+                "delta_pct": round(delta, 1),
+            })
+    pos_moves.sort(key=lambda m: abs(m["delta_pct"]), reverse=True)
+
+    # elite-tier price movement (top sub-tier of each position)
+    elite_moves = []
+    elite_tiers = {"QB": "QB1-4", "RB": "RB1", "WR": "WR1", "TE": "TE1-4"}
+    for pos, tier in elite_tiers.items():
+        latest_avg = season_tier_avg.get(latest, {}).get((pos, tier))
+        prior_vals = [season_tier_avg[s][(pos, tier)] for s in prior if (pos, tier) in season_tier_avg.get(s, {})]
+        if latest_avg is not None and prior_vals:
+            pa = mean(prior_vals)
+            elite_moves.append({
+                "position": pos, "tier": tier,
+                "latest_avg": round(latest_avg, 1),
+                "prior_avg": round(pa, 1),
+                "delta": round(latest_avg - pa, 1),
+            })
+    elite_moves.sort(key=lambda m: abs(m["delta"]), reverse=True)
+
+    # narrative headlines for the latest season
+    notes = []
+    for m in pos_moves:
+        if abs(m["delta_pct"]) >= 2:
+            direction = "more" if m["delta_pct"] > 0 else "less"
+            notes.append(
+                f"{m['position']}s took {abs(m['delta_pct'])} pts {direction} of total budget in {latest} "
+                f"({m['latest_share_pct']}% vs {m['prior_avg_share_pct']}% prior-year avg)."
+            )
+    for m in elite_moves:
+        if abs(m["delta"]) >= 3:
+            direction = "up" if m["delta"] > 0 else "down"
+            notes.append(
+                f"Elite {m['position']} ({m['tier']}) went {direction} ${abs(m['delta'])} in {latest} "
+                f"(${m['latest_avg']} vs ${m['prior_avg']} prior-year avg)."
+            )
+
+    return {
+        "season": latest,
+        "prior_seasons": prior,
+        "position_share_moves": pos_moves,
+        "elite_tier_moves": elite_moves,
+        "notes": notes,
+    }
 
 
 def derive_headlines(tiers, owners):
