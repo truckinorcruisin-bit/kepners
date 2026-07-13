@@ -127,6 +127,7 @@
   .ostat b{display:block;font-size:15px;color:var(--txt);font-weight:700;margin-top:2px;}
   .posspend{margin-top:9px;font-size:10px;color:var(--dim);line-height:1.7;}
   .posspend .pchip{display:inline-block;background:var(--line);border-radius:3px;padding:2px 6px;margin:2px 4px 0 0;color:var(--txt);}
+  .stratnote{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--txt);line-height:1.55;}
 </style>
 </head>
 <body>
@@ -367,14 +368,14 @@ function renderFoot(lg){
 }
 
 // ---------- Zimmer History view ----------
-function ownerStyle(o){
-  // classify build style from top-3 concentration for a quick visual tag
-  if(o.top3_spend_share_pct>=45) return 'stars';
-  if(o.top3_spend_share_pct<=30) return 'value';
-  return 'balanced';
-}
-function styleLabel(s){
-  return {stars:'STARS & SCRUBS',balanced:'BALANCED',value:'VALUE HUNTER'}[s]||s;
+function tagClass(tag){
+  if(tag==='Stars & Scrubs') return 'stars';
+  if(tag==='Value Hunter') return 'value';
+  if(tag==='Balanced') return 'balanced';
+  if(tag==='Market Driver') return 'stars';
+  if(tag==='Quiet Accumulator') return 'value';
+  if(tag.startsWith('Punts')) return 'value';
+  return 'balanced'; // e.g. "RB-Priority"
 }
 
 function renderHistory(){
@@ -421,12 +422,12 @@ function renderHistory(){
   // owner cards
   const owners=ZHIST.owners||[];
   const ownerCards=owners.map(o=>{
-    const st=ownerStyle(o);
+    const tagsHtml=(o.tags||[]).map(t=>`<span class="otag ${tagClass(t)}">${t.toUpperCase()}</span>`).join('');
     const posChips=Object.entries(o.pos_avg_spend||{})
       .sort((a,b)=>b[1]-a[1])
       .map(([pos,avg])=>`<span class="pchip">${pos} avg $${avg}</span>`).join('');
     return `<div class="ownercard">
-      <div class="oname">${o.owner}<span class="otag ${st}">${styleLabel(st)}</span></div>
+      <div class="oname">${o.owner}${tagsHtml}</div>
       <div class="ostats">
         <div class="ostat">TOP-3 SPEND<b>${o.top3_spend_share_pct}%</b></div>
         <div class="ostat">STUDS / DRAFT<b>${o.avg_studs_per_draft}</b></div>
@@ -435,6 +436,7 @@ function renderHistory(){
         <div class="ostat">SEASONS<b>${o.seasons}</b></div>
       </div>
       <div class="posspend">Avg spend by position: ${posChips||'—'}</div>
+      <div class="stratnote">${o.strategy_note||''}</div>
     </div>`;
   }).join('');
 
@@ -455,8 +457,11 @@ function renderHistory(){
 
     <div class="seclabel">Per-Owner Auction Tendencies</div>
     <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
-      Aggregated by owner (team names change year to year). Top-3 spend share is the
-      key tell: high = stars-and-scrubs, low = balanced roster building.
+      Aggregated by owner (team names change year to year; name variants merged, one-season
+      members excluded). Three signals combine into each owner's tags: spend concentration
+      (stars-and-scrubs vs. balanced vs. value), positional lean vs. league average, and
+      nomination behavior (do their nominations tend to sell high or cheap). Strategy note
+      below each card is the tactical takeaway for a head-to-head bid.
     </div>
     ${ownerCards}
 
