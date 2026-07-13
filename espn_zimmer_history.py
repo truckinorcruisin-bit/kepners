@@ -24,6 +24,11 @@ These don't require any app registration or approval process (unlike Yahoo) --
 they're just your existing login session cookies.
 
 SEASONS PULLED: edit ZIMMER_YEARS below to match how far back the league goes.
+
+AUCTION LEAGUES: if Zimmer runs an auction draft (price paid per player instead
+of round/pick order), this script detects that automatically from the data and
+outputs "cost" (price paid) and "nomination_order" instead of "round"/"pick" --
+no configuration needed either way.
 """
 import os
 import json
@@ -56,19 +61,34 @@ def pull_season(league_id, year, espn_s2, swid):
             "owners": owner_names,
         }
 
+    # Auction leagues populate bid_amount on every pick; snake drafts leave it
+    # None/0. Detect from the data itself rather than trusting settings fields,
+    # since espn_api doesn't expose draft type directly.
+    is_auction = any((p.bid_amount or 0) > 0 for p in league.draft)
+
     picks = []
     for pick in league.draft:
-        picks.append({
-            "round": pick.round_num,
-            "round_pick": pick.round_pick,
+        base = {
             "team_id": pick.team.team_id if pick.team else None,
             "team_name": pick.team.team_name if pick.team else None,
             "player": pick.playerName,
             "player_id": pick.playerId,
             "keeper": pick.keeper_status,
-        })
+        }
+        if is_auction:
+            base["cost"] = pick.bid_amount
+            base["nomination_order"] = pick.round_pick  # ESPN still assigns a sequence number
+            base["nominated_by"] = pick.nominatingTeam.team_name if pick.nominatingTeam else None
+        else:
+            base["round"] = pick.round_num
+            base["pick"] = pick.round_pick
+        picks.append(base)
 
-    return {"teams": teams, "picks": picks}
+    if is_auction:
+        # Most useful sorted by price paid, highest first, for tendency analysis
+        picks.sort(key=lambda p: p.get("cost") or 0, reverse=True)
+
+    return {"draft_type": "auction" if is_auction else "snake", "teams": teams, "picks": picks}
 
 
 def main():
@@ -80,7 +100,8 @@ def main():
         season_data = pull_season(league_id, year, espn_s2, swid)
         if season_data:
             history["seasons"][year] = season_data
-            print(f"  {year}: {len(season_data['picks'])} picks, {len(season_data['teams'])} teams")
+            print(f"  {year}: {season_data['draft_type']} draft, "
+                  f"{len(season_data['picks'])} picks, {len(season_data['teams'])} teams")
 
     with open("zimmer_draft_history.json", "w") as f:
         json.dump(history, f, indent=2)
