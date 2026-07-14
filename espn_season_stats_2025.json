@@ -1,0 +1,6568 @@
+{
+  "year": 2025,
+  "scoring_note": "pulled from ESPN league 670427 scoring settings (standard)",
+  "players_by_position": {
+    "RB": [
+      {
+        "player_id": 4242335,
+        "name": "Jonathan Taylor",
+        "pro_team": "IND",
+        "total_points": 316.3
+      },
+      {
+        "player_id": 3117251,
+        "name": "Christian McCaffrey",
+        "pro_team": "SF",
+        "total_points": 314.6
+      },
+      {
+        "player_id": 4430807,
+        "name": "Bijan Robinson",
+        "pro_team": "ATL",
+        "total_points": 291.8
+      },
+      {
+        "player_id": 4429795,
+        "name": "Jahmyr Gibbs",
+        "pro_team": "DET",
+        "total_points": 289.9
+      },
+      {
+        "player_id": 4379399,
+        "name": "James Cook III",
+        "pro_team": "BUF",
+        "total_points": 269.2
+      },
+      {
+        "player_id": 3043078,
+        "name": "Derrick Henry",
+        "pro_team": "BAL",
+        "total_points": 264.5
+      },
+      {
+        "player_id": 4429160,
+        "name": "De'Von Achane",
+        "pro_team": "MIA",
+        "total_points": 255.8
+      },
+      {
+        "player_id": 4430737,
+        "name": "Kyren Williams",
+        "pro_team": "LAR",
+        "total_points": 227.3
+      },
+      {
+        "player_id": 4239996,
+        "name": "Travis Etienne Jr.",
+        "pro_team": "JAX",
+        "total_points": 217.9
+      },
+      {
+        "player_id": 4362238,
+        "name": "Chase Brown",
+        "pro_team": "CIN",
+        "total_points": 213.6
+      },
+      {
+        "player_id": 4361579,
+        "name": "Javonte Williams",
+        "pro_team": "DAL",
+        "total_points": 207.8
+      },
+      {
+        "player_id": 4047365,
+        "name": "Josh Jacobs",
+        "pro_team": "GB",
+        "total_points": 201.1
+      },
+      {
+        "player_id": 3929630,
+        "name": "Saquon Barkley",
+        "pro_team": "PHI",
+        "total_points": 195.3
+      },
+      {
+        "player_id": 4259545,
+        "name": "D'Andre Swift",
+        "pro_team": "CHI",
+        "total_points": 194.6
+      },
+      {
+        "player_id": 4890973,
+        "name": "Ashton Jeanty",
+        "pro_team": "LV",
+        "total_points": 190.1
+      },
+      {
+        "player_id": 4038815,
+        "name": "Rico Dowdle",
+        "pro_team": "CAR",
+        "total_points": 177.3
+      },
+      {
+        "player_id": 4569987,
+        "name": "Jaylen Warren",
+        "pro_team": "PIT",
+        "total_points": 177.1
+      },
+      {
+        "player_id": 4427366,
+        "name": "Breece Hall",
+        "pro_team": "NYJ",
+        "total_points": 171.66
+      },
+      {
+        "player_id": 4432710,
+        "name": "TreVeyon Henderson",
+        "pro_team": "NE",
+        "total_points": 171.2
+      },
+      {
+        "player_id": 4426385,
+        "name": "Zach Charbonnet",
+        "pro_team": "SEA",
+        "total_points": 161.4
+      },
+      {
+        "player_id": 4567048,
+        "name": "Kenneth Walker III",
+        "pro_team": "SEA",
+        "total_points": 160.9
+      },
+      {
+        "player_id": 4568490,
+        "name": "RJ Harvey",
+        "pro_team": "DEN",
+        "total_points": 159.6
+      },
+      {
+        "player_id": 3916148,
+        "name": "Tony Pollard",
+        "pro_team": "TEN",
+        "total_points": 152.8
+      },
+      {
+        "player_id": 4371733,
+        "name": "Kenneth Gainwell",
+        "pro_team": "PIT",
+        "total_points": 148.3
+      },
+      {
+        "player_id": 4569173,
+        "name": "Rhamondre Stevenson",
+        "pro_team": "NE",
+        "total_points": 146.8
+      },
+      {
+        "player_id": 4685702,
+        "name": "Quinshon Judkins",
+        "pro_team": "CLE",
+        "total_points": 143.8
+      },
+      {
+        "player_id": 4035538,
+        "name": "David Montgomery",
+        "pro_team": "HOU",
+        "total_points": 142.92
+      },
+      {
+        "player_id": 4575131,
+        "name": "Jacory Croskey-Merritt",
+        "pro_team": "WSH",
+        "total_points": 131.3
+      },
+      {
+        "player_id": 4608686,
+        "name": "Kyle Monangai",
+        "pro_team": "CHI",
+        "total_points": 128.7
+      },
+      {
+        "player_id": 3059915,
+        "name": "Kareem Hunt",
+        "pro_team": "KC",
+        "total_points": 127.4
+      },
+      {
+        "player_id": 4429059,
+        "name": "Woody Marks",
+        "pro_team": "HOU",
+        "total_points": 127.1
+      },
+      {
+        "player_id": 4360516,
+        "name": "Tyrone Tracy Jr.",
+        "pro_team": "NYG",
+        "total_points": 124.8
+      },
+      {
+        "player_id": 4360569,
+        "name": "Jordan Mason",
+        "pro_team": "MIN",
+        "total_points": 114.9
+      },
+      {
+        "player_id": 4429096,
+        "name": "Blake Corum",
+        "pro_team": "LAR",
+        "total_points": 114.2
+      },
+      {
+        "player_id": 4373626,
+        "name": "Tyler Allgeier",
+        "pro_team": "ATL",
+        "total_points": 109.0
+      },
+      {
+        "player_id": 4596448,
+        "name": "Bucky Irving",
+        "pro_team": "TB",
+        "total_points": 108.5
+      },
+      {
+        "player_id": 4241985,
+        "name": "J.K. Dobbins",
+        "pro_team": "DEN",
+        "total_points": 104.9
+      },
+      {
+        "player_id": 4685382,
+        "name": "Omarion Hampton",
+        "pro_team": "LAC",
+        "total_points": 103.7
+      },
+      {
+        "player_id": 4696981,
+        "name": "Cam Skattebo",
+        "pro_team": "NYG",
+        "total_points": 103.7
+      },
+      {
+        "player_id": 4697815,
+        "name": "Rachaad White",
+        "pro_team": "TB",
+        "total_points": 103.0
+      },
+      {
+        "player_id": 4430968,
+        "name": "Kimani Vidal",
+        "pro_team": "LAC",
+        "total_points": 101.9
+      },
+      {
+        "player_id": 4241416,
+        "name": "Chuba Hubbard",
+        "pro_team": "CAR",
+        "total_points": 95.4
+      },
+      {
+        "player_id": 4040761,
+        "name": "Devin Singletary",
+        "pro_team": "NYG",
+        "total_points": 90.8
+      },
+      {
+        "player_id": 3042519,
+        "name": "Aaron Jones Sr.",
+        "pro_team": "MIN",
+        "total_points": 90.7
+      },
+      {
+        "player_id": 4362619,
+        "name": "Chris Rodriguez Jr.",
+        "pro_team": "WSH",
+        "total_points": 89.0
+      },
+      {
+        "player_id": 4430871,
+        "name": "Sean Tucker",
+        "pro_team": "TB",
+        "total_points": 83.4
+      },
+      {
+        "player_id": 4887558,
+        "name": "Emanuel Wilson",
+        "pro_team": "GB",
+        "total_points": 79.5
+      },
+      {
+        "player_id": 4882093,
+        "name": "Bhayshul Tuten",
+        "pro_team": "JAX",
+        "total_points": 78.6
+      },
+      {
+        "player_id": 3915411,
+        "name": "Ty Johnson",
+        "pro_team": "BUF",
+        "total_points": 76.3
+      },
+      {
+        "player_id": 3128720,
+        "name": "Nick Chubb",
+        "pro_team": "HOU",
+        "total_points": 75.3
+      },
+      {
+        "player_id": 4427728,
+        "name": "Bam Knight",
+        "pro_team": "ARI",
+        "total_points": 70.9
+      },
+      {
+        "player_id": 4361529,
+        "name": "Isiah Pacheco",
+        "pro_team": "KC",
+        "total_points": 68.3
+      },
+      {
+        "player_id": 3054850,
+        "name": "Alvin Kamara",
+        "pro_team": "NO",
+        "total_points": 67.7
+      },
+      {
+        "player_id": 4428557,
+        "name": "Tyjae Spears",
+        "pro_team": "TEN",
+        "total_points": 66.7
+      },
+      {
+        "player_id": 4240657,
+        "name": "Michael Carter",
+        "pro_team": "ARI",
+        "total_points": 66.0
+      },
+      {
+        "player_id": 3116389,
+        "name": "Samaje Perine",
+        "pro_team": "CIN",
+        "total_points": 60.9
+      },
+      {
+        "player_id": 5081397,
+        "name": "Dylan Sampson",
+        "pro_team": "CLE",
+        "total_points": 54.6
+      },
+      {
+        "player_id": 4241474,
+        "name": "Brian Robinson Jr.",
+        "pro_team": "SF",
+        "total_points": 54.5
+      },
+      {
+        "player_id": 4429501,
+        "name": "Ray Davis",
+        "pro_team": "BUF",
+        "total_points": 54.1
+      },
+      {
+        "player_id": 4429013,
+        "name": "Tank Bigsby",
+        "pro_team": "PHI",
+        "total_points": 50.8
+      },
+      {
+        "player_id": 4695404,
+        "name": "Isaiah Davis",
+        "pro_team": "NYJ",
+        "total_points": 50.2
+      },
+      {
+        "player_id": 3127586,
+        "name": "Jeremy McNichols",
+        "pro_team": "WSH",
+        "total_points": 47.7
+      },
+      {
+        "player_id": 4711533,
+        "name": "Ollie Gordon II",
+        "pro_team": "MIA",
+        "total_points": 47.1
+      },
+      {
+        "player_id": 4596334,
+        "name": "Keaton Mitchell",
+        "pro_team": "BAL",
+        "total_points": 46.4
+      },
+      {
+        "player_id": 4362478,
+        "name": "Emari Demercado",
+        "pro_team": "ARI",
+        "total_points": 45.3
+      },
+      {
+        "player_id": 4038441,
+        "name": "Justice Hill",
+        "pro_team": "BAL",
+        "total_points": 44.2
+      },
+      {
+        "player_id": 4682745,
+        "name": "Jaylen Wright",
+        "pro_team": "MIA",
+        "total_points": 43.2
+      },
+      {
+        "player_id": 4682652,
+        "name": "Devin Neal",
+        "pro_team": "NO",
+        "total_points": 43.0
+      },
+      {
+        "player_id": 4240603,
+        "name": "Malik Davis",
+        "pro_team": "DAL",
+        "total_points": 38.6
+      },
+      {
+        "player_id": 4596602,
+        "name": "Brashard Smith",
+        "pro_team": "KC",
+        "total_points": 38.3
+      },
+      {
+        "player_id": 4569682,
+        "name": "Audric Estime",
+        "pro_team": "NO",
+        "total_points": 36.1
+      },
+      {
+        "player_id": 16002,
+        "name": "Kyle Juszczyk",
+        "pro_team": "SF",
+        "total_points": 33.0
+      },
+      {
+        "player_id": 4599739,
+        "name": "Kendre Miller",
+        "pro_team": "NO",
+        "total_points": 28.3
+      },
+      {
+        "player_id": 4722893,
+        "name": "Jaleel McLaughlin",
+        "pro_team": "DEN",
+        "total_points": 27.4
+      },
+      {
+        "player_id": 3045147,
+        "name": "James Conner",
+        "pro_team": "ARI",
+        "total_points": 25.3
+      },
+      {
+        "player_id": 4257364,
+        "name": "Zavier Scott",
+        "pro_team": "MIN",
+        "total_points": 25.2
+      },
+      {
+        "player_id": 4383396,
+        "name": "Hunter Luepke",
+        "pro_team": "DAL",
+        "total_points": 24.0
+      },
+      {
+        "player_id": 4429939,
+        "name": "Jawhar Jordan",
+        "pro_team": "HOU",
+        "total_points": 22.7
+      },
+      {
+        "player_id": 4362452,
+        "name": "Jaret Patterson",
+        "pro_team": "LAC",
+        "total_points": 22.7
+      },
+      {
+        "player_id": 4429275,
+        "name": "Trey Benson",
+        "pro_team": "ARI",
+        "total_points": 22.4
+      },
+      {
+        "player_id": 4360294,
+        "name": "Antonio Gibson",
+        "pro_team": "None",
+        "total_points": 21.2
+      },
+      {
+        "player_id": 2576336,
+        "name": "Ameer Abdullah",
+        "pro_team": "IND",
+        "total_points": 19.9
+      },
+      {
+        "player_id": 3149687,
+        "name": "Chris Brooks",
+        "pro_team": "GB",
+        "total_points": 19.7
+      },
+      {
+        "player_id": 4685279,
+        "name": "Jaydon Blue",
+        "pro_team": "DAL",
+        "total_points": 19.4
+      },
+      {
+        "player_id": 4045163,
+        "name": "Miles Sanders",
+        "pro_team": "DAL",
+        "total_points": 18.7
+      },
+      {
+        "player_id": 4372019,
+        "name": "Jerome Ford",
+        "pro_team": "CLE",
+        "total_points": 17.6
+      },
+      {
+        "player_id": 2576414,
+        "name": "Raheem Mostert",
+        "pro_team": "LV",
+        "total_points": 17.4
+      },
+      {
+        "player_id": 4601080,
+        "name": "Raheim Sanders",
+        "pro_team": "CLE",
+        "total_points": 17.3
+      },
+      {
+        "player_id": 3125107,
+        "name": "Andrew Beck",
+        "pro_team": "NYJ",
+        "total_points": 17.0
+      },
+      {
+        "player_id": 4362748,
+        "name": "Tyler Badie",
+        "pro_team": "DEN",
+        "total_points": 16.4
+      },
+      {
+        "player_id": 4690013,
+        "name": "Rasheen Ali",
+        "pro_team": "BAL",
+        "total_points": 15.2
+      },
+      {
+        "player_id": 4911851,
+        "name": "LeQuint Allen Jr.",
+        "pro_team": "JAX",
+        "total_points": 14.8
+      },
+      {
+        "player_id": 4427600,
+        "name": "Terrell Jennings",
+        "pro_team": "NE",
+        "total_points": 14.2
+      },
+      {
+        "player_id": 2983509,
+        "name": "Dare Ogunbowale",
+        "pro_team": "HOU",
+        "total_points": 14.1
+      },
+      {
+        "player_id": 4012556,
+        "name": "C.J. Ham",
+        "pro_team": "MIN",
+        "total_points": 13.6
+      },
+      {
+        "player_id": 4685247,
+        "name": "Braelon Allen",
+        "pro_team": "NYJ",
+        "total_points": 13.3
+      },
+      {
+        "player_id": 4429835,
+        "name": "George Holani",
+        "pro_team": "SEA",
+        "total_points": 12.8
+      },
+      {
+        "player_id": 4035537,
+        "name": "Kene Nwangwu",
+        "pro_team": "NYJ",
+        "total_points": 10.9
+      },
+      {
+        "player_id": 4036032,
+        "name": "Brittain Brown",
+        "pro_team": "CHI",
+        "total_points": 9.7
+      },
+      {
+        "player_id": 3929914,
+        "name": "Adam Prentice",
+        "pro_team": "DEN",
+        "total_points": 9.7
+      },
+      {
+        "player_id": 4874509,
+        "name": "DJ Giddens",
+        "pro_team": "IND",
+        "total_points": 9.6
+      },
+      {
+        "player_id": 4035222,
+        "name": "Trayveon Williams",
+        "pro_team": "CLE",
+        "total_points": 9.1
+      },
+      {
+        "player_id": 4431562,
+        "name": "Phil Mafah",
+        "pro_team": "DAL",
+        "total_points": 8.9
+      },
+      {
+        "player_id": 4685350,
+        "name": "Trevor Etienne",
+        "pro_team": "CAR",
+        "total_points": 8.7
+      },
+      {
+        "player_id": 4241457,
+        "name": "Najee Harris",
+        "pro_team": "LAC",
+        "total_points": 8.6
+      },
+      {
+        "player_id": 4431545,
+        "name": "Will Shipley",
+        "pro_team": "PHI",
+        "total_points": 8.5
+      },
+      {
+        "player_id": 3068267,
+        "name": "Austin Ekeler",
+        "pro_team": "WSH",
+        "total_points": 8.1
+      },
+      {
+        "player_id": 4819231,
+        "name": "Kaleb Johnson",
+        "pro_team": "PIT",
+        "total_points": 7.8
+      },
+      {
+        "player_id": 4373273,
+        "name": "British Brooks",
+        "pro_team": "HOU",
+        "total_points": 7.8
+      },
+      {
+        "player_id": 4431431,
+        "name": "Corey Kiner",
+        "pro_team": "ARI",
+        "total_points": 7.3
+      },
+      {
+        "player_id": 4240021,
+        "name": "Cam Akers",
+        "pro_team": "SEA",
+        "total_points": 7.18
+      },
+      {
+        "player_id": 4239934,
+        "name": "AJ Dillon",
+        "pro_team": "PHI",
+        "total_points": 6.1
+      },
+      {
+        "player_id": 3917668,
+        "name": "Alec Ingold",
+        "pro_team": "MIA",
+        "total_points": 6.1
+      },
+      {
+        "player_id": 4372071,
+        "name": "Hassan Haskins",
+        "pro_team": "LAC",
+        "total_points": 6.0
+      },
+      {
+        "player_id": 4242431,
+        "name": "Ty Chandler",
+        "pro_team": "MIN",
+        "total_points": 5.8
+      },
+      {
+        "player_id": 4035886,
+        "name": "Khalil Herbert",
+        "pro_team": "NYJ",
+        "total_points": 5.6
+      },
+      {
+        "player_id": 4361777,
+        "name": "Zamir White",
+        "pro_team": "LV",
+        "total_points": 5.6
+      },
+      {
+        "player_id": 4569609,
+        "name": "Evan Hull",
+        "pro_team": "NO",
+        "total_points": 5.4
+      },
+      {
+        "player_id": 4429299,
+        "name": "Tahj Brooks",
+        "pro_team": "CIN",
+        "total_points": 5.4
+      },
+      {
+        "player_id": 4243003,
+        "name": "Ronnie Rivers",
+        "pro_team": "LAR",
+        "total_points": 4.6
+      },
+      {
+        "player_id": 4367567,
+        "name": "Julius Chestnut",
+        "pro_team": "TEN",
+        "total_points": 4.0
+      },
+      {
+        "player_id": 4605841,
+        "name": "Nathan Carter",
+        "pro_team": "ATL",
+        "total_points": 4.0
+      },
+      {
+        "player_id": 4360238,
+        "name": "Dameon Pierce",
+        "pro_team": "KC",
+        "total_points": 3.6
+      },
+      {
+        "player_id": 4429676,
+        "name": "Tyler Goodson",
+        "pro_team": "IND",
+        "total_points": 3.2
+      },
+      {
+        "player_id": 4035693,
+        "name": "Velus Jones Jr.",
+        "pro_team": "SEA",
+        "total_points": 3.2
+      },
+      {
+        "player_id": 4039505,
+        "name": "Reggie Gilliam",
+        "pro_team": "BUF",
+        "total_points": 2.8
+      },
+      {
+        "player_id": 3139602,
+        "name": "D'Ernest Johnson",
+        "pro_team": "None",
+        "total_points": 2.5
+      },
+      {
+        "player_id": 4242214,
+        "name": "Clyde Edwards-Helaire",
+        "pro_team": "None",
+        "total_points": 2.2
+      },
+      {
+        "player_id": 4240631,
+        "name": "DeeJay Dallas",
+        "pro_team": "JAX",
+        "total_points": 2.1
+      },
+      {
+        "player_id": 4428943,
+        "name": "Jacardia Wright",
+        "pro_team": "SEA",
+        "total_points": 2.0
+      },
+      {
+        "player_id": 4426386,
+        "name": "Roschon Johnson",
+        "pro_team": "CHI",
+        "total_points": 1.7
+      },
+      {
+        "player_id": 4383429,
+        "name": "Jacob Saylors",
+        "pro_team": "DET",
+        "total_points": 1.1
+      },
+      {
+        "player_id": 2975417,
+        "name": "Patrick Ricard",
+        "pro_team": "BAL",
+        "total_points": 1.1
+      },
+      {
+        "player_id": 4568024,
+        "name": "Josh Williams",
+        "pro_team": "TB",
+        "total_points": 1.1
+      },
+      {
+        "player_id": 4878878,
+        "name": "Amar Johnson",
+        "pro_team": "LAC",
+        "total_points": 0.8
+      },
+      {
+        "player_id": 4429121,
+        "name": "Kalel Mullings",
+        "pro_team": "TEN",
+        "total_points": 0.7
+      },
+      {
+        "player_id": 4366963,
+        "name": "Dylan Laube",
+        "pro_team": "LV",
+        "total_points": 0.7
+      },
+      {
+        "player_id": 3886818,
+        "name": "Myles Gaskin",
+        "pro_team": "None",
+        "total_points": 0.6
+      },
+      {
+        "player_id": 4249616,
+        "name": "Owen Wright",
+        "pro_team": "TB",
+        "total_points": 0.6
+      },
+      {
+        "player_id": 4421446,
+        "name": "Craig Reynolds",
+        "pro_team": "None",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 4912274,
+        "name": "Sione Vaki",
+        "pro_team": "DET",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 4429012,
+        "name": "Kendall Milton",
+        "pro_team": "CIN",
+        "total_points": 0.2
+      },
+      {
+        "player_id": 3116385,
+        "name": "Joe Mixon",
+        "pro_team": "HOU",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429023,
+        "name": "MarShawn Lloyd",
+        "pro_team": "GB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4372561,
+        "name": "Isaac Guerendo",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4678008,
+        "name": "Jonathon Brooks",
+        "pro_team": "CAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241555,
+        "name": "Elijah Mitchell",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4710341,
+        "name": "Jarquez Hunter",
+        "pro_team": "LAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3051392,
+        "name": "Ezekiel Elliott",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3116593,
+        "name": "Dalvin Cook",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4249836,
+        "name": "Pierre Strong Jr.",
+        "pro_team": "GB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4685397,
+        "name": "Jordan James",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3115364,
+        "name": "Leonard Fournette",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035676,
+        "name": "Zack Moss",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4048244,
+        "name": "Alexander Mattison",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15807,
+        "name": "Cordarrelle Patterson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4374033,
+        "name": "Jermar Jefferson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4430104,
+        "name": "Sincere McCormick",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429202,
+        "name": "Israel Abanikanda",
+        "pro_team": "DAL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4570561,
+        "name": "Eric Gray",
+        "pro_team": "NYG",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431453,
+        "name": "Deuce Vaughn",
+        "pro_team": "DEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4691688,
+        "name": "Robbie Ouzts",
+        "pro_team": "SEA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431536,
+        "name": "Donovan Edwards",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429805,
+        "name": "Frank Gore Jr.",
+        "pro_team": "BUF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2576434,
+        "name": "Melvin Gordon III",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2980453,
+        "name": "Jamaal Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259308,
+        "name": "Raheem Blackshear",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4372070,
+        "name": "Ben VanSumeren",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4427391,
+        "name": "Kenny McIntosh",
+        "pro_team": "SEA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036224,
+        "name": "Jake Funk",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243176,
+        "name": "Brady Russell",
+        "pro_team": "SEA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4714365,
+        "name": "Carson Steele",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241401,
+        "name": "Trey Sermon",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4808830,
+        "name": "Damien Martinez",
+        "pro_team": "GB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3119195,
+        "name": "Chase Edmonds",
+        "pro_team": "WSH",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2515270,
+        "name": "Michael Burton",
+        "pro_team": "DEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3051926,
+        "name": "Gus Edwards",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4430388,
+        "name": "DeWayne McBride",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4039358,
+        "name": "Patrick Taylor Jr.",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4039607,
+        "name": "J.J. Taylor",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4391845,
+        "name": "Cody Schrader",
+        "pro_team": "DEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3925347,
+        "name": "Damien Harris",
+        "pro_team": "BUF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3122672,
+        "name": "Royce Freeman",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3139033,
+        "name": "Mike Boone",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15920,
+        "name": "Latavius Murray",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240911,
+        "name": "Jacob Kibodi",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243004,
+        "name": "Jordan Mims",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4046530,
+        "name": "Chris Evans",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3917612,
+        "name": "Ke'Shawn Vaughn",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362087,
+        "name": "Keaontay Ingram",
+        "pro_team": "KC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243315,
+        "name": "Salvon Ahmed",
+        "pro_team": "IND",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3122976,
+        "name": "Jeff Wilson Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3045238,
+        "name": "Godwin Igwebuike",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3125116,
+        "name": "D'Onta Foreman",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4390717,
+        "name": "Josh Johnson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3051439,
+        "name": "Boston Scott",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3045260,
+        "name": "Corey Clement",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3125232,
+        "name": "Nick Bawden",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2979843,
+        "name": "Kenyan Drake",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362162,
+        "name": "SaRodorick Thompson Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4698191,
+        "name": "Chris Collier",
+        "pro_team": "LV",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4372519,
+        "name": "Jashaun Corbin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4372526,
+        "name": "Deneric Prince",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4567095,
+        "name": "Keilan Robinson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4569156,
+        "name": "Michael Wiley",
+        "pro_team": "TB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4567246,
+        "name": "Snoop Conner",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360406,
+        "name": "Mataeo Durant",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4245645,
+        "name": "Gary Brightwell",
+        "pro_team": "CIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4698253,
+        "name": "Lan Larison",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4567216,
+        "name": "D.J. Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4428119,
+        "name": "Lew Nichols",
+        "pro_team": "PIT",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 5208436,
+        "name": "Louis Rees-Zammit",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3115349,
+        "name": "Jakob Johnson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3139925,
+        "name": "Rashaad Penny",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16782,
+        "name": "Jerick McKinnon",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3049916,
+        "name": "Matt Breida",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4248068,
+        "name": "Aaron Shampklin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4258190,
+        "name": "Ben Mason",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4260406,
+        "name": "Zander Horvath",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4039359,
+        "name": "Darrell Henderson Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426475,
+        "name": "Tyrion Davis-Price",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2970262,
+        "name": "J.P. Holtz",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2577134,
+        "name": "Ty Montgomery II",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4248425,
+        "name": "Carlos Washington Jr.",
+        "pro_team": "ATL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3928925,
+        "name": "JaMycal Hasty",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240350,
+        "name": "Xazavian Valladay",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 17315,
+        "name": "Keith Smith",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3910544,
+        "name": "Joshua Kelley",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3122154,
+        "name": "Khari Blasingame",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426689,
+        "name": "Ulysses Bentley IV",
+        "pro_team": "IND",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4052042,
+        "name": "James Robinson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3116158,
+        "name": "Jason Cabinda",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15478,
+        "name": "Brandon Bolden",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4685016,
+        "name": "Ellis Merriweather",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4685035,
+        "name": "Zach Evans",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426891,
+        "name": "Isaiah Spiller",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4367510,
+        "name": "Dante Miller",
+        "pro_team": "NYG",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3699935,
+        "name": "Devine Ozigbo",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429001,
+        "name": "Jase McClellan",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240750,
+        "name": "Mohamed Ibrahim",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3915145,
+        "name": "Kirk Merritt",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4048259,
+        "name": "Avery Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3925346,
+        "name": "Derrick Gore",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3915381,
+        "name": "John Kelly Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4570674,
+        "name": "Kevin Harris",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4274040,
+        "name": "Troy Hairston",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 14167,
+        "name": "Taiwan Jones",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4046676,
+        "name": "Tony Jones Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036431,
+        "name": "Darrynton Evans",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241224,
+        "name": "Abram Smith",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3002265,
+        "name": "Dwayne Washington",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4212884,
+        "name": "Alex Armah",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2980077,
+        "name": "Jonathan Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4034952,
+        "name": "La'Mical Perine",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241941,
+        "name": "Anthony McFarland Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4039274,
+        "name": "Jonathan Ward",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3123944,
+        "name": "Qadree Ollison",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 17359,
+        "name": "Damien Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240455,
+        "name": "Deon Jackson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035826,
+        "name": "Demetric Felton",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4244651,
+        "name": "D'vonte Price",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4248909,
+        "name": "Elijah Dotson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259169,
+        "name": "Trestan Ebner",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361604,
+        "name": "Blake Watson",
+        "pro_team": "TEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4037457,
+        "name": "Travis Homer",
+        "pro_team": "CHI",
+        "total_points": -0.2
+      },
+      {
+        "player_id": 3916430,
+        "name": "Nyheim Hines",
+        "pro_team": "None",
+        "total_points": -0.2
+      }
+    ],
+    "WR": [
+      {
+        "player_id": 4426515,
+        "name": "Puka Nacua",
+        "pro_team": "LAR",
+        "total_points": 246.0
+      },
+      {
+        "player_id": 4430878,
+        "name": "Jaxon Smith-Njigba",
+        "pro_team": "SEA",
+        "total_points": 240.9
+      },
+      {
+        "player_id": 4374302,
+        "name": "Amon-Ra St. Brown",
+        "pro_team": "DET",
+        "total_points": 207.0
+      },
+      {
+        "player_id": 4426354,
+        "name": "George Pickens",
+        "pro_team": "DAL",
+        "total_points": 198.9
+      },
+      {
+        "player_id": 4362628,
+        "name": "Ja'Marr Chase",
+        "pro_team": "CIN",
+        "total_points": 188.6
+      },
+      {
+        "player_id": 4361370,
+        "name": "Chris Olave",
+        "pro_team": "NO",
+        "total_points": 168.0
+      },
+      {
+        "player_id": 16800,
+        "name": "Davante Adams",
+        "pro_team": "LAR",
+        "total_points": 162.9
+      },
+      {
+        "player_id": 4429615,
+        "name": "Zay Flowers",
+        "pro_team": "BAL",
+        "total_points": 157.3
+      },
+      {
+        "player_id": 4258173,
+        "name": "Nico Collins",
+        "pro_team": "HOU",
+        "total_points": 155.2
+      },
+      {
+        "player_id": 4426388,
+        "name": "Jameson Williams",
+        "pro_team": "DET",
+        "total_points": 154.9
+      },
+      {
+        "player_id": 4239993,
+        "name": "Tee Higgins",
+        "pro_team": "CIN",
+        "total_points": 152.6
+      },
+      {
+        "player_id": 3128429,
+        "name": "Courtland Sutton",
+        "pro_team": "DEN",
+        "total_points": 145.7
+      },
+      {
+        "player_id": 4360761,
+        "name": "Michael Wilson",
+        "pro_team": "ARI",
+        "total_points": 142.6
+      },
+      {
+        "player_id": 4047646,
+        "name": "A.J. Brown",
+        "pro_team": "PHI",
+        "total_points": 142.3
+      },
+      {
+        "player_id": 4685472,
+        "name": "Tetairoa McMillan",
+        "pro_team": "CAR",
+        "total_points": 141.4
+      },
+      {
+        "player_id": 4360078,
+        "name": "Alec Pierce",
+        "pro_team": "IND",
+        "total_points": 136.3
+      },
+      {
+        "player_id": 4426502,
+        "name": "Drake London",
+        "pro_team": "ATL",
+        "total_points": 133.9
+      },
+      {
+        "player_id": 4567750,
+        "name": "Emeka Egbuka",
+        "pro_team": "TB",
+        "total_points": 132.7
+      },
+      {
+        "player_id": 4372016,
+        "name": "Jaylen Waddle",
+        "pro_team": "MIA",
+        "total_points": 130.12
+      },
+      {
+        "player_id": 4047650,
+        "name": "DK Metcalf",
+        "pro_team": "PIT",
+        "total_points": 128.2
+      },
+      {
+        "player_id": 4432620,
+        "name": "Parker Washington",
+        "pro_team": "JAX",
+        "total_points": 126.7
+      },
+      {
+        "player_id": 4241389,
+        "name": "CeeDee Lamb",
+        "pro_team": "DAL",
+        "total_points": 125.9
+      },
+      {
+        "player_id": 4569587,
+        "name": "Wan'Dale Robinson",
+        "pro_team": "NYG",
+        "total_points": 125.9
+      },
+      {
+        "player_id": 2976212,
+        "name": "Stefon Diggs",
+        "pro_team": "NE",
+        "total_points": 125.3
+      },
+      {
+        "player_id": 4241478,
+        "name": "DeVonta Smith",
+        "pro_team": "PHI",
+        "total_points": 124.8
+      },
+      {
+        "player_id": 4035687,
+        "name": "Michael Pittman Jr.",
+        "pro_team": "IND",
+        "total_points": 122.4
+      },
+      {
+        "player_id": 4429025,
+        "name": "Quentin Johnston",
+        "pro_team": "LAC",
+        "total_points": 120.2
+      },
+      {
+        "player_id": 3915416,
+        "name": "DJ Moore",
+        "pro_team": "CHI",
+        "total_points": 120.18
+      },
+      {
+        "player_id": 3886598,
+        "name": "Jauan Jennings",
+        "pro_team": "SF",
+        "total_points": 118.3
+      },
+      {
+        "player_id": 4262921,
+        "name": "Justin Jefferson",
+        "pro_team": "MIN",
+        "total_points": 117.5
+      },
+      {
+        "player_id": 3126486,
+        "name": "Deebo Samuel",
+        "pro_team": "WSH",
+        "total_points": 116.2
+      },
+      {
+        "player_id": 4612826,
+        "name": "Ladd McConkey",
+        "pro_team": "LAC",
+        "total_points": 114.9
+      },
+      {
+        "player_id": 4431280,
+        "name": "Troy Franklin",
+        "pro_team": "DEN",
+        "total_points": 112.1
+      },
+      {
+        "player_id": 4361432,
+        "name": "Romeo Doubs",
+        "pro_team": "GB",
+        "total_points": 110.4
+      },
+      {
+        "player_id": 4428718,
+        "name": "Tre Tucker",
+        "pro_team": "LV",
+        "total_points": 104.7
+      },
+      {
+        "player_id": 4431299,
+        "name": "Rome Odunze",
+        "pro_team": "CHI",
+        "total_points": 102.1
+      },
+      {
+        "player_id": 15818,
+        "name": "Keenan Allen",
+        "pro_team": "LAC",
+        "total_points": 101.7
+      },
+      {
+        "player_id": 3916433,
+        "name": "Jakobi Meyers",
+        "pro_team": "JAX",
+        "total_points": 100.8
+      },
+      {
+        "player_id": 4032473,
+        "name": "Rashid Shaheed",
+        "pro_team": "SEA",
+        "total_points": 97.6
+      },
+      {
+        "player_id": 4248528,
+        "name": "Christian Watson",
+        "pro_team": "GB",
+        "total_points": 97.4
+      },
+      {
+        "player_id": 4428331,
+        "name": "Rashee Rice",
+        "pro_team": "KC",
+        "total_points": 97.1
+      },
+      {
+        "player_id": 4373678,
+        "name": "Khalil Shakir",
+        "pro_team": "BUF",
+        "total_points": 94.4
+      },
+      {
+        "player_id": 4429205,
+        "name": "Jordan Addison",
+        "pro_team": "MIN",
+        "total_points": 93.1
+      },
+      {
+        "player_id": 4429022,
+        "name": "Kayshon Boutte",
+        "pro_team": "NE",
+        "total_points": 91.1
+      },
+      {
+        "player_id": 4432773,
+        "name": "Brian Thomas Jr.",
+        "pro_team": "JAX",
+        "total_points": 90.8
+      },
+      {
+        "player_id": 4241372,
+        "name": "Hollywood Brown",
+        "pro_team": "KC",
+        "total_points": 88.7
+      },
+      {
+        "player_id": 4877706,
+        "name": "Jayden Higgins",
+        "pro_team": "HOU",
+        "total_points": 88.5
+      },
+      {
+        "player_id": 4432708,
+        "name": "Marvin Harrison Jr.",
+        "pro_team": "ARI",
+        "total_points": 86.8
+      },
+      {
+        "player_id": 4685278,
+        "name": "Luther Burden III",
+        "pro_team": "CHI",
+        "total_points": 80.9
+      },
+      {
+        "player_id": 4688813,
+        "name": "Josh Downs",
+        "pro_team": "IND",
+        "total_points": 78.4
+      },
+      {
+        "player_id": 4431268,
+        "name": "Chimere Dike",
+        "pro_team": "TEN",
+        "total_points": 78.1
+      },
+      {
+        "player_id": 3121422,
+        "name": "Terry McLaurin",
+        "pro_team": "WSH",
+        "total_points": 76.2
+      },
+      {
+        "player_id": 4883647,
+        "name": "Elic Ayomanor",
+        "pro_team": "TEN",
+        "total_points": 75.5
+      },
+      {
+        "player_id": 5083754,
+        "name": "Ryan Flournoy",
+        "pro_team": "DAL",
+        "total_points": 74.0
+      },
+      {
+        "player_id": 4382466,
+        "name": "Jalen Nailor",
+        "pro_team": "MIN",
+        "total_points": 71.7
+      },
+      {
+        "player_id": 4241463,
+        "name": "Jerry Jeudy",
+        "pro_team": "CLE",
+        "total_points": 70.7
+      },
+      {
+        "player_id": 4569603,
+        "name": "Malik Washington",
+        "pro_team": "MIA",
+        "total_points": 70.7
+      },
+      {
+        "player_id": 2977187,
+        "name": "Cooper Kupp",
+        "pro_team": "SEA",
+        "total_points": 69.3
+      },
+      {
+        "player_id": 4683062,
+        "name": "Xavier Worthy",
+        "pro_team": "KC",
+        "total_points": 67.9
+      },
+      {
+        "player_id": 2991662,
+        "name": "Mack Hollins",
+        "pro_team": "NE",
+        "total_points": 67.4
+      },
+      {
+        "player_id": 4427095,
+        "name": "DeMario Douglas",
+        "pro_team": "NE",
+        "total_points": 64.8
+      },
+      {
+        "player_id": 4635008,
+        "name": "Keon Coleman",
+        "pro_team": "BUF",
+        "total_points": 64.4
+      },
+      {
+        "player_id": 4608810,
+        "name": "Tez Johnson",
+        "pro_team": "TB",
+        "total_points": 64.4
+      },
+      {
+        "player_id": 4569618,
+        "name": "Garrett Wilson",
+        "pro_team": "NYJ",
+        "total_points": 63.5
+      },
+      {
+        "player_id": 4686422,
+        "name": "Xavier Hutchinson",
+        "pro_team": "HOU",
+        "total_points": 63.0
+      },
+      {
+        "player_id": 3916945,
+        "name": "Darius Slayton",
+        "pro_team": "NYG",
+        "total_points": 61.8
+      },
+      {
+        "player_id": 4362921,
+        "name": "Tyquan Thornton",
+        "pro_team": "KC",
+        "total_points": 61.8
+      },
+      {
+        "player_id": 5123663,
+        "name": "Isaac TeSlaa",
+        "pro_team": "DET",
+        "total_points": 59.9
+      },
+      {
+        "player_id": 3676833,
+        "name": "KaVontae Turpin",
+        "pro_team": "DAL",
+        "total_points": 58.5
+      },
+      {
+        "player_id": 4695883,
+        "name": "Jalen Coker",
+        "pro_team": "CAR",
+        "total_points": 57.4
+      },
+      {
+        "player_id": 4368003,
+        "name": "Andrei Iosivas",
+        "pro_team": "CIN",
+        "total_points": 56.9
+      },
+      {
+        "player_id": 4686472,
+        "name": "Marvin Mims Jr.",
+        "pro_team": "DEN",
+        "total_points": 56.0
+      },
+      {
+        "player_id": 4243389,
+        "name": "Calvin Austin III",
+        "pro_team": "PIT",
+        "total_points": 55.2
+      },
+      {
+        "player_id": 3045523,
+        "name": "Kendrick Bourne",
+        "pro_team": "SF",
+        "total_points": 55.1
+      },
+      {
+        "player_id": 4597500,
+        "name": "Adonai Mitchell",
+        "pro_team": "NYJ",
+        "total_points": 54.9
+      },
+      {
+        "player_id": 16737,
+        "name": "Mike Evans",
+        "pro_team": "TB",
+        "total_points": 54.8
+      },
+      {
+        "player_id": 4430034,
+        "name": "Xavier Legette",
+        "pro_team": "CAR",
+        "total_points": 54.3
+      },
+      {
+        "player_id": 4428209,
+        "name": "Ricky Pearsall",
+        "pro_team": "SF",
+        "total_points": 52.6
+      },
+      {
+        "player_id": 4597703,
+        "name": "Tory Horton",
+        "pro_team": "SEA",
+        "total_points": 52.1
+      },
+      {
+        "player_id": 4040655,
+        "name": "Darnell Mooney",
+        "pro_team": "ATL",
+        "total_points": 50.3
+      },
+      {
+        "player_id": 3116165,
+        "name": "Chris Godwin Jr.",
+        "pro_team": "TB",
+        "total_points": 50.0
+      },
+      {
+        "player_id": 4037235,
+        "name": "Greg Dortch",
+        "pro_team": "ARI",
+        "total_points": 46.1
+      },
+      {
+        "player_id": 4428850,
+        "name": "Dontayvion Wicks",
+        "pro_team": "GB",
+        "total_points": 45.8
+      },
+      {
+        "player_id": 3917914,
+        "name": "Olamide Zaccheaus",
+        "pro_team": "CHI",
+        "total_points": 45.8
+      },
+      {
+        "player_id": 15795,
+        "name": "DeAndre Hopkins",
+        "pro_team": "BAL",
+        "total_points": 45.0
+      },
+      {
+        "player_id": 4600981,
+        "name": "Pat Bryant",
+        "pro_team": "DEN",
+        "total_points": 43.8
+      },
+      {
+        "player_id": 2976592,
+        "name": "Sterling Shepard",
+        "pro_team": "TB",
+        "total_points": 43.0
+      },
+      {
+        "player_id": 2973405,
+        "name": "Kalif Raymond",
+        "pro_team": "DET",
+        "total_points": 42.8
+      },
+      {
+        "player_id": 4586312,
+        "name": "Jaylin Noel",
+        "pro_team": "HOU",
+        "total_points": 42.4
+      },
+      {
+        "player_id": 4569559,
+        "name": "Devaughn Vele",
+        "pro_team": "NO",
+        "total_points": 41.3
+      },
+      {
+        "player_id": 2577327,
+        "name": "Tyler Lockett",
+        "pro_team": "LV",
+        "total_points": 41.1
+      },
+      {
+        "player_id": 4701936,
+        "name": "Matthew Golden",
+        "pro_team": "GB",
+        "total_points": 41.0
+      },
+      {
+        "player_id": 3930066,
+        "name": "Van Jefferson",
+        "pro_team": "TEN",
+        "total_points": 41.0
+      },
+      {
+        "player_id": 3120348,
+        "name": "JuJu Smith-Schuster",
+        "pro_team": "KC",
+        "total_points": 40.5
+      },
+      {
+        "player_id": 4426948,
+        "name": "Luke McCaffrey",
+        "pro_team": "WSH",
+        "total_points": 40.3
+      },
+      {
+        "player_id": 4686612,
+        "name": "Tre' Harris",
+        "pro_team": "LAC",
+        "total_points": 39.4
+      },
+      {
+        "player_id": 4613202,
+        "name": "Kyle Williams",
+        "pro_team": "NE",
+        "total_points": 39.2
+      },
+      {
+        "player_id": 4595348,
+        "name": "Malik Nabers",
+        "pro_team": "NYG",
+        "total_points": 39.1
+      },
+      {
+        "player_id": 4369863,
+        "name": "Cedric Tillman",
+        "pro_team": "CLE",
+        "total_points": 39.0
+      },
+      {
+        "player_id": 4567096,
+        "name": "John Metchie III",
+        "pro_team": "NYJ",
+        "total_points": 38.9
+      },
+      {
+        "player_id": 4808839,
+        "name": "Isaiah Bond",
+        "pro_team": "CLE",
+        "total_points": 36.7
+      },
+      {
+        "player_id": 3134353,
+        "name": "Tim Patrick",
+        "pro_team": "JAX",
+        "total_points": 36.7
+      },
+      {
+        "player_id": 4360939,
+        "name": "Rashod Bateman",
+        "pro_team": "BAL",
+        "total_points": 36.4
+      },
+      {
+        "player_id": 3043116,
+        "name": "Demarcus Robinson",
+        "pro_team": "SF",
+        "total_points": 36.2
+      },
+      {
+        "player_id": 4685415,
+        "name": "Travis Hunter",
+        "pro_team": "JAX",
+        "total_points": 35.8
+      },
+      {
+        "player_id": 4602667,
+        "name": "Jaylin Lane",
+        "pro_team": "WSH",
+        "total_points": 33.2
+      },
+      {
+        "player_id": 4569371,
+        "name": "Isaiah Williams",
+        "pro_team": "NYJ",
+        "total_points": 32.7
+      },
+      {
+        "player_id": 3116406,
+        "name": "Tyreek Hill",
+        "pro_team": "None",
+        "total_points": 32.5
+      },
+      {
+        "player_id": 4361409,
+        "name": "Jahan Dotson",
+        "pro_team": "PHI",
+        "total_points": 32.2
+      },
+      {
+        "player_id": 4696882,
+        "name": "Devontez Walker",
+        "pro_team": "BAL",
+        "total_points": 31.6
+      },
+      {
+        "player_id": 3871102,
+        "name": "David Sills V",
+        "pro_team": "ATL",
+        "total_points": 31.1
+      },
+      {
+        "player_id": 4241476,
+        "name": "Tyrell Shavers",
+        "pro_team": "BUF",
+        "total_points": 30.5
+      },
+      {
+        "player_id": 3925357,
+        "name": "Calvin Ridley",
+        "pro_team": "TEN",
+        "total_points": 30.3
+      },
+      {
+        "player_id": 4242433,
+        "name": "Joshua Palmer",
+        "pro_team": "BUF",
+        "total_points": 30.3
+      },
+      {
+        "player_id": 4386544,
+        "name": "Xavier Smith",
+        "pro_team": "LAR",
+        "total_points": 30.3
+      },
+      {
+        "player_id": 3895856,
+        "name": "Christian Kirk",
+        "pro_team": "HOU",
+        "total_points": 29.9
+      },
+      {
+        "player_id": 4361577,
+        "name": "Dyami Brown",
+        "pro_team": "JAX",
+        "total_points": 29.7
+      },
+      {
+        "player_id": 4362249,
+        "name": "Jayden Reed",
+        "pro_team": "GB",
+        "total_points": 29.5
+      },
+      {
+        "player_id": 4249417,
+        "name": "Jalen Tolbert",
+        "pro_team": "DAL",
+        "total_points": 28.3
+      },
+      {
+        "player_id": 16731,
+        "name": "Brandin Cooks",
+        "pro_team": "BUF",
+        "total_points": 27.9
+      },
+      {
+        "player_id": 2576581,
+        "name": "Chris Moore",
+        "pro_team": "WSH",
+        "total_points": 27.6
+      },
+      {
+        "player_id": 4431492,
+        "name": "Roman Wilson",
+        "pro_team": "PIT",
+        "total_points": 26.6
+      },
+      {
+        "player_id": 2310331,
+        "name": "Tyler Johnson",
+        "pro_team": "NYJ",
+        "total_points": 25.7
+      },
+      {
+        "player_id": 4360797,
+        "name": "Tutu Atwell",
+        "pro_team": "LAR",
+        "total_points": 25.2
+      },
+      {
+        "player_id": 4424106,
+        "name": "Gunner Olszewski",
+        "pro_team": "NYG",
+        "total_points": 23.82
+      },
+      {
+        "player_id": 4690070,
+        "name": "Mitchell Tinsley",
+        "pro_team": "CIN",
+        "total_points": 23.6
+      },
+      {
+        "player_id": 4603186,
+        "name": "Jack Bech",
+        "pro_team": "LV",
+        "total_points": 22.4
+      },
+      {
+        "player_id": 4039057,
+        "name": "Lil'Jordan Humphrey",
+        "pro_team": "DEN",
+        "total_points": 21.6
+      },
+      {
+        "player_id": 3135321,
+        "name": "Hunter Renfrow",
+        "pro_team": "None",
+        "total_points": 20.9
+      },
+      {
+        "player_id": 5160110,
+        "name": "Jahdae Walker",
+        "pro_team": "CHI",
+        "total_points": 20.7
+      },
+      {
+        "player_id": 16460,
+        "name": "Adam Thielen",
+        "pro_team": "PIT",
+        "total_points": 20.6
+      },
+      {
+        "player_id": 4613104,
+        "name": "Malachi Corley",
+        "pro_team": "CLE",
+        "total_points": 20.6
+      },
+      {
+        "player_id": 4259305,
+        "name": "Bo Melton",
+        "pro_team": "GB",
+        "total_points": 20.2
+      },
+      {
+        "player_id": 4372758,
+        "name": "Kevin Austin Jr.",
+        "pro_team": "NO",
+        "total_points": 20.0
+      },
+      {
+        "player_id": 4426535,
+        "name": "Theo Wease Jr.",
+        "pro_team": "MIA",
+        "total_points": 19.9
+      },
+      {
+        "player_id": 4372414,
+        "name": "Elijah Moore",
+        "pro_team": "None",
+        "total_points": 19.6
+      },
+      {
+        "player_id": 4567156,
+        "name": "Treylon Burks",
+        "pro_team": "WSH",
+        "total_points": 19.0
+      },
+      {
+        "player_id": 4243537,
+        "name": "Gabe Davis",
+        "pro_team": "BUF",
+        "total_points": 18.9
+      },
+      {
+        "player_id": 4569382,
+        "name": "Jordan Whittington",
+        "pro_team": "LAR",
+        "total_points": 18.3
+      },
+      {
+        "player_id": 3059722,
+        "name": "Zay Jones",
+        "pro_team": "ARI",
+        "total_points": 18.3
+      },
+      {
+        "player_id": 3051738,
+        "name": "Marquez Valdes-Scantling",
+        "pro_team": "PIT",
+        "total_points": 18.0
+      },
+      {
+        "player_id": 4430834,
+        "name": "Jalen McMillan",
+        "pro_team": "TB",
+        "total_points": 17.9
+      },
+      {
+        "player_id": 4708486,
+        "name": "Jimmy Horn Jr.",
+        "pro_team": "CAR",
+        "total_points": 17.7
+      },
+      {
+        "player_id": 4242540,
+        "name": "Isaiah Hodgins",
+        "pro_team": "NYG",
+        "total_points": 17.5
+      },
+      {
+        "player_id": 4360763,
+        "name": "Brycen Tremayne",
+        "pro_team": "CAR",
+        "total_points": 16.0
+      },
+      {
+        "player_id": 4431487,
+        "name": "Savion Williams",
+        "pro_team": "GB",
+        "total_points": 15.5
+      },
+      {
+        "player_id": 4710855,
+        "name": "Konata Mumpfield",
+        "pro_team": "LAR",
+        "total_points": 15.2
+      },
+      {
+        "player_id": 4241983,
+        "name": "Cody White",
+        "pro_team": "SEA",
+        "total_points": 15.0
+      },
+      {
+        "player_id": 4061956,
+        "name": "Ashton Dulin",
+        "pro_team": "IND",
+        "total_points": 15.0
+      },
+      {
+        "player_id": 3121427,
+        "name": "Curtis Samuel",
+        "pro_team": "BUF",
+        "total_points": 14.1
+      },
+      {
+        "player_id": 5097554,
+        "name": "Kameron Johnson",
+        "pro_team": "TB",
+        "total_points": 13.7
+      },
+      {
+        "player_id": 4432775,
+        "name": "Dont'e Thornton Jr.",
+        "pro_team": "LV",
+        "total_points": 13.5
+      },
+      {
+        "player_id": 4695193,
+        "name": "Efton Chism III",
+        "pro_team": "NE",
+        "total_points": 13.5
+      },
+      {
+        "player_id": 3128390,
+        "name": "Allen Lazard",
+        "pro_team": "None",
+        "total_points": 13.0
+      },
+      {
+        "player_id": 4035656,
+        "name": "Ben Skowronek",
+        "pro_team": "PIT",
+        "total_points": 12.9
+      },
+      {
+        "player_id": 3115306,
+        "name": "Josh Reynolds",
+        "pro_team": "NYJ",
+        "total_points": 12.1
+      },
+      {
+        "player_id": 4361332,
+        "name": "Shedrick Jackson",
+        "pro_team": "LV",
+        "total_points": 11.9
+      },
+      {
+        "player_id": 4430870,
+        "name": "KeAndre Lambert-Smith",
+        "pro_team": "LAC",
+        "total_points": 11.1
+      },
+      {
+        "player_id": 3127306,
+        "name": "Dante Pettis",
+        "pro_team": "NO",
+        "total_points": 10.7
+      },
+      {
+        "player_id": 4428678,
+        "name": "Jamari Thrash",
+        "pro_team": "CLE",
+        "total_points": 10.7
+      },
+      {
+        "player_id": 4241424,
+        "name": "Tylan Wallace",
+        "pro_team": "BAL",
+        "total_points": 10.5
+      },
+      {
+        "player_id": 4430191,
+        "name": "Skyy Moore",
+        "pro_team": "SF",
+        "total_points": 9.8
+      },
+      {
+        "player_id": 4573697,
+        "name": "Mason Tipton",
+        "pro_team": "NO",
+        "total_points": 9.4
+      },
+      {
+        "player_id": 4428796,
+        "name": "Casey Washington",
+        "pro_team": "ATL",
+        "total_points": 9.4
+      },
+      {
+        "player_id": 4369466,
+        "name": "Ryan Miller",
+        "pro_team": "NYG",
+        "total_points": 9.4
+      },
+      {
+        "player_id": 4715355,
+        "name": "Darius Cooper",
+        "pro_team": "PHI",
+        "total_points": 9.2
+      },
+      {
+        "player_id": 4034704,
+        "name": "Michael Bandy",
+        "pro_team": "DEN",
+        "total_points": 9.0
+      },
+      {
+        "player_id": 3929785,
+        "name": "Nick Westbrook-Ikhine",
+        "pro_team": "None",
+        "total_points": 8.9
+      },
+      {
+        "player_id": 4689334,
+        "name": "Malik Heath",
+        "pro_team": "ATL",
+        "total_points": 8.6
+      },
+      {
+        "player_id": 3121409,
+        "name": "Noah Brown",
+        "pro_team": "WSH",
+        "total_points": 8.3
+      },
+      {
+        "player_id": 4372063,
+        "name": "Ronnie Bell",
+        "pro_team": "NO",
+        "total_points": 8.3
+      },
+      {
+        "player_id": 3728262,
+        "name": "Ray-Ray McCloud III",
+        "pro_team": "None",
+        "total_points": 6.9
+      },
+      {
+        "player_id": 4428811,
+        "name": "Xavier Weaver",
+        "pro_team": "ARI",
+        "total_points": 6.7
+      },
+      {
+        "player_id": 4429105,
+        "name": "Arian Smith",
+        "pro_team": "NYJ",
+        "total_points": 6.5
+      },
+      {
+        "player_id": 3916204,
+        "name": "James Proche II",
+        "pro_team": "TEN",
+        "total_points": 6.5
+      },
+      {
+        "player_id": 3914397,
+        "name": "Scotty Miller",
+        "pro_team": "PIT",
+        "total_points": 6.2
+      },
+      {
+        "player_id": 4257188,
+        "name": "Charlie Jones",
+        "pro_team": "CIN",
+        "total_points": 6.0
+      },
+      {
+        "player_id": 4877203,
+        "name": "Gage Larvadain",
+        "pro_team": "CLE",
+        "total_points": 5.4
+      },
+      {
+        "player_id": 2574808,
+        "name": "Robbie Chosen",
+        "pro_team": "None",
+        "total_points": 5.3
+      },
+      {
+        "player_id": 4057082,
+        "name": "Mason Kinsey",
+        "pro_team": "TEN",
+        "total_points": 4.8
+      },
+      {
+        "player_id": 4401805,
+        "name": "Dareke Young",
+        "pro_team": "SEA",
+        "total_points": 4.8
+      },
+      {
+        "player_id": 4244856,
+        "name": "Austin Trammell",
+        "pro_team": "JAX",
+        "total_points": 4.6
+      },
+      {
+        "player_id": 4036335,
+        "name": "Cedrick Wilson Jr.",
+        "pro_team": "MIA",
+        "total_points": 4.4
+      },
+      {
+        "player_id": 4043016,
+        "name": "Dee Eskridge",
+        "pro_team": "MIA",
+        "total_points": 4.2
+      },
+      {
+        "player_id": 4363551,
+        "name": "Dylan Drummond",
+        "pro_team": "ATL",
+        "total_points": 4.2
+      },
+      {
+        "player_id": 4431353,
+        "name": "Xavier Restrepo",
+        "pro_team": "TEN",
+        "total_points": 4.1
+      },
+      {
+        "player_id": 3123075,
+        "name": "Braxton Berrios",
+        "pro_team": "HOU",
+        "total_points": 3.7
+      },
+      {
+        "player_id": 3126997,
+        "name": "Tom Kennedy",
+        "pro_team": "DET",
+        "total_points": 3.6
+      },
+      {
+        "player_id": 4692590,
+        "name": "Jalin Hyatt",
+        "pro_team": "NYG",
+        "total_points": 3.5
+      },
+      {
+        "player_id": 4372716,
+        "name": "Nikko Remigio",
+        "pro_team": "KC",
+        "total_points": 3.2
+      },
+      {
+        "player_id": 4374187,
+        "name": "Deven Thompkins",
+        "pro_team": "ATL",
+        "total_points": 3.2
+      },
+      {
+        "player_id": 4692835,
+        "name": "Jalen Brooks",
+        "pro_team": "ARI",
+        "total_points": 3.1
+      },
+      {
+        "player_id": 3047876,
+        "name": "KhaDarel Hodge",
+        "pro_team": "None",
+        "total_points": 3.1
+      },
+      {
+        "player_id": 3118892,
+        "name": "Justin Watson",
+        "pro_team": "HOU",
+        "total_points": 3.0
+      },
+      {
+        "player_id": 4613050,
+        "name": "Quentin Skinner",
+        "pro_team": "NYJ",
+        "total_points": 3.0
+      },
+      {
+        "player_id": 4039050,
+        "name": "Devin Duvernay",
+        "pro_team": "CHI",
+        "total_points": 2.6
+      },
+      {
+        "player_id": 4431466,
+        "name": "Jordan Watkins",
+        "pro_team": "SF",
+        "total_points": 2.6
+      },
+      {
+        "player_id": 4565185,
+        "name": "Tai Felton",
+        "pro_team": "MIN",
+        "total_points": 2.5
+      },
+      {
+        "player_id": 4426485,
+        "name": "Jonathan Mingo",
+        "pro_team": "DAL",
+        "total_points": 2.5
+      },
+      {
+        "player_id": 4431210,
+        "name": "Beaux Collins",
+        "pro_team": "NYG",
+        "total_points": 2.5
+      },
+      {
+        "player_id": 5083297,
+        "name": "Jacoby Jones",
+        "pro_team": "WSH",
+        "total_points": 2.5
+      },
+      {
+        "player_id": 4245144,
+        "name": "Tay Martin",
+        "pro_team": "None",
+        "total_points": 2.3
+      },
+      {
+        "player_id": 3122168,
+        "name": "Trent Sherfield Sr.",
+        "pro_team": "None",
+        "total_points": 2.1
+      },
+      {
+        "player_id": 4360405,
+        "name": "Jake Bobo",
+        "pro_team": "SEA",
+        "total_points": 2.0
+      },
+      {
+        "player_id": 3926231,
+        "name": "Britain Covey",
+        "pro_team": "PHI",
+        "total_points": 2.0
+      },
+      {
+        "player_id": 4430681,
+        "name": "Jared Wayne",
+        "pro_team": "HOU",
+        "total_points": 2.0
+      },
+      {
+        "player_id": 4212909,
+        "name": "David Moore",
+        "pro_team": "CAR",
+        "total_points": 1.7
+      },
+      {
+        "player_id": 4567506,
+        "name": "Tahj Washington",
+        "pro_team": "MIA",
+        "total_points": 1.7
+      },
+      {
+        "player_id": 4245131,
+        "name": "Tim Jones",
+        "pro_team": "JAX",
+        "total_points": 1.5
+      },
+      {
+        "player_id": 5178972,
+        "name": "Jakobie Keeney-James",
+        "pro_team": "GB",
+        "total_points": 1.5
+      },
+      {
+        "player_id": 3919510,
+        "name": "Alex Bachman",
+        "pro_team": "LV",
+        "total_points": 1.2
+      },
+      {
+        "player_id": 3886809,
+        "name": "Andre Baccellia",
+        "pro_team": "ARI",
+        "total_points": 0.8
+      },
+      {
+        "player_id": 4362617,
+        "name": "Bryce Oliver",
+        "pro_team": "TEN",
+        "total_points": 0.8
+      },
+      {
+        "player_id": 4429684,
+        "name": "Anthony Gould",
+        "pro_team": "IND",
+        "total_points": 0.6
+      },
+      {
+        "player_id": 5082630,
+        "name": "Jalen Royals",
+        "pro_team": "KC",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 4027873,
+        "name": "Samori Toure",
+        "pro_team": "NO",
+        "total_points": 0.3
+      },
+      {
+        "player_id": 4240069,
+        "name": "Malik Cunningham",
+        "pro_team": "DET",
+        "total_points": 0.1
+      },
+      {
+        "player_id": 4360438,
+        "name": "Brandon Aiyuk",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2976499,
+        "name": "Amari Cooper",
+        "pro_team": "LV",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4366031,
+        "name": "Tank Dell",
+        "pro_team": "HOU",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16733,
+        "name": "Odell Beckham Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 13982,
+        "name": "Julio Jones",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3932905,
+        "name": "Diontae Johnson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2976316,
+        "name": "Michael Thomas",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240600,
+        "name": "Kadarius Toney",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3045138,
+        "name": "Mike Williams",
+        "pro_team": "LAC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429033,
+        "name": "Jermaine Burton",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4430637,
+        "name": "Ja'Lynn Polk",
+        "pro_team": "NO",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4372485,
+        "name": "Rondale Moore",
+        "pro_team": "MIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2580216,
+        "name": "DeAndre Carter",
+        "pro_team": "CLE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036348,
+        "name": "Michael Gallup",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 14053,
+        "name": "Randall Cobb",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4046692,
+        "name": "Chase Claypool",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3915802,
+        "name": "Lucky Jackson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4427985,
+        "name": "Bub Means",
+        "pro_team": "NO",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3932442,
+        "name": "Equanimeous St. Brown",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4686104,
+        "name": "Johnny Wilson",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4575665,
+        "name": "Jacob Cowing",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4596439,
+        "name": "Dominic Lovett",
+        "pro_team": "DET",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426407,
+        "name": "Trey Palmer",
+        "pro_team": "NO",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 11387,
+        "name": "Matthew Slater",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4249030,
+        "name": "D.J. Montgomery",
+        "pro_team": "IND",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15880,
+        "name": "Robert Woods",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431506,
+        "name": "Ja'Corey Brooks",
+        "pro_team": "WSH",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036416,
+        "name": "Byron Pringle",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2971618,
+        "name": "Nelson Agholor",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4573243,
+        "name": "Chandler Brayboy",
+        "pro_team": "JAX",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4689988,
+        "name": "Jason Brownlee",
+        "pro_team": "KC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3051889,
+        "name": "Laquon Treadwell",
+        "pro_team": "IND",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4258195,
+        "name": "Donovan Peoples-Jones",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426893,
+        "name": "Joshua Cephus",
+        "pro_team": "JAX",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4775196,
+        "name": "Tommy Mellott",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4050373,
+        "name": "Quez Watkins",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3128724,
+        "name": "Isaiah McKenzie",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15839,
+        "name": "Marquise Goodwin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3929636,
+        "name": "Irvin Charles",
+        "pro_team": "NYJ",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431479,
+        "name": "Ricky White III",
+        "pro_team": "SEA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4689546,
+        "name": "Danny Gray",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243160,
+        "name": "Laviska Shenault Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3122899,
+        "name": "Richie James",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4589248,
+        "name": "Tyreik McAllister",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3045144,
+        "name": "Tyler Boyd",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4427575,
+        "name": "Jha'Quan Jackson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362227,
+        "name": "Bryce Ford-Wheaton",
+        "pro_team": "NYG",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362186,
+        "name": "Erik Ezukanma",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360306,
+        "name": "Justyn Ross",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3917960,
+        "name": "Steven Sims",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4692022,
+        "name": "Javon Baker",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3932423,
+        "name": "Miles Boykin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2576623,
+        "name": "DeVante Parker",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3115255,
+        "name": "Brandon Powell",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3121410,
+        "name": "Parris Campbell",
+        "pro_team": "DAL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4698301,
+        "name": "Jermaine Jackson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4428116,
+        "name": "Isaiah Neyor",
+        "pro_team": "GB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2978109,
+        "name": "Zach Pascal",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362630,
+        "name": "Terrace Marshall Jr.",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241802,
+        "name": "Jalen Reagor",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3115394,
+        "name": "DJ Chark",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16799,
+        "name": "Allen Robinson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3052056,
+        "name": "River Cracraft",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4239992,
+        "name": "Amari Rodgers",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035198,
+        "name": "Brandon Johnson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360739,
+        "name": "Simi Fehoko",
+        "pro_team": "ARI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3914328,
+        "name": "Andy Isabella",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426479,
+        "name": "Cornelius Johnson",
+        "pro_team": "BAL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3052177,
+        "name": "John Ross",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4428532,
+        "name": "Ainias Smith",
+        "pro_team": "CAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15072,
+        "name": "Marvin Jones Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4367186,
+        "name": "Chase Cota",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3916566,
+        "name": "K.J. Osborn",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 17258,
+        "name": "Willie Snead IV",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240380,
+        "name": "KJ Hamler",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4565908,
+        "name": "Tyler Scott",
+        "pro_team": "LAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3046401,
+        "name": "Keith Kirkwood",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4602788,
+        "name": "Jackson Meeks",
+        "pro_team": "DET",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4686781,
+        "name": "Brenden Rice",
+        "pro_team": "LV",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4570242,
+        "name": "Nick Nash",
+        "pro_team": "WSH",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242504,
+        "name": "Johnny Johnson III",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361426,
+        "name": "Justin Shorter",
+        "pro_team": "LV",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426990,
+        "name": "Jalen Cropper",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2579604,
+        "name": "Phillip Dorsett II",
+        "pro_team": "LV",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3931391,
+        "name": "Trenton Irwin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4570296,
+        "name": "Dalen Cambre",
+        "pro_team": "NYG",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240573,
+        "name": "Ihmir Smith-Marsette",
+        "pro_team": "ARI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035793,
+        "name": "Quintez Cephus",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3040569,
+        "name": "Trent Taylor",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4887918,
+        "name": "Junior Bergen",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4570409,
+        "name": "David Bell",
+        "pro_team": "CLE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4369886,
+        "name": "Chris Blair",
+        "pro_team": "ATL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036026,
+        "name": "Dez Fitzpatrick",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431342,
+        "name": "Brennan Presley",
+        "pro_team": "LAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4371974,
+        "name": "Seth Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4427267,
+        "name": "Kaylon Geiger",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4062711,
+        "name": "Ethan Fernea",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3929637,
+        "name": "Dan Chisena",
+        "pro_team": "CAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4572786,
+        "name": "Dennis Houston",
+        "pro_team": "TB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4875912,
+        "name": "Tejhaun Palmer",
+        "pro_team": "ARI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4371986,
+        "name": "Anthony Schwartz",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036211,
+        "name": "DJ Turner",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361778,
+        "name": "Kearis Jackson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431509,
+        "name": "Kaden Prather",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4032247,
+        "name": "Raleigh Webb",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4408988,
+        "name": "Malik Taylor",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4245174,
+        "name": "Easop Winston Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4589245,
+        "name": "Michael Strachan",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243319,
+        "name": "Terrell Bynum",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4046715,
+        "name": "Trishton Jackson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362019,
+        "name": "A.T. Perry",
+        "pro_team": "PIT",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3120980,
+        "name": "Keelan Doss",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036448,
+        "name": "Jalen Virgil",
+        "pro_team": "BUF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4411193,
+        "name": "Deonte Harty",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360174,
+        "name": "Michael Woods II",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2977800,
+        "name": "Alex Erickson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3932144,
+        "name": "Jacob Harris",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3915821,
+        "name": "Tony Brown",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4245639,
+        "name": "Stanley Berryhill",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259976,
+        "name": "Josh Ali",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259908,
+        "name": "Braylon Sanders",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2578533,
+        "name": "Chris Conley",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4247812,
+        "name": "Lance McCutcheon",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259979,
+        "name": "Lynn Bowden Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3119317,
+        "name": "Nsimba Webster",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241588,
+        "name": "Elijah Cooks",
+        "pro_team": "NO",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243830,
+        "name": "Jaelon Darden",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4258170,
+        "name": "Tarik Black",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3932430,
+        "name": "Jalen Guyton",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4911488,
+        "name": "Jared Bernhardt",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4039043,
+        "name": "Collin Johnson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3115378,
+        "name": "Russell Gage Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4569372,
+        "name": "Dalevon Campbell",
+        "pro_team": "LAC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2576716,
+        "name": "Jamison Crowder",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3914307,
+        "name": "Maurice Alexander",
+        "pro_team": "CHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3052083,
+        "name": "Devon Allen",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3910176,
+        "name": "Kristian Wilkerson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035170,
+        "name": "Marquez Callaway",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426399,
+        "name": "Ramel Keyton",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426426,
+        "name": "Joseph Ngata",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242270,
+        "name": "Kyric McGowan",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4379405,
+        "name": "Jaylen Johnson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 5065495,
+        "name": "Kaden Davis",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4373266,
+        "name": "Antoine Green",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3126115,
+        "name": "Cody Thompson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4367175,
+        "name": "Kyle Philips",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3115928,
+        "name": "Malik Turner",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4262900,
+        "name": "Daylen Baldwin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3050487,
+        "name": "Anthony Miller",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3128317,
+        "name": "Juwann Winfree",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4047836,
+        "name": "Frank Darby",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4578436,
+        "name": "Coleman Owen",
+        "pro_team": "IND",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4373642,
+        "name": "Dax Milne",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3128451,
+        "name": "Tre'Quan Smith",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429006,
+        "name": "Rakim Jarrett",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035776,
+        "name": "Kendric Pryor",
+        "pro_team": "CIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3699902,
+        "name": "Stanley Morgan Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4248822,
+        "name": "Montrell Washington",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2577667,
+        "name": "Damiere Byrd",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240577,
+        "name": "Brandon Smith",
+        "pro_team": "PIT",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035912,
+        "name": "Kwamie Lassiter II",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4879650,
+        "name": "Grant DuBose",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4250945,
+        "name": "Colton Dowell",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360637,
+        "name": "Jeshaun Jones",
+        "pro_team": "MIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4431142,
+        "name": "Jimmy Holiday",
+        "pro_team": "KC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362477,
+        "name": "Derius Davis",
+        "pro_team": "LAC",
+        "total_points": -0.5
+      },
+      {
+        "player_id": 4570738,
+        "name": "Ke'Shawn Williams",
+        "pro_team": "CIN",
+        "total_points": -0.5
+      },
+      {
+        "player_id": 3061612,
+        "name": "Jamal Agnew",
+        "pro_team": "None",
+        "total_points": -2.0
+      },
+      {
+        "player_id": 4690143,
+        "name": "LaJohntay Wester",
+        "pro_team": "BAL",
+        "total_points": -2.0
+      },
+      {
+        "player_id": 4035004,
+        "name": "Mecole Hardman Jr.",
+        "pro_team": "BUF",
+        "total_points": -2.0
+      },
+      {
+        "player_id": 4427278,
+        "name": "Xavier Gipson",
+        "pro_team": "NYG",
+        "total_points": -3.4
+      },
+      {
+        "player_id": 4430656,
+        "name": "Myles Price",
+        "pro_team": "MIN",
+        "total_points": -6.0
+      }
+    ],
+    "TE": [
+      {
+        "player_id": 4361307,
+        "name": "Trey McBride",
+        "pro_team": "ARI",
+        "total_points": 189.9
+      },
+      {
+        "player_id": 3121023,
+        "name": "Dallas Goedert",
+        "pro_team": "PHI",
+        "total_points": 125.1
+      },
+      {
+        "player_id": 4360248,
+        "name": "Kyle Pitts Sr.",
+        "pro_team": "ATL",
+        "total_points": 122.8
+      },
+      {
+        "player_id": 3046439,
+        "name": "Hunter Henry",
+        "pro_team": "NE",
+        "total_points": 118.8
+      },
+      {
+        "player_id": 15847,
+        "name": "Travis Kelce",
+        "pro_team": "KC",
+        "total_points": 117.2
+      },
+      {
+        "player_id": 5083076,
+        "name": "Harold Fannin Jr.",
+        "pro_team": "CLE",
+        "total_points": 114.4
+      },
+      {
+        "player_id": 4431459,
+        "name": "Tyler Warren",
+        "pro_team": "IND",
+        "total_points": 112.5
+      },
+      {
+        "player_id": 4432665,
+        "name": "Brock Bowers",
+        "pro_team": "LV",
+        "total_points": 112.2
+      },
+      {
+        "player_id": 4723086,
+        "name": "Colston Loveland",
+        "pro_team": "CHI",
+        "total_points": 107.1
+      },
+      {
+        "player_id": 4242355,
+        "name": "Jake Ferguson",
+        "pro_team": "DAL",
+        "total_points": 106.1
+      },
+      {
+        "player_id": 3040151,
+        "name": "George Kittle",
+        "pro_team": "SF",
+        "total_points": 104.5
+      },
+      {
+        "player_id": 3929645,
+        "name": "Juwan Johnson",
+        "pro_team": "NO",
+        "total_points": 102.9
+      },
+      {
+        "player_id": 3117256,
+        "name": "Dalton Schultz",
+        "pro_team": "HOU",
+        "total_points": 95.7
+      },
+      {
+        "player_id": 4576297,
+        "name": "AJ Barner",
+        "pro_team": "SEA",
+        "total_points": 95.3
+      },
+      {
+        "player_id": 4385690,
+        "name": "Dalton Kincaid",
+        "pro_team": "BUF",
+        "total_points": 87.1
+      },
+      {
+        "player_id": 4242557,
+        "name": "Colby Parkinson",
+        "pro_team": "LAR",
+        "total_points": 86.8
+      },
+      {
+        "player_id": 4572680,
+        "name": "Tucker Kraft",
+        "pro_team": "GB",
+        "total_points": 85.2
+      },
+      {
+        "player_id": 3116365,
+        "name": "Mark Andrews",
+        "pro_team": "BAL",
+        "total_points": 83.0
+      },
+      {
+        "player_id": 4429148,
+        "name": "Theo Johnson",
+        "pro_team": "NYG",
+        "total_points": 82.8
+      },
+      {
+        "player_id": 4595342,
+        "name": "Oronde Gadsden",
+        "pro_team": "LAC",
+        "total_points": 82.4
+      },
+      {
+        "player_id": 15835,
+        "name": "Zach Ertz",
+        "pro_team": "WSH",
+        "total_points": 76.4
+      },
+      {
+        "player_id": 4361411,
+        "name": "Pat Freiermuth",
+        "pro_team": "PIT",
+        "total_points": 72.6
+      },
+      {
+        "player_id": 4430539,
+        "name": "Brenton Strange",
+        "pro_team": "JAX",
+        "total_points": 72.0
+      },
+      {
+        "player_id": 4360635,
+        "name": "Chig Okonkwo",
+        "pro_team": "TEN",
+        "total_points": 68.0
+      },
+      {
+        "player_id": 3930086,
+        "name": "Dawson Knox",
+        "pro_team": "BUF",
+        "total_points": 67.7
+      },
+      {
+        "player_id": 4430027,
+        "name": "Sam LaPorta",
+        "pro_team": "DET",
+        "total_points": 66.9
+      },
+      {
+        "player_id": 2576925,
+        "name": "Darren Waller",
+        "pro_team": "MIA",
+        "total_points": 64.7
+      },
+      {
+        "player_id": 4243331,
+        "name": "Cade Otton",
+        "pro_team": "TB",
+        "total_points": 63.2
+      },
+      {
+        "player_id": 4036133,
+        "name": "T.J. Hockenson",
+        "pro_team": "MIN",
+        "total_points": 61.8
+      },
+      {
+        "player_id": 4259147,
+        "name": "Jake Tonges",
+        "pro_team": "SF",
+        "total_points": 59.3
+      },
+      {
+        "player_id": 3123076,
+        "name": "David Njoku",
+        "pro_team": "CLE",
+        "total_points": 53.3
+      },
+      {
+        "player_id": 3051876,
+        "name": "Evan Engram",
+        "pro_team": "DEN",
+        "total_points": 52.8
+      },
+      {
+        "player_id": 4258595,
+        "name": "Cole Kmet",
+        "pro_team": "CHI",
+        "total_points": 48.7
+      },
+      {
+        "player_id": 4686728,
+        "name": "Gunnar Helm",
+        "pro_team": "TEN",
+        "total_points": 47.7
+      },
+      {
+        "player_id": 3054212,
+        "name": "Jonnu Smith",
+        "pro_team": "PIT",
+        "total_points": 47.2
+      },
+      {
+        "player_id": 2573401,
+        "name": "Tyler Higbee",
+        "pro_team": "LAR",
+        "total_points": 46.1
+      },
+      {
+        "player_id": 4808766,
+        "name": "Mason Taylor",
+        "pro_team": "NYJ",
+        "total_points": 44.9
+      },
+      {
+        "player_id": 3116164,
+        "name": "Mike Gesicki",
+        "pro_team": "CIN",
+        "total_points": 42.7
+      },
+      {
+        "player_id": 4430802,
+        "name": "Darnell Washington",
+        "pro_team": "PIT",
+        "total_points": 42.4
+      },
+      {
+        "player_id": 4570037,
+        "name": "Terrance Ferguson",
+        "pro_team": "LAR",
+        "total_points": 41.1
+      },
+      {
+        "player_id": 4036131,
+        "name": "Noah Fant",
+        "pro_team": "CIN",
+        "total_points": 40.8
+      },
+      {
+        "player_id": 4361516,
+        "name": "Daniel Bellinger",
+        "pro_team": "NYG",
+        "total_points": 40.6
+      },
+      {
+        "player_id": 3921690,
+        "name": "Josh Oliver",
+        "pro_team": "MIN",
+        "total_points": 40.0
+      },
+      {
+        "player_id": 4429086,
+        "name": "Michael Mayer",
+        "pro_team": "LV",
+        "total_points": 38.8
+      },
+      {
+        "player_id": 4426553,
+        "name": "Davis Allen",
+        "pro_team": "LAR",
+        "total_points": 38.8
+      },
+      {
+        "player_id": 3043275,
+        "name": "Austin Hooper",
+        "pro_team": "NE",
+        "total_points": 38.3
+      },
+      {
+        "player_id": 4372780,
+        "name": "Tommy Tremble",
+        "pro_team": "CAR",
+        "total_points": 36.9
+      },
+      {
+        "player_id": 4367209,
+        "name": "Greg Dulcich",
+        "pro_team": "MIA",
+        "total_points": 36.8
+      },
+      {
+        "player_id": 4573699,
+        "name": "Jackson Hawes",
+        "pro_team": "BUF",
+        "total_points": 36.7
+      },
+      {
+        "player_id": 4361050,
+        "name": "Isaiah Likely",
+        "pro_team": "BAL",
+        "total_points": 34.7
+      },
+      {
+        "player_id": 2468609,
+        "name": "Taysom Hill",
+        "pro_team": "NO",
+        "total_points": 30.78
+      },
+      {
+        "player_id": 4683243,
+        "name": "Mitchell Evans",
+        "pro_team": "CAR",
+        "total_points": 29.2
+      },
+      {
+        "player_id": 3050481,
+        "name": "Tanner Hudson",
+        "pro_team": "CIN",
+        "total_points": 28.8
+      },
+      {
+        "player_id": 4426844,
+        "name": "Elijah Higgins",
+        "pro_team": "ARI",
+        "total_points": 28.1
+      },
+      {
+        "player_id": 4241263,
+        "name": "Charlie Kolar",
+        "pro_team": "BAL",
+        "total_points": 26.2
+      },
+      {
+        "player_id": 3911853,
+        "name": "Adam Trautman",
+        "pro_team": "DEN",
+        "total_points": 25.5
+      },
+      {
+        "player_id": 4428085,
+        "name": "Luke Musgrave",
+        "pro_team": "GB",
+        "total_points": 25.2
+      },
+      {
+        "player_id": 4431588,
+        "name": "Ja'Tavion Sanders",
+        "pro_team": "CAR",
+        "total_points": 25.0
+      },
+      {
+        "player_id": 4241961,
+        "name": "Connor Heyward",
+        "pro_team": "PIT",
+        "total_points": 24.4
+      },
+      {
+        "player_id": 4361372,
+        "name": "Jeremy Ruckert",
+        "pro_team": "NYJ",
+        "total_points": 23.9
+      },
+      {
+        "player_id": 4242392,
+        "name": "Brock Wright",
+        "pro_team": "DET",
+        "total_points": 22.8
+      },
+      {
+        "player_id": 4678006,
+        "name": "Elijah Arroyo",
+        "pro_team": "SEA",
+        "total_points": 21.9
+      },
+      {
+        "player_id": 4239944,
+        "name": "Hunter Long",
+        "pro_team": "JAX",
+        "total_points": 20.5
+      },
+      {
+        "player_id": 4040612,
+        "name": "Luke Farrell",
+        "pro_team": "SF",
+        "total_points": 18.5
+      },
+      {
+        "player_id": 4240472,
+        "name": "Noah Gray",
+        "pro_team": "KC",
+        "total_points": 17.8
+      },
+      {
+        "player_id": 2998565,
+        "name": "Mo Alie-Cox",
+        "pro_team": "IND",
+        "total_points": 17.7
+      },
+      {
+        "player_id": 4690923,
+        "name": "Ben Sinnott",
+        "pro_team": "WSH",
+        "total_points": 17.4
+      },
+      {
+        "player_id": 3127310,
+        "name": "Drew Sample",
+        "pro_team": "CIN",
+        "total_points": 16.9
+      },
+      {
+        "player_id": 4048228,
+        "name": "John Bates",
+        "pro_team": "WSH",
+        "total_points": 16.3
+      },
+      {
+        "player_id": 4360967,
+        "name": "Brevyn Spann-Ford",
+        "pro_team": "DAL",
+        "total_points": 15.0
+      },
+      {
+        "player_id": 4365395,
+        "name": "Julian Hill",
+        "pro_team": "MIA",
+        "total_points": 14.0
+      },
+      {
+        "player_id": 4241374,
+        "name": "Grant Calcaterra",
+        "pro_team": "PHI",
+        "total_points": 13.6
+      },
+      {
+        "player_id": 4372096,
+        "name": "Luke Schoonmaker",
+        "pro_team": "DAL",
+        "total_points": 13.2
+      },
+      {
+        "player_id": 4379401,
+        "name": "John FitzPatrick",
+        "pro_team": "GB",
+        "total_points": 13.2
+      },
+      {
+        "player_id": 4244049,
+        "name": "Quintin Morris",
+        "pro_team": "JAX",
+        "total_points": 11.5
+      },
+      {
+        "player_id": 4045305,
+        "name": "Ian Thomas",
+        "pro_team": "LV",
+        "total_points": 11.4
+      },
+      {
+        "player_id": 3052096,
+        "name": "Johnny Mundt",
+        "pro_team": "JAX",
+        "total_points": 11.1
+      },
+      {
+        "player_id": 4383440,
+        "name": "Nate Adkins",
+        "pro_team": "DEN",
+        "total_points": 10.8
+      },
+      {
+        "player_id": 4034862,
+        "name": "Jack Stoll",
+        "pro_team": "NO",
+        "total_points": 10.6
+      },
+      {
+        "player_id": 3915486,
+        "name": "Tyler Conklin",
+        "pro_team": "LAC",
+        "total_points": 10.3
+      },
+      {
+        "player_id": 3127292,
+        "name": "Will Dissly",
+        "pro_team": "LAC",
+        "total_points": 9.7
+      },
+      {
+        "player_id": 4360086,
+        "name": "Josh Whyle",
+        "pro_team": "GB",
+        "total_points": 9.6
+      },
+      {
+        "player_id": 4047422,
+        "name": "Tanner Conner",
+        "pro_team": "NYG",
+        "total_points": 9.1
+      },
+      {
+        "player_id": 4360978,
+        "name": "David Martin-Robinson",
+        "pro_team": "TEN",
+        "total_points": 9.0
+      },
+      {
+        "player_id": 4722908,
+        "name": "Drew Ogletree",
+        "pro_team": "IND",
+        "total_points": 8.7
+      },
+      {
+        "player_id": 3914151,
+        "name": "Josiah Deguara",
+        "pro_team": "ARI",
+        "total_points": 8.1
+      },
+      {
+        "player_id": 4426496,
+        "name": "Cade Stover",
+        "pro_team": "HOU",
+        "total_points": 7.9
+      },
+      {
+        "player_id": 4361112,
+        "name": "Devin Culp",
+        "pro_team": "TB",
+        "total_points": 6.6
+      },
+      {
+        "player_id": 3843945,
+        "name": "Foster Moreau",
+        "pro_team": "NO",
+        "total_points": 5.9
+      },
+      {
+        "player_id": 3049698,
+        "name": "Anthony Firkser",
+        "pro_team": "DET",
+        "total_points": 5.3
+      },
+      {
+        "player_id": 4250764,
+        "name": "Stone Smartt",
+        "pro_team": "NYJ",
+        "total_points": 5.2
+      },
+      {
+        "player_id": 2975863,
+        "name": "Eric Saubert",
+        "pro_team": "SEA",
+        "total_points": 5.1
+      },
+      {
+        "player_id": 4035020,
+        "name": "Charlie Woerner",
+        "pro_team": "ATL",
+        "total_points": 4.8
+      },
+      {
+        "player_id": 4362603,
+        "name": "Brenden Bates",
+        "pro_team": "CLE",
+        "total_points": 4.8
+      },
+      {
+        "player_id": 4039160,
+        "name": "Kylen Granson",
+        "pro_team": "PHI",
+        "total_points": 4.0
+      },
+      {
+        "player_id": 4035115,
+        "name": "Albert Okwuegbunam Jr.",
+        "pro_team": "LV",
+        "total_points": 3.6
+      },
+      {
+        "player_id": 4688552,
+        "name": "Keleki Latu",
+        "pro_team": "BUF",
+        "total_points": 3.5
+      },
+      {
+        "player_id": 4373030,
+        "name": "Ben Sims",
+        "pro_team": "MIN",
+        "total_points": 3.0
+      },
+      {
+        "player_id": 4361988,
+        "name": "James Mitchell",
+        "pro_team": "CAR",
+        "total_points": 2.8
+      },
+      {
+        "player_id": 3052897,
+        "name": "Durham Smythe",
+        "pro_team": "CHI",
+        "total_points": 2.5
+      },
+      {
+        "player_id": 4608362,
+        "name": "Shane Zylstra",
+        "pro_team": "DET",
+        "total_points": 2.0
+      },
+      {
+        "player_id": 4242558,
+        "name": "Tucker Fisk",
+        "pro_team": "LAC",
+        "total_points": 1.9
+      },
+      {
+        "player_id": 4361088,
+        "name": "Colson Yankoff",
+        "pro_team": "WSH",
+        "total_points": 1.8
+      },
+      {
+        "player_id": 4696700,
+        "name": "Tip Reiman",
+        "pro_team": "ARI",
+        "total_points": 1.8
+      },
+      {
+        "player_id": 4876006,
+        "name": "Zaire Mitchell-Paden",
+        "pro_team": "NO",
+        "total_points": 1.7
+      },
+      {
+        "player_id": 4362523,
+        "name": "Will Mallory",
+        "pro_team": "IND",
+        "total_points": 1.6
+      },
+      {
+        "player_id": 4360231,
+        "name": "Lucas Krull",
+        "pro_team": "DEN",
+        "total_points": 1.5
+      },
+      {
+        "player_id": 4433959,
+        "name": "Ben Yurosek",
+        "pro_team": "MIN",
+        "total_points": 1.4
+      },
+      {
+        "player_id": 4372505,
+        "name": "Payne Durham",
+        "pro_team": "TB",
+        "total_points": 1.1
+      },
+      {
+        "player_id": 4242536,
+        "name": "Sal Cannella",
+        "pro_team": "CLE",
+        "total_points": 1.1
+      },
+      {
+        "player_id": 4432731,
+        "name": "Moliki Matavao",
+        "pro_team": "NO",
+        "total_points": 1.0
+      },
+      {
+        "player_id": 3120303,
+        "name": "Ross Dwelley",
+        "pro_team": "None",
+        "total_points": 0.7
+      },
+      {
+        "player_id": 2531358,
+        "name": "Chris Manhertz",
+        "pro_team": "NYG",
+        "total_points": 0.7
+      },
+      {
+        "player_id": 4040774,
+        "name": "Harrison Bryant",
+        "pro_team": "HOU",
+        "total_points": 0.7
+      },
+      {
+        "player_id": 4700712,
+        "name": "Cam Grandy",
+        "pro_team": "CIN",
+        "total_points": 0.7
+      },
+      {
+        "player_id": 4362018,
+        "name": "Blake Whiteheart",
+        "pro_team": "CLE",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 4034948,
+        "name": "Feleipe Franks",
+        "pro_team": "ATL",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 4430723,
+        "name": "Jared Wiley",
+        "pro_team": "KC",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 4241410,
+        "name": "Jelani Woods",
+        "pro_team": "NYJ",
+        "total_points": 0.4
+      },
+      {
+        "player_id": 5155825,
+        "name": "Carter Runyon",
+        "pro_team": "LV",
+        "total_points": 0.3
+      },
+      {
+        "player_id": 4429466,
+        "name": "Drake Dabney",
+        "pro_team": "GB",
+        "total_points": 0.3
+      },
+      {
+        "player_id": 2975674,
+        "name": "Robert Tonyan",
+        "pro_team": "KC",
+        "total_points": 0.1
+      },
+      {
+        "player_id": 2971281,
+        "name": "Pharaoh Brown",
+        "pro_team": "ARI",
+        "total_points": 0.1
+      },
+      {
+        "player_id": 13232,
+        "name": "Jimmy Graham",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 9614,
+        "name": "Marcedes Lewis",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4708049,
+        "name": "Gavin Bartholomew",
+        "pro_team": "MIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429262,
+        "name": "Jaheim Bell",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036129,
+        "name": "Dominique Dafney",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4372026,
+        "name": "Cameron Latu",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4427834,
+        "name": "Erick All Jr.",
+        "pro_team": "CIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4034779,
+        "name": "Ko Kieft",
+        "pro_team": "TB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4590292,
+        "name": "Thomas Fidone II",
+        "pro_team": "NYG",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361100,
+        "name": "Jack Westover",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242526,
+        "name": "John Samuel Shenker",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259324,
+        "name": "Travis Vokolek",
+        "pro_team": "ARI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4374045,
+        "name": "Teagan Quitoriano",
+        "pro_team": "ATL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3948283,
+        "name": "Stephen Carlson",
+        "pro_team": "CHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360290,
+        "name": "Brayden Willis",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2576399,
+        "name": "Nick Vannett",
+        "pro_team": "LAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362489,
+        "name": "John Stephens Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362504,
+        "name": "Brevin Jordan",
+        "pro_team": "HOU",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2574576,
+        "name": "C.J. Uzomah",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4432208,
+        "name": "Caleb Lohner",
+        "pro_team": "DEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4040980,
+        "name": "Irv Smith Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4432338,
+        "name": "Luke Lachey",
+        "pro_team": "HOU",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4569547,
+        "name": "Nick Kallerup",
+        "pro_team": "SEA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16813,
+        "name": "Logan Thomas",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3912092,
+        "name": "Donald Parham Jr.",
+        "pro_team": "PIT",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3924365,
+        "name": "Hayden Hurst",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360794,
+        "name": "Henry Pearson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426364,
+        "name": "Baylor Cupp",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240023,
+        "name": "Tre' McKitty",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3918639,
+        "name": "Gerald Everett",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3916564,
+        "name": "Tyree Jackson",
+        "pro_team": "WSH",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361008,
+        "name": "Cole Fotheringham",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035526,
+        "name": "Chase Allen",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4248557,
+        "name": "E.J. Jenkins",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242442,
+        "name": "Princeton Fant",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4047839,
+        "name": "N'Keal Harry",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242369,
+        "name": "Matt Bushman",
+        "pro_team": "KC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4373634,
+        "name": "Dallin Holker",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2511973,
+        "name": "Eric Tomlinson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4428952,
+        "name": "Jalen Wydermyer",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361417,
+        "name": "Zack Kuntz",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4363554,
+        "name": "Thomas Odukoya",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4044144,
+        "name": "Kenny Yeboah",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242896,
+        "name": "Curtis Hodges",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3923392,
+        "name": "Mitchell Wilcox",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240861,
+        "name": "Dalton Keene",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4877824,
+        "name": "Zach Horton",
+        "pro_team": "DET",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4384171,
+        "name": "Tanner McLachlan",
+        "pro_team": "LAC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2508256,
+        "name": "MyCole Pruitt",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4408854,
+        "name": "Jody Fortson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036275,
+        "name": "Sean McKeon",
+        "pro_team": "IND",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3929924,
+        "name": "Zach Gentry",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3049290,
+        "name": "Kevin Rader",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241273,
+        "name": "Roger Carter Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2582410,
+        "name": "Tyler Kroft",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036595,
+        "name": "Josh Pederson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3917849,
+        "name": "Lawrence Cager",
+        "pro_team": "WSH",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3047536,
+        "name": "David Wells",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4249624,
+        "name": "Nick Muse",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3918003,
+        "name": "Brycen Hopkins",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3930298,
+        "name": "Noah Togiai",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3940587,
+        "name": "Jesper Horsted",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3121378,
+        "name": "Matt Sokol",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4038952,
+        "name": "Hunter Kampmoyer",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16763,
+        "name": "Jordan Matthews",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3914240,
+        "name": "Tyler Davis",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2576854,
+        "name": "Stephen Anderson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4258248,
+        "name": "Peyton Hendershot",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4428396,
+        "name": "Hayden Rucci",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3052166,
+        "name": "Darrell Daniels",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4039253,
+        "name": "Trevon Wesco",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4430684,
+        "name": "Treyton Welch",
+        "pro_team": "NO",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3916587,
+        "name": "Tyler Mabry",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4746079,
+        "name": "Zach Davidson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035426,
+        "name": "Stephen Sullivan",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4596545,
+        "name": "CJ Dippre",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4056052,
+        "name": "Armani Rogers",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3916749,
+        "name": "Giovanni Ricci",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4916349,
+        "name": "Nikola Kalinic",
+        "pro_team": "CHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3128452,
+        "name": "Jordan Akins",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361438,
+        "name": "Cole Turner",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3046704,
+        "name": "Geoff Swaim",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4250969,
+        "name": "Rodney Williams",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2514206,
+        "name": "Blake Bell",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3144991,
+        "name": "Parker Hesse",
+        "pro_team": "None",
+        "total_points": 0.0
+      }
+    ],
+    "QB": [
+      {
+        "player_id": 3918298,
+        "name": "Josh Allen",
+        "pro_team": "BUF",
+        "total_points": 364.62
+      },
+      {
+        "player_id": 4431452,
+        "name": "Drake Maye",
+        "pro_team": "NE",
+        "total_points": 350.96
+      },
+      {
+        "player_id": 12483,
+        "name": "Matthew Stafford",
+        "pro_team": "LAR",
+        "total_points": 350.38
+      },
+      {
+        "player_id": 4360310,
+        "name": "Trevor Lawrence",
+        "pro_team": "JAX",
+        "total_points": 338.18
+      },
+      {
+        "player_id": 4431611,
+        "name": "Caleb Williams",
+        "pro_team": "CHI",
+        "total_points": 316.18
+      },
+      {
+        "player_id": 2577417,
+        "name": "Dak Prescott",
+        "pro_team": "DAL",
+        "total_points": 313.78
+      },
+      {
+        "player_id": 4426338,
+        "name": "Bo Nix",
+        "pro_team": "DEN",
+        "total_points": 304.84
+      },
+      {
+        "player_id": 4040715,
+        "name": "Jalen Hurts",
+        "pro_team": "PHI",
+        "total_points": 299.06
+      },
+      {
+        "player_id": 3046779,
+        "name": "Jared Goff",
+        "pro_team": "DET",
+        "total_points": 297.06
+      },
+      {
+        "player_id": 4038941,
+        "name": "Justin Herbert",
+        "pro_team": "LAC",
+        "total_points": 286.88
+      },
+      {
+        "player_id": 3139477,
+        "name": "Patrick Mahomes",
+        "pro_team": "KC",
+        "total_points": 284.68
+      },
+      {
+        "player_id": 3052587,
+        "name": "Baker Mayfield",
+        "pro_team": "TB",
+        "total_points": 271.92
+      },
+      {
+        "player_id": 4689114,
+        "name": "Jaxson Dart",
+        "pro_team": "NYG",
+        "total_points": 241.58
+      },
+      {
+        "player_id": 3912547,
+        "name": "Sam Darnold",
+        "pro_team": "SEA",
+        "total_points": 235.42
+      },
+      {
+        "player_id": 4036378,
+        "name": "Jordan Love",
+        "pro_team": "GB",
+        "total_points": 235.14
+      },
+      {
+        "player_id": 2578570,
+        "name": "Jacoby Brissett",
+        "pro_team": "ARI",
+        "total_points": 227.44
+      },
+      {
+        "player_id": 3917792,
+        "name": "Daniel Jones",
+        "pro_team": "IND",
+        "total_points": 226.44
+      },
+      {
+        "player_id": 8439,
+        "name": "Aaron Rodgers",
+        "pro_team": "PIT",
+        "total_points": 226.08
+      },
+      {
+        "player_id": 4685720,
+        "name": "Bryce Young",
+        "pro_team": "CAR",
+        "total_points": 218.04
+      },
+      {
+        "player_id": 3916387,
+        "name": "Lamar Jackson",
+        "pro_team": "BAL",
+        "total_points": 214.86
+      },
+      {
+        "player_id": 4432577,
+        "name": "C.J. Stroud",
+        "pro_team": "HOU",
+        "total_points": 208.54
+      },
+      {
+        "player_id": 4688380,
+        "name": "Cam Ward",
+        "pro_team": "TEN",
+        "total_points": 186.66
+      },
+      {
+        "player_id": 4361741,
+        "name": "Brock Purdy",
+        "pro_team": "SF",
+        "total_points": 177.38
+      },
+      {
+        "player_id": 15864,
+        "name": "Geno Smith",
+        "pro_team": "LV",
+        "total_points": 173.9
+      },
+      {
+        "player_id": 4241479,
+        "name": "Tua Tagovailoa",
+        "pro_team": "MIA",
+        "total_points": 160.7
+      },
+      {
+        "player_id": 4360689,
+        "name": "Tyler Shough",
+        "pro_team": "NO",
+        "total_points": 157.96
+      },
+      {
+        "player_id": 11252,
+        "name": "Joe Flacco",
+        "pro_team": "CIN",
+        "total_points": 146.66
+      },
+      {
+        "player_id": 4362887,
+        "name": "Justin Fields",
+        "pro_team": "NYJ",
+        "total_points": 142.66
+      },
+      {
+        "player_id": 3915511,
+        "name": "Joe Burrow",
+        "pro_team": "CIN",
+        "total_points": 134.46
+      },
+      {
+        "player_id": 4241464,
+        "name": "Mac Jones",
+        "pro_team": "SF",
+        "total_points": 130.04
+      },
+      {
+        "player_id": 2576980,
+        "name": "Marcus Mariota",
+        "pro_team": "WSH",
+        "total_points": 125.5
+      },
+      {
+        "player_id": 4433970,
+        "name": "J.J. McCarthy",
+        "pro_team": "MIN",
+        "total_points": 125.38
+      },
+      {
+        "player_id": 4360423,
+        "name": "Michael Penix Jr.",
+        "pro_team": "ATL",
+        "total_points": 120.28
+      },
+      {
+        "player_id": 4426348,
+        "name": "Jayden Daniels",
+        "pro_team": "WSH",
+        "total_points": 114.28
+      },
+      {
+        "player_id": 14880,
+        "name": "Kirk Cousins",
+        "pro_team": "ATL",
+        "total_points": 103.54
+      },
+      {
+        "player_id": 4426339,
+        "name": "Spencer Rattler",
+        "pro_team": "NO",
+        "total_points": 98.14
+      },
+      {
+        "player_id": 4432762,
+        "name": "Shedeur Sanders",
+        "pro_team": "CLE",
+        "total_points": 84.9
+      },
+      {
+        "player_id": 3917315,
+        "name": "Kyler Murray",
+        "pro_team": "ARI",
+        "total_points": 77.78
+      },
+      {
+        "player_id": 2573079,
+        "name": "Carson Wentz",
+        "pro_team": "MIN",
+        "total_points": 70.34
+      },
+      {
+        "player_id": 4427238,
+        "name": "Dillon Gabriel",
+        "pro_team": "CLE",
+        "total_points": 70.08
+      },
+      {
+        "player_id": 4242546,
+        "name": "Davis Mills",
+        "pro_team": "HOU",
+        "total_points": 68.6
+      },
+      {
+        "player_id": 14163,
+        "name": "Tyrod Taylor",
+        "pro_team": "NYJ",
+        "total_points": 59.46
+      },
+      {
+        "player_id": 4242512,
+        "name": "Malik Willis",
+        "pro_team": "GB",
+        "total_points": 51.18
+      },
+      {
+        "player_id": 14881,
+        "name": "Russell Wilson",
+        "pro_team": "NYG",
+        "total_points": 49.84
+      },
+      {
+        "player_id": 3886812,
+        "name": "Jake Browning",
+        "pro_team": "CIN",
+        "total_points": 48.74
+      },
+      {
+        "player_id": 2969939,
+        "name": "Jameis Winston",
+        "pro_team": "NYG",
+        "total_points": 42.28
+      },
+      {
+        "player_id": 4035671,
+        "name": "Tyler Huntley",
+        "pro_team": "BAL",
+        "total_points": 40.14
+      },
+      {
+        "player_id": 4889929,
+        "name": "Quinn Ewers",
+        "pro_team": "MIA",
+        "total_points": 32.18
+      },
+      {
+        "player_id": 5529,
+        "name": "Philip Rivers",
+        "pro_team": "IND",
+        "total_points": 31.66
+      },
+      {
+        "player_id": 3039707,
+        "name": "Mitchell Trubisky",
+        "pro_team": "BUF",
+        "total_points": 31.12
+      },
+      {
+        "player_id": 4683423,
+        "name": "Riley Leonard",
+        "pro_team": "IND",
+        "total_points": 29.0
+      },
+      {
+        "player_id": 4429435,
+        "name": "Brady Cook",
+        "pro_team": "NYJ",
+        "total_points": 28.46
+      },
+      {
+        "player_id": 11394,
+        "name": "Josh Johnson",
+        "pro_team": "WSH",
+        "total_points": 24.38
+      },
+      {
+        "player_id": 3116407,
+        "name": "Mason Rudolph",
+        "pro_team": "PIT",
+        "total_points": 15.0
+      },
+      {
+        "player_id": 4685201,
+        "name": "Tanner McKee",
+        "pro_team": "PHI",
+        "total_points": 13.76
+      },
+      {
+        "player_id": 4383351,
+        "name": "Trey Lance",
+        "pro_team": "LAC",
+        "total_points": 13.54
+      },
+      {
+        "player_id": 4044111,
+        "name": "Chris Oladokun",
+        "pro_team": "KC",
+        "total_points": 11.2
+      },
+      {
+        "player_id": 4360698,
+        "name": "Joe Milton III",
+        "pro_team": "DAL",
+        "total_points": 10.32
+      },
+      {
+        "player_id": 14012,
+        "name": "Andy Dalton",
+        "pro_team": "CAR",
+        "total_points": 9.52
+      },
+      {
+        "player_id": 4240703,
+        "name": "Kenny Pickett",
+        "pro_team": "LV",
+        "total_points": 7.72
+      },
+      {
+        "player_id": 4260394,
+        "name": "Aidan O'Connell",
+        "pro_team": "LV",
+        "total_points": 4.78
+      },
+      {
+        "player_id": 4573398,
+        "name": "Max Brosmer",
+        "pro_team": "MIN",
+        "total_points": 4.22
+      },
+      {
+        "player_id": 4039034,
+        "name": "Shane Buechele",
+        "pro_team": "BUF",
+        "total_points": 3.92
+      },
+      {
+        "player_id": 16728,
+        "name": "Teddy Bridgewater",
+        "pro_team": "TB",
+        "total_points": 2.88
+      },
+      {
+        "player_id": 4434153,
+        "name": "Tyson Bagent",
+        "pro_team": "CHI",
+        "total_points": 2.58
+      },
+      {
+        "player_id": 3044720,
+        "name": "Joshua Dobbs",
+        "pro_team": "NE",
+        "total_points": 2.1
+      },
+      {
+        "player_id": 4360175,
+        "name": "Clayton Tune",
+        "pro_team": "None",
+        "total_points": 1.98
+      },
+      {
+        "player_id": 2972515,
+        "name": "Cooper Rush",
+        "pro_team": "BAL",
+        "total_points": 1.72
+      },
+      {
+        "player_id": 4361259,
+        "name": "Zach Wilson",
+        "pro_team": "MIA",
+        "total_points": 1.38
+      },
+      {
+        "player_id": 4429084,
+        "name": "Anthony Richardson Sr.",
+        "pro_team": "IND",
+        "total_points": 1.16
+      },
+      {
+        "player_id": 2574511,
+        "name": "Brandon Allen",
+        "pro_team": "TEN",
+        "total_points": 0.88
+      },
+      {
+        "player_id": 3924327,
+        "name": "Drew Lock",
+        "pro_team": "SEA",
+        "total_points": 0.1
+      },
+      {
+        "player_id": 3122840,
+        "name": "Deshaun Watson",
+        "pro_team": "CLE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4429955,
+        "name": "Will Howard",
+        "pro_team": "PIT",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240391,
+        "name": "Tommy DeVito",
+        "pro_team": "NE",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361418,
+        "name": "Will Levis",
+        "pro_team": "TEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16757,
+        "name": "Derek Carr",
+        "pro_team": "NO",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259553,
+        "name": "Stetson Bennett IV",
+        "pro_team": "LAR",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3895785,
+        "name": "Ben DiNucci",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 14876,
+        "name": "Ryan Tannehill",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426875,
+        "name": "Sam Howell",
+        "pro_team": "PHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240858,
+        "name": "Hendon Hooker",
+        "pro_team": "NYJ",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4433971,
+        "name": "Kyle McCord",
+        "pro_team": "GB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2972236,
+        "name": "Nathan Peterman",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4360799,
+        "name": "Jordan Travis",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15168,
+        "name": "Case Keenum",
+        "pro_team": "CHI",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4427105,
+        "name": "Max Duggan",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3120590,
+        "name": "Easton Stick",
+        "pro_team": "ATL",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15948,
+        "name": "Matt Barkley",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4239086,
+        "name": "Desmond Ridder",
+        "pro_team": "GB",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036419,
+        "name": "Skylar Thompson",
+        "pro_team": "PIT",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2565969,
+        "name": "Taylor Heinicke",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4034946,
+        "name": "Kyle Trask",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4430431,
+        "name": "Kurtis Rourke",
+        "pro_team": "SF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4250360,
+        "name": "Bailey Zappe",
+        "pro_team": "NYJ",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4367178,
+        "name": "Dorian Thompson-Robinson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4685039,
+        "name": "Michael Pratt",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4693331,
+        "name": "Cam Miller",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3042749,
+        "name": "Logan Woodside",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361653,
+        "name": "Devin Leary",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 13987,
+        "name": "Blaine Gabbert",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2979520,
+        "name": "C.J. Beathard",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4259592,
+        "name": "Sean Clifford",
+        "pro_team": "CIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16140,
+        "name": "Ryan Griffin",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3045169,
+        "name": "Tim Boyle",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3051308,
+        "name": "PJ Walker",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4243322,
+        "name": "Jake Haener",
+        "pro_team": "KC",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3051381,
+        "name": "Mike White",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4046678,
+        "name": "Ian Book",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 12477,
+        "name": "Brian Hoyer",
+        "pro_team": "LV",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2511109,
+        "name": "Trevor Siemian",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 2574630,
+        "name": "Jeff Driskel",
+        "pro_team": "WSH",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16810,
+        "name": "AJ McCarron",
+        "pro_team": "CIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4241820,
+        "name": "Sam Ehlinger",
+        "pro_team": "DEN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4426335,
+        "name": "Graham Mertz",
+        "pro_team": "HOU",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362874,
+        "name": "Matt Corral",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4035312,
+        "name": "Anthony Brown Jr.",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3124092,
+        "name": "John Wolford",
+        "pro_team": "MIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4373632,
+        "name": "Jaren Hall",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3722362,
+        "name": "Brett Rypien",
+        "pro_team": "MIN",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4244688,
+        "name": "Nathan Rourke",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361435,
+        "name": "Carson Strong",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4240689,
+        "name": "Jake Fromm",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3059989,
+        "name": "Nick Mullens",
+        "pro_team": "JAX",
+        "total_points": -0.04
+      },
+      {
+        "player_id": 4428512,
+        "name": "Kedon Slovis",
+        "pro_team": "ARI",
+        "total_points": -0.08
+      },
+      {
+        "player_id": 3892775,
+        "name": "Jarrett Stidham",
+        "pro_team": "DEN",
+        "total_points": -0.1
+      },
+      {
+        "player_id": 4361182,
+        "name": "Adrian Martinez",
+        "pro_team": "SF",
+        "total_points": -0.1
+      },
+      {
+        "player_id": 3115293,
+        "name": "Kyle Allen",
+        "pro_team": "DET",
+        "total_points": -0.3
+      },
+      {
+        "player_id": 4038524,
+        "name": "Gardner Minshew",
+        "pro_team": "KC",
+        "total_points": -0.32
+      },
+      {
+        "player_id": 16760,
+        "name": "Jimmy Garoppolo",
+        "pro_team": "LAR",
+        "total_points": -1.0
+      },
+      {
+        "player_id": 4432734,
+        "name": "Jalen Milroe",
+        "pro_team": "SEA",
+        "total_points": -1.6
+      }
+    ],
+    "K": [
+      {
+        "player_id": 2473037,
+        "name": "Jason Myers",
+        "pro_team": "SEA",
+        "total_points": 195.0
+      },
+      {
+        "player_id": 2971573,
+        "name": "Ka'imi Fairbairn",
+        "pro_team": "HOU",
+        "total_points": 190.0
+      },
+      {
+        "player_id": 3953687,
+        "name": "Brandon Aubrey",
+        "pro_team": "DAL",
+        "total_points": 180.6
+      },
+      {
+        "player_id": 4362081,
+        "name": "Cameron Dicker",
+        "pro_team": "LAC",
+        "total_points": 166.0
+      },
+      {
+        "player_id": 4686361,
+        "name": "Cam Little",
+        "pro_team": "JAX",
+        "total_points": 159.0
+      },
+      {
+        "player_id": 4567104,
+        "name": "Will Reichard",
+        "pro_team": "MIN",
+        "total_points": 157.0
+      },
+      {
+        "player_id": 3150744,
+        "name": "Chase McLaughlin",
+        "pro_team": "TB",
+        "total_points": 149.0
+      },
+      {
+        "player_id": 17372,
+        "name": "Chris Boswell",
+        "pro_team": "PIT",
+        "total_points": 145.0
+      },
+      {
+        "player_id": 4689936,
+        "name": "Jake Bates",
+        "pro_team": "DET",
+        "total_points": 143.0
+      },
+      {
+        "player_id": 4569923,
+        "name": "Andy Borregales",
+        "pro_team": "NE",
+        "total_points": 142.0
+      },
+      {
+        "player_id": 3055899,
+        "name": "Harrison Butker",
+        "pro_team": "KC",
+        "total_points": 140.0
+      },
+      {
+        "player_id": 4697745,
+        "name": "Tyler Loop",
+        "pro_team": "BAL",
+        "total_points": 138.0
+      },
+      {
+        "player_id": 4034949,
+        "name": "Eddy Pineiro",
+        "pro_team": "SF",
+        "total_points": 135.0
+      },
+      {
+        "player_id": 4360234,
+        "name": "Evan McPherson",
+        "pro_team": "CIN",
+        "total_points": 130.0
+      },
+      {
+        "player_id": 2985659,
+        "name": "Wil Lutz",
+        "pro_team": "DEN",
+        "total_points": 130.0
+      },
+      {
+        "player_id": 4243371,
+        "name": "Riley Patterson",
+        "pro_team": "MIA",
+        "total_points": 129.0
+      },
+      {
+        "player_id": 17427,
+        "name": "Cairo Santos",
+        "pro_team": "CHI",
+        "total_points": 127.0
+      },
+      {
+        "player_id": 3124084,
+        "name": "Joey Slye",
+        "pro_team": "TEN",
+        "total_points": 127.0
+      },
+      {
+        "player_id": 10621,
+        "name": "Nick Folk",
+        "pro_team": "NYJ",
+        "total_points": 126.0
+      },
+      {
+        "player_id": 4363538,
+        "name": "Chad Ryland",
+        "pro_team": "ARI",
+        "total_points": 122.0
+      },
+      {
+        "player_id": 4259619,
+        "name": "Blake Grupe",
+        "pro_team": "IND",
+        "total_points": 121.0
+      },
+      {
+        "player_id": 3050478,
+        "name": "Jake Elliott",
+        "pro_team": "PHI",
+        "total_points": 108.0
+      },
+      {
+        "player_id": 4258620,
+        "name": "Andre Szmyt",
+        "pro_team": "CLE",
+        "total_points": 108.0
+      },
+      {
+        "player_id": 16339,
+        "name": "Brandon McManus",
+        "pro_team": "GB",
+        "total_points": 106.0
+      },
+      {
+        "player_id": 11122,
+        "name": "Matt Prater",
+        "pro_team": "BUF",
+        "total_points": 103.0
+      },
+      {
+        "player_id": 4568263,
+        "name": "Ryan Fitzgerald",
+        "pro_team": "CAR",
+        "total_points": 103.0
+      },
+      {
+        "player_id": 3051909,
+        "name": "Daniel Carlson",
+        "pro_team": "LV",
+        "total_points": 97.0
+      },
+      {
+        "player_id": 3043234,
+        "name": "Zane Gonzalez",
+        "pro_team": "ATL",
+        "total_points": 92.0
+      },
+      {
+        "player_id": 4249087,
+        "name": "Matt Gay",
+        "pro_team": "None",
+        "total_points": 85.0
+      },
+      {
+        "player_id": 4574716,
+        "name": "Harrison Mevis",
+        "pro_team": "LAR",
+        "total_points": 81.0
+      },
+      {
+        "player_id": 4372066,
+        "name": "Jake Moody",
+        "pro_team": "WSH",
+        "total_points": 76.0
+      },
+      {
+        "player_id": 3123052,
+        "name": "Michael Badgley",
+        "pro_team": "None",
+        "total_points": 56.0
+      },
+      {
+        "player_id": 4571557,
+        "name": "Spencer Shrader",
+        "pro_team": "IND",
+        "total_points": 56.0
+      },
+      {
+        "player_id": 5208518,
+        "name": "Charlie Smyth",
+        "pro_team": "NO",
+        "total_points": 56.0
+      },
+      {
+        "player_id": 4566192,
+        "name": "Joshua Karty",
+        "pro_team": "ARI",
+        "total_points": 50.0
+      },
+      {
+        "player_id": 4051167,
+        "name": "Parker Romo",
+        "pro_team": "None",
+        "total_points": 44.0
+      },
+      {
+        "player_id": 12460,
+        "name": "Graham Gano",
+        "pro_team": "NYG",
+        "total_points": 38.0
+      },
+      {
+        "player_id": 4566158,
+        "name": "Ben Sauls",
+        "pro_team": "NYG",
+        "total_points": 32.0
+      },
+      {
+        "player_id": 3049899,
+        "name": "Younghoe Koo",
+        "pro_team": "None",
+        "total_points": 29.0
+      },
+      {
+        "player_id": 3128444,
+        "name": "Matthew Wright",
+        "pro_team": "None",
+        "total_points": 22.0
+      },
+      {
+        "player_id": 4245661,
+        "name": "Lucas Havrisik",
+        "pro_team": "GB",
+        "total_points": 20.0
+      },
+      {
+        "player_id": 5092436,
+        "name": "Jude McAtamney",
+        "pro_team": "None",
+        "total_points": 12.0
+      },
+      {
+        "player_id": 3917232,
+        "name": "Tyler Bass",
+        "pro_team": "BUF",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3124679,
+        "name": "Jason Sanders",
+        "pro_team": "MIA",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15683,
+        "name": "Justin Tucker",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15965,
+        "name": "Dustin Hopkins",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 10636,
+        "name": "Mason Crosby",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4570688,
+        "name": "Caden Davis",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361665,
+        "name": "Christopher Dunn",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4036146,
+        "name": "Caleb Shudak",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4361765,
+        "name": "Brayden Narveson",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3919602,
+        "name": "Matt Ammendola",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4362020,
+        "name": "Nick Sciba",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3821683,
+        "name": "Austin Seibert",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 16486,
+        "name": "Brett Maher",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4569390,
+        "name": "Jonathan Garibay",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 3975763,
+        "name": "Greg Joseph",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 14993,
+        "name": "Greg Zuerlein",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4696736,
+        "name": "Tanner Brown",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 15091,
+        "name": "Randy Bullock",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4428963,
+        "name": "Cade York",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4033806,
+        "name": "James McCourt",
+        "pro_team": "None",
+        "total_points": 0.0
+      },
+      {
+        "player_id": 4242519,
+        "name": "Anders Carlson",
+        "pro_team": "None",
+        "total_points": 0.0
+      }
+    ],
+    "D/ST": [
+      {
+        "player_id": -16026,
+        "name": "Seahawks D/ST",
+        "pro_team": "SEA",
+        "total_points": 193.0
+      },
+      {
+        "player_id": -16034,
+        "name": "Texans D/ST",
+        "pro_team": "HOU",
+        "total_points": 175.0
+      },
+      {
+        "player_id": -16007,
+        "name": "Broncos D/ST",
+        "pro_team": "DEN",
+        "total_points": 152.0
+      },
+      {
+        "player_id": -16017,
+        "name": "Patriots D/ST",
+        "pro_team": "NE",
+        "total_points": 139.0
+      },
+      {
+        "player_id": -16016,
+        "name": "Vikings D/ST",
+        "pro_team": "MIN",
+        "total_points": 137.0
+      },
+      {
+        "player_id": -16021,
+        "name": "Eagles D/ST",
+        "pro_team": "PHI",
+        "total_points": 136.0
+      },
+      {
+        "player_id": -16030,
+        "name": "Jaguars D/ST",
+        "pro_team": "JAX",
+        "total_points": 134.0
+      },
+      {
+        "player_id": -16014,
+        "name": "Rams D/ST",
+        "pro_team": "LAR",
+        "total_points": 133.0
+      },
+      {
+        "player_id": -16005,
+        "name": "Browns D/ST",
+        "pro_team": "CLE",
+        "total_points": 125.0
+      },
+      {
+        "player_id": -16023,
+        "name": "Steelers D/ST",
+        "pro_team": "PIT",
+        "total_points": 124.0
+      },
+      {
+        "player_id": -16024,
+        "name": "Chargers D/ST",
+        "pro_team": "LAC",
+        "total_points": 119.0
+      },
+      {
+        "player_id": -16018,
+        "name": "Saints D/ST",
+        "pro_team": "NO",
+        "total_points": 117.0
+      },
+      {
+        "player_id": -16001,
+        "name": "Falcons D/ST",
+        "pro_team": "ATL",
+        "total_points": 111.0
+      },
+      {
+        "player_id": -16003,
+        "name": "Bears D/ST",
+        "pro_team": "CHI",
+        "total_points": 109.0
+      },
+      {
+        "player_id": -16002,
+        "name": "Bills D/ST",
+        "pro_team": "BUF",
+        "total_points": 102.0
+      },
+      {
+        "player_id": -16029,
+        "name": "Panthers D/ST",
+        "pro_team": "CAR",
+        "total_points": 98.0
+      },
+      {
+        "player_id": -16012,
+        "name": "Chiefs D/ST",
+        "pro_team": "KC",
+        "total_points": 92.0
+      },
+      {
+        "player_id": -16008,
+        "name": "Lions D/ST",
+        "pro_team": "DET",
+        "total_points": 91.0
+      },
+      {
+        "player_id": -16011,
+        "name": "Colts D/ST",
+        "pro_team": "IND",
+        "total_points": 89.0
+      },
+      {
+        "player_id": -16033,
+        "name": "Ravens D/ST",
+        "pro_team": "BAL",
+        "total_points": 88.0
+      },
+      {
+        "player_id": -16027,
+        "name": "Buccaneers D/ST",
+        "pro_team": "TB",
+        "total_points": 81.0
+      },
+      {
+        "player_id": -16015,
+        "name": "Dolphins D/ST",
+        "pro_team": "MIA",
+        "total_points": 81.0
+      },
+      {
+        "player_id": -16025,
+        "name": "49ers D/ST",
+        "pro_team": "SF",
+        "total_points": 80.0
+      },
+      {
+        "player_id": -16009,
+        "name": "Packers D/ST",
+        "pro_team": "GB",
+        "total_points": 78.0
+      },
+      {
+        "player_id": -16019,
+        "name": "Giants D/ST",
+        "pro_team": "NYG",
+        "total_points": 63.0
+      },
+      {
+        "player_id": -16004,
+        "name": "Bengals D/ST",
+        "pro_team": "CIN",
+        "total_points": 60.0
+      },
+      {
+        "player_id": -16013,
+        "name": "Raiders D/ST",
+        "pro_team": "LV",
+        "total_points": 59.0
+      },
+      {
+        "player_id": -16028,
+        "name": "Commanders D/ST",
+        "pro_team": "WSH",
+        "total_points": 58.0
+      },
+      {
+        "player_id": -16022,
+        "name": "Cardinals D/ST",
+        "pro_team": "ARI",
+        "total_points": 56.0
+      },
+      {
+        "player_id": -16010,
+        "name": "Titans D/ST",
+        "pro_team": "TEN",
+        "total_points": 52.0
+      },
+      {
+        "player_id": -16006,
+        "name": "Cowboys D/ST",
+        "pro_team": "DAL",
+        "total_points": 27.0
+      },
+      {
+        "player_id": -16020,
+        "name": "Jets D/ST",
+        "pro_team": "NYJ",
+        "total_points": 16.0
+      }
+    ],
+    "DT": [
+      {
+        "player_id": 4373684,
+        "name": "Scott Matlock",
+        "pro_team": "LAC",
+        "total_points": 7.2
+      }
+    ],
+    "CB": [
+      {
+        "player_id": 4431426,
+        "name": "Corey Thornton",
+        "pro_team": "CAR",
+        "total_points": 0.0
+      }
+    ]
+  }
+}
