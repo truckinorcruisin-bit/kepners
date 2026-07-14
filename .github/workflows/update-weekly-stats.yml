@@ -1,0 +1,42 @@
+name: Update Weekly Stats (Variance Data)
+
+# Run manually from the Actions tab, AFTER "Update Season Stats" has run for
+# the same year (this reads player IDs from that workflow's output file).
+# Reuses the same ESPN secrets: ESPN_LEAGUE_ID, ESPN_S2, ESPN_SWID.
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year to pull weekly scoring for (must match a year already pulled by Update Season Stats)'
+        required: false
+        default: '2025'
+
+jobs:
+  fetch-weekly:
+    runs-on: ubuntu-latest
+    env:
+      ESPN_LEAGUE_ID: ${{ secrets.ESPN_LEAGUE_ID }}
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install espn_api
+
+      - name: Pull weekly scoring detail
+        run: python espn_weekly_stats.py "${{ github.event.inputs.year }}"
+
+      - name: Commit updated weekly stats
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add espn_weekly_stats_*.json
+          git diff --staged --quiet || git commit -m "Update weekly stats for ${{ github.event.inputs.year }}"
+          git push
