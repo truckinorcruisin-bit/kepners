@@ -1,0 +1,43 @@
+{
+  "_comment": "Hand-maintained league format/rules. convert_bigboard.py merges this into bigboard.json under leagues.<league>.rules. Edit here, not in generated JSON.",
+
+  "kepners": {
+    "platform": "yahoo",
+    "teams": 12,
+    "format": "snake",
+    "scoring": "standard",
+    "keepers": {
+      "count": 2,
+      "cost_rounds_advance": 2,
+      "cost_rule": "Keeper costs 2 rounds earlier than the round in which the player was drafted the prior season (e.g. drafted round 8 -> kept at a round 6 cost).",
+      "eligibility": "Player must have been drafted the prior season. Players added via waiver/free agency (undrafted) cannot be kept."
+    }
+  },
+
+  "miami": {
+    "platform": "yahoo",
+    "teams": 8,
+    "format": "snake",
+    "scoring": "standard",
+    "keepers": {
+      "count": 2,
+      "cost_rounds_advance": 3,
+      "cost_rule": "Keeper costs 3 rounds earlier than the round in which the player was drafted the prior season (e.g. drafted round 8 -> kept at a round 5 cost).",
+      "eligibility": "Same as Kepners: player must have been drafted the prior season. Undrafted players cannot be kept.",
+      "_note": "Keeper count assumed same as Kepners (2) -- not explicitly stated when these rules were captured. Update this if Miami actually differs."
+    }
+  },
+
+  "zimmer": {
+    "platform": "espn",
+    "teams": 12,
+    "format": "auction",
+    "scoring": "standard",
+    "keepers": {
+      "count": 0,
+      "cost_rounds_advance": null,
+      "cost_rule": null,
+      "eligibility": "No keepers in this league."
+    }
+  }
+}

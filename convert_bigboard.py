@@ -15,15 +15,35 @@ Output schema:
        "platform": {"yahoo":..,"espn":..,"underdog":..,...}, "notes" }
   ],
   "leagues": {
-     "kepners": { "platform":"yahoo", "myTeam":"Pickups", "teams":[...], "rosterSlots":[...], "keepers":[...] },
+     "kepners": { "platform":"yahoo", "myTeam":"Pickups", "teams":[...], "rosterSlots":[...],
+                  "keepers":[...], "rules": {see league_rules.json} },
      "miami":   { "platform":"yahoo", "myTeam":"HannahLees", ... },
      "zimmer":  { "platform":"espn",  "myTeam":"Elements of Intrigue", ... }
   }
 }
+
+League format/keeper rules live in league_rules.json (hand-maintained, not
+derived from the spreadsheet) and are merged into each league's output here.
+Edit that file directly to update rules; this script only merges it in.
 """
-import sys, json, re
+import sys, os, json, re
 from datetime import datetime, timezone
 import openpyxl
+
+RULES_FILE = "league_rules.json"  # hand-maintained; sits alongside this script
+
+
+def load_league_rules():
+    """Static format/keeper-rule config, hand-maintained in league_rules.json.
+    Merged into each league's output under the "rules" key. Missing file is
+    non-fatal -- the app just won't have rule metadata until it's added."""
+    if not os.path.exists(RULES_FILE):
+        print(f"Note: {RULES_FILE} not found -- leagues will have no 'rules' section.")
+        return {}
+    with open(RULES_FILE) as f:
+        rules = json.load(f)
+    rules.pop("_comment", None)
+    return rules
 
 
 def norm(s):
@@ -146,6 +166,7 @@ def read_team_sheet(wb, sheet, platform, my_team):
 
 def main(src, dst):
     wb = openpyxl.load_workbook(src, data_only=True)
+    rules = load_league_rules()
     out = {
         "meta": {"season": 2026, "generated": datetime.now(timezone.utc).isoformat()},
         "players": read_players(wb),
@@ -158,13 +179,18 @@ def main(src, dst):
                        "teams": [], "rosterSlots": [], "keepers": []},
         },
     }
+    for league_key, league_data in out["leagues"].items():
+        if league_key in rules:
+            league_data["rules"] = rules[league_key]
+
     with open(dst, "w") as f:
         json.dump(out, f, indent=2)
     print(f"Wrote {dst}: {len(out['players'])} players; "
           f"leagues={list(out['leagues'])}")
     for k, v in out["leagues"].items():
+        has_rules = "rules" in v
         print(f"  {k}: {len(v['teams'])} teams, {len(v['keepers'])} keepers, "
-              f"roster={v['rosterSlots']}")
+              f"roster={v['rosterSlots']}, rules_loaded={has_rules}")
 
 
 if __name__ == "__main__":
