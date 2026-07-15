@@ -29,7 +29,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install espn_api
+        run: pip install espn_api openpyxl
 
       - name: Pull projections and auction values
         run: python espn_player_values.py "${{ github.event.inputs.year }}"
