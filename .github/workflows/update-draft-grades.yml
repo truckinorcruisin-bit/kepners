@@ -1,0 +1,31 @@
+name: Update Zimmer Draft Grades
+
+# Run manually from the Actions tab, AFTER the season/weekly stats workflows
+# have been run for each year in GRADED_YEARS (see zimmer_draft_grades.py).
+# No API secrets needed -- this only reads JSON files already committed to
+# the repo (draft history, season stats, weekly stats, zimmer analysis).
+on:
+  workflow_dispatch:
+
+jobs:
+  grade-drafts:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Grade historical drafts
+        run: python zimmer_draft_grades.py
+
+      - name: Commit updated grades
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add zimmer_draft_grades.json
+          git diff --staged --quiet || git commit -m "Update Zimmer draft grades"
+          git push
