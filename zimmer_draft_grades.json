@@ -4,302 +4,314 @@
   ],
   "owners": [
     {
-      "owner": "IrishAJP",
+      "owner": "PetyPabs23",
       "picks_graded": 16,
-      "surplus_per_dollar": 2.883,
-      "total_surplus_points": 576.6,
-      "avg_efficiency_ratio": 2.745,
-      "hit_rate_pct": 68.8,
-      "avg_volatility": 6.06,
-      "total_points_drafted": 2191.7,
+      "war_surplus_per_dollar": 2.51,
+      "total_war_surplus": 502.0,
+      "hit_rate_pct": 56.2,
+      "avg_volatility": 5.67,
+      "total_war_drafted": 486.9,
       "best_pick": {
-        "player": "Matthew Stafford",
+        "player": "Travis Hunter",
         "season": 2025,
-        "cost": 1,
-        "points": 350.38,
-        "efficiency_ratio": 12.19
+        "cost": 7,
+        "points": 35.8,
+        "war": -66.3,
+        "war_efficiency_ratio": 50.672
       },
       "worst_pick": {
-        "player": "A.J. Brown",
+        "player": "Javonte Williams",
         "season": 2025,
-        "cost": 47,
-        "points": 142.3,
-        "efficiency_ratio": 0.477
+        "cost": 2,
+        "points": 207.8,
+        "war": 80.4,
+        "war_efficiency_ratio": -264.531
       },
-      "concentration_style": "stars"
+      "concentration_style": "balanced"
     },
     {
       "owner": "mletten",
       "picks_graded": 16,
-      "surplus_per_dollar": 2.226,
-      "total_surplus_points": 445.2,
-      "avg_efficiency_ratio": 5.511,
-      "hit_rate_pct": 62.5,
+      "war_surplus_per_dollar": 1.354,
+      "total_war_surplus": 270.8,
+      "hit_rate_pct": 37.5,
       "avg_volatility": 5.35,
-      "total_points_drafted": 2296.7,
+      "total_war_drafted": 234.7,
       "best_pick": {
+        "player": "Ray Davis",
+        "season": 2025,
+        "cost": 1,
+        "points": 54.1,
+        "war": -73.30000000000001,
+        "war_efficiency_ratio": 482.341
+      },
+      "worst_pick": {
         "player": "Quinshon Judkins",
         "season": 2025,
         "cost": 1,
         "points": 143.8,
-        "efficiency_ratio": 19.73
-      },
-      "worst_pick": {
-        "player": "Nico Collins",
-        "season": 2025,
-        "cost": 46,
-        "points": 155.2,
-        "efficiency_ratio": 0.532
+        "war": 16.400000000000006,
+        "war_efficiency_ratio": -107.918
       },
       "concentration_style": "value"
     },
     {
       "owner": "Young-Jim",
       "picks_graded": 16,
-      "surplus_per_dollar": 2.186,
-      "total_surplus_points": 437.2,
-      "avg_efficiency_ratio": 2.699,
-      "hit_rate_pct": 62.5,
+      "war_surplus_per_dollar": 1.026,
+      "total_war_surplus": 205.3,
+      "hit_rate_pct": 43.8,
       "avg_volatility": 6.32,
-      "total_points_drafted": 2264.5,
+      "total_war_drafted": 162.4,
       "best_pick": {
-        "player": "Caleb Williams",
+        "player": "Will Shipley",
         "season": 2025,
         "cost": 1,
-        "points": 316.18,
-        "efficiency_ratio": 11.0
+        "points": 8.5,
+        "war": -118.9,
+        "war_efficiency_ratio": 782.406
       },
       "worst_pick": {
-        "player": "Malik Nabers",
+        "player": "Seahawks D/ST",
         "season": 2025,
-        "cost": 51,
-        "points": 39.1,
-        "efficiency_ratio": 0.121
+        "cost": 1,
+        "points": 193.0,
+        "war": 76.0,
+        "war_efficiency_ratio": -49.565
       },
       "concentration_style": "value"
     },
     {
-      "owner": "dberinger87",
+      "owner": "IrishAJP",
       "picks_graded": 16,
-      "surplus_per_dollar": 1.308,
-      "total_surplus_points": 261.6,
-      "avg_efficiency_ratio": 5.906,
-      "hit_rate_pct": 62.5,
-      "avg_volatility": 5.17,
-      "total_points_drafted": 1823.7,
+      "war_surplus_per_dollar": 0.928,
+      "total_war_surplus": 185.7,
+      "hit_rate_pct": 31.2,
+      "avg_volatility": 6.06,
+      "total_war_drafted": 144.8,
       "best_pick": {
-        "player": "Travis Etienne Jr.",
+        "player": "Joe Mixon",
         "season": 2025,
         "cost": 1,
-        "points": 217.9,
-        "efficiency_ratio": 29.897
+        "points": 0.0,
+        "war": -127.4,
+        "war_efficiency_ratio": 838.339
       },
       "worst_pick": {
-        "player": "Jets D/ST",
+        "player": "Justin Fields",
         "season": 2025,
-        "cost": 1,
-        "points": 16.0,
-        "efficiency_ratio": 0.16
+        "cost": 2,
+        "points": 142.66,
+        "war": -92.47999999999999,
+        "war_efficiency_ratio": -107.995
       },
-      "concentration_style": "balanced"
+      "concentration_style": "stars"
     },
     {
       "owner": "burningcole",
       "picks_graded": 16,
-      "surplus_per_dollar": 1.165,
-      "total_surplus_points": 233.0,
-      "avg_efficiency_ratio": 5.189,
-      "hit_rate_pct": 68.8,
+      "war_surplus_per_dollar": 0.269,
+      "total_war_surplus": 53.8,
+      "hit_rate_pct": 62.5,
       "avg_volatility": 5.34,
-      "total_points_drafted": 2012.5,
+      "total_war_drafted": 56.5,
       "best_pick": {
+        "player": "Bhayshul Tuten",
+        "season": 2025,
+        "cost": 1,
+        "points": 78.6,
+        "war": -48.80000000000001,
+        "war_efficiency_ratio": 321.122
+      },
+      "worst_pick": {
         "player": "Rhamondre Stevenson",
         "season": 2025,
         "cost": 1,
         "points": 146.8,
-        "efficiency_ratio": 20.142
-      },
-      "worst_pick": {
-        "player": "Tyreek Hill",
-        "season": 2025,
-        "cost": 32,
-        "points": 32.5,
-        "efficiency_ratio": 0.16
+        "war": 19.400000000000006,
+        "war_efficiency_ratio": -127.659
       },
       "concentration_style": "stars"
     },
     {
-      "owner": "PetyPabs23",
+      "owner": "dberinger87",
       "picks_graded": 16,
-      "surplus_per_dollar": 0.8,
-      "total_surplus_points": 159.9,
-      "avg_efficiency_ratio": 3.866,
-      "hit_rate_pct": 75.0,
-      "avg_volatility": 5.67,
-      "total_points_drafted": 2533.9,
+      "war_surplus_per_dollar": -0.308,
+      "total_war_surplus": -61.6,
+      "hit_rate_pct": 56.2,
+      "avg_volatility": 5.17,
+      "total_war_drafted": -105.2,
       "best_pick": {
-        "player": "Rashid Shaheed",
+        "player": "Dameon Pierce",
         "season": 2025,
         "cost": 1,
-        "points": 97.6,
-        "efficiency_ratio": 15.378
+        "points": 3.6,
+        "war": -123.80000000000001,
+        "war_efficiency_ratio": 814.649
       },
       "worst_pick": {
-        "player": "Jalen Hurts",
-        "season": 2025,
-        "cost": 31,
-        "points": 299.06,
-        "efficiency_ratio": 0.336
-      },
-      "concentration_style": "balanced"
-    },
-    {
-      "owner": "fuschdannon",
-      "picks_graded": 16,
-      "surplus_per_dollar": 0.601,
-      "total_surplus_points": 120.3,
-      "avg_efficiency_ratio": 3.469,
-      "hit_rate_pct": 68.8,
-      "avg_volatility": 4.97,
-      "total_points_drafted": 1759.6,
-      "best_pick": {
-        "player": "Rachaad White",
+        "player": "Travis Etienne Jr.",
         "season": 2025,
         "cost": 1,
-        "points": 103.0,
-        "efficiency_ratio": 14.132
-      },
-      "worst_pick": {
-        "player": "Brian Thomas Jr.",
-        "season": 2025,
-        "cost": 41,
-        "points": 90.8,
-        "efficiency_ratio": 0.349
-      },
-      "concentration_style": "stars"
-    },
-    {
-      "owner": "mvioli",
-      "picks_graded": 16,
-      "surplus_per_dollar": -0.53,
-      "total_surplus_points": -103.9,
-      "avg_efficiency_ratio": 4.702,
-      "hit_rate_pct": 62.5,
-      "avg_volatility": 5.06,
-      "total_points_drafted": 1885.9,
-      "best_pick": {
-        "player": "Michael Pittman Jr.",
-        "season": 2025,
-        "cost": 1,
-        "points": 122.4,
-        "efficiency_ratio": 19.286
-      },
-      "worst_pick": {
-        "player": "Terry McLaurin",
-        "season": 2025,
-        "cost": 36,
-        "points": 76.2,
-        "efficiency_ratio": 0.334
-      },
-      "concentration_style": "balanced"
-    },
-    {
-      "owner": "Omreed7",
-      "picks_graded": 16,
-      "surplus_per_dollar": -1.517,
-      "total_surplus_points": -303.5,
-      "avg_efficiency_ratio": 2.259,
-      "hit_rate_pct": 50.0,
-      "avg_volatility": 5.35,
-      "total_points_drafted": 1716.8,
-      "best_pick": {
-        "player": "Colston Loveland",
-        "season": 2025,
-        "cost": 1,
-        "points": 107.1,
-        "efficiency_ratio": 8.511
-      },
-      "worst_pick": {
-        "player": "Joe Burrow",
-        "season": 2025,
-        "cost": 22,
-        "points": 134.46,
-        "efficiency_ratio": 0.213
+        "points": 217.9,
+        "war": 90.5,
+        "war_efficiency_ratio": -595.523
       },
       "concentration_style": "balanced"
     },
     {
       "owner": "zzim61288",
       "picks_graded": 16,
-      "surplus_per_dollar": -1.687,
-      "total_surplus_points": -337.4,
-      "avg_efficiency_ratio": 3.408,
-      "hit_rate_pct": 68.8,
+      "war_surplus_per_dollar": -0.452,
+      "total_war_surplus": -90.3,
+      "hit_rate_pct": 50.0,
       "avg_volatility": 5.45,
-      "total_points_drafted": 1975.2,
+      "total_war_drafted": -112.0,
       "best_pick": {
-        "player": "Cam Skattebo",
+        "player": "Jaydon Blue",
         "season": 2025,
         "cost": 1,
-        "points": 103.7,
-        "efficiency_ratio": 14.228
+        "points": 19.4,
+        "war": -108.0,
+        "war_efficiency_ratio": 710.68
       },
       "worst_pick": {
-        "player": "Jayden Daniels",
+        "player": "Jauan Jennings",
         "season": 2025,
-        "cost": 31,
-        "points": 114.28,
-        "efficiency_ratio": 0.128
+        "cost": 2,
+        "points": 118.3,
+        "war": 16.200000000000003,
+        "war_efficiency_ratio": -43.335
       },
       "concentration_style": "value"
     },
     {
       "owner": "SeanyWilks",
       "picks_graded": 16,
-      "surplus_per_dollar": -1.934,
-      "total_surplus_points": -386.8,
-      "avg_efficiency_ratio": 3.387,
-      "hit_rate_pct": 50.0,
+      "war_surplus_per_dollar": -0.479,
+      "total_war_surplus": -95.8,
+      "hit_rate_pct": 31.2,
       "avg_volatility": 5.79,
-      "total_points_drafted": 2072.0,
+      "total_war_drafted": -108.0,
       "best_pick": {
-        "player": "Wan'Dale Robinson",
+        "player": "Trey Benson",
         "season": 2025,
         "cost": 1,
-        "points": 125.9,
-        "efficiency_ratio": 19.837
+        "points": 22.4,
+        "war": -105.0,
+        "war_efficiency_ratio": 690.939
       },
       "worst_pick": {
-        "player": "Lamar Jackson",
+        "player": "J.J. McCarthy",
         "season": 2025,
-        "cost": 31,
-        "points": 214.86,
-        "efficiency_ratio": 0.241
+        "cost": 1,
+        "points": 125.38,
+        "war": -109.75999999999999,
+        "war_efficiency_ratio": -256.348
       },
       "concentration_style": "stars"
     },
     {
-      "owner": "DC Matt",
+      "owner": "Omreed7",
       "picks_graded": 16,
-      "surplus_per_dollar": -5.513,
-      "total_surplus_points": -1102.7,
-      "avg_efficiency_ratio": 2.25,
-      "hit_rate_pct": 50.0,
-      "avg_volatility": 4.96,
-      "total_points_drafted": 1638.1,
+      "war_surplus_per_dollar": -0.906,
+      "total_war_surplus": -181.2,
+      "hit_rate_pct": 62.5,
+      "avg_volatility": 5.35,
+      "total_war_drafted": -212.2,
       "best_pick": {
-        "player": "Tyler Allgeier",
+        "player": "Jayden Reed",
         "season": 2025,
         "cost": 1,
-        "points": 109.0,
-        "efficiency_ratio": 14.955
+        "points": 29.5,
+        "war": -72.6,
+        "war_efficiency_ratio": 388.412
       },
       "worst_pick": {
-        "player": "James Conner",
+        "player": "Chris Olave",
         "season": 2025,
-        "cost": 25,
-        "points": 25.3,
-        "efficiency_ratio": 0.139
+        "cost": 4,
+        "points": 168.0,
+        "war": 65.9,
+        "war_efficiency_ratio": -88.142
+      },
+      "concentration_style": "balanced"
+    },
+    {
+      "owner": "fuschdannon",
+      "picks_graded": 16,
+      "war_surplus_per_dollar": -1.15,
+      "total_war_surplus": -229.9,
+      "hit_rate_pct": 62.5,
+      "avg_volatility": 4.97,
+      "total_war_drafted": -262.1,
+      "best_pick": {
+        "player": "Jerome Ford",
+        "season": 2025,
+        "cost": 1,
+        "points": 17.6,
+        "war": -109.80000000000001,
+        "war_efficiency_ratio": 722.524
+      },
+      "worst_pick": {
+        "player": "Michael Penix Jr.",
+        "season": 2025,
+        "cost": 1,
+        "points": 120.28,
+        "war": -114.85999999999999,
+        "war_efficiency_ratio": -268.259
+      },
+      "concentration_style": "stars"
+    },
+    {
+      "owner": "mvioli",
+      "picks_graded": 16,
+      "war_surplus_per_dollar": -1.185,
+      "total_war_surplus": -232.2,
+      "hit_rate_pct": 62.5,
+      "avg_volatility": 5.06,
+      "total_war_drafted": -218.2,
+      "best_pick": {
+        "player": "Zander Horvath",
+        "season": 2025,
+        "cost": 1,
+        "points": 0.0,
+        "war": -127.4,
+        "war_efficiency_ratio": 838.339
+      },
+      "worst_pick": {
+        "player": "Kyler Murray",
+        "season": 2025,
+        "cost": 1,
+        "points": 77.78,
+        "war": -157.35999999999999,
+        "war_efficiency_ratio": -367.52
+      },
+      "concentration_style": "balanced"
+    },
+    {
+      "owner": "DC Matt",
+      "picks_graded": 16,
+      "war_surplus_per_dollar": -1.626,
+      "total_war_surplus": -325.3,
+      "hit_rate_pct": 56.2,
+      "avg_volatility": 4.96,
+      "total_war_drafted": -326.4,
+      "best_pick": {
+        "player": "Braelon Allen",
+        "season": 2025,
+        "cost": 1,
+        "points": 13.3,
+        "war": -114.10000000000001,
+        "war_efficiency_ratio": 750.82
+      },
+      "worst_pick": {
+        "player": "Jameson Williams",
+        "season": 2025,
+        "cost": 15,
+        "points": 154.9,
+        "war": 52.80000000000001,
+        "war_efficiency_ratio": -18.832
       },
       "concentration_style": "value"
     }
@@ -308,57 +320,57 @@
     {
       "season": 2025,
       "position": "D/ST",
-      "baseline_ppd": 99.867
+      "baseline_war_per_dollar": -1.533
     },
     {
       "season": 2025,
       "position": "K",
-      "baseline_ppd": 100.773
+      "baseline_war_per_dollar": -9.627
     },
     {
       "season": 2025,
       "position": "QB",
-      "baseline_ppd": 28.743
+      "baseline_war_per_dollar": 0.428
     },
     {
       "season": 2025,
       "position": "RB",
-      "baseline_ppd": 7.288
+      "baseline_war_per_dollar": -0.152
     },
     {
       "season": 2025,
       "position": "TE",
-      "baseline_ppd": 12.584
+      "baseline_war_per_dollar": 1.124
     },
     {
       "season": 2025,
       "position": "WR",
-      "baseline_ppd": 6.347
+      "baseline_war_per_dollar": -0.187
     }
   ],
   "style_correlation": [
     {
-      "style": "stars",
-      "avg_surplus_per_dollar": 0.679,
+      "style": "value",
+      "avg_war_surplus_per_dollar": 0.076,
       "n_owners": 4
     },
     {
       "style": "balanced",
-      "avg_surplus_per_dollar": 0.015,
+      "avg_war_surplus_per_dollar": 0.028,
       "n_owners": 4
     },
     {
-      "style": "value",
-      "avg_surplus_per_dollar": -0.697,
+      "style": "stars",
+      "avg_war_surplus_per_dollar": -0.108,
       "n_owners": 4
     }
   ],
   "headlines": [
-    "Most effective drafter (2023-2025): IrishAJP -- averages +2.88 surplus points per dollar spent versus market rate, hitting value on 68.8% of graded picks.",
-    "Toughest grade: DC Matt at -5.51 surplus points per dollar (50.0% hit rate).",
-    "K has historically delivered the most points per dollar (100.77 pts/$) -- the efficient place to spend late/opportunistically.",
-    "WR has delivered the fewest points per dollar (6.35 pts/$) -- premium WRs command a real price premium beyond their raw output; only pay it for the true elite tier.",
-    "By drafting style, 'stars' owners have graded best on average (+0.68 surplus pts/$ across 4 owner(s)) -- a data-backed signal for how sharps should approach 2026, though the sample size per style is small so treat this as a lean, not a law."
+    "Most effective drafter (2023-2025): PetyPabs23 -- averages +2.51 WAR (points above replacement) per dollar spent versus market rate, hitting value on 56.2% of graded picks.",
+    "Toughest grade: DC Matt at -1.63 WAR-surplus per dollar (56.2% hit rate).",
+    "TE has delivered the most WAR per dollar historically (1.124 WAR/$) -- the position where spending actually pays off most.",
+    "K has delivered the least WAR per dollar (-9.627 WAR/$) -- even a 'good value' pick here barely outperforms a free replacement, since the position has little top-to-bottom spread.",
+    "By drafting style, 'value' owners have graded best on average (+0.08 WAR-surplus/$ across 4 owner(s)) -- a data-backed signal for how sharps should approach 2026, though the sample size per style is small so treat this as a lean, not a law."
   ],
   "unmatched_picks": 0
 }
