@@ -128,6 +128,32 @@
   .posspend{margin-top:9px;font-size:10px;color:var(--dim);line-height:1.7;}
   .posspend .pchip{display:inline-block;background:var(--line);border-radius:3px;padding:2px 6px;margin:2px 4px 0 0;color:var(--txt);}
   .stratnote{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);font-size:11px;color:var(--txt);line-height:1.55;}
+
+  /* replay mode: setup screen */
+  .replay-setup{background:var(--panel);border:1px solid var(--line);padding:16px;margin-top:8px;}
+  .replay-setup label{display:block;font-size:10px;letter-spacing:0.1em;color:var(--dim);
+    text-transform:uppercase;margin-bottom:6px;margin-top:14px;}
+  .replay-setup label:first-child{margin-top:0;}
+  .replay-setup select{width:100%;background:var(--bg);border:1px solid var(--line-2);color:var(--txt);
+    font-family:inherit;font-size:13px;padding:9px 10px;}
+  .replay-start-btn{width:100%;margin-top:18px;padding:12px;background:var(--amber);color:var(--bg);
+    border:none;font-family:inherit;font-weight:700;font-size:12px;letter-spacing:0.08em;
+    text-transform:uppercase;cursor:pointer;}
+  .replay-disclaimer{font-size:10px;color:var(--dim);line-height:1.6;margin-top:10px;
+    border-left:2px solid var(--line-2);padding-left:10px;}
+
+  /* replay mode: playback controls */
+  .replay-controls{display:flex;align-items:center;gap:8px;padding:10px 0;}
+  .replay-controls button{background:var(--panel);border:1px solid var(--line);color:var(--txt);
+    font-family:inherit;font-size:14px;padding:9px 13px;cursor:pointer;}
+  .replay-controls button.play-btn{flex:1;background:var(--amber);color:var(--bg);border-color:var(--amber);
+    font-weight:700;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;}
+  .replay-controls select{background:var(--panel);border:1px solid var(--line);color:var(--txt);
+    font-family:inherit;font-size:10px;padding:9px 6px;}
+  .replay-progress{font-size:10px;color:var(--dim);letter-spacing:0.06em;padding:0 0 8px;}
+  .replay-progress b{color:var(--amber);}
+  .retro-tag{display:inline-block;font-size:8.5px;letter-spacing:0.08em;color:var(--bg);
+    background:var(--cyan);padding:2px 6px;margin-left:6px;vertical-align:middle;text-transform:uppercase;}
 </style>
 </head>
 <body>
@@ -144,6 +170,7 @@
   <div class="modes" id="modes">
     <button data-mode="draft" class="on">Draft</button>
     <button data-mode="history">History</button>
+    <button data-mode="replay">Replay</button>
   </div>
 
   <!-- DRAFT VIEW -->
@@ -173,12 +200,21 @@
 
   <!-- HISTORY VIEW -->
   <div id="historyView" style="display:none;"></div>
+
+  <!-- REPLAY VIEW -->
+  <div id="replayView" style="display:none;"></div>
 </div>
 
 <script>
-let DATA=null, ZHIST=null, activeLeague='kepners', activeMode='draft';
+let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, activeLeague='kepners', activeMode='draft';
 
-// ---- data load: bigboard.json (+ optional zimmer_analysis.json) alongside this file ----
+// Replay mode state
+let replay = {
+  season: null, myOwner: null, timeline: [], teams: {}, idx: 0,
+  playing: false, timer: null, speedMs: 1500, started: false,
+};
+
+// ---- data load: bigboard.json (+ optional zimmer_analysis.json / zimmer_draft_history.json) ----
 async function boot(){
   try{
     const r = await fetch('bigboard.json');
@@ -192,6 +228,16 @@ async function boot(){
     const r2 = await fetch('zimmer_analysis.json');
     if(r2.ok) ZHIST = await r2.json();
   }catch(e){ /* history view will show an empty state */ }
+  // Zimmer raw draft history — powers Replay mode.
+  try{
+    const r3 = await fetch('zimmer_draft_history.json');
+    if(r3.ok) ZDRAFTS = await r3.json();
+  }catch(e){ /* replay view will show an empty state */ }
+  // Zimmer draft effectiveness grades — powers the History view's grading section.
+  try{
+    const r4 = await fetch('zimmer_draft_grades.json');
+    if(r4.ok) ZGRADES = await r4.json();
+  }catch(e){ /* grading section will show an empty state */ }
 
   renderLeagueTabs();
   wireModes();
@@ -205,6 +251,8 @@ function wireModes(){
       document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x===b));
       document.getElementById('draftView').style.display = activeMode==='draft'?'':'none';
       document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
+      document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
+      if(activeMode!=='replay') stopReplayTimer();
       render();
     };
   });
@@ -261,20 +309,27 @@ function neededPositions(lg,counts){
 function render(){
   const lg=DATA.leagues[activeLeague];
 
-  // History view is Zimmer-only (auction analysis). For other leagues, force draft mode.
+  // History and Replay views are Zimmer-only (auction analysis / auction history).
+  // For other leagues, force draft mode.
   const historyBtn=document.querySelector('#modes button[data-mode="history"]');
+  const replayBtn=document.querySelector('#modes button[data-mode="replay"]');
   if(activeLeague!=='zimmer'){
     historyBtn.style.display='none';
-    if(activeMode==='history'){ activeMode='draft';
+    replayBtn.style.display='none';
+    if(activeMode==='history' || activeMode==='replay'){
+      activeMode='draft'; stopReplayTimer();
       document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x.dataset.mode==='draft'));
       document.getElementById('draftView').style.display='';
       document.getElementById('historyView').style.display='none';
+      document.getElementById('replayView').style.display='none';
     }
   } else {
     historyBtn.style.display='';
+    replayBtn.style.display='';
   }
 
   if(activeMode==='history'){ renderHistory(); return; }
+  if(activeMode==='replay'){ renderReplay(); return; }
 
   document.getElementById('myteamlbl').textContent=lg.myTeam;
 
@@ -485,10 +540,279 @@ function renderHistory(){
     </div>
     ${ownerCards}
 
+    ${renderDraftGrades()}
+
     <div class="foot">
       SOURCE · zimmer_analysis.json · ${owners.length} owners across
       ${(ZHIST.seasons_analyzed||[]).length} auction seasons.
     </div>`;
+}
+
+function renderDraftGrades(){
+  if(!ZGRADES || !(ZGRADES.owners||[]).length){
+    return `<div class="seclabel">Draft Effectiveness</div>
+      <div class="empty-note">zimmer_draft_grades.json not found or empty.<br>
+      Run the season/weekly stats workflows for each graded year, then "Update Zimmer Draft Grades."</div>`;
+  }
+  const years = ZGRADES.years_graded||[];
+  const headlineHtml = (ZGRADES.headlines||[]).map(h=>{
+    const s = h.replace(/([+-]?\d+\.\d+)/g,'<b>$1</b>');
+    return `<div class="headline" style="border-left-color:var(--green)">${s}</div>`;
+  }).join('');
+
+  const rows = ZGRADES.owners.map((o,i)=>{
+    const sp = o.surplus_per_dollar;
+    const spClass = sp>0 ? 'diff-pos' : (sp<0 ? 'diff-neg' : '');
+    return `<tr>
+      <td>${i+1}. ${o.owner}</td>
+      <td class="num ${spClass}">${sp>0?'+':''}${sp}</td>
+      <td class="num">${o.hit_rate_pct}%</td>
+      <td class="num">${o.avg_volatility??'—'}</td>
+      <td style="color:var(--dim)">${o.concentration_style||'—'}</td>
+    </tr>`;
+  }).join('');
+
+  const styleRows = (ZGRADES.style_correlation||[]).map(s=>{
+    const cls = s.avg_surplus_per_dollar>0?'diff-pos':'diff-neg';
+    return `<tr><td>${s.style}</td><td class="num ${cls}">${s.avg_surplus_per_dollar>0?'+':''}${s.avg_surplus_per_dollar}</td><td class="num">${s.n_owners}</td></tr>`;
+  }).join('');
+
+  return `
+    <div class="seclabel">Draft Effectiveness (${years.length?Math.min(...years):''}–${years.length?Math.max(...years):''})</div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      Grades actual cost paid against actual points scored that season, versus a
+      dollar-weighted market rate per position/year. Surplus $ = points delivered
+      beyond what the going rate for that price implied — the primary "did they draft
+      well" metric, independent of budget size. Hit rate = % of graded picks that beat
+      market rate at all.
+    </div>
+    ${headlineHtml}
+    <table><thead><tr>
+      <th>Owner</th><th class="num">Surplus/$</th><th class="num">Hit Rate</th>
+      <th class="num">Volatility</th><th>Style</th>
+    </tr></thead><tbody>${rows}</tbody></table>
+
+    <div class="seclabel" style="margin-top:18px;">Effectiveness by Drafting Style</div>
+    <table><thead><tr><th>Style</th><th class="num">Avg Surplus/$</th><th class="num">Owners</th></tr></thead>
+    <tbody>${styleRows}</tbody></table>
+
+    <div class="foot">
+      ${ZGRADES.unmatched_picks||0} historical picks had no stat match (deep bench/inactive players)
+      and were excluded from grading.
+    </div>`;
+}
+
+// ---------- Replay mode ----------
+// Plays back a REAL historical Zimmer draft, pick by pick, through the same
+// kind of UI the live draft-day interface will use. Purpose: test the ticker,
+// roster/budget tracking, and best-available board against real data and
+// real cadence, without needing an actual live draft window open. The "Top
+// Recommendation" here is necessarily RETROSPECTIVE (highest eventual price
+// among remaining players) since these are already-completed drafts -- it's
+// there to exercise the recommendation-card UI, not to simulate real strategy.
+
+function stopReplayTimer(){
+  if(replay.timer){ clearInterval(replay.timer); replay.timer=null; }
+  replay.playing=false;
+}
+
+function renderReplay(){
+  const el=document.getElementById('replayView');
+  if(!ZDRAFTS){
+    el.innerHTML=`<div class="seclabel">Replay — Zimmer Draft History</div>
+      <div class="empty-note">zimmer_draft_history.json not found.<br>
+      Run the "Update Zimmer Draft History" workflow to populate this view.</div>`;
+    return;
+  }
+  if(!replay.started){ renderReplaySetup(el); }
+  else { renderReplayPlayback(el); }
+}
+
+function renderReplaySetup(el){
+  const seasons = Object.keys(ZDRAFTS.seasons||{}).sort().reverse();
+  const seasonSel = replay.season || seasons[0];
+  const sdata = ZDRAFTS.seasons[seasonSel];
+  const teamOptions = sdata ? Object.values(sdata.teams).map(t=>t.owners?.[0]||t.team_name) : [];
+  const uniqueOwners = [...new Set(teamOptions)];
+
+  el.innerHTML=`
+    <div class="seclabel">Replay — Zimmer Draft History</div>
+    <div style="font-size:10px;color:var(--dim);line-height:1.5;">
+      Plays back a real completed draft pick-by-pick so we can test the live-draft
+      interface (ticker, roster/budget tracking, board) without waiting for an actual
+      live draft window. Recommendations shown during replay are retrospective
+      (known outcomes), not real strategic advice.
+    </div>
+    <div class="replay-setup">
+      <label>Season</label>
+      <select id="replaySeasonSel">
+        ${seasons.map(s=>`<option value="${s}" ${s===seasonSel?'selected':''}>${s}</option>`).join('')}
+      </select>
+      <label>Play as (owner)</label>
+      <select id="replayOwnerSel">
+        ${uniqueOwners.map(o=>`<option value="${o}">${o}</option>`).join('')}
+      </select>
+      <button class="replay-start-btn" id="replayStartBtn">▶ Start Replay</button>
+      <div class="replay-disclaimer">
+        This uses a completed draft, so every outcome is already known. It's a test
+        harness for the interface, not a prediction tool — the real recommendation
+        engine (Big Board ranks, positional need, scarcity) only makes sense against
+        the live 2026 player pool in Draft mode.
+      </div>
+    </div>`;
+
+  document.getElementById('replaySeasonSel').onchange=(e)=>{
+    replay.season=e.target.value; renderReplaySetup(el);
+  };
+  document.getElementById('replayStartBtn').onclick=()=>{
+    const season=document.getElementById('replaySeasonSel').value;
+    const owner=document.getElementById('replayOwnerSel').value;
+    startReplay(season, owner);
+  };
+}
+
+function startReplay(season, owner){
+  const sdata = ZDRAFTS.seasons[season];
+  const picks = [...(sdata.picks||[])];
+  // chronological order: auctions use nomination_order, snake drafts use overall pick order
+  if(picks.length && picks[0].nomination_order != null){
+    picks.sort((a,b)=>(a.nomination_order||0)-(b.nomination_order||0));
+  } else {
+    picks.sort((a,b)=>((a.round||0)*1000+(a.pick||0))-((b.round||0)*1000+(b.pick||0)));
+  }
+  replay = {
+    season, myOwner: owner, timeline: picks, teams: sdata.teams, idx: 0,
+    playing: false, timer: null, speedMs: replay.speedMs||1500, started: true,
+  };
+  renderReplay();
+}
+
+function resetReplay(){
+  stopReplayTimer();
+  replay.started=false;
+  renderReplay();
+}
+
+function stepReplay(delta){
+  stopReplayTimer();
+  replay.idx = Math.max(0, Math.min(replay.timeline.length, replay.idx+delta));
+  renderReplay();
+}
+
+function toggleReplayPlay(){
+  if(replay.playing){ stopReplayTimer(); renderReplay(); return; }
+  if(replay.idx>=replay.timeline.length) return;
+  replay.playing=true;
+  replay.timer=setInterval(()=>{
+    replay.idx++;
+    if(replay.idx>=replay.timeline.length){ stopReplayTimer(); }
+    renderReplay();
+  }, replay.speedMs);
+  renderReplay();
+}
+
+function renderReplayPlayback(el){
+  const {timeline, idx, myOwner, teams} = replay;
+  const picksSoFar = timeline.slice(0, idx);
+  const upcoming = timeline.slice(idx);
+  const isAuction = timeline.length && timeline[0].cost != null;
+  const done = idx >= timeline.length;
+
+  // my team's picks so far
+  const myPicks = picksSoFar.filter(p=>{
+    const t = teams[String(p.team_id)];
+    return (t && t.owners && t.owners[0]===myOwner);
+  });
+  const mySpent = myPicks.reduce((s,p)=>s+(p.cost||0),0);
+  // ground truth: what this owner ultimately spent all season (for a remaining-budget readout)
+  const myFullSeason = timeline.filter(p=>{
+    const t = teams[String(p.team_id)];
+    return (t && t.owners && t.owners[0]===myOwner);
+  });
+  const myTotalBudget = myFullSeason.reduce((s,p)=>s+(p.cost||0),0);
+
+  // ticker: most recent picks
+  const recent = picksSoFar.slice(-10).reverse();
+  const tickerHtml = recent.length
+    ? recent.map(p=>{
+        const t=teams[String(p.team_id)];
+        const owner=t?.owners?.[0]||p.team_name||'?';
+        const priceTag = isAuction ? ` — $${p.cost}` : ` — R${p.round}.${p.pick}`;
+        return `<span><b>${owner}</b> selects ${p.player}${priceTag}</span>`;
+      }).join('')
+    : `<span>DRAFT NOT YET STARTED</span>`;
+
+  // best available: remaining players, sorted by EVENTUAL price (retrospective)
+  const board = [...upcoming].sort((a,b)=>(b.cost||0)-(a.cost||0)).slice(0,12);
+  const top = board[0];
+
+  el.innerHTML=`
+    <div class="seclabel">Replay — ${replay.season} · Playing as ${myOwner}</div>
+    <div class="replay-progress">PICK <b>${idx}</b> OF <b>${timeline.length}</b>${done?' · DRAFT COMPLETE':''}</div>
+
+    <div class="replay-controls">
+      <button id="rwBtn" title="Step back">⏮</button>
+      <button class="play-btn" id="playBtn">${replay.playing?'⏸ PAUSE':(done?'↺ RESTART':'▶ PLAY')}</button>
+      <button id="fwBtn" title="Step forward">⏭</button>
+      <select id="speedSel">
+        <option value="2500" ${replay.speedMs===2500?'selected':''}>SLOW</option>
+        <option value="1200" ${replay.speedMs===1200?'selected':''}>NORMAL</option>
+        <option value="400" ${replay.speedMs===400?'selected':''}>FAST</option>
+      </select>
+      <button id="resetBtn" title="Choose different season/owner">⟲ SETUP</button>
+    </div>
+
+    <div class="seclabel">Top Remaining <span class="retro-tag">retrospective</span></div>
+    ${top ? `
+      <div class="card rec">
+        <div class="top">
+          <div class="name">${top.player.toUpperCase()}</div>
+          <div class="posbadge">${top.position||'—'}</div>
+        </div>
+        <div class="meta">${(teams[String(top.team_id)]||{}).team_name||''} eventually paid $${top.cost} for this player</div>
+        <div class="row"><span>Why flagged</span>
+          <span class="why">highest eventual price among remaining players</span></div>
+      </div>` : `<div class="empty-note">No players remaining — draft complete.</div>`}
+
+    <div class="seclabel">Live Feed</div>
+    <div class="ticker"><div class="track">${tickerHtml}${tickerHtml}</div></div>
+
+    <div class="seclabel">Your Roster — ${myOwner}</div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:8px;">
+      Spent so far: <b style="color:var(--amber)">$${mySpent}</b> of season total $${myTotalBudget}
+    </div>
+    <div class="roster">
+      ${myPicks.length ? myPicks.map(p=>`
+        <div class="slot filled">
+          <div class="s-pos">${p.position||'—'}${isAuction?` · $${p.cost}`:''}</div>
+          <div class="s-val">${p.player}</div>
+        </div>`).join('') : '<div class="empty-note">No picks yet</div>'}
+    </div>
+
+    <div class="seclabel">Board — Best Available (by eventual price)</div>
+    <table><thead><tr><th>Player</th><th>Pos</th><th class="num">Eventual $</th><th>Went To</th></tr></thead>
+    <tbody>${board.map(p=>`
+      <tr><td>${p.player}</td><td>${p.position||'—'}</td>
+        <td class="num">$${p.cost}</td>
+        <td style="color:var(--dim)">${(teams[String(p.team_id)]||{}).team_name||''}</td></tr>
+    `).join('')}</tbody></table>
+
+    <div class="foot">
+      REPLAY MODE — ${replay.season} Zimmer draft, real historical data.
+      Recommendations are retrospective (test harness only), not live strategy.
+    </div>`;
+
+  document.getElementById('rwBtn').onclick=()=>stepReplay(-1);
+  document.getElementById('fwBtn').onclick=()=>stepReplay(1);
+  document.getElementById('playBtn').onclick=()=>{
+    if(done && !replay.playing){ replay.idx=0; renderReplay(); return; }
+    toggleReplayPlay();
+  };
+  document.getElementById('resetBtn').onclick=()=>resetReplay();
+  document.getElementById('speedSel').onchange=(e)=>{
+    replay.speedMs=parseInt(e.target.value,10);
+    if(replay.playing){ stopReplayTimer(); toggleReplayPlay(); }
+  };
 }
 
 boot();
