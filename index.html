@@ -870,13 +870,13 @@ function renderAuctionDraft(){
     <div class="cockpit-cols">
       <div class="cockpit-col">
         <div class="seclabel">Active Player</div>
-        <div id="playerCardArea"></div>
+        <div class="playerCardArea"></div>
       </div>
       <div class="cockpit-col">
-        <div id="positionBoardArea"></div>
+        <div class="positionBoardArea"></div>
       </div>
       <div class="cockpit-col">
-        <div id="opponentPanelArea"></div>
+        <div class="opponentPanelArea"></div>
       </div>
     </div>
 
@@ -899,9 +899,9 @@ function renderAuctionDraft(){
   `;
 
   renderRosterStrip();
-  renderPlayerCard(selected);
-  renderPositionBoard(selected);
-  renderOpponentPanel(selected);
+  renderPlayerCard(selected, el);
+  renderPositionBoard(selected, el);
+  renderOpponentPanel(selected, el);
   renderLoggedPicks();
 
   const searchInput = document.getElementById('playerSearch');
@@ -970,8 +970,9 @@ function renderSearchResults(query){
   });
 }
 
-function renderPlayerCard(player){
-  const area = document.getElementById('playerCardArea');
+function renderPlayerCard(player, root){
+  const area = (root||document).querySelector('.playerCardArea');
+  if(!area) return;
   if(!player){
     area.innerHTML = `<div class="empty-note">Search and select a nominated player above.</div>`;
     return;
@@ -1027,8 +1028,9 @@ function myBudgetForPlayer(){
   return Math.max(1, remaining - Math.max(0, slotsLeft - 1));
 }
 
-function renderOpponentPanel(player){
-  const area = document.getElementById('opponentPanelArea');
+function renderOpponentPanel(player, root){
+  const area = (root||document).querySelector('.opponentPanelArea');
+  if(!area) return;
   if(!ZHIST || !ZHIST.owners || !ZHIST.owners.length){
     area.innerHTML = `<div class="seclabel">Opponents</div>
       <div class="empty-note">Opponent tendencies need zimmer_analysis.json.<br>Run the analysis workflow.</div>`;
@@ -1108,8 +1110,9 @@ function renderOpponentPanel(player){
   area.innerHTML = `<div class="seclabel">Opponent Intel</div>${legend}<div class="opp-grid">${cards}</div>`;
 }
 
-function renderPositionBoard(player){
-  const area = document.getElementById('positionBoardArea');
+function renderPositionBoard(player, root){
+  const area = (root||document).querySelector('.positionBoardArea');
+  if(!area) return;
   if(!player){ area.innerHTML=''; return; }
   const pos = player.pos;
 
@@ -1407,10 +1410,10 @@ function renderReplayPlayback(el){
     <div class="cockpit-cols" style="margin-top:14px;">
       <div class="cockpit-col">
         <div class="seclabel">On The Block ${nextPick&&isAuction?`<span class="retro-tag">sold $${nextPick.cost}</span>`:''}</div>
-        <div id="playerCardArea"></div>
+        <div class="playerCardArea"></div>
       </div>
-      <div class="cockpit-col"><div id="positionBoardArea"></div></div>
-      <div class="cockpit-col"><div id="opponentPanelArea"></div></div>
+      <div class="cockpit-col"><div class="positionBoardArea"></div></div>
+      <div class="cockpit-col"><div class="opponentPanelArea"></div></div>
     </div>
 
     <div class="foot">
@@ -1420,10 +1423,12 @@ function renderReplayPlayback(el){
       pick actually sold for.
     </div>`;
 
-  // reuse the exact cockpit renderers
-  renderPlayerCard(nextPlayer);
-  renderPositionBoard(nextPlayer);
-  renderOpponentPanel(nextPlayer);
+  // reuse the exact cockpit renderers, scoped to the replay view's own
+  // elements (the Draft view has identically-named element IDs, so we must
+  // pass the replay root or getElementById would target the hidden Draft copy)
+  renderPlayerCard(nextPlayer, el);
+  renderPositionBoard(nextPlayer, el);
+  renderOpponentPanel(nextPlayer, el);
 
   document.getElementById('rwBtn').onclick=()=>stepReplay(-1);
   document.getElementById('fwBtn').onclick=()=>stepReplay(1);
