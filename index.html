@@ -209,6 +209,48 @@
   .pbr .pbr-status{font-size:10.5px;}
   .pbr .pbr-status.available{color:var(--green);}
   .pbr .pbr-status.mine{color:var(--amber);font-weight:700;}
+
+  /* ===== auction desktop cockpit ===== */
+  .cockpit-banner{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px;}
+  .cockpit-banner .budget-chip{flex:1;min-width:90px;}
+  .budget-chip.kpi{border-color:var(--cyan);}
+  .budget-chip.kpi .bc-val{color:var(--cyan);}
+  .roster-strip{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px;}
+  .roster-cell{background:var(--panel);border:1px solid var(--line);padding:5px 9px;font-size:10px;}
+  .roster-cell .rc-pos{color:var(--dim);letter-spacing:0.06em;}
+  .roster-cell .rc-fill{color:var(--txt);font-weight:600;margin-left:5px;}
+  .roster-cell.full{border-color:var(--green);}
+  .roster-cell.full .rc-pos{color:var(--green);}
+
+  .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;}
+  @media(min-width:900px){
+    .cockpit-cols{grid-template-columns:1fr 1fr 1fr;}
+    .wrap{max-width:1200px;}
+  }
+  .cockpit-col{min-width:0;}
+  .cockpit-col .seclabel:first-child{margin-top:0;}
+
+  /* column 2 richer player rows */
+  .pbr .pbr-meta{font-size:9px;color:var(--dim);margin-top:2px;}
+  .pbr .pbr-metric{font-size:9.5px;text-align:right;white-space:nowrap;}
+  .pbr .pbr-metric .m-espn{color:var(--cyan);}
+  .pbr .pbr-metric .m-war{color:var(--amber);}
+  .pbr-col-main{display:flex;flex-direction:column;min-width:0;flex:1;}
+
+  /* column 3 opponent panels */
+  .opp-card{background:var(--panel);border:1px solid var(--line);padding:10px 11px;margin-bottom:8px;}
+  .opp-card.hot{border-color:var(--red);box-shadow:0 0 0 1px rgba(255,77,77,0.3);}
+  .opp-card.cold{opacity:0.6;}
+  .opp-head{display:flex;justify-content:space-between;align-items:baseline;}
+  .opp-name{font-size:12px;font-weight:700;color:var(--txt);}
+  .opp-budget{font-size:11px;color:var(--amber);font-weight:700;}
+  .opp-tags{margin-top:5px;}
+  .opp-tags .otag{font-size:8px;padding:1px 6px;}
+  .opp-aggr{font-size:9.5px;margin-top:6px;padding-top:6px;border-top:1px solid var(--line);line-height:1.5;}
+  .opp-aggr.hot{color:var(--red);}
+  .opp-aggr.cold{color:var(--dim);}
+  .opp-aggr.neutral{color:var(--cyan);}
+  .aggr-legend{font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;}
 </style>
 </head>
 <body>
@@ -283,10 +325,19 @@ const ASSUMED_BUDGET = 200;
 const ASSUMED_ROSTER = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF','K','BEN','BEN','BEN','BEN','BEN','BEN'];
 
 let zimmerDraft = {
-  picks: [],          // {name, position, cost, isMine} -- ALL draft picks, any team
+  picks: [],          // {name, position, cost, isMine, owner} -- ALL draft picks
   searchQuery: '',
   selectedPlayerId: null,
 };
+
+// Opponent roster/budget assumptions. Zimmer has no Team sheet in the workbook,
+// so these mirror ASSUMED_BUDGET/ASSUMED_ROSTER. Owner list is pulled live from
+// zimmer_analysis.json (the real owners we have tendency data for) at render time.
+function getOpponentOwners(){
+  if(!ZHIST || !ZHIST.owners) return [];
+  // Exclude "me" -- we track our own budget separately in the banner.
+  return ZHIST.owners.map(o=>o.owner);
+}
 
 // Best-effort match of a free-text logged name to a Big Board player, so the
 // position board can mark them drafted. Same lightweight normalization idea
@@ -761,25 +812,53 @@ function renderAuctionDraft(){
   const spent = myPicks.reduce((s,p)=>s+p.cost,0);
   const remaining = ASSUMED_BUDGET - spent;
   const slotsLeft = ASSUMED_ROSTER.length - myPicks.length;
+  const perPick = slotsLeft>0 ? (remaining/slotsLeft) : 0;
+  const maxBid = Math.max(1, remaining - Math.max(0, slotsLeft - 1));
 
   const selected = zimmerDraft.selectedPlayerId
     ? DATA.players.find(p=>p.id===zimmerDraft.selectedPlayerId) : null;
 
+  // roster fill strip: which of MY starting slots are filled
+  const myPosCount = {};
+  myPicks.forEach(p=>{ myPosCount[p.position]=(myPosCount[p.position]||0)+1; });
+  const slotTally = {};
+  const rosterCells = ASSUMED_ROSTER.map(slot=>{
+    slotTally[slot] = (slotTally[slot]||0);
+    // count how many of this slot type are notionally filled
+    const filledForType = myPosCount[slot]||0;
+    const priorSameSlots = ASSUMED_ROSTER.slice(0, ASSUMED_ROSTER.indexOf(slot)).filter(s=>s===slot).length;
+    return {slot};
+  });
+
+  const ownerOpts = getOpponentOwners();
+
   el.innerHTML = `
-    <div class="budget-bar">
-      <div class="budget-chip"><div class="bc-val">$${remaining}</div><div class="bc-lbl">MY BUDGET LEFT</div></div>
+    <div class="cockpit-banner">
+      <div class="budget-chip"><div class="bc-val">$${remaining}</div><div class="bc-lbl">MY BUDGET</div></div>
       <div class="budget-chip"><div class="bc-val">${slotsLeft}</div><div class="bc-lbl">MY SLOTS LEFT</div></div>
+      <div class="budget-chip kpi"><div class="bc-val">$${perPick.toFixed(1)}</div><div class="bc-lbl">BUDGET / PICK</div></div>
+      <div class="budget-chip"><div class="bc-val">$${maxBid}</div><div class="bc-lbl">MAX BID</div></div>
       <div class="budget-chip"><div class="bc-val">${zimmerDraft.picks.length}</div><div class="bc-lbl">TOTAL DRAFTED</div></div>
     </div>
+    <div class="roster-strip" id="rosterStrip"></div>
 
-    <div class="seclabel">Nominated Player</div>
     <div class="search-wrap">
-      <input id="playerSearch" placeholder="Search a player..." autocomplete="off" value="${zimmerDraft.searchQuery}">
+      <input id="playerSearch" placeholder="Search a nominated player..." autocomplete="off" value="${zimmerDraft.searchQuery}">
       <div id="searchResults" class="search-results" style="display:none;"></div>
     </div>
 
-    <div id="playerCardArea"></div>
-    <div id="positionBoardArea"></div>
+    <div class="cockpit-cols">
+      <div class="cockpit-col">
+        <div class="seclabel">Active Player</div>
+        <div id="playerCardArea"></div>
+      </div>
+      <div class="cockpit-col">
+        <div id="positionBoardArea"></div>
+      </div>
+      <div class="cockpit-col">
+        <div id="opponentPanelArea"></div>
+      </div>
+    </div>
 
     <div class="seclabel">Draft Log (everyone's picks)</div>
     <div id="loggedPicks"></div>
@@ -787,19 +866,22 @@ function renderAuctionDraft(){
       <input id="logName" placeholder="Player name">
       <input id="logPos" placeholder="Pos" style="flex:0 0 55px;">
       <input id="logCost" class="cost-input" type="number" placeholder="$">
-      <label style="display:flex;align-items:center;gap:4px;font-size:9px;color:var(--dim);white-space:nowrap;">
-        <input type="checkbox" id="logMine" style="width:auto;"> MINE
-      </label>
+      <select id="logOwner" style="flex:0 0 130px;background:var(--bg);border:1px solid var(--line-2);color:var(--txt);font-family:inherit;font-size:11px;padding:8px;">
+        <option value="">— won by —</option>
+        <option value="__me__">★ Me</option>
+        ${ownerOpts.map(o=>`<option value="${o}">${o}</option>`).join('')}
+      </select>
       <button id="logAddBtn">ADD</button>
     </div>
-    <div class="foot">Manual tracking for now — log EVERY pick as the draft happens (not just yours),
-      so the position board below can show who's off the board. Check "Mine" only for your own picks —
-      that's what your budget/slots numbers above are based on. Live ESPN polling will replace this
-      when available; this stays as a backup either way.</div>
+    <div class="foot">Log EVERY pick as it happens (not just yours) so the position board and opponent
+      panel stay accurate. Pick the winning owner from the dropdown — choose "Me" for your own wins.
+      Live ESPN polling will replace this when available; this stays as a backup.</div>
   `;
 
+  renderRosterStrip();
   renderPlayerCard(selected);
   renderPositionBoard(selected);
+  renderOpponentPanel(selected);
   renderLoggedPicks();
 
   const searchInput = document.getElementById('playerSearch');
@@ -813,11 +895,39 @@ function renderAuctionDraft(){
     const name = document.getElementById('logName').value.trim();
     const pos = document.getElementById('logPos').value.trim().toUpperCase();
     const cost = parseInt(document.getElementById('logCost').value, 10);
-    const isMine = document.getElementById('logMine').checked;
+    const ownerVal = document.getElementById('logOwner').value;
     if(!name || !cost) return;
-    zimmerDraft.picks.push({name, position: pos||'—', cost, isMine});
+    zimmerDraft.picks.push({
+      name, position: pos||'—', cost,
+      isMine: ownerVal==='__me__',
+      owner: (ownerVal && ownerVal!=='__me__') ? ownerVal : null,
+    });
     renderAuctionDraft();
   };
+}
+
+function renderRosterStrip(){
+  const el = document.getElementById('rosterStrip');
+  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
+  // Walk the roster template, assigning each of my picks to slots greedily.
+  const remainingPicks = [...myPicks];
+  const cells = ASSUMED_ROSTER.map(slot=>{
+    let fillIdx = -1;
+    if(slot==='BEN'){
+      fillIdx = remainingPicks.length ? 0 : -1;
+    } else if(slot==='FLEX'){
+      fillIdx = remainingPicks.findIndex(p=>['RB','WR','TE'].includes(p.position));
+    } else {
+      fillIdx = remainingPicks.findIndex(p=>p.position===slot);
+    }
+    let fill = null;
+    if(fillIdx>=0){ fill = remainingPicks.splice(fillIdx,1)[0]; }
+    return {slot, fill};
+  });
+  el.innerHTML = cells.map(c=>`
+    <div class="roster-cell ${c.fill?'full':''}">
+      <span class="rc-pos">${c.slot}</span>${c.fill?`<span class="rc-fill">${c.fill.name.split(' ').slice(-1)[0]} $${c.fill.cost}</span>`:'<span class="rc-fill" style="color:var(--line-2)">—</span>'}
+    </div>`).join('');
 }
 
 function renderSearchResults(query){
@@ -884,6 +994,98 @@ function renderPlayerCard(player){
 
       <div class="fit-note">${fit.note}</div>
     </div>`;
+}
+
+function myBudgetForPlayer(){
+  // My current max feasible bid = budget left minus $1 reserve per other
+  // remaining slot. Same math as the banner MAX BID (independent of the
+  // specific player -- it's "the most I could spend on any single player now").
+  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
+  const spent = myPicks.reduce((s,p)=>s+p.cost,0);
+  const remaining = ASSUMED_BUDGET - spent;
+  const slotsLeft = ASSUMED_ROSTER.length - myPicks.length;
+  return Math.max(1, remaining - Math.max(0, slotsLeft - 1));
+}
+
+function renderOpponentPanel(player){
+  const area = document.getElementById('opponentPanelArea');
+  if(!ZHIST || !ZHIST.owners || !ZHIST.owners.length){
+    area.innerHTML = `<div class="seclabel">Opponents</div>
+      <div class="empty-note">Opponent tendencies need zimmer_analysis.json.<br>Run the analysis workflow.</div>`;
+    return;
+  }
+
+  // per-opponent live spend (from attributed picks) -> remaining budget
+  const oppSpend = {};
+  const oppCount = {};
+  zimmerDraft.picks.forEach(pick=>{
+    if(pick.owner){
+      oppSpend[pick.owner] = (oppSpend[pick.owner]||0) + pick.cost;
+      oppCount[pick.owner] = (oppCount[pick.owner]||0) + 1;
+    }
+  });
+
+  // Score each opponent's likely aggression on the SELECTED player.
+  const scored = ZHIST.owners.map(o=>{
+    const spent = oppSpend[o.owner]||0;
+    const picksMade = oppCount[o.owner]||0;
+    const budgetLeft = ASSUMED_BUDGET - spent;
+    const slotsLeft = ASSUMED_ROSTER.length - picksMade;
+    const attributed = picksMade>0; // do we actually have live data on them?
+
+    let aggression = 0;
+    const reasons = [];
+
+    if(player){
+      // (a) budget headroom: more $ left than an average remaining slot implies
+      const perSlot = slotsLeft>0 ? budgetLeft/slotsLeft : 0;
+      if(attributed){
+        if(perSlot > 12){ aggression += 2; reasons.push(`flush ($${budgetLeft} left)`); }
+        else if(perSlot < 5){ aggression -= 2; reasons.push(`budget-tight ($${budgetLeft} left)`); }
+      }
+      // (b) positional lean: do they historically pay up for / prioritize this position?
+      if(o.priority_position===player.pos){ aggression += 2; reasons.push(`${player.pos}-priority historically`); }
+      if(o.punt_position===player.pos){ aggression -= 2; reasons.push(`punts ${player.pos} historically`); }
+      // (c) concentration style vs player caliber (tier)
+      const eliteTier = player.seanPosRank!=null && player.seanPosRank<=6;
+      if(o.concentration_style==='stars' && eliteTier){ aggression += 1; reasons.push('stars-&-scrubs on elite'); }
+      if(o.concentration_style==='value' && eliteTier){ aggression -= 1; reasons.push('value-hunter, avoids top $'); }
+      // (d) market driver signal
+      if((o.tags||[]).includes('Market Driver')){ aggression += 1; reasons.push('market driver'); }
+    }
+    return {o, budgetLeft, slotsLeft, attributed, aggression, reasons};
+  });
+
+  // sort: hottest first
+  scored.sort((a,b)=>b.aggression-a.aggression);
+
+  const legend = player
+    ? `<div class="aggr-legend">Likely bidders on <b style="color:var(--amber)">${player.name}</b>:
+       <span style="color:var(--red)">red = aggressive</span>, <span style="color:var(--dim)">dim = unlikely</span>.
+       Based on budget, historical position lean, and draft style.</div>`
+    : `<div class="aggr-legend">Select a player to see who's likely to bid aggressively.</div>`;
+
+  const cards = scored.map(s=>{
+    const hot = player && s.aggression>=3;
+    const cold = player && s.aggression<=-2;
+    const tags = (s.o.tags||[]).slice(0,2).map(t=>`<span class="otag ${tagClass(t)}">${t}</span>`).join(' ');
+    const budgetTxt = s.attributed
+      ? `$${s.budgetLeft} · ${s.slotsLeft} slots`
+      : `<span style="color:var(--line-2)">budget untracked</span>`;
+    let aggrLine = '';
+    if(player){
+      const cls = hot?'hot':(cold?'cold':'neutral');
+      const verdict = hot?'▲ LIKELY AGGRESSIVE':(cold?'▽ unlikely':'– neutral');
+      aggrLine = `<div class="opp-aggr ${cls}">${verdict}${s.reasons.length?' — '+s.reasons.join(', '):''}</div>`;
+    }
+    return `<div class="opp-card ${hot?'hot':''} ${cold?'cold':''}">
+      <div class="opp-head"><span class="opp-name">${s.o.owner}</span><span class="opp-budget">${budgetTxt}</span></div>
+      <div class="opp-tags">${tags}</div>
+      ${aggrLine}
+    </div>`;
+  }).join('');
+
+  area.innerHTML = `<div class="seclabel">Opponent Intel</div>${legend}${cards}`;
 }
 
 function renderPositionBoard(player){
@@ -954,14 +1156,25 @@ function renderPositionBoard(player){
       group.forEach(p=>{
         const d = draftedMap[p.id];
         const isSelected = p.id===player.id;
+        const team = p.proTeamEspn || p.team || '';
+        const bye = p.byeWeek ? `BYE ${p.byeWeek}` : '';
+        const espnBid = p.espnRecommendedBid!=null ? `$${Math.round(p.espnRecommendedBid)}` : '—';
+        const myBid = myBudgetForPlayer(p);
+        const war = p.projectedWar!=null ? `${p.projectedWar>0?'+':''}${p.projectedWar}` : '—';
+
         let statusHtml;
         if(d){
-          statusHtml = `<span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' (mine)':''}</span>`;
+          statusHtml = `<span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' ★':''}</span>`;
         } else {
-          statusHtml = `<span class="pbr-status available">available</span>`;
+          statusHtml = `<span class="pbr-metric">
+            <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--green)">M:$${myBid}</span><br>
+            WAR:<span class="m-war">${war}</span></span>`;
         }
         html += `<div class="pbr ${d?'drafted':''} ${isSelected?'selected':''}">
-          <span><span class="pbr-rank">#${p.seanPosRank}</span><span class="pbr-name">${p.name}</span></span>
+          <span class="pbr-col-main">
+            <span class="pbr-name"><span class="pbr-rank">#${p.seanPosRank}</span>${p.name}</span>
+            <span class="pbr-meta">${team}${bye?' · '+bye:''}</span>
+          </span>
           ${statusHtml}
         </div>`;
       });

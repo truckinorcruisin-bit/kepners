@@ -100,6 +100,8 @@ def merge_espn_values(players):
             p["espnRecommendedBid"] = None
             p["projectedPoints"] = None
             p["projectedWar"] = None
+            p["byeWeek"] = None
+            p["proTeamEspn"] = None
         return
 
     unmatched = []
@@ -111,11 +113,15 @@ def merge_espn_values(players):
             p["espnRecommendedBid"] = None
             p["projectedPoints"] = None
             p["projectedWar"] = None
+            p["byeWeek"] = None
+            p["proTeamEspn"] = None
             continue
         proj = ev.get("projected_total_points")
         replacement = replacement_by_position.get(p["pos"])
         p["espnRecommendedBid"] = ev.get("auction_value_avg")
         p["projectedPoints"] = proj
+        p["byeWeek"] = ev.get("bye_week")
+        p["proTeamEspn"] = ev.get("pro_team")
         p["projectedWar"] = (
             round(proj - replacement, 1) if (proj is not None and replacement is not None) else None
         )

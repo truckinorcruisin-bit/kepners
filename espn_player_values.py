@@ -68,6 +68,14 @@ def extract_auction_value(entry):
     return ownership.get("auctionValueAverage")
 
 
+def extract_bye_week(entry):
+    """Bye week is exposed directly on the raw player object as 'byeWeek'
+    (0 or missing if unknown -- e.g. before schedules are finalized)."""
+    raw_player = entry.get("playerPoolEntry", {}).get("player") if "playerPoolEntry" in entry else entry.get("player", entry)
+    bye = (raw_player or {}).get("byeWeek")
+    return bye if bye else None
+
+
 def fetch_full_player_pool(league, year, size=POOL_SIZE):
     params = {"view": "kona_player_info", "scoringPeriodId": 0}
     filters = {
@@ -91,6 +99,7 @@ def fetch_full_player_pool(league, year, size=POOL_SIZE):
             "name": p.name,
             "position": p.position,
             "pro_team": p.proTeam,
+            "bye_week": extract_bye_week(entry),
             "projected_total_points": p.projected_total_points,
             "auction_value_avg": extract_auction_value(entry),
         })
