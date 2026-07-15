@@ -187,6 +187,28 @@
     font-family:inherit;font-size:12px;padding:8px;}
   .log-form input.cost-input{flex:0 0 60px;}
   .log-form button{background:var(--amber);color:var(--bg);border:none;font-weight:700;padding:0 14px;cursor:pointer;}
+
+  /* position board */
+  .tier-group{margin-bottom:14px;}
+  .tier-group-head{display:flex;justify-content:space-between;align-items:baseline;
+    padding:8px 10px;background:var(--panel);border:1px solid var(--line);border-bottom:none;}
+  .tier-group-head .tg-name{font-size:12px;font-weight:700;color:var(--amber);}
+  .tier-group-head .tg-hist{font-size:9.5px;color:var(--dim);}
+  .tier-group-head .tg-hist b{color:var(--cyan);}
+  .trend-badge{font-size:9px;padding:2px 7px;border-radius:10px;font-weight:700;letter-spacing:0.03em;}
+  .trend-badge.up{background:rgba(255,77,77,.15);color:var(--red);}
+  .trend-badge.down{background:rgba(61,220,132,.15);color:var(--green);}
+  .trend-badge.flat{background:rgba(125,139,153,.15);color:var(--dim);}
+  .pbr{display:flex;justify-content:space-between;align-items:center;padding:7px 10px;
+    border:1px solid var(--line);border-top:none;font-size:11.5px;}
+  .pbr:last-child{border-bottom:1px solid var(--line);}
+  .pbr.selected{background:rgba(255,183,3,.1);border-left:2px solid var(--amber);}
+  .pbr.drafted{opacity:0.5;}
+  .pbr.drafted .pbr-name{text-decoration:line-through;}
+  .pbr .pbr-rank{color:var(--dim);font-size:9.5px;margin-right:6px;}
+  .pbr .pbr-status{font-size:10.5px;}
+  .pbr .pbr-status.available{color:var(--green);}
+  .pbr .pbr-status.mine{color:var(--amber);font-weight:700;}
 </style>
 </head>
 <body>
@@ -261,10 +283,20 @@ const ASSUMED_BUDGET = 200;
 const ASSUMED_ROSTER = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF','K','BEN','BEN','BEN','BEN','BEN','BEN'];
 
 let zimmerDraft = {
-  picks: [],          // {name, cost, position}
+  picks: [],          // {name, position, cost, isMine} -- ALL draft picks, any team
   searchQuery: '',
   selectedPlayerId: null,
 };
+
+// Best-effort match of a free-text logged name to a Big Board player, so the
+// position board can mark them drafted. Same lightweight normalization idea
+// as convert_bigboard.py's name matching (lowercase, trim) -- good enough for
+// live-draft speed-typing; unmatched names just won't highlight on the board.
+function findBigBoardPlayer(name){
+  const norm = s => (s||'').toLowerCase().replace(/[.''\-]/g,'').trim();
+  const target = norm(name);
+  return DATA.players.find(p=>norm(p.name)===target);
+}
 
 // Mirrors zimmer_analysis.py's TIER_SIZES / tier_label EXACTLY -- if you tune
 // one, tune the other, or Expected Bid Range lookups will silently mismatch.
@@ -702,13 +734,14 @@ function expectedBidRange(player){
 }
 
 function computeTeamFit(player){
-  const spent = zimmerDraft.picks.reduce((s,p)=>s+p.cost,0);
+  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
+  const spent = myPicks.reduce((s,p)=>s+p.cost,0);
   const remaining = ASSUMED_BUDGET - spent;
-  const slotsLeft = ASSUMED_ROSTER.length - zimmerDraft.picks.length;
+  const slotsLeft = ASSUMED_ROSTER.length - myPicks.length;
   const maxBid = Math.max(1, remaining - Math.max(0, slotsLeft - 1)); // $1 reserve per remaining slot after this one
 
   const posCount = {};
-  zimmerDraft.picks.forEach(p=>{ posCount[p.position] = (posCount[p.position]||0) + 1; });
+  myPicks.forEach(p=>{ posCount[p.position] = (posCount[p.position]||0) + 1; });
   const myCount = posCount[player.pos] || 0;
   const starterSlotsForPos = ASSUMED_ROSTER.filter(s=>s===player.pos).length;
   const flexEligible = (player.pos==='RB'||player.pos==='WR') ? ASSUMED_ROSTER.filter(s=>s==='FLEX').length : 0;
@@ -724,18 +757,19 @@ function computeTeamFit(player){
 
 function renderAuctionDraft(){
   const el = document.getElementById('auctionDraftUI');
-  const spent = zimmerDraft.picks.reduce((s,p)=>s+p.cost,0);
+  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
+  const spent = myPicks.reduce((s,p)=>s+p.cost,0);
   const remaining = ASSUMED_BUDGET - spent;
-  const slotsLeft = ASSUMED_ROSTER.length - zimmerDraft.picks.length;
+  const slotsLeft = ASSUMED_ROSTER.length - myPicks.length;
 
   const selected = zimmerDraft.selectedPlayerId
     ? DATA.players.find(p=>p.id===zimmerDraft.selectedPlayerId) : null;
 
   el.innerHTML = `
     <div class="budget-bar">
-      <div class="budget-chip"><div class="bc-val">$${remaining}</div><div class="bc-lbl">BUDGET LEFT</div></div>
-      <div class="budget-chip"><div class="bc-val">${slotsLeft}</div><div class="bc-lbl">SLOTS LEFT</div></div>
-      <div class="budget-chip"><div class="bc-val">${zimmerDraft.picks.length}</div><div class="bc-lbl">DRAFTED</div></div>
+      <div class="budget-chip"><div class="bc-val">$${remaining}</div><div class="bc-lbl">MY BUDGET LEFT</div></div>
+      <div class="budget-chip"><div class="bc-val">${slotsLeft}</div><div class="bc-lbl">MY SLOTS LEFT</div></div>
+      <div class="budget-chip"><div class="bc-val">${zimmerDraft.picks.length}</div><div class="bc-lbl">TOTAL DRAFTED</div></div>
     </div>
 
     <div class="seclabel">Nominated Player</div>
@@ -745,20 +779,27 @@ function renderAuctionDraft(){
     </div>
 
     <div id="playerCardArea"></div>
+    <div id="positionBoardArea"></div>
 
-    <div class="seclabel">My Draft So Far</div>
+    <div class="seclabel">Draft Log (everyone's picks)</div>
     <div id="loggedPicks"></div>
     <div class="log-form">
       <input id="logName" placeholder="Player name">
       <input id="logPos" placeholder="Pos" style="flex:0 0 55px;">
       <input id="logCost" class="cost-input" type="number" placeholder="$">
+      <label style="display:flex;align-items:center;gap:4px;font-size:9px;color:var(--dim);white-space:nowrap;">
+        <input type="checkbox" id="logMine" style="width:auto;"> MINE
+      </label>
       <button id="logAddBtn">ADD</button>
     </div>
-    <div class="foot">Manual tracking for now — log each pick you win as the draft happens.
-      Live ESPN polling will replace this when available; this stays as a backup either way.</div>
+    <div class="foot">Manual tracking for now — log EVERY pick as the draft happens (not just yours),
+      so the position board below can show who's off the board. Check "Mine" only for your own picks —
+      that's what your budget/slots numbers above are based on. Live ESPN polling will replace this
+      when available; this stays as a backup either way.</div>
   `;
 
   renderPlayerCard(selected);
+  renderPositionBoard(selected);
   renderLoggedPicks();
 
   const searchInput = document.getElementById('playerSearch');
@@ -772,8 +813,9 @@ function renderAuctionDraft(){
     const name = document.getElementById('logName').value.trim();
     const pos = document.getElementById('logPos').value.trim().toUpperCase();
     const cost = parseInt(document.getElementById('logCost').value, 10);
+    const isMine = document.getElementById('logMine').checked;
     if(!name || !cost) return;
-    zimmerDraft.picks.push({name, position: pos||'—', cost});
+    zimmerDraft.picks.push({name, position: pos||'—', cost, isMine});
     renderAuctionDraft();
   };
 }
@@ -844,6 +886,92 @@ function renderPlayerCard(player){
     </div>`;
 }
 
+function renderPositionBoard(player){
+  const area = document.getElementById('positionBoardArea');
+  if(!player){ area.innerHTML=''; return; }
+  const pos = player.pos;
+
+  // Build a lookup: Big Board player id -> {cost, isMine} from ALL logged picks
+  // (matched by name -- see findBigBoardPlayer). This is what marks players
+  // "drafted" on the board below, regardless of which team took them.
+  const draftedMap = {};
+  zimmerDraft.picks.forEach(pick=>{
+    const bp = findBigBoardPlayer(pick.name);
+    if(bp) draftedMap[bp.id] = {cost: pick.cost, isMine: !!pick.isMine};
+  });
+
+  const posPlayers = DATA.players
+    .filter(p=>p.pos===pos && p.seanPosRank!=null)
+    .sort((a,b)=>a.seanPosRank-b.seanPosRank);
+
+  // group into tiers, same bucketing as Expected Bid Range
+  const tierGroups = {}; // tierLabel -> [players]
+  const tierOrder = [];
+  posPlayers.forEach(p=>{
+    const t = tierLabelForRank(pos, p.seanPosRank-1);
+    if(!tierGroups[t]){ tierGroups[t]=[]; tierOrder.push(t); }
+    tierGroups[t].push(p);
+  });
+
+  const isDeepTier = (label)=> label.includes('+');
+
+  let html = `<div class="seclabel">Position Board — ${pos}</div>`;
+
+  tierOrder.forEach(tierLabel=>{
+    const group = tierGroups[tierLabel];
+    const histRow = (ZHIST && ZHIST.tier_spreads||[]).find(t=>t.position===pos && t.tier===tierLabel);
+
+    // this year's actual costs so far for drafted players in this tier
+    const currentCosts = group
+      .filter(p=>draftedMap[p.id])
+      .map(p=>draftedMap[p.id].cost);
+    let trendBadge = '';
+    if(histRow && currentCosts.length){
+      const curAvg = currentCosts.reduce((a,b)=>a+b,0)/currentCosts.length;
+      const deltaPct = Math.round(100*(curAvg-histRow.avg)/histRow.avg);
+      const cls = deltaPct>=8?'up':(deltaPct<=-8?'down':'flat');
+      const sign = deltaPct>0?'+':'';
+      trendBadge = `<span class="trend-badge ${cls}">${sign}${deltaPct}% vs hist this yr</span>`;
+    }
+
+    const histText = histRow
+      ? `historic <b>$${histRow.low}–$${histRow.high}</b> avg $${histRow.avg}`
+      : `no historic data`;
+
+    html += `<div class="tier-group">
+      <div class="tier-group-head">
+        <span class="tg-name">${tierLabel}</span>
+        <span class="tg-hist">${histText} ${trendBadge}</span>
+      </div>`;
+
+    if(isDeepTier(tierLabel)){
+      // deep catch-all tier: summarize instead of listing every player
+      const draftedCount = group.filter(p=>draftedMap[p.id]).length;
+      html += `<div class="pbr"><span class="pbr-name" style="color:var(--dim)">
+        ${group.length} players in this depth tier</span>
+        <span class="pbr-status" style="color:var(--dim)">${draftedCount} drafted, ${group.length-draftedCount} available</span></div>`;
+    } else {
+      group.forEach(p=>{
+        const d = draftedMap[p.id];
+        const isSelected = p.id===player.id;
+        let statusHtml;
+        if(d){
+          statusHtml = `<span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' (mine)':''}</span>`;
+        } else {
+          statusHtml = `<span class="pbr-status available">available</span>`;
+        }
+        html += `<div class="pbr ${d?'drafted':''} ${isSelected?'selected':''}">
+          <span><span class="pbr-rank">#${p.seanPosRank}</span><span class="pbr-name">${p.name}</span></span>
+          ${statusHtml}
+        </div>`;
+      });
+    }
+    html += `</div>`;
+  });
+
+  area.innerHTML = html;
+}
+
 function renderLoggedPicks(){
   const el = document.getElementById('loggedPicks');
   if(!zimmerDraft.picks.length){
@@ -852,7 +980,7 @@ function renderLoggedPicks(){
   }
   el.innerHTML = zimmerDraft.picks.map((p,i)=>`
     <div class="logged-pick-row">
-      <span>${p.name} <span style="color:var(--dim)">(${p.position})</span></span>
+      <span>${p.isMine?'★ ':''}${p.name} <span style="color:var(--dim)">(${p.position})</span></span>
       <span>$${p.cost} <button data-i="${i}">✕</button></span>
     </div>`).join('');
   el.querySelectorAll('button').forEach(b=>{
