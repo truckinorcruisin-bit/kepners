@@ -1,0 +1,46 @@
+name: Update Player Values (Projections + Auction Values)
+
+# Run manually from the Actions tab, ideally re-run periodically as draft day
+# approaches -- ESPN doesn't populate meaningful preseason projections/auction
+# values until some point before the season (exact timing varies by year).
+# Reuses the same ESPN secrets as the other ESPN scripts.
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year to pull projections/auction values for'
+        required: false
+        default: '2026'
+
+jobs:
+  fetch-values:
+    runs-on: ubuntu-latest
+    env:
+      ESPN_LEAGUE_ID: ${{ secrets.ESPN_LEAGUE_ID }}
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install espn_api
+
+      - name: Pull projections and auction values
+        run: python espn_player_values.py "${{ github.event.inputs.year }}"
+
+      - name: Regenerate bigboard.json with merged values
+        run: python convert_bigboard.py "data/FY26_BigBoard.xlsx" bigboard.json
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add espn_player_values_*.json bigboard.json
+          git diff --staged --quiet || git commit -m "Update player values (projections + auction values) for ${{ github.event.inputs.year }}"
+          git push
