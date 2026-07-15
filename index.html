@@ -154,6 +154,39 @@
   .replay-progress b{color:var(--amber);}
   .retro-tag{display:inline-block;font-size:8.5px;letter-spacing:0.08em;color:var(--bg);
     background:var(--cyan);padding:2px 6px;margin-left:6px;vertical-align:middle;text-transform:uppercase;}
+
+  /* auction draft mode: player search + card */
+  .search-wrap{position:relative;margin-bottom:10px;}
+  .search-wrap input{width:100%;background:var(--panel);border:1px solid var(--line-2);color:var(--txt);
+    font-family:inherit;font-size:14px;padding:11px 12px;}
+  .search-results{position:absolute;top:100%;left:0;right:0;background:var(--panel);
+    border:1px solid var(--line-2);border-top:none;max-height:260px;overflow-y:auto;z-index:20;}
+  .search-results .sr-item{padding:9px 12px;font-size:12px;border-bottom:1px solid var(--line);cursor:pointer;
+    display:flex;justify-content:space-between;}
+  .search-results .sr-item:hover{background:var(--line);}
+  .search-results .sr-item .sr-pos{color:var(--cyan);font-size:10px;}
+
+  .budget-bar{display:flex;gap:10px;margin-bottom:14px;}
+  .budget-chip{flex:1;background:var(--panel);border:1px solid var(--line);padding:9px 10px;text-align:center;}
+  .budget-chip .bc-val{font-size:17px;font-weight:700;color:var(--amber);}
+  .budget-chip .bc-lbl{font-size:8.5px;color:var(--dim);letter-spacing:0.08em;margin-top:2px;}
+
+  .pcard-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0;}
+  .pcard-stat{background:var(--panel);border:1px solid var(--line);padding:10px 11px;}
+  .pcard-stat .ps-lbl{font-size:8.5px;color:var(--dim);letter-spacing:0.08em;text-transform:uppercase;}
+  .pcard-stat .ps-val{font-size:18px;font-weight:700;color:var(--amber);margin-top:3px;}
+  .pcard-stat .ps-sub{font-size:9.5px;color:var(--dim);margin-top:2px;}
+  .pcard-stat.dim .ps-val{color:var(--dim);font-size:14px;}
+  .fit-note{background:var(--panel);border-left:2px solid var(--green);padding:10px 12px;font-size:11.5px;
+    line-height:1.55;margin-top:4px;}
+  .logged-pick-row{display:flex;justify-content:space-between;align-items:center;background:var(--panel);
+    border:1px solid var(--line);padding:7px 10px;margin-bottom:6px;font-size:11px;}
+  .logged-pick-row button{background:none;border:none;color:var(--red);font-size:14px;cursor:pointer;padding:0 4px;}
+  .log-form{display:flex;gap:6px;margin-top:10px;}
+  .log-form input{flex:1;background:var(--bg);border:1px solid var(--line-2);color:var(--txt);
+    font-family:inherit;font-size:12px;padding:8px;}
+  .log-form input.cost-input{flex:0 0 60px;}
+  .log-form button{background:var(--amber);color:var(--bg);border:none;font-weight:700;padding:0 14px;cursor:pointer;}
 </style>
 </head>
 <body>
@@ -175,27 +208,31 @@
 
   <!-- DRAFT VIEW -->
   <div id="draftView">
-    <div class="clockrow">
-      <div class="radar"><div class="sweep"></div></div>
-      <div class="clock">
-        <div class="big" id="clock">--:--</div>
-        <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
+    <div id="snakeDraftUI">
+      <div class="clockrow">
+        <div class="radar"><div class="sweep"></div></div>
+        <div class="clock">
+          <div class="big" id="clock">--:--</div>
+          <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
+        </div>
       </div>
+
+      <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
+      <div id="recArea"></div>
+
+      <div class="seclabel">Live Feed</div>
+      <div class="ticker"><div class="track" id="ticker"></div></div>
+
+      <div class="seclabel">Your Roster</div>
+      <div class="roster" id="roster"></div>
+
+      <div class="seclabel">Board — Best Available</div>
+      <div id="boardArea"></div>
+
+      <div class="foot" id="foot"></div>
     </div>
 
-    <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
-    <div id="recArea"></div>
-
-    <div class="seclabel">Live Feed</div>
-    <div class="ticker"><div class="track" id="ticker"></div></div>
-
-    <div class="seclabel">Your Roster</div>
-    <div class="roster" id="roster"></div>
-
-    <div class="seclabel">Board — Best Available</div>
-    <div id="boardArea"></div>
-
-    <div class="foot" id="foot"></div>
+    <div id="auctionDraftUI" style="display:none;"></div>
   </div>
 
   <!-- HISTORY VIEW -->
@@ -213,6 +250,40 @@ let replay = {
   season: null, myOwner: null, timeline: [], teams: {}, idx: 0,
   playing: false, timer: null, speedMs: 1500, started: false,
 };
+
+// Auction draft mode state (Zimmer). In-memory only -- resets on page reload.
+// This is the manual-tracking fallback described to the user: log your own
+// picks as you win them, since live ESPN draft polling isn't wired in yet.
+// ASSUMED_BUDGET and ASSUMED_ROSTER are placeholders -- Zimmer has no Team
+// sheet in the workbook (unlike Kepners/Miami) so we don't have its real
+// roster construction on file. Correct these if they don't match reality.
+const ASSUMED_BUDGET = 200;
+const ASSUMED_ROSTER = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF','K','BEN','BEN','BEN','BEN','BEN','BEN'];
+
+let zimmerDraft = {
+  picks: [],          // {name, cost, position}
+  searchQuery: '',
+  selectedPlayerId: null,
+};
+
+// Mirrors zimmer_analysis.py's TIER_SIZES / tier_label EXACTLY -- if you tune
+// one, tune the other, or Expected Bid Range lookups will silently mismatch.
+const TIER_SIZES = {
+  QB: [4,4,4], RB: [12,12,12,12], WR: [12,12,12,12], TE: [4,4,4], K: [12], DEF: [12],
+};
+function tierLabelForRank(position, rankWithinPos){ // rankWithinPos is 0-indexed
+  const sizes = TIER_SIZES[position] || [12,12,12,12,12];
+  let start = 1;
+  for(let i=0;i<sizes.length;i++){
+    const size = sizes[i];
+    const end = start + size - 1;
+    if(rankWithinPos <= end - 1){
+      return size < 12 ? `${position}${start}-${end}` : `${position}${i+1}`;
+    }
+    start = end + 1;
+  }
+  return `${position}${start}+`;
+}
 
 // ---- data load: bigboard.json (+ optional zimmer_analysis.json / zimmer_draft_history.json) ----
 async function boot(){
@@ -330,6 +401,21 @@ function render(){
 
   if(activeMode==='history'){ renderHistory(); return; }
   if(activeMode==='replay'){ renderReplay(); return; }
+
+  // Draft mode itself branches by format: auction (Zimmer) needs a fundamentally
+  // different UI (evaluate a nominated player) than snake (Kepners/Miami, "who's
+  // recommended next"). Both live under the same Draft tab.
+  const snakeUI = document.getElementById('snakeDraftUI');
+  const auctionUI = document.getElementById('auctionDraftUI');
+  if(activeLeague==='zimmer'){
+    snakeUI.style.display='none';
+    auctionUI.style.display='';
+    renderAuctionDraft();
+    return;
+  } else {
+    snakeUI.style.display='';
+    auctionUI.style.display='none';
+  }
 
   document.getElementById('myteamlbl').textContent=lg.myTeam;
 
@@ -600,6 +686,181 @@ function renderDraftGrades(){
       ${ZGRADES.unmatched_picks||0} historical picks had no stat match (deep bench/inactive players)
       and were excluded from grading.
     </div>`;
+}
+
+// ---------- Auction Draft mode (Zimmer) ----------
+// Core UX: someone nominates a player -> search for them -> see everything
+// needed to decide a bid, in one card. Manual search is the mechanism for now
+// (see ASSUMED_BUDGET/ASSUMED_ROSTER note above for the other manual-tracking
+// assumption this depends on).
+
+function expectedBidRange(player){
+  if(!ZHIST || !player.seanPosRank || player.pos==='NA') return null;
+  const tier = tierLabelForRank(player.pos, player.seanPosRank - 1);
+  const row = (ZHIST.tier_spreads||[]).find(t=>t.position===player.pos && t.tier===tier);
+  return row ? {...row, tier} : null;
+}
+
+function computeTeamFit(player){
+  const spent = zimmerDraft.picks.reduce((s,p)=>s+p.cost,0);
+  const remaining = ASSUMED_BUDGET - spent;
+  const slotsLeft = ASSUMED_ROSTER.length - zimmerDraft.picks.length;
+  const maxBid = Math.max(1, remaining - Math.max(0, slotsLeft - 1)); // $1 reserve per remaining slot after this one
+
+  const posCount = {};
+  zimmerDraft.picks.forEach(p=>{ posCount[p.position] = (posCount[p.position]||0) + 1; });
+  const myCount = posCount[player.pos] || 0;
+  const starterSlotsForPos = ASSUMED_ROSTER.filter(s=>s===player.pos).length;
+  const flexEligible = (player.pos==='RB'||player.pos==='WR') ? ASSUMED_ROSTER.filter(s=>s==='FLEX').length : 0;
+  const fillsStarterNeed = myCount < (starterSlotsForPos + flexEligible);
+
+  let note = `You have $${remaining} left with ${slotsLeft} slot${slotsLeft===1?'':'s'} to fill `+
+    `(max bid ~$${maxBid} after reserving $1/slot). `;
+  note += fillsStarterNeed
+    ? `This would be your ${myCount+1}${myCount===0?'st':myCount===1?'nd':myCount===2?'rd':'th'} ${player.pos} — fills a starting need.`
+    : `You already have ${myCount} ${player.pos}s covering your starting slots — this would be pure depth.`;
+  return {remaining, slotsLeft, maxBid, note};
+}
+
+function renderAuctionDraft(){
+  const el = document.getElementById('auctionDraftUI');
+  const spent = zimmerDraft.picks.reduce((s,p)=>s+p.cost,0);
+  const remaining = ASSUMED_BUDGET - spent;
+  const slotsLeft = ASSUMED_ROSTER.length - zimmerDraft.picks.length;
+
+  const selected = zimmerDraft.selectedPlayerId
+    ? DATA.players.find(p=>p.id===zimmerDraft.selectedPlayerId) : null;
+
+  el.innerHTML = `
+    <div class="budget-bar">
+      <div class="budget-chip"><div class="bc-val">$${remaining}</div><div class="bc-lbl">BUDGET LEFT</div></div>
+      <div class="budget-chip"><div class="bc-val">${slotsLeft}</div><div class="bc-lbl">SLOTS LEFT</div></div>
+      <div class="budget-chip"><div class="bc-val">${zimmerDraft.picks.length}</div><div class="bc-lbl">DRAFTED</div></div>
+    </div>
+
+    <div class="seclabel">Nominated Player</div>
+    <div class="search-wrap">
+      <input id="playerSearch" placeholder="Search a player..." autocomplete="off" value="${zimmerDraft.searchQuery}">
+      <div id="searchResults" class="search-results" style="display:none;"></div>
+    </div>
+
+    <div id="playerCardArea"></div>
+
+    <div class="seclabel">My Draft So Far</div>
+    <div id="loggedPicks"></div>
+    <div class="log-form">
+      <input id="logName" placeholder="Player name">
+      <input id="logPos" placeholder="Pos" style="flex:0 0 55px;">
+      <input id="logCost" class="cost-input" type="number" placeholder="$">
+      <button id="logAddBtn">ADD</button>
+    </div>
+    <div class="foot">Manual tracking for now — log each pick you win as the draft happens.
+      Live ESPN polling will replace this when available; this stays as a backup either way.</div>
+  `;
+
+  renderPlayerCard(selected);
+  renderLoggedPicks();
+
+  const searchInput = document.getElementById('playerSearch');
+  searchInput.oninput = (e)=>{
+    zimmerDraft.searchQuery = e.target.value;
+    renderSearchResults(e.target.value);
+  };
+  searchInput.onfocus = ()=>renderSearchResults(searchInput.value);
+
+  document.getElementById('logAddBtn').onclick = ()=>{
+    const name = document.getElementById('logName').value.trim();
+    const pos = document.getElementById('logPos').value.trim().toUpperCase();
+    const cost = parseInt(document.getElementById('logCost').value, 10);
+    if(!name || !cost) return;
+    zimmerDraft.picks.push({name, position: pos||'—', cost});
+    renderAuctionDraft();
+  };
+}
+
+function renderSearchResults(query){
+  const box = document.getElementById('searchResults');
+  if(!query || query.length<2){ box.style.display='none'; return; }
+  const q = query.toLowerCase();
+  const matches = DATA.players.filter(p=>p.name.toLowerCase().includes(q)).slice(0,8);
+  if(!matches.length){ box.style.display='none'; return; }
+  box.style.display='';
+  box.innerHTML = matches.map(p=>
+    `<div class="sr-item" data-id="${p.id}"><span>${p.name}</span><span class="sr-pos">${p.pos} · ${p.team||''}</span></div>`
+  ).join('');
+  box.querySelectorAll('.sr-item').forEach(el=>{
+    el.onclick = ()=>{
+      zimmerDraft.selectedPlayerId = el.dataset.id;
+      zimmerDraft.searchQuery = '';
+      box.style.display='none';
+      renderAuctionDraft();
+    };
+  });
+}
+
+function renderPlayerCard(player){
+  const area = document.getElementById('playerCardArea');
+  if(!player){
+    area.innerHTML = `<div class="empty-note">Search and select a nominated player above.</div>`;
+    return;
+  }
+  const bidRange = expectedBidRange(player);
+  const fit = computeTeamFit(player);
+  const espnBid = player.espnRecommendedBid;
+  const war = player.projectedWar;
+
+  area.innerHTML = `
+    <div class="card rec">
+      <div class="top">
+        <div class="name">${player.name.toUpperCase()}</div>
+        <div class="posbadge">${player.pos}</div>
+      </div>
+      <div class="meta">${player.team||''} · YOUR POS RANK #${player.seanPosRank??'—'} · ${player.tier||'—'}</div>
+
+      <div class="pcard-grid">
+        <div class="pcard-stat ${espnBid==null?'dim':''}">
+          <div class="ps-lbl">ESPN Recommended Bid</div>
+          <div class="ps-val">${espnBid!=null?'$'+espnBid:'—'}</div>
+          <div class="ps-sub">${espnBid!=null?'ESPN crowd-sourced':'not yet published by ESPN'}</div>
+        </div>
+        <div class="pcard-stat dim">
+          <div class="ps-lbl">Mission Control Target</div>
+          <div class="ps-val">—</div>
+          <div class="ps-sub">design pending</div>
+        </div>
+        <div class="pcard-stat ${war==null?'dim':''}">
+          <div class="ps-lbl">Projected WAR</div>
+          <div class="ps-val">${war!=null?(war>0?'+':'')+war:'—'}</div>
+          <div class="ps-sub">${war!=null?'pts above replacement':'needs 2026 projections'}</div>
+        </div>
+        <div class="pcard-stat ${!bidRange?'dim':''}">
+          <div class="ps-lbl">Expected Bid Range</div>
+          <div class="ps-val">${bidRange?`$${bidRange.low}–$${bidRange.high}`:'—'}</div>
+          <div class="ps-sub">${bidRange?`historic ${bidRange.tier} · avg $${bidRange.avg}`:'no tier history match'}</div>
+        </div>
+      </div>
+
+      <div class="fit-note">${fit.note}</div>
+    </div>`;
+}
+
+function renderLoggedPicks(){
+  const el = document.getElementById('loggedPicks');
+  if(!zimmerDraft.picks.length){
+    el.innerHTML = `<div class="empty-note">No picks logged yet.</div>`;
+    return;
+  }
+  el.innerHTML = zimmerDraft.picks.map((p,i)=>`
+    <div class="logged-pick-row">
+      <span>${p.name} <span style="color:var(--dim)">(${p.position})</span></span>
+      <span>$${p.cost} <button data-i="${i}">✕</button></span>
+    </div>`).join('');
+  el.querySelectorAll('button').forEach(b=>{
+    b.onclick=()=>{
+      zimmerDraft.picks.splice(parseInt(b.dataset.i,10),1);
+      renderAuctionDraft();
+    };
+  });
 }
 
 // ---------- Replay mode ----------

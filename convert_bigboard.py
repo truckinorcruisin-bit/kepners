@@ -26,11 +26,103 @@ League format/keeper rules live in league_rules.json (hand-maintained, not
 derived from the spreadsheet) and are merged into each league's output here.
 Edit that file directly to update rules; this script only merges it in.
 """
-import sys, os, json, re
+import sys, os, json, re, glob
 from datetime import datetime, timezone
 import openpyxl
 
 RULES_FILE = "league_rules.json"  # hand-maintained; sits alongside this script
+
+# Same replacement-level assumption used in zimmer_draft_grades.py for grading
+# past drafts -- kept in sync here (not imported, since this script has no
+# other dependency on that module) so projected WAR uses identical logic to
+# historical WAR. If you tune one, tune the other.
+REPLACEMENT_RANK = {
+    "QB": 15, "RB": 30, "WR": 36, "TE": 15, "K": 12, "DEF": 12, "D/ST": 12,
+}
+
+SUFFIX_RE = re.compile(r"\b(jr|sr|ii|iii|iv|v)\.?\b", re.IGNORECASE)
+PUNCT_RE = re.compile(r"[.\'\-]")
+
+
+def normalize_name(name):
+    """Lowercase, strip Jr./Sr./numeral suffixes and punctuation, collapse
+    whitespace -- used to join Big Board players (from Sean's Excel) against
+    ESPN's player pool (from espn_player_values.py), since the Big Board has
+    no ESPN player_id to join on directly. Best-effort: nicknames or heavily
+    reformatted names may still miss; unmatched players are logged."""
+    if not name:
+        return ""
+    n = name.lower()
+    n = PUNCT_RE.sub("", n)
+    n = SUFFIX_RE.sub("", n)
+    n = re.sub(r"\s+", " ", n).strip()
+    return n
+
+
+def load_espn_player_values():
+    """Loads the most recent espn_player_values_<year>.json if present.
+    Returns (values_by_normalized_name, replacement_by_position) or ({}, {})
+    if no such file exists yet."""
+    candidates = sorted(glob.glob("espn_player_values_*.json"), reverse=True)
+    if not candidates:
+        print("Note: no espn_player_values_*.json found -- players will have "
+              "no espnRecommendedBid/projectedWar until that's pulled.")
+        return {}, {}
+
+    with open(candidates[0]) as f:
+        data = json.load(f)
+    print(f"Loaded {candidates[0]} ({len(data['players'])} players).")
+
+    values_by_name = {}
+    by_pos = {}
+    for p in data["players"]:
+        values_by_name[normalize_name(p["name"])] = p
+        by_pos.setdefault(p["position"], []).append(p)
+
+    replacement_by_position = {}
+    for pos, plist in by_pos.items():
+        plist.sort(key=lambda x: x.get("projected_total_points") or 0, reverse=True)
+        rank = REPLACEMENT_RANK.get(pos, 20)
+        idx = min(rank, len(plist)) - 1
+        if idx >= 0:
+            replacement_by_position[pos] = plist[idx].get("projected_total_points") or 0
+    return values_by_name, replacement_by_position
+
+
+def merge_espn_values(players):
+    """Attaches espnRecommendedBid / projectedPoints / projectedWar to each Big
+    Board player by normalized-name match. Fields are left null if unmatched or
+    if no espn_player_values file exists -- the site's Player Card shows
+    '—' gracefully in that case, this never fails the build."""
+    values_by_name, replacement_by_position = load_espn_player_values()
+    if not values_by_name:
+        for p in players:
+            p["espnRecommendedBid"] = None
+            p["projectedPoints"] = None
+            p["projectedWar"] = None
+        return
+
+    unmatched = []
+    for p in players:
+        key = normalize_name(p["name"])
+        ev = values_by_name.get(key)
+        if not ev:
+            unmatched.append(p["name"])
+            p["espnRecommendedBid"] = None
+            p["projectedPoints"] = None
+            p["projectedWar"] = None
+            continue
+        proj = ev.get("projected_total_points")
+        replacement = replacement_by_position.get(p["pos"])
+        p["espnRecommendedBid"] = ev.get("auction_value_avg")
+        p["projectedPoints"] = proj
+        p["projectedWar"] = (
+            round(proj - replacement, 1) if (proj is not None and replacement is not None) else None
+        )
+
+    if unmatched:
+        print(f"WARNING: {len(unmatched)} Big Board players had no ESPN name match "
+              f"(showing first 15): {unmatched[:15]}")
 
 
 def load_league_rules():
@@ -167,9 +259,11 @@ def read_team_sheet(wb, sheet, platform, my_team):
 def main(src, dst):
     wb = openpyxl.load_workbook(src, data_only=True)
     rules = load_league_rules()
+    players = read_players(wb)
+    merge_espn_values(players)
     out = {
         "meta": {"season": 2026, "generated": datetime.now(timezone.utc).isoformat()},
-        "players": read_players(wb),
+        "players": players,
         "leagues": {
             "kepners": read_team_sheet(wb, "Kepners Team", "yahoo", "Pickups"),
             "miami": read_team_sheet(wb, "Miami Team", "yahoo", "HannahLees"),
