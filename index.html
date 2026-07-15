@@ -561,7 +561,7 @@ function renderDraftGrades(){
   }).join('');
 
   const rows = ZGRADES.owners.map((o,i)=>{
-    const sp = o.surplus_per_dollar;
+    const sp = o.war_surplus_per_dollar;
     const spClass = sp>0 ? 'diff-pos' : (sp<0 ? 'diff-neg' : '');
     return `<tr>
       <td>${i+1}. ${o.owner}</td>
@@ -573,27 +573,27 @@ function renderDraftGrades(){
   }).join('');
 
   const styleRows = (ZGRADES.style_correlation||[]).map(s=>{
-    const cls = s.avg_surplus_per_dollar>0?'diff-pos':'diff-neg';
-    return `<tr><td>${s.style}</td><td class="num ${cls}">${s.avg_surplus_per_dollar>0?'+':''}${s.avg_surplus_per_dollar}</td><td class="num">${s.n_owners}</td></tr>`;
+    const cls = s.avg_war_surplus_per_dollar>0?'diff-pos':'diff-neg';
+    return `<tr><td>${s.style}</td><td class="num ${cls}">${s.avg_war_surplus_per_dollar>0?'+':''}${s.avg_war_surplus_per_dollar}</td><td class="num">${s.n_owners}</td></tr>`;
   }).join('');
 
   return `
     <div class="seclabel">Draft Effectiveness (${years.length?Math.min(...years):''}–${years.length?Math.max(...years):''})</div>
     <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
-      Grades actual cost paid against actual points scored that season, versus a
-      dollar-weighted market rate per position/year. Surplus $ = points delivered
-      beyond what the going rate for that price implied — the primary "did they draft
-      well" metric, independent of budget size. Hit rate = % of graded picks that beat
-      market rate at all.
+      Grades against WAR (points above replacement level), not raw points per dollar --
+      raw points/$ makes shallow positions like K/DEF look like great value simply for
+      being cheap, even though there's little gap between an elite and a replacement-level
+      one. Surplus $ = WAR delivered beyond what the going market rate for that price
+      implied. Hit rate = % of graded picks that beat market rate at all.
     </div>
     ${headlineHtml}
     <table><thead><tr>
-      <th>Owner</th><th class="num">Surplus/$</th><th class="num">Hit Rate</th>
+      <th>Owner</th><th class="num">WAR Surplus/$</th><th class="num">Hit Rate</th>
       <th class="num">Volatility</th><th>Style</th>
     </tr></thead><tbody>${rows}</tbody></table>
 
     <div class="seclabel" style="margin-top:18px;">Effectiveness by Drafting Style</div>
-    <table><thead><tr><th>Style</th><th class="num">Avg Surplus/$</th><th class="num">Owners</th></tr></thead>
+    <table><thead><tr><th>Style</th><th class="num">Avg WAR Surplus/$</th><th class="num">Owners</th></tr></thead>
     <tbody>${styleRows}</tbody></table>
 
     <div class="foot">
