@@ -1,0 +1,304 @@
+{
+  "generated": "2026-07-16T01:54:24.244583+00:00",
+  "zimmer_weight": 0.4,
+  "positions_included": [
+    "QB",
+    "RB",
+    "TE",
+    "WR"
+  ],
+  "war_bands": [
+    {
+      "min_war": 80,
+      "max_war": 9999,
+      "label": "elite"
+    },
+    {
+      "min_war": 50,
+      "max_war": 80,
+      "label": "strong"
+    },
+    {
+      "min_war": 25,
+      "max_war": 50,
+      "label": "solid"
+    },
+    {
+      "min_war": 5,
+      "max_war": 25,
+      "label": "marginal"
+    },
+    {
+      "min_war": -9999,
+      "max_war": 5,
+      "label": "replacement"
+    }
+  ],
+  "min_band_sample": 4,
+  "dollar_per_war": {
+    "GLOBAL": [
+      {
+        "band": "elite",
+        "min_war": 80,
+        "max_war": 9999,
+        "zimmer_rate": 0.275,
+        "espn_rate": 0.479,
+        "blended_rate": 0.397,
+        "n_zimmer": 22,
+        "n_espn": 12
+      },
+      {
+        "band": "strong",
+        "min_war": 50,
+        "max_war": 80,
+        "zimmer_rate": 0.396,
+        "espn_rate": 0.555,
+        "blended_rate": 0.492,
+        "n_zimmer": 15,
+        "n_espn": 12
+      },
+      {
+        "band": "solid",
+        "min_war": 25,
+        "max_war": 50,
+        "zimmer_rate": 0.414,
+        "espn_rate": 0.532,
+        "blended_rate": 0.485,
+        "n_zimmer": 23,
+        "n_espn": 26
+      },
+      {
+        "band": "marginal",
+        "min_war": 5,
+        "max_war": 25,
+        "zimmer_rate": 0.777,
+        "espn_rate": 0.504,
+        "blended_rate": 0.613,
+        "n_zimmer": 17,
+        "n_espn": 33
+      },
+      {
+        "band": "replacement",
+        "min_war": -9999,
+        "max_war": 5,
+        "zimmer_rate": 1.282,
+        "espn_rate": 1.038,
+        "blended_rate": 1.136,
+        "n_zimmer": 1,
+        "n_espn": 9
+      }
+    ],
+    "QB": [
+      {
+        "band": "elite",
+        "min_war": 80,
+        "max_war": 9999,
+        "zimmer_rate": 0.077,
+        "espn_rate": 0.479,
+        "blended_rate": 0.318,
+        "n_zimmer": 5,
+        "n_espn": 12
+      },
+      {
+        "band": "strong",
+        "min_war": 50,
+        "max_war": 80,
+        "zimmer_rate": 0.12,
+        "espn_rate": 0.555,
+        "blended_rate": 0.381,
+        "n_zimmer": 5,
+        "n_espn": 12
+      },
+      {
+        "band": "solid",
+        "min_war": 25,
+        "max_war": 50,
+        "zimmer_rate": 0.414,
+        "espn_rate": 0.321,
+        "blended_rate": 0.358,
+        "n_zimmer": 23,
+        "n_espn": 4
+      },
+      {
+        "band": "marginal",
+        "min_war": 5,
+        "max_war": 25,
+        "zimmer_rate": 0.777,
+        "espn_rate": 0.419,
+        "blended_rate": 0.562,
+        "n_zimmer": 17,
+        "n_espn": 7
+      },
+      {
+        "band": "replacement",
+        "min_war": -9999,
+        "max_war": 5,
+        "zimmer_rate": 1.282,
+        "espn_rate": 1.038,
+        "blended_rate": 1.136,
+        "n_zimmer": 1,
+        "n_espn": 9
+      }
+    ],
+    "RB": [
+      {
+        "band": "elite",
+        "min_war": 80,
+        "max_war": 9999,
+        "zimmer_rate": 0.307,
+        "espn_rate": 0.439,
+        "blended_rate": 0.387,
+        "n_zimmer": 11,
+        "n_espn": 7
+      },
+      {
+        "band": "strong",
+        "min_war": 50,
+        "max_war": 80,
+        "zimmer_rate": 0.67,
+        "espn_rate": 0.509,
+        "blended_rate": 0.574,
+        "n_zimmer": 4,
+        "n_espn": 9
+      },
+      {
+        "band": "solid",
+        "min_war": 25,
+        "max_war": 50,
+        "zimmer_rate": 0.415,
+        "espn_rate": 0.446,
+        "blended_rate": 0.434,
+        "n_zimmer": 7,
+        "n_espn": 6
+      },
+      {
+        "band": "marginal",
+        "min_war": 5,
+        "max_war": 25,
+        "zimmer_rate": 0.777,
+        "espn_rate": 0.704,
+        "blended_rate": 0.733,
+        "n_zimmer": 17,
+        "n_espn": 5
+      },
+      {
+        "band": "replacement",
+        "min_war": -9999,
+        "max_war": 5,
+        "zimmer_rate": 1.282,
+        "espn_rate": 1.038,
+        "blended_rate": 1.136,
+        "n_zimmer": 1,
+        "n_espn": 9
+      }
+    ],
+    "WR": [
+      {
+        "band": "elite",
+        "min_war": 80,
+        "max_war": 9999,
+        "zimmer_rate": 0.361,
+        "espn_rate": 0.589,
+        "blended_rate": 0.498,
+        "n_zimmer": 5,
+        "n_espn": 4
+      },
+      {
+        "band": "strong",
+        "min_war": 50,
+        "max_war": 80,
+        "zimmer_rate": 0.443,
+        "espn_rate": 0.555,
+        "blended_rate": 0.51,
+        "n_zimmer": 6,
+        "n_espn": 12
+      },
+      {
+        "band": "solid",
+        "min_war": 25,
+        "max_war": 50,
+        "zimmer_rate": 0.647,
+        "espn_rate": 0.614,
+        "blended_rate": 0.627,
+        "n_zimmer": 7,
+        "n_espn": 12
+      },
+      {
+        "band": "marginal",
+        "min_war": 5,
+        "max_war": 25,
+        "zimmer_rate": 0.981,
+        "espn_rate": 0.583,
+        "blended_rate": 0.743,
+        "n_zimmer": 11,
+        "n_espn": 14
+      },
+      {
+        "band": "replacement",
+        "min_war": -9999,
+        "max_war": 5,
+        "zimmer_rate": 1.282,
+        "espn_rate": 1.038,
+        "blended_rate": 1.136,
+        "n_zimmer": 1,
+        "n_espn": 9
+      }
+    ],
+    "TE": [
+      {
+        "band": "elite",
+        "min_war": 80,
+        "max_war": 9999,
+        "zimmer_rate": 0.275,
+        "espn_rate": 0.479,
+        "blended_rate": 0.397,
+        "n_zimmer": 22,
+        "n_espn": 12
+      },
+      {
+        "band": "strong",
+        "min_war": 50,
+        "max_war": 80,
+        "zimmer_rate": 0.396,
+        "espn_rate": 0.555,
+        "blended_rate": 0.492,
+        "n_zimmer": 15,
+        "n_espn": 12
+      },
+      {
+        "band": "solid",
+        "min_war": 25,
+        "max_war": 50,
+        "zimmer_rate": 0.244,
+        "espn_rate": 0.627,
+        "blended_rate": 0.474,
+        "n_zimmer": 7,
+        "n_espn": 4
+      },
+      {
+        "band": "marginal",
+        "min_war": 5,
+        "max_war": 25,
+        "zimmer_rate": 0.777,
+        "espn_rate": 0.282,
+        "blended_rate": 0.48,
+        "n_zimmer": 17,
+        "n_espn": 7
+      },
+      {
+        "band": "replacement",
+        "min_war": -9999,
+        "max_war": 5,
+        "zimmer_rate": 1.282,
+        "espn_rate": 1.038,
+        "blended_rate": 1.136,
+        "n_zimmer": 1,
+        "n_espn": 9
+      }
+    ]
+  },
+  "notes": [
+    "Elite-tier WAR costs ~0.8x more per point than solid-tier ($0.397/WAR vs $0.485/WAR) -- the diminishing-returns premium for top players, derived from data.",
+    "blended_rate is the WAR->$ conversion the live bid engine multiplies a player's projected WAR by to get a BASE bid, before live scarcity/roster/budget/opponent adjustments."
+  ]
+}
