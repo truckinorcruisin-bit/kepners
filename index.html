@@ -1185,7 +1185,12 @@ function renderPositionBoard(player, root){
 
   const isDeepTier = (label)=> label.includes('+');
 
-  let html = `<div class="seclabel">Position Board — ${pos}</div>`;
+  let html = `<div class="seclabel">Position Board — ${pos}</div>
+    <div class="aggr-legend">
+      <span class="m-espn" style="color:var(--cyan);">E</span> = ESPN Recommended Bid ·
+      <span style="color:var(--amber);">T</span> = Mission Control Target Bid (WAR × calibrated $/WAR, base only) ·
+      <span class="m-war" style="color:var(--amber);">WAR</span> = projected points above replacement
+    </div>`;
 
   tierOrder.forEach(tierLabel=>{
     const group = tierGroups[tierLabel];
@@ -1232,7 +1237,23 @@ function renderPositionBoard(player, root){
 
         let statusHtml;
         if(d){
-          statusHtml = `<span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' ★':''}</span>`;
+          // Still show E/T even once drafted, so you can spot-check T against
+          // what the player actually sold for as the draft progresses. Flag
+          // when the winning bid deviates meaningfully from Target (>25%).
+          let deltaTag = '';
+          if(mc){
+            const diffPct = Math.round(100*(d.cost-mc.bid)/mc.bid);
+            if(Math.abs(diffPct)>=25){
+              const cls = diffPct>0 ? 'up' : 'down';
+              deltaTag = ` <span class="trend-badge ${cls}" style="margin-left:4px;">${diffPct>0?'+':''}${diffPct}% vs T</span>`;
+            }
+          }
+          statusHtml = `<span style="display:flex;flex-direction:column;align-items:flex-end;">
+            <span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' ★':''}${deltaTag}</span>
+            <span class="pbr-metric" style="margin-top:2px;">
+              <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--amber)">T:${mc?'$'+mc.bid:'—'}</span>
+            </span>
+          </span>`;
         } else {
           statusHtml = `<span class="pbr-metric">
             <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--amber)">T:${mc?'$'+mc.bid:'—'}</span><br>
