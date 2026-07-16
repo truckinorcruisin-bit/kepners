@@ -327,7 +327,7 @@
 </div>
 
 <script>
-let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, activeLeague='kepners', activeMode='draft';
+let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, activeLeague='kepners', activeMode='draft';
 
 // Replay mode state
 let replay = {
@@ -412,6 +412,11 @@ async function boot(){
     const r4 = await fetch('zimmer_draft_grades.json');
     if(r4.ok) ZGRADES = await r4.json();
   }catch(e){ /* grading section will show an empty state */ }
+  // Static WAR->$ bid calibration — powers the Mission Control Target Bid.
+  try{
+    const r5 = await fetch('bid_calibration.json');
+    if(r5.ok) BIDCAL = await r5.json();
+  }catch(e){ /* target bid will show as unavailable */ }
 
   renderLeagueTabs();
   wireModes();
@@ -804,6 +809,43 @@ function expectedBidRange(player){
   return row ? {...row, tier} : null;
 }
 
+// Mission Control Target Bid -- STATIC base only (WAR x calibrated $/WAR rate).
+// This is deliberately just the foundation: base = projected WAR x the
+// blended (Zimmer history + ESPN) rate for this player's WAR band/position,
+// from bid_calibration.json. Live adjustments (scarcity, roster fit, budget
+// clamp, opponent pressure) are a separate future layer -- NOT included yet.
+// K/DEF are excluded from calibration entirely (always min-bid), so this
+// returns null for those positions by design, not by data gap.
+function bandForWar(war){
+  if(!BIDCAL) return null;
+  for(const b of BIDCAL.war_bands){
+    if(war>=b.min_war && war<b.max_war) return b.label;
+  }
+  return null;
+}
+function blendedRateFor(position, band){
+  if(!BIDCAL || !band) return null;
+  const rows = BIDCAL.dollar_per_war[position] || BIDCAL.dollar_per_war['GLOBAL'];
+  if(!rows) return null;
+  let row = rows.find(r=>r.band===band);
+  if((!row || row.blended_rate==null) && position!=='GLOBAL'){
+    const globalRows = BIDCAL.dollar_per_war['GLOBAL'];
+    row = globalRows && globalRows.find(r=>r.band===band);
+  }
+  return row ? row.blended_rate : null;
+}
+function computeMissionControlBid(player){
+  if(!BIDCAL) return null;
+  if(!(BIDCAL.positions_included||[]).includes(player.pos)) return null; // K/DEF excluded by design
+  const war = player.projectedWar;
+  if(war==null) return null;
+  const band = bandForWar(war);
+  const rate = blendedRateFor(player.pos, band);
+  if(rate==null) return null;
+  const bid = war>0 ? Math.max(1, Math.round(war*rate)) : 1; // floor at $1, matches real auction minimums
+  return {bid, band, rate};
+}
+
 function computeTeamFit(player){
   const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
   const spent = myPicks.reduce((s,p)=>s+p.cost,0);
@@ -981,6 +1023,7 @@ function renderPlayerCard(player, root){
   const fit = computeTeamFit(player);
   const espnBid = player.espnRecommendedBid;
   const war = player.projectedWar;
+  const mcBid = computeMissionControlBid(player);
 
   area.innerHTML = `
     <div class="card rec">
@@ -996,10 +1039,12 @@ function renderPlayerCard(player, root){
           <div class="ps-val">${espnBid!=null?'$'+espnBid:'—'}</div>
           <div class="ps-sub">${espnBid!=null?'ESPN crowd-sourced':'not yet published by ESPN'}</div>
         </div>
-        <div class="pcard-stat dim">
+        <div class="pcard-stat ${!mcBid?'dim':''}">
           <div class="ps-lbl">Mission Control Target</div>
-          <div class="ps-val">—</div>
-          <div class="ps-sub">design pending</div>
+          <div class="ps-val">${mcBid?'$'+mcBid.bid:'—'}</div>
+          <div class="ps-sub">${mcBid
+            ? `${mcBid.band} tier · $${mcBid.rate}/WAR · base only, no live adj. yet`
+            : (BIDCAL ? 'no calibration for this position' : 'run bid_calibration.py')}</div>
         </div>
         <div class="pcard-stat ${war==null?'dim':''}">
           <div class="ps-lbl">Projected WAR</div>
@@ -1182,7 +1227,7 @@ function renderPositionBoard(player, root){
         const team = p.proTeamEspn || p.team || '';
         const bye = p.byeWeek ? `BYE ${p.byeWeek}` : '';
         const espnBid = p.espnRecommendedBid!=null ? `$${Math.round(p.espnRecommendedBid)}` : '—';
-        const myBid = myBudgetForPlayer(p);
+        const mc = computeMissionControlBid(p);
         const war = p.projectedWar!=null ? `${p.projectedWar>0?'+':''}${p.projectedWar}` : '—';
 
         let statusHtml;
@@ -1190,7 +1235,7 @@ function renderPositionBoard(player, root){
           statusHtml = `<span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' ★':''}</span>`;
         } else {
           statusHtml = `<span class="pbr-metric">
-            <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--green)">M:$${myBid}</span><br>
+            <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--amber)">T:${mc?'$'+mc.bid:'—'}</span><br>
             WAR:<span class="m-war">${war}</span></span>`;
         }
         html += `<div class="pbr ${d?'drafted':''} ${isSelected?'selected':''}">
