@@ -252,6 +252,37 @@
   .opp-aggr.neutral{color:var(--cyan);}
   .aggr-legend{font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;}
 
+  /* ===== searchable player table ===== */
+  .pt-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center;}
+  .pt-controls input[type=text]{flex:1;min-width:160px;background:var(--panel);border:1px solid var(--line-2);
+    color:var(--txt);font-family:inherit;font-size:13px;padding:9px 11px;}
+  .pt-controls select{background:var(--panel);border:1px solid var(--line);color:var(--txt);
+    font-family:inherit;font-size:11px;padding:9px 8px;}
+  .pt-controls label{font-size:9px;color:var(--dim);letter-spacing:0.06em;display:flex;align-items:center;gap:4px;}
+  .pt-controls button.clear{background:var(--panel);border:1px solid var(--line-2);color:var(--dim);
+    font-family:inherit;font-size:10px;padding:8px 12px;cursor:pointer;letter-spacing:0.06em;}
+  .pt-count{font-size:10px;color:var(--dim);margin-bottom:8px;}
+  .ptable-wrap{overflow-x:auto;}
+  table.ptable{width:100%;border-collapse:collapse;font-size:11px;}
+  table.ptable th{position:sticky;top:0;background:var(--bg);text-align:left;font-size:9px;
+    letter-spacing:0.06em;text-transform:uppercase;color:var(--dim);padding:7px 8px;
+    border-bottom:1px solid var(--line-2);font-weight:500;cursor:pointer;white-space:nowrap;user-select:none;}
+  table.ptable th:hover{color:var(--txt);}
+  table.ptable th .arrow{color:var(--amber);}
+  table.ptable td{padding:7px 8px;border-bottom:1px solid var(--line);white-space:nowrap;}
+  table.ptable tr.drafted td{opacity:0.4;}
+  table.ptable tr.drafted .pt-name{text-decoration:line-through;}
+  table.ptable tr.mine{background:rgba(255,183,3,0.08);}
+  .pt-avail{color:var(--green);font-size:10px;}
+  .pt-taken{color:var(--dim);font-size:10px;}
+  .pt-num{text-align:right;font-variant-numeric:tabular-nums;}
+  .pt-war-pos{color:var(--green);} .pt-war-neg{color:var(--red);}
+  .pt-toggle{display:flex;gap:6px;margin-bottom:12px;}
+  .pt-toggle button{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--dim);
+    font-family:inherit;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
+    padding:8px;cursor:pointer;}
+  .pt-toggle button.on{background:var(--amber);color:var(--bg);border-color:var(--amber);}
+
   /* opponent cards flow into multiple columns when there's width to spare,
      so at wide screens you can see everyone without scrolling. */
   .opp-grid{display:grid;grid-template-columns:1fr;gap:8px;}
@@ -286,6 +317,7 @@
 <div class="wrap">
   <div class="modes" id="modes">
     <button data-mode="draft" class="on">Draft</button>
+    <button data-mode="players">Players</button>
     <button data-mode="history">History</button>
     <button data-mode="replay">Replay</button>
   </div>
@@ -324,10 +356,24 @@
 
   <!-- REPLAY VIEW -->
   <div id="replayView" style="display:none;"></div>
+
+  <!-- PLAYERS VIEW (standalone) -->
+  <div id="playersView" style="display:none;"></div>
 </div>
 
 <script>
 let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, activeLeague='kepners', activeMode='draft';
+
+// Shared player-table state -- used by BOTH the standalone Players tab and the
+// in-cockpit table toggle, so filters/sort persist as you move between them.
+// Session-only (plain object, resets on full page reload) per design choice.
+let playerTable = {
+  query: '', posFilter: 'ALL', availFilter: 'ALL',
+  sortKey: 'projectedWar', sortDir: 'desc',
+};
+// In the Zimmer cockpit, whether the middle column shows the position board
+// ('board') or the full searchable table ('table').
+let cockpitCol2Mode = 'board';
 
 // Replay mode state
 let replay = {
@@ -431,6 +477,7 @@ function wireModes(){
       document.getElementById('draftView').style.display = activeMode==='draft'?'':'none';
       document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
       document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
+      document.getElementById('playersView').style.display = activeMode==='players'?'':'none';
       if(activeMode!=='replay'){ stopReplayTimer(); restoreLivePicks(); }
       render();
     };
@@ -498,17 +545,22 @@ function render(){
     if(activeMode==='history' || activeMode==='replay'){
       activeMode='draft'; stopReplayTimer(); restoreLivePicks();
       document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x.dataset.mode==='draft'));
-      document.getElementById('draftView').style.display='';
-      document.getElementById('historyView').style.display='none';
-      document.getElementById('replayView').style.display='none';
     }
   } else {
     historyBtn.style.display='';
     replayBtn.style.display='';
   }
 
+  // Keep view containers in sync with the active mode (covers league-tab switches,
+  // which call render() directly rather than going through wireModes()).
+  document.getElementById('draftView').style.display = activeMode==='draft'?'':'none';
+  document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
+  document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
+  document.getElementById('playersView').style.display = activeMode==='players'?'':'none';
+
   if(activeMode==='history'){ renderHistory(); return; }
   if(activeMode==='replay'){ renderReplay(); return; }
+  if(activeMode==='players'){ renderPlayersTab(); return; }
 
   // Draft mode itself branches by format: auction (Zimmer) needs a fundamentally
   // different UI (evaluate a nominated player) than snake (Kepners/Miami, "who's
@@ -846,6 +898,177 @@ function computeMissionControlBid(player){
   return {bid, band, rate};
 }
 
+// Adjusted WAR (v1 roster-fit discount): raw projected WAR discounted by how
+// much of MY starting need at that position is already filled. Your 1st RB is
+// worth full WAR; each additional one toward/past your starting slots is worth
+// progressively less to YOU, even if raw WAR is identical. This is the first
+// piece of the "live adjustments" layer -- roster-aware, recalculated from your
+// own drafted picks. (Scarcity/opponent adjustments remain future work.)
+// Only meaningful for the league you're actively drafting; for the standalone
+// Players tab across leagues it uses the active league's roster context.
+function rosterFillFactor(pos){
+  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
+  const myCount = myPicks.filter(p=>p.position===pos).length;
+  // starting capacity for this position incl. flex share for RB/WR/TE
+  const starters = ASSUMED_ROSTER.filter(s=>s===pos).length;
+  const flex = (pos==='RB'||pos==='WR'||pos==='TE') ? ASSUMED_ROSTER.filter(s=>s==='FLEX').length : 0;
+  const capacity = Math.max(1, starters + flex);
+  // full value until starters filled, then decay toward a depth floor (0.35)
+  if(myCount < capacity) return 1 - 0.15*myCount/capacity;  // mild taper within capacity
+  const over = myCount - capacity + 1;
+  return Math.max(0.35, 0.85 * Math.pow(0.6, over));         // steeper decay past capacity
+}
+function computeAdjustedWar(player){
+  const war = player.projectedWar;
+  if(war==null) return null;
+  // roster fit only applies to positions we track a roster for; K/DEF etc pass through
+  const factor = ['QB','RB','WR','TE'].includes(player.pos) ? rosterFillFactor(player.pos) : 1;
+  return Math.round(war * factor * 10) / 10;
+}
+
+// ---- shared player-table engine (standalone tab + in-cockpit toggle) ----
+const PT_COLUMNS = [
+  {key:'name', label:'Player', num:false},
+  {key:'team', label:'Team', num:false},
+  {key:'pos', label:'Pos', num:false},
+  {key:'byeWeek', label:'Bye', num:true},
+  {key:'tier', label:'Tier', num:false},
+  {key:'avgRank', label:'Plat Rk', num:true},
+  {key:'espnRecommendedBid', label:'ESPN $', num:true},
+  {key:'missionBid', label:'Target $', num:true},
+  {key:'projectedWar', label:'Raw WAR', num:true},
+  {key:'adjWar', label:'Adj WAR', num:true},
+  {key:'status', label:'Status', num:false},
+];
+
+function ptDraftedMap(){
+  // which Big Board players are drafted, from the current league's logged picks.
+  // Zimmer uses zimmerDraft.picks; snake leagues have no live log yet, so map
+  // is empty there (all show available) -- the table still works as reference.
+  const map = {};
+  if(activeLeague==='zimmer'){
+    zimmerDraft.picks.forEach(pick=>{
+      const bp = findBigBoardPlayer(pick.name);
+      if(bp) map[bp.id] = {cost:pick.cost, isMine:!!pick.isMine};
+    });
+  }
+  return map;
+}
+
+function ptRows(){
+  const drafted = ptDraftedMap();
+  let rows = DATA.players.filter(p=>p.pos && p.pos!=='NA').map(p=>{
+    const mc = computeMissionControlBid(p);
+    const d = drafted[p.id];
+    return {
+      ...p,
+      missionBid: mc ? mc.bid : null,
+      adjWar: computeAdjustedWar(p),
+      _drafted: !!d, _mine: d ? d.isMine : false, _cost: d ? d.cost : null,
+      status: d ? (d.isMine?'mine':'taken') : 'avail',
+    };
+  });
+
+  // filters
+  const q = playerTable.query.trim().toLowerCase();
+  if(q) rows = rows.filter(r=>r.name.toLowerCase().includes(q));
+  if(playerTable.posFilter!=='ALL') rows = rows.filter(r=>r.pos===playerTable.posFilter);
+  if(playerTable.availFilter==='AVAIL') rows = rows.filter(r=>!r._drafted);
+  if(playerTable.availFilter==='TAKEN') rows = rows.filter(r=>r._drafted);
+
+  // sort
+  const k = playerTable.sortKey, dir = playerTable.sortDir==='asc'?1:-1;
+  rows.sort((a,b)=>{
+    let av=a[k], bv=b[k];
+    // nulls always sort last regardless of direction
+    const an=(av==null||av===''), bn=(bv==null||bv==='');
+    if(an&&bn) return 0;
+    if(an) return 1;
+    if(bn) return -1;
+    if(typeof av==='number' && typeof bv==='number') return (av-bv)*dir;
+    return String(av).localeCompare(String(bv))*dir;
+  });
+  return rows;
+}
+
+function renderPlayerTable(container, opts){
+  opts = opts || {};
+  const rows = ptRows();
+  const positions = ['ALL','QB','RB','WR','TE','K','DEF'];
+  const controls = `
+    <div class="pt-controls">
+      <input type="text" class="pt-search" placeholder="Search player..." value="${playerTable.query}">
+      <select class="pt-pos">
+        ${positions.map(p=>`<option value="${p}" ${playerTable.posFilter===p?'selected':''}>${p==='ALL'?'All Pos':p}</option>`).join('')}
+      </select>
+      <select class="pt-avail">
+        <option value="ALL" ${playerTable.availFilter==='ALL'?'selected':''}>All</option>
+        <option value="AVAIL" ${playerTable.availFilter==='AVAIL'?'selected':''}>Available</option>
+        <option value="TAKEN" ${playerTable.availFilter==='TAKEN'?'selected':''}>Drafted</option>
+      </select>
+      <button class="clear">CLEAR</button>
+    </div>
+    <div class="pt-count">${rows.length} players${activeLeague!=='zimmer'?' · drafted-status only tracked in Zimmer live draft':''}</div>`;
+
+  const header = PT_COLUMNS.map(c=>{
+    const arrow = playerTable.sortKey===c.key ? `<span class="arrow">${playerTable.sortDir==='asc'?'▲':'▼'}</span>` : '';
+    return `<th data-key="${c.key}" class="${c.num?'pt-num':''}">${c.label} ${arrow}</th>`;
+  }).join('');
+
+  const body = rows.map(r=>{
+    const warCls = r.projectedWar==null?'':(r.projectedWar>0?'pt-war-pos':'pt-war-neg');
+    const adjCls = r.adjWar==null?'':(r.adjWar>0?'pt-war-pos':'pt-war-neg');
+    const statusHtml = r._drafted
+      ? `<span class="pt-taken">${r._mine?'★ mine':'taken'} $${r._cost}</span>`
+      : `<span class="pt-avail">available</span>`;
+    return `<tr class="${r._drafted?'drafted':''} ${r._mine?'mine':''}">
+      <td class="pt-name">${r.name}</td>
+      <td>${r.proTeamEspn||r.team||'—'}</td>
+      <td>${r.pos}</td>
+      <td class="pt-num">${r.byeWeek||'—'}</td>
+      <td>${(r.tier&&r.tier!=='0')?r.tier.split(' - ')[0]:'—'}</td>
+      <td class="pt-num">${r.avgRank??'—'}</td>
+      <td class="pt-num">${r.espnRecommendedBid!=null?'$'+Math.round(r.espnRecommendedBid):'—'}</td>
+      <td class="pt-num">${r.missionBid!=null?'$'+r.missionBid:'—'}</td>
+      <td class="pt-num ${warCls}">${r.projectedWar!=null?(r.projectedWar>0?'+':'')+r.projectedWar:'—'}</td>
+      <td class="pt-num ${adjCls}">${r.adjWar!=null?(r.adjWar>0?'+':'')+r.adjWar:'—'}</td>
+      <td>${statusHtml}</td>
+    </tr>`;
+  }).join('');
+
+  container.innerHTML = `${controls}
+    <div class="ptable-wrap">
+      <table class="ptable"><thead><tr>${header}</tr></thead><tbody>${body}</tbody></table>
+    </div>`;
+
+  // wire controls
+  const search = container.querySelector('.pt-search');
+  search.oninput = (e)=>{ playerTable.query=e.target.value; opts.rerender(); };
+  container.querySelector('.pt-pos').onchange = (e)=>{ playerTable.posFilter=e.target.value; opts.rerender(); };
+  container.querySelector('.pt-avail').onchange = (e)=>{ playerTable.availFilter=e.target.value; opts.rerender(); };
+  container.querySelector('.clear').onclick = ()=>{
+    playerTable.query=''; playerTable.posFilter='ALL'; playerTable.availFilter='ALL'; opts.rerender();
+  };
+  container.querySelectorAll('th[data-key]').forEach(th=>{
+    th.onclick = ()=>{
+      const key=th.dataset.key;
+      if(playerTable.sortKey===key){ playerTable.sortDir = playerTable.sortDir==='asc'?'desc':'asc'; }
+      else { playerTable.sortKey=key; playerTable.sortDir = ['name','team','pos','tier','status'].includes(key)?'asc':'desc'; }
+      opts.rerender();
+    };
+  });
+}
+
+function renderPlayersTab(){
+  const el = document.getElementById('playersView');
+  el.innerHTML = `<div class="seclabel">Player Search — all players${activeLeague==='zimmer'?'':' · switch to Zimmer for live drafted-status'}</div>
+    <div id="playersTableMount"></div>`;
+  const mount = el.querySelector('#playersTableMount');
+  const rerender = ()=>renderPlayerTable(mount, {rerender});
+  rerender();
+}
+
+
 function computeTeamFit(player){
   const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
   const spent = myPicks.reduce((s,p)=>s+p.cost,0);
@@ -915,7 +1138,12 @@ function renderAuctionDraft(){
         <div class="playerCardArea"></div>
       </div>
       <div class="cockpit-col">
-        <div class="positionBoardArea"></div>
+        <div class="pt-toggle">
+          <button data-col2="board" class="${cockpitCol2Mode==='board'?'on':''}">Position Board</button>
+          <button data-col2="table" class="${cockpitCol2Mode==='table'?'on':''}">Player Search</button>
+        </div>
+        <div class="positionBoardArea" ${cockpitCol2Mode==='table'?'style="display:none;"':''}></div>
+        <div class="cockpitTableMount" ${cockpitCol2Mode==='board'?'style="display:none;"':''}></div>
       </div>
       <div class="cockpit-col">
         <div class="opponentPanelArea"></div>
@@ -945,6 +1173,19 @@ function renderAuctionDraft(){
   renderPositionBoard(selected, el);
   renderOpponentPanel(selected, el);
   renderLoggedPicks();
+
+  // column 2 toggle: position board <-> full player search table (shared state)
+  const tableMount = el.querySelector('.cockpitTableMount');
+  if(cockpitCol2Mode==='table' && tableMount){
+    const rerender = ()=>renderPlayerTable(tableMount, {rerender});
+    rerender();
+  }
+  el.querySelectorAll('.pt-toggle button[data-col2]').forEach(btn=>{
+    btn.onclick = ()=>{
+      cockpitCol2Mode = btn.dataset.col2;
+      renderAuctionDraft();
+    };
+  });
 
   const searchInput = document.getElementById('playerSearch');
   searchInput.oninput = (e)=>{
