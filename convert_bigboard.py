@@ -168,7 +168,7 @@ def tier_group(tier):
 
 
 def read_players(wb):
-    ws = wb["2025 Big Board"]  # rename tab per season; keep logic identical
+    ws = wb["2026 Big Board"]  # rename tab per season; keep logic identical
     # Column map (1-indexed) confirmed from header row 6
     COL = dict(targetRound=4, like=6, player=7, team=8, pos=9, tier=10,
                seanPosRank=11, yahoo=13, underdog=14, cbs=16, espn=17,
@@ -294,6 +294,6 @@ def main(src, dst):
 
 
 if __name__ == "__main__":
-    src = sys.argv[1] if len(sys.argv) > 1 else "/mnt/user-data/uploads/FY25_BigBoard.xlsx"
+    src = sys.argv[1] if len(sys.argv) > 1 else "/mnt/user-data/uploads/FY26_BigBoard.xlsx"
     dst = sys.argv[2] if len(sys.argv) > 2 else "bigboard.json"
     main(src, dst)
