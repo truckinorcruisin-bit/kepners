@@ -1,0 +1,29 @@
+name: Update Kepners Analysis
+
+# Run manually after Parse Kepners Draft Results (or after editing
+# kepners_team_aliases.json, e.g. to fix a team-name-change mismatch).
+on:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Build owner profiles
+        run: python kepners_analysis.py
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add kepners_analysis.json
+          git diff --staged --quiet || git commit -m "Update Kepners owner profiles"
+          git push
