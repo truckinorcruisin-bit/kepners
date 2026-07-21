@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-07-21T11:54:50.745730+00:00"
+    "generated": "2026-07-21T13:25:15.210210+00:00"
   },
   "players": [
     {
@@ -8928,7 +8928,10 @@
           "cost_rule": "Keeper costs 2 rounds earlier than the round in which the player was drafted the prior season (e.g. drafted round 8 -> kept at a round 6 cost).",
           "eligibility": "Player must have been drafted the prior season. Players added via waiver/free agency (undrafted) cannot be kept."
         }
-      }
+      },
+      "draftOrderSynced": true,
+      "draftOrderGenerated": "2026-07-21T13:25:13.097732+00:00",
+      "draftOrderUnmatched": []
     },
     "miami": {
       "platform": "yahoo",
