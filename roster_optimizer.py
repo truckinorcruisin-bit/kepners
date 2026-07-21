@@ -121,8 +121,36 @@ def report(roster_slots, roster_template):
     print(f"\nBudget remaining: ${BUDGET - total_cost}")
 
 
+def to_json(roster_slots, roster_template, budget):
+    rows = []
+    for slot_type, p in zip(roster_template, roster_slots):
+        rows.append({
+            "slot": slot_type,
+            "id": p["id"] if p else None, "name": p["name"] if p else None,
+            "pos": p["pos"] if p else None, "team": p["team"] if p else None,
+            "cost": p["cost"] if p else None, "war": p["war"] if p else None,
+        })
+    total_war = sum(p["war"] for p in roster_slots if p)
+    total_cost = sum(p["cost"] for p in roster_slots if p)
+    return {
+        "generated": __import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(),
+        "budget": budget,
+        "roster": rows,
+        "total_war": round(total_war, 1),
+        "total_cost": total_cost,
+        "budget_remaining": budget - total_cost,
+        "assumptions": [
+            "Cost assumed to equal ESPN's recommended auction bid (espnRecommendedBid) -- "
+            "a what-if if you won every player at exactly that price, not a live bid strategy.",
+            "Optimizes total 16-man roster WAR (bench included), found via exact integer "
+            "programming (CBC), not a greedy heuristic.",
+        ],
+    }
+
+
 if __name__ == "__main__":
     src = sys.argv[1] if len(sys.argv) > 1 else "bigboard.json"
+    out_json = sys.argv[2] if len(sys.argv) > 2 else "roster_optimizer_result.json"
     players = load_players(src)
     print(f"Loaded {len(players)} players with both WAR and an ESPN bid from {src}.")
     if len(players) < len(ROSTER):
@@ -133,3 +161,6 @@ if __name__ == "__main__":
         print(f"Solver status: {status} -- check budget/roster feasibility.")
         sys.exit(1)
     report(roster_slots, ROSTER)
+    with open(out_json, "w") as f:
+        json.dump(to_json(roster_slots, ROSTER, BUDGET), f, indent=2)
+    print(f"\nWrote {out_json} for the front end.")

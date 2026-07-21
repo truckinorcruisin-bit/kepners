@@ -362,7 +362,7 @@
 </div>
 
 <script>
-let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, activeLeague='kepners', activeMode='draft';
+let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, activeLeague='kepners', activeMode='draft';
 
 // Shared player-table state -- used by BOTH the standalone Players tab and the
 // in-cockpit table toggle, so filters/sort persist as you move between them.
@@ -463,6 +463,11 @@ async function boot(){
     const r5 = await fetch('bid_calibration.json');
     if(r5.ok) BIDCAL = await r5.json();
   }catch(e){ /* target bid will show as unavailable */ }
+  // Roster optimizer output — powers the History view's "Optimal Roster" section.
+  try{
+    const r6 = await fetch('roster_optimizer_result.json');
+    if(r6.ok) ROPT = await r6.json();
+  }catch(e){ /* section will show an empty state */ }
 
   renderLeagueTabs();
   wireModes();
@@ -788,9 +793,49 @@ function renderHistory(){
 
     ${renderDraftGrades()}
 
+    ${renderOptimalRoster()}
+
     <div class="foot">
       SOURCE · zimmer_analysis.json · ${owners.length} owners across
       ${(ZHIST.seasons_analyzed||[]).length} auction seasons.
+    </div>`;
+}
+
+function renderOptimalRoster(){
+  if(!ROPT || !ROPT.roster || !ROPT.roster.length){
+    return `<div class="seclabel">Optimal Roster (WAR-Max, $200 budget)</div>
+      <div class="empty-note">roster_optimizer_result.json not found.<br>
+      Run "Run Roster Optimizer" (needs bigboard.json with WAR + ESPN bids populated first).</div>`;
+  }
+  const rows = ROPT.roster.map(r=>{
+    if(!r.name){
+      return `<tr><td>${r.slot}</td><td colspan="4" style="color:var(--dim)">(no feasible player)</td></tr>`;
+    }
+    return `<tr>
+      <td>${r.slot}</td>
+      <td>${r.name}</td>
+      <td>${r.pos}</td>
+      <td>${r.team||'—'}</td>
+      <td class="num">$${r.cost}</td>
+      <td class="num" style="color:${r.war>0?'var(--green)':'var(--red)'}">${r.war>0?'+':''}${r.war}</td>
+    </tr>`;
+  }).join('');
+  const genDate = ROPT.generated ? new Date(ROPT.generated).toLocaleString() : '—';
+  return `<div class="seclabel">Optimal Roster (WAR-Max, $${ROPT.budget} budget)</div>
+    <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      ${(ROPT.assumptions||[]).join(' ')}
+    </div>
+    <table class="tiertbl"><thead><tr>
+      <th>Slot</th><th>Player</th><th>Pos</th><th>Team</th>
+      <th class="num">Cost</th><th class="num">WAR</th>
+    </tr></thead><tbody>${rows}</tbody>
+    <tfoot><tr style="font-weight:700;border-top:1px solid var(--line-2);">
+      <td colspan="4">TOTAL</td>
+      <td class="num">$${ROPT.total_cost}</td>
+      <td class="num" style="color:var(--amber)">+${ROPT.total_war}</td>
+    </tr></tfoot></table>
+    <div style="font-size:9px;color:var(--dim);margin-top:6px;">
+      Budget remaining: $${ROPT.budget_remaining} · generated ${genDate}
     </div>`;
 }
 
