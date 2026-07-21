@@ -270,6 +270,18 @@
   .owner-team{font-size:9px;color:var(--dim);}
   .owner-note{font-size:10px;color:var(--cyan);margin-top:5px;line-height:1.5;}
 
+  /* ===== keeper value grades (Kepners) ===== */
+  .kgTable{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:6px;}
+  .kgTable th{text-align:left;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--dim);padding:6px 8px;border-bottom:1px solid var(--line-2);font-weight:500;}
+  .kgTable td{padding:6px 8px;border-bottom:1px solid var(--line);}
+  .kgTable td.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .kg-verdict{font-size:9.5px;padding:2px 7px;border-radius:10px;font-weight:700;white-space:nowrap;}
+  .kg-verdict.great{background:rgba(61,220,132,.18);color:var(--green);}
+  .kg-verdict.good{background:rgba(61,220,132,.1);color:var(--green);}
+  .kg-verdict.fair{background:rgba(125,139,153,.15);color:var(--dim);}
+  .kg-verdict.overpriced{background:rgba(255,77,77,.15);color:var(--red);}
+
   /* ===== searchable player table ===== */
   .pt-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center;}
   .pt-controls input[type=text]{flex:1;min-width:160px;background:var(--panel);border:1px solid var(--line-2);
@@ -353,6 +365,7 @@
 
       <div id="draftOrderArea"></div>
       <div id="ownerProfilesArea"></div>
+      <div id="keeperGradesArea"></div>
 
       <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
       <div id="recArea"></div>
@@ -383,7 +396,7 @@
 </div>
 
 <script>
-let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, activeLeague='kepners', activeMode='draft';
+let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, KEPG=null, activeLeague='kepners', activeMode='draft';
 
 // Shared player-table state -- used by BOTH the standalone Players tab and the
 // in-cockpit table toggle, so filters/sort persist as you move between them.
@@ -493,6 +506,11 @@ async function boot(){
   try{
     const r7 = await fetch('kepners_analysis.json');
     if(r7.ok) KEPA = await r7.json();
+  }catch(e){ /* section will show an empty state */ }
+  // Kepners keeper value grades — powers the Draft view's "Keeper Value" table.
+  try{
+    const r8 = await fetch('kepners_draft_grades.json');
+    if(r8.ok) KEPG = await r8.json();
   }catch(e){ /* section will show an empty state */ }
 
   renderLeagueTabs();
@@ -618,6 +636,7 @@ function render(){
     document.getElementById('boardArea').innerHTML='';
     document.getElementById('draftOrderArea').innerHTML='';
     document.getElementById('ownerProfilesArea').innerHTML='';
+    document.getElementById('keeperGradesArea').innerHTML='';
     renderTicker(lg); renderFoot(lg); return;
   }
 
@@ -628,6 +647,7 @@ function render(){
   renderBoard(pool.slice(0,12));
   renderDraftOrder(lg);
   renderOwnerProfiles(lg);
+  renderKeeperGrades();
   renderFoot(lg);
 }
 
@@ -714,6 +734,38 @@ function renderOwnerProfiles(lg){
     </span></div>
     ${cards}
     ${(KEPA.unmatched_team_labels||[]).length ? `<div class="do-unmatched">⚠ unmatched team label(s) in the parsed history: ${KEPA.unmatched_team_labels.join(', ')}</div>` : ''}`;
+}
+
+function renderKeeperGrades(){
+  const el = document.getElementById('keeperGradesArea');
+  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
+  if(!KEPG || !KEPG.keeper_grades || !KEPG.keeper_grades.length){
+    el.innerHTML = `<div class="seclabel">Keeper Value Grades</div>
+      <div class="empty-note">kepners_draft_grades.json not found.<br>
+      Run "Update Kepners Draft Grades" (needs espn_season_stats + Kepners draft history).</div>`;
+    return;
+  }
+  const rows = KEPG.keeper_grades.map(g=>`
+    <tr>
+      <td>${g.manager}</td>
+      <td>${g.player}</td>
+      <td>${g.position}</td>
+      <td class="num">R${g.kept_round}</td>
+      <td class="num" style="color:${g.actual_war>0?'var(--green)':'var(--red)'}">${g.actual_war>0?'+':''}${g.actual_war}</td>
+      <td class="num">R${g.market_rate_round}</td>
+      <td class="num">${g.round_surplus>0?'+':''}${g.round_surplus}</td>
+      <td><span class="kg-verdict ${g.verdict.replace(' ','-').split('-')[0]}">${g.verdict}</span></td>
+    </tr>`).join('');
+  el.innerHTML = `<div class="seclabel">Keeper Value Grades
+    <span style="font-size:9px;color:var(--dim);font-weight:400;">— ${KEPG.season}</span></div>
+    <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      ${KEPG.scoring_note} ${KEPG.sample_size_note}
+    </div>
+    <table class="kgTable"><thead><tr>
+      <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Kept</th>
+      <th class="num">Actual WAR</th><th class="num">Mkt Rd</th><th class="num">Surplus</th><th>Verdict</th>
+    </tr></thead><tbody>${rows}</tbody></table>
+    ${(KEPG.unmatched_players||[]).length ? `<div class="do-unmatched">⚠ ${KEPG.unmatched_players.length} player(s) didn't match season stats: ${KEPG.unmatched_players.join(', ')}</div>` : ''}`;
 }
 
 function renderTicker(lg){
