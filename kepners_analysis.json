@@ -1,0 +1,577 @@
+{
+  "seasons_analyzed": [
+    2025
+  ],
+  "position_round_distribution": {
+    "RB": [
+      {
+        "round": 1,
+        "count": 7
+      },
+      {
+        "round": 2,
+        "count": 5
+      },
+      {
+        "round": 3,
+        "count": 2
+      },
+      {
+        "round": 4,
+        "count": 5
+      },
+      {
+        "round": 5,
+        "count": 2
+      },
+      {
+        "round": 6,
+        "count": 5
+      },
+      {
+        "round": 7,
+        "count": 3
+      },
+      {
+        "round": 8,
+        "count": 4
+      },
+      {
+        "round": 9,
+        "count": 5
+      },
+      {
+        "round": 10,
+        "count": 7
+      },
+      {
+        "round": 11,
+        "count": 3
+      },
+      {
+        "round": 12,
+        "count": 2
+      },
+      {
+        "round": 13,
+        "count": 1
+      },
+      {
+        "round": 14,
+        "count": 1
+      },
+      {
+        "round": 15,
+        "count": 3
+      },
+      {
+        "round": 16,
+        "count": 1
+      }
+    ],
+    "WR": [
+      {
+        "round": 1,
+        "count": 5
+      },
+      {
+        "round": 2,
+        "count": 5
+      },
+      {
+        "round": 3,
+        "count": 6
+      },
+      {
+        "round": 4,
+        "count": 6
+      },
+      {
+        "round": 5,
+        "count": 7
+      },
+      {
+        "round": 6,
+        "count": 7
+      },
+      {
+        "round": 7,
+        "count": 5
+      },
+      {
+        "round": 8,
+        "count": 5
+      },
+      {
+        "round": 9,
+        "count": 5
+      },
+      {
+        "round": 10,
+        "count": 2
+      },
+      {
+        "round": 11,
+        "count": 5
+      },
+      {
+        "round": 12,
+        "count": 3
+      },
+      {
+        "round": 13,
+        "count": 2
+      },
+      {
+        "round": 14,
+        "count": 2
+      },
+      {
+        "round": 15,
+        "count": 5
+      },
+      {
+        "round": 16,
+        "count": 3
+      }
+    ],
+    "TE": [
+      {
+        "round": 2,
+        "count": 1
+      },
+      {
+        "round": 3,
+        "count": 1
+      },
+      {
+        "round": 5,
+        "count": 1
+      },
+      {
+        "round": 7,
+        "count": 2
+      },
+      {
+        "round": 8,
+        "count": 2
+      },
+      {
+        "round": 9,
+        "count": 2
+      },
+      {
+        "round": 11,
+        "count": 2
+      },
+      {
+        "round": 12,
+        "count": 1
+      },
+      {
+        "round": 13,
+        "count": 1
+      },
+      {
+        "round": 14,
+        "count": 3
+      },
+      {
+        "round": 16,
+        "count": 1
+      }
+    ],
+    "QB": [
+      {
+        "round": 2,
+        "count": 1
+      },
+      {
+        "round": 3,
+        "count": 3
+      },
+      {
+        "round": 4,
+        "count": 1
+      },
+      {
+        "round": 5,
+        "count": 2
+      },
+      {
+        "round": 7,
+        "count": 2
+      },
+      {
+        "round": 8,
+        "count": 1
+      },
+      {
+        "round": 10,
+        "count": 2
+      },
+      {
+        "round": 11,
+        "count": 2
+      },
+      {
+        "round": 12,
+        "count": 2
+      },
+      {
+        "round": 14,
+        "count": 1
+      },
+      {
+        "round": 15,
+        "count": 1
+      },
+      {
+        "round": 16,
+        "count": 2
+      }
+    ],
+    "K": [
+      {
+        "round": 10,
+        "count": 1
+      },
+      {
+        "round": 12,
+        "count": 2
+      },
+      {
+        "round": 13,
+        "count": 4
+      },
+      {
+        "round": 14,
+        "count": 1
+      },
+      {
+        "round": 15,
+        "count": 2
+      },
+      {
+        "round": 16,
+        "count": 2
+      }
+    ],
+    "DEF": [
+      {
+        "round": 12,
+        "count": 1
+      },
+      {
+        "round": 13,
+        "count": 4
+      },
+      {
+        "round": 14,
+        "count": 4
+      },
+      {
+        "round": 15,
+        "count": 1
+      },
+      {
+        "round": 16,
+        "count": 3
+      }
+    ]
+  },
+  "owners": [
+    {
+      "manager": "Berdine",
+      "team": "Football Guys",
+      "team_label_seen": "Football Guy...",
+      "keepers": [
+        {
+          "player": "Chuba Hubbard",
+          "position": "RB",
+          "pro_team": "CAR",
+          "round": 9
+        }
+      ],
+      "early_position_counts": {
+        "WR": 4,
+        "RB": 2
+      },
+      "first_position_taken": "WR",
+      "missed_picks": 0,
+      "strategy_note": "opened with WR (round 1); leaned WR early (4 of first 6 rounds); kept 1 player(s): Chuba Hubbard (R9)."
+    },
+    {
+      "manager": "Bobby",
+      "team": "Demin",
+      "team_label_seen": "Denim Like A...",
+      "keepers": [],
+      "early_position_counts": {
+        "RB": 2,
+        "WR": 3,
+        "QB": 1
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); used 0 keepers."
+    },
+    {
+      "manager": "Ditto",
+      "team": "ShaqList",
+      "team_label_seen": "Shaq List",
+      "keepers": [
+        {
+          "player": "Jerry Jeudy",
+          "position": "WR",
+          "pro_team": "CLE",
+          "round": 7
+        },
+        {
+          "player": "Sam LaPorta",
+          "position": "TE",
+          "pro_team": "DET",
+          "round": 12
+        }
+      ],
+      "early_position_counts": {
+        "RB": 3,
+        "WR": 3
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned RB early (3 of first 6 rounds); kept 2 player(s): Jerry Jeudy (R7), Sam LaPorta (R12)."
+    },
+    {
+      "manager": "Greene",
+      "team": "Phony Grossi",
+      "team_label_seen": "Phony Grossi",
+      "keepers": [
+        {
+          "player": "T.J. Hockenson",
+          "position": "TE",
+          "pro_team": "MIN",
+          "round": 13
+        }
+      ],
+      "early_position_counts": {
+        "WR": 3,
+        "QB": 1,
+        "RB": 2
+      },
+      "first_position_taken": "WR",
+      "missed_picks": 0,
+      "strategy_note": "opened with WR (round 1); leaned WR early (3 of first 6 rounds); kept 1 player(s): T.J. Hockenson (R13)."
+    },
+    {
+      "manager": "Matty",
+      "team": "MattyDawgPound",
+      "team_label_seen": "Matty Dawg P...",
+      "keepers": [
+        {
+          "player": "Nico Collins",
+          "position": "WR",
+          "pro_team": "HOU",
+          "round": 7
+        },
+        {
+          "player": "J.K. Dobbins",
+          "position": "RB",
+          "pro_team": "DEN",
+          "round": 10
+        }
+      ],
+      "early_position_counts": {
+        "WR": 2,
+        "RB": 2,
+        "QB": 1,
+        "TE": 1
+      },
+      "first_position_taken": "WR",
+      "missed_picks": 0,
+      "strategy_note": "opened with WR (round 1); leaned WR early (2 of first 6 rounds); kept 2 player(s): Nico Collins (R7), J.K. Dobbins (R10)."
+    },
+    {
+      "manager": "Mike/Brad",
+      "team": "Dads to Bone",
+      "team_label_seen": "Dad\u2019s To T...",
+      "keepers": [
+        {
+          "player": "Garrett Wilson",
+          "position": "WR",
+          "pro_team": "NYJ",
+          "round": 6
+        },
+        {
+          "player": "Chase Brown",
+          "position": "RB",
+          "pro_team": "CIN",
+          "round": 7
+        }
+      ],
+      "early_position_counts": {
+        "WR": 4,
+        "RB": 1,
+        "QB": 1
+      },
+      "first_position_taken": "WR",
+      "missed_picks": 1,
+      "strategy_note": "opened with WR (round 1); leaned WR early (4 of first 6 rounds); kept 2 player(s): Garrett Wilson (R6), Chase Brown (R7); 1 missed/auto-passed pick(s)."
+    },
+    {
+      "manager": "Mikey",
+      "team": "Ranus",
+      "team_label_seen": "Ranus The Hi...",
+      "keepers": [
+        {
+          "player": "Ladd McConkey",
+          "position": "WR",
+          "pro_team": "LAC",
+          "round": 8
+        },
+        {
+          "player": "Jordan Love",
+          "position": "QB",
+          "pro_team": "GB",
+          "round": 12
+        }
+      ],
+      "early_position_counts": {
+        "RB": 4,
+        "WR": 2
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned RB early (4 of first 6 rounds); kept 2 player(s): Ladd McConkey (R8), Jordan Love (R12)."
+    },
+    {
+      "manager": "Mullins",
+      "team": "Pickups",
+      "team_label_seen": "The Pickups",
+      "keepers": [
+        {
+          "player": "Jayden Daniels",
+          "position": "QB",
+          "pro_team": "WAS",
+          "round": 5
+        },
+        {
+          "player": "Bucky Irving",
+          "position": "RB",
+          "pro_team": "TB",
+          "round": 10
+        }
+      ],
+      "early_position_counts": {
+        "WR": 2,
+        "TE": 1,
+        "RB": 2,
+        "QB": 1
+      },
+      "first_position_taken": "WR",
+      "missed_picks": 0,
+      "strategy_note": "opened with WR (round 1); leaned WR early (2 of first 6 rounds); kept 2 player(s): Jayden Daniels (R5), Bucky Irving (R10)."
+    },
+    {
+      "manager": "Neary",
+      "team": "YaBoi",
+      "team_label_seen": "Orson Welles",
+      "keepers": [
+        {
+          "player": "Drake London",
+          "position": "WR",
+          "pro_team": "ATL",
+          "round": 2
+        },
+        {
+          "player": "Zach Charbonnet",
+          "position": "RB",
+          "pro_team": "SEA",
+          "round": 9
+        }
+      ],
+      "early_position_counts": {
+        "RB": 2,
+        "WR": 3,
+        "QB": 1
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); kept 2 player(s): Drake London (R2), Zach Charbonnet (R9)."
+    },
+    {
+      "manager": "Scott",
+      "team": "Browneye",
+      "team_label_seen": "BrowneyeVibe...",
+      "keepers": [
+        {
+          "player": "Courtland Sutton",
+          "position": "WR",
+          "pro_team": "DEN",
+          "round": 6
+        },
+        {
+          "player": "Brock Bowers",
+          "position": "TE",
+          "pro_team": "LV",
+          "round": 8
+        }
+      ],
+      "early_position_counts": {
+        "RB": 2,
+        "WR": 4
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned WR early (4 of first 6 rounds); kept 2 player(s): Courtland Sutton (R6), Brock Bowers (R8)."
+    },
+    {
+      "manager": "Steve",
+      "team": "Burrito",
+      "team_label_seen": "Burrito",
+      "keepers": [
+        {
+          "player": "Trey McBride",
+          "position": "TE",
+          "pro_team": "ARI",
+          "round": 3
+        },
+        {
+          "player": "De'Von Achane",
+          "position": "RB",
+          "pro_team": "MIA",
+          "round": 8
+        }
+      ],
+      "early_position_counts": {
+        "RB": 2,
+        "WR": 3,
+        "TE": 1
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); kept 2 player(s): Trey McBride (R3), De'Von Achane (R8)."
+    },
+    {
+      "manager": "Weber",
+      "team": "Herdsmen",
+      "team_label_seen": "The Herdsmen",
+      "keepers": [
+        {
+          "player": "Brian Thomas Jr.",
+          "position": "WR",
+          "pro_team": "JAX",
+          "round": 5
+        }
+      ],
+      "early_position_counts": {
+        "RB": 2,
+        "QB": 1,
+        "WR": 3
+      },
+      "first_position_taken": "RB",
+      "missed_picks": 0,
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); kept 1 player(s): Brian Thomas Jr. (R5)."
+    }
+  ],
+  "unmatched_team_labels": []
+}

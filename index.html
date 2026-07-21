@@ -262,6 +262,14 @@
   .doTable .do-none{color:var(--dim);font-size:10px;}
   .do-unmatched{font-size:9px;color:var(--red);margin-top:4px;}
 
+  /* ===== owner drafting profiles (Kepners) ===== */
+  .owner-card{background:var(--panel);border:1px solid var(--line);padding:9px 11px;margin-bottom:7px;}
+  .owner-card.me{border-color:var(--amber);}
+  .owner-head{display:flex;justify-content:space-between;align-items:baseline;}
+  .owner-name{font-size:12px;font-weight:700;color:var(--txt);}
+  .owner-team{font-size:9px;color:var(--dim);}
+  .owner-note{font-size:10px;color:var(--cyan);margin-top:5px;line-height:1.5;}
+
   /* ===== searchable player table ===== */
   .pt-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center;}
   .pt-controls input[type=text]{flex:1;min-width:160px;background:var(--panel);border:1px solid var(--line-2);
@@ -344,6 +352,7 @@
       </div>
 
       <div id="draftOrderArea"></div>
+      <div id="ownerProfilesArea"></div>
 
       <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
       <div id="recArea"></div>
@@ -374,7 +383,7 @@
 </div>
 
 <script>
-let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, activeLeague='kepners', activeMode='draft';
+let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, activeLeague='kepners', activeMode='draft';
 
 // Shared player-table state -- used by BOTH the standalone Players tab and the
 // in-cockpit table toggle, so filters/sort persist as you move between them.
@@ -479,6 +488,11 @@ async function boot(){
   try{
     const r6 = await fetch('roster_optimizer_result.json');
     if(r6.ok) ROPT = await r6.json();
+  }catch(e){ /* section will show an empty state */ }
+  // Kepners owner drafting profiles — powers the Draft view's "Owner Profiles" section.
+  try{
+    const r7 = await fetch('kepners_analysis.json');
+    if(r7.ok) KEPA = await r7.json();
   }catch(e){ /* section will show an empty state */ }
 
   renderLeagueTabs();
@@ -603,6 +617,7 @@ function render(){
     document.getElementById('roster').innerHTML='';
     document.getElementById('boardArea').innerHTML='';
     document.getElementById('draftOrderArea').innerHTML='';
+    document.getElementById('ownerProfilesArea').innerHTML='';
     renderTicker(lg); renderFoot(lg); return;
   }
 
@@ -612,6 +627,7 @@ function render(){
   renderRoster(lg);
   renderBoard(pool.slice(0,12));
   renderDraftOrder(lg);
+  renderOwnerProfiles(lg);
   renderFoot(lg);
 }
 
@@ -670,6 +686,34 @@ function renderDraftOrder(lg){
     <tbody>${rows||'<tr><td colspan="4" style="color:var(--dim)">No slots claimed yet.</td></tr>'}</tbody></table>
     ${unmatchedHtml}
     <div style="font-size:9px;color:var(--dim);margin-top:2px;">synced ${genDate}</div>`;
+}
+
+function renderOwnerProfiles(lg){
+  const el = document.getElementById('ownerProfilesArea');
+  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
+  if(!KEPA || !KEPA.owners || !KEPA.owners.length){
+    el.innerHTML = `<div class="seclabel">Owner Drafting Profiles</div>
+      <div class="empty-note">kepners_analysis.json not found.<br>
+      Run "Parse Kepners Draft Results" then "Update Kepners Analysis".</div>`;
+    return;
+  }
+  const single = KEPA.seasons_analyzed.length===1;
+  const cards = KEPA.owners.map(o=>{
+    const me = lg.teams.find(t=>t.manager===o.manager && t.isMe);
+    return `<div class="owner-card ${me?'me':''}">
+      <div class="owner-head">
+        <span class="owner-name">${o.manager}${me?' ★':''}</span>
+        <span class="owner-team">${o.team}</span>
+      </div>
+      <div class="owner-note">${o.strategy_note}</div>
+    </div>`;
+  }).join('');
+  el.innerHTML = `<div class="seclabel">Owner Drafting Profiles
+    <span style="font-size:9px;color:var(--dim);font-weight:400;">
+      — ${KEPA.seasons_analyzed.join(', ')}${single?' (single season — will sharpen as more years are added)':''}
+    </span></div>
+    ${cards}
+    ${(KEPA.unmatched_team_labels||[]).length ? `<div class="do-unmatched">⚠ unmatched team label(s) in the parsed history: ${KEPA.unmatched_team_labels.join(', ')}</div>` : ''}`;
 }
 
 function renderTicker(lg){

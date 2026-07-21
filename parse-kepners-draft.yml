@@ -1,0 +1,41 @@
+name: Parse Kepners Draft Results
+
+# Run manually whenever you have a new season's draft-results text export to
+# add. Upload the .txt file to the repo first (e.g. data/kepners_draft_results_2025.txt),
+# then run this with the matching season year. Safe to re-run for a season
+# that's already in kepners_draft_history.json -- it overwrites that season's
+# entry rather than duplicating it.
+on:
+  workflow_dispatch:
+    inputs:
+      txt_path:
+        description: 'Path to the draft-results .txt file in this repo'
+        required: true
+        default: 'data/kepners_draft_results_2025.txt'
+      season:
+        description: 'Season year this export is for'
+        required: true
+        default: '2025'
+
+jobs:
+  parse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Parse draft results
+        run: python parse_kepners_draft_txt.py "${{ github.event.inputs.txt_path }}" "${{ github.event.inputs.season }}" kepners_draft_history.json
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add kepners_draft_history.json
+          git diff --staged --quiet || git commit -m "Parse Kepners ${{ github.event.inputs.season }} draft results"
+          git push

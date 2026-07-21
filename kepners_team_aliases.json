@@ -1,0 +1,15 @@
+{
+  "_comment": "Maps the (often truncated) team labels in Yahoo draft-results text exports to the real team/manager from bigboard.json's Kepners Team sheet. Team names can be renamed season to season -- if a future year's export shows a label that doesn't match any key here, kepners_analysis.py will flag it as unmatched rather than guess. Confirmed with Sean 2026-07-21 (including the Orson Welles -> YaBoi/Neary case, which had no textual match and was inferred by elimination).",
+  "Denim Like A...": {"team": "Demin", "manager": "Bobby"},
+  "Phony Grossi": {"team": "Phony Grossi", "manager": "Greene"},
+  "Ranus The Hi...": {"team": "Ranus", "manager": "Mikey"},
+  "Orson Welles": {"team": "YaBoi", "manager": "Neary"},
+  "Shaq List": {"team": "ShaqList", "manager": "Ditto"},
+  "Matty Dawg P...": {"team": "MattyDawgPound", "manager": "Matty"},
+  "The Pickups": {"team": "Pickups", "manager": "Mullins"},
+  "BrowneyeVibe...": {"team": "Browneye", "manager": "Scott"},
+  "Football Guy...": {"team": "Football Guys", "manager": "Berdine"},
+  "Burrito": {"team": "Burrito", "manager": "Steve"},
+  "The Herdsmen": {"team": "Herdsmen", "manager": "Weber"},
+  "Dad\u2019s To T...": {"team": "Dads to Bone", "manager": "Mike/Brad"}
+}
