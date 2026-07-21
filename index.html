@@ -252,6 +252,16 @@
   .opp-aggr.neutral{color:var(--cyan);}
   .aggr-legend{font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;}
 
+  /* ===== draft order / live keepers panel (Kepners) ===== */
+  .doTable{width:100%;border-collapse:collapse;font-size:11px;margin-bottom:6px;}
+  .doTable th{text-align:left;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;
+    color:var(--dim);padding:6px 8px;border-bottom:1px solid var(--line-2);font-weight:500;}
+  .doTable td{padding:6px 8px;border-bottom:1px solid var(--line);}
+  .doTable tr.me{background:rgba(255,183,3,0.08);}
+  .doTable .do-keeper{color:var(--amber);font-size:10px;}
+  .doTable .do-none{color:var(--dim);font-size:10px;}
+  .do-unmatched{font-size:9px;color:var(--red);margin-top:4px;}
+
   /* ===== searchable player table ===== */
   .pt-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center;}
   .pt-controls input[type=text]{flex:1;min-width:160px;background:var(--panel);border:1px solid var(--line-2);
@@ -332,6 +342,8 @@
           <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
         </div>
       </div>
+
+      <div id="draftOrderArea"></div>
 
       <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
       <div id="recArea"></div>
@@ -590,6 +602,7 @@ function render(){
        Recommendations activate once the FY26 Team tab is populated.</div>`;
     document.getElementById('roster').innerHTML='';
     document.getElementById('boardArea').innerHTML='';
+    document.getElementById('draftOrderArea').innerHTML='';
     renderTicker(lg); renderFoot(lg); return;
   }
 
@@ -598,6 +611,7 @@ function render(){
   renderTicker(lg);
   renderRoster(lg);
   renderBoard(pool.slice(0,12));
+  renderDraftOrder(lg);
   renderFoot(lg);
 }
 
@@ -622,6 +636,40 @@ function renderRec(p,need,lg){
       <div class="row"><span>Keeper impact (this league)</span>
         <span class="why">${lg.keepers.length} players kept league-wide</span></div>
     </div>`;
+}
+
+function renderDraftOrder(lg){
+  const el = document.getElementById('draftOrderArea');
+  // Only Kepners has this live sync (the Google Sheet owners fill in); other
+  // leagues just don't show the panel.
+  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
+  if(!lg.draftOrderSynced){
+    el.innerHTML = `<div class="seclabel">Draft Order &amp; Keepers</div>
+      <div class="empty-note">kepners_draft_order.json not found.<br>
+      Run "Update Kepners Draft Order" to pull the live Google Sheet.</div>`;
+    return;
+  }
+  const withPos = lg.teams.filter(t=>t.draftPosition!=null).sort((a,b)=>a.draftPosition-b.draftPosition);
+  const rows = withPos.map(t=>{
+    const keeperHtml = (t.liveKeepers||[]).length
+      ? t.liveKeepers.map(k=>`<span class="do-keeper">${k.player} (R${k.round})</span>`).join('<br>')
+      : `<span class="do-none">none yet</span>`;
+    return `<tr class="${t.isMe?'me':''}">
+      <td>${t.draftPosition}</td>
+      <td>${t.team}${t.isMe?' ★':''}</td>
+      <td>${t.manager}</td>
+      <td>${keeperHtml}</td>
+    </tr>`;
+  }).join('');
+  const genDate = lg.draftOrderGenerated ? new Date(lg.draftOrderGenerated).toLocaleString() : '—';
+  const unmatchedHtml = (lg.draftOrderUnmatched||[]).length
+    ? `<div class="do-unmatched">⚠ ${lg.draftOrderUnmatched.length} name(s) in the sheet didn't match a known manager: ${lg.draftOrderUnmatched.join(', ')} — check for a spelling variant.</div>`
+    : '';
+  el.innerHTML = `<div class="seclabel">Draft Order &amp; Keepers <span style="font-size:9px;color:var(--dim);font-weight:400;">— live from the shared Google Sheet</span></div>
+    <table class="doTable"><thead><tr><th>Pick</th><th>Team</th><th>Manager</th><th>Keepers</th></tr></thead>
+    <tbody>${rows||'<tr><td colspan="4" style="color:var(--dim)">No slots claimed yet.</td></tr>'}</tbody></table>
+    ${unmatchedHtml}
+    <div style="font-size:9px;color:var(--dim);margin-top:2px;">synced ${genDate}</div>`;
 }
 
 function renderTicker(lg){

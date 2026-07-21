@@ -262,6 +262,32 @@ def read_team_sheet(wb, sheet, platform, my_team):
     }
 
 
+def merge_kepners_draft_order(kepners_league, path="kepners_draft_order.json"):
+    """Attaches draftPosition + liveKeepers (from the live Google Sheet sync)
+    onto each Kepners team, matched by manager name. Optional -- if the sync
+    file doesn't exist yet, teams are left without this data (site shows an
+    empty state, not an error)."""
+    if not os.path.exists(path):
+        kepners_league["draftOrderSynced"] = False
+        return
+    data = json.load(open(path))
+    by_manager = {norm(r["manager"]).lower(): r for r in data.get("draft_order", []) if r.get("manager")}
+    for t in kepners_league.get("teams", []):
+        r = by_manager.get((t.get("manager") or "").lower())
+        if not r:
+            continue
+        t["draftPosition"] = r["pick"]
+        t["liveKeepers"] = [
+            k for k in [
+                {"player": r["keeper1_name"], "round": r["keeper1_round"]} if r["keeper1_name"] else None,
+                {"player": r["keeper2_name"], "round": r["keeper2_round"]} if r["keeper2_name"] else None,
+            ] if k
+        ]
+    kepners_league["draftOrderSynced"] = True
+    kepners_league["draftOrderGenerated"] = data.get("generated")
+    kepners_league["draftOrderUnmatched"] = data.get("unmatched_managers", [])
+
+
 def main(src, dst):
     wb = openpyxl.load_workbook(src, data_only=True)
     rules = load_league_rules()
@@ -282,6 +308,8 @@ def main(src, dst):
     for league_key, league_data in out["leagues"].items():
         if league_key in rules:
             league_data["rules"] = rules[league_key]
+
+    merge_kepners_draft_order(out["leagues"]["kepners"])
 
     with open(dst, "w") as f:
         json.dump(out, f, indent=2)
