@@ -223,17 +223,16 @@
   .roster-cell.full .rc-pos{color:var(--green);}
 
   /* Cockpit: Active Player (narrow) | Board (flexible, resizable) | Opponent (narrow).
-     --board-flex is a session-only multiplier the drag handle adjusts to trade
-     width between the Board and the Opponent panel. */
-  /* --board-flex is a UNITLESS number (e.g. 1.6). The grid track uses calc()
-     to multiply it into an fr value -- because "var(--x)fr" is invalid CSS
-     (the fr must be part of the value inside var(), not concatenated after),
-     and getting this wrong silently drops the whole rule, collapsing the
-     cockpit to a single column. */
-  .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;--board-flex:1.6;}
+     The drag handle resizes by rewriting the whole grid-template-columns string
+     from JS (see attachResizer) rather than a CSS var, which is more robust. */
+  /* Static fr columns -- no calc()/var() fr math, which is fragile as a grid
+     track across browsers. The drag handle resizes by rewriting the whole
+     grid-template-columns string from JS (see wireCockpitResizer), so the CSS
+     just needs a sane default 3-column split here. */
+  .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;}
   @media(min-width:900px){
     .cockpit-cols{
-      grid-template-columns:0.85fr calc(var(--board-flex, 1.6) * 1fr) 1fr;
+      grid-template-columns:0.85fr 1.6fr 1fr;
       align-items:start;
     }
     .wrap{max-width:1400px;}
@@ -341,9 +340,10 @@
 
   /* progressively wider screens: widen the shell and let the opponent panel
      go multi-column. Board width is primarily controlled by the drag handle
-     (--board-flex), so these mainly free up overall space. SCOPED TO ZIMMER
-     ONLY (.wide-cockpit on body) -- the Kepners/Miami 3-panel snake cockpit
-     stays at the 1400px cap regardless of monitor width; it doesn't need or
+     (the resizer rewrites grid-template-columns), so these mainly free up
+     overall space. SCOPED TO ZIMMER ONLY (.wide-cockpit on body) -- the
+     Kepners/Miami 3-panel snake cockpit stays at the 1400px cap regardless of
+     monitor width; it doesn't need or
      want the extra room, and stretching it edge-to-edge on a wide screen
      just adds awkward whitespace instead of helping. */
   @media(min-width:1500px){
@@ -379,13 +379,13 @@
      Zimmer's cockpit uses) -- ~30% / ~39% / ~30% of the 1400px-capped wrap,
      since the middle panel's table needs the extra room but shouldn't crowd
      out My Team / Deep Dive into narrow slivers. */
-  .snake-cockpit{--board-flex:1.3;}
+  .snake-cockpit{}
   /* Bounded panel height so the 3-panel cockpit doesn't force long page
      scrolling -- each panel scrolls internally instead, matching the table's
      max-height so all three feel visually aligned. */
   .panel-scroll{max-height:62vh;overflow-y:auto;}
   @media(min-width:900px){
-    .snake-cockpit{grid-template-columns:1fr calc(var(--board-flex,1.3) * 1fr) 1fr;}
+    .snake-cockpit{grid-template-columns:1fr 1.3fr 1fr;}
   }
   .snake-banner{margin-bottom:12px;}
   .myteam-list{display:flex;flex-direction:column;gap:4px;}
@@ -1055,24 +1055,37 @@ function renderDeepDive(lg){
 function wireSnakeResizer(){
   const el = document.getElementById('snakeDraftUI');
   if(!el) return;
-  const resizer = el.querySelector('#snakeResizer');
-  const cols = el.querySelector('.cockpit-cols');
+  attachResizer(el.querySelector('#snakeResizer'), el.querySelector('.cockpit-cols'), [1,1.3,1]);
+}
+
+// Shared resizer: drags the divider between the middle and right columns by
+// rewriting the WHOLE grid-template-columns string (outer tracks fixed at
+// `defaults[0]fr` and `defaults[2]fr`, middle track adjusted). Deliberately
+// avoids CSS-var/calc fr math, which proved fragile as a grid track. `cols`
+// is the .cockpit-cols grid; `defaults` = [left, middle, right] fr weights.
+function attachResizer(resizer, cols, defaults){
   if(!resizer || !cols) return;
-  const getFlex = ()=>parseFloat(getComputedStyle(cols).getPropertyValue('--board-flex'))||1.6;
+  const readMid = ()=>{
+    // parse the current middle fr weight from the inline style if present,
+    // else fall back to the default
+    const cur = cols.style.gridTemplateColumns;
+    const m = cur && cur.match(/^([\d.]+)fr\s+([\d.]+)fr\s+([\d.]+)fr$/);
+    return m ? parseFloat(m[2]) : defaults[1];
+  };
   resizer.onmousedown = (e)=>{
-    _cockpitDrag = {cols, startX:e.clientX, startFlex:getFlex()};
+    _cockpitDrag = {cols, startX:e.clientX, startMid:readMid(), defaults};
     resizer.classList.add('dragging');
     document.body.style.userSelect='none';
     e.preventDefault();
   };
-  // reuse the same global move/up listeners wired by wireCockpitResizer
   if(!_cockpitResizerGlobalWired){
     _cockpitResizerGlobalWired = true;
     window.addEventListener('mousemove', (e)=>{
       if(!_cockpitDrag) return;
-      const delta = (e.clientX-_cockpitDrag.startX)/250;
-      const next = Math.max(0.6, Math.min(4, _cockpitDrag.startFlex+delta));
-      _cockpitDrag.cols.style.setProperty('--board-flex', next.toFixed(2));
+      const delta = (e.clientX-_cockpitDrag.startX)/250; // ~250px drag ≈ 1.0 fr
+      const mid = Math.max(0.6, Math.min(4, _cockpitDrag.startMid+delta));
+      const [l,,r] = _cockpitDrag.defaults;
+      _cockpitDrag.cols.style.gridTemplateColumns = `${l}fr ${mid.toFixed(2)}fr ${r}fr`;
     });
     window.addEventListener('mouseup', ()=>{
       if(_cockpitDrag){
@@ -2095,39 +2108,11 @@ function renderPositionBoard(player, root){
 }
 
 // Session-only draggable divider between the Board and Opponent columns. Drag
-// left = more room for Opponent; drag right = more room for the Board. Adjusts
-// the --board-flex CSS var on .cockpit-cols. Resets on reload (not persisted),
-// per the chosen behavior.
+// left = more room for Opponent; drag right = more room for the Board. Rewrites
+// grid-template-columns directly (see attachResizer). Resets on reload.
 function wireCockpitResizer(el){
-  const resizer = el.querySelector('#cockpitResizer');
-  const cols = el.querySelector('.cockpit-cols');
-  if(!resizer || !cols) return;
-  const getFlex = ()=>parseFloat(getComputedStyle(cols).getPropertyValue('--board-flex'))||1.6;
-  // per-element mousedown (safe to reassign on re-render; it's an element handler)
-  resizer.onmousedown = (e)=>{
-    _cockpitDrag = {cols, startX:e.clientX, startFlex:getFlex()};
-    resizer.classList.add('dragging');
-    document.body.style.userSelect='none';
-    e.preventDefault();
-  };
-  // global move/up listeners attach exactly once (guarded), reading shared
-  // _cockpitDrag state -- avoids stacking duplicate listeners on every re-render.
-  if(!_cockpitResizerGlobalWired){
-    _cockpitResizerGlobalWired = true;
-    window.addEventListener('mousemove', (e)=>{
-      if(!_cockpitDrag) return;
-      const delta = (e.clientX-_cockpitDrag.startX)/250;
-      const next = Math.max(0.6, Math.min(4, _cockpitDrag.startFlex+delta));
-      _cockpitDrag.cols.style.setProperty('--board-flex', next.toFixed(2));
-    });
-    window.addEventListener('mouseup', ()=>{
-      if(_cockpitDrag){
-        document.querySelectorAll('.cockpit-resizer.dragging').forEach(r=>r.classList.remove('dragging'));
-        document.body.style.userSelect='';
-        _cockpitDrag = null;
-      }
-    });
-  }
+  // Zimmer cockpit: Active Player (0.85) | Board (1.6) | Opponent (1)
+  attachResizer(el.querySelector('#cockpitResizer'), el.querySelector('.cockpit-cols'), [0.85,1.6,1]);
 }
 let _cockpitDrag = null, _cockpitResizerGlobalWired = false;
 
