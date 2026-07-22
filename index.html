@@ -222,13 +222,27 @@
   .roster-cell.full{border-color:var(--green);}
   .roster-cell.full .rc-pos{color:var(--green);}
 
-  .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;}
+  /* Cockpit: Active Player (narrow) | Board (flexible, resizable) | Opponent (narrow).
+     --board-flex is a session-only multiplier the drag handle adjusts to trade
+     width between the Board and the Opponent panel. */
+  .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;--board-flex:1.6;}
   @media(min-width:900px){
-    .cockpit-cols{grid-template-columns:1fr 1fr 1fr;}
-    .wrap{max-width:1200px;}
+    .cockpit-cols{
+      grid-template-columns:0.85fr var(--board-flex, 1.6)fr 1fr;
+      align-items:start;
+    }
+    .wrap{max-width:1400px;}
   }
   .cockpit-col{min-width:0;}
   .cockpit-col .seclabel:first-child{margin-top:0;}
+
+  /* drag handle sits between board and opponent columns */
+  .cockpit-resizer{display:none;}
+  @media(min-width:900px){
+    .cockpit-resizer{display:block;width:6px;cursor:col-resize;background:var(--line);
+      border-radius:3px;align-self:stretch;margin:0 -5px;position:relative;z-index:2;}
+    .cockpit-resizer:hover,.cockpit-resizer.dragging{background:var(--amber);}
+  }
 
   /* column 2 richer player rows */
   .pbr .pbr-meta{font-size:9px;color:var(--dim);margin-top:2px;}
@@ -317,21 +331,58 @@
      so at wide screens you can see everyone without scrolling. */
   .opp-grid{display:grid;grid-template-columns:1fr;gap:8px;}
 
-  /* progressively wider screens unlock more room for the cockpit and let the
-     opponent panel spread horizontally instead of forcing a long scroll. */
+  /* progressively wider screens: widen the shell and let the opponent panel
+     go multi-column. Board width is primarily controlled by the drag handle
+     (--board-flex), so these mainly free up overall space. */
   @media(min-width:1500px){
-    .wrap{max-width:1600px;}
-  }
-  @media(min-width:1900px){
-    .wrap{max-width:1850px;}
-    /* give column 3 more relative width so its cards can go 2-up */
-    .cockpit-cols{grid-template-columns:1fr 1fr 1.6fr;}
+    .wrap{max-width:1700px;}
     .opp-grid{grid-template-columns:1fr 1fr;}
   }
-  @media(min-width:2400px){
-    .cockpit-cols{grid-template-columns:1fr 1fr 2fr;}
-    .opp-grid{grid-template-columns:1fr 1fr 1fr;}
+  @media(min-width:2100px){
+    .wrap{max-width:2000px;}
+    .opp-grid{grid-template-columns:1fr 1fr;}
   }
+
+  /* tier group header rows inside the unified player table (Position Board mode) */
+  table.ptable tr.pt-tier-head td{background:var(--panel);color:var(--amber);
+    font-size:10px;font-weight:700;letter-spacing:0.05em;padding:6px 8px;
+    border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);position:sticky;}
+  table.ptable tr.pt-tier-head .pt-tier-n{color:var(--dim);font-weight:400;margin-left:6px;}
+  table.ptable tr.pt-selectable{cursor:pointer;}
+  table.ptable tr.pt-selectable:hover td{background:rgba(255,183,3,0.06);}
+  table.ptable tr.selected td{background:rgba(255,183,3,0.14);}
+  .pt-sub{color:var(--dim);font-size:9px;}
+
+  /* ===== snake cockpit (Kepners/Miami) ===== */
+  .snake-cockpit{--board-flex:1.7;}
+  @media(min-width:900px){
+    .snake-cockpit{grid-template-columns:0.8fr var(--board-flex,1.7)fr 1fr;}
+  }
+  .snake-banner{margin-bottom:12px;}
+  .myteam-list{display:flex;flex-direction:column;gap:4px;}
+  .myteam-cell{display:flex;justify-content:space-between;align-items:baseline;
+    background:var(--panel);border:1px solid var(--line);padding:6px 9px;font-size:11px;}
+  .myteam-cell.filled{border-color:var(--green);}
+  .myteam-cell .mt-slot{color:var(--dim);font-size:9px;letter-spacing:0.06em;min-width:40px;}
+  .myteam-cell .mt-player{color:var(--txt);font-weight:600;text-align:right;}
+  .myteam-cell .mt-rd{color:var(--amber);font-size:9px;font-weight:400;}
+  .myteam-cell .mt-empty{color:var(--line-2);}
+
+  .deepDiveArea .dd-head{border-bottom:1px solid var(--line-2);padding-bottom:8px;margin-bottom:10px;}
+  .dd-name{font-size:15px;font-weight:700;color:var(--amber);}
+  .dd-sub{font-size:10px;color:var(--dim);margin-top:2px;}
+  .dd-block{margin-bottom:11px;}
+  .dd-lbl{font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--dim);margin-bottom:3px;}
+  .dd-val{margin-bottom:2px;}
+  .dd-detail{font-size:10.5px;color:var(--txt);line-height:1.5;}
+  .dd-badge{font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;}
+  .dd-badge.avail-high{background:rgba(61,220,132,.18);color:var(--green);}
+  .dd-badge.avail-mid{background:rgba(255,183,3,.15);color:var(--amber);}
+  .dd-badge.avail-low{background:rgba(255,77,77,.15);color:var(--red);}
+  .dd-fit{font-size:10.5px;font-weight:600;}
+  .dd-fit.fit-good{color:var(--green);}
+  .dd-fit.fit-ok{color:var(--amber);}
+  .dd-fit.fit-low{color:var(--dim);}
 </style>
 </head>
 <body>
@@ -355,11 +406,21 @@
   <!-- DRAFT VIEW -->
   <div id="draftView">
     <div id="snakeDraftUI">
-      <div class="clockrow">
-        <div class="radar"><div class="sweep"></div></div>
-        <div class="clock">
-          <div class="big" id="clock">--:--</div>
-          <div class="lbl" id="clocklbl">AWAITING DRAFT START</div>
+      <div class="snake-banner" id="snakeBanner"></div>
+
+      <div class="cockpit-cols snake-cockpit">
+        <div class="cockpit-col">
+          <div class="seclabel">My Team — <span id="myteamlbl"></span></div>
+          <div class="myTeamArea" id="myTeamArea"></div>
+        </div>
+        <div class="cockpit-col">
+          <div class="seclabel">Player Board</div>
+          <div class="snakePlayerArea"></div>
+        </div>
+        <div class="cockpit-resizer" id="snakeResizer" title="Drag to resize board vs deep-dive"></div>
+        <div class="cockpit-col">
+          <div class="seclabel">Player Deep Dive</div>
+          <div class="deepDiveArea" id="deepDiveArea"></div>
         </div>
       </div>
 
@@ -367,17 +428,8 @@
       <div id="ownerProfilesArea"></div>
       <div id="keeperGradesArea"></div>
 
-      <div class="seclabel">Top Recommendation — <span id="myteamlbl"></span></div>
-      <div id="recArea"></div>
-
       <div class="seclabel">Live Feed</div>
       <div class="ticker"><div class="track" id="ticker"></div></div>
-
-      <div class="seclabel">Your Roster</div>
-      <div class="roster" id="roster"></div>
-
-      <div class="seclabel">Board — Best Available</div>
-      <div id="boardArea"></div>
 
       <div class="foot" id="foot"></div>
     </div>
@@ -408,6 +460,10 @@ let playerTable = {
 // In the Zimmer cockpit, whether the middle column shows the position board
 // ('board') or the full searchable table ('table').
 let cockpitCol2Mode = 'board';
+
+// Snake-league (Kepners/Miami) cockpit state: which player is selected for the
+// Deep Dive, and whether the board is tier-grouped or flat.
+let snakeDraft = { selectedPlayerId: null, boardMode: 'board' };
 
 // Replay mode state
 let replay = {
@@ -513,9 +569,36 @@ async function boot(){
     if(r8.ok) KEPG = await r8.json();
   }catch(e){ /* section will show an empty state */ }
 
+  computeSeanOverallRanks();
   renderLeagueTabs();
   wireModes();
   render();
+}
+
+// VBD-style overall Target Rank: order ALL Sean-ranked players across positions
+// by their value over replacement (projected WAR), so a QB1 and RB1 interleave
+// by how much value each adds above its position's replacement level -- the
+// standard value-based-drafting approach, rather than a naive position-number
+// sort. Players Sean hasn't ranked (seanPosRank 0/null) get no overall rank.
+// Falls back to seanPosRank ordering within position if WAR is unavailable,
+// so it still produces a sensible ordering before ESPN projections are pulled.
+function computeSeanOverallRanks(){
+  if(!DATA || !DATA.players) return;
+  const ranked = DATA.players.filter(p=>p.seanPosRank && p.seanPosRank>0);
+  // Primary sort key: projectedWar desc (true VBD). Fallback when WAR missing:
+  // a synthetic value = -(seanPosRank) scaled per position so higher pos rank
+  // sorts earlier, with QB/TE nudged down slightly to mimic typical VBD
+  // (single-QB league replacement is shallow). This only matters pre-projections.
+  const POS_FALLBACK_WEIGHT = {RB:1.0, WR:1.0, QB:0.6, TE:0.7, K:0.2, DEF:0.2};
+  const val = p => {
+    if(p.projectedWar!=null) return p.projectedWar;
+    const w = POS_FALLBACK_WEIGHT[p.pos] ?? 0.5;
+    return -(p.seanPosRank) * (1/w); // less negative = ranked better
+  };
+  ranked.sort((a,b)=> val(b)-val(a));
+  ranked.forEach((p,i)=>{ p.seanRankOverall = i+1; });
+  // ensure unranked players explicitly carry null (not stale)
+  DATA.players.forEach(p=>{ if(!(p.seanPosRank>0)) p.seanRankOverall = null; });
 }
 
 function wireModes(){
@@ -629,26 +712,321 @@ function render(){
   document.getElementById('myteamlbl').textContent=lg.myTeam;
 
   if(!lg.teams.length){
-    document.getElementById('recArea').innerHTML=
+    document.getElementById('myTeamArea').innerHTML=
       `<div class="empty-note">${activeLeague.toUpperCase()} team sheet not yet in the workbook.<br>
-       Recommendations activate once the FY26 Team tab is populated.</div>`;
-    document.getElementById('roster').innerHTML='';
-    document.getElementById('boardArea').innerHTML='';
+       Activates once the FY26 Team tab is populated.</div>`;
+    document.querySelector('#snakeDraftUI .snakePlayerArea').innerHTML='';
+    document.getElementById('deepDiveArea').innerHTML='';
     document.getElementById('draftOrderArea').innerHTML='';
     document.getElementById('ownerProfilesArea').innerHTML='';
     document.getElementById('keeperGradesArea').innerHTML='';
+    document.getElementById('snakeBanner').innerHTML='';
     renderTicker(lg); renderFoot(lg); return;
   }
 
-  const {pool,need}=computeRecs(lg);
-  renderRec(pool[0],need,lg);
+  renderSnakeBanner(lg);
+  renderMyTeam(lg);
+  renderSnakePlayerBoard(lg);
+  renderDeepDive(lg);
   renderTicker(lg);
-  renderRoster(lg);
-  renderBoard(pool.slice(0,12));
   renderDraftOrder(lg);
   renderOwnerProfiles(lg);
   renderKeeperGrades();
+  wireSnakeResizer();
   renderFoot(lg);
+}
+
+// -------- snake cockpit panels --------
+
+function renderSnakeBanner(lg){
+  const el = document.getElementById('snakeBanner');
+  if(!el) return;
+  const myTeamObj = lg.teams.find(t=>t.isMe);
+  const myPos = myTeamObj && myTeamObj.draftPosition!=null ? myTeamObj.draftPosition : null;
+  const teams = lg.teams.length;
+  const roster = lg.rosterSlots || [];
+  // my roster fill from keepers (live draft logging isn't wired for snake yet;
+  // keepers are the only locked picks we know pre-draft)
+  const myKeepers = (myTeamObj && myTeamObj.liveKeepers) ? myTeamObj.liveKeepers.length : 0;
+  const chips = [
+    myPos!=null ? {v:`#${myPos}`, l:'MY DRAFT SLOT'} : {v:'—', l:'MY DRAFT SLOT'},
+    {v:teams, l:'TEAMS'},
+    {v:roster.length, l:'ROSTER SLOTS'},
+    {v:myKeepers, l:'MY KEEPERS'},
+  ];
+  el.innerHTML = `<div class="cockpit-banner">
+    ${chips.map(c=>`<div class="budget-chip"><div class="bc-val">${c.v}</div><div class="bc-lbl">${c.l}</div></div>`).join('')}
+  </div>`;
+}
+
+function renderMyTeam(lg){
+  const el = document.getElementById('myTeamArea');
+  if(!el) return;
+  const myTeamObj = lg.teams.find(t=>t.isMe);
+  const roster = lg.rosterSlots || [];
+  // Fill slots greedily from my known picks (keepers for now; extendable to
+  // live-logged picks later). Keepers carry a player name + round.
+  const myKeepers = (myTeamObj && myTeamObj.liveKeepers) ? [...myTeamObj.liveKeepers] : [];
+  const remaining = [...myKeepers];
+  const cells = roster.map(slot=>{
+    let fillIdx = -1;
+    if(slot==='FLEX') fillIdx = remaining.findIndex(k=>true); // any leftover
+    else fillIdx = remaining.findIndex(k=>{
+      const bp = findBigBoardPlayer(k.player);
+      return bp && bp.pos===slot;
+    });
+    let fill = null;
+    if(fillIdx>=0) fill = remaining.splice(fillIdx,1)[0];
+    return {slot, fill};
+  });
+  el.innerHTML = `<div class="myteam-list">
+    ${cells.map(c=>`
+      <div class="myteam-cell ${c.fill?'filled':''}">
+        <span class="mt-slot">${c.slot}</span>
+        ${c.fill
+          ? `<span class="mt-player">${c.fill.player} <span class="mt-rd">R${c.fill.round}</span></span>`
+          : `<span class="mt-empty">—</span>`}
+      </div>`).join('')}
+  </div>
+  <div class="foot" style="margin-top:8px;">Slots fill from your keepers now; live-pick logging for snake is a
+    future add. Positional needs here drive the Deep Dive's roster-fit read.</div>`;
+}
+
+function renderSnakePlayerBoard(lg){
+  const area = document.querySelector('#snakeDraftUI .snakePlayerArea');
+  if(!area) return;
+  const rerender = ()=>renderPlayerTable(area, {
+    rerender, groupByTier:(snakeDraft.boardMode==='board'), selectable:true,
+    onSelect:(pid)=>{ snakeDraft.selectedPlayerId=pid; zimmerDraft.selectedPlayerId=pid; renderDeepDive(lg); markSelectedRow(area,pid); },
+  });
+  // toggle header (tiered vs flat), mirroring the Zimmer cockpit
+  area.innerHTML = `<div class="pt-toggle">
+      <button data-smode="board" class="${snakeDraft.boardMode==='board'?'on':''}">Tiered</button>
+      <button data-smode="flat" class="${snakeDraft.boardMode==='flat'?'on':''}">Flat</button>
+    </div><div class="snakeTableMount"></div>`;
+  const mount = area.querySelector('.snakeTableMount');
+  const rerenderMount = ()=>renderPlayerTable(mount, {
+    rerender:rerenderMount, groupByTier:(snakeDraft.boardMode==='board'), selectable:true,
+    onSelect:(pid)=>{ snakeDraft.selectedPlayerId=pid; zimmerDraft.selectedPlayerId=pid; renderDeepDive(lg); markSelectedRow(mount,pid); },
+  });
+  rerenderMount();
+  area.querySelectorAll('.pt-toggle button[data-smode]').forEach(btn=>{
+    btn.onclick=()=>{ snakeDraft.boardMode = btn.dataset.smode==='board'?'board':'flat'; renderSnakePlayerBoard(lg); };
+  });
+}
+
+function markSelectedRow(container, pid){
+  container.querySelectorAll('tr[data-pid]').forEach(tr=>{
+    tr.classList.toggle('selected', tr.dataset.pid===pid);
+  });
+}
+
+// -------- Player Deep Dive (snake leagues) --------
+// Given a selected player, synthesize the insights Sean asked for:
+//  1. availability-by-next-pick estimate (draft order + how many picks until
+//     my next turn + how many owners ahead plausibly want this position)
+//  2. roster fit (does it fill an open need on my team?)
+//  3. bye-week overlaps with my current roster
+//  4. team stacking / correlation notes
+//  5. tier position (top vs bottom of the available tier) => reach vs value
+// Everything degrades gracefully when inputs are missing (no ranks, no draft
+// order synced, etc.) rather than erroring.
+
+function myRosterPositions(lg){
+  const myTeamObj = lg.teams.find(t=>t.isMe);
+  const counts = {};
+  ((myTeamObj && myTeamObj.liveKeepers) || []).forEach(k=>{
+    const bp = findBigBoardPlayer(k.player);
+    if(bp) counts[bp.pos] = (counts[bp.pos]||0)+1;
+  });
+  return {myTeamObj, counts};
+}
+
+function picksUntilMyNextTurn(lg){
+  // Snake: from my slot, how many other picks happen before I'm up again.
+  // Without live pick tracking we estimate the *between-turns* gap, which in a
+  // snake is (2 * (teams - slot)) + 1 at the turn, or teams-based generally.
+  const teams = lg.teams.length;
+  const myTeamObj = lg.teams.find(t=>t.isMe);
+  const slot = myTeamObj && myTeamObj.draftPosition;
+  if(!slot || !teams) return null;
+  // average gap between an owner's two picks across a snake boundary:
+  // going down then back up. Two common gaps: 2*(teams-slot) and 2*(slot-1).
+  // Use the smaller-to-larger range as the "picks until next turn" window.
+  const gapA = 2*(teams-slot);   // if we're near the turn
+  const gapB = 2*(slot-1);       // the other boundary
+  return {teams, slot, minGap: Math.min(gapA,gapB), maxGap: Math.max(gapA,gapB)};
+}
+
+function availabilityEstimate(player, lg){
+  // Heuristic: a player ranked at overall consensus rank R is likely gone
+  // within ~R picks. If my next turn is `gap` picks away and there are already
+  // `drafted` players off the board, compare the player's consensus rank to
+  // the pick number I'll next be on. Owner positional tendencies (from KEPA)
+  // sharpen "how many owners ahead of me still need this position."
+  const g = picksUntilMyNextTurn(lg);
+  if(!g || player.avgRank==null) return {label:'unknown', detail:'need draft order + consensus rank'};
+  // crude current pick count: keepers don't consume snake picks, so approximate
+  // "picks made" as 0 pre-draft; this becomes precise once live logging lands.
+  const nextPickNumber = g.slot; // pre-draft, my first pick is at my slot
+  const cushion = player.avgRank - nextPickNumber;
+  // owners drafting ahead of me this round who lean this position historically
+  let posHungryAhead = 0;
+  if(KEPA && KEPA.owners){
+    const ahead = lg.teams.filter(t=>t.draftPosition!=null && t.draftPosition < g.slot);
+    ahead.forEach(t=>{
+      const prof = KEPA.owners.find(o=>o.manager===t.manager);
+      if(prof && prof.early_position_counts && prof.early_position_counts[player.pos]) posHungryAhead++;
+    });
+  }
+  let label, cls;
+  const adjCushion = cushion - posHungryAhead*1.5;
+  if(adjCushion >= g.maxGap) { label='very likely available'; cls='avail-high'; }
+  else if(adjCushion >= 0)   { label='probably available';    cls='avail-mid'; }
+  else if(adjCushion >= -g.maxGap){ label='coin flip';        cls='avail-mid'; }
+  else { label='likely gone'; cls='avail-low'; }
+  const detail = `consensus #${player.avgRank}; your next pick ~#${nextPickNumber}`
+    + (posHungryAhead?`, ${posHungryAhead} owner(s) ahead lean ${player.pos}`:'');
+  return {label, cls, detail};
+}
+
+function tierPositionRead(player){
+  // Where does this player sit within their tier? Top of tier = taking them
+  // early is a slight reach (the tier still has comparable options); bottom of
+  // tier = last chance at this quality, more of a "take now."
+  if(!player.tier || player.tier==='0' || player.seanPosRank==null) return null;
+  const tierLabel = player.tier.split(' - ')[0];
+  const tierMates = DATA.players.filter(p=>p.pos===player.pos && p.tier && p.tier.split(' - ')[0]===tierLabel && p.seanPosRank!=null);
+  if(tierMates.length<=1) return {tierLabel, pos:'only', read:'only player in this tier — value depends entirely on positional need'};
+  const ranks = tierMates.map(p=>p.seanPosRank).sort((a,b)=>a-b);
+  const idx = ranks.indexOf(player.seanPosRank);
+  const frac = idx/(ranks.length-1);
+  if(frac<=0.34) return {tierLabel, pos:'top', read:`top of ${tierLabel} — comparable options likely remain, so taking now is a mild reach unless you need the position`};
+  if(frac>=0.67) return {tierLabel, pos:'bottom', read:`bottom of ${tierLabel} — last of this quality tier, so this is more of a "take now or drop a tier"`};
+  return {tierLabel, pos:'middle', read:`middle of ${tierLabel}`};
+}
+
+function byeOverlaps(player, lg){
+  if(!player.byeWeek) return [];
+  const {myTeamObj} = myRosterPositions(lg);
+  const overlaps = [];
+  ((myTeamObj && myTeamObj.liveKeepers)||[]).forEach(k=>{
+    const bp = findBigBoardPlayer(k.player);
+    if(bp && bp.byeWeek===player.byeWeek) overlaps.push(bp.name);
+  });
+  return overlaps;
+}
+
+function teamCorrelations(player, lg){
+  const team = player.proTeamEspn || player.team;
+  if(!team) return [];
+  const {myTeamObj} = myRosterPositions(lg);
+  const mates = [];
+  ((myTeamObj && myTeamObj.liveKeepers)||[]).forEach(k=>{
+    const bp = findBigBoardPlayer(k.player);
+    if(bp && (bp.proTeamEspn||bp.team)===team) mates.push(`${bp.name} (${bp.pos})`);
+  });
+  return mates;
+}
+
+function renderDeepDive(lg){
+  const el = document.getElementById('deepDiveArea');
+  if(!el) return;
+  const pid = snakeDraft.selectedPlayerId;
+  const player = pid ? DATA.players.find(p=>p.id===pid) : null;
+  if(!player){
+    el.innerHTML = `<div class="empty-note">Select a player from the board to see availability odds,
+      roster fit, bye overlaps, stacking, and tier read.</div>`;
+    return;
+  }
+
+  const {counts} = myRosterPositions(lg);
+  const avail = availabilityEstimate(player, lg);
+  const tierRead = tierPositionRead(player);
+  const byes = byeOverlaps(player, lg);
+  const stacks = teamCorrelations(player, lg);
+
+  // roster fit: do I have an open starting need at this position?
+  const roster = lg.rosterSlots || [];
+  const starters = roster.filter(s=>s===player.pos).length + (['RB','WR','TE'].includes(player.pos)?roster.filter(s=>s==='FLEX').length:0);
+  const have = counts[player.pos]||0;
+  let fitText, fitCls;
+  if(have < roster.filter(s=>s===player.pos).length){ fitText=`fills an open ${player.pos} starting slot`; fitCls='fit-good'; }
+  else if(have < starters){ fitText=`fits a FLEX/depth need at ${player.pos}`; fitCls='fit-ok'; }
+  else { fitText=`${player.pos} is already covered on your roster — depth/BPA only`; fitCls='fit-low'; }
+
+  const rankRoundLabel = (rk)=> rk!=null ? `${rk} (${rankToRoundPick(rk, lg.teams.length)})` : '—';
+
+  el.innerHTML = `
+    <div class="dd-head">
+      <div class="dd-name">${player.name}</div>
+      <div class="dd-sub">${player.pos} · ${player.proTeamEspn||player.team||'—'} · ${player.tier&&player.tier!=='0'?player.tier.split(' - ')[0]:'unranked'} ${player.byeWeek?'· BYE '+player.byeWeek:''}</div>
+    </div>
+
+    <div class="dd-block">
+      <div class="dd-lbl">Availability at your next pick</div>
+      <div class="dd-val"><span class="dd-badge ${avail.cls||''}">${avail.label}</span></div>
+      <div class="dd-detail">${avail.detail}</div>
+    </div>
+
+    <div class="dd-block">
+      <div class="dd-lbl">Roster fit</div>
+      <div class="dd-val"><span class="dd-fit ${fitCls}">${fitText}</span></div>
+      <div class="dd-detail">You have ${have} ${player.pos}${have===1?'':'s'}; roster carries ${roster.filter(s=>s===player.pos).length} ${player.pos} starter slot(s)${['RB','WR','TE'].includes(player.pos)?' + FLEX':''}.</div>
+    </div>
+
+    <div class="dd-block">
+      <div class="dd-lbl">Tier read</div>
+      <div class="dd-detail">${tierRead ? tierRead.read : 'no tier/rank data for this player yet'}</div>
+    </div>
+
+    <div class="dd-block">
+      <div class="dd-lbl">Rankings</div>
+      <div class="dd-detail">Yahoo consensus: <b>${rankRoundLabel(player.avgRank)}</b> · Your target: <b>${rankRoundLabel(player.seanRankOverall)}</b></div>
+    </div>
+
+    ${byes.length ? `<div class="dd-block">
+      <div class="dd-lbl">⚠ Bye-week overlap (wk ${player.byeWeek})</div>
+      <div class="dd-detail">Shares a bye with: ${byes.join(', ')}</div>
+    </div>` : ''}
+
+    ${stacks.length ? `<div class="dd-block">
+      <div class="dd-lbl">Team stack</div>
+      <div class="dd-detail">You already roster ${stacks.join(', ')} from ${player.proTeamEspn||player.team} — ${['QB','WR','TE'].includes(player.pos)?'potential scoring correlation':'shared bye/again risk'}.</div>
+    </div>` : ''}
+  `;
+}
+
+function wireSnakeResizer(){
+  const el = document.getElementById('snakeDraftUI');
+  if(!el) return;
+  const resizer = el.querySelector('#snakeResizer');
+  const cols = el.querySelector('.cockpit-cols');
+  if(!resizer || !cols) return;
+  const getFlex = ()=>parseFloat(getComputedStyle(cols).getPropertyValue('--board-flex'))||1.6;
+  resizer.onmousedown = (e)=>{
+    _cockpitDrag = {cols, startX:e.clientX, startFlex:getFlex()};
+    resizer.classList.add('dragging');
+    document.body.style.userSelect='none';
+    e.preventDefault();
+  };
+  // reuse the same global move/up listeners wired by wireCockpitResizer
+  if(!_cockpitResizerGlobalWired){
+    _cockpitResizerGlobalWired = true;
+    window.addEventListener('mousemove', (e)=>{
+      if(!_cockpitDrag) return;
+      const delta = (e.clientX-_cockpitDrag.startX)/250;
+      const next = Math.max(0.6, Math.min(4, _cockpitDrag.startFlex+delta));
+      _cockpitDrag.cols.style.setProperty('--board-flex', next.toFixed(2));
+    });
+    window.addEventListener('mouseup', ()=>{
+      if(_cockpitDrag){
+        document.querySelectorAll('.cockpit-resizer.dragging').forEach(r=>r.classList.remove('dragging'));
+        document.body.style.userSelect='';
+        _cockpitDrag = null;
+      }
+    });
+  }
 }
 
 function renderRec(p,need,lg){
@@ -1116,19 +1494,60 @@ function computeAdjustedWar(player){
 }
 
 // ---- shared player-table engine (standalone tab + in-cockpit toggle) ----
-const PT_COLUMNS = [
-  {key:'name', label:'Player', num:false},
-  {key:'team', label:'Team', num:false},
-  {key:'pos', label:'Pos', num:false},
-  {key:'byeWeek', label:'Bye', num:true},
-  {key:'tier', label:'Tier', num:false},
-  {key:'avgRank', label:'Plat Rk', num:true},
-  {key:'espnRecommendedBid', label:'ESPN $', num:true},
-  {key:'missionBid', label:'Target $', num:true},
-  {key:'projectedWar', label:'Raw WAR', num:true},
-  {key:'adjWar', label:'Adj WAR', num:true},
-  {key:'status', label:'Status', num:false},
+// Rank -> "round.pick" label for snake leagues (e.g. overall #14 in a 12-team
+// league = round 2, pick 2 = "2.02"). Used for Yahoo Rank / Target Rank columns.
+function rankToRoundPick(rank, teams){
+  if(rank==null || !teams) return null;
+  const r = Math.floor((rank-1)/teams)+1;
+  const p = ((rank-1)%teams)+1;
+  return `${r}.${String(p).padStart(2,'0')}`;
+}
+
+// Column definitions per league flavor. Auction (Zimmer) shows dollar columns;
+// snake (Kepners/Miami) shows rank/round columns instead, per Sean's spec.
+// Each column: key (for sort), label, num (right-align/numeric sort), and
+// render(r, ctx) producing the cell's inner HTML.
+const PT_COL_COMMON_LEFT = [
+  {key:'name', label:'Player', num:false, render:r=>r.name},
+  {key:'team', label:'Team', num:false, render:r=>r.proTeamEspn||r.team||'—'},
+  {key:'pos', label:'Pos', num:false, render:r=>r.pos},
+  {key:'byeWeek', label:'Bye', num:true, render:r=>r.byeWeek||'—'},
+  {key:'tier', label:'Tier', num:false, render:r=>(r.tier&&r.tier!=='0')?r.tier.split(' - ')[0]:'—'},
 ];
+const PT_COL_WAR = [
+  {key:'projectedWar', label:'Raw WAR', num:true, render:r=>warCell(r.projectedWar)},
+  {key:'adjWar', label:'Adj WAR', num:true, render:r=>warCell(r.adjWar)},
+];
+const PT_COL_STATUS = [
+  {key:'status', label:'Status', num:false, render:r=>statusCell(r)},
+];
+const PT_COLUMNS_AUCTION = [
+  ...PT_COL_COMMON_LEFT,
+  {key:'avgRank', label:'Plat Rk', num:true, render:r=>r.avgRank??'—'},
+  {key:'espnRecommendedBid', label:'ESPN $', num:true, render:r=>r.espnRecommendedBid!=null?'$'+Math.round(r.espnRecommendedBid):'—'},
+  {key:'missionBid', label:'Target $', num:true, render:r=>r.missionBid!=null?'$'+r.missionBid:'—'},
+  ...PT_COL_WAR, ...PT_COL_STATUS,
+];
+const PT_COLUMNS_SNAKE = [
+  ...PT_COL_COMMON_LEFT,
+  {key:'avgRank', label:'Yahoo Rk', num:true, render:(r,ctx)=>r.avgRank!=null?`${r.avgRank} <span class="pt-sub">(${rankToRoundPick(r.avgRank,ctx.teams)})</span>`:'—'},
+  {key:'seanRankOverall', label:'Target Rk', num:true, render:(r,ctx)=>r.seanRankOverall!=null?`${r.seanRankOverall} <span class="pt-sub">(${rankToRoundPick(r.seanRankOverall,ctx.teams)})</span>`:'—'},
+  ...PT_COL_WAR, ...PT_COL_STATUS,
+];
+
+function warCell(v){
+  if(v==null) return '—';
+  const cls = v>0?'pt-war-pos':'pt-war-neg';
+  return `<span class="${cls}">${v>0?'+':''}${v}</span>`;
+}
+function statusCell(r){
+  return r._drafted
+    ? `<span class="pt-taken">${r._mine?'★ mine':'taken'}${r._cost?' $'+r._cost:''}</span>`
+    : `<span class="pt-avail">available</span>`;
+}
+function ptColumns(){
+  return activeLeague==='zimmer' ? PT_COLUMNS_AUCTION : PT_COLUMNS_SNAKE;
+}
 
 function ptDraftedMap(){
   // which Big Board players are drafted, from the current league's logged picks.
@@ -1182,7 +1601,14 @@ function ptRows(){
 
 function renderPlayerTable(container, opts){
   opts = opts || {};
-  const rows = ptRows();
+  const cols = ptColumns();
+  const teams = (DATA.leagues[activeLeague] && DATA.leagues[activeLeague].teams) ? DATA.leagues[activeLeague].teams.length : 12;
+  const ctx = {teams};
+  const groupByTier = !!opts.groupByTier;
+  const selectable = !!opts.selectable;
+
+  let rows = ptRows();
+
   const positions = ['ALL','QB','RB','WR','TE','K','DEF'];
   const controls = `
     <div class="pt-controls">
@@ -1197,33 +1623,37 @@ function renderPlayerTable(container, opts){
       </select>
       <button class="clear">CLEAR</button>
     </div>
-    <div class="pt-count">${rows.length} players${activeLeague!=='zimmer'?' · drafted-status only tracked in Zimmer live draft':''}</div>`;
+    <div class="pt-count">${rows.length} players${activeLeague!=='zimmer'?' · drafted-status live only in Zimmer':''}</div>`;
 
-  const header = PT_COLUMNS.map(c=>{
+  const header = cols.map(c=>{
     const arrow = playerTable.sortKey===c.key ? `<span class="arrow">${playerTable.sortDir==='asc'?'▲':'▼'}</span>` : '';
     return `<th data-key="${c.key}" class="${c.num?'pt-num':''}">${c.label} ${arrow}</th>`;
   }).join('');
 
-  const body = rows.map(r=>{
-    const warCls = r.projectedWar==null?'':(r.projectedWar>0?'pt-war-pos':'pt-war-neg');
-    const adjCls = r.adjWar==null?'':(r.adjWar>0?'pt-war-pos':'pt-war-neg');
-    const statusHtml = r._drafted
-      ? `<span class="pt-taken">${r._mine?'★ mine':'taken'} $${r._cost}</span>`
-      : `<span class="pt-avail">available</span>`;
-    return `<tr class="${r._drafted?'drafted':''} ${r._mine?'mine':''}">
-      <td class="pt-name">${r.name}</td>
-      <td>${r.proTeamEspn||r.team||'—'}</td>
-      <td>${r.pos}</td>
-      <td class="pt-num">${r.byeWeek||'—'}</td>
-      <td>${(r.tier&&r.tier!=='0')?r.tier.split(' - ')[0]:'—'}</td>
-      <td class="pt-num">${r.avgRank??'—'}</td>
-      <td class="pt-num">${r.espnRecommendedBid!=null?'$'+Math.round(r.espnRecommendedBid):'—'}</td>
-      <td class="pt-num">${r.missionBid!=null?'$'+r.missionBid:'—'}</td>
-      <td class="pt-num ${warCls}">${r.projectedWar!=null?(r.projectedWar>0?'+':'')+r.projectedWar:'—'}</td>
-      <td class="pt-num ${adjCls}">${r.adjWar!=null?(r.adjWar>0?'+':'')+r.adjWar:'—'}</td>
-      <td>${statusHtml}</td>
-    </tr>`;
-  }).join('');
+  const rowHtml = (r)=>{
+    const sel = selectable && r.id===zimmerDraft.selectedPlayerId ? 'selected' : '';
+    const cells = cols.map(c=>`<td class="${c.num?'pt-num':''} ${c.key==='name'?'pt-name':''}">${c.render(r,ctx)}</td>`).join('');
+    return `<tr data-pid="${r.id}" class="${r._drafted?'drafted':''} ${r._mine?'mine':''} ${sel} ${selectable?'pt-selectable':''}">${cells}</tr>`;
+  };
+
+  let body;
+  if(groupByTier){
+    // group rows by their position tier (the label prefix, e.g. "RB1"),
+    // preserving the current sort order within each group. Tier order follows
+    // first appearance in the sorted rows so it respects the active sort.
+    const groups = new Map();
+    rows.forEach(r=>{
+      const t = (r.tier && r.tier!=='0') ? r.tier.split(' - ')[0] : 'Unranked';
+      if(!groups.has(t)) groups.set(t, []);
+      groups.get(t).push(r);
+    });
+    body = [...groups.entries()].map(([tier, grp])=>{
+      const tierRow = `<tr class="pt-tier-head"><td colspan="${cols.length}">${tier} <span class="pt-tier-n">${grp.length}</span></td></tr>`;
+      return tierRow + grp.map(rowHtml).join('');
+    }).join('');
+  } else {
+    body = rows.map(rowHtml).join('');
+  }
 
   container.innerHTML = `${controls}
     <div class="ptable-wrap">
@@ -1246,6 +1676,14 @@ function renderPlayerTable(container, opts){
       opts.rerender();
     };
   });
+  if(selectable){
+    container.querySelectorAll('tr[data-pid]').forEach(tr=>{
+      tr.onclick = ()=>{
+        zimmerDraft.selectedPlayerId = tr.dataset.pid;
+        if(opts.onSelect) opts.onSelect(tr.dataset.pid);
+      };
+    });
+  }
 }
 
 function renderPlayersTab(){
@@ -1328,12 +1766,12 @@ function renderAuctionDraft(){
       </div>
       <div class="cockpit-col">
         <div class="pt-toggle">
-          <button data-col2="board" class="${cockpitCol2Mode==='board'?'on':''}">Position Board</button>
-          <button data-col2="table" class="${cockpitCol2Mode==='table'?'on':''}">Player Search</button>
+          <button data-col2="board" class="${cockpitCol2Mode==='board'?'on':''}">Position Board (tiered)</button>
+          <button data-col2="table" class="${cockpitCol2Mode==='table'?'on':''}">Player Search (flat)</button>
         </div>
-        <div class="positionBoardArea" ${cockpitCol2Mode==='table'?'style="display:none;"':''}></div>
-        <div class="cockpitTableMount" ${cockpitCol2Mode==='board'?'style="display:none;"':''}></div>
+        <div class="positionBoardArea"></div>
       </div>
+      <div class="cockpit-resizer" id="cockpitResizer" title="Drag to resize board vs opponent panel"></div>
       <div class="cockpit-col">
         <div class="opponentPanelArea"></div>
       </div>
@@ -1363,18 +1801,18 @@ function renderAuctionDraft(){
   renderOpponentPanel(selected, el);
   renderLoggedPicks();
 
-  // column 2 toggle: position board <-> full player search table (shared state)
-  const tableMount = el.querySelector('.cockpitTableMount');
-  if(cockpitCol2Mode==='table' && tableMount){
-    const rerender = ()=>renderPlayerTable(tableMount, {rerender});
-    rerender();
-  }
+  // toggle: tiered Position Board <-> flat Player Search. Both are the SAME
+  // unified table component now; the toggle only flips tier grouping, so
+  // sort/filter/selection state carries across seamlessly.
   el.querySelectorAll('.pt-toggle button[data-col2]').forEach(btn=>{
     btn.onclick = ()=>{
       cockpitCol2Mode = btn.dataset.col2;
-      renderAuctionDraft();
+      el.querySelectorAll('.pt-toggle button[data-col2]').forEach(b=>b.classList.toggle('on',b===btn));
+      renderPositionBoard(selected, el);
     };
   });
+
+  wireCockpitResizer(el);
 
   const searchInput = document.getElementById('playerSearch');
   searchInput.oninput = (e)=>{
@@ -1588,121 +2026,54 @@ function renderOpponentPanel(player, root){
 function renderPositionBoard(player, root){
   const area = (root||document).querySelector('.positionBoardArea');
   if(!area) return;
-  if(!player){ area.innerHTML=''; return; }
-  const pos = player.pos;
-
-  // Build a lookup: Big Board player id -> {cost, isMine} from ALL logged picks
-  // (matched by name -- see findBigBoardPlayer). This is what marks players
-  // "drafted" on the board below, regardless of which team took them.
-  const draftedMap = {};
-  zimmerDraft.picks.forEach(pick=>{
-    const bp = findBigBoardPlayer(pick.name);
-    if(bp) draftedMap[bp.id] = {cost: pick.cost, isMine: !!pick.isMine};
+  // The Position Board is now the SAME component as Player Search, tier-grouped
+  // and selectable, so toggling between the two is seamless (identical columns,
+  // styling, sort/filter state). Selecting a nominated player pre-filters the
+  // board to that position for focus, but the user can widen it via the Pos
+  // filter like any other table.
+  const rerender = ()=>renderPlayerTable(area, {
+    rerender, groupByTier:(cockpitCol2Mode==='board'), selectable:true,
+    onSelect:(pid)=>{ renderAuctionDraft(); },
   });
-
-  const posPlayers = DATA.players
-    .filter(p=>p.pos===pos && p.seanPosRank!=null)
-    .sort((a,b)=>a.seanPosRank-b.seanPosRank);
-
-  // group into tiers, same bucketing as Expected Bid Range
-  const tierGroups = {}; // tierLabel -> [players]
-  const tierOrder = [];
-  posPlayers.forEach(p=>{
-    const t = tierLabelForRank(pos, p.seanPosRank-1);
-    if(!tierGroups[t]){ tierGroups[t]=[]; tierOrder.push(t); }
-    tierGroups[t].push(p);
-  });
-
-  const isDeepTier = (label)=> label.includes('+');
-
-  let html = `<div class="seclabel">Position Board — ${pos}</div>
-    <div class="aggr-legend">
-      <span class="m-espn" style="color:var(--cyan);">E</span> = ESPN Recommended Bid ·
-      <span style="color:var(--amber);">T</span> = Mission Control Target Bid (WAR × calibrated $/WAR, base only) ·
-      <span class="m-war" style="color:var(--amber);">WAR</span> = projected points above replacement
-    </div>`;
-
-  tierOrder.forEach(tierLabel=>{
-    const group = tierGroups[tierLabel];
-    const histRow = (ZHIST && ZHIST.tier_spreads||[]).find(t=>t.position===pos && t.tier===tierLabel);
-
-    // this year's actual costs so far for drafted players in this tier
-    const currentCosts = group
-      .filter(p=>draftedMap[p.id])
-      .map(p=>draftedMap[p.id].cost);
-    let trendBadge = '';
-    if(histRow && currentCosts.length){
-      const curAvg = currentCosts.reduce((a,b)=>a+b,0)/currentCosts.length;
-      const deltaPct = Math.round(100*(curAvg-histRow.avg)/histRow.avg);
-      const cls = deltaPct>=8?'up':(deltaPct<=-8?'down':'flat');
-      const sign = deltaPct>0?'+':'';
-      trendBadge = `<span class="trend-badge ${cls}">${sign}${deltaPct}% vs hist this yr</span>`;
-    }
-
-    const histText = histRow
-      ? `historic <b>$${histRow.low}–$${histRow.high}</b> avg $${histRow.avg}`
-      : `no historic data`;
-
-    html += `<div class="tier-group">
-      <div class="tier-group-head">
-        <span class="tg-name">${tierLabel}</span>
-        <span class="tg-hist">${histText} ${trendBadge}</span>
-      </div>`;
-
-    if(isDeepTier(tierLabel)){
-      // deep catch-all tier: summarize instead of listing every player
-      const draftedCount = group.filter(p=>draftedMap[p.id]).length;
-      html += `<div class="pbr"><span class="pbr-name" style="color:var(--dim)">
-        ${group.length} players in this depth tier</span>
-        <span class="pbr-status" style="color:var(--dim)">${draftedCount} drafted, ${group.length-draftedCount} available</span></div>`;
-    } else {
-      group.forEach(p=>{
-        const d = draftedMap[p.id];
-        const isSelected = p.id===player.id;
-        const team = p.proTeamEspn || p.team || '';
-        const bye = p.byeWeek ? `BYE ${p.byeWeek}` : '';
-        const espnBid = p.espnRecommendedBid!=null ? `$${Math.round(p.espnRecommendedBid)}` : '—';
-        const mc = computeMissionControlBid(p);
-        const war = p.projectedWar!=null ? `${p.projectedWar>0?'+':''}${p.projectedWar}` : '—';
-
-        let statusHtml;
-        if(d){
-          // Still show E/T even once drafted, so you can spot-check T against
-          // what the player actually sold for as the draft progresses. Flag
-          // when the winning bid deviates meaningfully from Target (>25%).
-          let deltaTag = '';
-          if(mc){
-            const diffPct = Math.round(100*(d.cost-mc.bid)/mc.bid);
-            if(Math.abs(diffPct)>=25){
-              const cls = diffPct>0 ? 'up' : 'down';
-              deltaTag = ` <span class="trend-badge ${cls}" style="margin-left:4px;">${diffPct>0?'+':''}${diffPct}% vs T</span>`;
-            }
-          }
-          statusHtml = `<span style="display:flex;flex-direction:column;align-items:flex-end;">
-            <span class="pbr-status ${d.isMine?'mine':''}">$${d.cost}${d.isMine?' ★':''}${deltaTag}</span>
-            <span class="pbr-metric" style="margin-top:2px;">
-              <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--amber)">T:${mc?'$'+mc.bid:'—'}</span>
-            </span>
-          </span>`;
-        } else {
-          statusHtml = `<span class="pbr-metric">
-            <span class="m-espn">E:${espnBid}</span> · <span style="color:var(--amber)">T:${mc?'$'+mc.bid:'—'}</span><br>
-            WAR:<span class="m-war">${war}</span></span>`;
-        }
-        html += `<div class="pbr ${d?'drafted':''} ${isSelected?'selected':''}">
-          <span class="pbr-col-main">
-            <span class="pbr-name"><span class="pbr-rank">#${p.seanPosRank}</span>${p.name}</span>
-            <span class="pbr-meta">${team}${bye?' · '+bye:''}</span>
-          </span>
-          ${statusHtml}
-        </div>`;
-      });
-    }
-    html += `</div>`;
-  });
-
-  area.innerHTML = html;
+  rerender();
 }
+
+// Session-only draggable divider between the Board and Opponent columns. Drag
+// left = more room for Opponent; drag right = more room for the Board. Adjusts
+// the --board-flex CSS var on .cockpit-cols. Resets on reload (not persisted),
+// per the chosen behavior.
+function wireCockpitResizer(el){
+  const resizer = el.querySelector('#cockpitResizer');
+  const cols = el.querySelector('.cockpit-cols');
+  if(!resizer || !cols) return;
+  const getFlex = ()=>parseFloat(getComputedStyle(cols).getPropertyValue('--board-flex'))||1.6;
+  // per-element mousedown (safe to reassign on re-render; it's an element handler)
+  resizer.onmousedown = (e)=>{
+    _cockpitDrag = {cols, startX:e.clientX, startFlex:getFlex()};
+    resizer.classList.add('dragging');
+    document.body.style.userSelect='none';
+    e.preventDefault();
+  };
+  // global move/up listeners attach exactly once (guarded), reading shared
+  // _cockpitDrag state -- avoids stacking duplicate listeners on every re-render.
+  if(!_cockpitResizerGlobalWired){
+    _cockpitResizerGlobalWired = true;
+    window.addEventListener('mousemove', (e)=>{
+      if(!_cockpitDrag) return;
+      const delta = (e.clientX-_cockpitDrag.startX)/250;
+      const next = Math.max(0.6, Math.min(4, _cockpitDrag.startFlex+delta));
+      _cockpitDrag.cols.style.setProperty('--board-flex', next.toFixed(2));
+    });
+    window.addEventListener('mouseup', ()=>{
+      if(_cockpitDrag){
+        document.querySelectorAll('.cockpit-resizer.dragging').forEach(r=>r.classList.remove('dragging'));
+        document.body.style.userSelect='';
+        _cockpitDrag = null;
+      }
+    });
+  }
+}
+let _cockpitDrag = null, _cockpitResizerGlobalWired = false;
 
 function renderLoggedPicks(){
   const el = document.getElementById('loggedPicks');
