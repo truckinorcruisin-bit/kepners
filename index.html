@@ -295,6 +295,9 @@
   .kg-verdict.good{background:rgba(61,220,132,.1);color:var(--green);}
   .kg-verdict.fair{background:rgba(125,139,153,.15);color:var(--dim);}
   .kg-verdict.overpriced{background:rgba(255,77,77,.15);color:var(--red);}
+  .kg-verdict.bust{background:rgba(255,77,77,.22);color:var(--red);font-weight:700;}
+  .kg-verdict.insufficient{background:rgba(125,139,153,.1);color:var(--line-2);}
+  .kgTable td .pt-sub{display:block;}
 
   /* ===== searchable player table ===== */
   .pt-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center;}
@@ -1152,18 +1155,19 @@ function renderKeeperGrades(){
       <td>${g.position}</td>
       <td class="num">R${g.kept_round}</td>
       <td class="num" style="color:${g.actual_war>0?'var(--green)':'var(--red)'}">${g.actual_war>0?'+':''}${g.actual_war}</td>
-      <td class="num">R${g.market_rate_round}</td>
-      <td class="num">${g.round_surplus>0?'+':''}${g.round_surplus}</td>
-      <td><span class="kg-verdict ${g.verdict.replace(' ','-').split('-')[0]}">${g.verdict}</span></td>
+      <td class="num">${g.peer_avg_war!=null?(g.peer_avg_war>0?'+':'')+g.peer_avg_war:'—'}
+        ${g.peer_avg_war!=null?`<span class="pt-sub">n=${g.peer_sample_n}, ±${g.peer_window_rounds}rd</span>`:''}</td>
+      <td class="num">${g.surplus_war!=null?(g.surplus_war>0?'+':'')+g.surplus_war:'—'}</td>
+      <td><span class="kg-verdict ${g.verdict.replace(/[^a-z]+/g,'-').split('-')[0]}">${g.verdict}</span></td>
     </tr>`).join('');
   el.innerHTML = `<div class="seclabel">Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— ${KEPG.season}</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
-      ${KEPG.scoring_note} ${KEPG.sample_size_note}
+      ${KEPG.scoring_note} ${KEPG.methodology_note||''} ${KEPG.sample_size_note}
     </div>
     <table class="kgTable"><thead><tr>
       <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Kept</th>
-      <th class="num">Actual WAR</th><th class="num">Mkt Rd</th><th class="num">Surplus</th><th>Verdict</th>
+      <th class="num">Actual WAR</th><th class="num">Peer Avg WAR</th><th class="num">Surplus</th><th>Verdict</th>
     </tr></thead><tbody>${rows}</tbody></table>
     ${(KEPG.unmatched_players||[]).length ? `<div class="do-unmatched">⚠ ${KEPG.unmatched_players.length} player(s) didn't match season stats: ${KEPG.unmatched_players.join(', ')}</div>` : ''}`;
 }
