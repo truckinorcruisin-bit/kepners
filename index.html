@@ -225,10 +225,15 @@
   /* Cockpit: Active Player (narrow) | Board (flexible, resizable) | Opponent (narrow).
      --board-flex is a session-only multiplier the drag handle adjusts to trade
      width between the Board and the Opponent panel. */
+  /* --board-flex is a UNITLESS number (e.g. 1.6). The grid track uses calc()
+     to multiply it into an fr value -- because "var(--x)fr" is invalid CSS
+     (the fr must be part of the value inside var(), not concatenated after),
+     and getting this wrong silently drops the whole rule, collapsing the
+     cockpit to a single column. */
   .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;--board-flex:1.6;}
   @media(min-width:900px){
     .cockpit-cols{
-      grid-template-columns:0.85fr var(--board-flex, 1.6)fr 1fr;
+      grid-template-columns:0.85fr calc(var(--board-flex, 1.6) * 1fr) 1fr;
       align-items:start;
     }
     .wrap{max-width:1400px;}
@@ -380,7 +385,7 @@
      max-height so all three feel visually aligned. */
   .panel-scroll{max-height:62vh;overflow-y:auto;}
   @media(min-width:900px){
-    .snake-cockpit{grid-template-columns:1fr var(--board-flex,1.3)fr 1fr;}
+    .snake-cockpit{grid-template-columns:1fr calc(var(--board-flex,1.3) * 1fr) 1fr;}
   }
   .snake-banner{margin-bottom:12px;}
   .myteam-list{display:flex;flex-direction:column;gap:4px;}
