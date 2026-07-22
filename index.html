@@ -309,7 +309,7 @@
   .pt-controls button.clear{background:var(--panel);border:1px solid var(--line-2);color:var(--dim);
     font-family:inherit;font-size:10px;padding:8px 12px;cursor:pointer;letter-spacing:0.06em;}
   .pt-count{font-size:10px;color:var(--dim);margin-bottom:8px;}
-  .ptable-wrap{overflow-x:auto;}
+  .ptable-wrap{overflow-x:auto;max-height:62vh;overflow-y:auto;}
   table.ptable{width:100%;border-collapse:collapse;font-size:11px;}
   table.ptable th{position:sticky;top:0;background:var(--bg);text-align:left;font-size:9px;
     letter-spacing:0.06em;text-transform:uppercase;color:var(--dim);padding:7px 8px;
@@ -375,6 +375,10 @@
      since the middle panel's table needs the extra room but shouldn't crowd
      out My Team / Deep Dive into narrow slivers. */
   .snake-cockpit{--board-flex:1.3;}
+  /* Bounded panel height so the 3-panel cockpit doesn't force long page
+     scrolling -- each panel scrolls internally instead, matching the table's
+     max-height so all three feel visually aligned. */
+  .panel-scroll{max-height:62vh;overflow-y:auto;}
   @media(min-width:900px){
     .snake-cockpit{grid-template-columns:1fr var(--board-flex,1.3)fr 1fr;}
   }
@@ -419,6 +423,7 @@
   <div class="modes" id="modes">
     <button data-mode="draft" class="on">Draft</button>
     <button data-mode="players">Players</button>
+    <button data-mode="prep">Prep</button>
     <button data-mode="history">History</button>
     <button data-mode="replay">Replay</button>
   </div>
@@ -428,10 +433,13 @@
     <div id="snakeDraftUI">
       <div class="snake-banner" id="snakeBanner"></div>
 
+      <div class="seclabel">Live Feed</div>
+      <div class="ticker"><div class="track" id="ticker"></div></div>
+
       <div class="cockpit-cols snake-cockpit">
         <div class="cockpit-col">
           <div class="seclabel">My Team — <span id="myteamlbl"></span></div>
-          <div class="myTeamArea" id="myTeamArea"></div>
+          <div class="myTeamArea panel-scroll" id="myTeamArea"></div>
         </div>
         <div class="cockpit-col">
           <div class="seclabel">Player Board</div>
@@ -440,16 +448,9 @@
         <div class="cockpit-resizer" id="snakeResizer" title="Drag to resize board vs deep-dive"></div>
         <div class="cockpit-col">
           <div class="seclabel">Player Deep Dive</div>
-          <div class="deepDiveArea" id="deepDiveArea"></div>
+          <div class="deepDiveArea panel-scroll" id="deepDiveArea"></div>
         </div>
       </div>
-
-      <div id="draftOrderArea"></div>
-      <div id="ownerProfilesArea"></div>
-      <div id="keeperGradesArea"></div>
-
-      <div class="seclabel">Live Feed</div>
-      <div class="ticker"><div class="track" id="ticker"></div></div>
 
       <div class="foot" id="foot"></div>
     </div>
@@ -465,6 +466,9 @@
 
   <!-- PLAYERS VIEW (standalone) -->
   <div id="playersView" style="display:none;"></div>
+
+  <!-- PREP VIEW (Kepners/Miami: Draft Order, Owner Profiles, Keeper Grades) -->
+  <div id="prepView" style="display:none;"></div>
 </div>
 
 <script>
@@ -630,6 +634,7 @@ function wireModes(){
       document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
       document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
       document.getElementById('playersView').style.display = activeMode==='players'?'':'none';
+      document.getElementById('prepView').style.display = activeMode==='prep'?'':'none';
       if(activeMode!=='replay'){ stopReplayTimer(); restoreLivePicks(); }
       render();
     };
@@ -693,12 +698,15 @@ function render(){
   document.body.classList.toggle('wide-cockpit', activeLeague==='zimmer');
 
   // History and Replay views are Zimmer-only (auction analysis / auction history).
-  // For other leagues, force draft mode.
+  // Prep (Draft Order/Owner Profiles/Keeper Grades) is the opposite -- Kepners/
+  // Miami only, since Zimmer's equivalent content lives in its own History tab.
   const historyBtn=document.querySelector('#modes button[data-mode="history"]');
   const replayBtn=document.querySelector('#modes button[data-mode="replay"]');
+  const prepBtn=document.querySelector('#modes button[data-mode="prep"]');
   if(activeLeague!=='zimmer'){
     historyBtn.style.display='none';
     replayBtn.style.display='none';
+    prepBtn.style.display='';
     if(activeMode==='history' || activeMode==='replay'){
       activeMode='draft'; stopReplayTimer(); restoreLivePicks();
       document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x.dataset.mode==='draft'));
@@ -706,6 +714,11 @@ function render(){
   } else {
     historyBtn.style.display='';
     replayBtn.style.display='';
+    prepBtn.style.display='none';
+    if(activeMode==='prep'){
+      activeMode='draft';
+      document.querySelectorAll('#modes button').forEach(x=>x.classList.toggle('on',x.dataset.mode==='draft'));
+    }
   }
 
   // Keep view containers in sync with the active mode (covers league-tab switches,
@@ -714,10 +727,12 @@ function render(){
   document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
   document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
   document.getElementById('playersView').style.display = activeMode==='players'?'':'none';
+  document.getElementById('prepView').style.display = activeMode==='prep'?'':'none';
 
   if(activeMode==='history'){ renderHistory(); return; }
   if(activeMode==='replay'){ renderReplay(); return; }
   if(activeMode==='players'){ renderPlayersTab(); return; }
+  if(activeMode==='prep'){ renderPrepView(lg); return; }
 
   // Draft mode itself branches by format: auction (Zimmer) needs a fundamentally
   // different UI (evaluate a nominated player) than snake (Kepners/Miami, "who's
@@ -742,9 +757,6 @@ function render(){
        Activates once the FY26 Team tab is populated.</div>`;
     document.querySelector('#snakeDraftUI .snakePlayerArea').innerHTML='';
     document.getElementById('deepDiveArea').innerHTML='';
-    document.getElementById('draftOrderArea').innerHTML='';
-    document.getElementById('ownerProfilesArea').innerHTML='';
-    document.getElementById('keeperGradesArea').innerHTML='';
     document.getElementById('snakeBanner').innerHTML='';
     renderTicker(lg); renderFoot(lg); return;
   }
@@ -754,11 +766,24 @@ function render(){
   renderSnakePlayerBoard(lg);
   renderDeepDive(lg);
   renderTicker(lg);
+  wireSnakeResizer();
+  renderFoot(lg);
+}
+
+// -------- Prep tab (Kepners/Miami): Draft Order & Keepers, Owner Profiles,
+// Keeper Value Grades -- moved off the Draft view per Sean's request so the
+// draft cockpit itself doesn't require scrolling past reference material. --
+
+function renderPrepView(lg){
+  const el = document.getElementById('prepView');
+  el.innerHTML = `
+    <div id="draftOrderArea"></div>
+    <div id="ownerProfilesArea"></div>
+    <div id="keeperGradesArea"></div>
+  `;
   renderDraftOrder(lg);
   renderOwnerProfiles(lg);
   renderKeeperGrades();
-  wireSnakeResizer();
-  renderFoot(lg);
 }
 
 // -------- snake cockpit panels --------
