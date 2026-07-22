@@ -333,13 +333,17 @@
 
   /* progressively wider screens: widen the shell and let the opponent panel
      go multi-column. Board width is primarily controlled by the drag handle
-     (--board-flex), so these mainly free up overall space. */
+     (--board-flex), so these mainly free up overall space. SCOPED TO ZIMMER
+     ONLY (.wide-cockpit on body) -- the Kepners/Miami 3-panel snake cockpit
+     stays at the 1400px cap regardless of monitor width; it doesn't need or
+     want the extra room, and stretching it edge-to-edge on a wide screen
+     just adds awkward whitespace instead of helping. */
   @media(min-width:1500px){
-    .wrap{max-width:1700px;}
+    body.wide-cockpit .wrap{max-width:1700px;}
     .opp-grid{grid-template-columns:1fr 1fr;}
   }
   @media(min-width:2100px){
-    .wrap{max-width:2000px;}
+    body.wide-cockpit .wrap{max-width:2000px;}
     .opp-grid{grid-template-columns:1fr 1fr;}
   }
 
@@ -351,12 +355,25 @@
   table.ptable tr.pt-selectable{cursor:pointer;}
   table.ptable tr.pt-selectable:hover td{background:rgba(255,183,3,0.06);}
   table.ptable tr.selected td{background:rgba(255,183,3,0.14);}
-  .pt-sub{color:var(--dim);font-size:9px;}
+  .pt-sub{color:var(--dim);font-size:8.5px;display:block;line-height:1.3;}
+
+  /* compact table mode: used inside the cockpit panels (Zimmer board, snake
+     board) where 3 columns share the screen and there's no room to spare --
+     tighter padding/font than the standalone full-width Players tab. */
+  .positionBoardArea table.ptable, .snakeTableMount table.ptable{font-size:10px;}
+  .positionBoardArea table.ptable th, .snakeTableMount table.ptable th{padding:5px 5px;font-size:8px;}
+  .positionBoardArea table.ptable td, .snakeTableMount table.ptable td{padding:4px 5px;}
+  .positionBoardArea table.ptable td.pt-name, .snakeTableMount table.ptable td.pt-name{
+    max-width:110px;overflow:hidden;text-overflow:ellipsis;}
 
   /* ===== snake cockpit (Kepners/Miami) ===== */
-  .snake-cockpit{--board-flex:1.7;}
+  /* Genuine thirds with a modest middle emphasis (not the aggressive skew
+     Zimmer's cockpit uses) -- ~30% / ~39% / ~30% of the 1400px-capped wrap,
+     since the middle panel's table needs the extra room but shouldn't crowd
+     out My Team / Deep Dive into narrow slivers. */
+  .snake-cockpit{--board-flex:1.3;}
   @media(min-width:900px){
-    .snake-cockpit{grid-template-columns:0.8fr var(--board-flex,1.7)fr 1fr;}
+    .snake-cockpit{grid-template-columns:1fr var(--board-flex,1.3)fr 1fr;}
   }
   .snake-banner{margin-bottom:12px;}
   .myteam-list{display:flex;flex-direction:column;gap:4px;}
@@ -666,6 +683,11 @@ function neededPositions(lg,counts){
 
 function render(){
   const lg=DATA.leagues[activeLeague];
+
+  // Only Zimmer's auction cockpit wants the extra-wide breakpoints (its
+  // Opponent Intel grid benefits from more room); Kepners/Miami's 3-panel
+  // snake cockpit stays capped at 1400px regardless of monitor width.
+  document.body.classList.toggle('wide-cockpit', activeLeague==='zimmer');
 
   // History and Replay views are Zimmer-only (auction analysis / auction history).
   // For other leagues, force draft mode.
@@ -1530,8 +1552,8 @@ const PT_COLUMNS_AUCTION = [
 ];
 const PT_COLUMNS_SNAKE = [
   ...PT_COL_COMMON_LEFT,
-  {key:'avgRank', label:'Yahoo Rk', num:true, render:(r,ctx)=>r.avgRank!=null?`${r.avgRank} <span class="pt-sub">(${rankToRoundPick(r.avgRank,ctx.teams)})</span>`:'—'},
-  {key:'seanRankOverall', label:'Target Rk', num:true, render:(r,ctx)=>r.seanRankOverall!=null?`${r.seanRankOverall} <span class="pt-sub">(${rankToRoundPick(r.seanRankOverall,ctx.teams)})</span>`:'—'},
+  {key:'avgRank', label:'Yahoo Rk', num:true, render:(r,ctx)=>r.avgRank!=null?`${r.avgRank}<span class="pt-sub">${rankToRoundPick(r.avgRank,ctx.teams)}</span>`:'—'},
+  {key:'seanRankOverall', label:'Target Rk', num:true, render:(r,ctx)=>r.seanRankOverall!=null?`${r.seanRankOverall}<span class="pt-sub">${rankToRoundPick(r.seanRankOverall,ctx.teams)}</span>`:'—'},
   ...PT_COL_WAR, ...PT_COL_STATUS,
 ];
 
