@@ -28,7 +28,6 @@ Edit that file directly to update rules; this script only merges it in.
 """
 import sys, os, json, re, glob
 from datetime import datetime, timezone
-import openpyxl
 
 RULES_FILE = "league_rules.json"  # hand-maintained; sits alongside this script
 
@@ -289,6 +288,12 @@ def merge_kepners_draft_order(kepners_league, path="kepners_draft_order.json"):
 
 
 def main(src, dst):
+    # Lazy import: openpyxl is only needed here (Excel parsing), not by the
+    # rest of this module (e.g. normalize_name, which other scripts like
+    # kepners_draft_grades.py import on its own). Keeping it out of the
+    # top-level imports means those scripts don't need openpyxl installed
+    # just to borrow a small helper function.
+    import openpyxl
     wb = openpyxl.load_workbook(src, data_only=True)
     rules = load_league_rules()
     players = read_players(wb)
