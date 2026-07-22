@@ -2,100 +2,8 @@
   "season": 2025,
   "scoring_note": "Uses espn_season_stats_<season>.json as a stand-in for Yahoo/Kepners scoring. Confirmed materially equivalent to Kepners' actual scoring settings (only a minor D/ST scoring difference, immaterial here) -- confirmed with Sean 2026-07-21.",
   "sample_size_note": "n=1 season -- directional, not precise. Re-run once more seasons are added.",
-  "round_war_curve": [
-    {
-      "round": 1,
-      "avg_war": 94.9,
-      "n": 12
-    },
-    {
-      "round": 2,
-      "avg_war": 47.6,
-      "n": 11
-    },
-    {
-      "round": 3,
-      "avg_war": 12.0,
-      "n": 11
-    },
-    {
-      "round": 4,
-      "avg_war": 28.8,
-      "n": 12
-    },
-    {
-      "round": 5,
-      "avg_war": -2.8,
-      "n": 10
-    },
-    {
-      "round": 6,
-      "avg_war": -15.2,
-      "n": 10
-    },
-    {
-      "round": 7,
-      "avg_war": -1.1,
-      "n": 9
-    },
-    {
-      "round": 8,
-      "avg_war": -12.9,
-      "n": 9
-    },
-    {
-      "round": 9,
-      "avg_war": -46.2,
-      "n": 10
-    },
-    {
-      "round": 10,
-      "avg_war": -51.1,
-      "n": 10
-    },
-    {
-      "round": 11,
-      "avg_war": -29.2,
-      "n": 12
-    },
-    {
-      "round": 12,
-      "avg_war": -15.3,
-      "n": 8
-    },
-    {
-      "round": 13,
-      "avg_war": -21.6,
-      "n": 7
-    },
-    {
-      "round": 14,
-      "avg_war": -3.2,
-      "n": 8
-    },
-    {
-      "round": 15,
-      "avg_war": -23.0,
-      "n": 11
-    },
-    {
-      "round": 16,
-      "avg_war": -36.3,
-      "n": 9
-    }
-  ],
+  "methodology_note": "Each keeper's actual WAR is compared to the average actual WAR of same-position, non-keeper picks within a round-window centered on the keeper's round (widens if thin). Keepers with 0 or negative actual WAR are capped at 'fair' at best, regardless of round cost -- no production means no value, even if the round was cheap.",
   "keeper_grades": [
-    {
-      "manager": "Mikey",
-      "team": "Ranus",
-      "player": "Jordan Love",
-      "position": "QB",
-      "kept_round": 12,
-      "actual_war": 0.0,
-      "market_rate_round": 4.9,
-      "round_surplus": 7.1,
-      "verdict": "great value"
-    },
     {
       "manager": "Steve",
       "team": "Burrito",
@@ -103,19 +11,10 @@
       "position": "RB",
       "kept_round": 8,
       "actual_war": 128.4,
-      "market_rate_round": 1,
-      "round_surplus": 7,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Neary",
-      "team": "YaBoi",
-      "player": "Zach Charbonnet",
-      "position": "RB",
-      "kept_round": 9,
-      "actual_war": 34.0,
-      "market_rate_round": 2.4,
-      "round_surplus": 6.6,
+      "peer_avg_war": -28.1,
+      "peer_sample_n": 18,
+      "peer_window_rounds": 2,
+      "surplus_war": 156.5,
       "verdict": "great value"
     },
     {
@@ -125,74 +24,10 @@
       "position": "RB",
       "kept_round": 7,
       "actual_war": 86.2,
-      "market_rate_round": 1.2,
-      "round_surplus": 5.8,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Scott",
-      "team": "Browneye",
-      "player": "Brock Bowers",
-      "position": "TE",
-      "kept_round": 8,
-      "actual_war": 25.1,
-      "market_rate_round": 2.6,
-      "round_surplus": 5.4,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Matty",
-      "team": "MattyDawgPound",
-      "player": "Nico Collins",
-      "position": "WR",
-      "kept_round": 7,
-      "actual_war": 53.1,
-      "market_rate_round": 1.9,
-      "round_surplus": 5.1,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Mikey",
-      "team": "Ranus",
-      "player": "Ladd McConkey",
-      "position": "WR",
-      "kept_round": 8,
-      "actual_war": 12.8,
-      "market_rate_round": 3.0,
-      "round_surplus": 5.0,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Greene",
-      "team": "Phony Grossi",
-      "player": "T.J. Hockenson",
-      "position": "TE",
-      "kept_round": 13,
-      "actual_war": -25.3,
-      "market_rate_round": 8.4,
-      "round_surplus": 4.6,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Scott",
-      "team": "Browneye",
-      "player": "Courtland Sutton",
-      "position": "WR",
-      "kept_round": 6,
-      "actual_war": 43.6,
-      "market_rate_round": 2.1,
-      "round_surplus": 3.9,
-      "verdict": "great value"
-    },
-    {
-      "manager": "Ditto",
-      "team": "ShaqList",
-      "player": "Sam LaPorta",
-      "position": "TE",
-      "kept_round": 12,
-      "actual_war": -20.2,
-      "market_rate_round": 8.2,
-      "round_surplus": 3.8,
+      "peer_avg_war": -25.9,
+      "peer_sample_n": 15,
+      "peer_window_rounds": 2,
+      "surplus_war": 112.1,
       "verdict": "great value"
     },
     {
@@ -202,31 +37,76 @@
       "position": "TE",
       "kept_round": 3,
       "actual_war": 102.8,
-      "market_rate_round": 1,
-      "round_surplus": 2,
+      "peer_avg_war": 2.4,
+      "peer_sample_n": 4,
+      "peer_window_rounds": 4,
+      "surplus_war": 100.4,
       "verdict": "great value"
     },
     {
-      "manager": "Mullins",
-      "team": "Pickups",
-      "player": "Bucky Irving",
+      "manager": "Neary",
+      "team": "YaBoi",
+      "player": "Zach Charbonnet",
       "position": "RB",
-      "kept_round": 10,
-      "actual_war": -18.9,
-      "market_rate_round": 8.2,
-      "round_surplus": 1.8,
-      "verdict": "good value"
+      "kept_round": 9,
+      "actual_war": 34.0,
+      "peer_avg_war": -39.2,
+      "peer_sample_n": 16,
+      "peer_window_rounds": 2,
+      "surplus_war": 73.2,
+      "verdict": "great value"
     },
     {
       "manager": "Matty",
       "team": "MattyDawgPound",
-      "player": "J.K. Dobbins",
-      "position": "RB",
-      "kept_round": 10,
-      "actual_war": -22.5,
-      "market_rate_round": 8.3,
-      "round_surplus": 1.7,
-      "verdict": "good value"
+      "player": "Nico Collins",
+      "position": "WR",
+      "kept_round": 7,
+      "actual_war": 53.1,
+      "peer_avg_war": -13.0,
+      "peer_sample_n": 23,
+      "peer_window_rounds": 2,
+      "surplus_war": 66.1,
+      "verdict": "great value"
+    },
+    {
+      "manager": "Scott",
+      "team": "Browneye",
+      "player": "Courtland Sutton",
+      "position": "WR",
+      "kept_round": 6,
+      "actual_war": 43.6,
+      "peer_avg_war": 3.7,
+      "peer_sample_n": 24,
+      "peer_window_rounds": 2,
+      "surplus_war": 39.9,
+      "verdict": "great value"
+    },
+    {
+      "manager": "Mikey",
+      "team": "Ranus",
+      "player": "Ladd McConkey",
+      "position": "WR",
+      "kept_round": 8,
+      "actual_war": 12.8,
+      "peer_avg_war": -20.7,
+      "peer_sample_n": 19,
+      "peer_window_rounds": 2,
+      "surplus_war": 33.5,
+      "verdict": "great value"
+    },
+    {
+      "manager": "Scott",
+      "team": "Browneye",
+      "player": "Brock Bowers",
+      "position": "TE",
+      "kept_round": 8,
+      "actual_war": 25.1,
+      "peer_avg_war": -2.9,
+      "peer_sample_n": 5,
+      "peer_window_rounds": 2,
+      "surplus_war": 28.0,
+      "verdict": "great value"
     },
     {
       "manager": "Berdine",
@@ -235,9 +115,50 @@
       "position": "RB",
       "kept_round": 9,
       "actual_war": -32.0,
-      "market_rate_round": 8.6,
-      "round_surplus": 0.4,
-      "verdict": "fair"
+      "peer_avg_war": -39.2,
+      "peer_sample_n": 16,
+      "peer_window_rounds": 2,
+      "surplus_war": 7.2,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Mullins",
+      "team": "Pickups",
+      "player": "Bucky Irving",
+      "position": "RB",
+      "kept_round": 10,
+      "actual_war": -18.9,
+      "peer_avg_war": -53.7,
+      "peer_sample_n": 16,
+      "peer_window_rounds": 2,
+      "surplus_war": 34.8,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Matty",
+      "team": "MattyDawgPound",
+      "player": "J.K. Dobbins",
+      "position": "RB",
+      "kept_round": 10,
+      "actual_war": -22.5,
+      "peer_avg_war": -53.7,
+      "peer_sample_n": 16,
+      "peer_window_rounds": 2,
+      "surplus_war": 31.2,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Mikey",
+      "team": "Ranus",
+      "player": "Jordan Love",
+      "position": "QB",
+      "kept_round": 12,
+      "actual_war": 0.0,
+      "peer_avg_war": -0.2,
+      "peer_sample_n": 6,
+      "peer_window_rounds": 2,
+      "surplus_war": 0.2,
+      "verdict": "fair (no value, but so was the field)"
     },
     {
       "manager": "Neary",
@@ -246,20 +167,11 @@
       "position": "WR",
       "kept_round": 2,
       "actual_war": 31.8,
-      "market_rate_round": 2.4,
-      "round_surplus": -0.4,
+      "peer_avg_war": 33.5,
+      "peer_sample_n": 21,
+      "peer_window_rounds": 2,
+      "surplus_war": -1.7,
       "verdict": "fair"
-    },
-    {
-      "manager": "Weber",
-      "team": "Herdsmen",
-      "player": "Brian Thomas Jr.",
-      "position": "WR",
-      "kept_round": 5,
-      "actual_war": -11.3,
-      "market_rate_round": 5.7,
-      "round_surplus": -0.7,
-      "verdict": "overpriced"
     },
     {
       "manager": "Ditto",
@@ -268,9 +180,24 @@
       "position": "WR",
       "kept_round": 7,
       "actual_war": -31.4,
-      "market_rate_round": 8.6,
-      "round_surplus": -1.6,
-      "verdict": "overpriced"
+      "peer_avg_war": -13.0,
+      "peer_sample_n": 23,
+      "peer_window_rounds": 2,
+      "surplus_war": -18.4,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Weber",
+      "team": "Herdsmen",
+      "player": "Brian Thomas Jr.",
+      "position": "WR",
+      "kept_round": 5,
+      "actual_war": -11.3,
+      "peer_avg_war": 10.1,
+      "peer_sample_n": 26,
+      "peer_window_rounds": 2,
+      "surplus_war": -21.4,
+      "verdict": "bust (no value added)"
     },
     {
       "manager": "Mike/Brad",
@@ -279,9 +206,37 @@
       "position": "WR",
       "kept_round": 6,
       "actual_war": -38.6,
-      "market_rate_round": 16,
-      "round_surplus": -10,
-      "verdict": "overpriced"
+      "peer_avg_war": 3.7,
+      "peer_sample_n": 24,
+      "peer_window_rounds": 2,
+      "surplus_war": -42.3,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Ditto",
+      "team": "ShaqList",
+      "player": "Sam LaPorta",
+      "position": "TE",
+      "kept_round": 12,
+      "actual_war": -20.2,
+      "peer_avg_war": 22.1,
+      "peer_sample_n": 5,
+      "peer_window_rounds": 2,
+      "surplus_war": -42.3,
+      "verdict": "bust (no value added)"
+    },
+    {
+      "manager": "Greene",
+      "team": "Phony Grossi",
+      "player": "T.J. Hockenson",
+      "position": "TE",
+      "kept_round": 13,
+      "actual_war": -25.3,
+      "peer_avg_war": 22.1,
+      "peer_sample_n": 5,
+      "peer_window_rounds": 2,
+      "surplus_war": -47.4,
+      "verdict": "bust (no value added)"
     },
     {
       "manager": "Mullins",
@@ -290,9 +245,11 @@
       "position": "QB",
       "kept_round": 5,
       "actual_war": -120.9,
-      "market_rate_round": 16,
-      "round_surplus": -11,
-      "verdict": "overpriced"
+      "peer_avg_war": -1.6,
+      "peer_sample_n": 7,
+      "peer_window_rounds": 2,
+      "surplus_war": -119.3,
+      "verdict": "fair (no value, but so was the field)"
     }
   ],
   "unmatched_players": [
