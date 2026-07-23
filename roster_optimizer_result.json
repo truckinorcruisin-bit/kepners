@@ -1,0 +1,142 @@
+{
+  "generated": "2026-07-23T01:49:28.210593+00:00",
+  "budget": 200,
+  "skill_budget": 198,
+  "kdef_reserve": 2,
+  "roster": [
+    {
+      "slot": "QB",
+      "id": "jayden-daniels",
+      "name": "Jayden Daniels",
+      "pos": "QB",
+      "team": "WAS",
+      "cost": 10,
+      "war": 36.8
+    },
+    {
+      "slot": "RB",
+      "id": "d-andre-swift",
+      "name": "D'Andre Swift",
+      "pos": "RB",
+      "team": "CHI",
+      "cost": 9,
+      "war": 28.7
+    },
+    {
+      "slot": "RB",
+      "id": "derrick-henry",
+      "name": "Derrick Henry",
+      "pos": "RB",
+      "team": "BAL",
+      "cost": 35,
+      "war": 100.2
+    },
+    {
+      "slot": "WR",
+      "id": "rome-odunze",
+      "name": "Rome Odunze",
+      "pos": "WR",
+      "team": "CHI",
+      "cost": 8,
+      "war": 32.5
+    },
+    {
+      "slot": "WR",
+      "id": "davante-adams",
+      "name": "Davante Adams",
+      "pos": "WR",
+      "team": "LAR",
+      "cost": 16,
+      "war": 44.2
+    },
+    {
+      "slot": "WR",
+      "id": "d-j-moore",
+      "name": "D.J. Moore",
+      "pos": "WR",
+      "team": "BUF",
+      "cost": 9,
+      "war": 21.8
+    },
+    {
+      "slot": "TE",
+      "id": "mark-andrews",
+      "name": "Mark Andrews",
+      "pos": "TE",
+      "team": "BAL",
+      "cost": 1,
+      "war": 17.5
+    },
+    {
+      "slot": "FLEX",
+      "id": "josh-jacobs",
+      "name": "Josh Jacobs",
+      "pos": "RB",
+      "team": "GB",
+      "cost": 30,
+      "war": 84.9
+    },
+    {
+      "slot": "BEN",
+      "id": "josh-allen",
+      "name": "Josh Allen",
+      "pos": "QB",
+      "team": "BUF",
+      "cost": 29,
+      "war": 87.6
+    },
+    {
+      "slot": "BEN",
+      "id": "jalen-hurts",
+      "name": "Jalen Hurts",
+      "pos": "QB",
+      "team": "PHI",
+      "cost": 9,
+      "war": 38.7
+    },
+    {
+      "slot": "BEN",
+      "id": "drake-maye",
+      "name": "Drake Maye",
+      "pos": "QB",
+      "team": "NE",
+      "cost": 11,
+      "war": 37.4
+    },
+    {
+      "slot": "BEN",
+      "id": "dallas-goedert",
+      "name": "Dallas Goedert",
+      "pos": "TE",
+      "team": "PHI",
+      "cost": 2,
+      "war": 12.1
+    },
+    {
+      "slot": "BEN",
+      "id": "george-kittle",
+      "name": "George Kittle",
+      "pos": "TE",
+      "team": "SF",
+      "cost": 4,
+      "war": 21.6
+    },
+    {
+      "slot": "BEN",
+      "id": "javonte-williams",
+      "name": "Javonte Williams",
+      "pos": "RB",
+      "team": "DAL",
+      "cost": 25,
+      "war": 69.2
+    }
+  ],
+  "total_war": 633.2,
+  "total_cost": 198,
+  "budget_remaining": 0,
+  "assumptions": [
+    "Cost assumed to equal ESPN's recommended auction bid (espnRecommendedBid) -- a what-if if you won every player at exactly that price, not a live bid strategy.",
+    "Optimizes total skill-position roster WAR (bench included), found via exact integer programming (CBC), not a greedy heuristic.",
+    "K and DEF are excluded entirely (no meaningful WAR signal to optimize -- same reasoning as bid_calibration.py's skill-position-only calibration). Real K/DEF spend is assumed as a flat $2 reserve ($1 x 2 slots) carved out of the $200 total, leaving $198 for this optimization."
+  ]
+}
