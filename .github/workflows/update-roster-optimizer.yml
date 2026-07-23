@@ -41,7 +41,7 @@ jobs:
           status=${PIPESTATUS[0]}
           echo '```' >> roster_optimizer_result.md
           if [ "$status" -ne 0 ]; then
-            echo "::error::roster_optimizer.py exited $status -- see message above. Most likely bigboard.json lacks projectedWar/espnRecommendedBid; run 'Update Big Board' then 'Update Player Values' first."
+            echo "::error::roster_optimizer.py exited $status -- see the diagnosis printed above (it now explains exactly why: a starved position like K/DEF with no priced players, or budget too tight for the cheapest legal roster)."
             exit "$status"
           fi
 
