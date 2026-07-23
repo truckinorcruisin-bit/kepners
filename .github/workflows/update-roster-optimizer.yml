@@ -24,18 +24,34 @@ jobs:
 
       - name: Run optimizer and capture output
         run: |
-          echo "# Roster Optimizer Results" > roster_optimizer_result.md
-          echo "" >> roster_optimizer_result.md
-          echo "Generated $(date -u +"%Y-%m-%d %H:%M UTC") from bigboard.json." >> roster_optimizer_result.md
-          echo "" >> roster_optimizer_result.md
+          {
+            echo "# Roster Optimizer Results"
+            echo ""
+            echo "Generated $(date -u +"%Y-%m-%d %H:%M UTC") from bigboard.json."
+            echo ""
+            echo '```'
+          } > roster_optimizer_result.md
+          # Tee the optimizer's own stdout to BOTH the results file and the
+          # Actions log (so a failure message is actually visible in the log,
+          # not swallowed into the .md file). PIPESTATUS[0] preserves python's
+          # real exit code through the pipe so the step still fails loudly if
+          # the optimizer can't run (e.g. bigboard.json has no WAR/bid data yet
+          # -- run "Update Player Values" first).
+          python3 roster_optimizer.py 2>&1 | tee -a roster_optimizer_result.md
+          status=${PIPESTATUS[0]}
           echo '```' >> roster_optimizer_result.md
-          python3 roster_optimizer.py >> roster_optimizer_result.md
-          echo '```' >> roster_optimizer_result.md
+          if [ "$status" -ne 0 ]; then
+            echo "::error::roster_optimizer.py exited $status -- see message above. Most likely bigboard.json lacks projectedWar/espnRecommendedBid; run 'Update Big Board' then 'Update Player Values' first."
+            exit "$status"
+          fi
 
       - name: Commit results
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add roster_optimizer_result.md roster_optimizer_result.json
+          git add roster_optimizer_result.md
+          # the JSON is only produced on a successful run; add it only if present
+          [ -f roster_optimizer_result.json ] && git add roster_optimizer_result.json
           git diff --staged --quiet || git commit -m "Update roster optimizer results"
           git push
