@@ -222,20 +222,25 @@
   .roster-cell.full{border-color:var(--green);}
   .roster-cell.full .rc-pos{color:var(--green);}
 
-  /* Cockpit: Active Player (narrow) | Board (flexible, resizable) | Opponent (narrow).
-     The drag handle resizes by rewriting the whole grid-template-columns string
-     from JS (see attachResizer) rather than a CSS var, which is more robust. */
-  /* Static fr columns -- no calc()/var() fr math, which is fragile as a grid
-     track across browsers. The drag handle resizes by rewriting the whole
-     grid-template-columns string from JS (see wireCockpitResizer), so the CSS
-     just needs a sane default 3-column split here. */
+  /* Cockpit: Active Player | Board | [resizer] | Opponent. There are FOUR
+     direct children of .cockpit-cols -- the two side columns, the board, AND
+     the drag handle between board and opponent. So the grid needs FOUR tracks;
+     the 3rd is a fixed narrow track for the resizer. (Earlier bug: only 3
+     tracks were declared, so the opponent column wrapped to a new row at the
+     bottom of the page.) The resizer rewrites the fr weights from JS. */
   .cockpit-cols{display:grid;grid-template-columns:1fr;gap:16px;}
   @media(min-width:900px){
     .cockpit-cols{
-      grid-template-columns:0.85fr 1.6fr 1fr;
+      grid-template-columns:0.85fr 1.6fr 8px 1fr;
       align-items:start;
     }
     .wrap{max-width:1400px;}
+  }
+  /* on mobile (single column) the resizer is hidden, so it doesn't consume a row */
+  .cockpit-cols{grid-auto-flow:row;}
+  /* replay cockpit has no resizer -- 3 children, 3 tracks */
+  @media(min-width:900px){
+    .cockpit-cols-noresize{grid-template-columns:0.85fr 1.6fr 1fr;}
   }
   .cockpit-col{min-width:0;}
   .cockpit-col .seclabel:first-child{margin-top:0;}
@@ -243,8 +248,8 @@
   /* drag handle sits between board and opponent columns */
   .cockpit-resizer{display:none;}
   @media(min-width:900px){
-    .cockpit-resizer{display:block;width:6px;cursor:col-resize;background:var(--line);
-      border-radius:3px;align-self:stretch;margin:0 -5px;position:relative;z-index:2;}
+    .cockpit-resizer{display:block;width:8px;cursor:col-resize;background:var(--line);
+      border-radius:3px;align-self:stretch;position:relative;z-index:2;}
     .cockpit-resizer:hover,.cockpit-resizer.dragging{background:var(--amber);}
   }
 
@@ -385,7 +390,7 @@
      max-height so all three feel visually aligned. */
   .panel-scroll{max-height:62vh;overflow-y:auto;}
   @media(min-width:900px){
-    .snake-cockpit{grid-template-columns:1fr 1.3fr 1fr;}
+    .snake-cockpit{grid-template-columns:1fr 1.3fr 8px 1fr;}
   }
   .snake-banner{margin-bottom:12px;}
   .myteam-list{display:flex;flex-direction:column;gap:4px;}
@@ -1059,21 +1064,25 @@ function wireSnakeResizer(){
 }
 
 // Shared resizer: drags the divider between the middle and right columns by
-// rewriting the WHOLE grid-template-columns string (outer tracks fixed at
-// `defaults[0]fr` and `defaults[2]fr`, middle track adjusted). Deliberately
-// avoids CSS-var/calc fr math, which proved fragile as a grid track. `cols`
-// is the .cockpit-cols grid; `defaults` = [left, middle, right] fr weights.
+// rewriting the WHOLE grid-template-columns string. The grid has FOUR tracks:
+// left col, middle (board), an 8px resizer track, right col. Only the middle
+// fr weight changes on drag; the others stay fixed. `defaults` = [left, middle,
+// right] fr weights (the 8px resizer track is constant and inserted here).
 function attachResizer(resizer, cols, defaults){
   if(!resizer || !cols) return;
+  const trackStr = (mid)=>{
+    const [l,,r] = defaults;
+    return `${l}fr ${mid}fr 8px ${r}fr`;
+  };
   const readMid = ()=>{
     // parse the current middle fr weight from the inline style if present,
-    // else fall back to the default
+    // else fall back to the default. Matches "Lfr Mfr 8px Rfr".
     const cur = cols.style.gridTemplateColumns;
-    const m = cur && cur.match(/^([\d.]+)fr\s+([\d.]+)fr\s+([\d.]+)fr$/);
+    const m = cur && cur.match(/^([\d.]+)fr\s+([\d.]+)fr\s+8px\s+([\d.]+)fr$/);
     return m ? parseFloat(m[2]) : defaults[1];
   };
   resizer.onmousedown = (e)=>{
-    _cockpitDrag = {cols, startX:e.clientX, startMid:readMid(), defaults};
+    _cockpitDrag = {cols, startX:e.clientX, startMid:readMid(), defaults, trackStr};
     resizer.classList.add('dragging');
     document.body.style.userSelect='none';
     e.preventDefault();
@@ -1085,7 +1094,7 @@ function attachResizer(resizer, cols, defaults){
       const delta = (e.clientX-_cockpitDrag.startX)/250; // ~250px drag ≈ 1.0 fr
       const mid = Math.max(0.6, Math.min(4, _cockpitDrag.startMid+delta));
       const [l,,r] = _cockpitDrag.defaults;
-      _cockpitDrag.cols.style.gridTemplateColumns = `${l}fr ${mid.toFixed(2)}fr ${r}fr`;
+      _cockpitDrag.cols.style.gridTemplateColumns = `${l}fr ${mid.toFixed(2)}fr 8px ${r}fr`;
     });
     window.addEventListener('mouseup', ()=>{
       if(_cockpitDrag){
@@ -2315,7 +2324,7 @@ function renderReplayPlayback(el){
 
     <div class="ticker"><div class="track">${tickerHtml}${tickerHtml}</div></div>
 
-    <div class="cockpit-cols" style="margin-top:14px;">
+    <div class="cockpit-cols cockpit-cols-noresize" style="margin-top:14px;">
       <div class="cockpit-col">
         <div class="seclabel">On The Block ${nextPick&&isAuction?`<span class="retro-tag">sold $${nextPick.cost}</span>`:''}</div>
         <div class="playerCardArea"></div>
