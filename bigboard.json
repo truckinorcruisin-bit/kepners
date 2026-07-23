@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-07-23T03:18:03.207223+00:00"
+    "generated": "2026-07-23T16:48:46.372182+00:00"
   },
   "players": [
     {
@@ -8714,49 +8714,65 @@
           "slot": 1,
           "team": "Demin",
           "manager": "Bobby",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 2,
           "team": "Phony Grossi",
           "manager": "Greene",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 3,
           "team": "Ranus",
           "manager": "Mikey",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 4,
           "team": "YaBoi",
           "manager": "Neary",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 5,
           "team": "ShaqList",
           "manager": "Ditto",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 6,
           "team": "MattyDawgPound",
           "manager": "Matty",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 7,
           "team": "Pickups",
           "manager": "Mullins",
-          "isMe": true
+          "isMe": true,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 8,
           "team": "Browneye",
           "manager": "Scott",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 9,
@@ -8768,13 +8784,17 @@
           "slot": 10,
           "team": "Burrito",
           "manager": "Steve",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 11,
           "team": "Herdsmen",
           "manager": "Weber",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 12,
@@ -8930,8 +8950,13 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-07-23T03:18:01.201103+00:00",
-      "draftOrderUnmatched": []
+      "draftOrderGenerated": "2026-07-23T16:48:44.384211+00:00",
+      "draftOrderUnmatched": [
+        "Division C",
+        "Joe",
+        "Keepers will be due: TBD",
+        "McGann"
+      ]
     },
     "miami": {
       "platform": "yahoo",
