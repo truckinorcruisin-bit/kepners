@@ -93,6 +93,9 @@ MIN_PEER_SAMPLE = 3
 # Surplus-vs-peers thresholds (in WAR points) for the verdict labels, and the
 # "meaningfully above zero" bar used by the value floor. All tunable; flagged
 # as directional given the single-season sample (see caveats above).
+# ELITE is a new tier above "great" -- a 100+ WAR surplus over same-cost peers
+# is a genuine roster-changing outcome, not just "great," per Sean's feedback.
+SURPLUS_ELITE = 100
 SURPLUS_GREAT = 15
 SURPLUS_GOOD = 5
 SURPLUS_FAIR_FLOOR = -5
@@ -199,6 +202,8 @@ def grade_keepers(picks):
                 # whiffed at this cost, or "bust" if peers proved real value
                 # was gettable at this cost/position and this pick missed it.
                 verdict = "bust (no value added)" if avg > PEER_MEANINGFUL_BAR else "fair (no value, but so was the field)"
+            elif surplus >= SURPLUS_ELITE:
+                verdict = "elite value"
             elif surplus >= SURPLUS_GREAT:
                 verdict = "great value"
             elif surplus >= SURPLUS_GOOD:
@@ -216,17 +221,30 @@ def grade_keepers(picks):
             "surplus_war": surplus, "verdict": verdict,
         })
 
-    # Sort best-to-worst by surplus, but a zero-floored entry (actual_war<=0)
-    # is capped at 0 for SORTING purposes even if the raw surplus number looks
-    # positive (e.g. actual_war=0 vs a negative-WAR peer group) -- otherwise a
-    # do-nothing keeper could out-rank a genuinely productive one just because
-    # the field was even worse. The verdict label already reflects this; the
-    # sort order should agree with it.
+    # Sort: real production (actual_war > 0) always outranks a keeper who added
+    # zero/negative value, regardless of the cost-relative surplus number --
+    # per Sean's feedback, absolute contribution matters (a keeper with +31.8
+    # WAR belongs near the top even if his cost-adjusted surplus is slightly
+    # negative, not shuffled in among keepers who produced nothing).
+    #
+    # BUG FIXED (this revision): the previous version capped surplus at 0 for
+    # ANY actual_war<=0 keeper before sorting, which collapsed every such
+    # keeper to the SAME sort key -- losing the real ordering between them
+    # (e.g. three keepers who all "added no value" still clearly differ: one
+    # was drafted a round later with much better actual production than
+    # another, and should rank above it). Fixed with a proper (tier, value)
+    # sort: tier 0 = real production added (ranked by surplus among
+    # themselves), tier 1 = no value but the field also whiffed (ranked by
+    # actual_war -- less-bad ranks higher), tier 2 = bust (worse than tier 1,
+    # ranked by actual_war too), tier 3 = insufficient data (always last).
     def sort_key(g):
         if g["surplus_war"] is None:
-            return (1, 0)
-        val = g["surplus_war"] if g["actual_war"] > 0 else min(g["surplus_war"], 0)
-        return (0, -val)
+            return (3, 0)
+        if g["actual_war"] > 0:
+            return (0, -g["surplus_war"])
+        if "bust" in g["verdict"]:
+            return (2, -g["actual_war"])
+        return (1, -g["actual_war"])
     graded.sort(key=sort_key)
     return graded
 
