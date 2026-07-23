@@ -16,6 +16,12 @@
     -webkit-font-smoothing:antialiased;padding-bottom:40px;}
   .wrap{max-width:780px;margin:0 auto;padding:0 14px;}
 
+  /* site-wide footer -- Yahoo Fantasy attribution required on every page */
+  .site-foot{max-width:780px;margin:24px auto 0;padding:14px 14px 30px;font-size:9.5px;
+    color:var(--dim);border-top:1px solid var(--line);letter-spacing:0.02em;}
+  .site-foot a{color:var(--cyan);text-decoration:none;}
+  .site-foot a:hover{text-decoration:underline;}
+
   /* header */
   header{position:sticky;top:0;z-index:50;background:var(--bg);border-bottom:1px solid var(--line);}
   .hbar{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;max-width:780px;margin:0 auto;}
@@ -321,6 +327,7 @@
   .pt-controls button.clear{background:var(--panel);border:1px solid var(--line-2);color:var(--dim);
     font-family:inherit;font-size:10px;padding:8px 12px;cursor:pointer;letter-spacing:0.06em;}
   .pt-count{font-size:10px;color:var(--dim);margin-bottom:8px;}
+  .pt-warsrc{opacity:0.75;}
 
   /* data-source legend (explains column provenance + season) */
   .ds-legend{margin:0 0 12px;border:1px solid var(--line);border-radius:4px;background:var(--panel);}
@@ -498,6 +505,10 @@
   <!-- PREP VIEW (Kepners/Miami: Draft Order, Owner Profiles, Keeper Grades) -->
   <div id="prepView" style="display:none;"></div>
 </div>
+
+<footer class="site-foot">
+  Fantasy data provided by <a href="https://sports.yahoo.com/fantasy/" target="_blank" rel="noopener">Yahoo Fantasy</a>.
+</footer>
 
 <script>
 let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, KEPG=null, activeLeague='kepners', activeMode='draft';
@@ -1238,13 +1249,22 @@ function renderDraftOrder(lg){
       Run "Update Kepners Draft Order" to pull the live Google Sheet.</div>`;
     return;
   }
-  const withPos = lg.teams.filter(t=>t.draftPosition!=null).sort((a,b)=>a.draftPosition-b.draftPosition);
+  // Show every team that's synced from the sheet, not just ones with a
+  // drawn slot -- keepers are usually locked in before slots are drawn, so
+  // filtering on draftPosition!=null was hiding real keeper data. Assigned
+  // slots sort first (in order), then TBD teams.
+  const withPos = lg.teams.slice().sort((a,b)=>{
+    const aNone = a.draftPosition==null, bNone = b.draftPosition==null;
+    if (aNone !== bNone) return aNone ? 1 : -1;
+    return aNone ? 0 : a.draftPosition - b.draftPosition;
+  });
   const rows = withPos.map(t=>{
     const keeperHtml = (t.liveKeepers||[]).length
       ? t.liveKeepers.map(k=>`<span class="do-keeper">${k.player} (R${k.round})</span>`).join('<br>')
       : `<span class="do-none">none yet</span>`;
+    const posHtml = t.draftPosition!=null ? t.draftPosition : `<span class="do-none">TBD</span>`;
     return `<tr class="${t.isMe?'me':''}">
-      <td>${t.draftPosition}</td>
+      <td>${posHtml}</td>
       <td>${t.team}${t.isMe?' ★':''}</td>
       <td>${t.manager}</td>
       <td>${keeperHtml}</td>
@@ -1799,7 +1819,8 @@ function renderPlayerTable(container, opts){
       </select>
       <button class="clear">CLEAR</button>
     </div>
-    <div class="pt-count">${rows.length} players${activeLeague!=='zimmer'?' · drafted-status live only in Zimmer':''}</div>`;
+    <div class="pt-count">${rows.length} players${activeLeague!=='zimmer'?' · drafted-status live only in Zimmer':''}
+      <span class="pt-warsrc">· WAR calculated based on 2026 ESPN Projections</span></div>`;
 
   const header = cols.map(c=>{
     const arrow = playerTable.sortKey===c.key ? `<span class="arrow">${playerTable.sortDir==='asc'?'▲':'▼'}</span>` : '';

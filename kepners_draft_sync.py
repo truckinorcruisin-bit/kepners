@@ -102,9 +102,13 @@ def parse(csv_text, known_managers):
         team_raw = cell(c_team)
         if not team_raw:
             continue  # blank trailer rows
-        pick = cell(c_pick)
-        if not pick.isdigit():
-            continue
+        pick_raw = cell(c_pick)
+        # Draft slots are drawn separately from (and usually later than)
+        # keepers being locked in, so a blank pick number here does NOT mean
+        # the row is empty -- it just means the slot draw hasn't happened
+        # yet. Keep the row with pick=None rather than dropping real keeper
+        # data on the floor; the site can show "TBD" for an unassigned slot.
+        pick = int(pick_raw) if pick_raw.isdigit() else None
 
         team_norm = norm(team_raw)
         resolved = known_norm.get(MANAGER_ALIASES.get(team_norm, team_norm))
@@ -116,7 +120,7 @@ def parse(csv_text, known_managers):
             return int(v) if v.strip().isdigit() else None
 
         draft_order.append({
-            "pick": int(pick),
+            "pick": pick,  # None if the slot hasn't been drawn yet
             "manager_raw": team_raw,
             "manager": resolved,  # None if unmatched -- see unmatched_managers
             "keeper1_name": cell(c_k1) or None,
@@ -124,7 +128,8 @@ def parse(csv_text, known_managers):
             "keeper2_name": cell(c_k2) or None,
             "keeper2_round": as_round(cell(c_k2r)),
         })
-    draft_order.sort(key=lambda r: r["pick"])
+    # Unassigned slots (pick=None) sort after all assigned ones.
+    draft_order.sort(key=lambda r: (r["pick"] is None, r["pick"]))
     return draft_order, sorted(set(unmatched))
 
 
