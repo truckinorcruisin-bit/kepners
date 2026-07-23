@@ -308,6 +308,7 @@
   .kg-verdict.overpriced{background:rgba(255,77,77,.15);color:var(--red);}
   .kg-verdict.bust{background:rgba(255,77,77,.22);color:var(--red);font-weight:700;}
   .kg-verdict.insufficient{background:rgba(125,139,153,.1);color:var(--line-2);}
+  .kg-verdict.na{background:rgba(125,139,153,.1);color:var(--line-2);}
   .kgTable td .pt-sub{display:block;}
 
   /* ===== searchable player table ===== */
@@ -320,6 +321,21 @@
   .pt-controls button.clear{background:var(--panel);border:1px solid var(--line-2);color:var(--dim);
     font-family:inherit;font-size:10px;padding:8px 12px;cursor:pointer;letter-spacing:0.06em;}
   .pt-count{font-size:10px;color:var(--dim);margin-bottom:8px;}
+
+  /* data-source legend (explains column provenance + season) */
+  .ds-legend{margin:0 0 12px;border:1px solid var(--line);border-radius:4px;background:var(--panel);}
+  .ds-legend summary{cursor:pointer;font-size:11px;color:var(--cyan);padding:8px 11px;user-select:none;}
+  .ds-legend summary:hover{color:var(--amber);}
+  .ds-legend[open] summary{border-bottom:1px solid var(--line);}
+  .ds-table{width:100%;border-collapse:collapse;font-size:10.5px;}
+  .ds-table th{text-align:left;font-size:8.5px;letter-spacing:0.05em;text-transform:uppercase;
+    color:var(--dim);padding:6px 11px;font-weight:500;}
+  .ds-table td{padding:5px 11px;border-top:1px solid var(--line);vertical-align:top;}
+  .ds-table .ds-col{color:var(--txt);font-weight:600;white-space:nowrap;}
+  .ds-table .ds-note{color:var(--dim);line-height:1.45;}
+  .ds-yr{font-size:9px;padding:1px 6px;border-radius:9px;white-space:nowrap;font-weight:700;}
+  .ds-yr-now{background:rgba(61,220,132,.14);color:var(--green);}
+  .ds-yr-mix{background:rgba(255,183,3,.15);color:var(--amber);}
   .ptable-wrap{overflow-x:auto;max-height:62vh;overflow-y:auto;}
   table.ptable{width:100%;border-collapse:collapse;font-size:11px;}
   table.ptable th{position:sticky;top:0;background:var(--bg);text-align:left;font-size:9px;
@@ -791,11 +807,91 @@ function renderPrepView(lg){
   el.innerHTML = `
     <div id="draftOrderArea"></div>
     <div id="ownerProfilesArea"></div>
+    <div id="keeper2026Area"></div>
     <div id="keeperGradesArea"></div>
   `;
   renderDraftOrder(lg);
   renderOwnerProfiles(lg);
+  render2026KeeperGrades(lg);
   renderKeeperGrades();
+}
+
+// 2026 keeper value grades: forward-looking (the season hasn't been played, so
+// there's no actual WAR yet). For each team's live 2026 keepers (from the
+// Google Sheet sync), compare the keeper's ROUND COST to where that player is
+// projected to be drafted this year (consensus rank -> round). Keeping a player
+// well before their market round = value; keeping them at/after it = a reach.
+// This is distinct from the "2025 Keeper Value Grades" below, which grade last
+// season's keepers on ACTUAL production.
+function render2026KeeperGrades(lg){
+  const el = document.getElementById('keeper2026Area');
+  if(!el) return;
+  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
+  const teams = (lg.teams||[]).filter(t=>t.liveKeepers && t.liveKeepers.length);
+  if(!teams.length){
+    el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades</div>
+      <div class="empty-note">No 2026 keepers synced yet.<br>
+      Run "Update Kepners Draft Order" to pull keepers from the Google Sheet.</div>`;
+    return;
+  }
+  const teamCount = lg.teams.length || 12;
+  const rankToRound = (rank)=> rank!=null ? Math.floor((rank-1)/teamCount)+1 : null;
+
+  const graded = [];
+  teams.forEach(t=>{
+    t.liveKeepers.forEach(k=>{
+      const bp = findBigBoardPlayer(k.player);
+      const keeperRound = k.round;
+      const consensusRank = bp ? bp.avgRank : null;
+      const marketRound = rankToRound(consensusRank);
+      let surplus = (marketRound!=null && keeperRound!=null) ? keeperRound - marketRound : null;
+      // surplus > 0 means kept LATER than the player's projected draft round
+      // (a bargain); < 0 means kept earlier than they'd go anyway (a reach).
+      let verdict, cls;
+      if(!bp){ verdict='player not on board'; cls='na'; }
+      else if(surplus==null){ verdict='no consensus rank'; cls='na'; }
+      else if(surplus>=4){ verdict='elite value'; cls='elite'; }
+      else if(surplus>=2){ verdict='great value'; cls='great'; }
+      else if(surplus>=0.5){ verdict='good value'; cls='good'; }
+      else if(surplus>-1.5){ verdict='fair'; cls='fair'; }
+      else { verdict='reach'; cls='overpriced'; }
+      graded.push({
+        manager:t.manager, team:t.team||t.manager, player:k.player,
+        pos: bp?bp.pos:'—', keeperRound, consensusRank, marketRound,
+        proj: bp?bp.projectedWar:null, surplus, verdict, cls,
+      });
+    });
+  });
+  // sort best value first; unmatched/no-rank to the bottom
+  graded.sort((a,b)=>{
+    if(a.surplus==null && b.surplus==null) return 0;
+    if(a.surplus==null) return 1;
+    if(b.surplus==null) return -1;
+    return b.surplus-a.surplus;
+  });
+
+  const rows = graded.map(g=>`
+    <tr>
+      <td>${g.manager}</td>
+      <td>${g.player}</td>
+      <td>${g.pos}</td>
+      <td class="num">R${g.keeperRound ?? '—'}</td>
+      <td class="num">${g.consensusRank!=null?`${g.consensusRank} <span class="pt-sub">R${g.marketRound}</span>`:'—'}</td>
+      <td class="num">${g.surplus!=null?(g.surplus>0?'+':'')+g.surplus+' rd':'—'}</td>
+      <td><span class="kg-verdict ${g.cls}">${g.verdict}</span></td>
+    </tr>`).join('');
+
+  el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades
+    <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
+    <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      Forward-looking: the 2026 season hasn't been played, so this compares each keeper's <b>round cost</b>
+      (from the Google Sheet) to where the player is <b>projected to be drafted</b> this year (2026 consensus rank → round).
+      Positive surplus = kept later than they'd go anyway (a bargain); negative = a reach. Distinct from the 2025 grades below (actual results).
+    </div>
+    <table class="kgTable"><thead><tr>
+      <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Keeper Rd</th>
+      <th class="num">Consensus Rk</th><th class="num">Surplus</th><th>Verdict</th>
+    </tr></thead><tbody>${rows}</tbody></table>`;
 }
 
 // -------- snake cockpit panels --------
@@ -1197,7 +1293,7 @@ function renderKeeperGrades(){
   const el = document.getElementById('keeperGradesArea');
   if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
   if(!KEPG || !KEPG.keeper_grades || !KEPG.keeper_grades.length){
-    el.innerHTML = `<div class="seclabel">Keeper Value Grades</div>
+    el.innerHTML = `<div class="seclabel">2025 Keeper Value Grades <span style="font-size:9px;color:var(--dim);font-weight:400;">— actual results</span></div>
       <div class="empty-note">kepners_draft_grades.json not found.<br>
       Run "Update Kepners Draft Grades" (needs espn_season_stats + Kepners draft history).</div>`;
     return;
@@ -1214,8 +1310,8 @@ function renderKeeperGrades(){
       <td class="num">${g.surplus_war!=null?(g.surplus_war>0?'+':'')+g.surplus_war:'—'}</td>
       <td><span class="kg-verdict ${g.verdict.replace(/[^a-z]+/g,'-').split('-')[0]}">${g.verdict}</span></td>
     </tr>`).join('');
-  el.innerHTML = `<div class="seclabel">Keeper Value Grades
-    <span style="font-size:9px;color:var(--dim);font-weight:400;">— ${KEPG.season}</span></div>
+  el.innerHTML = `<div class="seclabel">2025 Keeper Value Grades
+    <span style="font-size:9px;color:var(--dim);font-weight:400;">— actual results, ${KEPG.season}</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
       ${KEPG.scoring_note} ${KEPG.methodology_note||''} ${KEPG.sample_size_note}
     </div>
@@ -1766,9 +1862,38 @@ function renderPlayerTable(container, opts){
   }
 }
 
+function dataSourceLegend(){
+  // Explains, per column, where each value comes from and whether it reflects
+  // 2026 (this season's projections/ranks) or 2025 (last season's actuals) --
+  // and whether it's from Sean's Big Board Excel, ESPN, the NFL schedule, or
+  // computed. Auction (Zimmer) and snake (Kepners/Miami) show slightly
+  // different columns, so the legend adapts.
+  const isAuction = activeLeague==='zimmer';
+  const rows = [
+    ['Player · Team · Pos · Tier', 'Your Big Board Excel', '2026', 'Your own rankings, tiers, and team assignments.'],
+    [isAuction ? 'Plat Rk' : 'Yahoo Rk', 'Big Board Excel (platform consensus)', '2026', 'Preseason consensus rank blended across platforms (Yahoo/ESPN/CBS/etc), from your Big Board.'],
+    ['Target Rk', 'Derived from your Big Board', '2026', 'Your per-position ranks ordered into one overall list by projected value (VBD-style).'],
+    ['Bye', 'NFL schedule', '2026', 'Set by the player’s NFL team (this season’s bye schedule).'],
+    ['Raw WAR', 'ESPN projections (computed)', '2026', 'ESPN’s 2026 projected points minus the replacement-level player at that position.'],
+    ['Adj WAR', 'Computed', '2026', 'Raw WAR nudged by how well the player fits your current roster needs.'],
+  ];
+  if(isAuction){
+    rows.push(['ESPN $', 'ESPN', '2026', 'ESPN’s crowd-sourced recommended auction value this season.']);
+    rows.push(['Target $', 'Computed (blended)', '2026 + 2025', 'WAR × a calibrated $/WAR curve. The curve blends 2025 Zimmer auction history with 2026 ESPN values — the only place last season’s data touches the board.']);
+  }
+  const body = rows.map(([col,src,yr,note])=>`
+    <tr><td class="ds-col">${col}</td><td>${src}</td>
+    <td><span class="ds-yr ds-yr-${yr.includes('2025')?'mix':'now'}">${yr}</span></td>
+    <td class="ds-note">${note}</td></tr>`).join('');
+  return `<details class="ds-legend"><summary>ⓘ Where does this data come from?</summary>
+    <table class="ds-table"><thead><tr><th>Column</th><th>Source</th><th>Season</th><th></th></tr></thead>
+    <tbody>${body}</tbody></table></details>`;
+}
+
 function renderPlayersTab(){
   const el = document.getElementById('playersView');
   el.innerHTML = `<div class="seclabel">Player Search — all players${activeLeague==='zimmer'?'':' · switch to Zimmer for live drafted-status'}</div>
+    ${dataSourceLegend()}
     <div id="playersTableMount"></div>`;
   const mount = el.querySelector('#playersTableMount');
   const rerender = ()=>renderPlayerTable(mount, {rerender});

@@ -42,6 +42,42 @@ REPLACEMENT_RANK = {
 SUFFIX_RE = re.compile(r"\b(jr|sr|ii|iii|iv|v)\.?\b", re.IGNORECASE)
 PUNCT_RE = re.compile(r"[.\'\-]")
 
+# 2026 NFL bye weeks by team (provided by Sean, authoritative). Bye depends
+# only on a player's NFL team, so we assign it deterministically from the team
+# here rather than relying on ESPN's per-player field -- this way EVERY player
+# with a known team gets a bye, including ones ESPN doesn't match. Week 12 has
+# no byes. If the schedule changes season to season, update this map.
+TEAM_BYE_2026 = {
+    "CAR": 5, "KC": 5,
+    "CIN": 6, "DET": 6, "MIA": 6, "MIN": 6,
+    "BUF": 7, "JAX": 7, "LAC": 7, "WAS": 7,
+    "HOU": 8, "NO": 8, "NYG": 8, "SF": 8,
+    "PIT": 9, "TEN": 9,
+    "CHI": 10, "DEN": 10, "PHI": 10, "TB": 10,
+    "ATL": 11, "CLE": 11, "GB": 11, "LAR": 11, "NE": 11, "SEA": 11,
+    "BAL": 13, "IND": 13, "LV": 13, "NYJ": 13,
+    "ARI": 14, "DAL": 14,
+}
+# Normalize the various team abbreviations that appear in the Big Board Excel
+# and ESPN data to the canonical keys used in TEAM_BYE_2026.
+TEAM_ALIAS = {
+    "JAC": "JAX", "WSH": "WAS", "WFT": "WAS", "LA": "LAR", "STL": "LAR",
+    "LVR": "LV", "OAK": "LV", "KAN": "KC", "NOR": "NO", "NOS": "NO",
+    "SFO": "SF", "TAM": "TB", "GNB": "GB", "NWE": "NE", "ARZ": "ARI",
+    "SD": "LAC", "SDG": "LAC", "BLT": "BAL", "CLV": "CLE", "HST": "HOU",
+}
+
+
+def bye_week_for_team(team):
+    """Deterministic bye week from a team abbreviation, tolerating the common
+    abbreviation variants. Returns None for unknown/blank teams (e.g. free
+    agents, or a Big Board team string we don't recognize)."""
+    if not team:
+        return None
+    t = str(team).strip().upper()
+    t = TEAM_ALIAS.get(t, t)
+    return TEAM_BYE_2026.get(t)
+
 
 def normalize_name(name):
     """Lowercase, strip Jr./Sr./numeral suffixes and punctuation, collapse
@@ -99,7 +135,8 @@ def merge_espn_values(players):
             p["espnRecommendedBid"] = None
             p["projectedPoints"] = None
             p["projectedWar"] = None
-            p["byeWeek"] = None
+            # bye still comes from the authoritative team map even with no ESPN data
+            p["byeWeek"] = bye_week_for_team(p.get("team"))
             p["proTeamEspn"] = None
         return
 
@@ -112,15 +149,19 @@ def merge_espn_values(players):
             p["espnRecommendedBid"] = None
             p["projectedPoints"] = None
             p["projectedWar"] = None
-            p["byeWeek"] = None
+            p["byeWeek"] = bye_week_for_team(p.get("team"))
             p["proTeamEspn"] = None
             continue
         proj = ev.get("projected_total_points")
         replacement = replacement_by_position.get(p["pos"])
         p["espnRecommendedBid"] = ev.get("auction_value_avg")
         p["projectedPoints"] = proj
-        p["byeWeek"] = ev.get("bye_week")
+        # Prefer the authoritative team-map bye; fall back to ESPN's per-player
+        # bye only if we can't resolve the team (proTeamEspn or Big Board team).
         p["proTeamEspn"] = ev.get("pro_team")
+        p["byeWeek"] = (bye_week_for_team(ev.get("pro_team"))
+                        or bye_week_for_team(p.get("team"))
+                        or ev.get("bye_week"))
         p["projectedWar"] = (
             round(proj - replacement, 1) if (proj is not None and replacement is not None) else None
         )
