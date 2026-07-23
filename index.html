@@ -842,7 +842,8 @@ function render2026KeeperGrades(lg){
   if(!teams.length){
     el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades</div>
       <div class="empty-note">No 2026 keepers synced yet.<br>
-      Run "Update Kepners Draft Order" to pull keepers from the Google Sheet.</div>`;
+      Run "Update Kepners Draft Order" to pull keepers from the Google Sheet.<br>
+      <span class="pt-warsrc">WAR/consensus rank will be calculated based on 2026 ESPN Projections.</span></div>`;
     return;
   }
   const teamCount = lg.teams.length || 12;
@@ -895,7 +896,8 @@ function render2026KeeperGrades(lg){
   el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
-      Forward-looking: the 2026 season hasn't been played, so this compares each keeper's <b>round cost</b>
+      <span class="pt-warsrc">WAR/consensus rank calculated based on 2026 ESPN Projections (the season hasn't been played yet).</span><br>
+      Forward-looking: this compares each keeper's <b>round cost</b>
       (from the Google Sheet) to where the player is <b>projected to be drafted</b> this year (2026 consensus rank → round).
       Positive surplus = kept later than they'd go anyway (a bargain); negative = a reach. Distinct from the 2025 grades below (actual results).
     </div>
@@ -1333,6 +1335,7 @@ function renderKeeperGrades(){
   el.innerHTML = `<div class="seclabel">2025 Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— actual results, ${KEPG.season}</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      <span class="pt-warsrc">WAR calculated based on ${KEPG.season} ESPN Actual Stats (not projections -- the season already happened).</span><br>
       ${KEPG.scoring_note} ${KEPG.methodology_note||''} ${KEPG.sample_size_note}
     </div>
     <table class="kgTable"><thead><tr>
@@ -1523,7 +1526,8 @@ function renderOptimalRoster(){
   if(!ROPT || !ROPT.roster || !ROPT.roster.length){
     return `<div class="seclabel">Optimal Roster (WAR-Max, $200 budget)</div>
       <div class="empty-note">roster_optimizer_result.json not found.<br>
-      Run "Run Roster Optimizer" (needs bigboard.json with WAR + ESPN bids populated first).</div>`;
+      Run "Run Roster Optimizer" (needs bigboard.json with WAR + ESPN bids populated first).<br>
+      <span class="pt-warsrc">WAR is calculated based on 2026 ESPN Projections.</span></div>`;
   }
   const rows = ROPT.roster.map(r=>{
     if(!r.name){
@@ -1541,6 +1545,7 @@ function renderOptimalRoster(){
   const genDate = ROPT.generated ? new Date(ROPT.generated).toLocaleString() : '—';
   return `<div class="seclabel">Optimal Roster (WAR-Max, $${ROPT.budget} budget)</div>
     <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      <span class="pt-warsrc">WAR calculated based on 2026 ESPN Projections (from bigboard.json).</span><br>
       ${(ROPT.assumptions||[]).join(' ')}
     </div>
     <table class="tiertbl"><thead><tr>
@@ -1589,6 +1594,8 @@ function renderDraftGrades(){
   return `
     <div class="seclabel">Draft Effectiveness (${years.length?Math.min(...years):''}–${years.length?Math.max(...years):''})</div>
     <div style="font-size:10px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      <span class="pt-warsrc">WAR calculated based on actual ESPN season stats for each graded year (${years.join(', ')}) --
+      not projections; this grades completed drafts on what actually happened.</span><br>
       Grades against WAR (points above replacement level), not raw points per dollar --
       raw points/$ makes shallow positions like K/DEF look like great value simply for
       being cheap, even though there's little gap between an elite and a replacement-level
@@ -2143,7 +2150,7 @@ function renderPlayerCard(player, root){
         <div class="pcard-stat ${war==null?'dim':''}">
           <div class="ps-lbl">Projected WAR</div>
           <div class="ps-val">${war!=null?(war>0?'+':'')+war:'—'}</div>
-          <div class="ps-sub">${war!=null?'pts above replacement':'needs 2026 projections'}</div>
+          <div class="ps-sub pt-warsrc">${war!=null?'pts above replacement · 2026 ESPN Projections':'needs 2026 ESPN projections'}</div>
         </div>
         <div class="pcard-stat ${!bidRange?'dim':''}">
           <div class="ps-lbl">Expected Bid Range</div>
