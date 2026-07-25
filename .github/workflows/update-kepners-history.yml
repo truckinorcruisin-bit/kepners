@@ -1,10 +1,15 @@
 name: Update Kepners Draft History
 
 # Run manually from the Actions tab.
-# Requires three repo secrets (Settings > Secrets and variables > Actions):
+# Requires FOUR repo secrets (Settings > Secrets and variables > Actions):
 #   YAHOO_CLIENT_ID, YAHOO_CLIENT_SECRET, YAHOO_REFRESH_TOKEN
-# See yahoo_setup.py docstring for how to obtain the refresh token (one-time,
-# done locally with a browser -- Yahoo's login step can't run in CI).
+#   GH_SECRETS_PAT -- a Personal Access Token (classic, "repo" scope, or fine-grained
+#     with "Secrets: write" on this repo) used ONLY to write the rotated refresh
+#     token back to YAHOO_REFRESH_TOKEN after each run. The default GITHUB_TOKEN
+#     Actions provides cannot write repo secrets, so this extra PAT is required --
+#     without it, Yahoo's refresh-token rotation will silently break the NEXT run.
+# See yahoo_setup.py docstring for how to obtain the initial refresh token
+# (one-time, done locally with a browser -- Yahoo's login step can't run in CI).
 on:
   workflow_dispatch:
 
@@ -28,7 +33,15 @@ jobs:
         run: pip install requests
 
       - name: Pull Kepners draft history from Yahoo
+        id: yahoo_pull
         run: python yahoo_kepners_history.py
+
+      - name: Persist rotated refresh token (if Yahoo issued a new one)
+        if: steps.yahoo_pull.outputs.refresh_token != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_SECRETS_PAT }}
+        run: |
+          gh secret set YAHOO_REFRESH_TOKEN --body "${{ steps.yahoo_pull.outputs.refresh_token }}" --repo "${{ github.repository }}"
 
       - name: Commit updated history
         run: |
