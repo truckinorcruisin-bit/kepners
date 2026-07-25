@@ -65,6 +65,14 @@ def _save_token(data):
     data["obtained_at"] = time.time()
     with open(TOKEN_FILE, "w") as f:
         json.dump(data, f, indent=2)
+    # Running in GitHub Actions: Yahoo may have rotated the refresh token.
+    # Surface it as a step output so the workflow can write it back to the
+    # YAHOO_REFRESH_TOKEN secret -- otherwise the *next* run silently uses a
+    # stale token and fails with an auth error that looks unrelated.
+    gh_output = os.environ.get("GITHUB_OUTPUT")
+    if gh_output and data.get("refresh_token"):
+        with open(gh_output, "a") as f:
+            f.write(f"refresh_token={data['refresh_token']}\n")
 
 
 def _load_token():
