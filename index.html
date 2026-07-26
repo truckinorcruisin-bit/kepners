@@ -292,6 +292,7 @@
   .doTable tr.me{background:rgba(255,183,3,0.08);}
   .doTable .do-keeper{color:var(--green);font-size:10px;}
   .doTable .do-keeper-suggested{color:var(--amber);font-size:10px;font-style:italic;}
+  .doTable .do-keeper-unmatched{color:var(--red);font-size:10px;font-weight:700;}
   .doTable .do-none{color:var(--dim);font-size:10px;}
   .do-unmatched{font-size:9px;color:var(--red);margin-top:4px;}
 
@@ -309,6 +310,7 @@
     color:var(--dim);padding:6px 8px;border-bottom:1px solid var(--line-2);font-weight:500;}
   .kgTable td{padding:6px 8px;border-bottom:1px solid var(--line);}
   .kgTable td.num{text-align:right;font-variant-numeric:tabular-nums;}
+  .kg-suggested-row{background:rgba(255,183,3,.05);}
   .kg-verdict{font-size:9.5px;padding:2px 7px;border-radius:10px;font-weight:700;white-space:nowrap;}
   .kg-verdict.elite{background:rgba(255,183,3,.22);color:var(--amber);font-weight:700;
     box-shadow:0 0 0 1px rgba(255,183,3,0.4);}
@@ -856,10 +858,27 @@ function render2026KeeperGrades(lg){
   const el = document.getElementById('keeper2026Area');
   if(!el) return;
   if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
-  const teams = (lg.teams||[]).filter(t=>t.liveKeepers && t.liveKeepers.length);
-  if(!teams.length){
+
+  // Merge real (Google Sheet) keepers with suggested (predicted) ones, same
+  // per-manager priority as the Draft Order table and the availability map:
+  // real always wins; suggestions only fill in where a manager has no real
+  // keeper entered yet. This lets the grades populate immediately instead of
+  // waiting on every manager to confirm -- accuracy improves automatically
+  // as real picks replace suggestions, no re-work needed here.
+  const teamsWithKeepers = [];
+  (lg.teams||[]).forEach(t=>{
+    const real = t.liveKeepers||[];
+    const suggested = (KEPS && KEPS.by_manager && KEPS.by_manager[t.manager]) || [];
+    if(real.length){
+      teamsWithKeepers.push({...t, _keepers: real.map(k=>({...k, _isSuggested:false}))});
+    } else if(suggested.length){
+      teamsWithKeepers.push({...t, _keepers: suggested.map(k=>({...k, _isSuggested:true}))});
+    }
+  });
+
+  if(!teamsWithKeepers.length){
     el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades</div>
-      <div class="empty-note">No 2026 keepers synced yet.<br>
+      <div class="empty-note">No 2026 keepers synced or predicted yet.<br>
       Run "Update Kepners Draft Order" to pull keepers from the Google Sheet.<br>
       <span class="pt-warsrc">WAR/consensus rank will be calculated based on 2026 ESPN Projections.</span></div>`;
     return;
@@ -868,8 +887,8 @@ function render2026KeeperGrades(lg){
   const rankToRound = (rank)=> rank!=null ? Math.floor((rank-1)/teamCount)+1 : null;
 
   const graded = [];
-  teams.forEach(t=>{
-    t.liveKeepers.forEach(k=>{
+  teamsWithKeepers.forEach(t=>{
+    t._keepers.forEach(k=>{
       const bp = findBigBoardPlayer(k.player);
       const keeperRound = k.round;
       const consensusRank = bp ? bp.avgRank : null;
@@ -889,6 +908,7 @@ function render2026KeeperGrades(lg){
         manager:t.manager, team:t.team||t.manager, player:k.player,
         pos: bp?bp.pos:'—', keeperRound, consensusRank, marketRound,
         proj: bp?bp.projectedWar:null, surplus, verdict, cls,
+        isSuggested: !!k._isSuggested,
       });
     });
   });
@@ -901,9 +921,9 @@ function render2026KeeperGrades(lg){
   });
 
   const rows = graded.map(g=>`
-    <tr>
+    <tr class="${g.isSuggested?'kg-suggested-row':''}">
       <td>${g.manager}</td>
-      <td>${g.player}</td>
+      <td>${g.player}${g.isSuggested?` <span class="do-keeper-suggested" title="Predicted -- not yet confirmed in the Google Sheet">*</span>`:''}</td>
       <td>${g.pos}</td>
       <td class="num">R${g.keeperRound ?? '—'}</td>
       <td class="num">${g.consensusRank!=null?`${g.consensusRank} <span class="pt-sub">R${g.marketRound}</span>`:'—'}</td>
@@ -911,6 +931,7 @@ function render2026KeeperGrades(lg){
       <td><span class="kg-verdict ${g.cls}">${g.verdict}</span></td>
     </tr>`).join('');
 
+  const suggestedCount = graded.filter(g=>g.isSuggested).length;
   el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
@@ -918,6 +939,7 @@ function render2026KeeperGrades(lg){
       Forward-looking: this compares each keeper's <b>round cost</b>
       (from the Google Sheet) to where the player is <b>projected to be drafted</b> this year (2026 consensus rank → round).
       Positive surplus = kept later than they'd go anyway (a bargain); negative = a reach. Distinct from the 2025 grades below (actual results).
+      ${suggestedCount?` <span class="do-keeper-suggested">${suggestedCount} row(s) marked * use a predicted keeper, not yet confirmed -- will update automatically once entered in the sheet.</span>`:''}
     </div>
     <table class="kgTable"><thead><tr>
       <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Keeper Rd</th>
@@ -1283,8 +1305,17 @@ function renderDraftOrder(lg){
     const suggested = (KEPS && KEPS.by_manager && KEPS.by_manager[t.manager]) || [];
     let keeperHtml;
     if (real.length){
-      // Real Google Sheet data always wins, shown green/confirmed.
-      keeperHtml = real.map(k=>`<span class="do-keeper">${k.player} (R${k.round})</span>`).join('<br>');
+      // Real Google Sheet data always wins, shown green/confirmed -- unless
+      // the name doesn't match any Big Board player at all (typo, or a
+      // naming-format mismatch like "Luther Burden III" vs the Big Board's
+      // "Luther Burden"), in which case flag it red so it's obvious this
+      // keeper isn't actually being tracked anywhere else on the site yet.
+      keeperHtml = real.map(k=>{
+        const matched = !!findBigBoardPlayer(k.player);
+        return matched
+          ? `<span class="do-keeper">${k.player} (R${k.round})</span>`
+          : `<span class="do-keeper-unmatched" title="No Big Board player matches this name -- check spelling/format">${k.player} (R${k.round}) ⚠</span>`;
+      }).join('<br>');
     } else if (suggested.length){
       // No real data yet -- fall back to the surplus-based prediction from
       // last year's rosters, shown amber/italic and clearly labeled as a guess.
@@ -1308,7 +1339,8 @@ function renderDraftOrder(lg){
   el.innerHTML = `<div class="seclabel">Draft Order &amp; Keepers <span style="font-size:9px;color:var(--dim);font-weight:400;">— live from the shared Google Sheet</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:6px;">
       <span class="do-keeper">green</span> = confirmed in the Google Sheet ·
-      <span class="do-keeper-suggested">amber *</span> = predicted${kepsVintage} from last year's roster (surplus of current value vs. keeper-round cost) until the manager enters their real pick
+      <span class="do-keeper-suggested">amber *</span> = predicted${kepsVintage} from last year's roster (surplus of current value vs. keeper-round cost) until the manager enters their real pick ·
+      <span class="do-keeper-unmatched">red ⚠</span> = in the sheet but doesn't match any Big Board player -- check spelling/format
     </div>
     <table class="doTable"><thead><tr><th>Pick</th><th>Team</th><th>Manager</th><th>Keepers</th></tr></thead>
     <tbody>${rows||'<tr><td colspan="4" style="color:var(--dim)">No slots claimed yet.</td></tr>'}</tbody></table>
