@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-07-26T19:33:32.163736+00:00"
+    "generated": "2026-07-26T19:40:35.211857+00:00"
   },
   "players": [
     {
@@ -8831,7 +8831,12 @@
           "manager": "Mike/Brad",
           "isMe": false,
           "draftPosition": 6,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Harold Fannin",
+              "round": 12
+            }
+          ]
         }
       ],
       "rosterSlots": [
@@ -8981,7 +8986,7 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-07-26T19:33:30.179709+00:00",
+      "draftOrderGenerated": "2026-07-26T19:40:32.767728+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
