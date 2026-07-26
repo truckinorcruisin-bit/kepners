@@ -68,6 +68,9 @@
   .rec .row .why.warn{color:var(--red);}
   .tierpill{display:inline-block;font-size:9px;padding:2px 6px;border-radius:2px;margin-left:6px;
     background:rgba(0,217,255,.1);color:var(--cyan);vertical-align:middle;}
+  .rookie-badge{display:inline-block;font-size:8.5px;font-weight:700;padding:1px 5px;
+    border-radius:2px;margin-left:6px;background:rgba(255,183,3,.15);color:var(--amber);
+    vertical-align:middle;letter-spacing:0.03em;cursor:help;}
 
   /* feed ticker */
   .ticker{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
@@ -1130,8 +1133,8 @@ function renderDeepDive(lg){
 
   el.innerHTML = `
     <div class="dd-head">
-      <div class="dd-name">${player.name}</div>
-      <div class="dd-sub">${player.pos} · ${player.proTeamEspn||player.team||'—'} · ${player.tier&&player.tier!=='0'?player.tier.split(' - ')[0]:'unranked'} ${player.byeWeek?'· BYE '+player.byeWeek:''}</div>
+      <div class="dd-name">${player.name}${isRookie(player)?`<span class="rookie-badge">R</span>`:''}</div>
+      <div class="dd-sub">${player.pos} · ${player.proTeamEspn||player.team||'—'} · ${player.tier&&player.tier!=='0'?player.tier.split(' - ')[0]:'unranked'} ${player.byeWeek?'· BYE '+player.byeWeek:''}${player.notes?' · '+player.notes:''}</div>
     </div>
 
     <div class="dd-block">
@@ -1225,12 +1228,12 @@ function renderRec(p,need,lg){
   document.getElementById('recArea').innerHTML=`
     <div class="card rec">
       <div class="top">
-        <div class="name">${p.name.toUpperCase()}
+        <div class="name">${p.name.toUpperCase()}${isRookie(p)?`<span class="rookie-badge">R</span>`:''}
           <span class="tierpill">${p.tier||'—'}</span></div>
         <div class="posbadge">${p.pos}</div>
       </div>
       <div class="meta">${p.team||''} · YOUR POS RANK #${p.seanPosRank} · CONSENSUS ADP #${p.avgRank??'—'}${
-        typeof p.myDiff==='number'?` · YOUR DIFF ${p.myDiff>0?'+':''}${p.myDiff}`:''}</div>
+        typeof p.myDiff==='number'?` · YOUR DIFF ${p.myDiff>0?'+':''}${p.myDiff}`:''}${p.notes?' · '+p.notes:''}</div>
       <div class="row"><span>Positional need</span>
         <span class="why">${need.has(p.pos)?'fills open '+p.pos+' starter':'depth / BPA'}</span></div>
       <div class="row"><span>Survival to next pick</span>
@@ -1711,7 +1714,8 @@ function rankToRoundPick(rank, teams){
 // Each column: key (for sort), label, num (right-align/numeric sort), and
 // render(r, ctx) producing the cell's inner HTML.
 const PT_COL_COMMON_LEFT = [
-  {key:'name', label:'Player', num:false, render:r=>r.name},
+  {key:'name', label:'Player', num:false, render:r=>
+    `${r.name}${isRookie(r)?`<span class="rookie-badge" title="${(r.notes||'').replace(/"/g,'&quot;')}">R</span>`:''}`},
   {key:'team', label:'Team', num:false, render:r=>r.proTeamEspn||r.team||'—'},
   {key:'pos', label:'Pos', num:false, render:r=>r.pos},
   {key:'byeWeek', label:'Bye', num:true, render:r=>r.byeWeek||'—'},
@@ -1738,6 +1742,9 @@ const PT_COLUMNS_SNAKE = [
   ...PT_COL_WAR, ...PT_COL_STATUS,
 ];
 
+function isRookie(p){
+  return !!(p.notes && /rookie/i.test(p.notes));
+}
 function warCell(v){
   if(v==null) return '—';
   const cls = v>0?'pt-war-pos':'pt-war-neg';
@@ -1898,7 +1905,7 @@ function dataSourceLegend(){
   // different columns, so the legend adapts.
   const isAuction = activeLeague==='zimmer';
   const rows = [
-    ['Player · Team · Pos · Tier', 'Your Big Board Excel', '2026', 'Your own rankings, tiers, and team assignments.'],
+    ['Player · Team · Pos · Tier', 'Your Big Board Excel', '2026', 'Your own rankings, tiers, and team assignments. The amber "R" badge is inferred from your Notes column whenever it mentions "rookie" -- hover it to see the full note (draft slot/college, etc). Notes is general free text, so a few non-rookie notes (e.g. old keeper-round history) can also show there without triggering the badge.'],
     [isAuction ? 'Plat Rk' : 'Yahoo Rk', 'Big Board Excel (platform consensus)', '2026', 'Preseason consensus rank blended across platforms (Yahoo/ESPN/CBS/etc), from your Big Board.'],
     ['Target Rk', 'Derived from your Big Board', '2026', 'Your per-position ranks ordered into one overall list by projected value (VBD-style).'],
     ['Bye', 'NFL schedule', '2026', 'Set by the player’s NFL team (this season’s bye schedule).'],
@@ -2129,10 +2136,10 @@ function renderPlayerCard(player, root){
   area.innerHTML = `
     <div class="card rec">
       <div class="top">
-        <div class="name">${player.name.toUpperCase()}</div>
+        <div class="name">${player.name.toUpperCase()}${isRookie(player)?`<span class="rookie-badge">R</span>`:''}</div>
         <div class="posbadge">${player.pos}</div>
       </div>
-      <div class="meta">${player.team||''} · YOUR POS RANK #${player.seanPosRank??'—'} · ${player.tier||'—'}</div>
+      <div class="meta">${player.team||''} · YOUR POS RANK #${player.seanPosRank??'—'} · ${player.tier||'—'}${player.notes?' · '+player.notes:''}</div>
 
       <div class="pcard-grid">
         <div class="pcard-stat ${espnBid==null?'dim':''}">
