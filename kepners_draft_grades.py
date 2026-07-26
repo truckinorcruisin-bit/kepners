@@ -95,11 +95,31 @@ MIN_PEER_SAMPLE = 3
 # as directional given the single-season sample (see caveats above).
 # ELITE is a new tier above "great" -- a 100+ WAR surplus over same-cost peers
 # is a genuine roster-changing outcome, not just "great," per Sean's feedback.
-SURPLUS_ELITE = 100
-SURPLUS_GREAT = 15
-SURPLUS_GOOD = 5
 SURPLUS_FAIR_FLOOR = -5
 PEER_MEANINGFUL_BAR = 5
+
+# Keeper Value = Surplus * (WAR / KEEPER_VALUE_WAR_CONST) * KEEPER_VALUE_WEIGHT
+# Same formula as the 2026 (projected) grading in index.html, applied here to
+# ACTUAL WAR instead of projected WAR -- confirmed with Sean: apply for
+# consistency between the two views, with the WAR/actual distinction called
+# out in the UI rather than in the math itself. KEEPER_VALUE_WAR_CONST=100 is
+# a FLAT constant across all positions (not each position's own top WAR) --
+# it approximates the WAR spread of an elite difference-maker at any
+# position, so an elite TE (whose position ceiling is naturally much lower
+# than RB/WR) doesn't get an artificial boost just for nearing ITS OWN
+# position's max. The WAR factor is what keeps a huge discount on a mediocre
+# player from outranking a real difference-maker's smaller-percentage
+# discount -- a bargain only counts for much if the player himself is good.
+KEEPER_VALUE_WAR_CONST = 100
+KEEPER_VALUE_WEIGHT = 0.5
+# Tier cutoffs on the resulting Keeper Value score -- same as 2026 grading,
+# derived empirically from the distribution of this formula across the whole
+# Big Board (every player x every round), not arbitrary round numbers.
+KV_ELITE_PLUS = 80
+KV_ELITE = 35
+KV_GREAT = 10
+KV_GOOD = 2
+KV_FAIR_FLOOR = -3
 
 
 def load_season_points(season, stats_path=None):
@@ -197,23 +217,26 @@ def grade_keepers(picks):
         actual_war = p["actual_war"]
 
         if avg is None:
-            surplus, verdict = None, "insufficient peer data"
+            surplus, keeper_value, verdict = None, None, "insufficient peer data"
         else:
             surplus = round(actual_war - avg, 1)
+            keeper_value = round(surplus * (actual_war / KEEPER_VALUE_WAR_CONST) * KEEPER_VALUE_WEIGHT, 1)
             if actual_war <= 0:
                 # VALUE FLOOR: no production above replacement means no value,
-                # regardless of how the round-cost math reads. Can't be "good"
-                # or "great" -- at best "fair" if the whole peer group also
+                # regardless of how the cost math reads. Can't be "good" or
+                # "great" -- at best "fair" if the whole peer group also
                 # whiffed at this cost, or "bust" if peers proved real value
                 # was gettable at this cost/position and this pick missed it.
                 verdict = "bust (no value added)" if avg > PEER_MEANINGFUL_BAR else "fair (no value, but so was the field)"
-            elif surplus >= SURPLUS_ELITE:
+            elif keeper_value >= KV_ELITE_PLUS:
+                verdict = "elite value+"
+            elif keeper_value >= KV_ELITE:
                 verdict = "elite value"
-            elif surplus >= SURPLUS_GREAT:
+            elif keeper_value >= KV_GREAT:
                 verdict = "great value"
-            elif surplus >= SURPLUS_GOOD:
+            elif keeper_value >= KV_GOOD:
                 verdict = "good value"
-            elif surplus > SURPLUS_FAIR_FLOOR:
+            elif keeper_value > KV_FAIR_FLOOR:
                 verdict = "fair"
             else:
                 verdict = "overpriced"
@@ -223,7 +246,7 @@ def grade_keepers(picks):
             "player": p["player"], "position": p["position"],
             "kept_round": p["round"], "actual_war": actual_war,
             "peer_avg_war": avg, "peer_sample_n": n, "peer_window_rounds": w,
-            "surplus_war": surplus, "verdict": verdict,
+            "surplus_war": surplus, "keeper_value": keeper_value, "verdict": verdict,
         })
 
     # Sort: real production (actual_war > 0) always outranks a keeper who added
@@ -246,7 +269,7 @@ def grade_keepers(picks):
         if g["surplus_war"] is None:
             return (3, 0)
         if g["actual_war"] > 0:
-            return (0, -g["surplus_war"])
+            return (0, -g["keeper_value"])
         if "bust" in g["verdict"]:
             return (2, -g["actual_war"])
         return (1, -g["actual_war"])
