@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-07-26T16:07:46.091252+00:00"
+    "generated": "2026-07-26T17:55:23.613502+00:00"
   },
   "players": [
     {
@@ -8740,7 +8740,16 @@
           "manager": "Neary",
           "isMe": false,
           "draftPosition": 8,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "ETN",
+              "round": 8
+            },
+            {
+              "player": "Rashee Rice",
+              "round": 4
+            }
+          ]
         },
         {
           "slot": 5,
@@ -8748,7 +8757,16 @@
           "manager": "Ditto",
           "isMe": false,
           "draftPosition": 3,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Alec Pierce",
+              "round": 13
+            },
+            {
+              "player": "Kyle Pitts",
+              "round": 12
+            }
+          ]
         },
         {
           "slot": 6,
@@ -8954,7 +8972,7 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-07-26T16:07:41.045191+00:00",
+      "draftOrderGenerated": "2026-07-26T17:55:21.398608+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
