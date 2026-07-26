@@ -1068,9 +1068,9 @@ function tierPositionRead(player){
   // Where does this player sit within their tier? Top of tier = taking them
   // early is a slight reach (the tier still has comparable options); bottom of
   // tier = last chance at this quality, more of a "take now."
-  if(!player.tier || player.tier==='0' || player.seanPosRank==null) return null;
+  if(!player.tier || player.tier==='0' || !(player.seanPosRank>0)) return null;
   const tierLabel = player.tier.split(' - ')[0];
-  const tierMates = DATA.players.filter(p=>p.pos===player.pos && p.tier && p.tier.split(' - ')[0]===tierLabel && p.seanPosRank!=null);
+  const tierMates = DATA.players.filter(p=>p.pos===player.pos && p.tier && p.tier.split(' - ')[0]===tierLabel && p.seanPosRank>0);
   if(tierMates.length<=1) return {tierLabel, pos:'only', read:'only player in this tier — value depends entirely on positional need'};
   const ranks = tierMates.map(p=>p.seanPosRank).sort((a,b)=>a-b);
   const idx = ranks.indexOf(player.seanPosRank);
@@ -1232,7 +1232,7 @@ function renderRec(p,need,lg){
           <span class="tierpill">${p.tier||'—'}</span></div>
         <div class="posbadge">${p.pos}</div>
       </div>
-      <div class="meta">${p.team||''} · YOUR POS RANK #${p.seanPosRank} · CONSENSUS ADP #${p.avgRank??'—'}${
+      <div class="meta">${p.team||''} · YOUR POS RANK #${p.seanPosRank>0?p.seanPosRank:'—'} · CONSENSUS ADP #${p.avgRank??'—'}${
         typeof p.myDiff==='number'?` · YOUR DIFF ${p.myDiff>0?'+':''}${p.myDiff}`:''}${p.notes?' · '+p.notes:''}</div>
       <div class="row"><span>Positional need</span>
         <span class="why">${need.has(p.pos)?'fills open '+p.pos+' starter':'depth / BPA'}</span></div>
@@ -2139,7 +2139,7 @@ function renderPlayerCard(player, root){
         <div class="name">${player.name.toUpperCase()}${isRookie(player)?`<span class="rookie-badge">R</span>`:''}</div>
         <div class="posbadge">${player.pos}</div>
       </div>
-      <div class="meta">${player.team||''} · YOUR POS RANK #${player.seanPosRank??'—'} · ${player.tier||'—'}${player.notes?' · '+player.notes:''}</div>
+      <div class="meta">${player.team||''} · YOUR POS RANK #${player.seanPosRank>0?player.seanPosRank:'—'} · ${player.tier||'—'}${player.notes?' · '+player.notes:''}</div>
 
       <div class="pcard-grid">
         <div class="pcard-stat ${espnBid==null?'dim':''}">
