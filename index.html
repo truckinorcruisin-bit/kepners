@@ -886,34 +886,86 @@ function render2026KeeperGrades(lg){
   const teamCount = lg.teams.length || 12;
   const rankToRound = (rank)=> rank!=null ? Math.floor((rank-1)/teamCount)+1 : null;
 
+  // Build a same-position, round-indexed peer pool from the WHOLE Big Board
+  // (there's no 2026 draft yet to pull real picks from, so every rostered
+  // Big Board player at a position stands in for "what a pick at this cost
+  // would typically return"). Mirrors kepners_draft_grades.py's
+  // peer_avg_war() widening-window logic exactly, just swapping actual_war
+  // (past results) for projectedWar (forward-looking).
+  const PEER_WINDOW_START = 2, PEER_WINDOW_MAX = 6, MIN_PEER_SAMPLE = 5;
+  const byPositionRound = {};
+  DATA.players.forEach(p=>{
+    if(p.projectedWar==null) return;
+    const r = rankToRound(p.avgRank);
+    if(r==null) return;
+    (byPositionRound[p.pos] = byPositionRound[p.pos] || {});
+    (byPositionRound[p.pos][r] = byPositionRound[p.pos][r] || []).push(p.projectedWar);
+  });
+  function peerAvgWar(position, round_){
+    const byRound = byPositionRound[position] || {};
+    for(let w=PEER_WINDOW_START; w<=PEER_WINDOW_MAX; w++){
+      const wars = [];
+      Object.keys(byRound).forEach(r=>{
+        if(Math.abs(Number(r)-round_)<=w) wars.push(...byRound[r]);
+      });
+      if(wars.length>=MIN_PEER_SAMPLE){
+        return {avg: wars.reduce((a,b)=>a+b,0)/wars.length, n: wars.length, w};
+      }
+    }
+    // last attempt at max window even if still thin
+    const wars = [];
+    Object.keys(byRound).forEach(r=>{
+      if(Math.abs(Number(r)-round_)<=PEER_WINDOW_MAX) wars.push(...byRound[r]);
+    });
+    return wars.length ? {avg: wars.reduce((a,b)=>a+b,0)/wars.length, n: wars.length, w:PEER_WINDOW_MAX} : {avg:null, n:0, w:null};
+  }
+
   const graded = [];
   teamsWithKeepers.forEach(t=>{
     t._keepers.forEach(k=>{
       const bp = findBigBoardPlayer(k.player);
       const keeperRound = k.round;
-      const consensusRank = bp ? bp.avgRank : null;
-      const marketRound = rankToRound(consensusRank);
-      let surplus = (marketRound!=null && keeperRound!=null) ? keeperRound - marketRound : null;
-      // surplus > 0 means kept LATER than the player's projected draft round
-      // (a bargain); < 0 means kept earlier than they'd go anyway (a reach).
-      let verdict, cls;
+      const projWar = bp ? bp.projectedWar : null;
+      let peer=null, surplus=null, verdict, cls;
       if(!bp){ verdict='player not on board'; cls='na'; }
-      else if(surplus==null){ verdict='no consensus rank'; cls='na'; }
-      else if(surplus>=4){ verdict='elite value'; cls='elite'; }
-      else if(surplus>=2){ verdict='great value'; cls='great'; }
-      else if(surplus>=0.5){ verdict='good value'; cls='good'; }
-      else if(surplus>-1.5){ verdict='fair'; cls='fair'; }
-      else { verdict='reach'; cls='overpriced'; }
+      else if(projWar==null || keeperRound==null){ verdict='no WAR projection'; cls='na'; }
+      else {
+        peer = peerAvgWar(bp.pos, keeperRound);
+        if(peer.avg==null){ verdict='insufficient peer data'; cls='na'; }
+        else {
+          surplus = Math.round((projWar - peer.avg)*10)/10;
+          // Same value floor as the 2025 grading: projected WAR at/below 0
+          // means no real value regardless of cost, so cap at "fair" (or
+          // "reach" if peers at this cost/position show real value exists).
+          if(projWar<=0){ verdict = peer.avg>2 ? 'reach (no value)' : 'fair (weak cost tier)'; cls = peer.avg>2?'overpriced':'fair'; }
+          else if(surplus>=15){ verdict='elite value'; cls='elite'; }
+          else if(surplus>=5){ verdict='great value'; cls='great'; }
+          else if(surplus>=1){ verdict='good value'; cls='good'; }
+          else if(surplus>-5){ verdict='fair'; cls='fair'; }
+          else { verdict='reach'; cls='overpriced'; }
+        }
+      }
       graded.push({
         manager:t.manager, team:t.team||t.manager, player:k.player,
-        pos: bp?bp.pos:'—', keeperRound, consensusRank, marketRound,
-        proj: bp?bp.projectedWar:null, surplus, verdict, cls,
-        isSuggested: !!k._isSuggested,
+        pos: bp?bp.pos:'—', keeperRound, projWar,
+        peerAvgWar: peer?peer.avg:null, peerN: peer?peer.n:null, peerWindow: peer?peer.w:null,
+        surplus, verdict, cls, isSuggested: !!k._isSuggested,
       });
     });
   });
-  // sort best value first; unmatched/no-rank to the bottom
+  // Same sort rule as 2025 grading: real projected production always
+  // outranks a keeper projected to add zero/negative value, regardless of
+  // cost-relative surplus -- a tiered (bucket, magnitude) key, not a raw
+  // surplus sort, so capped/negative entries don't collapse to identical
+  // ordering. Then within each tier, sort by surplus magnitude.
+  function sortBucket(g){
+    if(g.surplus==null) return 2;        // no data -- always last
+    if(g.projWar!=null && g.projWar<=0) return 1;  // no real production
+    return 0;                             // real production
+  }
   graded.sort((a,b)=>{
+    const ba=sortBucket(a), bb=sortBucket(b);
+    if(ba!==bb) return ba-bb;
     if(a.surplus==null && b.surplus==null) return 0;
     if(a.surplus==null) return 1;
     if(b.surplus==null) return -1;
@@ -926,8 +978,9 @@ function render2026KeeperGrades(lg){
       <td>${g.player}${g.isSuggested?` <span class="do-keeper-suggested" title="Predicted -- not yet confirmed in the Google Sheet">*</span>`:''}</td>
       <td>${g.pos}</td>
       <td class="num">R${g.keeperRound ?? '—'}</td>
-      <td class="num">${g.consensusRank!=null?`${g.consensusRank} <span class="pt-sub">R${g.marketRound}</span>`:'—'}</td>
-      <td class="num">${g.surplus!=null?(g.surplus>0?'+':'')+g.surplus+' rd':'—'}</td>
+      <td class="num">${g.projWar!=null?(g.projWar>0?'+':'')+g.projWar:'—'}</td>
+      <td class="num">${g.peerAvgWar!=null?`${g.peerAvgWar>0?'+':''}${Math.round(g.peerAvgWar*10)/10} <span class="pt-sub">n=${g.peerN}, ±${g.peerWindow}rd</span>`:'—'}</td>
+      <td class="num">${g.surplus!=null?(g.surplus>0?'+':'')+g.surplus:'—'}</td>
       <td><span class="kg-verdict ${g.cls}">${g.verdict}</span></td>
     </tr>`).join('');
 
@@ -935,15 +988,15 @@ function render2026KeeperGrades(lg){
   el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
-      <span class="pt-warsrc">WAR/consensus rank calculated based on 2026 ESPN Projections (the season hasn't been played yet).</span><br>
-      Forward-looking: this compares each keeper's <b>round cost</b>
-      (from the Google Sheet) to where the player is <b>projected to be drafted</b> this year (2026 consensus rank → round).
-      Positive surplus = kept later than they'd go anyway (a bargain); negative = a reach. Distinct from the 2025 grades below (actual results).
-      ${suggestedCount?` <span class="do-keeper-suggested">${suggestedCount} row(s) marked * use a predicted keeper, not yet confirmed -- will update automatically once entered in the sheet.</span>`:''}
+      <span class="pt-warsrc">WAR calculated based on 2026 ESPN Projections.</span><br>
+      Same methodology as the 2025 grades below: each keeper's projected WAR is compared to the
+      average projected WAR of same-position Big Board players near the same cost round (widens if thin).
+      Positive surplus = projected to outproduce what that cost typically gets; negative = a reach.
+      ${suggestedCount?` <span class="do-keeper-suggested">${suggestedCount} row(s) marked * use a predicted keeper, not yet confirmed.</span>`:''}
     </div>
     <table class="kgTable"><thead><tr>
       <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Keeper Rd</th>
-      <th class="num">Consensus Rk</th><th class="num">Surplus</th><th>Verdict</th>
+      <th class="num">Proj WAR</th><th class="num">Peer Avg WAR</th><th class="num">Surplus</th><th>Verdict</th>
     </tr></thead><tbody>${rows}</tbody></table>`;
 }
 
@@ -1810,7 +1863,13 @@ const PT_COLUMNS_SNAKE = [
 ];
 
 function isRookie(p){
-  return !!(p.notes && /rookie/i.test(p.notes));
+  if(!p.notes || !/rookie/i.test(p.notes)) return false;
+  // A 4-digit year immediately before "Rookie" means THAT draft class (e.g.
+  // "2025 Rookie R1.6" = drafted 2025, NOT a 2026 rookie anymore). No year
+  // prefix means 2026 by convention (the year gets added retroactively once
+  // a player ages out of rookie status).
+  const yearMatch = p.notes.match(/(\d{4})\s*rookie/i);
+  return yearMatch ? yearMatch[1] === '2026' : true;
 }
 function warCell(v){
   if(v==null) return '—';
@@ -1963,6 +2022,15 @@ function renderPlayerTable(container, opts){
     body = rows.map(rowHtml).join('');
   }
 
+  // Preserve search-input focus/cursor across the innerHTML replace below --
+  // without this, retyping into the box loses focus every keystroke (the
+  // input DOM node gets destroyed and recreated), so only one character
+  // registers before you have to click back in.
+  const prevSearch = container.querySelector('.pt-search');
+  const searchHadFocus = prevSearch && document.activeElement === prevSearch;
+  const prevSelStart = searchHadFocus ? prevSearch.selectionStart : null;
+  const prevSelEnd = searchHadFocus ? prevSearch.selectionEnd : null;
+
   container.innerHTML = `${controls}
     <div class="ptable-wrap">
       <table class="ptable"><thead><tr>${header}</tr></thead><tbody>${body}</tbody></table>
@@ -1970,7 +2038,16 @@ function renderPlayerTable(container, opts){
 
   // wire controls
   const search = container.querySelector('.pt-search');
-  search.oninput = (e)=>{ playerTable.query=e.target.value; opts.rerender(); };
+  let searchDebounce = null;
+  search.oninput = (e)=>{
+    playerTable.query = e.target.value;
+    clearTimeout(searchDebounce);
+    searchDebounce = setTimeout(()=> opts.rerender(), 120);
+  };
+  if(searchHadFocus){
+    search.focus();
+    search.setSelectionRange(prevSelStart, prevSelEnd);
+  }
   container.querySelector('.pt-pos').onchange = (e)=>{ playerTable.posFilter=e.target.value; opts.rerender(); };
   container.querySelector('.pt-avail').onchange = (e)=>{ playerTable.availFilter=e.target.value; opts.rerender(); };
   container.querySelector('.clear').onclick = ()=>{
