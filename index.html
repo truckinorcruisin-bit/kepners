@@ -312,6 +312,8 @@
   .kgTable td.num{text-align:right;font-variant-numeric:tabular-nums;}
   .kg-suggested-row{background:rgba(255,183,3,.05);}
   .kg-verdict{font-size:9.5px;padding:2px 7px;border-radius:10px;font-weight:700;white-space:nowrap;}
+  .kg-verdict.eliteplus{background:rgba(255,183,3,.32);color:var(--amber);font-weight:700;
+    box-shadow:0 0 0 1.5px var(--amber);}
   .kg-verdict.elite{background:rgba(255,183,3,.22);color:var(--amber);font-weight:700;
     box-shadow:0 0 0 1px rgba(255,183,3,0.4);}
   .kg-verdict.great{background:rgba(61,220,132,.18);color:var(--green);}
@@ -926,50 +928,60 @@ function render2026KeeperGrades(lg){
       const bp = findBigBoardPlayer(k.player);
       const keeperRound = k.round;
       const projWar = bp ? bp.projectedWar : null;
-      let peer=null, surplus=null, verdict, cls;
-      if(!bp){ verdict='player not on board'; cls='na'; }
-      else if(projWar==null || keeperRound==null){ verdict='no WAR projection'; cls='na'; }
+      const projRound = bp ? rankToRound(bp.avgRank) : null;
+      let peer=null, surplus=null, verdict, cls, tierRank;
+      if(!bp){ verdict='player not on board'; cls='na'; tierRank=9; }
+      else if(projWar==null || keeperRound==null){ verdict='no WAR projection'; cls='na'; tierRank=9; }
       else {
         peer = peerAvgWar(bp.pos, keeperRound);
-        if(peer.avg==null){ verdict='insufficient peer data'; cls='na'; }
-        else {
-          surplus = Math.round((projWar - peer.avg)*10)/10;
-          // Same value floor as the 2025 grading: projected WAR at/below 0
-          // means no real value regardless of cost, so cap at "fair" (or
-          // "reach" if peers at this cost/position show real value exists).
-          if(projWar<=0){ verdict = peer.avg>2 ? 'reach (no value)' : 'fair (weak cost tier)'; cls = peer.avg>2?'overpriced':'fair'; }
-          else if(surplus>=15){ verdict='elite value'; cls='elite'; }
-          else if(surplus>=5){ verdict='great value'; cls='great'; }
-          else if(surplus>=1){ verdict='good value'; cls='good'; }
-          else if(surplus>-5){ verdict='fair'; cls='fair'; }
-          else { verdict='reach'; cls='overpriced'; }
+        surplus = peer.avg!=null ? Math.round((projWar - peer.avg)*10)/10 : null;
+        // WAR-PRIMARY tiering: absolute projected production decides the
+        // tier -- this is a "is this player a difference-maker" question,
+        // not a cost question. A low-WAR player at a huge discount (e.g.
+        // a replacement-level RB kept in round 13) should NOT outrank a
+        // real difference-maker just because his cost-relative surplus
+        // number is bigger -- per Sean's explicit call: WAR "a tad higher
+        // than replacement" with a big bargain is NOT a difference-maker,
+        // and shouldn't rate above a keeper with genuinely elite production.
+        // Surplus is used only as a same-tier tiebreaker below, plus a
+        // 1-notch demotion if the keeper was an outright reach (kept well
+        // above market cost) despite decent WAR.
+        if(projWar>=90){ verdict='elite value+'; cls='eliteplus'; tierRank=0; }
+        else if(projWar>=60){ verdict='elite value'; cls='elite'; tierRank=1; }
+        else if(projWar>=35){ verdict='great value'; cls='great'; tierRank=2; }
+        else if(projWar>=15){ verdict='good value'; cls='good'; tierRank=3; }
+        else if(projWar>0){ verdict='fair'; cls='fair'; tierRank=4; }
+        else { verdict = (peer.avg!=null && peer.avg>2) ? 'reach (no value)' : 'fair (weak cost tier)';
+               cls = (peer.avg!=null && peer.avg>2) ? 'overpriced' : 'fair'; tierRank=5; }
+        // Demote one tier if this was a real reach (kept several rounds
+        // EARLIER than the player's own projected round -- projRound is a
+        // much later/higher number than keeperRound) even though the
+        // tier-qualifying WAR is real -- cost still matters some. A player
+        // kept LATER than their projected round (the common, good case) is
+        // a bargain, not a reach, and should NOT be demoted.
+        if(projRound!=null && keeperRound!=null && (projRound - keeperRound) >= 3 && tierRank<4){
+          tierRank += 1;
+          verdict += ' (reach vs. proj. round)';
         }
       }
       graded.push({
         manager:t.manager, team:t.team||t.manager, player:k.player,
-        pos: bp?bp.pos:'—', keeperRound, projWar,
+        pos: bp?bp.pos:'—', keeperRound, projWar, projRound,
         peerAvgWar: peer?peer.avg:null, peerN: peer?peer.n:null, peerWindow: peer?peer.w:null,
-        surplus, verdict, cls, isSuggested: !!k._isSuggested,
+        surplus, verdict, cls, tierRank, isSuggested: !!k._isSuggested,
       });
     });
   });
-  // Same sort rule as 2025 grading: real projected production always
-  // outranks a keeper projected to add zero/negative value, regardless of
-  // cost-relative surplus -- a tiered (bucket, magnitude) key, not a raw
-  // surplus sort, so capped/negative entries don't collapse to identical
-  // ordering. Then within each tier, sort by surplus magnitude.
-  function sortBucket(g){
-    if(g.surplus==null) return 2;        // no data -- always last
-    if(g.projWar!=null && g.projWar<=0) return 1;  // no real production
-    return 0;                             // real production
-  }
+  // WAR-tier first (the "is this a difference-maker" question), then WAR
+  // magnitude within the tier, then surplus as a final tiebreaker among
+  // similarly-productive players.
   graded.sort((a,b)=>{
-    const ba=sortBucket(a), bb=sortBucket(b);
-    if(ba!==bb) return ba-bb;
-    if(a.surplus==null && b.surplus==null) return 0;
-    if(a.surplus==null) return 1;
-    if(b.surplus==null) return -1;
-    return b.surplus-a.surplus;
+    if(a.tierRank!==b.tierRank) return a.tierRank-b.tierRank;
+    if(a.projWar==null && b.projWar==null) return 0;
+    if(a.projWar==null) return 1;
+    if(b.projWar==null) return -1;
+    if(a.projWar!==b.projWar) return b.projWar-a.projWar;
+    return (b.surplus??-Infinity)-(a.surplus??-Infinity);
   });
 
   const rows = graded.map(g=>`
@@ -978,6 +990,7 @@ function render2026KeeperGrades(lg){
       <td>${g.player}${g.isSuggested?` <span class="do-keeper-suggested" title="Predicted -- not yet confirmed in the Google Sheet">*</span>`:''}</td>
       <td>${g.pos}</td>
       <td class="num">R${g.keeperRound ?? '—'}</td>
+      <td class="num">${g.projRound!=null?'R'+g.projRound:'—'}</td>
       <td class="num">${g.projWar!=null?(g.projWar>0?'+':'')+g.projWar:'—'}</td>
       <td class="num">${g.peerAvgWar!=null?`${g.peerAvgWar>0?'+':''}${Math.round(g.peerAvgWar*10)/10} <span class="pt-sub">n=${g.peerN}, ±${g.peerWindow}rd</span>`:'—'}</td>
       <td class="num">${g.surplus!=null?(g.surplus>0?'+':'')+g.surplus:'—'}</td>
@@ -988,14 +1001,15 @@ function render2026KeeperGrades(lg){
   el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
-      <span class="pt-warsrc">WAR calculated based on 2026 ESPN Projections.</span><br>
-      Same methodology as the 2025 grades below: each keeper's projected WAR is compared to the
-      average projected WAR of same-position Big Board players near the same cost round (widens if thin).
-      Positive surplus = projected to outproduce what that cost typically gets; negative = a reach.
+      <span class="pt-warsrc">WAR calculated based on 2026 ESPN Projections (2025 grades below use actual results instead).</span><br>
+      Ranked primarily on projected WAR (absolute production) -- a real difference-maker outranks a
+      barely-positive player who just happens to be a big discount vs. cost. Surplus (proj. WAR vs.
+      same-position peers near the same keeper-cost round) breaks ties within a tier and can demote a
+      pick that reached well above the player's own projected round.
       ${suggestedCount?` <span class="do-keeper-suggested">${suggestedCount} row(s) marked * use a predicted keeper, not yet confirmed.</span>`:''}
     </div>
     <table class="kgTable"><thead><tr>
-      <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Keeper Rd</th>
+      <th>Manager</th><th>Player</th><th>Pos</th><th class="num">Keeper Rd</th><th class="num">Proj. Rd</th>
       <th class="num">Proj WAR</th><th class="num">Peer Avg WAR</th><th class="num">Surplus</th><th>Verdict</th>
     </tr></thead><tbody>${rows}</tbody></table>`;
 }
