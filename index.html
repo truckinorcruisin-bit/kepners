@@ -894,7 +894,7 @@ function render2026KeeperGrades(lg){
   // would typically return"). Mirrors kepners_draft_grades.py's
   // peer_avg_war() widening-window logic exactly, just swapping actual_war
   // (past results) for projectedWar (forward-looking).
-  const PEER_WINDOW_START = 2, PEER_WINDOW_MAX = 6, MIN_PEER_SAMPLE = 5;
+  const PEER_WINDOW_START = 0, PEER_WINDOW_MAX = 6, MIN_PEER_SAMPLE = 5;
   const byPositionRound = {};
   DATA.players.forEach(p=>{
     if(p.projectedWar==null) return;

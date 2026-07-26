@@ -86,7 +86,7 @@ SCORING_NOTE = (
 # found in that window. Never falls back to mixing positions -- WAR scales
 # differ too much across positions (a QB's replacement-level WAR isn't
 # comparable to a K's) for that to mean anything.
-PEER_WINDOW_START = 2
+PEER_WINDOW_START = 0
 PEER_WINDOW_MAX = 6
 MIN_PEER_SAMPLE = 3
 
