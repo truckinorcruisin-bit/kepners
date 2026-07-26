@@ -1,0 +1,1031 @@
+{
+  "season": 2025,
+  "source": "Final_Rosters_for_2025_Season.pdf (hand-transcribed)",
+  "note": "Once Yahoo API access is live, yahoo_kepners_history.py should be able to produce this same shape automatically -- retire the manual transcription step then.",
+  "rosters": {
+    "Football Guy's Guy": [
+      {
+        "player": "Jacoby Brissett",
+        "draft_position": null,
+        "current_o_rank": 194
+      },
+      {
+        "player": "Amon-Ra St. Brown",
+        "draft_position": "1.9",
+        "current_o_rank": 9
+      },
+      {
+        "player": "Mike Evans",
+        "draft_position": "2.12",
+        "current_o_rank": 66
+      },
+      {
+        "player": "Jauan Jennings",
+        "draft_position": "8.4",
+        "current_o_rank": 165
+      },
+      {
+        "player": "James Cook III",
+        "draft_position": "2.4",
+        "current_o_rank": 10
+      },
+      {
+        "player": "Aaron Jones Sr.",
+        "draft_position": "6.4",
+        "current_o_rank": 108
+      },
+      {
+        "player": "Darren Waller",
+        "draft_position": null,
+        "current_o_rank": 344
+      },
+      {
+        "player": "Jaylen Warren",
+        "draft_position": "7.9",
+        "current_o_rank": 72
+      },
+      {
+        "player": "Zay Flowers",
+        "draft_position": "4.4",
+        "current_o_rank": 42
+      },
+      {
+        "player": "Davante Adams",
+        "draft_position": "3.9",
+        "current_o_rank": 44
+      },
+      {
+        "player": "Aaron Rodgers",
+        "draft_position": null,
+        "current_o_rank": 248
+      },
+      {
+        "player": "Oronde Gadsden",
+        "draft_position": null,
+        "current_o_rank": 134
+      },
+      {
+        "player": "Kareem Hunt",
+        "draft_position": null,
+        "current_o_rank": 339
+      },
+      {
+        "player": "Chuba Hubbard",
+        "draft_position": "9.9",
+        "current_o_rank": 61
+      },
+      {
+        "player": "Chris Boswell",
+        "draft_position": "13.9",
+        "current_o_rank": 249
+      },
+      {
+        "player": "Texans (DEF)",
+        "draft_position": "14.4",
+        "current_o_rank": 155
+      },
+      {
+        "player": "Travis Hunter",
+        "draft_position": "5.9",
+        "current_o_rank": 153
+      }
+    ],
+    "BrowneyeVibeSesh": [
+      {
+        "player": "Matthew Stafford",
+        "draft_position": null,
+        "current_o_rank": 116
+      },
+      {
+        "player": "A.J. Brown",
+        "draft_position": "2.5",
+        "current_o_rank": 29
+      },
+      {
+        "player": "Courtland Sutton",
+        "draft_position": "6.5",
+        "current_o_rank": 81
+      },
+      {
+        "player": "Terry McLaurin",
+        "draft_position": "3.8",
+        "current_o_rank": 48
+      },
+      {
+        "player": "Tony Pollard",
+        "draft_position": "4.5",
+        "current_o_rank": 88
+      },
+      {
+        "player": "Blake Corum",
+        "draft_position": "15.8",
+        "current_o_rank": 90
+      },
+      {
+        "player": "Brock Bowers",
+        "draft_position": "8.5",
+        "current_o_rank": 18
+      },
+      {
+        "player": "Christian McCaffrey",
+        "draft_position": "1.8",
+        "current_o_rank": 6
+      },
+      {
+        "player": "Rome Odunze",
+        "draft_position": "5.8",
+        "current_o_rank": 58
+      },
+      {
+        "player": "Xavier Legette",
+        "draft_position": "12.5",
+        "current_o_rank": 327
+      },
+      {
+        "player": "Dylan Sampson",
+        "draft_position": "10.5",
+        "current_o_rank": 146
+      },
+      {
+        "player": "Pat Freiermuth",
+        "draft_position": null,
+        "current_o_rank": 277
+      },
+      {
+        "player": "Baker Mayfield",
+        "draft_position": "7.8",
+        "current_o_rank": 138
+      },
+      {
+        "player": "Wil Lutz",
+        "draft_position": "13.8",
+        "current_o_rank": 287
+      },
+      {
+        "player": "Andy Borregales",
+        "draft_position": null,
+        "current_o_rank": 246
+      },
+      {
+        "player": "Steelers (DEF)",
+        "draft_position": "14.8",
+        "current_o_rank": 200
+      },
+      {
+        "player": "Braelon Allen",
+        "draft_position": "9.8",
+        "current_o_rank": 145
+      }
+    ],
+    "Burrito": [
+      {
+        "player": "Drake Maye",
+        "draft_position": "14.3",
+        "current_o_rank": 43
+      },
+      {
+        "player": "Puka Nacua",
+        "draft_position": "2.3",
+        "current_o_rank": 4
+      },
+      {
+        "player": "Jaylen Waddle",
+        "draft_position": "4.3",
+        "current_o_rank": 45
+      },
+      {
+        "player": "Romeo Doubs",
+        "draft_position": "12.3",
+        "current_o_rank": 128
+      },
+      {
+        "player": "De'Von Achane",
+        "draft_position": "8.3",
+        "current_o_rank": 13
+      },
+      {
+        "player": "Ashton Jeanty",
+        "draft_position": "1.10",
+        "current_o_rank": 12
+      },
+      {
+        "player": "Trey McBride",
+        "draft_position": "3.10",
+        "current_o_rank": 22
+      },
+      {
+        "player": "Darnell Mooney",
+        "draft_position": "9.10",
+        "current_o_rank": 255
+      },
+      {
+        "player": "Quinshon Judkins",
+        "draft_position": "6.3",
+        "current_o_rank": 60
+      },
+      {
+        "player": "Ricky Pearsall",
+        "draft_position": "5.10",
+        "current_o_rank": 93
+      },
+      {
+        "player": "C.J. Stroud",
+        "draft_position": "11.1",
+        "current_o_rank": 156
+      },
+      {
+        "player": "Bhayshul Tuten",
+        "draft_position": "10.3",
+        "current_o_rank": 63
+      },
+      {
+        "player": "Cam Little",
+        "draft_position": null,
+        "current_o_rank": 216
+      },
+      {
+        "player": "Will Reichard",
+        "draft_position": null,
+        "current_o_rank": 278
+      },
+      {
+        "player": "Patriots (DEF)",
+        "draft_position": null,
+        "current_o_rank": 190
+      },
+      {
+        "player": "Jaguars (DEF)",
+        "draft_position": null,
+        "current_o_rank": 195
+      },
+      {
+        "player": "Trey Benson",
+        "draft_position": "12.11",
+        "current_o_rank": 232
+      }
+    ],
+    "Dad's To The Bone": [
+      {
+        "player": "Jaxson Dart",
+        "draft_position": "16.1",
+        "current_o_rank": 70
+      },
+      {
+        "player": "DeVonta Smith",
+        "draft_position": "3.12",
+        "current_o_rank": 28
+      },
+      {
+        "player": "Christian Watson",
+        "draft_position": null,
+        "current_o_rank": 59
+      },
+      {
+        "player": "Ladd McConkey",
+        "draft_position": "8.10",
+        "current_o_rank": 40
+      },
+      {
+        "player": "Chase Brown",
+        "draft_position": "7.12",
+        "current_o_rank": 15
+      },
+      {
+        "player": "Woody Marks",
+        "draft_position": null,
+        "current_o_rank": 135
+      },
+      {
+        "player": "Harold Fannin Jr.",
+        "draft_position": "14.1",
+        "current_o_rank": 80
+      },
+      {
+        "player": "Bo Nix",
+        "draft_position": "5.12",
+        "current_o_rank": 99
+      },
+      {
+        "player": "Kenny Gainwell",
+        "draft_position": null,
+        "current_o_rank": 103
+      },
+      {
+        "player": "Tre Tucker",
+        "draft_position": null,
+        "current_o_rank": 189
+      },
+      {
+        "player": "Sean Tucker",
+        "draft_position": null,
+        "current_o_rank": 183
+      },
+      {
+        "player": "Tucker Kraft",
+        "draft_position": "9.3",
+        "current_o_rank": 64
+      },
+      {
+        "player": "Chris Rodriguez Jr.",
+        "draft_position": null,
+        "current_o_rank": 124
+      },
+      {
+        "player": "Ryan Flournoy",
+        "draft_position": null,
+        "current_o_rank": 224
+      },
+      {
+        "player": "Chase McLaughlin",
+        "draft_position": "13.12",
+        "current_o_rank": 253
+      },
+      {
+        "player": "Ravens (DEF)",
+        "draft_position": "13.6",
+        "current_o_rank": 238
+      },
+      {
+        "player": "Garrett Wilson",
+        "draft_position": "6.1",
+        "current_o_rank": 35
+      }
+    ],
+    "Denim Like A DeJean": [
+      {
+        "player": "Trevor Lawrence",
+        "draft_position": null,
+        "current_o_rank": 86
+      },
+      {
+        "player": "George Pickens",
+        "draft_position": "4.12",
+        "current_o_rank": 21
+      },
+      {
+        "player": "Rashid Shaheed",
+        "draft_position": "8.12",
+        "current_o_rank": 157
+      },
+      {
+        "player": "Parker Washington",
+        "draft_position": null,
+        "current_o_rank": 94
+      },
+      {
+        "player": "Saquon Barkley",
+        "draft_position": "1.1",
+        "current_o_rank": 16
+      },
+      {
+        "player": "Tyrone Tracy Jr.",
+        "draft_position": "6.12",
+        "current_o_rank": 123
+      },
+      {
+        "player": "Dallas Goedert",
+        "draft_position": "14.12",
+        "current_o_rank": 106
+      },
+      {
+        "player": "DK Metcalf",
+        "draft_position": "5.1",
+        "current_o_rank": 82
+      },
+      {
+        "player": "Lamar Jackson",
+        "draft_position": "3.1",
+        "current_o_rank": 33
+      },
+      {
+        "player": "Jordan Mason",
+        "draft_position": "6.6",
+        "current_o_rank": 117
+      },
+      {
+        "player": "Nick Chubb",
+        "draft_position": null,
+        "current_o_rank": 1965
+      },
+      {
+        "player": "Travis Kelce",
+        "draft_position": "7.1",
+        "current_o_rank": 109
+      },
+      {
+        "player": "Cameron Dicker",
+        "draft_position": "12.12",
+        "current_o_rank": 223
+      },
+      {
+        "player": "Harrison Butker",
+        "draft_position": "14.10",
+        "current_o_rank": 259
+      },
+      {
+        "player": "Eagles (DEF)",
+        "draft_position": "13.1",
+        "current_o_rank": 176
+      },
+      {
+        "player": "Bills (DEF)",
+        "draft_position": "14.5",
+        "current_o_rank": 250
+      }
+    ],
+    "Matty Dawg Pound": [
+      {
+        "player": "Patrick Mahomes",
+        "draft_position": "4.7",
+        "current_o_rank": 104
+      },
+      {
+        "player": "Justin Jefferson",
+        "draft_position": "1.6",
+        "current_o_rank": 11
+      },
+      {
+        "player": "Nico Collins",
+        "draft_position": "7.6",
+        "current_o_rank": 17
+      },
+      {
+        "player": "Deebo Samuel",
+        "draft_position": null,
+        "current_o_rank": 144
+      },
+      {
+        "player": "Omarion Hampton",
+        "draft_position": "2.7",
+        "current_o_rank": 19
+      },
+      {
+        "player": "TreVeyon Henderson",
+        "draft_position": "3.6",
+        "current_o_rank": 56
+      },
+      {
+        "player": "Mark Andrews",
+        "draft_position": "5.6",
+        "current_o_rank": 131
+      },
+      {
+        "player": "Bam Knight",
+        "draft_position": null,
+        "current_o_rank": 341
+      },
+      {
+        "player": "Samaje Perine",
+        "draft_position": null,
+        "current_o_rank": 320
+      },
+      {
+        "player": "Jaret Patterson",
+        "draft_position": null,
+        "current_o_rank": 2171
+      },
+      {
+        "player": "Rico Dowdle",
+        "draft_position": "15.6",
+        "current_o_rank": 74
+      },
+      {
+        "player": "Cedric Tillman",
+        "draft_position": "11.6",
+        "current_o_rank": 333
+      },
+      {
+        "player": "Sam Darnold",
+        "draft_position": null,
+        "current_o_rank": 163
+      },
+      {
+        "player": "Keon Coleman",
+        "draft_position": "9.6",
+        "current_o_rank": 282
+      },
+      {
+        "player": "Ka'imi Fairbairn",
+        "draft_position": "12.7",
+        "current_o_rank": 206
+      },
+      {
+        "player": "Seahawks (DEF)",
+        "draft_position": null,
+        "current_o_rank": 168
+      },
+      {
+        "player": "J.K. Dobbins",
+        "draft_position": "10.7",
+        "current_o_rank": 95
+      }
+    ],
+    "Phony Grossi": [
+      {
+        "player": "Josh Allen",
+        "draft_position": "2.11",
+        "current_o_rank": 23
+      },
+      {
+        "player": "Emeka Egbuka",
+        "draft_position": "5.2",
+        "current_o_rank": 51
+      },
+      {
+        "player": "Andrei Iosivas",
+        "draft_position": null,
+        "current_o_rank": 1947
+      },
+      {
+        "player": "Ja'Marr Chase",
+        "draft_position": "1.2",
+        "current_o_rank": 2
+      },
+      {
+        "player": "David Montgomery",
+        "draft_position": "4.11",
+        "current_o_rank": 65
+      },
+      {
+        "player": "Kenneth Walker III",
+        "draft_position": "3.2",
+        "current_o_rank": 20
+      },
+      {
+        "player": "Dalton Kincaid",
+        "draft_position": null,
+        "current_o_rank": 101
+      },
+      {
+        "player": "Terrance Ferguson",
+        "draft_position": "16.11",
+        "current_o_rank": 192
+      },
+      {
+        "player": "Cooper Kupp",
+        "draft_position": "10.1",
+        "current_o_rank": 285
+      },
+      {
+        "player": "Matthew Golden",
+        "draft_position": "6.11",
+        "current_o_rank": 137
+      },
+      {
+        "player": "Jacory Croskey-Merritt",
+        "draft_position": "7.2",
+        "current_o_rank": 97
+      },
+      {
+        "player": "Cam Skattebo",
+        "draft_position": "8.11",
+        "current_o_rank": 50
+      },
+      {
+        "player": "Justin Herbert",
+        "draft_position": "15.10",
+        "current_o_rank": 69
+      },
+      {
+        "player": "Jayden Reed",
+        "draft_position": "9.2",
+        "current_o_rank": 107
+      },
+      {
+        "player": "Jason Myers",
+        "draft_position": null,
+        "current_o_rank": 221
+      },
+      {
+        "player": "Packers (DEF)",
+        "draft_position": "13.10",
+        "current_o_rank": 202
+      },
+      {
+        "player": "Jalen McMillan",
+        "draft_position": null,
+        "current_o_rank": 170
+      }
+    ],
+    "Ranus The Hiddeer": [
+      {
+        "player": "Dak Prescott",
+        "draft_position": "11.3",
+        "current_o_rank": 89
+      },
+      {
+        "player": "Jaxon Smith-Njigba",
+        "draft_position": "3.3",
+        "current_o_rank": 5
+      },
+      {
+        "player": "Jameson Williams",
+        "draft_position": "4.1",
+        "current_o_rank": 52
+      },
+      {
+        "player": "Tee Higgins",
+        "draft_position": "2.10",
+        "current_o_rank": 34
+      },
+      {
+        "player": "Bijan Robinson",
+        "draft_position": "1.3",
+        "current_o_rank": 1
+      },
+      {
+        "player": "RJ Harvey",
+        "draft_position": "4.10",
+        "current_o_rank": 79
+      },
+      {
+        "player": "Tyler Warren",
+        "draft_position": "8.1",
+        "current_o_rank": 57
+      },
+      {
+        "player": "Colby Parkinson",
+        "draft_position": null,
+        "current_o_rank": 262
+      },
+      {
+        "player": "Josh Jacobs",
+        "draft_position": "2.1",
+        "current_o_rank": 30
+      },
+      {
+        "player": "Stefon Diggs",
+        "draft_position": null,
+        "current_o_rank": 143
+      },
+      {
+        "player": "Troy Franklin",
+        "draft_position": null,
+        "current_o_rank": 217
+      },
+      {
+        "player": "D'Andre Swift",
+        "draft_position": "5.3",
+        "current_o_rank": 54
+      },
+      {
+        "player": "Josh Downs",
+        "draft_position": "8.6",
+        "current_o_rank": 110
+      },
+      {
+        "player": "Michael Carter",
+        "draft_position": null,
+        "current_o_rank": 361
+      },
+      {
+        "player": "Eddy Pineiro",
+        "draft_position": null,
+        "current_o_rank": 241
+      },
+      {
+        "player": "Lions (DEF)",
+        "draft_position": "15.12",
+        "current_o_rank": 256
+      }
+    ],
+    "Shaq List": [
+      {
+        "player": "Jared Goff",
+        "draft_position": null,
+        "current_o_rank": 129
+      },
+      {
+        "player": "Khalil Shakir",
+        "draft_position": "9.7",
+        "current_o_rank": 136
+      },
+      {
+        "player": "Jerry Jeudy",
+        "draft_position": "7.5",
+        "current_o_rank": 169
+      },
+      {
+        "player": "Alec Pierce",
+        "draft_position": "15.5",
+        "current_o_rank": 75
+      },
+      {
+        "player": "Derrick Henry",
+        "draft_position": "1.5",
+        "current_o_rank": 27
+      },
+      {
+        "player": "Kimani Vidal",
+        "draft_position": null,
+        "current_o_rank": 186
+      },
+      {
+        "player": "Kyle Pitts Sr.",
+        "draft_position": "14.2",
+        "current_o_rank": 87
+      },
+      {
+        "player": "Rhamondre Stevenson",
+        "draft_position": "11.5",
+        "current_o_rank": 83
+      },
+      {
+        "player": "Xavier Worthy",
+        "draft_position": "4.8",
+        "current_o_rank": 115
+      },
+      {
+        "player": "Sam LaPorta",
+        "draft_position": "12.8",
+        "current_o_rank": 84
+      },
+      {
+        "player": "Marvin Harrison Jr.",
+        "draft_position": "3.5",
+        "current_o_rank": 71
+      },
+      {
+        "player": "Chris Olave",
+        "draft_position": "6.8",
+        "current_o_rank": 26
+      },
+      {
+        "player": "Brock Purdy",
+        "draft_position": "8.8",
+        "current_o_rank": 100
+      },
+      {
+        "player": "Brandon Aubrey",
+        "draft_position": "10.8",
+        "current_o_rank": 184
+      },
+      {
+        "player": "Brandon McManus",
+        "draft_position": null,
+        "current_o_rank": 354
+      },
+      {
+        "player": "Chiefs (DEF)",
+        "draft_position": "14.11",
+        "current_o_rank": 237
+      },
+      {
+        "player": "James Conner",
+        "draft_position": "2.8",
+        "current_o_rank": 150
+      }
+    ],
+    "The Herdsmen": [
+      {
+        "player": "Joe Burrow",
+        "draft_position": "3.11",
+        "current_o_rank": 49
+      },
+      {
+        "player": "Michael Wilson",
+        "draft_position": null,
+        "current_o_rank": 77
+      },
+      {
+        "player": "Jakobi Meyers",
+        "draft_position": "7.11",
+        "current_o_rank": 98
+      },
+      {
+        "player": "Tetairoa McMillan",
+        "draft_position": "4.2",
+        "current_o_rank": 32
+      },
+      {
+        "player": "Jonathan Taylor",
+        "draft_position": "1.11",
+        "current_o_rank": 8
+      },
+      {
+        "player": "Kyren Williams",
+        "draft_position": "2.2",
+        "current_o_rank": 37
+      },
+      {
+        "player": "Colston Loveland",
+        "draft_position": "11.10",
+        "current_o_rank": 36
+      },
+      {
+        "player": "Dalton Schultz",
+        "draft_position": null,
+        "current_o_rank": 201
+      },
+      {
+        "player": "Javonte Williams",
+        "draft_position": "8.2",
+        "current_o_rank": 41
+      },
+      {
+        "player": "Brian Thomas Jr.",
+        "draft_position": "5.11",
+        "current_o_rank": 91
+      },
+      {
+        "player": "Kyle Monangai",
+        "draft_position": null,
+        "current_o_rank": 92
+      },
+      {
+        "player": "Jordan Love",
+        "draft_position": "12.10",
+        "current_o_rank": 130
+      },
+      {
+        "player": "Kyle Williams",
+        "draft_position": "14.9",
+        "current_o_rank": 261
+      },
+      {
+        "player": "Harrison Mevis",
+        "draft_position": null,
+        "current_o_rank": 272
+      },
+      {
+        "player": "Rams (DEF)",
+        "draft_position": null,
+        "current_o_rank": 180
+      },
+      {
+        "player": "Saints (DEF)",
+        "draft_position": null,
+        "current_o_rank": 350
+      }
+    ],
+    "The Pickups": [
+      {
+        "player": "Caleb Williams",
+        "draft_position": "12.6",
+        "current_o_rank": 76
+      },
+      {
+        "player": "CeeDee Lamb",
+        "draft_position": "1.7",
+        "current_o_rank": 7
+      },
+      {
+        "player": "Jordan Addison",
+        "draft_position": "7.7",
+        "current_o_rank": 102
+      },
+      {
+        "player": "Jayden Higgins",
+        "draft_position": "11.11",
+        "current_o_rank": 122
+      },
+      {
+        "player": "Breece Hall",
+        "draft_position": "4.6",
+        "current_o_rank": 39
+      },
+      {
+        "player": "Bucky Irving",
+        "draft_position": "10.6",
+        "current_o_rank": 47
+      },
+      {
+        "player": "George Kittle",
+        "draft_position": "2.6",
+        "current_o_rank": 120
+      },
+      {
+        "player": "Juwan Johnson",
+        "draft_position": null,
+        "current_o_rank": 161
+      },
+      {
+        "player": "Michael Pittman Jr.",
+        "draft_position": "9.5",
+        "current_o_rank": 105
+      },
+      {
+        "player": "Devin Neal",
+        "draft_position": null,
+        "current_o_rank": 230
+      },
+      {
+        "player": "Rachaad White",
+        "draft_position": null,
+        "current_o_rank": 119
+      },
+      {
+        "player": "Jayden Daniels",
+        "draft_position": "5.7",
+        "current_o_rank": 53
+      },
+      {
+        "player": "Luther Burden III",
+        "draft_position": "13.3",
+        "current_o_rank": 46
+      },
+      {
+        "player": "Tyjae Spears",
+        "draft_position": "15.3",
+        "current_o_rank": 142
+      },
+      {
+        "player": "Jake Bates",
+        "draft_position": "13.7",
+        "current_o_rank": 267
+      },
+      {
+        "player": "Browns (DEF)",
+        "draft_position": null,
+        "current_o_rank": 219
+      }
+    ],
+    "Orson Welles": [
+      {
+        "player": "Jalen Hurts",
+        "draft_position": "3.4",
+        "current_o_rank": 62
+      },
+      {
+        "player": "Rashee Rice",
+        "draft_position": "6.9",
+        "current_o_rank": 31
+      },
+      {
+        "player": "Wan'Dale Robinson",
+        "draft_position": "15.4",
+        "current_o_rank": 111
+      },
+      {
+        "player": "Chris Godwin Jr.",
+        "draft_position": "8.9",
+        "current_o_rank": 85
+      },
+      {
+        "player": "Jahmyr Gibbs",
+        "draft_position": "1.4",
+        "current_o_rank": 3
+      },
+      {
+        "player": "Travis Etienne Jr.",
+        "draft_position": "10.9",
+        "current_o_rank": 38
+      },
+      {
+        "player": "Hunter Henry",
+        "draft_position": null,
+        "current_o_rank": 152
+      },
+      {
+        "player": "DJ Moore",
+        "draft_position": "5.4",
+        "current_o_rank": 55
+      },
+      {
+        "player": "Drake London",
+        "draft_position": "2.9",
+        "current_o_rank": 14
+      },
+      {
+        "player": "Keenan Allen",
+        "draft_position": null,
+        "current_o_rank": 314
+      },
+      {
+        "player": "Zach Charbonnet",
+        "draft_position": "9.4",
+        "current_o_rank": 126
+      },
+      {
+        "player": "Tyler Allgeier",
+        "draft_position": "10.12",
+        "current_o_rank": 112
+      },
+      {
+        "player": "Darius Slayton",
+        "draft_position": null,
+        "current_o_rank": 293
+      },
+      {
+        "player": "Tyler Loop",
+        "draft_position": null,
+        "current_o_rank": 239
+      },
+      {
+        "player": "Bears (DEF)",
+        "draft_position": null,
+        "current_o_rank": 290
+      },
+      {
+        "player": "Broncos (DEF)",
+        "draft_position": "12.9",
+        "current_o_rank": 164
+      },
+      {
+        "player": "Calvin Ridley",
+        "draft_position": "6.2",
+        "current_o_rank": 204
+      }
+    ]
+  }
+}
