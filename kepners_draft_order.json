@@ -1,5 +1,5 @@
 {
-  "generated": "2026-07-26T15:09:22.443532+00:00",
+  "generated": "2026-07-26T15:15:23.168718+00:00",
   "source": "https://docs.google.com/spreadsheets/d/1PS8ftU0kXOBOtzesCxsA5X2FaXl-0Fzr",
   "draft_order": [
     {
@@ -50,7 +50,7 @@
     {
       "pick": null,
       "manager_raw": "McGann",
-      "manager": null,
+      "manager": "Mike/Brad",
       "keeper1_name": null,
       "keeper1_round": null,
       "keeper2_name": null,
@@ -77,7 +77,7 @@
     {
       "pick": null,
       "manager_raw": "Joe",
-      "manager": null,
+      "manager": "Berdine",
       "keeper1_name": null,
       "keeper1_round": null,
       "keeper2_name": null,
@@ -109,30 +109,7 @@
       "keeper1_round": null,
       "keeper2_name": null,
       "keeper2_round": null
-    },
-    {
-      "pick": null,
-      "manager_raw": "Keepers will be due: TBD",
-      "manager": null,
-      "keeper1_name": null,
-      "keeper1_round": null,
-      "keeper2_name": null,
-      "keeper2_round": null
-    },
-    {
-      "pick": null,
-      "manager_raw": "Division C",
-      "manager": null,
-      "keeper1_name": null,
-      "keeper1_round": null,
-      "keeper2_name": null,
-      "keeper2_round": null
     }
   ],
-  "unmatched_managers": [
-    "Division C",
-    "Joe",
-    "Keepers will be due: TBD",
-    "McGann"
-  ]
+  "unmatched_managers": []
 }

@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-07-26T15:09:25.530277+00:00"
+    "generated": "2026-07-26T15:15:27.061763+00:00"
   },
   "players": [
     {
@@ -8778,7 +8778,9 @@
           "slot": 9,
           "team": "Football Guys",
           "manager": "Berdine",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         },
         {
           "slot": 10,
@@ -8800,7 +8802,9 @@
           "slot": 12,
           "team": "Dads to Bone",
           "manager": "Mike/Brad",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": null,
+          "liveKeepers": []
         }
       ],
       "rosterSlots": [
@@ -8950,13 +8954,8 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-07-26T15:09:22.443532+00:00",
-      "draftOrderUnmatched": [
-        "Division C",
-        "Joe",
-        "Keepers will be due: TBD",
-        "McGann"
-      ]
+      "draftOrderGenerated": "2026-07-26T15:15:23.168718+00:00",
+      "draftOrderUnmatched": []
     },
     "miami": {
       "platform": "yahoo",
