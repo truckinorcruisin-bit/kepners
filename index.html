@@ -360,6 +360,9 @@
   table.ptable tr.mine{background:rgba(255,183,3,0.08);}
   .pt-avail{color:var(--green);font-size:10px;}
   .pt-taken{color:var(--dim);font-size:10px;}
+  .pt-suggested{color:var(--amber);font-size:10px;font-style:italic;}
+  .name-suggested-keeper{text-decoration:line-through;text-decoration-color:var(--amber);
+    color:var(--dim);}
   .pt-num{text-align:right;font-variant-numeric:tabular-nums;}
   .pt-war-pos{color:var(--green);} .pt-war-neg{color:var(--red);}
   .pt-toggle{display:flex;gap:6px;margin-bottom:12px;}
@@ -1741,8 +1744,13 @@ function rankToRoundPick(rank, teams){
 // Each column: key (for sort), label, num (right-align/numeric sort), and
 // render(r, ctx) producing the cell's inner HTML.
 const PT_COL_COMMON_LEFT = [
-  {key:'name', label:'Player', num:false, render:r=>
-    `${r.name}${isRookie(r)?`<span class="rookie-badge" title="${(r.notes||'').replace(/"/g,'&quot;')}">R</span>`:''}`},
+  {key:'name', label:'Player', num:false, render:r=>{
+    const rookieBadge = isRookie(r)?`<span class="rookie-badge" title="${(r.notes||'').replace(/"/g,'&quot;')}">R</span>`:'';
+    if(r._drafted && r._suggested){
+      return `<span class="name-suggested-keeper" title="Predicted keeper -- not yet confirmed in the Google Sheet">${r.name}</span>${rookieBadge}`;
+    }
+    return `${r.name}${rookieBadge}`;
+  }},
   {key:'team', label:'Team', num:false, render:r=>r.proTeamEspn||r.team||'—'},
   {key:'pos', label:'Pos', num:false, render:r=>r.pos},
   {key:'byeWeek', label:'Bye', num:true, render:r=>r.byeWeek||'—'},
@@ -1778,8 +1786,11 @@ function warCell(v){
   return `<span class="${cls}">${v>0?'+':''}${v}</span>`;
 }
 function statusCell(r){
+  if(r._drafted && r._suggested){
+    return `<span class="pt-suggested">${r._mine?'★ likely mine':'likely kept'}${r._keeperRound?' (R'+r._keeperRound+')':''}</span>`;
+  }
   return r._drafted
-    ? `<span class="pt-taken">${r._mine?'★ mine':'taken'}${r._cost?' $'+r._cost:''}</span>`
+    ? `<span class="pt-taken">${r._mine?'★ mine':'taken'}${r._cost?' $'+r._cost:''}${r._keeperRound?' (R'+r._keeperRound+')':''}</span>`
     : `<span class="pt-avail">available</span>`;
 }
 function ptColumns(){
@@ -1788,14 +1799,40 @@ function ptColumns(){
 
 function ptDraftedMap(){
   // which Big Board players are drafted, from the current league's logged picks.
-  // Zimmer uses zimmerDraft.picks; snake leagues have no live log yet, so map
-  // is empty there (all show available) -- the table still works as reference.
   const map = {};
   if(activeLeague==='zimmer'){
     zimmerDraft.picks.forEach(pick=>{
       const bp = findBigBoardPlayer(pick.name);
-      if(bp) map[bp.id] = {cost:pick.cost, isMine:!!pick.isMine};
+      if(bp) map[bp.id] = {cost:pick.cost, isMine:!!pick.isMine, suggested:false};
     });
+  } else {
+    // Snake leagues (Kepners/Miami) have no live pick log, but keepers ARE
+    // known ahead of the draft -- both confirmed (Google Sheet, real) and
+    // suggested (predicted from last year's roster, see KEPS). Mark both as
+    // unavailable so the board reflects reality: these players are already
+    // spoken for before the draft even starts. Real always wins over
+    // suggested for the same player, same priority as the Prep tab.
+    const lg = DATA.leagues[activeLeague];
+    if(lg && lg.teams){
+      lg.teams.forEach(t=>{
+        (t.liveKeepers||[]).forEach(k=>{
+          const bp = findBigBoardPlayer(k.player);
+          if(bp) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:false, round:k.round};
+        });
+      });
+      if(activeLeague==='kepners' && typeof KEPS!=='undefined' && KEPS && KEPS.by_manager){
+        lg.teams.forEach(t=>{
+          (KEPS.by_manager[t.manager]||[]).forEach(k=>{
+            const bp = findBigBoardPlayer(k.player);
+            // Only mark as suggested if not ALREADY real for this exact player
+            // (a different manager's real keeper on the same player id would
+            // be a data anomaly, not something to paper over -- but our own
+            // suggestion should never override our own real entry).
+            if(bp && !map[bp.id]) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:true, round:k.round};
+          });
+        });
+      }
+    }
   }
   return map;
 }
@@ -1810,6 +1847,7 @@ function ptRows(){
       missionBid: mc ? mc.bid : null,
       adjWar: computeAdjustedWar(p),
       _drafted: !!d, _mine: d ? d.isMine : false, _cost: d ? d.cost : null,
+      _suggested: d ? !!d.suggested : false, _keeperRound: d ? d.round : null,
       status: d ? (d.isMine?'mine':'taken') : 'avail',
     };
   });

@@ -11,14 +11,17 @@ weeks before the draft. Re-run this workflow any time to pick up the latest
 state; there's no need to re-upload anything by hand.
 
 THE SHEET (public, "anyone with the link can view" -- confirmed via a plain
-fetch with no login prompt): columns D/F/G/H/I/J on the "2026 Draft Order"
-tab hold:
-    D = Draft Order (pick number, 1-12)
+fetch with no login prompt): columns C-J on the "2026 Draft Order" tab hold:
+    C = "Draft Order" header label. The column ITSELF holds the owner who
+        claimed a slot (blank until they've picked) -- NOT the pick number.
+    D = the actual pick number (1-12). No header text of its own; located as
+        "the column right after 'Draft Order'", not by name match, since
+        matching the label text resolves to C (owner name), not D (pick #).
     F = Team        (manager's short name/nickname, e.g. "Dittoe")
     G = Keeper #1 (player name)      H = Keeper #1 Round
     I = Keeper #2 (player name)      J = Keeper #2 Round
-Columns A/B/C are an earlier informal sign-up mechanism + stray chat in the
-sheet and are ignored -- D/F/G/H/I/J is the clean, headered table.
+Columns A/B are an earlier informal sign-up mechanism + stray chat in the
+sheet and are ignored.
 
 FETCH METHOD: Google Sheets' public CSV export endpoint, no auth needed for
 a publicly-shared sheet:
@@ -80,7 +83,14 @@ def parse(csv_text, known_managers):
                 return i
         return None
 
-    c_pick = col("Draft Order")
+    # "Draft Order" is a two-column section in the sheet: the labeled column
+    # itself holds the OWNER who claimed a slot (filled in only once they've
+    # picked -- blank until then), and the actual PICK NUMBER lives in the
+    # column immediately after it. Matching the label text directly would
+    # resolve to the owner column, not the pick number -- confirmed with Sean
+    # 2026-07-26 after pick numbers were coming back empty for every row.
+    c_draft_order_label = col("Draft Order")
+    c_pick = c_draft_order_label + 1 if c_draft_order_label is not None else None
     c_team = col("Team")
     c_k1 = col("Keeper #1")
     c_k1r = col("Keeper #1 Round")
