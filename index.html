@@ -290,7 +290,8 @@
     color:var(--dim);padding:6px 8px;border-bottom:1px solid var(--line-2);font-weight:500;}
   .doTable td{padding:6px 8px;border-bottom:1px solid var(--line);}
   .doTable tr.me{background:rgba(255,183,3,0.08);}
-  .doTable .do-keeper{color:var(--amber);font-size:10px;}
+  .doTable .do-keeper{color:var(--green);font-size:10px;}
+  .doTable .do-keeper-suggested{color:var(--amber);font-size:10px;font-style:italic;}
   .doTable .do-none{color:var(--dim);font-size:10px;}
   .do-unmatched{font-size:9px;color:var(--red);margin-top:4px;}
 
@@ -515,6 +516,175 @@
 
 <script>
 let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, KEPG=null, activeLeague='kepners', activeMode='draft';
+
+// Predicted 2026 Kepners keepers, derived from each owner's actual final 2025
+// roster (Final_Rosters_for_2025_Season.pdf) -- NOT live data. This exists
+// because owners are consistently late entering real keepers in the Google
+// Sheet, which made it hard to gauge draft-pick value ahead of time.
+//
+// Methodology: for each player still on a team's 2025 roster who was actually
+// drafted that year (waiver/FA pickups are ineligible to keep, per league
+// rules), compute keeper cost = drafted round - 2, then compare the player's
+// CURRENT (2026) overall consensus rank against the rank you'd typically
+// expect from a pick made at that keeper-cost round. The 2 players with the
+// largest such surplus are the prediction -- this rewards value RELATIVE TO
+// COST, not just "best player," since a round-1 keeper isn't actually a
+// bargain (a round-1 slot is expected to be great anyway).
+//
+// Validated against Sean's own real, already-confirmed 2026 keepers: this
+// model's top-2 picks for "Mullins" (Luther Burden III, Bucky Irving) exactly
+// match what Sean has already entered for real in the Google Sheet.
+//
+// These are SUGGESTIONS ONLY, shown in amber, and are automatically replaced
+// by real Google Sheet data (shown in green) the moment a manager's actual
+// liveKeepers are synced -- see renderDraftOrder(). Re-derive this block if
+// rosters/rankings materially change; it won't auto-update on its own.
+const SUGGESTED_KEEPERS = {
+  "Berdine": [
+    {
+      "player": "Chuba Hubbard",
+      "round": 7,
+      "surplus": 17.5
+    },
+    {
+      "player": "Amon-Ra St. Brown",
+      "round": 1,
+      "surplus": -2.5
+    }
+  ],
+  "Scott": [
+    {
+      "player": "Blake Corum",
+      "round": 13,
+      "surplus": 60.5
+    },
+    {
+      "player": "Brock Bowers",
+      "round": 6,
+      "surplus": 48.5
+    }
+  ],
+  "Steve": [
+    {
+      "player": "Drake Maye",
+      "round": 12,
+      "surplus": 95.5
+    },
+    {
+      "player": "De'Von Achane",
+      "round": 6,
+      "surplus": 53.5
+    }
+  ],
+  "Mike/Brad": [
+    {
+      "player": "Jaxson Dart",
+      "round": 14,
+      "surplus": 92.5
+    },
+    {
+      "player": "Harold Fannin Jr.",
+      "round": 12,
+      "surplus": 58.5
+    }
+  ],
+  "Bobby": [
+    {
+      "player": "Dallas Goedert",
+      "round": 12,
+      "surplus": 32.5
+    },
+    {
+      "player": "George Pickens",
+      "round": 2,
+      "surplus": -2.5
+    }
+  ],
+  "Matty": [
+    {
+      "player": "Rico Dowdle",
+      "round": 13,
+      "surplus": 76.5
+    },
+    {
+      "player": "Nico Collins",
+      "round": 5,
+      "surplus": 37.5
+    }
+  ],
+  "Greene": [
+    {
+      "player": "Justin Herbert",
+      "round": 13,
+      "surplus": 81.5
+    },
+    {
+      "player": "Cam Skattebo",
+      "round": 6,
+      "surplus": 16.5
+    }
+  ],
+  "Mikey": [
+    {
+      "player": "Dak Prescott",
+      "round": 9,
+      "surplus": 13.5
+    },
+    {
+      "player": "Tyler Warren",
+      "round": 6,
+      "surplus": 9.5
+    }
+  ],
+  "Ditto": [
+    {
+      "player": "Alec Pierce",
+      "round": 13,
+      "surplus": 75.5
+    },
+    {
+      "player": "Kyle Pitts Sr.",
+      "round": 12,
+      "surplus": 51.5
+    }
+  ],
+  "Weber": [
+    {
+      "player": "Colston Loveland",
+      "round": 9,
+      "surplus": 66.5
+    },
+    {
+      "player": "Javonte Williams",
+      "round": 6,
+      "surplus": 25.5
+    }
+  ],
+  "Mullins": [
+    {
+      "player": "Luther Burden III",
+      "round": 11,
+      "surplus": 80.5
+    },
+    {
+      "player": "Bucky Irving",
+      "round": 8,
+      "surplus": 43.5
+    }
+  ],
+  "Neary": [
+    {
+      "player": "Travis Etienne Jr.",
+      "round": 8,
+      "surplus": 52.5
+    },
+    {
+      "player": "Wan'Dale Robinson",
+      "round": 13,
+      "surplus": 39.5
+    }
+  ]
+};
 
 // Shared player-table state -- used by BOTH the standalone Players tab and the
 // in-cockpit table toggle, so filters/sort persist as you move between them.
@@ -1264,9 +1434,19 @@ function renderDraftOrder(lg){
     return aNone ? 0 : a.draftPosition - b.draftPosition;
   });
   const rows = withPos.map(t=>{
-    const keeperHtml = (t.liveKeepers||[]).length
-      ? t.liveKeepers.map(k=>`<span class="do-keeper">${k.player} (R${k.round})</span>`).join('<br>')
-      : `<span class="do-none">none yet</span>`;
+    const real = t.liveKeepers||[];
+    const suggested = SUGGESTED_KEEPERS[t.manager]||[];
+    let keeperHtml;
+    if (real.length){
+      // Real Google Sheet data always wins, shown green/confirmed.
+      keeperHtml = real.map(k=>`<span class="do-keeper">${k.player} (R${k.round})</span>`).join('<br>');
+    } else if (suggested.length){
+      // No real data yet -- fall back to the surplus-based prediction from
+      // last year's rosters, shown amber/italic and clearly labeled as a guess.
+      keeperHtml = suggested.map(k=>`<span class="do-keeper-suggested">${k.player} (R${k.round})<span title="Predicted from 2025 roster + keeper-cost surplus -- not yet confirmed"> *</span></span>`).join('<br>');
+    } else {
+      keeperHtml = `<span class="do-none">none yet</span>`;
+    }
     const posHtml = t.draftPosition!=null ? t.draftPosition : `<span class="do-none">TBD</span>`;
     return `<tr class="${t.isMe?'me':''}">
       <td>${posHtml}</td>
@@ -1280,6 +1460,10 @@ function renderDraftOrder(lg){
     ? `<div class="do-unmatched">⚠ ${lg.draftOrderUnmatched.length} name(s) in the sheet didn't match a known manager: ${lg.draftOrderUnmatched.join(', ')} — check for a spelling variant.</div>`
     : '';
   el.innerHTML = `<div class="seclabel">Draft Order &amp; Keepers <span style="font-size:9px;color:var(--dim);font-weight:400;">— live from the shared Google Sheet</span></div>
+    <div style="font-size:9px;color:var(--dim);margin-bottom:6px;">
+      <span class="do-keeper">green</span> = confirmed in the Google Sheet ·
+      <span class="do-keeper-suggested">amber *</span> = predicted from last year's roster (surplus of current value vs. keeper-round cost) until the manager enters their real pick
+    </div>
     <table class="doTable"><thead><tr><th>Pick</th><th>Team</th><th>Manager</th><th>Keepers</th></tr></thead>
     <tbody>${rows||'<tr><td colspan="4" style="color:var(--dim)">No slots claimed yet.</td></tr>'}</tbody></table>
     ${unmatchedHtml}
