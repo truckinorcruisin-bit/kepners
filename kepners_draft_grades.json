@@ -15,20 +15,8 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 0,
       "surplus_war": 135.0,
-      "verdict": "elite value"
-    },
-    {
-      "manager": "Neary",
-      "team": "YaBoi",
-      "player": "Zach Charbonnet",
-      "position": "RB",
-      "kept_round": 9,
-      "actual_war": 34.0,
-      "peer_avg_war": -92.0,
-      "peer_sample_n": 3,
-      "peer_window_rounds": 0,
-      "surplus_war": 126.0,
-      "verdict": "elite value"
+      "keeper_value": 86.7,
+      "verdict": "elite value+"
     },
     {
       "manager": "Steve",
@@ -41,6 +29,7 @@
       "peer_sample_n": 4,
       "peer_window_rounds": 4,
       "surplus_war": 100.4,
+      "keeper_value": 51.6,
       "verdict": "elite value"
     },
     {
@@ -54,19 +43,21 @@
       "peer_sample_n": 10,
       "peer_window_rounds": 1,
       "surplus_war": 92.3,
-      "verdict": "great value"
+      "keeper_value": 39.8,
+      "verdict": "elite value"
     },
     {
-      "manager": "Scott",
-      "team": "Browneye",
-      "player": "Courtland Sutton",
-      "position": "WR",
-      "kept_round": 6,
-      "actual_war": 43.6,
-      "peer_avg_war": -11.6,
-      "peer_sample_n": 5,
+      "manager": "Neary",
+      "team": "YaBoi",
+      "player": "Zach Charbonnet",
+      "position": "RB",
+      "kept_round": 9,
+      "actual_war": 34.0,
+      "peer_avg_war": -92.0,
+      "peer_sample_n": 3,
       "peer_window_rounds": 0,
-      "surplus_war": 55.2,
+      "surplus_war": 126.0,
+      "keeper_value": 21.4,
       "verdict": "great value"
     },
     {
@@ -80,19 +71,21 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 0,
       "surplus_war": 48.8,
+      "keeper_value": 13.0,
       "verdict": "great value"
     },
     {
-      "manager": "Mikey",
-      "team": "Ranus",
-      "player": "Ladd McConkey",
+      "manager": "Scott",
+      "team": "Browneye",
+      "player": "Courtland Sutton",
       "position": "WR",
-      "kept_round": 8,
-      "actual_war": 12.8,
-      "peer_avg_war": -16.0,
-      "peer_sample_n": 4,
+      "kept_round": 6,
+      "actual_war": 43.6,
+      "peer_avg_war": -11.6,
+      "peer_sample_n": 5,
       "peer_window_rounds": 0,
-      "surplus_war": 28.8,
+      "surplus_war": 55.2,
+      "keeper_value": 12.0,
       "verdict": "great value"
     },
     {
@@ -106,7 +99,22 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 1,
       "surplus_war": 28.0,
-      "verdict": "great value"
+      "keeper_value": 3.5,
+      "verdict": "good value"
+    },
+    {
+      "manager": "Mikey",
+      "team": "Ranus",
+      "player": "Ladd McConkey",
+      "position": "WR",
+      "kept_round": 8,
+      "actual_war": 12.8,
+      "peer_avg_war": -16.0,
+      "peer_sample_n": 4,
+      "peer_window_rounds": 0,
+      "surplus_war": 28.8,
+      "keeper_value": 1.8,
+      "verdict": "fair"
     },
     {
       "manager": "Neary",
@@ -119,7 +127,8 @@
       "peer_sample_n": 4,
       "peer_window_rounds": 0,
       "surplus_war": -15.0,
-      "verdict": "overpriced"
+      "keeper_value": -2.4,
+      "verdict": "fair"
     },
     {
       "manager": "Weber",
@@ -132,6 +141,7 @@
       "peer_sample_n": 6,
       "peer_window_rounds": 0,
       "surplus_war": -4.5,
+      "keeper_value": 0.3,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -145,6 +155,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 0,
       "surplus_war": 14.9,
+      "keeper_value": -1.4,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -158,6 +169,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 0,
       "surplus_war": 11.3,
+      "keeper_value": -1.3,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -171,6 +183,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 0,
       "surplus_war": -35.7,
+      "keeper_value": 5.6,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -184,6 +197,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 0,
       "surplus_war": 60.0,
+      "keeper_value": -9.6,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -197,6 +211,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 0,
       "surplus_war": -27.0,
+      "keeper_value": 5.2,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -210,6 +225,7 @@
       "peer_sample_n": 7,
       "peer_window_rounds": 2,
       "surplus_war": -119.3,
+      "keeper_value": 72.1,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -223,6 +239,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 1,
       "surplus_war": -44.3,
+      "keeper_value": -0.0,
       "verdict": "bust (no value added)"
     },
     {
@@ -236,6 +253,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 2,
       "surplus_war": -42.3,
+      "keeper_value": 4.3,
       "verdict": "bust (no value added)"
     },
     {
@@ -249,6 +267,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 1,
       "surplus_war": -59.0,
+      "keeper_value": 7.5,
       "verdict": "bust (no value added)"
     }
   ],
