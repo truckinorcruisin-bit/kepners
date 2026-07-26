@@ -136,6 +136,11 @@ def attach_actual_war(picks, points_by_norm_name, replacement):
             p["actual_war"] = None
             continue
         info = points_by_norm_name.get(normalize_name(p["player"]))
+        if not info and p.get("position") == "DEF":
+            # ESPN's season-stats export suffixes team defenses with " D/ST"
+            # (e.g. "Broncos D/ST"), but draft history stores the bare team
+            # name ("Broncos") -- try the suffixed form before giving up.
+            info = points_by_norm_name.get(normalize_name(p["player"] + " D/ST"))
         if not info:
             unmatched.append(p["player"])
             p["actual_points"] = None

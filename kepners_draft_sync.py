@@ -48,6 +48,8 @@ OUT_FILE = "kepners_draft_order.json"
 # Key = normalized sheet name, value = normalized Big Board manager name.
 MANAGER_ALIASES = {
     "dittoe": "ditto",
+    "joe": "berdine",       # Joe Berdine
+    "mcgann": "mike/brad",  # Mike McGann
 }
 
 
@@ -95,7 +97,15 @@ def parse(csv_text, known_managers):
 
     draft_order = []
     unmatched = []
+    # Stop once every known manager has been found. The sheet has real
+    # content below the 12-team table (a "Keepers will be due" note, an
+    # unrelated Division A/B/C sign-up table) that isn't team data -- reading
+    # past the real table was misparsing that trailer content as extra
+    # "teams" and flooding unmatched_managers with junk like "Division C".
     for row in rows[1:]:
+        if len(draft_order) >= len(known_managers) and known_managers:
+            break
+
         def cell(idx):
             return row[idx].strip() if idx is not None and idx < len(row) else ""
 
