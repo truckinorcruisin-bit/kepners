@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-07-26T17:55:23.613502+00:00"
+    "generated": "2026-07-26T19:31:08.474879+00:00"
   },
   "players": [
     {
@@ -8742,7 +8742,7 @@
           "draftPosition": 8,
           "liveKeepers": [
             {
-              "player": "ETN",
+              "player": "Travis Etienne Jr.",
               "round": 8
             },
             {
@@ -8782,7 +8782,16 @@
           "manager": "Mullins",
           "isMe": true,
           "draftPosition": 2,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Bucky Irving",
+              "round": 8
+            },
+            {
+              "player": "Luther Burden",
+              "round": 11
+            }
+          ]
         },
         {
           "slot": 8,
@@ -8972,7 +8981,7 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-07-26T17:55:21.398608+00:00",
+      "draftOrderGenerated": "2026-07-26T19:31:06.473007+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
