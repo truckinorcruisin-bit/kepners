@@ -15,7 +15,7 @@
       "peer_sample_n": 18,
       "peer_window_rounds": 2,
       "surplus_war": 156.5,
-      "verdict": "great value"
+      "verdict": "elite value"
     },
     {
       "manager": "Mike/Brad",
@@ -28,7 +28,7 @@
       "peer_sample_n": 15,
       "peer_window_rounds": 2,
       "surplus_war": 112.1,
-      "verdict": "great value"
+      "verdict": "elite value"
     },
     {
       "manager": "Steve",
@@ -41,7 +41,7 @@
       "peer_sample_n": 4,
       "peer_window_rounds": 4,
       "surplus_war": 100.4,
-      "verdict": "great value"
+      "verdict": "elite value"
     },
     {
       "manager": "Neary",
@@ -109,16 +109,29 @@
       "verdict": "great value"
     },
     {
-      "manager": "Berdine",
-      "team": "Football Guys",
-      "player": "Chuba Hubbard",
-      "position": "RB",
-      "kept_round": 9,
-      "actual_war": -32.0,
-      "peer_avg_war": -39.2,
-      "peer_sample_n": 16,
+      "manager": "Neary",
+      "team": "YaBoi",
+      "player": "Drake London",
+      "position": "WR",
+      "kept_round": 2,
+      "actual_war": 31.8,
+      "peer_avg_war": 33.5,
+      "peer_sample_n": 21,
       "peer_window_rounds": 2,
-      "surplus_war": 7.2,
+      "surplus_war": -1.7,
+      "verdict": "fair"
+    },
+    {
+      "manager": "Mikey",
+      "team": "Ranus",
+      "player": "Jordan Love",
+      "position": "QB",
+      "kept_round": 12,
+      "actual_war": 0.0,
+      "peer_avg_war": -0.2,
+      "peer_sample_n": 6,
+      "peer_window_rounds": 2,
+      "surplus_war": 0.2,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -148,32 +161,6 @@
       "verdict": "fair (no value, but so was the field)"
     },
     {
-      "manager": "Mikey",
-      "team": "Ranus",
-      "player": "Jordan Love",
-      "position": "QB",
-      "kept_round": 12,
-      "actual_war": 0.0,
-      "peer_avg_war": -0.2,
-      "peer_sample_n": 6,
-      "peer_window_rounds": 2,
-      "surplus_war": 0.2,
-      "verdict": "fair (no value, but so was the field)"
-    },
-    {
-      "manager": "Neary",
-      "team": "YaBoi",
-      "player": "Drake London",
-      "position": "WR",
-      "kept_round": 2,
-      "actual_war": 31.8,
-      "peer_avg_war": 33.5,
-      "peer_sample_n": 21,
-      "peer_window_rounds": 2,
-      "surplus_war": -1.7,
-      "verdict": "fair"
-    },
-    {
       "manager": "Ditto",
       "team": "ShaqList",
       "player": "Jerry Jeudy",
@@ -184,6 +171,45 @@
       "peer_sample_n": 23,
       "peer_window_rounds": 2,
       "surplus_war": -18.4,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Berdine",
+      "team": "Football Guys",
+      "player": "Chuba Hubbard",
+      "position": "RB",
+      "kept_round": 9,
+      "actual_war": -32.0,
+      "peer_avg_war": -39.2,
+      "peer_sample_n": 16,
+      "peer_window_rounds": 2,
+      "surplus_war": 7.2,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Mike/Brad",
+      "team": "Dads to Bone",
+      "player": "Garrett Wilson",
+      "position": "WR",
+      "kept_round": 6,
+      "actual_war": -38.6,
+      "peer_avg_war": 3.7,
+      "peer_sample_n": 24,
+      "peer_window_rounds": 2,
+      "surplus_war": -42.3,
+      "verdict": "fair (no value, but so was the field)"
+    },
+    {
+      "manager": "Mullins",
+      "team": "Pickups",
+      "player": "Jayden Daniels",
+      "position": "QB",
+      "kept_round": 5,
+      "actual_war": -120.9,
+      "peer_avg_war": -1.6,
+      "peer_sample_n": 7,
+      "peer_window_rounds": 2,
+      "surplus_war": -119.3,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -198,19 +224,6 @@
       "peer_window_rounds": 2,
       "surplus_war": -21.4,
       "verdict": "bust (no value added)"
-    },
-    {
-      "manager": "Mike/Brad",
-      "team": "Dads to Bone",
-      "player": "Garrett Wilson",
-      "position": "WR",
-      "kept_round": 6,
-      "actual_war": -38.6,
-      "peer_avg_war": 3.7,
-      "peer_sample_n": 24,
-      "peer_window_rounds": 2,
-      "surplus_war": -42.3,
-      "verdict": "fair (no value, but so was the field)"
     },
     {
       "manager": "Ditto",
@@ -237,34 +250,7 @@
       "peer_window_rounds": 2,
       "surplus_war": -47.4,
       "verdict": "bust (no value added)"
-    },
-    {
-      "manager": "Mullins",
-      "team": "Pickups",
-      "player": "Jayden Daniels",
-      "position": "QB",
-      "kept_round": 5,
-      "actual_war": -120.9,
-      "peer_avg_war": -1.6,
-      "peer_sample_n": 7,
-      "peer_window_rounds": 2,
-      "surplus_war": -119.3,
-      "verdict": "fair (no value, but so was the field)"
     }
   ],
-  "unmatched_players": [
-    "Bills",
-    "Broncos",
-    "Cardinals",
-    "Chargers",
-    "Chiefs",
-    "Eagles",
-    "Jets",
-    "Lions",
-    "Packers",
-    "Ravens",
-    "Steelers",
-    "Texans",
-    "Vikings"
-  ]
+  "unmatched_players": []
 }
