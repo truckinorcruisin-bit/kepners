@@ -111,15 +111,16 @@ PEER_MEANINGFUL_BAR = 5
 # player from outranking a real difference-maker's smaller-percentage
 # discount -- a bargain only counts for much if the player himself is good.
 KEEPER_VALUE_WAR_CONST = 100
-KEEPER_VALUE_WEIGHT = 0.5
-# Tier cutoffs on the resulting Keeper Value score -- same as 2026 grading,
-# derived empirically from the distribution of this formula across the whole
-# Big Board (every player x every round), not arbitrary round numbers.
-KV_ELITE_PLUS = 80
-KV_ELITE = 35
-KV_GREAT = 10
-KV_GOOD = 2
-KV_FAIR_FLOOR = -3
+KEEPER_VALUE_WEIGHT = 1
+# Tier cutoffs on the resulting Keeper Value score -- doubled from the
+# original 0.5-weighted values (removing the flat 0.5 multiplier doubles
+# every score uniformly, so cutoffs double too -- same players, same tiers,
+# just on the new unscaled number line).
+KV_ELITE_PLUS = 160
+KV_ELITE = 70
+KV_GREAT = 20
+KV_GOOD = 4
+KV_FAIR_FLOOR = -6
 
 
 def load_season_points(season, stats_path=None):

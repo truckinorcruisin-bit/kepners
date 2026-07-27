@@ -943,7 +943,7 @@ function render2026KeeperGrades(lg){
   // one, which is the correct read since there was no draft-cost advantage
   // to keeping him specifically.
   const KEEPER_VALUE_WAR_CONST = 100;
-  const KEEPER_VALUE_WEIGHT = 0.5;
+  const KEEPER_VALUE_WEIGHT = 1;
 
   const graded = [];
   teamsWithKeepers.forEach(t=>{
@@ -961,15 +961,14 @@ function render2026KeeperGrades(lg){
         else {
           surplus = Math.round((projWar - peer.avg)*10)/10;
           keeperValue = Math.round(surplus * (projWar/KEEPER_VALUE_WAR_CONST) * KEEPER_VALUE_WEIGHT * 10)/10;
-          // Tier cutoffs anchored to the real empirical distribution of this
-          // formula across the whole Big Board (every player x every round),
-          // not arbitrary round numbers -- roughly the 90th/75th/50th/25th
-          // percentiles of Keeper Value league-wide.
-          if(keeperValue>=80){ verdict='elite value+'; cls='eliteplus'; }
-          else if(keeperValue>=35){ verdict='elite value'; cls='elite'; }
-          else if(keeperValue>=10){ verdict='great value'; cls='great'; }
-          else if(keeperValue>=2){ verdict='good value'; cls='good'; }
-          else if(keeperValue>-3){ verdict='fair'; cls='fair'; }
+          // Tier cutoffs doubled from the original 0.5-weighted values --
+          // removing the flat 0.5 multiplier doubles every score uniformly,
+          // so cutoffs double too (same players, same tiers, new number line).
+          if(keeperValue>=160){ verdict='elite value+'; cls='eliteplus'; }
+          else if(keeperValue>=70){ verdict='elite value'; cls='elite'; }
+          else if(keeperValue>=20){ verdict='great value'; cls='great'; }
+          else if(keeperValue>=4){ verdict='good value'; cls='good'; }
+          else if(keeperValue>-6){ verdict='fair'; cls='fair'; }
           else { verdict='reach'; cls='overpriced'; }
         }
       }
@@ -1010,7 +1009,7 @@ function render2026KeeperGrades(lg){
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
       <span class="pt-warsrc">WAR calculated based on 2026 ESPN Projections (2025 grades below use actual results instead).</span><br>
-      <b>Keeper Value = Surplus × (Proj WAR ÷ 100) × 0.5</b> -- the WAR factor keeps a big discount on a
+      <b>Keeper Value = Surplus × (Proj WAR ÷ 100)</b> -- the WAR factor keeps a big discount on a
       mediocre player (huge surplus, low WAR) from outranking a real difference-maker: a bargain only
       counts for much if the player himself is actually good. The 100 is a flat constant across all
       positions (not each position's own ceiling), so an elite TE's naturally lower ceiling doesn't let
@@ -1492,7 +1491,7 @@ function renderKeeperGrades(){
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— actual results, ${KEPG.season}</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
       <span class="pt-warsrc">WAR calculated based on ${KEPG.season} ESPN Actual Stats (not projections -- the season already happened).</span><br>
-      <b>Keeper Value = Surplus × (Actual WAR ÷ 100) × 0.5</b> -- same formula as the 2026 grades above,
+      <b>Keeper Value = Surplus × (Actual WAR ÷ 100)</b> -- same formula as the 2026 grades above,
       applied to actual (not projected) production. ${KEPG.scoring_note} ${KEPG.methodology_note||''} ${KEPG.sample_size_note}
     </div>
     <table class="kgTable"><thead><tr>
