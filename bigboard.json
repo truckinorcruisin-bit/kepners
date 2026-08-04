@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-03T13:33:01.606059+00:00"
+    "generated": "2026-08-04T11:52:35.127318+00:00"
   },
   "players": [
     {
@@ -6301,7 +6301,7 @@
       "id": "houston-texans",
       "name": "Houston Texans",
       "team": "HOU",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6320,11 +6320,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 4.36,
+      "projectedPoints": 149.57,
+      "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "proTeamEspn": null
+      "projectedWar": 33.8
     },
     {
       "id": "jack-bech",
@@ -6417,7 +6417,7 @@
       "id": "denver-broncos",
       "name": "Denver Broncos",
       "team": "DEN",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6436,17 +6436,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 3.28,
+      "projectedPoints": 152.38,
+      "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "proTeamEspn": null
+      "projectedWar": 36.6
     },
     {
       "id": "seattle-seahawks",
       "name": "Seattle Seahawks",
       "team": "SEA",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6465,17 +6465,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 2.78,
+      "projectedPoints": 141.94,
+      "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "proTeamEspn": null
+      "projectedWar": 26.2
     },
     {
       "id": "los-angeles-rams",
       "name": "Los Angeles Rams",
       "team": "LAR",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6494,11 +6494,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 4.15,
+      "projectedPoints": 138.88,
+      "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "proTeamEspn": null
+      "projectedWar": 23.1
     },
     {
       "id": "tyquan-thornton",
@@ -6823,7 +6823,7 @@
       "id": "philadelphia-eagles",
       "name": "Philadelphia Eagles",
       "team": "PHI",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6842,17 +6842,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 1.24,
+      "projectedPoints": 128.09,
+      "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "proTeamEspn": null
+      "projectedWar": 12.4
     },
     {
       "id": "new-england-patriots",
       "name": "New England Patriots",
       "team": "NE",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6871,11 +6871,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 1.12,
+      "projectedPoints": 122.85,
+      "proTeamEspn": "NE",
       "byeWeek": 11,
-      "proTeamEspn": null
+      "projectedWar": 7.1
     },
     {
       "id": "justin-fields",
@@ -6910,7 +6910,7 @@
       "id": "minnesota-vikings",
       "name": "Minnesota Vikings",
       "team": "MIN",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6929,17 +6929,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.56,
+      "projectedPoints": 96.61,
+      "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "proTeamEspn": null
+      "projectedWar": -19.1
     },
     {
       "id": "pittsburgh-steelers",
       "name": "Pittsburgh Steelers",
       "team": "PIT",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6958,17 +6958,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 1.39,
+      "projectedPoints": 150.79,
+      "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "proTeamEspn": null
+      "projectedWar": 35.1
     },
     {
       "id": "jacksonville-jaguars",
       "name": "Jacksonville Jaguars",
       "team": "JAX",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -6987,11 +6987,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.56,
+      "projectedPoints": 95.74,
+      "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "proTeamEspn": null
+      "projectedWar": -20.0
     },
     {
       "id": "cade-otton",
@@ -7055,7 +7055,7 @@
       "id": "los-angeles-chargers",
       "name": "Los Angeles Chargers",
       "team": "LAC",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -7074,17 +7074,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.38,
+      "projectedPoints": 110.46,
+      "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "proTeamEspn": null
+      "projectedWar": -5.3
     },
     {
       "id": "baltimore-ravens",
       "name": "Baltimore Ravens",
       "team": "BAL",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -7103,11 +7103,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 1.02,
+      "projectedPoints": 142.35,
+      "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "proTeamEspn": null
+      "projectedWar": 26.6
     },
     {
       "id": "darnell-mooney",
@@ -7345,7 +7345,7 @@
       "id": "green-bay-packers",
       "name": "Green Bay Packers",
       "team": "GB",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -7364,17 +7364,17 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.1,
+      "projectedPoints": 110.05,
+      "proTeamEspn": "GB",
       "byeWeek": 11,
-      "proTeamEspn": null
+      "projectedWar": -5.7
     },
     {
       "id": "cleveland-browns",
       "name": "Cleveland Browns",
       "team": "CLE",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -7393,11 +7393,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.7,
+      "projectedPoints": 123.63,
+      "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "proTeamEspn": null
+      "projectedWar": 7.9
     },
     {
       "id": "ted-hurst",
@@ -7490,7 +7490,7 @@
       "id": "kansas-city-chiefs",
       "name": "Kansas City Chiefs",
       "team": "KC",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -7509,11 +7509,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.24,
+      "projectedPoints": 120.08,
+      "proTeamEspn": "KC",
       "byeWeek": 5,
-      "proTeamEspn": null
+      "projectedWar": 4.3
     },
     {
       "id": "keon-coleman",
@@ -7548,7 +7548,7 @@
       "id": "buffalo-bills",
       "name": "Buffalo Bills",
       "team": "BUF",
-      "pos": "DE",
+      "pos": "DEF",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -7567,11 +7567,11 @@
         "nfl": "'-"
       },
       "notes": null,
-      "espnRecommendedBid": null,
-      "projectedPoints": null,
-      "projectedWar": null,
+      "espnRecommendedBid": 0.05,
+      "projectedPoints": 77.34,
+      "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "proTeamEspn": null
+      "projectedWar": -38.4
     },
     {
       "id": "rashod-bateman",
@@ -8505,7 +8505,7 @@
       "id": "brandon-aubrey",
       "name": "Brandon Aubrey",
       "team": "DAL",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8528,13 +8528,13 @@
       "projectedPoints": 170.62,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": null
+      "projectedWar": 28.7
     },
     {
       "id": "ka-imi-fairbairn",
       "name": "Ka'imi Fairbairn",
       "team": "HOU",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8557,13 +8557,13 @@
       "projectedPoints": 157.04,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": null
+      "projectedWar": 15.1
     },
     {
       "id": "cameron-dicker",
       "name": "Cameron Dicker",
       "team": "LAC",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8586,13 +8586,13 @@
       "projectedPoints": 160.87,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": null
+      "projectedWar": 19.0
     },
     {
       "id": "jason-myers",
       "name": "Jason Myers",
       "team": "#N/A",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8615,13 +8615,13 @@
       "projectedPoints": 157.53,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": null
+      "projectedWar": 15.6
     },
     {
       "id": "cam-little",
       "name": "Cam Little",
       "team": "#N/A",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8644,13 +8644,13 @@
       "projectedPoints": 145.89,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": null
+      "projectedWar": 4.0
     },
     {
       "id": "eddy-pineiro",
       "name": "Eddy Pineiro",
       "team": "#N/A",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8673,13 +8673,13 @@
       "projectedPoints": 154.47,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": null
+      "projectedWar": 12.6
     },
     {
       "id": "tyler-loop",
       "name": "Tyler Loop",
       "team": "#N/A",
-      "pos": "K-",
+      "pos": "K",
       "seanPosRank": 0,
       "tier": "0",
       "tierGroup": "ranked",
@@ -8702,7 +8702,7 @@
       "projectedPoints": 143.86,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": null
+      "projectedWar": 2.0
     }
   ],
   "leagues": {
@@ -9086,20 +9086,205 @@
     "zimmer": {
       "platform": "espn",
       "myTeam": "Elements of Intrigue",
-      "teams": [],
-      "rosterSlots": [],
+      "teams": [
+        {
+          "slot": null,
+          "team": "IT'S COMING HOME",
+          "manager": "IT'S COMING HOME",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "Schuylkill River Clams",
+          "manager": "Schuylkill River Clams",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "Ben Jarvis Green Ellis LLP",
+          "manager": "Ben Jarvis Green Ellis LLP",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "D'Quan's Friend",
+          "manager": "D'Quan's Friend",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "The Fe-Brees Brothers",
+          "manager": "The Fe-Brees Brothers",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "Flacco Tuesday",
+          "manager": "Flacco Tuesday",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "Spokane Beers",
+          "manager": "Spokane Beers",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "ZANDER HORVATH'S TEAM",
+          "manager": "ZANDER HORVATH'S TEAM",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "TEXAS CHUPACABRAS",
+          "manager": "TEXAS CHUPACABRAS",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "Elements of Intrigue",
+          "manager": "Elements of Intrigue",
+          "isMe": true
+        },
+        {
+          "slot": null,
+          "team": "Maryland Menace",
+          "manager": "Maryland Menace",
+          "isMe": false
+        },
+        {
+          "slot": null,
+          "team": "Dangerous Nights Crew",
+          "manager": "Dangerous Nights Crew",
+          "isMe": false
+        }
+      ],
+      "rosterSlots": [
+        "QB",
+        "RB",
+        "RB",
+        "WR",
+        "WR",
+        "TE",
+        "FLEX",
+        "FLEX",
+        "DEF",
+        "BEN",
+        "BEN",
+        "BEN",
+        "BEN",
+        "BEN",
+        "BEN",
+        "BEN"
+      ],
       "keepers": [],
       "rules": {
         "platform": "espn",
-        "teams": 12,
-        "format": "auction",
+        "teams": [
+          {
+            "slot": null,
+            "team": "IT'S COMING HOME",
+            "manager": "IT'S COMING HOME",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "Schuylkill River Clams",
+            "manager": "Schuylkill River Clams",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "Ben Jarvis Green Ellis LLP",
+            "manager": "Ben Jarvis Green Ellis LLP",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "D'Quan's Friend",
+            "manager": "D'Quan's Friend",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "The Fe-Brees Brothers",
+            "manager": "The Fe-Brees Brothers",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "Flacco Tuesday",
+            "manager": "Flacco Tuesday",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "Spokane Beers",
+            "manager": "Spokane Beers",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "ZANDER HORVATH'S TEAM",
+            "manager": "ZANDER HORVATH'S TEAM",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "TEXAS CHUPACABRAS",
+            "manager": "TEXAS CHUPACABRAS",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "Elements of Intrigue",
+            "manager": "Elements of Intrigue",
+            "isMe": true
+          },
+          {
+            "slot": null,
+            "team": "Maryland Menace",
+            "manager": "Maryland Menace",
+            "isMe": false
+          },
+          {
+            "slot": null,
+            "team": "Dangerous Nights Crew",
+            "manager": "Dangerous Nights Crew",
+            "isMe": false
+          }
+        ],
+        "format": "snake",
         "scoring": "standard",
         "keepers": {
           "count": 0,
           "cost_rounds_advance": null,
           "cost_rule": null,
           "eligibility": "No keepers in this league."
-        }
+        },
+        "_format_note": "Zimmer switched from auction to snake for 2026. The auction cockpit is fully preserved -- set format back to 'auction' here and it reactivates, no code change needed.",
+        "_teams_note": "Derived from 2025 ESPN draft history team names -- ESPN teams get renamed between seasons, so verify/update before the real draft. slot=null until the snake draft order is drawn.",
+        "rosterSlots": [
+          "QB",
+          "RB",
+          "RB",
+          "WR",
+          "WR",
+          "TE",
+          "FLEX",
+          "FLEX",
+          "DEF",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN"
+        ],
+        "_roster_note": "2026: 9 starters (QB/RB/RB/WR/WR/TE/FLEX/FLEX/DEF) + 7 bench = 16 drafted. Changes from auction era: 2 WR (was 3), kicker removed, 2nd FLEX added. Plus 1 IR slot, tracked in irSlots -- excluded from rosterSlots because it isn't draftable.",
+        "irSlots": 1
       }
     }
   }
