@@ -1,2 +1,10 @@
-# Yahoo OAuth local token cache -- never commit, contains live credentials
+# Yahoo OAuth local token cache -- never commit, contains live credentials.
+# NOTE: this file must be named ".gitignore" (with the leading dot). A file
+# named "gitignore" is inert -- git does not read it -- which is how the
+# token cache went unprotected previously.
 yahoo_token.json
+
+# Python bytecode -- can shadow updated source if ever committed, and adds
+# noise to diffs.
+__pycache__/
+*.pyc

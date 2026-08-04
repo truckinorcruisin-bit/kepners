@@ -39,6 +39,25 @@ REPLACEMENT_RANK = {
     "QB": 15, "RB": 30, "WR": 36, "TE": 15, "K": 12, "DEF": 12, "D/ST": 12,
 }
 
+# The Big Board workbook stores team defenses as "DE" and kickers as "K-",
+# while ESPN uses "D/ST"/"K" and the site's rosterSlots use "DEF"/"K". Left
+# unnormalized, these mismatches silently broke several things: the Players
+# tab's K and DEF filters matched zero rows, a defense could never fill a DEF
+# roster slot, and the ESPN replacement lookup (keyed on this field) missed
+# entirely -- which is why every kicker and defense had a null projectedWar.
+# Canonical form is "DEF" / "K", matching rosterSlots and REPLACEMENT_RANK.
+POSITION_ALIASES = {
+    "DE": "DEF", "D/ST": "DEF", "DST": "DEF", "D": "DEF",
+    "K-": "K", "PK": "K",
+}
+
+
+def canonical_position(pos):
+    if pos in (None, ""):
+        return pos
+    key = str(pos).strip()
+    return POSITION_ALIASES.get(key.upper(), key)
+
 SUFFIX_RE = re.compile(r"\b(jr|sr|ii|iii|iv|v)\.?\b", re.IGNORECASE)
 PUNCT_RE = re.compile(r"[.\'\-]")
 
@@ -112,7 +131,7 @@ def load_espn_player_values():
     by_pos = {}
     for p in data["players"]:
         values_by_name[normalize_name(p["name"])] = p
-        by_pos.setdefault(p["position"], []).append(p)
+        by_pos.setdefault(canonical_position(p["position"]), []).append(p)
 
     replacement_by_position = {}
     for pos, plist in by_pos.items():
@@ -144,6 +163,13 @@ def merge_espn_values(players):
     for p in players:
         key = normalize_name(p["name"])
         ev = values_by_name.get(key)
+        if not ev and p.get("pos") == "DEF":
+            # The Big Board lists defenses by full team name ("Houston Texans"),
+            # but ESPN keys them by nickname + suffix ("Texans D/ST"), so exact
+            # matching missed every one -- leaving all 15 with a null WAR.
+            nickname = str(p["name"]).split()[-1]
+            ev = (values_by_name.get(normalize_name(f"{nickname} D/ST"))
+                  or values_by_name.get(normalize_name(f"{p['name']} D/ST")))
         if not ev:
             unmatched.append(p["name"])
             p["espnRecommendedBid"] = None
@@ -219,7 +245,7 @@ def read_players(wb):
         name = norm(ws.cell(r, COL["player"]).value)
         if not name:
             continue
-        pos = norm(ws.cell(r, COL["pos"]).value)
+        pos = canonical_position(norm(ws.cell(r, COL["pos"]).value))
         if pos in (None, "#N/A"):
             pos = "NA"
         tier = norm(ws.cell(r, COL["tier"]).value)
@@ -345,15 +371,25 @@ def main(src, dst):
         "leagues": {
             "kepners": read_team_sheet(wb, "Kepners Team", "yahoo", "Pickups"),
             "miami": read_team_sheet(wb, "Miami Team", "yahoo", "HannahLees"),
-            # Zimmer (ESPN) has no dedicated Team sheet in FY25 — stub for now,
-            # will populate once the FY26 workbook adds it.
+            # Zimmer (ESPN) has no dedicated Team sheet in the workbook, so its
+            # teams/rosterSlots come from league_rules.json instead (see the
+            # rules-merge loop below, which fills them in). Starts empty here.
             "zimmer": {"platform": "espn", "myTeam": "Elements of Intrigue",
                        "teams": [], "rosterSlots": [], "keepers": []},
         },
     }
     for league_key, league_data in out["leagues"].items():
         if league_key in rules:
-            league_data["rules"] = rules[league_key]
+            league_rules = rules[league_key]
+            league_data["rules"] = league_rules
+            # For leagues with no Excel Team sheet, let league_rules.json
+            # supply teams/rosterSlots. Only fills gaps -- a real Team sheet
+            # in the workbook always wins, so this can't silently override
+            # Kepners/Miami if someone adds these keys to their rules too.
+            if not league_data["teams"] and league_rules.get("teams"):
+                league_data["teams"] = [dict(t) for t in league_rules["teams"]]
+            if not league_data["rosterSlots"] and league_rules.get("rosterSlots"):
+                league_data["rosterSlots"] = list(league_rules["rosterSlots"])
 
     merge_kepners_draft_order(out["leagues"]["kepners"])
 

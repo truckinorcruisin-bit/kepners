@@ -363,6 +363,29 @@
   table.ptable tr.drafted .pt-name{text-decoration:line-through;}
   table.ptable tr.mine{background:rgba(255,183,3,0.08);}
   .pt-avail{color:var(--green);font-size:10px;}
+
+  /* snake live Draft Log */
+  .sdl-form{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:6px;}
+  .sdl-form input,.sdl-form select{background:var(--bg);border:1px solid var(--line-2);
+    color:var(--txt);font-family:inherit;font-size:11px;padding:8px;border-radius:2px;}
+  .sdl-form input{flex:1 1 200px;}
+  .sdl-form select{flex:0 0 170px;}
+  .sdl-form button{background:var(--amber);color:#0b1220;border:none;font-family:inherit;
+    font-weight:700;font-size:10px;letter-spacing:0.08em;padding:9px 14px;border-radius:2px;cursor:pointer;}
+  .sdl-form button.sdl-secondary{background:transparent;color:var(--dim);border:1px solid var(--line-2);}
+  .sdl-form button:disabled{opacity:0.4;cursor:default;}
+  .sdl-msg{font-size:9.5px;color:var(--dim);min-height:12px;margin-bottom:4px;}
+  .sdl-msg.warn{color:var(--red);}
+  .sdl-list{max-height:190px;overflow-y:auto;border-top:1px solid var(--line);}
+  .sdl-row{display:flex;gap:8px;align-items:center;padding:5px 4px;border-bottom:1px solid var(--line);
+    font-size:11px;}
+  .sdl-row.mine{background:rgba(255,183,3,.07);}
+  .sdl-pick{flex:0 0 46px;color:var(--dim);font-size:9.5px;font-variant-numeric:tabular-nums;}
+  .sdl-name{flex:1 1 auto;}
+  .sdl-pos{flex:0 0 34px;color:var(--dim);font-size:9.5px;}
+  .sdl-team{flex:0 0 150px;color:var(--cyan);font-size:9.5px;text-align:right;}
+  .sdl-warn{color:var(--red);cursor:help;}
+  .sdl-empty{color:var(--dim);font-size:10px;padding:8px 4px;}
   .pt-taken{color:var(--dim);font-size:10px;}
   .pt-suggested{color:var(--amber);font-size:10px;font-style:italic;}
   .name-suggested-keeper{text-decoration:line-through;text-decoration-color:var(--amber);
@@ -498,6 +521,9 @@
         </div>
       </div>
 
+      <div class="seclabel">Draft Log — <span id="snakeLogTurn"></span></div>
+      <div id="snakeDraftLog"></div>
+
       <div class="foot" id="foot"></div>
     </div>
 
@@ -539,7 +565,12 @@ let cockpitCol2Mode = 'board';
 
 // Snake-league (Kepners/Miami) cockpit state: which player is selected for the
 // Deep Dive, and whether the board is tier-grouped or flat.
-let snakeDraft = { selectedPlayerId: null, boardMode: 'board' };
+// picks: live manual pick log for snake drafts. Mirrors zimmerDraft.picks
+// (the auction equivalent) so both cockpits feed the same drafted-state
+// plumbing. Session-only by design -- a page reload clears it, same as the
+// auction log, since a half-remembered draft state is worse than none.
+// Each entry: {name, pos, playerId, overall, round, pickInRound, team, isMine}
+let snakeDraft = { selectedPlayerId: null, boardMode: 'board', picks: [] };
 
 // Replay mode state
 let replay = {
@@ -750,17 +781,34 @@ function neededPositions(lg,counts){
   return need;
 }
 
+// Draft FORMAT (snake vs auction) is data-driven from league_rules.json, NOT
+// inferred from the league name. Zimmer ran auctions for years and is snake
+// for 2026, but may well switch back -- so the auction cockpit stays fully
+// intact and simply activates whenever a league's format is "auction".
+// Flipping a league between formats is a one-word change in league_rules.json
+// with no code edit required.
+function leagueFormat(lg){
+  return (lg && lg.rules && lg.rules.format) || 'snake';
+}
+function isAuctionLeague(){
+  return leagueFormat(DATA && DATA.leagues && DATA.leagues[activeLeague]) === 'auction';
+}
+
 function render(){
   const lg=DATA.leagues[activeLeague];
 
-  // Only Zimmer's auction cockpit wants the extra-wide breakpoints (its
-  // Opponent Intel grid benefits from more room); Kepners/Miami's 3-panel
-  // snake cockpit stays capped at 1400px regardless of monitor width.
-  document.body.classList.toggle('wide-cockpit', activeLeague==='zimmer');
+  // Only the auction cockpit wants the extra-wide breakpoints (its Opponent
+  // Intel grid benefits from more room); the 3-panel snake cockpit stays
+  // capped at 1400px regardless of monitor width.
+  document.body.classList.toggle('wide-cockpit', isAuctionLeague());
 
-  // History and Replay views are Zimmer-only (auction analysis / auction history).
-  // Prep (Draft Order/Owner Profiles/Keeper Grades) is the opposite -- Kepners/
-  // Miami only, since Zimmer's equivalent content lives in its own History tab.
+  // Tab visibility is deliberately LEAGUE-based, not format-based. Zimmer's
+  // History/Replay are built on its multi-year ESPN auction history, which
+  // stays valid reference material even though Zimmer drafts snake in 2026 --
+  // so they shouldn't disappear just because the format flipped. Likewise
+  // Prep (Draft Order/Owner Profiles/Keeper Grades) is Kepners/Miami-only
+  // because its content is Yahoo/Google-Sheet/keeper specific, none of which
+  // Zimmer has, regardless of draft format.
   const historyBtn=document.querySelector('#modes button[data-mode="history"]');
   const replayBtn=document.querySelector('#modes button[data-mode="replay"]');
   const prepBtn=document.querySelector('#modes button[data-mode="prep"]');
@@ -795,12 +843,12 @@ function render(){
   if(activeMode==='players'){ renderPlayersTab(); return; }
   if(activeMode==='prep'){ renderPrepView(lg); return; }
 
-  // Draft mode itself branches by format: auction (Zimmer) needs a fundamentally
-  // different UI (evaluate a nominated player) than snake (Kepners/Miami, "who's
-  // recommended next"). Both live under the same Draft tab.
+  // Draft mode branches by FORMAT, not by league: auction needs a
+  // fundamentally different UI (evaluate a nominated player, track budget)
+  // than snake ("who's recommended next"). Both live under the same Draft tab.
   const snakeUI = document.getElementById('snakeDraftUI');
   const auctionUI = document.getElementById('auctionDraftUI');
-  if(activeLeague==='zimmer'){
+  if(isAuctionLeague()){
     snakeUI.style.display='none';
     auctionUI.style.display='';
     renderAuctionDraft();
@@ -826,6 +874,7 @@ function render(){
   renderMyTeam(lg);
   renderSnakePlayerBoard(lg);
   renderDeepDive(lg);
+  renderSnakeDraftLog(lg);
   renderTicker(lg);
   wireSnakeResizer();
   renderFoot(lg);
@@ -1035,15 +1084,127 @@ function renderSnakeBanner(lg){
   // my roster fill from keepers (live draft logging isn't wired for snake yet;
   // keepers are the only locked picks we know pre-draft)
   const myKeepers = (myTeamObj && myTeamObj.liveKeepers) ? myTeamObj.liveKeepers.length : 0;
+  const myLogged = snakeDraft.picks.filter(p=>p.isMine).length;
+  const nextOverall = snakeDraft.picks.length + 1;
+  const next = snakePickLabel(nextOverall, teams);
   const chips = [
     myPos!=null ? {v:`#${myPos}`, l:'MY DRAFT SLOT'} : {v:'—', l:'MY DRAFT SLOT'},
     {v:teams, l:'TEAMS'},
-    {v:roster.length, l:'ROSTER SLOTS'},
-    {v:myKeepers, l:'MY KEEPERS'},
+    {v:`${myKeepers+myLogged}/${roster.length}`, l:'MY ROSTER'},
+    {v:snakeDraft.picks.length, l:'PICKS LOGGED'},
+    {v:teams?next.label:'—', l:'NEXT PICK'},
   ];
   el.innerHTML = `<div class="cockpit-banner">
     ${chips.map(c=>`<div class="budget-chip"><div class="bc-val">${c.v}</div><div class="bc-lbl">${c.l}</div></div>`).join('')}
   </div>`;
+}
+
+// ---- Snake live pick log (manual entry) --------------------------------
+// Snake order: odd rounds run slot 1..N, even rounds reverse (N..1).
+function snakeSlotForOverall(overall, teams){
+  if(!teams) return null;
+  const round = Math.floor((overall-1)/teams)+1;
+  const idxInRound = ((overall-1) % teams)+1;
+  return (round % 2 === 1) ? idxInRound : (teams - idxInRound + 1);
+}
+function snakePickLabel(overall, teams){
+  if(!teams) return {round:null, pickInRound:null, label:`#${overall}`};
+  const round = Math.floor((overall-1)/teams)+1;
+  const pickInRound = ((overall-1) % teams)+1;
+  return {round, pickInRound, label:`${round}.${String(pickInRound).padStart(2,'0')}`};
+}
+
+function renderSnakeDraftLog(lg){
+  const el = document.getElementById('snakeDraftLog');
+  if(!el) return;
+  const teams = lg.teams.length;
+  const nextOverall = snakeDraft.picks.length + 1;
+  const {round, pickInRound, label} = snakePickLabel(nextOverall, teams);
+  const onClockSlot = snakeSlotForOverall(nextOverall, teams);
+  // Draft slots may not be drawn yet (Zimmer's are null pre-draft), in which
+  // case we can't say who's on the clock -- show the pick number only rather
+  // than guessing at a team.
+  const onClockTeam = onClockSlot!=null ? lg.teams.find(t=>t.slot===onClockSlot) : null;
+
+  const turnEl = document.getElementById('snakeLogTurn');
+  if(turnEl){
+    turnEl.textContent = teams
+      ? `next: ${label} (overall ${nextOverall})${onClockTeam?` · ${onClockTeam.team} on the clock`:''}`
+      : 'no teams configured';
+  }
+
+  // Autocomplete from players not already logged/kept, so you can't easily
+  // log someone twice and typos surface immediately.
+  const takenIds = new Set(snakeDraft.picks.map(p=>p.playerId).filter(Boolean));
+  const avail = DATA.players
+    .filter(p=>p.pos && p.pos!=='NA' && !takenIds.has(p.id))
+    .slice(0, 400);
+
+  const rows = snakeDraft.picks.slice().reverse().map(p=>`
+    <div class="sdl-row ${p.isMine?'mine':''}">
+      <span class="sdl-pick">${p.label}</span>
+      <span class="sdl-name">${p.name}${p.playerId?'':' <span class="sdl-warn" title="No Big Board match -- this pick will NOT grey out on the board">⚠</span>'}</span>
+      <span class="sdl-pos">${p.pos||'—'}</span>
+      <span class="sdl-team">${p.isMine?'★ me':(p.team||'—')}</span>
+    </div>`).join('');
+
+  el.innerHTML = `
+    <div class="sdl-form">
+      <input id="sdlName" list="sdlPlayers" placeholder="Player name..." autocomplete="off">
+      <datalist id="sdlPlayers">${avail.map(p=>`<option value="${p.name}">`).join('')}</datalist>
+      <select id="sdlTeam">
+        <option value="">— drafted by —</option>
+        <option value="__me__">★ Me</option>
+        ${lg.teams.filter(t=>!t.isMe).map(t=>`<option value="${t.team}" ${onClockTeam&&onClockTeam.team===t.team?'selected':''}>${t.team}</option>`).join('')}
+      </select>
+      <button id="sdlAdd">ADD</button>
+      <button id="sdlUndo" class="sdl-secondary" ${snakeDraft.picks.length?'':'disabled'}>UNDO</button>
+      <button id="sdlClear" class="sdl-secondary" ${snakeDraft.picks.length?'':'disabled'}>CLEAR</button>
+    </div>
+    <div id="sdlMsg" class="sdl-msg"></div>
+    <div class="sdl-list">${rows||'<div class="sdl-empty">No picks logged yet.</div>'}</div>
+    <div class="foot">Log EVERY pick as it happens (not just yours) so the board, My Team and
+      Deep Dive stay accurate. Pick number advances automatically. Session-only — a page
+      reload clears the log.</div>`;
+
+  const nameInput = document.getElementById('sdlName');
+  const teamSel = document.getElementById('sdlTeam');
+  const msg = document.getElementById('sdlMsg');
+
+  function addPick(){
+    const raw = nameInput.value.trim();
+    if(!raw){ msg.textContent='Enter a player name.'; return; }
+    const bp = findBigBoardPlayer(raw);
+    const teamVal = teamSel.value;
+    const isMine = teamVal === '__me__';
+    const overall = snakeDraft.picks.length + 1;
+    const info = snakePickLabel(overall, teams);
+    snakeDraft.picks.push({
+      name: bp ? bp.name : raw,
+      pos: bp ? bp.pos : null,
+      playerId: bp ? bp.id : null,
+      overall, round: info.round, pickInRound: info.pickInRound, label: info.label,
+      team: isMine ? (lg.teams.find(t=>t.isMe)||{}).team : (teamVal||null),
+      isMine,
+    });
+    // Flag unmatched names loudly -- a typo here means the player silently
+    // stays "available" on the board, which is the failure mode that matters.
+    msg.textContent = bp ? '' : `"${raw}" didn't match a Big Board player — logged, but it won't grey out on the board.`;
+    msg.className = bp ? 'sdl-msg' : 'sdl-msg warn';
+    nameInput.value='';
+    render();
+    const again = document.getElementById('sdlName');
+    if(again) again.focus();
+  }
+
+  document.getElementById('sdlAdd').onclick = addPick;
+  nameInput.onkeydown = (e)=>{ if(e.key==='Enter'){ e.preventDefault(); addPick(); } };
+  document.getElementById('sdlUndo').onclick = ()=>{ snakeDraft.picks.pop(); render(); };
+  document.getElementById('sdlClear').onclick = ()=>{
+    if(snakeDraft.picks.length && confirm(`Clear all ${snakeDraft.picks.length} logged picks?`)){
+      snakeDraft.picks = []; render();
+    }
+  };
 }
 
 function renderMyTeam(lg){
@@ -1051,10 +1212,14 @@ function renderMyTeam(lg){
   if(!el) return;
   const myTeamObj = lg.teams.find(t=>t.isMe);
   const roster = lg.rosterSlots || [];
-  // Fill slots greedily from my known picks (keepers for now; extendable to
-  // live-logged picks later). Keepers carry a player name + round.
+  // Slots fill from keepers PLUS anything logged to me in the live Draft Log,
+  // so the panel (and the Deep Dive roster-fit read that depends on it) stays
+  // accurate as the draft progresses rather than being frozen pre-draft.
   const myKeepers = (myTeamObj && myTeamObj.liveKeepers) ? [...myTeamObj.liveKeepers] : [];
-  const remaining = [...myKeepers];
+  const myLogged = snakeDraft.picks
+    .filter(p=>p.isMine)
+    .map(p=>({player:p.name, round:p.round, _pick:p.label}));
+  const remaining = [...myKeepers, ...myLogged];
   const cells = roster.map(slot=>{
     let fillIdx = -1;
     if(slot==='FLEX') fillIdx = remaining.findIndex(k=>true); // any leftover
@@ -1071,12 +1236,12 @@ function renderMyTeam(lg){
       <div class="myteam-cell ${c.fill?'filled':''}">
         <span class="mt-slot">${c.slot}</span>
         ${c.fill
-          ? `<span class="mt-player">${c.fill.player} <span class="mt-rd">R${c.fill.round}</span></span>`
+          ? `<span class="mt-player">${c.fill.player} <span class="mt-rd">${c.fill._pick?'@'+c.fill._pick:'R'+c.fill.round}</span></span>`
           : `<span class="mt-empty">—</span>`}
       </div>`).join('')}
   </div>
-  <div class="foot" style="margin-top:8px;">Slots fill from your keepers now; live-pick logging for snake is a
-    future add. Positional needs here drive the Deep Dive's roster-fit read.</div>`;
+  <div class="foot" style="margin-top:8px;">Slots fill from your keepers plus anything logged to you
+    in the Draft Log below. Positional needs here drive the Deep Dive's roster-fit read.</div>`;
 }
 
 function renderSnakePlayerBoard(lg){
@@ -1122,10 +1287,15 @@ function markSelectedRow(container, pid){
 function myRosterPositions(lg){
   const myTeamObj = lg.teams.find(t=>t.isMe);
   const counts = {};
+  const bump = (pos)=>{ if(pos) counts[pos] = (counts[pos]||0)+1; };
   ((myTeamObj && myTeamObj.liveKeepers) || []).forEach(k=>{
     const bp = findBigBoardPlayer(k.player);
-    if(bp) counts[bp.pos] = (counts[bp.pos]||0)+1;
+    if(bp) bump(bp.pos);
   });
+  // Live-logged picks count too -- otherwise roster fit stays frozen at the
+  // pre-draft (keepers-only) state and keeps reporting open starting slots
+  // at positions already filled during the draft.
+  snakeDraft.picks.filter(p=>p.isMine).forEach(p=>bump(p.pos));
   return {myTeamObj, counts};
 }
 
@@ -1920,24 +2090,23 @@ function statusCell(r){
     return `<span class="pt-suggested">${r._mine?'★ likely mine':'likely kept'}${r._keeperRound?' (R'+r._keeperRound+')':''}</span>`;
   }
   return r._drafted
-    ? `<span class="pt-taken">${r._mine?'★ mine':'taken'}${r._cost?' $'+r._cost:''}${r._keeperRound?' (R'+r._keeperRound+')':''}</span>`
+    ? `<span class="pt-taken">${r._mine?'★ mine':'taken'}${r._cost?' $'+r._cost:''}${r._pickLabel?' @'+r._pickLabel:''}${r._keeperRound?' (R'+r._keeperRound+')':''}</span>`
     : `<span class="pt-avail">available</span>`;
 }
 function ptColumns(){
-  return activeLeague==='zimmer' ? PT_COLUMNS_AUCTION : PT_COLUMNS_SNAKE;
+  return isAuctionLeague() ? PT_COLUMNS_AUCTION : PT_COLUMNS_SNAKE;
 }
 
 function ptDraftedMap(){
   // which Big Board players are drafted, from the current league's logged picks.
   const map = {};
-  if(activeLeague==='zimmer'){
+  if(isAuctionLeague()){
     zimmerDraft.picks.forEach(pick=>{
       const bp = findBigBoardPlayer(pick.name);
       if(bp) map[bp.id] = {cost:pick.cost, isMine:!!pick.isMine, suggested:false};
     });
   } else {
-    // Snake leagues (Kepners/Miami) have no live pick log, but keepers ARE
-    // known ahead of the draft -- both confirmed (Google Sheet, real) and
+    // Snake leagues have no live pick log, but keepers ARE known ahead of the draft -- both confirmed (Google Sheet, real) and
     // suggested (predicted from last year's roster, see KEPS). Mark both as
     // unavailable so the board reflects reality: these players are already
     // spoken for before the draft even starts. Real always wins over
@@ -1963,8 +2132,33 @@ function ptDraftedMap(){
         });
       }
     }
+    // Live-logged picks applied LAST so they win over keeper/suggested
+    // entries -- a pick actually seen in the draft room is the most current
+    // fact available, and should never be overridden by a prediction.
+    snakeDraft.picks.forEach(pick=>{
+      if(!pick.playerId) return;  // unmatched name; already flagged in the log
+      map[pick.playerId] = {cost:null, isMine:!!pick.isMine, suggested:false, pickLabel:pick.label};
+    });
   }
   return map;
+}
+
+// Positions a league can actually roster, derived from its rosterSlots. Used
+// to keep undraftable positions off the board -- e.g. Zimmer dropped its
+// kicker for 2026 and Miami never had one, so kickers are pure noise there.
+// Returns null (meaning "don't filter") if a league has no roster config yet,
+// so a missing Team sheet can never blank out the whole board.
+const FLEX_ELIGIBLE = ['RB','WR','TE'];
+function leagueRosterablePositions(lg){
+  const slots = (lg && lg.rosterSlots) || [];
+  if(!slots.length) return null;
+  const set = new Set();
+  slots.forEach(s=>{
+    if(s==='BEN' || s==='IR') return;
+    if(s==='FLEX'){ FLEX_ELIGIBLE.forEach(p=>set.add(p)); return; }
+    set.add(s);
+  });
+  return set;
 }
 
 function ptRows(){
@@ -1978,11 +2172,16 @@ function ptRows(){
       adjWar: computeAdjustedWar(p),
       _drafted: !!d, _mine: d ? d.isMine : false, _cost: d ? d.cost : null,
       _suggested: d ? !!d.suggested : false, _keeperRound: d ? d.round : null,
+      _pickLabel: d ? d.pickLabel : null,
       status: d ? (d.isMine?'mine':'taken') : 'avail',
     };
   });
 
   // filters
+  // Drop positions this league can't roster (e.g. kickers in Zimmer/Miami,
+  // which have no K slot) -- they're undraftable there, so they'd be noise.
+  const rosterable = leagueRosterablePositions(DATA.leagues[activeLeague]);
+  if(rosterable) rows = rows.filter(r=>rosterable.has(r.pos));
   const q = playerTable.query.trim().toLowerCase();
   if(q) rows = rows.filter(r=>r.name.toLowerCase().includes(q));
   if(playerTable.posFilter!=='ALL') rows = rows.filter(r=>r.pos===playerTable.posFilter);
@@ -2014,7 +2213,15 @@ function renderPlayerTable(container, opts){
 
   let rows = ptRows();
 
-  const positions = ['ALL','QB','RB','WR','TE','K','DEF'];
+  // Offer only positions this league actually rosters, so the dropdown can't
+  // select a filter that returns zero rows (e.g. K in Zimmer/Miami).
+  // (Computed here as well as in ptRows -- separate scopes.)
+  const rosterable = leagueRosterablePositions(DATA.leagues[activeLeague]);
+  const ALL_POSITIONS = ['QB','RB','WR','TE','K','DEF'];
+  const positions = ['ALL', ...ALL_POSITIONS.filter(p=>!rosterable || rosterable.has(p))];
+  // If the active filter isn't valid for this league (switched leagues while
+  // filtered), fall back to ALL rather than silently showing an empty board.
+  if(!positions.includes(playerTable.posFilter)) playerTable.posFilter = 'ALL';
   const controls = `
     <div class="pt-controls">
       <input type="text" class="pt-search" placeholder="Search player..." value="${playerTable.query}">
@@ -2028,7 +2235,7 @@ function renderPlayerTable(container, opts){
       </select>
       <button class="clear">CLEAR</button>
     </div>
-    <div class="pt-count">${rows.length} players${activeLeague!=='zimmer'?' · drafted-status live only in Zimmer':''}
+    <div class="pt-count">${rows.length} players${!isAuctionLeague()?' · keepers shown as unavailable; live pick-logging is auction-only':''}
       <span class="pt-warsrc">· WAR calculated based on 2026 ESPN Projections</span></div>`;
 
   const header = cols.map(c=>{
@@ -2116,7 +2323,7 @@ function dataSourceLegend(){
   // and whether it's from Sean's Big Board Excel, ESPN, the NFL schedule, or
   // computed. Auction (Zimmer) and snake (Kepners/Miami) show slightly
   // different columns, so the legend adapts.
-  const isAuction = activeLeague==='zimmer';
+  const isAuction = isAuctionLeague();
   const rows = [
     ['Player · Team · Pos · Tier', 'Your Big Board Excel', '2026', 'Your own rankings, tiers, and team assignments. The amber "R" badge is inferred from your Notes column whenever it mentions "rookie" -- hover it to see the full note (draft slot/college, etc). Notes is general free text, so a few non-rookie notes (e.g. old keeper-round history) can also show there without triggering the badge.'],
     [isAuction ? 'Plat Rk' : 'Yahoo Rk', 'Big Board Excel (platform consensus)', '2026', 'Preseason consensus rank blended across platforms (Yahoo/ESPN/CBS/etc), from your Big Board.'],
@@ -2140,7 +2347,7 @@ function dataSourceLegend(){
 
 function renderPlayersTab(){
   const el = document.getElementById('playersView');
-  el.innerHTML = `<div class="seclabel">Player Search — all players${activeLeague==='zimmer'?'':' · switch to Zimmer for live drafted-status'}</div>
+  el.innerHTML = `<div class="seclabel">Player Search — all players${isAuctionLeague()?'':' · live drafted-status requires an auction draft log'}</div>
     ${dataSourceLegend()}
     <div id="playersTableMount"></div>`;
   const mount = el.querySelector('#playersTableMount');

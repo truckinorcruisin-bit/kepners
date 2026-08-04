@@ -1,6 +1,5 @@
 {
   "_comment": "Hand-maintained league format/rules. convert_bigboard.py merges this into bigboard.json under leagues.<league>.rules. Edit here, not in generated JSON.",
-
   "kepners": {
     "platform": "yahoo",
     "teams": 12,
@@ -13,7 +12,6 @@
       "eligibility": "Player must have been drafted the prior season. Players added via waiver/free agency (undrafted) cannot be kept."
     }
   },
-
   "miami": {
     "platform": "yahoo",
     "teams": 8,
@@ -27,17 +25,111 @@
       "_note": "Keeper count assumed same as Kepners (2) -- not explicitly stated when these rules were captured. Update this if Miami actually differs."
     }
   },
-
   "zimmer": {
     "platform": "espn",
-    "teams": 12,
-    "format": "auction",
+    "teams": [
+      {
+        "slot": null,
+        "team": "IT'S COMING HOME",
+        "manager": "IT'S COMING HOME",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "Schuylkill River Clams",
+        "manager": "Schuylkill River Clams",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "Ben Jarvis Green Ellis LLP",
+        "manager": "Ben Jarvis Green Ellis LLP",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "D'Quan's Friend",
+        "manager": "D'Quan's Friend",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "The Fe-Brees Brothers",
+        "manager": "The Fe-Brees Brothers",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "Flacco Tuesday",
+        "manager": "Flacco Tuesday",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "Spokane Beers",
+        "manager": "Spokane Beers",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "ZANDER HORVATH'S TEAM",
+        "manager": "ZANDER HORVATH'S TEAM",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "TEXAS CHUPACABRAS",
+        "manager": "TEXAS CHUPACABRAS",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "Elements of Intrigue",
+        "manager": "Elements of Intrigue",
+        "isMe": true
+      },
+      {
+        "slot": null,
+        "team": "Maryland Menace",
+        "manager": "Maryland Menace",
+        "isMe": false
+      },
+      {
+        "slot": null,
+        "team": "Dangerous Nights Crew",
+        "manager": "Dangerous Nights Crew",
+        "isMe": false
+      }
+    ],
+    "format": "snake",
     "scoring": "standard",
     "keepers": {
       "count": 0,
       "cost_rounds_advance": null,
       "cost_rule": null,
       "eligibility": "No keepers in this league."
-    }
+    },
+    "_format_note": "Zimmer switched from auction to snake for 2026. The auction cockpit is fully preserved -- set format back to 'auction' here and it reactivates, no code change needed.",
+    "_teams_note": "Derived from 2025 ESPN draft history team names -- ESPN teams get renamed between seasons, so verify/update before the real draft. slot=null until the snake draft order is drawn.",
+    "rosterSlots": [
+      "QB",
+      "RB",
+      "RB",
+      "WR",
+      "WR",
+      "TE",
+      "FLEX",
+      "FLEX",
+      "DEF",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN"
+    ],
+    "_roster_note": "2026: 9 starters (QB/RB/RB/WR/WR/TE/FLEX/FLEX/DEF) + 7 bench = 16 drafted. Changes from auction era: 2 WR (was 3), kicker removed, 2nd FLEX added. Plus 1 IR slot, tracked in irSlots -- excluded from rosterSlots because it isn't draftable.",
+    "irSlots": 1
   }
 }
