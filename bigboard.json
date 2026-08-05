@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-04T12:53:01.600341+00:00"
+    "generated": "2026-08-05T12:46:44.289383+00:00"
   },
   "players": [
     {
@@ -8807,7 +8807,12 @@
           "manager": "Berdine",
           "isMe": false,
           "draftPosition": 9,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Chuba Hubbard",
+              "round": 7
+            }
+          ]
         },
         {
           "slot": 10,
@@ -8995,7 +9000,7 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-08-04T12:52:58.452510+00:00",
+      "draftOrderGenerated": "2026-08-05T12:46:42.003474+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
