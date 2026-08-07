@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-06T12:49:43.829488+00:00"
+    "generated": "2026-08-07T11:37:27.123089+00:00"
   },
   "players": [
     {
@@ -8820,7 +8820,16 @@
           "manager": "Steve",
           "isMe": false,
           "draftPosition": 10,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Drake Maye",
+              "round": 12
+            },
+            {
+              "player": "Achane",
+              "round": 7
+            }
+          ]
         },
         {
           "slot": 11,
@@ -9000,7 +9009,7 @@
         }
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-08-06T12:49:40.203285+00:00",
+      "draftOrderGenerated": "2026-08-07T11:37:23.262063+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
