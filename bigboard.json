@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-07T11:37:27.123089+00:00"
+    "generated": "2026-08-08T00:29:42.409787+00:00"
   },
   "players": [
     {
@@ -31,7 +31,12 @@
       "projectedPoints": 297.31,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": 144.8
+      "projectedWar": 144.8,
+      "warByLeague": {
+        "kepners": 144.8,
+        "miami": 126.2,
+        "zimmer": 155.8
+      }
     },
     {
       "id": "bijan-robinson",
@@ -60,7 +65,12 @@
       "projectedPoints": 276.78,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": 124.2
+      "projectedWar": 124.2,
+      "warByLeague": {
+        "kepners": 124.2,
+        "miami": 105.7,
+        "zimmer": 135.2
+      }
     },
     {
       "id": "ja-marr-chase",
@@ -89,7 +99,12 @@
       "projectedPoints": 216.7,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": 95.9
+      "projectedWar": 95.9,
+      "warByLeague": {
+        "kepners": 95.9,
+        "miami": 74.9,
+        "zimmer": 92.9
+      }
     },
     {
       "id": "puka-nacua",
@@ -118,7 +133,12 @@
       "projectedPoints": 233.56,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": 112.8
+      "projectedWar": 112.8,
+      "warByLeague": {
+        "kepners": 112.8,
+        "miami": 91.7,
+        "zimmer": 109.8
+      }
     },
     {
       "id": "jaxon-smith-njigba",
@@ -147,7 +167,12 @@
       "projectedPoints": 209.83,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": 89.0
+      "projectedWar": 89.0,
+      "warByLeague": {
+        "kepners": 89.0,
+        "miami": 68.0,
+        "zimmer": 86.0
+      }
     },
     {
       "id": "christian-mccaffrey",
@@ -176,7 +201,12 @@
       "projectedPoints": 270.69,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": 118.2
+      "projectedWar": 118.2,
+      "warByLeague": {
+        "kepners": 118.2,
+        "miami": 99.6,
+        "zimmer": 129.2
+      }
     },
     {
       "id": "amon-ra-st-brown",
@@ -205,7 +235,12 @@
       "projectedPoints": 206.27,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": 85.5
+      "projectedWar": 85.5,
+      "warByLeague": {
+        "kepners": 85.5,
+        "miami": 64.5,
+        "zimmer": 82.5
+      }
     },
     {
       "id": "jonathan-taylor",
@@ -234,7 +269,12 @@
       "projectedPoints": 261.39,
       "proTeamEspn": "IND",
       "byeWeek": 13,
-      "projectedWar": 108.8
+      "projectedWar": 108.8,
+      "warByLeague": {
+        "kepners": 108.8,
+        "miami": 90.3,
+        "zimmer": 119.8
+      }
     },
     {
       "id": "ceedee-lamb",
@@ -263,7 +303,12 @@
       "projectedPoints": 190.68,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": 69.9
+      "projectedWar": 69.9,
+      "warByLeague": {
+        "kepners": 69.9,
+        "miami": 48.9,
+        "zimmer": 66.9
+      }
     },
     {
       "id": "ashton-jeanty",
@@ -292,7 +337,12 @@
       "projectedPoints": 216.64,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": 64.1
+      "projectedWar": 64.1,
+      "warByLeague": {
+        "kepners": 64.1,
+        "miami": 45.5,
+        "zimmer": 75.1
+      }
     },
     {
       "id": "justin-jefferson",
@@ -321,7 +371,12 @@
       "projectedPoints": 182.78,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": 62.0
+      "projectedWar": 62.0,
+      "warByLeague": {
+        "kepners": 62.0,
+        "miami": 41.0,
+        "zimmer": 59.0
+      }
     },
     {
       "id": "james-cook",
@@ -350,7 +405,12 @@
       "projectedPoints": 243.47,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": 90.9
+      "projectedWar": 90.9,
+      "warByLeague": {
+        "kepners": 90.9,
+        "miami": 72.4,
+        "zimmer": 101.9
+      }
     },
     {
       "id": "de-von-achane",
@@ -379,7 +439,12 @@
       "projectedPoints": 227.99,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": 75.5
+      "projectedWar": 75.5,
+      "warByLeague": {
+        "kepners": 75.5,
+        "miami": 56.9,
+        "zimmer": 86.5
+      }
     },
     {
       "id": "omarion-hampton",
@@ -408,7 +473,12 @@
       "projectedPoints": 223.38,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": 70.8
+      "projectedWar": 70.8,
+      "warByLeague": {
+        "kepners": 70.8,
+        "miami": 52.3,
+        "zimmer": 81.8
+      }
     },
     {
       "id": "saquon-barkley",
@@ -437,7 +507,12 @@
       "projectedPoints": 230.27,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": 77.7
+      "projectedWar": 77.7,
+      "warByLeague": {
+        "kepners": 77.7,
+        "miami": 59.2,
+        "zimmer": 88.7
+      }
     },
     {
       "id": "chase-brown",
@@ -466,7 +541,12 @@
       "projectedPoints": 208.12,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": 55.6
+      "projectedWar": 55.6,
+      "warByLeague": {
+        "kepners": 55.6,
+        "miami": 37.0,
+        "zimmer": 66.6
+      }
     },
     {
       "id": "brock-bowers",
@@ -495,7 +575,12 @@
       "projectedPoints": 142.05,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": 48.1
+      "projectedWar": 48.1,
+      "warByLeague": {
+        "kepners": 48.1,
+        "miami": 43.9,
+        "zimmer": 52.1
+      }
     },
     {
       "id": "drake-london",
@@ -524,7 +609,12 @@
       "projectedPoints": 167.75,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": 47.0
+      "projectedWar": 47.0,
+      "warByLeague": {
+        "kepners": 47.0,
+        "miami": 25.9,
+        "zimmer": 44.0
+      }
     },
     {
       "id": "kenneth-walker",
@@ -553,7 +643,12 @@
       "projectedPoints": 224.34,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": 71.8
+      "projectedWar": 71.8,
+      "warByLeague": {
+        "kepners": 71.8,
+        "miami": 53.2,
+        "zimmer": 82.8
+      }
     },
     {
       "id": "a-j-brown",
@@ -582,7 +677,12 @@
       "projectedPoints": 162.39,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": 41.6
+      "projectedWar": 41.6,
+      "warByLeague": {
+        "kepners": 41.6,
+        "miami": 20.6,
+        "zimmer": 38.6
+      }
     },
     {
       "id": "derrick-henry",
@@ -611,7 +711,12 @@
       "projectedPoints": 252.73,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": 100.2
+      "projectedWar": 100.2,
+      "warByLeague": {
+        "kepners": 100.2,
+        "miami": 81.6,
+        "zimmer": 111.2
+      }
     },
     {
       "id": "nico-collins",
@@ -640,7 +745,12 @@
       "projectedPoints": 163.02,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": 42.2
+      "projectedWar": 42.2,
+      "warByLeague": {
+        "kepners": 42.2,
+        "miami": 21.2,
+        "zimmer": 39.2
+      }
     },
     {
       "id": "trey-mcbride",
@@ -669,7 +779,12 @@
       "projectedPoints": 139.82,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": 45.8
+      "projectedWar": 45.8,
+      "warByLeague": {
+        "kepners": 45.8,
+        "miami": 41.7,
+        "zimmer": 49.9
+      }
     },
     {
       "id": "jeremiyah-love",
@@ -698,7 +813,12 @@
       "projectedPoints": 213.71,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": 61.2
+      "projectedWar": 61.2,
+      "warByLeague": {
+        "kepners": 61.2,
+        "miami": 42.6,
+        "zimmer": 72.2
+      }
     },
     {
       "id": "george-pickens",
@@ -727,7 +847,12 @@
       "projectedPoints": 159.34,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": 38.5
+      "projectedWar": 38.5,
+      "warByLeague": {
+        "kepners": 38.5,
+        "miami": 17.5,
+        "zimmer": 35.5
+      }
     },
     {
       "id": "rashee-rice",
@@ -756,7 +881,12 @@
       "projectedPoints": 173.64,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": 52.8
+      "projectedWar": 52.8,
+      "warByLeague": {
+        "kepners": 52.8,
+        "miami": 31.8,
+        "zimmer": 49.8
+      }
     },
     {
       "id": "devonta-smith",
@@ -785,7 +915,12 @@
       "projectedPoints": 148.34,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": 27.5
+      "projectedWar": 27.5,
+      "warByLeague": {
+        "kepners": 27.5,
+        "miami": 6.5,
+        "zimmer": 24.5
+      }
     },
     {
       "id": "chris-olave",
@@ -814,7 +949,12 @@
       "projectedPoints": 154.15,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": 33.4
+      "projectedWar": 33.4,
+      "warByLeague": {
+        "kepners": 33.4,
+        "miami": 12.3,
+        "zimmer": 30.4
+      }
     },
     {
       "id": "josh-allen",
@@ -843,7 +983,12 @@
       "projectedPoints": 369.25,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": 87.6
+      "projectedWar": 87.6,
+      "warByLeague": {
+        "kepners": 87.6,
+        "miami": 76.1,
+        "zimmer": 87.6
+      }
     },
     {
       "id": "breece-hall",
@@ -872,7 +1017,12 @@
       "projectedPoints": 220.89,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": 68.3
+      "projectedWar": 68.3,
+      "warByLeague": {
+        "kepners": 68.3,
+        "miami": 49.8,
+        "zimmer": 79.3
+      }
     },
     {
       "id": "kyren-williams",
@@ -901,7 +1051,12 @@
       "projectedPoints": 198.75,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": 46.2
+      "projectedWar": 46.2,
+      "warByLeague": {
+        "kepners": 46.2,
+        "miami": 27.7,
+        "zimmer": 57.2
+      }
     },
     {
       "id": "zay-flowers",
@@ -930,7 +1085,12 @@
       "projectedPoints": 157.15,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": 36.4
+      "projectedWar": 36.4,
+      "warByLeague": {
+        "kepners": 36.4,
+        "miami": 15.3,
+        "zimmer": 33.4
+      }
     },
     {
       "id": "malik-nabers",
@@ -959,7 +1119,12 @@
       "projectedPoints": 141.82,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": 21.0
+      "projectedWar": 21.0,
+      "warByLeague": {
+        "kepners": 21.0,
+        "miami": 0.0,
+        "zimmer": 18.0
+      }
     },
     {
       "id": "javonte-williams",
@@ -988,7 +1153,12 @@
       "projectedPoints": 221.7,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": 69.2
+      "projectedWar": 69.2,
+      "warByLeague": {
+        "kepners": 69.2,
+        "miami": 50.6,
+        "zimmer": 80.2
+      }
     },
     {
       "id": "josh-jacobs",
@@ -1017,7 +1187,12 @@
       "projectedPoints": 237.45,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": 84.9
+      "projectedWar": 84.9,
+      "warByLeague": {
+        "kepners": 84.9,
+        "miami": 66.4,
+        "zimmer": 95.9
+      }
     },
     {
       "id": "travis-etienne",
@@ -1046,7 +1221,12 @@
       "projectedPoints": 196.73,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": 44.2
+      "projectedWar": 44.2,
+      "warByLeague": {
+        "kepners": 44.2,
+        "miami": 25.6,
+        "zimmer": 55.2
+      }
     },
     {
       "id": "tee-higgins",
@@ -1075,7 +1255,12 @@
       "projectedPoints": 145.28,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": 24.5
+      "projectedWar": 24.5,
+      "warByLeague": {
+        "kepners": 24.5,
+        "miami": 3.5,
+        "zimmer": 21.5
+      }
     },
     {
       "id": "garrett-wilson",
@@ -1104,7 +1289,12 @@
       "projectedPoints": 153.79,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": 33.0
+      "projectedWar": 33.0,
+      "warByLeague": {
+        "kepners": 33.0,
+        "miami": 12.0,
+        "zimmer": 30.0
+      }
     },
     {
       "id": "tetairoa-mcmillan",
@@ -1133,7 +1323,12 @@
       "projectedPoints": 155.82,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": 35.0
+      "projectedWar": 35.0,
+      "warByLeague": {
+        "kepners": 35.0,
+        "miami": 14.0,
+        "zimmer": 32.0
+      }
     },
     {
       "id": "emeka-egbuka",
@@ -1162,7 +1357,12 @@
       "projectedPoints": 159.33,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": 38.5
+      "projectedWar": 38.5,
+      "warByLeague": {
+        "kepners": 38.5,
+        "miami": 17.5,
+        "zimmer": 35.5
+      }
     },
     {
       "id": "colston-loveland",
@@ -1191,7 +1391,12 @@
       "projectedPoints": 125.73,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": 31.7
+      "projectedWar": 31.7,
+      "warByLeague": {
+        "kepners": 31.7,
+        "miami": 27.6,
+        "zimmer": 35.8
+      }
     },
     {
       "id": "ladd-mcconkey",
@@ -1220,7 +1425,12 @@
       "projectedPoints": 140.35,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": 19.5
+      "projectedWar": 19.5,
+      "warByLeague": {
+        "kepners": 19.5,
+        "miami": -1.5,
+        "zimmer": 16.5
+      }
     },
     {
       "id": "cam-skattebo",
@@ -1249,7 +1459,12 @@
       "projectedPoints": 192.72,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": 40.2
+      "projectedWar": 40.2,
+      "warByLeague": {
+        "kepners": 40.2,
+        "miami": 21.6,
+        "zimmer": 51.2
+      }
     },
     {
       "id": "jaylen-waddle",
@@ -1278,7 +1493,12 @@
       "projectedPoints": 136.24,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": 15.4
+      "projectedWar": 15.4,
+      "warByLeague": {
+        "kepners": 15.4,
+        "miami": -5.6,
+        "zimmer": 12.4
+      }
     },
     {
       "id": "terry-mclaurin",
@@ -1307,7 +1527,12 @@
       "projectedPoints": 138.53,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
-      "projectedWar": 17.7
+      "projectedWar": 17.7,
+      "warByLeague": {
+        "kepners": 17.7,
+        "miami": -3.3,
+        "zimmer": 14.7
+      }
     },
     {
       "id": "davante-adams",
@@ -1336,7 +1561,12 @@
       "projectedPoints": 165.01,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": 44.2
+      "projectedWar": 44.2,
+      "warByLeague": {
+        "kepners": 44.2,
+        "miami": 23.2,
+        "zimmer": 41.2
+      }
     },
     {
       "id": "luther-burden",
@@ -1365,7 +1595,12 @@
       "projectedPoints": 130.82,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": 10.0
+      "projectedWar": 10.0,
+      "warByLeague": {
+        "kepners": 10.0,
+        "miami": -11.0,
+        "zimmer": 7.0
+      }
     },
     {
       "id": "lamar-jackson",
@@ -1394,7 +1629,12 @@
       "projectedPoints": 322.06,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": 40.4
+      "projectedWar": 40.4,
+      "warByLeague": {
+        "kepners": 40.4,
+        "miami": 28.9,
+        "zimmer": 40.4
+      }
     },
     {
       "id": "d-andre-swift",
@@ -1423,7 +1663,12 @@
       "projectedPoints": 181.25,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": 28.7
+      "projectedWar": 28.7,
+      "warByLeague": {
+        "kepners": 28.7,
+        "miami": 10.2,
+        "zimmer": 39.7
+      }
     },
     {
       "id": "david-montgomery",
@@ -1452,7 +1697,12 @@
       "projectedPoints": 160.79,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": 8.2
+      "projectedWar": 8.2,
+      "warByLeague": {
+        "kepners": 8.2,
+        "miami": -10.3,
+        "zimmer": 19.2
+      }
     },
     {
       "id": "treveyon-henderson",
@@ -1481,7 +1731,12 @@
       "projectedPoints": 165.07,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": 12.5
+      "projectedWar": 12.5,
+      "warByLeague": {
+        "kepners": 12.5,
+        "miami": -6.0,
+        "zimmer": 23.5
+      }
     },
     {
       "id": "tyler-warren",
@@ -1510,7 +1765,12 @@
       "projectedPoints": 121.49,
       "proTeamEspn": "IND",
       "byeWeek": 13,
-      "projectedWar": 27.5
+      "projectedWar": 27.5,
+      "warByLeague": {
+        "kepners": 27.5,
+        "miami": 23.3,
+        "zimmer": 31.5
+      }
     },
     {
       "id": "quinshon-judkins",
@@ -1539,7 +1799,12 @@
       "projectedPoints": 193.12,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": 40.6
+      "projectedWar": 40.6,
+      "warByLeague": {
+        "kepners": 40.6,
+        "miami": 22.0,
+        "zimmer": 51.6
+      }
     },
     {
       "id": "jameson-williams",
@@ -1568,7 +1833,12 @@
       "projectedPoints": 144.44,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": 23.6
+      "projectedWar": 23.6,
+      "warByLeague": {
+        "kepners": 23.6,
+        "miami": 2.6,
+        "zimmer": 20.6
+      }
     },
     {
       "id": "bucky-irving",
@@ -1597,7 +1867,12 @@
       "projectedPoints": 177.66,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": 25.1
+      "projectedWar": 25.1,
+      "warByLeague": {
+        "kepners": 25.1,
+        "miami": 6.6,
+        "zimmer": 36.1
+      }
     },
     {
       "id": "d-j-moore",
@@ -1626,7 +1901,12 @@
       "projectedPoints": 142.62,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": 21.8
+      "projectedWar": 21.8,
+      "warByLeague": {
+        "kepners": 21.8,
+        "miami": 0.8,
+        "zimmer": 18.8
+      }
     },
     {
       "id": "drake-maye",
@@ -1655,7 +1935,12 @@
       "projectedPoints": 319.02,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": 37.4
+      "projectedWar": 37.4,
+      "warByLeague": {
+        "kepners": 37.4,
+        "miami": 25.9,
+        "zimmer": 37.4
+      }
     },
     {
       "id": "mike-evans",
@@ -1684,7 +1969,12 @@
       "projectedPoints": 127.55,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": 6.8
+      "projectedWar": 6.8,
+      "warByLeague": {
+        "kepners": 6.8,
+        "miami": -14.3,
+        "zimmer": 3.8
+      }
     },
     {
       "id": "joe-burrow",
@@ -1713,7 +2003,12 @@
       "projectedPoints": 303.96,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": 22.3
+      "projectedWar": 22.3,
+      "warByLeague": {
+        "kepners": 22.3,
+        "miami": 10.8,
+        "zimmer": 22.3
+      }
     },
     {
       "id": "bhayshul-tuten",
@@ -1742,7 +2037,12 @@
       "projectedPoints": 171.09,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": 18.6
+      "projectedWar": 18.6,
+      "warByLeague": {
+        "kepners": 18.6,
+        "miami": 0.0,
+        "zimmer": 29.6
+      }
     },
     {
       "id": "rome-odunze",
@@ -1771,7 +2071,12 @@
       "projectedPoints": 153.33,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": 32.5
+      "projectedWar": 32.5,
+      "warByLeague": {
+        "kepners": 32.5,
+        "miami": 11.5,
+        "zimmer": 29.5
+      }
     },
     {
       "id": "christian-watson",
@@ -1800,7 +2105,12 @@
       "projectedPoints": 131.05,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": 10.3
+      "projectedWar": 10.3,
+      "warByLeague": {
+        "kepners": 10.3,
+        "miami": -10.8,
+        "zimmer": 7.3
+      }
     },
     {
       "id": "carnell-tate",
@@ -1829,7 +2139,12 @@
       "projectedPoints": 133.24,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": 12.4
+      "projectedWar": 12.4,
+      "warByLeague": {
+        "kepners": 12.4,
+        "miami": -8.6,
+        "zimmer": 9.4
+      }
     },
     {
       "id": "jayden-daniels",
@@ -1858,7 +2173,12 @@
       "projectedPoints": 318.49,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
-      "projectedWar": 36.8
+      "projectedWar": 36.8,
+      "warByLeague": {
+        "kepners": 36.8,
+        "miami": 25.4,
+        "zimmer": 36.8
+      }
     },
     {
       "id": "jadarian-price",
@@ -1887,7 +2207,12 @@
       "projectedPoints": 166.8,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": 14.3
+      "projectedWar": 14.3,
+      "warByLeague": {
+        "kepners": 14.3,
+        "miami": -4.3,
+        "zimmer": 25.3
+      }
     },
     {
       "id": "marvin-harrison-jr",
@@ -1916,7 +2241,12 @@
       "projectedPoints": 125.28,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": 4.5
+      "projectedWar": 4.5,
+      "warByLeague": {
+        "kepners": 4.5,
+        "miami": -16.5,
+        "zimmer": 1.5
+      }
     },
     {
       "id": "jalen-hurts",
@@ -1945,7 +2275,12 @@
       "projectedPoints": 320.33,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": 38.7
+      "projectedWar": 38.7,
+      "warByLeague": {
+        "kepners": 38.7,
+        "miami": 27.2,
+        "zimmer": 38.7
+      }
     },
     {
       "id": "jaylen-warren",
@@ -1974,7 +2309,12 @@
       "projectedPoints": 144.87,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -7.7
+      "projectedWar": -7.7,
+      "warByLeague": {
+        "kepners": -7.7,
+        "miami": -26.2,
+        "zimmer": 3.3
+      }
     },
     {
       "id": "brian-thomas-jr",
@@ -2003,7 +2343,12 @@
       "projectedPoints": 119.32,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -1.5
+      "projectedWar": -1.5,
+      "warByLeague": {
+        "kepners": -1.5,
+        "miami": -22.5,
+        "zimmer": -4.5
+      }
     },
     {
       "id": "jordyn-tyson",
@@ -2032,7 +2377,12 @@
       "projectedPoints": 120.8,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": 0.0
+      "projectedWar": 0.0,
+      "warByLeague": {
+        "kepners": 0.0,
+        "miami": -21.0,
+        "zimmer": -3.0
+      }
     },
     {
       "id": "chuba-hubbard",
@@ -2061,7 +2411,12 @@
       "projectedPoints": 143.96,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -8.6
+      "projectedWar": -8.6,
+      "warByLeague": {
+        "kepners": -8.6,
+        "miami": -27.1,
+        "zimmer": 2.4
+      }
     },
     {
       "id": "caleb-williams",
@@ -2090,7 +2445,12 @@
       "projectedPoints": 281.65,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": 0.0
+      "projectedWar": 0.0,
+      "warByLeague": {
+        "kepners": 0.0,
+        "miami": -11.5,
+        "zimmer": 0.0
+      }
     },
     {
       "id": "tucker-kraft",
@@ -2119,7 +2479,12 @@
       "projectedPoints": 98.16,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": 4.2
+      "projectedWar": 4.2,
+      "warByLeague": {
+        "kepners": 4.2,
+        "miami": 0.0,
+        "zimmer": 8.2
+      }
     },
     {
       "id": "tony-pollard",
@@ -2148,7 +2513,12 @@
       "projectedPoints": 159.88,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": 7.3
+      "projectedWar": 7.3,
+      "warByLeague": {
+        "kepners": 7.3,
+        "miami": -11.2,
+        "zimmer": 18.3
+      }
     },
     {
       "id": "parker-washington",
@@ -2177,7 +2547,12 @@
       "projectedPoints": 123.8,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": 3.0
+      "projectedWar": 3.0,
+      "warByLeague": {
+        "kepners": 3.0,
+        "miami": -18.0,
+        "zimmer": 0.0
+      }
     },
     {
       "id": "dk-metcalf",
@@ -2206,7 +2581,12 @@
       "projectedPoints": 130.43,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": 9.6
+      "projectedWar": 9.6,
+      "warByLeague": {
+        "kepners": 9.6,
+        "miami": -11.4,
+        "zimmer": 6.6
+      }
     },
     {
       "id": "alec-pierce",
@@ -2235,7 +2615,12 @@
       "projectedPoints": 134.83,
       "proTeamEspn": "IND",
       "byeWeek": 13,
-      "projectedWar": 14.0
+      "projectedWar": 14.0,
+      "warByLeague": {
+        "kepners": 14.0,
+        "miami": -7.0,
+        "zimmer": 11.0
+      }
     },
     {
       "id": "courtland-sutton",
@@ -2264,7 +2649,12 @@
       "projectedPoints": 134.7,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": 13.9
+      "projectedWar": 13.9,
+      "warByLeague": {
+        "kepners": 13.9,
+        "miami": -7.1,
+        "zimmer": 10.9
+      }
     },
     {
       "id": "harold-fannin",
@@ -2293,7 +2683,12 @@
       "projectedPoints": 104.22,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": 10.2
+      "projectedWar": 10.2,
+      "warByLeague": {
+        "kepners": 10.2,
+        "miami": 6.1,
+        "zimmer": 14.3
+      }
     },
     {
       "id": "kyle-pitts",
@@ -2322,7 +2717,12 @@
       "projectedPoints": 104.71,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": 10.7
+      "projectedWar": 10.7,
+      "warByLeague": {
+        "kepners": 10.7,
+        "miami": 6.5,
+        "zimmer": 14.8
+      }
     },
     {
       "id": "rhamondre-stevenson",
@@ -2351,7 +2751,12 @@
       "projectedPoints": 152.54,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": 0.0
+      "projectedWar": 0.0,
+      "warByLeague": {
+        "kepners": 0.0,
+        "miami": -18.6,
+        "zimmer": 11.0
+      }
     },
     {
       "id": "justin-herbert",
@@ -2380,7 +2785,12 @@
       "projectedPoints": 282.71,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": 1.1
+      "projectedWar": 1.1,
+      "warByLeague": {
+        "kepners": 1.1,
+        "miami": -10.4,
+        "zimmer": 1.1
+      }
     },
     {
       "id": "dak-prescott",
@@ -2409,7 +2819,12 @@
       "projectedPoints": 285.89,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": 4.2
+      "projectedWar": 4.2,
+      "warByLeague": {
+        "kepners": 4.2,
+        "miami": -7.2,
+        "zimmer": 4.2
+      }
     },
     {
       "id": "sam-laporta",
@@ -2438,7 +2853,12 @@
       "projectedPoints": 110.4,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": 16.4
+      "projectedWar": 16.4,
+      "warByLeague": {
+        "kepners": 16.4,
+        "miami": 12.2,
+        "zimmer": 20.5
+      }
     },
     {
       "id": "rj-harvey",
@@ -2467,7 +2887,12 @@
       "projectedPoints": 118.04,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": -34.5
+      "projectedWar": -34.5,
+      "warByLeague": {
+        "kepners": -34.5,
+        "miami": -53.0,
+        "zimmer": -23.5
+      }
     },
     {
       "id": "rico-dowdle",
@@ -2496,7 +2921,12 @@
       "projectedPoints": 156.09,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": 3.6
+      "projectedWar": 3.6,
+      "warByLeague": {
+        "kepners": 3.6,
+        "miami": -15.0,
+        "zimmer": 14.6
+      }
     },
     {
       "id": "trevor-lawrence",
@@ -2525,7 +2955,12 @@
       "projectedPoints": 287.43,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": 5.8
+      "projectedWar": 5.8,
+      "warByLeague": {
+        "kepners": 5.8,
+        "miami": -5.7,
+        "zimmer": 5.8
+      }
     },
     {
       "id": "chris-godwin",
@@ -2554,7 +2989,12 @@
       "projectedPoints": 96.96,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": -23.8
+      "projectedWar": -23.8,
+      "warByLeague": {
+        "kepners": -23.8,
+        "miami": -44.9,
+        "zimmer": -26.8
+      }
     },
     {
       "id": "jaxson-dart",
@@ -2583,7 +3023,12 @@
       "projectedPoints": 301.06,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": 19.4
+      "projectedWar": 19.4,
+      "warByLeague": {
+        "kepners": 19.4,
+        "miami": 7.9,
+        "zimmer": 19.4
+      }
     },
     {
       "id": "makai-lemon",
@@ -2612,7 +3057,12 @@
       "projectedPoints": 114.59,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": -6.2
+      "projectedWar": -6.2,
+      "warByLeague": {
+        "kepners": -6.2,
+        "miami": -27.2,
+        "zimmer": -9.2
+      }
     },
     {
       "id": "michael-pittman-jr",
@@ -2641,7 +3091,12 @@
       "projectedPoints": 108.17,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -12.6
+      "projectedWar": -12.6,
+      "warByLeague": {
+        "kepners": -12.6,
+        "miami": -33.6,
+        "zimmer": -15.6
+      }
     },
     {
       "id": "quentin-johnston",
@@ -2670,7 +3125,12 @@
       "projectedPoints": 111.79,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -9.0
+      "projectedWar": -9.0,
+      "warByLeague": {
+        "kepners": -9.0,
+        "miami": -30.0,
+        "zimmer": -12.0
+      }
     },
     {
       "id": "kenneth-gainwell",
@@ -2698,6 +3158,7 @@
       "espnRecommendedBid": null,
       "projectedPoints": null,
       "projectedWar": null,
+      "warByLeague": {},
       "byeWeek": 10,
       "proTeamEspn": null
     },
@@ -2728,7 +3189,12 @@
       "projectedPoints": 150.54,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": -2.0
+      "projectedWar": -2.0,
+      "warByLeague": {
+        "kepners": -2.0,
+        "miami": -20.6,
+        "zimmer": 9.0
+      }
     },
     {
       "id": "michael-wilson",
@@ -2757,7 +3223,12 @@
       "projectedPoints": 100.35,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -20.5
+      "projectedWar": -20.5,
+      "warByLeague": {
+        "kepners": -20.5,
+        "miami": -41.5,
+        "zimmer": -23.5
+      }
     },
     {
       "id": "j-k-dobbins",
@@ -2786,7 +3257,12 @@
       "projectedPoints": 154.29,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": 1.8
+      "projectedWar": 1.8,
+      "warByLeague": {
+        "kepners": 1.8,
+        "miami": -16.8,
+        "zimmer": 12.8
+      }
     },
     {
       "id": "brock-purdy",
@@ -2815,7 +3291,12 @@
       "projectedPoints": 293.12,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": 11.5
+      "projectedWar": 11.5,
+      "warByLeague": {
+        "kepners": 11.5,
+        "miami": 0.0,
+        "zimmer": 11.5
+      }
     },
     {
       "id": "matthew-stafford",
@@ -2844,7 +3325,12 @@
       "projectedPoints": 293.28,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": 11.6
+      "projectedWar": 11.6,
+      "warByLeague": {
+        "kepners": 11.6,
+        "miami": 0.2,
+        "zimmer": 11.6
+      }
     },
     {
       "id": "rachaad-white",
@@ -2873,7 +3359,12 @@
       "projectedPoints": 127.56,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
-      "projectedWar": -25.0
+      "projectedWar": -25.0,
+      "warByLeague": {
+        "kepners": -25.0,
+        "miami": -43.5,
+        "zimmer": -14.0
+      }
     },
     {
       "id": "blake-corum",
@@ -2902,7 +3393,12 @@
       "projectedPoints": 142.71,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": -9.8
+      "projectedWar": -9.8,
+      "warByLeague": {
+        "kepners": -9.8,
+        "miami": -28.4,
+        "zimmer": 1.2
+      }
     },
     {
       "id": "patrick-mahomes",
@@ -2931,7 +3427,12 @@
       "projectedPoints": 289.73,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": 8.1
+      "projectedWar": 8.1,
+      "warByLeague": {
+        "kepners": 8.1,
+        "miami": -3.4,
+        "zimmer": 8.1
+      }
     },
     {
       "id": "jonathon-brooks",
@@ -2960,7 +3461,12 @@
       "projectedPoints": 117.05,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -35.5
+      "projectedWar": -35.5,
+      "warByLeague": {
+        "kepners": -35.5,
+        "miami": -54.0,
+        "zimmer": -24.5
+      }
     },
     {
       "id": "ricky-pearsall",
@@ -2989,7 +3495,12 @@
       "projectedPoints": 107.02,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -13.8
+      "projectedWar": -13.8,
+      "warByLeague": {
+        "kepners": -13.8,
+        "miami": -34.8,
+        "zimmer": -16.8
+      }
     },
     {
       "id": "george-kittle",
@@ -3018,7 +3529,12 @@
       "projectedPoints": 115.6,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": 21.6
+      "projectedWar": 21.6,
+      "warByLeague": {
+        "kepners": 21.6,
+        "miami": 17.4,
+        "zimmer": 25.6
+      }
     },
     {
       "id": "josh-downs",
@@ -3047,7 +3563,12 @@
       "projectedPoints": 89.19,
       "proTeamEspn": "IND",
       "byeWeek": 13,
-      "projectedWar": -31.6
+      "projectedWar": -31.6,
+      "warByLeague": {
+        "kepners": -31.6,
+        "miami": -52.6,
+        "zimmer": -34.6
+      }
     },
     {
       "id": "jakobi-meyers",
@@ -3076,7 +3597,12 @@
       "projectedPoints": 111.88,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -8.9
+      "projectedWar": -8.9,
+      "warByLeague": {
+        "kepners": -8.9,
+        "miami": -29.9,
+        "zimmer": -11.9
+      }
     },
     {
       "id": "jayden-reed",
@@ -3105,7 +3631,12 @@
       "projectedPoints": 107.43,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": -13.4
+      "projectedWar": -13.4,
+      "warByLeague": {
+        "kepners": -13.4,
+        "miami": -34.4,
+        "zimmer": -16.4
+      }
     },
     {
       "id": "jordan-addison",
@@ -3134,7 +3665,12 @@
       "projectedPoints": 109.9,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -10.9
+      "projectedWar": -10.9,
+      "warByLeague": {
+        "kepners": -10.9,
+        "miami": -31.9,
+        "zimmer": -13.9
+      }
     },
     {
       "id": "travis-kelce",
@@ -3163,7 +3699,12 @@
       "projectedPoints": 103.11,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": 9.1
+      "projectedWar": 9.1,
+      "warByLeague": {
+        "kepners": 9.1,
+        "miami": 5.0,
+        "zimmer": 13.2
+      }
     },
     {
       "id": "wan-dale-robinson",
@@ -3192,7 +3733,12 @@
       "projectedPoints": 95.29,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -25.5
+      "projectedWar": -25.5,
+      "warByLeague": {
+        "kepners": -25.5,
+        "miami": -46.5,
+        "zimmer": -28.5
+      }
     },
     {
       "id": "bo-nix",
@@ -3221,7 +3767,12 @@
       "projectedPoints": 294.73,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": 13.1
+      "projectedWar": 13.1,
+      "warByLeague": {
+        "kepners": 13.1,
+        "miami": 1.6,
+        "zimmer": 13.1
+      }
     },
     {
       "id": "aaron-jones",
@@ -3250,7 +3801,12 @@
       "projectedPoints": 141.54,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -11.0
+      "projectedWar": -11.0,
+      "warByLeague": {
+        "kepners": -11.0,
+        "miami": -29.6,
+        "zimmer": 0.0
+      }
     },
     {
       "id": "xavier-worthy",
@@ -3279,7 +3835,12 @@
       "projectedPoints": 117.13,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": -3.7
+      "projectedWar": -3.7,
+      "warByLeague": {
+        "kepners": -3.7,
+        "miami": -24.7,
+        "zimmer": -6.7
+      }
     },
     {
       "id": "jake-ferguson",
@@ -3308,7 +3869,12 @@
       "projectedPoints": 93.83,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": -0.2
+      "projectedWar": -0.2,
+      "warByLeague": {
+        "kepners": -0.2,
+        "miami": -4.3,
+        "zimmer": 3.9
+      }
     },
     {
       "id": "dallas-goedert",
@@ -3337,7 +3903,12 @@
       "projectedPoints": 106.1,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": 12.1
+      "projectedWar": 12.1,
+      "warByLeague": {
+        "kepners": 12.1,
+        "miami": 7.9,
+        "zimmer": 16.1
+      }
     },
     {
       "id": "jared-goff",
@@ -3366,7 +3937,12 @@
       "projectedPoints": 267.88,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": -13.8
+      "projectedWar": -13.8,
+      "warByLeague": {
+        "kepners": -13.8,
+        "miami": -25.2,
+        "zimmer": -13.8
+      }
     },
     {
       "id": "jacory-croskey-merritt",
@@ -3395,7 +3971,12 @@
       "projectedPoints": 139.02,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
-      "projectedWar": -13.5
+      "projectedWar": -13.5,
+      "warByLeague": {
+        "kepners": -13.5,
+        "miami": -32.1,
+        "zimmer": -2.5
+      }
     },
     {
       "id": "dalton-kincaid",
@@ -3424,7 +4005,12 @@
       "projectedPoints": 96.32,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": 2.3
+      "projectedWar": 2.3,
+      "warByLeague": {
+        "kepners": 2.3,
+        "miami": -1.8,
+        "zimmer": 6.4
+      }
     },
     {
       "id": "kyler-murray",
@@ -3453,7 +4039,12 @@
       "projectedPoints": 250.56,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -31.1
+      "projectedWar": -31.1,
+      "warByLeague": {
+        "kepners": -31.1,
+        "miami": -42.6,
+        "zimmer": -31.1
+      }
     },
     {
       "id": "isaiah-likely",
@@ -3482,7 +4073,12 @@
       "projectedPoints": 92.95,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": -1.0
+      "projectedWar": -1.0,
+      "warByLeague": {
+        "kepners": -1.0,
+        "miami": -5.2,
+        "zimmer": 3.0
+      }
     },
     {
       "id": "jordan-mason",
@@ -3511,7 +4107,12 @@
       "projectedPoints": 116.44,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -36.1
+      "projectedWar": -36.1,
+      "warByLeague": {
+        "kepners": -36.1,
+        "miami": -54.7,
+        "zimmer": -25.1
+      }
     },
     {
       "id": "matthew-golden",
@@ -3540,7 +4141,12 @@
       "projectedPoints": 118.96,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": -1.8
+      "projectedWar": -1.8,
+      "warByLeague": {
+        "kepners": -1.8,
+        "miami": -22.9,
+        "zimmer": -4.8
+      }
     },
     {
       "id": "kc-concepcion",
@@ -3569,7 +4175,12 @@
       "projectedPoints": 101.19,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -19.6
+      "projectedWar": -19.6,
+      "warByLeague": {
+        "kepners": -19.6,
+        "miami": -40.6,
+        "zimmer": -22.6
+      }
     },
     {
       "id": "romeo-doubs",
@@ -3598,7 +4209,12 @@
       "projectedPoints": 111.32,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": -9.5
+      "projectedWar": -9.5,
+      "warByLeague": {
+        "kepners": -9.5,
+        "miami": -30.5,
+        "zimmer": -12.5
+      }
     },
     {
       "id": "mark-andrews",
@@ -3627,7 +4243,12 @@
       "projectedPoints": 111.47,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": 17.5
+      "projectedWar": 17.5,
+      "warByLeague": {
+        "kepners": 17.5,
+        "miami": 13.3,
+        "zimmer": 21.5
+      }
     },
     {
       "id": "baker-mayfield",
@@ -3656,7 +4277,12 @@
       "projectedPoints": 264.85,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": -16.8
+      "projectedWar": -16.8,
+      "warByLeague": {
+        "kepners": -16.8,
+        "miami": -28.3,
+        "zimmer": -16.8
+      }
     },
     {
       "id": "jordan-love",
@@ -3685,7 +4311,12 @@
       "projectedPoints": 259.31,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": -22.3
+      "projectedWar": -22.3,
+      "warByLeague": {
+        "kepners": -22.3,
+        "miami": -33.8,
+        "zimmer": -22.3
+      }
     },
     {
       "id": "tyler-shough",
@@ -3714,7 +4345,12 @@
       "projectedPoints": 264.49,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": -17.2
+      "projectedWar": -17.2,
+      "warByLeague": {
+        "kepners": -17.2,
+        "miami": -28.6,
+        "zimmer": -17.2
+      }
     },
     {
       "id": "jayden-higgins",
@@ -3743,7 +4379,12 @@
       "projectedPoints": 87.02,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": -33.8
+      "projectedWar": -33.8,
+      "warByLeague": {
+        "kepners": -33.8,
+        "miami": -54.8,
+        "zimmer": -36.8
+      }
     },
     {
       "id": "khalil-shakir",
@@ -3772,7 +4413,12 @@
       "projectedPoints": 101.17,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -19.6
+      "projectedWar": -19.6,
+      "warByLeague": {
+        "kepners": -19.6,
+        "miami": -40.6,
+        "zimmer": -22.6
+      }
     },
     {
       "id": "jalen-coker",
@@ -3801,7 +4447,12 @@
       "projectedPoints": 87.38,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -33.4
+      "projectedWar": -33.4,
+      "warByLeague": {
+        "kepners": -33.4,
+        "miami": -54.4,
+        "zimmer": -36.4
+      }
     },
     {
       "id": "chris-rodriguez",
@@ -3830,7 +4481,12 @@
       "projectedPoints": 67.12,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -85.4
+      "projectedWar": -85.4,
+      "warByLeague": {
+        "kepners": -85.4,
+        "miami": -104.0,
+        "zimmer": -74.4
+      }
     },
     {
       "id": "tyrone-tracy",
@@ -3859,7 +4515,12 @@
       "projectedPoints": 64.33,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": -88.2
+      "projectedWar": -88.2,
+      "warByLeague": {
+        "kepners": -88.2,
+        "miami": -106.8,
+        "zimmer": -77.2
+      }
     },
     {
       "id": "woody-marks",
@@ -3888,7 +4549,12 @@
       "projectedPoints": 103.51,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": -49.0
+      "projectedWar": -49.0,
+      "warByLeague": {
+        "kepners": -49.0,
+        "miami": -67.6,
+        "zimmer": -38.0
+      }
     },
     {
       "id": "malik-willis",
@@ -3917,7 +4583,12 @@
       "projectedPoints": 237.81,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -43.8
+      "projectedWar": -43.8,
+      "warByLeague": {
+        "kepners": -43.8,
+        "miami": -55.3,
+        "zimmer": -43.8
+      }
     },
     {
       "id": "stefon-diggs",
@@ -3946,7 +4617,12 @@
       "projectedPoints": 0,
       "proTeamEspn": "None",
       "byeWeek": null,
-      "projectedWar": -120.8
+      "projectedWar": -120.8,
+      "warByLeague": {
+        "kepners": -120.8,
+        "miami": -141.8,
+        "zimmer": -123.8
+      }
     },
     {
       "id": "zach-charbonnet",
@@ -3975,7 +4651,12 @@
       "projectedPoints": 113.37,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -39.2
+      "projectedWar": -39.2,
+      "warByLeague": {
+        "kepners": -39.2,
+        "miami": -57.7,
+        "zimmer": -28.2
+      }
     },
     {
       "id": "rashid-shaheed",
@@ -4004,7 +4685,12 @@
       "projectedPoints": 101.55,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -19.2
+      "projectedWar": -19.2,
+      "warByLeague": {
+        "kepners": -19.2,
+        "miami": -40.3,
+        "zimmer": -22.2
+      }
     },
     {
       "id": "tyjae-spears",
@@ -4033,7 +4719,12 @@
       "projectedPoints": 99.57,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -53.0
+      "projectedWar": -53.0,
+      "warByLeague": {
+        "kepners": -53.0,
+        "miami": -71.5,
+        "zimmer": -42.0
+      }
     },
     {
       "id": "brenton-strange",
@@ -4062,7 +4753,12 @@
       "projectedPoints": 83.23,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -10.8
+      "projectedWar": -10.8,
+      "warByLeague": {
+        "kepners": -10.8,
+        "miami": -14.9,
+        "zimmer": -6.7
+      }
     },
     {
       "id": "oronde-gadsden",
@@ -4091,7 +4787,12 @@
       "projectedPoints": 70.52,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -23.5
+      "projectedWar": -23.5,
+      "warByLeague": {
+        "kepners": -23.5,
+        "miami": -27.6,
+        "zimmer": -19.4
+      }
     },
     {
       "id": "tyler-allgeier",
@@ -4120,7 +4821,12 @@
       "projectedPoints": 73.33,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -79.2
+      "projectedWar": -79.2,
+      "warByLeague": {
+        "kepners": -79.2,
+        "miami": -97.8,
+        "zimmer": -68.2
+      }
     },
     {
       "id": "isiah-pacheco",
@@ -4149,7 +4855,12 @@
       "projectedPoints": 106.44,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": -46.1
+      "projectedWar": -46.1,
+      "warByLeague": {
+        "kepners": -46.1,
+        "miami": -64.7,
+        "zimmer": -35.1
+      }
     },
     {
       "id": "juwan-johnson",
@@ -4178,7 +4889,12 @@
       "projectedPoints": 79.17,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": -14.8
+      "projectedWar": -14.8,
+      "warByLeague": {
+        "kepners": -14.8,
+        "miami": -19.0,
+        "zimmer": -10.8
+      }
     },
     {
       "id": "chigoziem-okonkwo",
@@ -4206,6 +4922,7 @@
       "espnRecommendedBid": null,
       "projectedPoints": null,
       "projectedWar": null,
+      "warByLeague": {},
       "byeWeek": 7,
       "proTeamEspn": null
     },
@@ -4236,7 +4953,12 @@
       "projectedPoints": 85.6,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": -35.2
+      "projectedWar": -35.2,
+      "warByLeague": {
+        "kepners": -35.2,
+        "miami": -56.2,
+        "zimmer": -38.2
+      }
     },
     {
       "id": "omar-cooper-jr",
@@ -4265,7 +4987,12 @@
       "projectedPoints": 65.25,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": -55.5
+      "projectedWar": -55.5,
+      "warByLeague": {
+        "kepners": -55.5,
+        "miami": -76.6,
+        "zimmer": -58.5
+      }
     },
     {
       "id": "hunter-henry",
@@ -4294,7 +5021,12 @@
       "projectedPoints": 93.99,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": 0.0
+      "projectedWar": 0.0,
+      "warByLeague": {
+        "kepners": 0.0,
+        "miami": -4.2,
+        "zimmer": 4.0
+      }
     },
     {
       "id": "denzel-boston",
@@ -4323,7 +5055,12 @@
       "projectedPoints": 80.14,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -40.7
+      "projectedWar": -40.7,
+      "warByLeague": {
+        "kepners": -40.7,
+        "miami": -61.7,
+        "zimmer": -43.7
+      }
     },
     {
       "id": "alvin-kamara",
@@ -4352,7 +5089,12 @@
       "projectedPoints": 89.16,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": -63.4
+      "projectedWar": -63.4,
+      "warByLeague": {
+        "kepners": -63.4,
+        "miami": -81.9,
+        "zimmer": -52.4
+      }
     },
     {
       "id": "kenyon-sadiq",
@@ -4381,7 +5123,12 @@
       "projectedPoints": 95.26,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": 1.3
+      "projectedWar": 1.3,
+      "warByLeague": {
+        "kepners": 1.3,
+        "miami": -2.9,
+        "zimmer": 5.3
+      }
     },
     {
       "id": "c-j-stroud",
@@ -4410,7 +5157,12 @@
       "projectedPoints": 245.72,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": -35.9
+      "projectedWar": -35.9,
+      "warByLeague": {
+        "kepners": -35.9,
+        "miami": -47.4,
+        "zimmer": -35.9
+      }
     },
     {
       "id": "t-j-hockenson",
@@ -4439,7 +5191,12 @@
       "projectedPoints": 80.42,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -13.6
+      "projectedWar": -13.6,
+      "warByLeague": {
+        "kepners": -13.6,
+        "miami": -17.7,
+        "zimmer": -9.5
+      }
     },
     {
       "id": "jauan-jennings",
@@ -4468,7 +5225,12 @@
       "projectedPoints": 68.05,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -52.8
+      "projectedWar": -52.8,
+      "warByLeague": {
+        "kepners": -52.8,
+        "miami": -73.8,
+        "zimmer": -55.8
+      }
     },
     {
       "id": "daniel-jones",
@@ -4497,7 +5259,12 @@
       "projectedPoints": 266.83,
       "proTeamEspn": "IND",
       "byeWeek": 13,
-      "projectedWar": -14.8
+      "projectedWar": -14.8,
+      "warByLeague": {
+        "kepners": -14.8,
+        "miami": -26.3,
+        "zimmer": -14.8
+      }
     },
     {
       "id": "tre-tucker",
@@ -4526,7 +5293,12 @@
       "projectedPoints": 89.6,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": -31.2
+      "projectedWar": -31.2,
+      "warByLeague": {
+        "kepners": -31.2,
+        "miami": -52.2,
+        "zimmer": -34.2
+      }
     },
     {
       "id": "travis-hunter",
@@ -4555,7 +5327,12 @@
       "projectedPoints": 70.48,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -50.3
+      "projectedWar": -50.3,
+      "warByLeague": {
+        "kepners": -50.3,
+        "miami": -71.3,
+        "zimmer": -53.3
+      }
     },
     {
       "id": "tank-bigsby",
@@ -4584,7 +5361,12 @@
       "projectedPoints": 60.53,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": -92.0
+      "projectedWar": -92.0,
+      "warByLeague": {
+        "kepners": -92.0,
+        "miami": -110.6,
+        "zimmer": -81.0
+      }
     },
     {
       "id": "brian-robinson",
@@ -4613,7 +5395,12 @@
       "projectedPoints": 85.09,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": -67.4
+      "projectedWar": -67.4,
+      "warByLeague": {
+        "kepners": -67.4,
+        "miami": -86.0,
+        "zimmer": -56.4
+      }
     },
     {
       "id": "cam-ward",
@@ -4642,7 +5429,12 @@
       "projectedPoints": 218.82,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -62.8
+      "projectedWar": -62.8,
+      "warByLeague": {
+        "kepners": -62.8,
+        "miami": -74.3,
+        "zimmer": -62.8
+      }
     },
     {
       "id": "jalen-nailor",
@@ -4671,7 +5463,12 @@
       "projectedPoints": 73.95,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": -46.8
+      "projectedWar": -46.8,
+      "warByLeague": {
+        "kepners": -46.8,
+        "miami": -67.9,
+        "zimmer": -49.8
+      }
     },
     {
       "id": "sam-darnold",
@@ -4700,7 +5497,12 @@
       "projectedPoints": 242.27,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -39.4
+      "projectedWar": -39.4,
+      "warByLeague": {
+        "kepners": -39.4,
+        "miami": -50.8,
+        "zimmer": -39.4
+      }
     },
     {
       "id": "dalton-schultz",
@@ -4729,7 +5531,12 @@
       "projectedPoints": 73.96,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": -20.0
+      "projectedWar": -20.0,
+      "warByLeague": {
+        "kepners": -20.0,
+        "miami": -24.2,
+        "zimmer": -16.0
+      }
     },
     {
       "id": "jerry-jeudy",
@@ -4758,7 +5565,12 @@
       "projectedPoints": 86.65,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -34.1
+      "projectedWar": -34.1,
+      "warByLeague": {
+        "kepners": -34.1,
+        "miami": -55.2,
+        "zimmer": -37.1
+      }
     },
     {
       "id": "bryce-young",
@@ -4787,7 +5599,12 @@
       "projectedPoints": 237.66,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -44.0
+      "projectedWar": -44.0,
+      "warByLeague": {
+        "kepners": -44.0,
+        "miami": -55.5,
+        "zimmer": -44.0
+      }
     },
     {
       "id": "deebo-samuel",
@@ -4816,7 +5633,12 @@
       "projectedPoints": 0,
       "proTeamEspn": "None",
       "byeWeek": null,
-      "projectedWar": -120.8
+      "projectedWar": -120.8,
+      "warByLeague": {
+        "kepners": -120.8,
+        "miami": -141.8,
+        "zimmer": -123.8
+      }
     },
     {
       "id": "aj-barner",
@@ -4845,7 +5667,12 @@
       "projectedPoints": 68.99,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -25.0
+      "projectedWar": -25.0,
+      "warByLeague": {
+        "kepners": -25.0,
+        "miami": -29.2,
+        "zimmer": -21.0
+      }
     },
     {
       "id": "calvin-ridley",
@@ -4874,7 +5701,12 @@
       "projectedPoints": 97.54,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -23.3
+      "projectedWar": -23.3,
+      "warByLeague": {
+        "kepners": -23.3,
+        "miami": -44.3,
+        "zimmer": -26.3
+      }
     },
     {
       "id": "terrance-ferguson",
@@ -4903,7 +5735,12 @@
       "projectedPoints": 89.95,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": -4.0
+      "projectedWar": -4.0,
+      "warByLeague": {
+        "kepners": -4.0,
+        "miami": -8.2,
+        "zimmer": 0.0
+      }
     },
     {
       "id": "fernando-mendoza",
@@ -4932,7 +5769,12 @@
       "projectedPoints": 187.39,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": -94.3
+      "projectedWar": -94.3,
+      "warByLeague": {
+        "kepners": -94.3,
+        "miami": -105.7,
+        "zimmer": -94.3
+      }
     },
     {
       "id": "james-conner",
@@ -4961,7 +5803,12 @@
       "projectedPoints": 0.0,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -152.5
+      "projectedWar": -152.5,
+      "warByLeague": {
+        "kepners": -152.5,
+        "miami": -171.1,
+        "zimmer": -141.5
+      }
     },
     {
       "id": "emmett-johnson",
@@ -4990,7 +5837,12 @@
       "projectedPoints": 37.94,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": -114.6
+      "projectedWar": -114.6,
+      "warByLeague": {
+        "kepners": -114.6,
+        "miami": -133.2,
+        "zimmer": -103.6
+      }
     },
     {
       "id": "aaron-rodgers",
@@ -5019,7 +5871,12 @@
       "projectedPoints": 218.02,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -63.6
+      "projectedWar": -63.6,
+      "warByLeague": {
+        "kepners": -63.6,
+        "miami": -75.1,
+        "zimmer": -63.6
+      }
     },
     {
       "id": "germie-bernard",
@@ -5048,7 +5905,12 @@
       "projectedPoints": 79.7,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -41.1
+      "projectedWar": -41.1,
+      "warByLeague": {
+        "kepners": -41.1,
+        "miami": -62.1,
+        "zimmer": -44.1
+      }
     },
     {
       "id": "nicholas-singleton",
@@ -5077,7 +5939,12 @@
       "projectedPoints": 15.44,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -137.1
+      "projectedWar": -137.1,
+      "warByLeague": {
+        "kepners": -137.1,
+        "miami": -155.7,
+        "zimmer": -126.1
+      }
     },
     {
       "id": "tyreek-hill",
@@ -5106,7 +5973,12 @@
       "projectedPoints": 0,
       "proTeamEspn": "None",
       "byeWeek": null,
-      "projectedWar": -120.8
+      "projectedWar": -120.8,
+      "warByLeague": {
+        "kepners": -120.8,
+        "miami": -141.8,
+        "zimmer": -123.8
+      }
     },
     {
       "id": "keaton-mitchell",
@@ -5135,7 +6007,12 @@
       "projectedPoints": 51.94,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -100.6
+      "projectedWar": -100.6,
+      "warByLeague": {
+        "kepners": -100.6,
+        "miami": -119.2,
+        "zimmer": -89.6
+      }
     },
     {
       "id": "jonah-coleman",
@@ -5164,7 +6041,12 @@
       "projectedPoints": 27.69,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": -124.8
+      "projectedWar": -124.8,
+      "warByLeague": {
+        "kepners": -124.8,
+        "miami": -143.4,
+        "zimmer": -113.8
+      }
     },
     {
       "id": "dylan-sampson",
@@ -5193,7 +6075,12 @@
       "projectedPoints": 57.04,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -95.5
+      "projectedWar": -95.5,
+      "warByLeague": {
+        "kepners": -95.5,
+        "miami": -114.1,
+        "zimmer": -84.5
+      }
     },
     {
       "id": "chris-bell",
@@ -5222,7 +6109,12 @@
       "projectedPoints": 54.32,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -66.5
+      "projectedWar": -66.5,
+      "warByLeague": {
+        "kepners": -66.5,
+        "miami": -87.5,
+        "zimmer": -69.5
+      }
     },
     {
       "id": "kaelon-black",
@@ -5251,7 +6143,12 @@
       "projectedPoints": 30.37,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -122.2
+      "projectedWar": -122.2,
+      "warByLeague": {
+        "kepners": -122.2,
+        "miami": -140.7,
+        "zimmer": -111.2
+      }
     },
     {
       "id": "mason-taylor",
@@ -5280,7 +6177,12 @@
       "projectedPoints": 29.93,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": -64.1
+      "projectedWar": -64.1,
+      "warByLeague": {
+        "kepners": -64.1,
+        "miami": -68.2,
+        "zimmer": -60.0
+      }
     },
     {
       "id": "ryan-flournoy",
@@ -5309,7 +6211,12 @@
       "projectedPoints": 55.67,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": -65.1
+      "projectedWar": -65.1,
+      "warByLeague": {
+        "kepners": -65.1,
+        "miami": -86.1,
+        "zimmer": -68.1
+      }
     },
     {
       "id": "adonai-mitchell",
@@ -5338,7 +6245,12 @@
       "projectedPoints": 77.79,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": -43.0
+      "projectedWar": -43.0,
+      "warByLeague": {
+        "kepners": -43.0,
+        "miami": -64.0,
+        "zimmer": -46.0
+      }
     },
     {
       "id": "tre-harris",
@@ -5367,7 +6279,12 @@
       "projectedPoints": 54.92,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -65.9
+      "projectedWar": -65.9,
+      "warByLeague": {
+        "kepners": -65.9,
+        "miami": -86.9,
+        "zimmer": -68.9
+      }
     },
     {
       "id": "isaac-teslaa",
@@ -5396,7 +6313,12 @@
       "projectedPoints": 49.18,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": -71.6
+      "projectedWar": -71.6,
+      "warByLeague": {
+        "kepners": -71.6,
+        "miami": -92.6,
+        "zimmer": -74.6
+      }
     },
     {
       "id": "braelon-allen",
@@ -5425,7 +6347,12 @@
       "projectedPoints": 74.65,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": -77.9
+      "projectedWar": -77.9,
+      "warByLeague": {
+        "kepners": -77.9,
+        "miami": -96.4,
+        "zimmer": -66.9
+      }
     },
     {
       "id": "antonio-williams",
@@ -5454,7 +6381,12 @@
       "projectedPoints": 75.23,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
-      "projectedWar": -45.6
+      "projectedWar": -45.6,
+      "warByLeague": {
+        "kepners": -45.6,
+        "miami": -66.6,
+        "zimmer": -48.6
+      }
     },
     {
       "id": "malik-washington",
@@ -5483,7 +6415,12 @@
       "projectedPoints": 64.87,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -55.9
+      "projectedWar": -55.9,
+      "warByLeague": {
+        "kepners": -55.9,
+        "miami": -76.9,
+        "zimmer": -58.9
+      }
     },
     {
       "id": "ray-davis",
@@ -5512,7 +6449,12 @@
       "projectedPoints": 30.36,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -122.2
+      "projectedWar": -122.2,
+      "warByLeague": {
+        "kepners": -122.2,
+        "miami": -140.7,
+        "zimmer": -111.2
+      }
     },
     {
       "id": "chris-brooks",
@@ -5541,7 +6483,12 @@
       "projectedPoints": 27.92,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": -124.6
+      "projectedWar": -124.6,
+      "warByLeague": {
+        "kepners": -124.6,
+        "miami": -143.2,
+        "zimmer": -113.6
+      }
     },
     {
       "id": "gunnar-helm",
@@ -5570,7 +6517,12 @@
       "projectedPoints": 68.73,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -25.3
+      "projectedWar": -25.3,
+      "warByLeague": {
+        "kepners": -25.3,
+        "miami": -29.4,
+        "zimmer": -21.2
+      }
     },
     {
       "id": "jaydon-blue",
@@ -5599,7 +6551,12 @@
       "projectedPoints": 38.04,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": -114.5
+      "projectedWar": -114.5,
+      "warByLeague": {
+        "kepners": -114.5,
+        "miami": -133.1,
+        "zimmer": -103.5
+      }
     },
     {
       "id": "sean-tucker",
@@ -5628,7 +6585,12 @@
       "projectedPoints": 33.19,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": -119.3
+      "projectedWar": -119.3,
+      "warByLeague": {
+        "kepners": -119.3,
+        "miami": -137.9,
+        "zimmer": -108.3
+      }
     },
     {
       "id": "pat-freiermuth",
@@ -5657,7 +6619,12 @@
       "projectedPoints": 75.97,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -18.0
+      "projectedWar": -18.0,
+      "warByLeague": {
+        "kepners": -18.0,
+        "miami": -22.2,
+        "zimmer": -14.0
+      }
     },
     {
       "id": "kimani-vidal",
@@ -5686,7 +6653,12 @@
       "projectedPoints": 31.03,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -121.5
+      "projectedWar": -121.5,
+      "warByLeague": {
+        "kepners": -121.5,
+        "miami": -140.1,
+        "zimmer": -110.5
+      }
     },
     {
       "id": "jacoby-brissett",
@@ -5715,7 +6687,12 @@
       "projectedPoints": 199.76,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -81.9
+      "projectedWar": -81.9,
+      "warByLeague": {
+        "kepners": -81.9,
+        "miami": -93.4,
+        "zimmer": -81.9
+      }
     },
     {
       "id": "kaytron-allen",
@@ -5744,7 +6721,12 @@
       "projectedPoints": 11.58,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
-      "projectedWar": -141.0
+      "projectedWar": -141.0,
+      "warByLeague": {
+        "kepners": -141.0,
+        "miami": -159.5,
+        "zimmer": -130.0
+      }
     },
     {
       "id": "brandon-aiyuk",
@@ -5773,7 +6755,12 @@
       "projectedPoints": 0,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -120.8
+      "projectedWar": -120.8,
+      "warByLeague": {
+        "kepners": -120.8,
+        "miami": -141.8,
+        "zimmer": -123.8
+      }
     },
     {
       "id": "jordan-james",
@@ -5802,7 +6789,12 @@
       "projectedPoints": 56.13,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -96.4
+      "projectedWar": -96.4,
+      "warByLeague": {
+        "kepners": -96.4,
+        "miami": -115.0,
+        "zimmer": -85.4
+      }
     },
     {
       "id": "mike-washington-jr",
@@ -5831,7 +6823,12 @@
       "projectedPoints": 57.12,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": -95.4
+      "projectedWar": -95.4,
+      "warByLeague": {
+        "kepners": -95.4,
+        "miami": -114.0,
+        "zimmer": -84.4
+      }
     },
     {
       "id": "zachariah-branch",
@@ -5860,7 +6857,12 @@
       "projectedPoints": 51.13,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": -69.7
+      "projectedWar": -69.7,
+      "warByLeague": {
+        "kepners": -69.7,
+        "miami": -90.7,
+        "zimmer": -72.7
+      }
     },
     {
       "id": "marshawn-lloyd",
@@ -5889,7 +6891,12 @@
       "projectedPoints": 52.57,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": -100.0
+      "projectedWar": -100.0,
+      "warByLeague": {
+        "kepners": -100.0,
+        "miami": -118.5,
+        "zimmer": -89.0
+      }
     },
     {
       "id": "kayshon-boutte",
@@ -5918,7 +6925,12 @@
       "projectedPoints": 44.12,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": -76.7
+      "projectedWar": -76.7,
+      "warByLeague": {
+        "kepners": -76.7,
+        "miami": -97.7,
+        "zimmer": -79.7
+      }
     },
     {
       "id": "emanuel-wilson",
@@ -5947,7 +6959,12 @@
       "projectedPoints": 8.56,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -144.0
+      "projectedWar": -144.0,
+      "warByLeague": {
+        "kepners": -144.0,
+        "miami": -162.5,
+        "zimmer": -133.0
+      }
     },
     {
       "id": "justice-hill",
@@ -5976,7 +6993,12 @@
       "projectedPoints": 74.72,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": -77.8
+      "projectedWar": -77.8,
+      "warByLeague": {
+        "kepners": -77.8,
+        "miami": -96.4,
+        "zimmer": -66.8
+      }
     },
     {
       "id": "cooper-kupp",
@@ -6005,7 +7027,12 @@
       "projectedPoints": 63.6,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -57.2
+      "projectedWar": -57.2,
+      "warByLeague": {
+        "kepners": -57.2,
+        "miami": -78.2,
+        "zimmer": -60.2
+      }
     },
     {
       "id": "troy-franklin",
@@ -6034,7 +7061,12 @@
       "projectedPoints": 33.64,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": -87.2
+      "projectedWar": -87.2,
+      "warByLeague": {
+        "kepners": -87.2,
+        "miami": -108.2,
+        "zimmer": -90.2
+      }
     },
     {
       "id": "eli-stowers",
@@ -6063,7 +7095,12 @@
       "projectedPoints": 23.31,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": -70.7
+      "projectedWar": -70.7,
+      "warByLeague": {
+        "kepners": -70.7,
+        "miami": -74.8,
+        "zimmer": -66.6
+      }
     },
     {
       "id": "george-holani",
@@ -6092,7 +7129,12 @@
       "projectedPoints": 33.45,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -119.1
+      "projectedWar": -119.1,
+      "warByLeague": {
+        "kepners": -119.1,
+        "miami": -137.6,
+        "zimmer": -108.1
+      }
     },
     {
       "id": "demond-claiborne",
@@ -6121,7 +7163,12 @@
       "projectedPoints": 19.48,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -133.1
+      "projectedWar": -133.1,
+      "warByLeague": {
+        "kepners": -133.1,
+        "miami": -151.6,
+        "zimmer": -122.1
+      }
     },
     {
       "id": "jaylin-noel",
@@ -6150,7 +7197,12 @@
       "projectedPoints": 64.52,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": -56.3
+      "projectedWar": -56.3,
+      "warByLeague": {
+        "kepners": -56.3,
+        "miami": -77.3,
+        "zimmer": -59.3
+      }
     },
     {
       "id": "jaylen-wright",
@@ -6179,7 +7231,12 @@
       "projectedPoints": 35.8,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -116.7
+      "projectedWar": -116.7,
+      "warByLeague": {
+        "kepners": -116.7,
+        "miami": -135.3,
+        "zimmer": -105.7
+      }
     },
     {
       "id": "jake-tonges",
@@ -6208,7 +7265,12 @@
       "projectedPoints": 20.13,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -73.9
+      "projectedWar": -73.9,
+      "warByLeague": {
+        "kepners": -73.9,
+        "miami": -78.0,
+        "zimmer": -69.8
+      }
     },
     {
       "id": "shedeur-sanders",
@@ -6237,7 +7299,12 @@
       "projectedPoints": 96.46,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -185.2
+      "projectedWar": -185.2,
+      "warByLeague": {
+        "kepners": -185.2,
+        "miami": -196.7,
+        "zimmer": -185.2
+      }
     },
     {
       "id": "pat-bryant",
@@ -6266,7 +7333,12 @@
       "projectedPoints": 44.26,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": -76.5
+      "projectedWar": -76.5,
+      "warByLeague": {
+        "kepners": -76.5,
+        "miami": -97.6,
+        "zimmer": -79.5
+      }
     },
     {
       "id": "malachi-fields",
@@ -6295,7 +7367,12 @@
       "projectedPoints": 20.96,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": -99.8
+      "projectedWar": -99.8,
+      "warByLeague": {
+        "kepners": -99.8,
+        "miami": -120.9,
+        "zimmer": -102.8
+      }
     },
     {
       "id": "houston-texans",
@@ -6324,7 +7401,12 @@
       "projectedPoints": 149.57,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": 33.8
+      "projectedWar": 33.8,
+      "warByLeague": {
+        "kepners": 33.8,
+        "miami": 21.5,
+        "zimmer": 33.8
+      }
     },
     {
       "id": "jack-bech",
@@ -6353,7 +7435,12 @@
       "projectedPoints": 53.35,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": -67.4
+      "projectedWar": -67.4,
+      "warByLeague": {
+        "kepners": -67.4,
+        "miami": -88.5,
+        "zimmer": -70.4
+      }
     },
     {
       "id": "darnell-washington",
@@ -6382,7 +7469,12 @@
       "projectedPoints": 41.26,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -52.7
+      "projectedWar": -52.7,
+      "warByLeague": {
+        "kepners": -52.7,
+        "miami": -56.9,
+        "zimmer": -48.7
+      }
     },
     {
       "id": "dj-giddens",
@@ -6411,7 +7503,12 @@
       "projectedPoints": 27.42,
       "proTeamEspn": "IND",
       "byeWeek": 13,
-      "projectedWar": -125.1
+      "projectedWar": -125.1,
+      "warByLeague": {
+        "kepners": -125.1,
+        "miami": -143.7,
+        "zimmer": -114.1
+      }
     },
     {
       "id": "denver-broncos",
@@ -6440,7 +7537,12 @@
       "projectedPoints": 152.38,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": 36.6
+      "projectedWar": 36.6,
+      "warByLeague": {
+        "kepners": 36.6,
+        "miami": 24.3,
+        "zimmer": 36.6
+      }
     },
     {
       "id": "seattle-seahawks",
@@ -6469,7 +7571,12 @@
       "projectedPoints": 141.94,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": 26.2
+      "projectedWar": 26.2,
+      "warByLeague": {
+        "kepners": 26.2,
+        "miami": 13.8,
+        "zimmer": 26.2
+      }
     },
     {
       "id": "los-angeles-rams",
@@ -6498,7 +7605,12 @@
       "projectedPoints": 138.88,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": 23.1
+      "projectedWar": 23.1,
+      "warByLeague": {
+        "kepners": 23.1,
+        "miami": 10.8,
+        "zimmer": 23.1
+      }
     },
     {
       "id": "tyquan-thornton",
@@ -6527,7 +7639,12 @@
       "projectedPoints": 53.34,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": -67.5
+      "projectedWar": -67.5,
+      "warByLeague": {
+        "kepners": -67.5,
+        "miami": -88.5,
+        "zimmer": -70.5
+      }
     },
     {
       "id": "jahan-dotson",
@@ -6556,7 +7673,12 @@
       "projectedPoints": 52.15,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": -68.7
+      "projectedWar": -68.7,
+      "warByLeague": {
+        "kepners": -68.7,
+        "miami": -89.7,
+        "zimmer": -71.7
+      }
     },
     {
       "id": "ollie-gordon",
@@ -6585,7 +7707,12 @@
       "projectedPoints": 30.82,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -121.7
+      "projectedWar": -121.7,
+      "warByLeague": {
+        "kepners": -121.7,
+        "miami": -140.3,
+        "zimmer": -110.7
+      }
     },
     {
       "id": "j-j-mccarthy",
@@ -6614,7 +7741,12 @@
       "projectedPoints": 39.91,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -241.7
+      "projectedWar": -241.7,
+      "warByLeague": {
+        "kepners": -241.7,
+        "miami": -253.2,
+        "zimmer": -241.7
+      }
     },
     {
       "id": "carson-beck",
@@ -6643,7 +7775,12 @@
       "projectedPoints": 28.91,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -252.7
+      "projectedWar": -252.7,
+      "warByLeague": {
+        "kepners": -252.7,
+        "miami": -264.2,
+        "zimmer": -252.7
+      }
     },
     {
       "id": "najee-harris",
@@ -6672,7 +7809,12 @@
       "projectedPoints": 0,
       "proTeamEspn": "None",
       "byeWeek": null,
-      "projectedWar": -152.5
+      "projectedWar": -152.5,
+      "warByLeague": {
+        "kepners": -152.5,
+        "miami": -171.1,
+        "zimmer": -141.5
+      }
     },
     {
       "id": "hollywood-brown",
@@ -6701,7 +7843,12 @@
       "projectedPoints": 32.16,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": -88.6
+      "projectedWar": -88.6,
+      "warByLeague": {
+        "kepners": -88.6,
+        "miami": -109.7,
+        "zimmer": -91.6
+      }
     },
     {
       "id": "skyler-bell",
@@ -6730,7 +7877,12 @@
       "projectedPoints": 27.67,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -93.1
+      "projectedWar": -93.1,
+      "warByLeague": {
+        "kepners": -93.1,
+        "miami": -114.1,
+        "zimmer": -96.1
+      }
     },
     {
       "id": "dawson-knox",
@@ -6759,7 +7911,12 @@
       "projectedPoints": 43.35,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -50.6
+      "projectedWar": -50.6,
+      "warByLeague": {
+        "kepners": -50.6,
+        "miami": -54.8,
+        "zimmer": -46.6
+      }
     },
     {
       "id": "greg-dulcich",
@@ -6788,7 +7945,12 @@
       "projectedPoints": 67.41,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -26.6
+      "projectedWar": -26.6,
+      "warByLeague": {
+        "kepners": -26.6,
+        "miami": -30.8,
+        "zimmer": -22.5
+      }
     },
     {
       "id": "cole-kmet",
@@ -6817,7 +7979,12 @@
       "projectedPoints": 31.92,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": -62.1
+      "projectedWar": -62.1,
+      "warByLeague": {
+        "kepners": -62.1,
+        "miami": -66.2,
+        "zimmer": -58.0
+      }
     },
     {
       "id": "philadelphia-eagles",
@@ -6846,7 +8013,12 @@
       "projectedPoints": 128.09,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": 12.4
+      "projectedWar": 12.4,
+      "warByLeague": {
+        "kepners": 12.4,
+        "miami": 0.0,
+        "zimmer": 12.4
+      }
     },
     {
       "id": "new-england-patriots",
@@ -6875,7 +8047,12 @@
       "projectedPoints": 122.85,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": 7.1
+      "projectedWar": 7.1,
+      "warByLeague": {
+        "kepners": 7.1,
+        "miami": -5.2,
+        "zimmer": 7.1
+      }
     },
     {
       "id": "justin-fields",
@@ -6904,7 +8081,12 @@
       "projectedPoints": 10.6,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": -271.0
+      "projectedWar": -271.0,
+      "warByLeague": {
+        "kepners": -271.0,
+        "miami": -282.5,
+        "zimmer": -271.0
+      }
     },
     {
       "id": "minnesota-vikings",
@@ -6933,7 +8115,12 @@
       "projectedPoints": 96.61,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -19.1
+      "projectedWar": -19.1,
+      "warByLeague": {
+        "kepners": -19.1,
+        "miami": -31.5,
+        "zimmer": -19.1
+      }
     },
     {
       "id": "pittsburgh-steelers",
@@ -6962,7 +8149,12 @@
       "projectedPoints": 150.79,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": 35.1
+      "projectedWar": 35.1,
+      "warByLeague": {
+        "kepners": 35.1,
+        "miami": 22.7,
+        "zimmer": 35.1
+      }
     },
     {
       "id": "jacksonville-jaguars",
@@ -6991,7 +8183,12 @@
       "projectedPoints": 95.74,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -20.0
+      "projectedWar": -20.0,
+      "warByLeague": {
+        "kepners": -20.0,
+        "miami": -32.4,
+        "zimmer": -20.0
+      }
     },
     {
       "id": "cade-otton",
@@ -7020,7 +8217,12 @@
       "projectedPoints": 57.53,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": -36.5
+      "projectedWar": -36.5,
+      "warByLeague": {
+        "kepners": -36.5,
+        "miami": -40.6,
+        "zimmer": -32.4
+      }
     },
     {
       "id": "tank-dell",
@@ -7049,7 +8251,12 @@
       "projectedPoints": 44.47,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": -76.3
+      "projectedWar": -76.3,
+      "warByLeague": {
+        "kepners": -76.3,
+        "miami": -97.3,
+        "zimmer": -79.3
+      }
     },
     {
       "id": "los-angeles-chargers",
@@ -7078,7 +8285,12 @@
       "projectedPoints": 110.46,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -5.3
+      "projectedWar": -5.3,
+      "warByLeague": {
+        "kepners": -5.3,
+        "miami": -17.6,
+        "zimmer": -5.3
+      }
     },
     {
       "id": "baltimore-ravens",
@@ -7107,7 +8319,12 @@
       "projectedPoints": 142.35,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": 26.6
+      "projectedWar": 26.6,
+      "warByLeague": {
+        "kepners": 26.6,
+        "miami": 14.3,
+        "zimmer": 26.6
+      }
     },
     {
       "id": "darnell-mooney",
@@ -7136,7 +8353,12 @@
       "projectedPoints": 63.29,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": -57.5
+      "projectedWar": -57.5,
+      "warByLeague": {
+        "kepners": -57.5,
+        "miami": -78.5,
+        "zimmer": -60.5
+      }
     },
     {
       "id": "geno-smith",
@@ -7165,7 +8387,12 @@
       "projectedPoints": 231.99,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": -49.7
+      "projectedWar": -49.7,
+      "warByLeague": {
+        "kepners": -49.7,
+        "miami": -61.1,
+        "zimmer": -49.7
+      }
     },
     {
       "id": "dontayvion-wicks",
@@ -7194,7 +8421,12 @@
       "projectedPoints": 41.32,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
-      "projectedWar": -79.5
+      "projectedWar": -79.5,
+      "warByLeague": {
+        "kepners": -79.5,
+        "miami": -100.5,
+        "zimmer": -82.5
+      }
     },
     {
       "id": "colby-parkinson",
@@ -7223,7 +8455,12 @@
       "projectedPoints": 40.57,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
-      "projectedWar": -53.4
+      "projectedWar": -53.4,
+      "warByLeague": {
+        "kepners": -53.4,
+        "miami": -57.6,
+        "zimmer": -49.4
+      }
     },
     {
       "id": "david-njoku",
@@ -7252,7 +8489,12 @@
       "projectedPoints": 52.16,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": -41.8
+      "projectedWar": -41.8,
+      "warByLeague": {
+        "kepners": -41.8,
+        "miami": -46.0,
+        "zimmer": -37.8
+      }
     },
     {
       "id": "tua-tagovailoa",
@@ -7281,7 +8523,12 @@
       "projectedPoints": 114.53,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": -167.1
+      "projectedWar": -167.1,
+      "warByLeague": {
+        "kepners": -167.1,
+        "miami": -178.6,
+        "zimmer": -167.1
+      }
     },
     {
       "id": "de-zhaun-stribling",
@@ -7310,7 +8557,12 @@
       "projectedPoints": 41.65,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -79.2
+      "projectedWar": -79.2,
+      "warByLeague": {
+        "kepners": -79.2,
+        "miami": -100.2,
+        "zimmer": -82.2
+      }
     },
     {
       "id": "christian-kirk",
@@ -7339,7 +8591,12 @@
       "projectedPoints": 44.12,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -76.7
+      "projectedWar": -76.7,
+      "warByLeague": {
+        "kepners": -76.7,
+        "miami": -97.7,
+        "zimmer": -79.7
+      }
     },
     {
       "id": "green-bay-packers",
@@ -7368,7 +8625,12 @@
       "projectedPoints": 110.05,
       "proTeamEspn": "GB",
       "byeWeek": 11,
-      "projectedWar": -5.7
+      "projectedWar": -5.7,
+      "warByLeague": {
+        "kepners": -5.7,
+        "miami": -18.0,
+        "zimmer": -5.7
+      }
     },
     {
       "id": "cleveland-browns",
@@ -7397,7 +8659,12 @@
       "projectedPoints": 123.63,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": 7.9
+      "projectedWar": 7.9,
+      "warByLeague": {
+        "kepners": 7.9,
+        "miami": -4.5,
+        "zimmer": 7.9
+      }
     },
     {
       "id": "ted-hurst",
@@ -7426,7 +8693,12 @@
       "projectedPoints": 42.12,
       "proTeamEspn": "TB",
       "byeWeek": 10,
-      "projectedWar": -78.7
+      "projectedWar": -78.7,
+      "warByLeague": {
+        "kepners": -78.7,
+        "miami": -99.7,
+        "zimmer": -81.7
+      }
     },
     {
       "id": "evan-engram",
@@ -7455,7 +8727,12 @@
       "projectedPoints": 59.09,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": -34.9
+      "projectedWar": -34.9,
+      "warByLeague": {
+        "kepners": -34.9,
+        "miami": -39.1,
+        "zimmer": -30.9
+      }
     },
     {
       "id": "mike-gesicki",
@@ -7484,7 +8761,12 @@
       "projectedPoints": 66.89,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": -27.1
+      "projectedWar": -27.1,
+      "warByLeague": {
+        "kepners": -27.1,
+        "miami": -31.3,
+        "zimmer": -23.1
+      }
     },
     {
       "id": "kansas-city-chiefs",
@@ -7513,7 +8795,12 @@
       "projectedPoints": 120.08,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": 4.3
+      "projectedWar": 4.3,
+      "warByLeague": {
+        "kepners": 4.3,
+        "miami": -8.0,
+        "zimmer": 4.3
+      }
     },
     {
       "id": "keon-coleman",
@@ -7542,7 +8829,12 @@
       "projectedPoints": 40.39,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -80.4
+      "projectedWar": -80.4,
+      "warByLeague": {
+        "kepners": -80.4,
+        "miami": -101.4,
+        "zimmer": -83.4
+      }
     },
     {
       "id": "buffalo-bills",
@@ -7571,7 +8863,12 @@
       "projectedPoints": 77.34,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -38.4
+      "projectedWar": -38.4,
+      "warByLeague": {
+        "kepners": -38.4,
+        "miami": -50.8,
+        "zimmer": -38.4
+      }
     },
     {
       "id": "rashod-bateman",
@@ -7600,7 +8897,12 @@
       "projectedPoints": 84.91,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": -35.9
+      "projectedWar": -35.9,
+      "warByLeague": {
+        "kepners": -35.9,
+        "miami": -56.9,
+        "zimmer": -38.9
+      }
     },
     {
       "id": "emari-demercado",
@@ -7629,7 +8931,12 @@
       "projectedPoints": 47.81,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": -104.7
+      "projectedWar": -104.7,
+      "warByLeague": {
+        "kepners": -104.7,
+        "miami": -123.3,
+        "zimmer": -93.7
+      }
     },
     {
       "id": "keenan-allen",
@@ -7658,7 +8965,12 @@
       "projectedPoints": 0,
       "proTeamEspn": "None",
       "byeWeek": null,
-      "projectedWar": -120.8
+      "projectedWar": -120.8,
+      "warByLeague": {
+        "kepners": -120.8,
+        "miami": -141.8,
+        "zimmer": -123.8
+      }
     },
     {
       "id": "samaje-perine",
@@ -7687,7 +8999,12 @@
       "projectedPoints": 81.89,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": -70.6
+      "projectedWar": -70.6,
+      "warByLeague": {
+        "kepners": -70.6,
+        "miami": -89.2,
+        "zimmer": -59.6
+      }
     },
     {
       "id": "deshaun-watson",
@@ -7716,7 +9033,12 @@
       "projectedPoints": 123.79,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -157.9
+      "projectedWar": -157.9,
+      "warByLeague": {
+        "kepners": -157.9,
+        "miami": -169.3,
+        "zimmer": -157.9
+      }
     },
     {
       "id": "kirk-cousins",
@@ -7745,7 +9067,12 @@
       "projectedPoints": 46.15,
       "proTeamEspn": "LV",
       "byeWeek": 13,
-      "projectedWar": -235.5
+      "projectedWar": -235.5,
+      "warByLeague": {
+        "kepners": -235.5,
+        "miami": -247.0,
+        "zimmer": -235.5
+      }
     },
     {
       "id": "michael-penix-jr",
@@ -7774,7 +9101,12 @@
       "projectedPoints": 113.56,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
-      "projectedWar": -168.1
+      "projectedWar": -168.1,
+      "warByLeague": {
+        "kepners": -168.1,
+        "miami": -179.6,
+        "zimmer": -168.1
+      }
     },
     {
       "id": "chimere-dike",
@@ -7803,7 +9135,12 @@
       "projectedPoints": 23.4,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -97.4
+      "projectedWar": -97.4,
+      "warByLeague": {
+        "kepners": -97.4,
+        "miami": -118.4,
+        "zimmer": -100.4
+      }
     },
     {
       "id": "adam-randall",
@@ -7832,7 +9169,12 @@
       "projectedPoints": 21.42,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": -131.1
+      "projectedWar": -131.1,
+      "warByLeague": {
+        "kepners": -131.1,
+        "miami": -149.7,
+        "zimmer": -120.1
+      }
     },
     {
       "id": "lequint-allen",
@@ -7861,7 +9203,12 @@
       "projectedPoints": 24.69,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -127.8
+      "projectedWar": -127.8,
+      "warByLeague": {
+        "kepners": -127.8,
+        "miami": -146.4,
+        "zimmer": -116.8
+      }
     },
     {
       "id": "tory-horton",
@@ -7890,7 +9237,12 @@
       "projectedPoints": 43.83,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": -77.0
+      "projectedWar": -77.0,
+      "warByLeague": {
+        "kepners": -77.0,
+        "miami": -98.0,
+        "zimmer": -80.0
+      }
     },
     {
       "id": "elic-ayomanor",
@@ -7919,7 +9271,12 @@
       "projectedPoints": 9.93,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
-      "projectedWar": -110.9
+      "projectedWar": -110.9,
+      "warByLeague": {
+        "kepners": -110.9,
+        "miami": -131.9,
+        "zimmer": -113.9
+      }
     },
     {
       "id": "elijah-sarratt",
@@ -7948,7 +9305,12 @@
       "projectedPoints": 39.79,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": -81.0
+      "projectedWar": -81.0,
+      "warByLeague": {
+        "kepners": -81.0,
+        "miami": -102.0,
+        "zimmer": -84.0
+      }
     },
     {
       "id": "ty-johnson",
@@ -7977,7 +9339,12 @@
       "projectedPoints": 63.13,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -89.4
+      "projectedWar": -89.4,
+      "warByLeague": {
+        "kepners": -89.4,
+        "miami": -108.0,
+        "zimmer": -78.4
+      }
     },
     {
       "id": "malik-davis",
@@ -8006,7 +9373,12 @@
       "projectedPoints": 31.45,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": -121.1
+      "projectedWar": -121.1,
+      "warByLeague": {
+        "kepners": -121.1,
+        "miami": -139.6,
+        "zimmer": -110.1
+      }
     },
     {
       "id": "chris-brazzell-ii",
@@ -8035,7 +9407,12 @@
       "projectedPoints": 38.57,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -82.2
+      "projectedWar": -82.2,
+      "warByLeague": {
+        "kepners": -82.2,
+        "miami": -103.2,
+        "zimmer": -85.2
+      }
     },
     {
       "id": "devaughn-vele",
@@ -8064,7 +9441,12 @@
       "projectedPoints": 35.54,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": -85.3
+      "projectedWar": -85.3,
+      "warByLeague": {
+        "kepners": -85.3,
+        "miami": -106.3,
+        "zimmer": -88.3
+      }
     },
     {
       "id": "ja-kobi-lane",
@@ -8093,7 +9475,12 @@
       "projectedPoints": 56.11,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": -64.7
+      "projectedWar": -64.7,
+      "warByLeague": {
+        "kepners": -64.7,
+        "miami": -85.7,
+        "zimmer": -67.7
+      }
     },
     {
       "id": "theo-johnson",
@@ -8122,7 +9509,12 @@
       "projectedPoints": 37.18,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": -56.8
+      "projectedWar": -56.8,
+      "warByLeague": {
+        "kepners": -56.8,
+        "miami": -61.0,
+        "zimmer": -52.8
+      }
     },
     {
       "id": "devontez-walker",
@@ -8151,7 +9543,12 @@
       "projectedPoints": 23.52,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": -97.3
+      "projectedWar": -97.3,
+      "warByLeague": {
+        "kepners": -97.3,
+        "miami": -118.3,
+        "zimmer": -100.3
+      }
     },
     {
       "id": "trey-benson",
@@ -8180,7 +9577,12 @@
       "projectedPoints": 0.0,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -152.5
+      "projectedWar": -152.5,
+      "warByLeague": {
+        "kepners": -152.5,
+        "miami": -171.1,
+        "zimmer": -141.5
+      }
     },
     {
       "id": "darius-slayton",
@@ -8209,7 +9611,12 @@
       "projectedPoints": 55.96,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
-      "projectedWar": -64.8
+      "projectedWar": -64.8,
+      "warByLeague": {
+        "kepners": -64.8,
+        "miami": -85.9,
+        "zimmer": -67.8
+      }
     },
     {
       "id": "andrei-iosivas",
@@ -8238,7 +9645,12 @@
       "projectedPoints": 49.85,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": -70.9
+      "projectedWar": -70.9,
+      "warByLeague": {
+        "kepners": -70.9,
+        "miami": -92.0,
+        "zimmer": -73.9
+      }
     },
     {
       "id": "isaiah-davis",
@@ -8267,7 +9679,12 @@
       "projectedPoints": 26.4,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
-      "projectedWar": -126.1
+      "projectedWar": -126.1,
+      "warByLeague": {
+        "kepners": -126.1,
+        "miami": -144.7,
+        "zimmer": -115.1
+      }
     },
     {
       "id": "eli-raridon",
@@ -8296,7 +9713,12 @@
       "projectedPoints": 21.45,
       "proTeamEspn": "NE",
       "byeWeek": 11,
-      "projectedWar": -72.5
+      "projectedWar": -72.5,
+      "warByLeague": {
+        "kepners": -72.5,
+        "miami": -76.7,
+        "zimmer": -68.5
+      }
     },
     {
       "id": "tahj-brooks",
@@ -8325,7 +9747,12 @@
       "projectedPoints": 18.47,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": -134.1
+      "projectedWar": -134.1,
+      "warByLeague": {
+        "kepners": -134.1,
+        "miami": -152.6,
+        "zimmer": -123.1
+      }
     },
     {
       "id": "devin-neal",
@@ -8354,7 +9781,12 @@
       "projectedPoints": 0.0,
       "proTeamEspn": "NO",
       "byeWeek": 8,
-      "projectedWar": -152.5
+      "projectedWar": -152.5,
+      "warByLeague": {
+        "kepners": -152.5,
+        "miami": -171.1,
+        "zimmer": -141.5
+      }
     },
     {
       "id": "joe-flacco",
@@ -8383,7 +9815,12 @@
       "projectedPoints": 10.51,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
-      "projectedWar": -271.1
+      "projectedWar": -271.1,
+      "warByLeague": {
+        "kepners": -271.1,
+        "miami": -282.6,
+        "zimmer": -271.1
+      }
     },
     {
       "id": "kaleb-johnson",
@@ -8412,7 +9849,12 @@
       "projectedPoints": 4.83,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
-      "projectedWar": -147.7
+      "projectedWar": -147.7,
+      "warByLeague": {
+        "kepners": -147.7,
+        "miami": -166.3,
+        "zimmer": -136.7
+      }
     },
     {
       "id": "mac-jones",
@@ -8441,7 +9883,12 @@
       "projectedPoints": 8.63,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": -273.0
+      "projectedWar": -273.0,
+      "warByLeague": {
+        "kepners": -273.0,
+        "miami": -284.5,
+        "zimmer": -273.0
+      }
     },
     {
       "id": "kendrick-bourne",
@@ -8470,7 +9917,12 @@
       "projectedPoints": 27.6,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
-      "projectedWar": -93.2
+      "projectedWar": -93.2,
+      "warByLeague": {
+        "kepners": -93.2,
+        "miami": -114.2,
+        "zimmer": -96.2
+      }
     },
     {
       "id": "isaiah-bond",
@@ -8499,7 +9951,12 @@
       "projectedPoints": 12.97,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": -107.8
+      "projectedWar": -107.8,
+      "warByLeague": {
+        "kepners": -107.8,
+        "miami": -128.8,
+        "zimmer": -110.8
+      }
     },
     {
       "id": "brandon-aubrey",
@@ -8528,7 +9985,12 @@
       "projectedPoints": 170.62,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
-      "projectedWar": 28.7
+      "projectedWar": 28.7,
+      "warByLeague": {
+        "kepners": 28.7,
+        "miami": 28.7,
+        "zimmer": 28.7
+      }
     },
     {
       "id": "ka-imi-fairbairn",
@@ -8557,7 +10019,12 @@
       "projectedPoints": 157.04,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": 15.1
+      "projectedWar": 15.1,
+      "warByLeague": {
+        "kepners": 15.1,
+        "miami": 15.1,
+        "zimmer": 15.1
+      }
     },
     {
       "id": "cameron-dicker",
@@ -8586,7 +10053,12 @@
       "projectedPoints": 160.87,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
-      "projectedWar": 19.0
+      "projectedWar": 19.0,
+      "warByLeague": {
+        "kepners": 19.0,
+        "miami": 19.0,
+        "zimmer": 19.0
+      }
     },
     {
       "id": "jason-myers",
@@ -8615,7 +10087,12 @@
       "projectedPoints": 157.53,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
-      "projectedWar": 15.6
+      "projectedWar": 15.6,
+      "warByLeague": {
+        "kepners": 15.6,
+        "miami": 15.6,
+        "zimmer": 15.6
+      }
     },
     {
       "id": "cam-little",
@@ -8644,7 +10121,12 @@
       "projectedPoints": 145.89,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": 4.0
+      "projectedWar": 4.0,
+      "warByLeague": {
+        "kepners": 4.0,
+        "miami": 4.0,
+        "zimmer": 4.0
+      }
     },
     {
       "id": "eddy-pineiro",
@@ -8673,7 +10155,12 @@
       "projectedPoints": 154.47,
       "proTeamEspn": "SF",
       "byeWeek": 8,
-      "projectedWar": 12.6
+      "projectedWar": 12.6,
+      "warByLeague": {
+        "kepners": 12.6,
+        "miami": 12.6,
+        "zimmer": 12.6
+      }
     },
     {
       "id": "tyler-loop",
@@ -8702,7 +10189,12 @@
       "projectedPoints": 143.86,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
-      "projectedWar": 2.0
+      "projectedWar": 2.0,
+      "warByLeague": {
+        "kepners": 2.0,
+        "miami": 2.0,
+        "zimmer": 2.0
+      }
     }
   ],
   "leagues": {
@@ -9008,6 +10500,13 @@
           "eligibility": "Player must have been drafted the prior season. Players added via waiver/free agency (undrafted) cannot be kept."
         }
       },
+      "keeperValueTiers": {
+        "elitePlus": 134.0,
+        "elite": 49.7,
+        "great": 11.9,
+        "good": 1.6,
+        "fairFloor": -1.9
+      },
       "draftOrderSynced": true,
       "draftOrderGenerated": "2026-08-07T11:37:23.262063+00:00",
       "draftOrderUnmatched": []
@@ -9061,7 +10560,7 @@
         {
           "slot": 8,
           "team": "BagelNDeli",
-          "manager": "Greene",
+          "manager": "Milligan",
           "isMe": false
         }
       ],
@@ -9092,9 +10591,26 @@
           "count": 2,
           "cost_rounds_advance": 3,
           "cost_rule": "Keeper costs 3 rounds earlier than the round in which the player was drafted the prior season (e.g. drafted round 8 -> kept at a round 5 cost).",
-          "eligibility": "Same as Kepners: player must have been drafted the prior season. Undrafted players cannot be kept.",
-          "_note": "Keeper count assumed same as Kepners (2) -- not explicitly stated when these rules were captured. Update this if Miami actually differs."
-        }
+          "eligibility": "Player must have been drafted the prior season, OR be an undrafted free agent (UDFA) kept under the 2026 UDFA rule below.",
+          "udfa_rule": {
+            "allowed": true,
+            "max_udfa_keepers": 1,
+            "cost_round": 13,
+            "note": "NEW for 2026: a team may keep up to one UDFA (undrafted free agent / waiver pickup) at a 13th-round cost. Confirmed with Sean: this is one OF the two keeper slots, NOT a bonus third -- the cap is still 2 keepers total."
+          },
+          "_note": "Keeper count 2 total, confirmed. UDFA counts against that 2."
+        },
+        "manager_renames": {
+          "Greene": "Milligan"
+        },
+        "_manager_rename_note": "Greene transferred his team to Milligan for 2026. convert_bigboard.py applies these renames to the Miami Team sheet, so the workbook doesn't have to be edited."
+      },
+      "keeperValueTiers": {
+        "elitePlus": 94.0,
+        "elite": 40.8,
+        "great": 9.6,
+        "good": 1.1,
+        "fairFloor": -1.6
       }
     },
     "zimmer": {
@@ -9195,7 +10711,38 @@
       "keepers": [],
       "rules": {
         "platform": "espn",
-        "teams": [
+        "teams": 12,
+        "format": "snake",
+        "scoring": "standard",
+        "keepers": {
+          "count": 0,
+          "cost_rounds_advance": null,
+          "cost_rule": null,
+          "eligibility": "No keepers in this league."
+        },
+        "_format_note": "Zimmer switched from auction to snake for 2026. The auction cockpit is fully preserved -- set format back to 'auction' here and it reactivates, no code change needed.",
+        "_teams_note": "Derived from 2025 ESPN draft history team names -- ESPN teams get renamed between seasons, so verify/update before the real draft. slot=null until the snake draft order is drawn.",
+        "rosterSlots": [
+          "QB",
+          "RB",
+          "RB",
+          "WR",
+          "WR",
+          "TE",
+          "FLEX",
+          "FLEX",
+          "DEF",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN",
+          "BEN"
+        ],
+        "_roster_note": "2026: 9 starters (QB/RB/RB/WR/WR/TE/FLEX/FLEX/DEF) + 7 bench = 16 drafted. Changes from auction era: 2 WR (was 3), kicker removed, 2nd FLEX added. Plus 1 IR slot, tracked in irSlots -- excluded from rosterSlots because it isn't draftable.",
+        "irSlots": 1,
+        "teamList": [
           {
             "slot": null,
             "team": "IT'S COMING HOME",
@@ -9268,37 +10815,14 @@
             "manager": "Dangerous Nights Crew",
             "isMe": false
           }
-        ],
-        "format": "snake",
-        "scoring": "standard",
-        "keepers": {
-          "count": 0,
-          "cost_rounds_advance": null,
-          "cost_rule": null,
-          "eligibility": "No keepers in this league."
-        },
-        "_format_note": "Zimmer switched from auction to snake for 2026. The auction cockpit is fully preserved -- set format back to 'auction' here and it reactivates, no code change needed.",
-        "_teams_note": "Derived from 2025 ESPN draft history team names -- ESPN teams get renamed between seasons, so verify/update before the real draft. slot=null until the snake draft order is drawn.",
-        "rosterSlots": [
-          "QB",
-          "RB",
-          "RB",
-          "WR",
-          "WR",
-          "TE",
-          "FLEX",
-          "FLEX",
-          "DEF",
-          "BEN",
-          "BEN",
-          "BEN",
-          "BEN",
-          "BEN",
-          "BEN",
-          "BEN"
-        ],
-        "_roster_note": "2026: 9 starters (QB/RB/RB/WR/WR/TE/FLEX/FLEX/DEF) + 7 bench = 16 drafted. Changes from auction era: 2 WR (was 3), kicker removed, 2nd FLEX added. Plus 1 IR slot, tracked in irSlots -- excluded from rosterSlots because it isn't draftable.",
-        "irSlots": 1
+        ]
+      },
+      "keeperValueTiers": {
+        "elitePlus": 138.2,
+        "elite": 48.5,
+        "great": 11.1,
+        "good": 1.0,
+        "fairFloor": -2.0
       }
     }
   }
