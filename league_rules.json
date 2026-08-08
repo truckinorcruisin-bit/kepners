@@ -21,13 +21,54 @@
       "count": 2,
       "cost_rounds_advance": 3,
       "cost_rule": "Keeper costs 3 rounds earlier than the round in which the player was drafted the prior season (e.g. drafted round 8 -> kept at a round 5 cost).",
-      "eligibility": "Same as Kepners: player must have been drafted the prior season. Undrafted players cannot be kept.",
-      "_note": "Keeper count assumed same as Kepners (2) -- not explicitly stated when these rules were captured. Update this if Miami actually differs."
-    }
+      "eligibility": "Player must have been drafted the prior season, OR be an undrafted free agent (UDFA) kept under the 2026 UDFA rule below.",
+      "udfa_rule": {
+        "allowed": true,
+        "max_udfa_keepers": 1,
+        "cost_round": 13,
+        "note": "NEW for 2026: a team may keep up to one UDFA (undrafted free agent / waiver pickup) at a 13th-round cost. Confirmed with Sean: this is one OF the two keeper slots, NOT a bonus third -- the cap is still 2 keepers total."
+      },
+      "_note": "Keeper count 2 total, confirmed. UDFA counts against that 2."
+    },
+    "manager_renames": {
+      "Greene": "Milligan"
+    },
+    "_manager_rename_note": "Greene transferred his team to Milligan for 2026. convert_bigboard.py applies these renames to the Miami Team sheet, so the workbook doesn't have to be edited."
   },
   "zimmer": {
     "platform": "espn",
-    "teams": [
+    "teams": 12,
+    "format": "snake",
+    "scoring": "standard",
+    "keepers": {
+      "count": 0,
+      "cost_rounds_advance": null,
+      "cost_rule": null,
+      "eligibility": "No keepers in this league."
+    },
+    "_format_note": "Zimmer switched from auction to snake for 2026. The auction cockpit is fully preserved -- set format back to 'auction' here and it reactivates, no code change needed.",
+    "_teams_note": "Derived from 2025 ESPN draft history team names -- ESPN teams get renamed between seasons, so verify/update before the real draft. slot=null until the snake draft order is drawn.",
+    "rosterSlots": [
+      "QB",
+      "RB",
+      "RB",
+      "WR",
+      "WR",
+      "TE",
+      "FLEX",
+      "FLEX",
+      "DEF",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN",
+      "BEN"
+    ],
+    "_roster_note": "2026: 9 starters (QB/RB/RB/WR/WR/TE/FLEX/FLEX/DEF) + 7 bench = 16 drafted. Changes from auction era: 2 WR (was 3), kicker removed, 2nd FLEX added. Plus 1 IR slot, tracked in irSlots -- excluded from rosterSlots because it isn't draftable.",
+    "irSlots": 1,
+    "teamList": [
       {
         "slot": null,
         "team": "IT'S COMING HOME",
@@ -100,36 +141,6 @@
         "manager": "Dangerous Nights Crew",
         "isMe": false
       }
-    ],
-    "format": "snake",
-    "scoring": "standard",
-    "keepers": {
-      "count": 0,
-      "cost_rounds_advance": null,
-      "cost_rule": null,
-      "eligibility": "No keepers in this league."
-    },
-    "_format_note": "Zimmer switched from auction to snake for 2026. The auction cockpit is fully preserved -- set format back to 'auction' here and it reactivates, no code change needed.",
-    "_teams_note": "Derived from 2025 ESPN draft history team names -- ESPN teams get renamed between seasons, so verify/update before the real draft. slot=null until the snake draft order is drawn.",
-    "rosterSlots": [
-      "QB",
-      "RB",
-      "RB",
-      "WR",
-      "WR",
-      "TE",
-      "FLEX",
-      "FLEX",
-      "DEF",
-      "BEN",
-      "BEN",
-      "BEN",
-      "BEN",
-      "BEN",
-      "BEN",
-      "BEN"
-    ],
-    "_roster_note": "2026: 9 starters (QB/RB/RB/WR/WR/TE/FLEX/FLEX/DEF) + 7 bench = 16 drafted. Changes from auction era: 2 WR (was 3), kicker removed, 2nd FLEX added. Plus 1 IR slot, tracked in irSlots -- excluded from rosterSlots because it isn't draftable.",
-    "irSlots": 1
+    ]
   }
 }

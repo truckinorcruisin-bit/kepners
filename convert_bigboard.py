@@ -39,6 +39,56 @@ REPLACEMENT_RANK = {
     "QB": 15, "RB": 30, "WR": 36, "TE": 15, "K": 12, "DEF": 12, "D/ST": 12,
 }
 
+# Replacement level depends on LEAGUE SHAPE, not just position: an 8-team
+# league leaves far better players on waivers than a 12-team one, so the same
+# player is worth less above replacement there. The flat REPLACEMENT_RANK
+# above is a 12-team Kepners-shaped baseline and was being applied to all
+# three leagues, overstating WAR in Miami (8 teams) and ignoring FLEX slots
+# entirely (which Miami and Zimmer both have).
+#
+# The formula below is reverse-engineered from the hand-tuned constants above
+# and reproduces them EXACTLY for Kepners' roster, so nothing regresses:
+#   replacement_rank = (league-wide dedicated starters + flex allocation)
+#                      * (1 + depth buffer)
+# Depth buffer is the streaming/handcuff cushion implied by the originals:
+# +25% for QB/RB/TE, +0% for WR/K/DEF.
+# Streaming/waiver depth beyond starters -- QB and TE only, matching what the
+# original comments described ("a few streaming options deep" / "minimal
+# streaming depth"). RB's original +25% was explicitly documented as standing
+# in for FLEX share, so it's handled as a flex fallback below instead, to
+# avoid counting flex twice in leagues that have real FLEX slots.
+STREAM_BUFFER = {"QB": 0.25, "TE": 0.25}
+# Legacy depth allowance for leagues with NO flex slots, preserving the
+# hand-tuned 12-team numbers exactly (Kepners RB 24 -> 30).
+NOFLEX_DEPTH = {"RB": 0.25}
+# Typical share of FLEX slots filled by each position.
+FLEX_SHARE = {"RB": 0.45, "WR": 0.45, "TE": 0.10}
+
+
+def replacement_ranks_for_league(teams, roster_slots):
+    """Per-league replacement ranks derived from team count and roster shape."""
+    if not teams or not roster_slots:
+        return dict(REPLACEMENT_RANK)
+    counts = {}
+    for slot in roster_slots:
+        counts[slot] = counts.get(slot, 0) + 1
+    flex_pool = teams * counts.get("FLEX", 0)
+    ranks = {}
+    for pos in ("QB", "RB", "WR", "TE", "K", "DEF"):
+        dedicated = teams * counts.get(pos, 0)
+        if dedicated == 0 and pos not in FLEX_SHARE:
+            continue  # league doesn't roster this position at all (e.g. no K)
+        flex_alloc = flex_pool * FLEX_SHARE.get(pos, 0.0)
+        # Larger of the real flex allocation or the legacy no-flex allowance --
+        # never both, or flex gets counted twice.
+        depth = max(flex_alloc, dedicated * NOFLEX_DEPTH.get(pos, 0.0))
+        total = (dedicated + depth) * (1 + STREAM_BUFFER.get(pos, 0.0))
+        rank = int(round(total))
+        if rank > 0:
+            ranks[pos] = rank
+    ranks["D/ST"] = ranks.get("DEF", REPLACEMENT_RANK["DEF"])
+    return ranks
+
 # The Big Board workbook stores team defenses as "DE" and kickers as "K-",
 # while ESPN uses "D/ST"/"K" and the site's rosterSlots use "DEF"/"K". Left
 # unnormalized, these mismatches silently broke several things: the Players
@@ -133,27 +183,46 @@ def load_espn_player_values():
         values_by_name[normalize_name(p["name"])] = p
         by_pos.setdefault(canonical_position(p["position"]), []).append(p)
 
-    replacement_by_position = {}
-    for pos, plist in by_pos.items():
+    for plist in by_pos.values():
         plist.sort(key=lambda x: x.get("projected_total_points") or 0, reverse=True)
-        rank = REPLACEMENT_RANK.get(pos, 20)
-        idx = min(rank, len(plist)) - 1
-        if idx >= 0:
-            replacement_by_position[pos] = plist[idx].get("projected_total_points") or 0
-    return values_by_name, replacement_by_position
+
+    def replacement_points(ranks):
+        """Points scored by the replacement-level player at each position."""
+        out = {}
+        for pos, plist in by_pos.items():
+            rank = ranks.get(pos, REPLACEMENT_RANK.get(pos, 20))
+            idx = min(rank, len(plist)) - 1
+            if idx >= 0:
+                out[pos] = plist[idx].get("projected_total_points") or 0
+        return out
+
+    return values_by_name, replacement_points(REPLACEMENT_RANK), replacement_points
 
 
-def merge_espn_values(players):
+def merge_espn_values(players, leagues=None):
     """Attaches espnRecommendedBid / projectedPoints / projectedWar to each Big
     Board player by normalized-name match. Fields are left null if unmatched or
     if no espn_player_values file exists -- the site's Player Card shows
     '—' gracefully in that case, this never fails the build."""
-    values_by_name, replacement_by_position = load_espn_player_values()
+    values_by_name, replacement_by_position, replacement_points = load_espn_player_values()
+    # Per-league replacement points: an 8-team league leaves better players on
+    # waivers than a 12-team one, so the same projected total is worth less
+    # above replacement there. Falls back to the flat baseline if a league has
+    # no roster config yet.
+    league_replacement = {}
+    for lkey, ldata in (leagues or {}).items():
+        rules = ldata.get("rules") or {}
+        teams = rules.get("teams")
+        slots = ldata.get("rosterSlots") or rules.get("rosterSlots") or []
+        if isinstance(teams, int) and slots:
+            league_replacement[lkey] = replacement_points(
+                replacement_ranks_for_league(teams, slots))
     if not values_by_name:
         for p in players:
             p["espnRecommendedBid"] = None
             p["projectedPoints"] = None
             p["projectedWar"] = None
+            p["warByLeague"] = {}
             # bye still comes from the authoritative team map even with no ESPN data
             p["byeWeek"] = bye_week_for_team(p.get("team"))
             p["proTeamEspn"] = None
@@ -175,6 +244,7 @@ def merge_espn_values(players):
             p["espnRecommendedBid"] = None
             p["projectedPoints"] = None
             p["projectedWar"] = None
+            p["warByLeague"] = {}
             p["byeWeek"] = bye_week_for_team(p.get("team"))
             p["proTeamEspn"] = None
             continue
@@ -191,6 +261,15 @@ def merge_espn_values(players):
         p["projectedWar"] = (
             round(proj - replacement, 1) if (proj is not None and replacement is not None) else None
         )
+        # League-specific WAR. Same projected points, but measured against each
+        # league's own replacement level -- the number the site and the keeper
+        # analysis should actually use.
+        p["warByLeague"] = {}
+        for lkey, repl in league_replacement.items():
+            r = repl.get(p["pos"])
+            p["warByLeague"][lkey] = (
+                round(proj - r, 1) if (proj is not None and r is not None) else None
+            )
 
     if unmatched:
         print(f"WARNING: {len(unmatched)} Big Board players had no ESPN name match "
@@ -354,6 +433,71 @@ def merge_kepners_draft_order(kepners_league, path="kepners_draft_order.json"):
     kepners_league["draftOrderUnmatched"] = data.get("unmatched_managers", [])
 
 
+def keeper_value_tiers_for_league(players, league_key, teams, roster_slots):
+    """Keeper Value tier cutoffs derived from this league's own distribution.
+
+    Keeper Value = Surplus x (WAR / 100). Both terms scale with league depth,
+    so the cutoffs compound: an 8-team league's KVs are far more compressed
+    than a 12-team's, and reusing one league's thresholds everywhere would make
+    a shallow league read "fair" for essentially every keeper.
+
+    Cutoffs are the same percentiles the original hand-set 12-team numbers
+    landed on (~90th/75th/50th/25th of the KV distribution across every player
+    at every plausible keeper round), just computed per league instead of
+    frozen -- so this stays correct for any league shape, with no per-league
+    constants to maintain.
+    """
+    def rank_to_round(rank):
+        if not isinstance(rank, (int, float)):
+            return None
+        return int((rank - 1) // teams) + 1
+
+    # Peer pool of this league's WAR by position and implied draft round.
+    pool = {}
+    for p in players:
+        w = (p.get("warByLeague") or {}).get(league_key)
+        r = rank_to_round(p.get("avgRank"))
+        if w is None or r is None:
+            continue
+        pool.setdefault(p["pos"], {}).setdefault(r, []).append(w)
+
+    def peer_avg(pos, round_):
+        by_round = pool.get(pos, {})
+        for win in range(0, 7):
+            wars = [v for rr, vals in by_round.items() if abs(rr - round_) <= win for v in vals]
+            if len(wars) >= 5:
+                return sum(wars) / len(wars)
+        return None
+
+    max_round = max(1, len(roster_slots) or 16)
+    samples = []
+    for p in players:
+        w = (p.get("warByLeague") or {}).get(league_key)
+        if w is None or w <= 0:
+            continue  # value floor: at/below replacement has no keeper value
+        for rd in range(1, max_round + 1):
+            pa = peer_avg(p["pos"], rd)
+            if pa is None:
+                continue
+            samples.append((w - pa) * (w / 100.0))
+
+    if len(samples) < 20:
+        return {"elitePlus": 160, "elite": 70, "great": 20, "good": 4, "fairFloor": -6}
+
+    samples.sort()
+
+    def pct(q):
+        return samples[min(len(samples) - 1, int(len(samples) * q))]
+
+    return {
+        "elitePlus": round(pct(0.95), 1),
+        "elite": round(pct(0.82), 1),
+        "great": round(pct(0.60), 1),
+        "good": round(pct(0.35), 1),
+        "fairFloor": round(pct(0.12), 1),
+    }
+
+
 def main(src, dst):
     # Lazy import: openpyxl is only needed here (Excel parsing), not by the
     # rest of this module (e.g. normalize_name, which other scripts like
@@ -364,7 +508,6 @@ def main(src, dst):
     wb = openpyxl.load_workbook(src, data_only=True)
     rules = load_league_rules()
     players = read_players(wb)
-    merge_espn_values(players)
     out = {
         "meta": {"season": 2026, "generated": datetime.now(timezone.utc).isoformat()},
         "players": players,
@@ -386,10 +529,32 @@ def main(src, dst):
             # supply teams/rosterSlots. Only fills gaps -- a real Team sheet
             # in the workbook always wins, so this can't silently override
             # Kepners/Miami if someone adds these keys to their rules too.
-            if not league_data["teams"] and league_rules.get("teams"):
-                league_data["teams"] = [dict(t) for t in league_rules["teams"]]
+            if not league_data["teams"] and league_rules.get("teamList"):
+                league_data["teams"] = [dict(t) for t in league_rules["teamList"]]
             if not league_data["rosterSlots"] and league_rules.get("rosterSlots"):
                 league_data["rosterSlots"] = list(league_rules["rosterSlots"])
+            # Manager handovers (e.g. Greene -> Milligan in Miami for 2026).
+            # Applied here so the workbook doesn't need editing and the change
+            # survives every Big Board re-export.
+            renames = league_rules.get("manager_renames") or {}
+            if renames:
+                for t in league_data.get("teams", []):
+                    if t.get("manager") in renames:
+                        t["manager"] = renames[t["manager"]]
+
+    # Runs AFTER leagues are assembled: per-league replacement levels depend on
+    # each league's team count and roster shape, so WAR can't be computed until
+    # that config exists.
+    merge_espn_values(players, out["leagues"])
+
+    # Keeper Value tiers, calibrated to each league's own KV distribution.
+    for league_key, league_data in out["leagues"].items():
+        rules_for = league_data.get("rules") or {}
+        team_count = rules_for.get("teams")
+        slots = league_data.get("rosterSlots") or []
+        if isinstance(team_count, int) and slots:
+            league_data["keeperValueTiers"] = keeper_value_tiers_for_league(
+                players, league_key, team_count, slots)
 
     merge_kepners_draft_order(out["leagues"]["kepners"])
 

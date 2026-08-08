@@ -550,7 +550,12 @@
 <script>
 let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, KEPG=null, activeLeague='kepners', activeMode='draft';
 
-let KEPS = null; // predicted keepers -- kepners_suggested_keepers.json, regenerate yearly (see script in /keeper_predict tooling)
+// Predicted keepers, keyed by league. Each league has its own file and its own
+// prediction script, since keeper rules differ (Kepners: cost -2; Miami: cost
+// -3 plus a 2026 UDFA rule at a 13th). Regenerated yearly, not by a workflow.
+let KEEPER_SUGGESTIONS = {};
+// Back-compat alias: existing code paths reference KEPS for Kepners.
+let KEPS = null;
 
 // Shared player-table state -- used by BOTH the standalone Players tab and the
 // in-cockpit table toggle, so filters/sort persist as you move between them.
@@ -682,8 +687,13 @@ async function boot(){
   // methodology/source_note fields inside the file itself.
   try{
     const r9 = await fetch('kepners_suggested_keepers.json');
-    if(r9.ok) KEPS = await r9.json();
+    if(r9.ok){ KEPS = await r9.json(); KEEPER_SUGGESTIONS.kepners = KEPS; }
   }catch(e){ /* Draft Order table just won't show amber suggestions */ }
+
+  try{
+    const r10 = await fetch('miami_suggested_keepers.json');
+    if(r10.ok) KEEPER_SUGGESTIONS.miami = await r10.json();
+  }catch(e){ /* Miami just won't show suggestions */ }
 
   computeSeanOverallRanks();
   renderLeagueTabs();
@@ -908,7 +918,9 @@ function renderPrepView(lg){
 function render2026KeeperGrades(lg){
   const el = document.getElementById('keeper2026Area');
   if(!el) return;
-  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
+  // Any league with a suggestions file (Kepners, Miami) -- not Kepners-only.
+  const SUG = KEEPER_SUGGESTIONS[activeLeague];
+  if(!SUG){ el.innerHTML=''; return; }
 
   // Merge real (Google Sheet) keepers with suggested (predicted) ones, same
   // per-manager priority as the Draft Order table and the availability map:
@@ -919,11 +931,14 @@ function render2026KeeperGrades(lg){
   const teamsWithKeepers = [];
   (lg.teams||[]).forEach(t=>{
     const real = t.liveKeepers||[];
-    const suggested = (KEPS && KEPS.by_manager && KEPS.by_manager[t.manager]) || [];
+    const suggested = (SUG && SUG.by_manager && SUG.by_manager[t.manager]) || [];
     if(real.length){
       teamsWithKeepers.push({...t, _keepers: real.map(k=>({...k, _isSuggested:false}))});
     } else if(suggested.length){
-      teamsWithKeepers.push({...t, _keepers: suggested.map(k=>({...k, _isSuggested:true}))});
+      // A suggestion entry can be flagged confirmed (a manager has told us
+      // their real picks even though there's no sheet sync for this league --
+      // e.g. Miami's J White). Those render green like synced keepers.
+      teamsWithKeepers.push({...t, _keepers: suggested.map(k=>({...k, _isSuggested: !k.confirmed}))});
     }
   });
 
@@ -944,13 +959,18 @@ function render2026KeeperGrades(lg){
   // peer_avg_war() widening-window logic exactly, just swapping actual_war
   // (past results) for projectedWar (forward-looking).
   const PEER_WINDOW_START = 0, PEER_WINDOW_MAX = 6, MIN_PEER_SAMPLE = 5;
+  // League-specific WAR: an 8-team league leaves better players on waivers, so
+  // the same player is worth less above replacement there. Falls back to the
+  // flat baseline if bigboard.json predates the per-league change.
+  const warOf = (p)=> (p.warByLeague && p.warByLeague[activeLeague]!=null)
+    ? p.warByLeague[activeLeague] : p.projectedWar;
   const byPositionRound = {};
   DATA.players.forEach(p=>{
-    if(p.projectedWar==null) return;
+    if(warOf(p)==null) return;
     const r = rankToRound(p.avgRank);
     if(r==null) return;
     (byPositionRound[p.pos] = byPositionRound[p.pos] || {});
-    (byPositionRound[p.pos][r] = byPositionRound[p.pos][r] || []).push(p.projectedWar);
+    (byPositionRound[p.pos][r] = byPositionRound[p.pos][r] || []).push(warOf(p));
   });
   function peerAvgWar(position, round_){
     const byRound = byPositionRound[position] || {};
@@ -999,7 +1019,7 @@ function render2026KeeperGrades(lg){
     t._keepers.forEach(k=>{
       const bp = findBigBoardPlayer(k.player);
       const keeperRound = k.round;
-      const projWar = bp ? bp.projectedWar : null;
+      const projWar = bp ? warOf(bp) : null;
       const projRound = bp ? rankToRound(bp.avgRank) : null;
       let peer=null, surplus=null, keeperValue=null, verdict, cls;
       if(!bp){ verdict='player not on board'; cls='na'; }
@@ -1013,11 +1033,16 @@ function render2026KeeperGrades(lg){
           // Tier cutoffs doubled from the original 0.5-weighted values --
           // removing the flat 0.5 multiplier doubles every score uniformly,
           // so cutoffs double too (same players, same tiers, new number line).
-          if(keeperValue>=160){ verdict='elite value+'; cls='eliteplus'; }
-          else if(keeperValue>=70){ verdict='elite value'; cls='elite'; }
-          else if(keeperValue>=20){ verdict='great value'; cls='great'; }
-          else if(keeperValue>=4){ verdict='good value'; cls='good'; }
-          else if(keeperValue>-6){ verdict='fair'; cls='fair'; }
+          // Tier cutoffs are derived per league from that league's own Keeper
+          // Value distribution (bigboard.json -> keeperValueTiers). Keeper
+          // Value scales with league depth, so reusing 12-team thresholds in
+          // an 8-team league would read "fair" for essentially every keeper.
+          const T = lg.keeperValueTiers || {elitePlus:160, elite:70, great:20, good:4, fairFloor:-6};
+          if(keeperValue>=T.elitePlus){ verdict='elite value+'; cls='eliteplus'; }
+          else if(keeperValue>=T.elite){ verdict='elite value'; cls='elite'; }
+          else if(keeperValue>=T.great){ verdict='great value'; cls='great'; }
+          else if(keeperValue>=T.good){ verdict='good value'; cls='good'; }
+          else if(keeperValue>T.fairFloor){ verdict='fair'; cls='fair'; }
           else { verdict='reach'; cls='overpriced'; }
         }
       }
@@ -1528,10 +1553,12 @@ function renderRec(p,need,lg){
 
 function renderDraftOrder(lg){
   const el = document.getElementById('draftOrderArea');
-  // Only Kepners has this live sync (the Google Sheet owners fill in); other
-  // leagues just don't show the panel.
-  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
-  if(!lg.draftOrderSynced){
+  // Kepners has a live Google Sheet sync; Miami doesn't, but still has keeper
+  // data worth showing (confirmed picks owners have told us, plus predictions).
+  // Leagues with neither a sync nor a suggestions file don't show the panel.
+  const SUG = KEEPER_SUGGESTIONS[activeLeague];
+  if(activeLeague!=='kepners' && !SUG){ el.innerHTML=''; return; }
+  if(activeLeague==='kepners' && !lg.draftOrderSynced){
     el.innerHTML = `<div class="seclabel">Draft Order &amp; Keepers</div>
       <div class="empty-note">kepners_draft_order.json not found.<br>
       Run "Update Kepners Draft Order" to pull the live Google Sheet.</div>`;
@@ -1548,15 +1575,20 @@ function renderDraftOrder(lg){
   });
   const rows = withPos.map(t=>{
     const real = t.liveKeepers||[];
-    const suggested = (KEPS && KEPS.by_manager && KEPS.by_manager[t.manager]) || [];
+    const allSuggested = (SUG && SUG.by_manager && SUG.by_manager[t.manager]) || [];
+    // Entries flagged confirmed are real choices an owner has told us directly,
+    // even without a sheet sync (Miami) -- promote them to the green path.
+    const confirmed = allSuggested.filter(k=>k.confirmed);
+    const suggested = allSuggested.filter(k=>!k.confirmed);
+    const realOrConfirmed = real.length ? real : confirmed;
     let keeperHtml;
-    if (real.length){
+    if (realOrConfirmed.length){
       // Real Google Sheet data always wins, shown green/confirmed -- unless
       // the name doesn't match any Big Board player at all (typo, or a
       // naming-format mismatch like "Luther Burden III" vs the Big Board's
       // "Luther Burden"), in which case flag it red so it's obvious this
       // keeper isn't actually being tracked anywhere else on the site yet.
-      keeperHtml = real.map(k=>{
+      keeperHtml = realOrConfirmed.map(k=>{
         const matched = !!findBigBoardPlayer(k.player);
         return matched
           ? `<span class="do-keeper">${k.player} (R${k.round})</span>`

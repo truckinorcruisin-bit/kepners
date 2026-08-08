@@ -1,0 +1,489 @@
+{
+  "season": 2025,
+  "league": "miami",
+  "source": "Emailed '2025 Draft Results and Eligible Keepers for 2026' images (hand-transcribed).",
+  "reading": "Struck-through names in the source are NOT eligible to keep (off the final roster) and are omitted here. Only eligible players are listed. '(K)' in the source means the player was a keeper in 2025 -- recorded as was_keeper_2025 but purely informational, confirmed with Sean that it carries no eligibility or cost implication.",
+  "caveat": "Hand-transcribed from screenshots. Verify any suggestion that looks off before locking keepers.",
+  "rosters": {
+    "K Jack": [
+      {
+        "player": "Mike Evans",
+        "draft_round": 4
+      },
+      {
+        "player": "Chuba Hubbard",
+        "draft_round": 5
+      },
+      {
+        "player": "Terry McLaurin",
+        "draft_round": 6,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Jameson Williams",
+        "draft_round": 7
+      },
+      {
+        "player": "Aaron Jones",
+        "draft_round": 8
+      },
+      {
+        "player": "Patrick Mahomes",
+        "draft_round": 9
+      },
+      {
+        "player": "Mark Andrews",
+        "draft_round": 10
+      },
+      {
+        "player": "Jacory Croskey-Merritt",
+        "draft_round": 11
+      },
+      {
+        "player": "Stefon Diggs",
+        "draft_round": 13
+      },
+      {
+        "player": "Kyle Pitts",
+        "draft_round": 15
+      },
+      {
+        "player": "Texans",
+        "draft_round": 16
+      },
+      {
+        "player": "Tyrone Tracy Jr",
+        "draft_round": 9,
+        "acquired": "trade"
+      },
+      {
+        "player": "JJ McCarthy",
+        "udfa": true
+      },
+      {
+        "player": "Romeo Doubs",
+        "udfa": true
+      }
+    ],
+    "Lubeck": [
+      {
+        "player": "Jalen Hurts",
+        "draft_round": 4
+      },
+      {
+        "player": "Tyreek Hill",
+        "draft_round": 5
+      },
+      {
+        "player": "George Pickens",
+        "draft_round": 6,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Travis Hunter",
+        "draft_round": 7
+      },
+      {
+        "player": "DeVonta Smith",
+        "draft_round": 8
+      },
+      {
+        "player": "Travis Kelce",
+        "draft_round": 9
+      },
+      {
+        "player": "Tucker Kraft",
+        "draft_round": 12
+      },
+      {
+        "player": "Michael Pittman Jr",
+        "draft_round": 14
+      },
+      {
+        "player": "Matthew Stafford",
+        "udfa": true
+      },
+      {
+        "player": "Rico Dowdle",
+        "udfa": true
+      },
+      {
+        "player": "Kareem Hunt",
+        "udfa": true
+      },
+      {
+        "player": "Darnell Mooney",
+        "udfa": true
+      },
+      {
+        "player": "Lions",
+        "udfa": true
+      },
+      {
+        "player": "Jaguars",
+        "udfa": true
+      }
+    ],
+    "Mullins": [
+      {
+        "player": "Trey McBride",
+        "draft_round": 4
+      },
+      {
+        "player": "TreVeyon Henderson",
+        "draft_round": 5
+      },
+      {
+        "player": "Tetairoa McMillan",
+        "draft_round": 6
+      },
+      {
+        "player": "Jaylen Waddle",
+        "draft_round": 8
+      },
+      {
+        "player": "Rashee Rice",
+        "draft_round": 9
+      },
+      {
+        "player": "Jaylen Warren",
+        "draft_round": 10
+      },
+      {
+        "player": "Bo Nix",
+        "draft_round": 11,
+        "acquired": "trade"
+      },
+      {
+        "player": "David Montgomery",
+        "draft_round": 8,
+        "acquired": "trade"
+      },
+      {
+        "player": "Eagles",
+        "draft_round": 13,
+        "acquired": "trade"
+      },
+      {
+        "player": "Quentin Johnston",
+        "udfa": true
+      },
+      {
+        "player": "Darren Waller",
+        "udfa": true
+      },
+      {
+        "player": "Rams",
+        "udfa": true
+      },
+      {
+        "player": "Devin Neal",
+        "udfa": true
+      }
+    ],
+    "Mikey": [
+      {
+        "player": "George Kittle",
+        "draft_round": 4
+      },
+      {
+        "player": "Breece Hall",
+        "draft_round": 5
+      },
+      {
+        "player": "Courtland Sutton",
+        "draft_round": 6
+      },
+      {
+        "player": "D'Andre Swift",
+        "draft_round": 7
+      },
+      {
+        "player": "Travis Etienne Jr",
+        "draft_round": 12
+      },
+      {
+        "player": "Javonte Williams",
+        "draft_round": 15
+      },
+      {
+        "player": "Brock Purdy",
+        "udfa": true
+      },
+      {
+        "player": "Juwan Johnson",
+        "udfa": true
+      },
+      {
+        "player": "Alec Pierce",
+        "udfa": true
+      },
+      {
+        "player": "Troy Franklin",
+        "udfa": true
+      },
+      {
+        "player": "Jacoby Brissett",
+        "udfa": true
+      },
+      {
+        "player": "Wan'Dale Robinson",
+        "udfa": true
+      },
+      {
+        "player": "Broncos",
+        "draft_round": 12,
+        "acquired": "trade"
+      }
+    ],
+    "Milligan": [
+      {
+        "player": "Kenneth Walker III",
+        "draft_round": 4
+      },
+      {
+        "player": "Davante Adams",
+        "draft_round": 5
+      },
+      {
+        "player": "Tony Pollard",
+        "draft_round": 6
+      },
+      {
+        "player": "Isiah Pacheco",
+        "draft_round": 7
+      },
+      {
+        "player": "Chris Olave",
+        "draft_round": 8
+      },
+      {
+        "player": "Rome Odunze",
+        "draft_round": 9,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Jordan Addison",
+        "draft_round": 10
+      },
+      {
+        "player": "Bucky Irving",
+        "draft_round": 13,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Hunter Henry",
+        "udfa": true
+      },
+      {
+        "player": "Dallas Goedert",
+        "udfa": true
+      },
+      {
+        "player": "Panthers",
+        "udfa": true
+      },
+      {
+        "player": "Patriots",
+        "udfa": true
+      },
+      {
+        "player": "Dak Prescott",
+        "draft_round": 16,
+        "acquired": "trade"
+      },
+      {
+        "player": "Nick Chubb",
+        "draft_round": 12,
+        "acquired": "trade"
+      }
+    ],
+    "Nemeth": [
+      {
+        "player": "Jaxon Smith-Njigba",
+        "draft_round": 4
+      },
+      {
+        "player": "Zay Flowers",
+        "draft_round": 7
+      },
+      {
+        "player": "Matthew Golden",
+        "draft_round": 10
+      },
+      {
+        "player": "Jauan Jennings",
+        "draft_round": 12
+      },
+      {
+        "player": "Quinshon Judkins",
+        "draft_round": 13
+      },
+      {
+        "player": "Harold Fannin Jr",
+        "draft_round": 16
+      },
+      {
+        "player": "Baker Mayfield",
+        "draft_round": 13,
+        "acquired": "trade"
+      },
+      {
+        "player": "Bhayshul Tuten",
+        "draft_round": 15,
+        "acquired": "trade"
+      },
+      {
+        "player": "Zach Charbonnet",
+        "draft_round": 11,
+        "acquired": "trade"
+      },
+      {
+        "player": "Jaxson Dart",
+        "udfa": true
+      },
+      {
+        "player": "Christian Watson",
+        "udfa": true
+      },
+      {
+        "player": "Kyle Monangai",
+        "udfa": true
+      },
+      {
+        "player": "Bam Knight",
+        "udfa": true
+      },
+      {
+        "player": "Seahawks",
+        "udfa": true
+      }
+    ],
+    "Hewitt": [
+      {
+        "player": "Marvin Harrison Jr",
+        "draft_round": 4
+      },
+      {
+        "player": "DK Metcalf",
+        "draft_round": 5
+      },
+      {
+        "player": "DJ Moore",
+        "draft_round": 7
+      },
+      {
+        "player": "Brock Bowers",
+        "draft_round": 10,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Chase Brown",
+        "draft_round": 11,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Jakobi Meyers",
+        "draft_round": 11,
+        "acquired": "trade"
+      },
+      {
+        "player": "Michael Carter",
+        "udfa": true
+      },
+      {
+        "player": "Woody Marks",
+        "udfa": true
+      },
+      {
+        "player": "Drake Maye",
+        "udfa": true
+      },
+      {
+        "player": "Kenny Gainwell",
+        "udfa": true
+      },
+      {
+        "player": "Saints",
+        "udfa": true
+      },
+      {
+        "player": "Bills",
+        "udfa": true
+      }
+    ],
+    "J White": [
+      {
+        "player": "James Cook",
+        "draft_round": 4
+      },
+      {
+        "player": "RJ Harvey",
+        "draft_round": 6
+      },
+      {
+        "player": "Emeka Egbuka",
+        "draft_round": 7
+      },
+      {
+        "player": "Brian Thomas Jr",
+        "draft_round": 8,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "De'Von Achane",
+        "draft_round": 9,
+        "was_keeper_2025": true
+      },
+      {
+        "player": "Deebo Samuel Sr",
+        "draft_round": 11
+      },
+      {
+        "player": "Tyler Warren",
+        "draft_round": 12
+      },
+      {
+        "player": "Steelers",
+        "draft_round": 14,
+        "acquired": "trade"
+      },
+      {
+        "player": "Trevor Lawrence",
+        "udfa": true
+      },
+      {
+        "player": "Michael Wilson",
+        "udfa": true
+      },
+      {
+        "player": "Jared Goff",
+        "udfa": true
+      },
+      {
+        "player": "Blake Corum",
+        "udfa": true
+      },
+      {
+        "player": "Rhamondre Stevenson",
+        "udfa": true
+      },
+      {
+        "player": "Dylan Sampson",
+        "udfa": true
+      }
+    ]
+  },
+  "confirmed_keepers": {
+    "J White": [
+      {
+        "player": "De'Von Achane",
+        "round": 6
+      },
+      {
+        "player": "Tyler Warren",
+        "round": 9
+      }
+    ]
+  }
+}
