@@ -1,0 +1,280 @@
+name: Run Full Pipeline
+
+# Runs every other workflow in this repo in the correct dependency order, so
+# you don't have to click "Run workflow" 12 times in the right sequence
+# yourself. Each step triggers the ACTUAL existing workflow (not a duplicate
+# copy of its logic) and waits for it to finish before the next one starts --
+# so you still get each workflow's own history, log, and commit message in
+# the Actions tab, exactly as if you'd run them by hand one at a time.
+#
+# DEPENDENCY ORDER (confirmed against each script's real file reads, not
+# assumed -- see the comment above each step below for the specific evidence):
+#
+#   STAGE 1 -- independent data pulls. Only Player Values has a real ordering
+#   requirement (it must run after Draft Order so its internal Big Board
+#   regen picks up fresh keepers); everything else here runs in PARALLEL --
+#   verified against each script's actual file reads, not assumed.
+#     - Update Kepners Draft Order   (Google Sheet, no secrets)
+#     - Update Kepners Draft History (Yahoo -- see NOTE below, allowed to fail)
+#     - Update Zimmer Draft History  (ESPN; also runs zimmer_analysis.py)
+#     - Update Season Stats          (ESPN, current season)
+#     - Update Weekly Stats          (ESPN, must match Season Stats' year --
+#                                      so it waits on that one specifically)
+#     - Update Player Values         (ESPN; also regenerates bigboard.json,
+#                                      merging in Draft Order's fresh keepers
+#                                      -- waits on Draft Order specifically)
+#
+#   STAGE 2 -- derived analyses, need Stage 1 outputs already committed
+#     7. Update Big Board Data   (belt-and-suspenders re-merge -- likely
+#                                  redundant with step 6's internal call, kept
+#                                  anyway since it's cheap and removes any
+#                                  timing doubt)
+#     8. Update Kepners Analysis (needs kepners_draft_history.json -- step 2)
+#     9. Update Kepners Draft Grades (needs espn_season_stats -- step 4 -- AND
+#                                      kepners_draft_history.json -- step 2)
+#    10. Update Zimmer Draft Grades  (needs zimmer_draft_history.json -- step
+#                                      3 -- AND season/weekly stats for
+#                                      GRADED_YEARS = 2023-2025, which are
+#                                      historical and already committed, not
+#                                      re-pulled by this pipeline)
+#    11. Update Bid Calibration (needs zimmer_draft_history.json -- step 3 --
+#                                 espn_season_stats -- step 4 -- and
+#                                 espn_player_values -- step 6)
+#
+#   STAGE 3 -- final step, needs a fully WAR+bid-populated bigboard.json
+#    12. Run Roster Optimizer
+#
+#   DELIBERATELY EXCLUDED:
+#     - pages-build-deployment: auto-triggered by every push, never run manually
+#     - Parsing a pasted Yahoo draft-results export (parse_kepners_draft_txt.py):
+#       needs a manually pasted text file, has no workflow_dispatch wrapper,
+#       and can't run unattended -- do this one by hand when you have a fresh
+#       export to paste.
+#
+# NOTE on Yahoo (step 2): as of this writing, Yahoo API access is still
+# pending approval, so this step will fail every run until that's resolved.
+# It's marked continue-on-error so a Yahoo failure does NOT block the rest of
+# the pipeline -- steps 8/9 (which read kepners_draft_history.json) will just
+# keep using whatever history is already committed until Yahoo access lands.
+#
+# REQUIRES: a repo secret GH_SECRETS_PAT with permission to trigger workflows
+# (classic PAT: "repo" scope: fine-grained PAT: "Actions: write" +
+# "Contents: write"). If you already created GH_SECRETS_PAT for the Yahoo
+# refresh-token rotation step, double check its scope covers this too -- it
+# was originally set up just for writing secrets, which is a narrower
+# permission than triggering workflows.
+
+on:
+  workflow_dispatch:
+    inputs:
+      current_season:
+        description: 'Current season year (Update Season Stats / Update Weekly Stats)'
+        required: false
+        default: '2026'
+      grade_season:
+        description: 'Past season to grade Kepners keepers for (Update Kepners Draft Grades)'
+        required: false
+        default: '2025'
+      xlsx_path:
+        description: 'Path to the Big Board Excel file (Update Big Board Data)'
+        required: false
+        default: 'data/FY26_BigBoard.xlsx'
+
+jobs:
+  # ---------------------------------------------------------------- STAGE 1
+  kepners-draft-order:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-kepners-draft-order.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+
+  kepners-draft-history:
+    # No real dependency on kepners-draft-order -- yahoo_kepners_history.py
+    # doesn't read kepners_draft_order.json. Runs in parallel with Stage 1.
+    runs-on: ubuntu-latest
+    # Allowed to fail without blocking the rest of the pipeline -- Yahoo API
+    # access is pending approval as of this writing. Once it's live, this
+    # step should start succeeding on its own with no changes needed here.
+    continue-on-error: true
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-kepners-history.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+
+  zimmer-draft-history:
+    # No real dependency on kepners-draft-order -- espn_zimmer_history.py
+    # doesn't read it. Runs in parallel with Stage 1.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-zimmer-history.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+
+  season-stats:
+    # No real dependency on kepners-draft-order -- espn_season_stats.py
+    # doesn't read it. Runs in parallel with Stage 1.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-season-stats.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+          inputs: '{"year": "${{ github.event.inputs.current_season }}"}'
+
+  weekly-stats:
+    # Must match Season Stats' year, so it runs after that specific pull
+    # rather than in parallel with it.
+    needs: season-stats
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-weekly-stats.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+          inputs: '{"year": "${{ github.event.inputs.current_season }}"}'
+
+  player-values:
+    # Runs after Update Kepners Draft Order so the bigboard.json it
+    # regenerates internally picks up the freshest keeper/draft-order data.
+    needs: kepners-draft-order
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-player-values.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+          inputs: '{"year": "${{ github.event.inputs.current_season }}"}'
+
+  # ---------------------------------------------------------------- STAGE 2
+  big-board:
+    needs: [kepners-draft-order, player-values]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-bigboard.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+          inputs: '{"xlsx_path": "${{ github.event.inputs.xlsx_path }}"}'
+
+  kepners-analysis:
+    # Reads kepners_draft_history.json -- needs step 2 (kepners-draft-history)
+    # to have run, even though that step may have failed (Yahoo pending). If
+    # it failed, this just analyzes whatever history is already committed.
+    needs: kepners-draft-history
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-kepners-analysis.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+
+  kepners-draft-grades:
+    # Reads espn_season_stats_<year>.json (season-stats) AND
+    # kepners_draft_history.json (kepners-draft-history).
+    needs: [season-stats, kepners-draft-history]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-kepners-draft-grades.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+          inputs: '{"season": "${{ github.event.inputs.grade_season }}"}'
+
+  zimmer-draft-grades:
+    # Reads zimmer_draft_history.json/zimmer_analysis.json (zimmer-draft-history)
+    # plus season/weekly stats for GRADED_YEARS -- those are historical
+    # (2023-2025) and already committed, not produced by this pipeline's
+    # current-year stats pulls.
+    needs: [zimmer-draft-history, weekly-stats]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-draft-grades.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+
+  bid-calibration:
+    # Reads zimmer_draft_history.json, espn_season_stats_<year>.json, and
+    # espn_player_values_<year>.json.
+    needs: [zimmer-draft-history, season-stats, player-values]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-bid-calibration.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
+
+  # ---------------------------------------------------------------- STAGE 3
+  roster-optimizer:
+    # Needs bigboard.json fully populated with projectedWar + espnRecommendedBid.
+    needs: big-board
+    runs-on: ubuntu-latest
+    steps:
+      - uses: convictional/trigger-workflow-and-wait@v1.6.1
+        with:
+          owner: truckinorcruisin-bit
+          repo: kepners
+          github_token: ${{ secrets.GH_SECRETS_PAT }}
+          workflow_file_name: update-roster-optimizer.yml
+          ref: main
+          wait_interval: 15
+          propagate_failure: true
