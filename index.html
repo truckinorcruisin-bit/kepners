@@ -324,6 +324,9 @@
   .kg-verdict.insufficient{background:rgba(125,139,153,.1);color:var(--line-2);}
   .kg-verdict.na{background:rgba(125,139,153,.1);color:var(--line-2);}
   .kgTable td .pt-sub{display:block;}
+  .gvTable{margin-bottom:16px;}
+  .gvTable th:first-child{color:var(--amber);font-size:10px;}
+  .gv-total-row td{border-top:1px solid var(--line-2);border-bottom:none;font-weight:700;color:var(--cyan);}
 
   /* ===== searchable player table ===== */
   .pt-controls{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;align-items:center;}
@@ -591,6 +594,22 @@ let replay = {
 // roster construction on file. Correct these if they don't match reality.
 const ASSUMED_BUDGET = 200;
 const ASSUMED_ROSTER = ['QB','RB','RB','WR','WR','WR','TE','FLEX','DEF','K','BEN','BEN','BEN','BEN','BEN','BEN'];
+
+// Kepners 2026 divisions (drawn 2026-08-12). Keyed on the same `manager`
+// string used everywhere else in the app (bigboard.json teams[].manager),
+// not the casual nickname Sean uses in conversation -- e.g. Sean calls these
+// owners "Joe" and "McGann", but the site (Owner Profiles, Draft Order,
+// Keeper Grades) has always displayed them as "Berdine" and "Mike/Brad" per
+// kepners_team_aliases.json. Kept consistent with that here.
+// Confirmed with Sean: Mark = Neary, Pat = Ditto (he goes by "Dittoe"
+// casually; the manager field stays "Ditto" to match every other file/table
+// in the project -- kepners_team_aliases.json, bigboard.json,
+// kepners_analysis.json all use that spelling).
+const KEPNERS_DIVISIONS = [
+  { name: 'Group 1', managers: ['Mullins', 'Berdine', 'Matty', 'Mike/Brad'] },
+  { name: 'Group 2', managers: ['Scott', 'Neary', 'Ditto', 'Weber'] },
+  { name: 'Group 3', managers: ['Mikey', 'Bobby', 'Steve', 'Greene'] },
+];
 
 let zimmerDraft = {
   picks: [],          // {name, position, cost, isMine, owner} -- ALL draft picks
@@ -900,11 +919,16 @@ function renderPrepView(lg){
     <div id="draftOrderArea"></div>
     <div id="ownerProfilesArea"></div>
     <div id="keeper2026Area"></div>
+    <div id="groupValueArea"></div>
     <div id="keeperGradesArea"></div>
   `;
   renderDraftOrder(lg);
   renderOwnerProfiles(lg);
-  render2026KeeperGrades(lg);
+  // Computed once, shared by the 2026 grades table and the Group/Owner
+  // rollup below it so both read the identical set of graded keepers.
+  const kv2026 = compute2026KeeperGrades(lg);
+  render2026KeeperGrades(kv2026);
+  renderGroupKeeperValue(lg, kv2026);
   renderKeeperGrades();
 }
 
@@ -915,12 +939,16 @@ function renderPrepView(lg){
 // well before their market round = value; keeping them at/after it = a reach.
 // This is distinct from the "2025 Keeper Value Grades" below, which grade last
 // season's keepers on ACTUAL production.
-function render2026KeeperGrades(lg){
-  const el = document.getElementById('keeper2026Area');
-  if(!el) return;
+//
+// Returns null when there's nothing to grade yet (no suggestions file, or no
+// team has a keeper logged/predicted) -- callers render their own empty-state
+// message in that case. Split out from render2026KeeperGrades so the
+// Group/Owner Keeper Value rollup can consume the identical graded list
+// without recomputing peer pools twice.
+function compute2026KeeperGrades(lg){
   // Any league with a suggestions file (Kepners, Miami) -- not Kepners-only.
   const SUG = KEEPER_SUGGESTIONS[activeLeague];
-  if(!SUG){ el.innerHTML=''; return; }
+  if(!SUG) return null;
 
   // Merge real (Google Sheet) keepers with suggested (predicted) ones, same
   // per-manager priority as the Draft Order table and the availability map:
@@ -942,13 +970,7 @@ function render2026KeeperGrades(lg){
     }
   });
 
-  if(!teamsWithKeepers.length){
-    el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades</div>
-      <div class="empty-note">No 2026 keepers synced or predicted yet.<br>
-      Run "Update Kepners Draft Order" to pull keepers from the Google Sheet.<br>
-      <span class="pt-warsrc">WAR/consensus rank will be calculated based on 2026 ESPN Projections.</span></div>`;
-    return;
-  }
+  if(!teamsWithKeepers.length) return null;
   const teamCount = lg.teams.length || 12;
   const rankToRound = (rank)=> rank!=null ? Math.floor((rank-1)/teamCount)+1 : null;
 
@@ -1029,6 +1051,16 @@ function render2026KeeperGrades(lg){
         if(peer.avg==null){ verdict='insufficient peer data'; cls='na'; }
         else {
           surplus = Math.round((projWar - peer.avg)*10)/10;
+          // VALUE FLOOR (critical -- see project notes): Keeper Value
+          // multiplies surplus by WAR, so when WAR is <=0 a NEGATIVE surplus
+          // (correctly reading "below peers") flips the sign and produces a
+          // large POSITIVE Keeper Value -- a projected bust reading as a
+          // great keep. Don't compute Keeper Value at all in that case; a
+          // player projected at/below replacement has no keeper value
+          // regardless of how the cost math reads. Always floor before
+          // multiplying by a signed quantity.
+          if(projWar<=0){ verdict='no value (proj. WAR ≤ 0)'; cls='fair'; }
+          else {
           keeperValue = Math.round(surplus * (projWar/KEEPER_VALUE_WAR_CONST) * KEEPER_VALUE_WEIGHT * 10)/10;
           // Tier cutoffs doubled from the original 0.5-weighted values --
           // removing the flat 0.5 multiplier doubles every score uniformly,
@@ -1044,6 +1076,7 @@ function render2026KeeperGrades(lg){
           else if(keeperValue>=T.good){ verdict='good value'; cls='good'; }
           else if(keeperValue>T.fairFloor){ verdict='fair'; cls='fair'; }
           else { verdict='reach'; cls='overpriced'; }
+          }
         }
       }
       graded.push({
@@ -1064,6 +1097,22 @@ function render2026KeeperGrades(lg){
     return b.keeperValue - a.keeperValue;
   });
 
+  const suggestedCount = graded.filter(g=>g.isSuggested).length;
+  return { graded, suggestedCount };
+}
+
+function render2026KeeperGrades(kv2026){
+  const el = document.getElementById('keeper2026Area');
+  if(!el) return;
+  if(!kv2026){
+    el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades</div>
+      <div class="empty-note">No 2026 keepers synced or predicted yet.<br>
+      Run "Update Kepners Draft Order" to pull keepers from the Google Sheet.<br>
+      <span class="pt-warsrc">WAR/consensus rank will be calculated based on 2026 ESPN Projections.</span></div>`;
+    return;
+  }
+  const { graded, suggestedCount } = kv2026;
+
   const rows = graded.map(g=>`
     <tr class="${g.isSuggested?'kg-suggested-row':''}">
       <td>${g.manager}</td>
@@ -1078,7 +1127,6 @@ function render2026KeeperGrades(lg){
       <td><span class="kg-verdict ${g.cls}">${g.verdict}</span></td>
     </tr>`).join('');
 
-  const suggestedCount = graded.filter(g=>g.isSuggested).length;
   el.innerHTML = `<div class="seclabel">2026 Keeper Value Grades
     <span style="font-size:9px;color:var(--dim);font-weight:400;">— your league's kept players</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
@@ -1095,6 +1143,73 @@ function render2026KeeperGrades(lg){
       <th class="num">Proj WAR</th><th class="num">Peer Avg WAR</th><th class="num">Surplus</th>
       <th class="num">Keeper Value</th><th>Verdict</th>
     </tr></thead><tbody>${rows}</tbody></table>`;
+}
+
+// Group/Owner Keeper Value rollup (Kepners only -- divisions were drawn for
+// Kepners' 2026 season; Miami/Zimmer have no divisions on file). Sums each
+// owner's 2026 Keeper Value across their keeper picks, then sums owners'
+// totals up to their division (KEPNERS_DIVISIONS). Ungraded keepers
+// (keeperValue null -- e.g. "player not on board") contribute 0 to the sum
+// but are called out separately so a $0 total isn't mistaken for "no value"
+// when it's really "couldn't be graded yet".
+function renderGroupKeeperValue(lg, kv2026){
+  const el = document.getElementById('groupValueArea');
+  if(!el) return;
+  if(activeLeague!=='kepners'){ el.innerHTML=''; return; }
+  if(!kv2026){
+    el.innerHTML = `<div class="seclabel">Keeper Value by Group</div>
+      <div class="empty-note">No 2026 keepers synced or predicted yet -- nothing to roll up.</div>`;
+    return;
+  }
+
+  // Per-manager totals from the same graded list the table above renders.
+  const byManager = {};
+  kv2026.graded.forEach(g=>{
+    const m = byManager[g.manager] = byManager[g.manager] || { total:0, graded:0, ungraded:0, team:g.team };
+    if(g.keeperValue!=null){ m.total += g.keeperValue; m.graded++; }
+    else { m.ungraded++; }
+  });
+
+  const groups = KEPNERS_DIVISIONS.map(div=>{
+    const owners = div.managers.map(m=>{
+      const d = byManager[m];
+      return {
+        manager: m,
+        team: d ? d.team : (lg.teams.find(t=>t.manager===m)||{}).team,
+        total: d ? Math.round(d.total*10)/10 : 0,
+        graded: d ? d.graded : 0,
+        ungraded: d ? d.ungraded : 0,
+      };
+    }).sort((a,b)=>b.total-a.total);
+    const groupTotal = Math.round(owners.reduce((s,o)=>s+o.total,0)*10)/10;
+    return { name: div.name, owners, groupTotal };
+  }).sort((a,b)=>b.groupTotal-a.groupTotal);
+
+  const groupBlocks = groups.map(g=>`
+    <table class="kgTable gvTable"><thead><tr>
+      <th>${g.name}</th><th>Team</th><th class="num">Keepers Graded</th><th class="num">Total Keeper Value</th>
+    </tr></thead><tbody>
+      ${g.owners.map(o=>`
+        <tr>
+          <td>${o.manager}</td>
+          <td class="pt-sub">${o.team||'—'}</td>
+          <td class="num">${o.graded}${o.ungraded?` <span class="pt-sub">(+${o.ungraded} ungraded)</span>`:''}</td>
+          <td class="num">${o.total>0?'+':''}${o.total}</td>
+        </tr>`).join('')}
+      <tr class="gv-total-row">
+        <td colspan="3">Group Total</td>
+        <td class="num">${g.groupTotal>0?'+':''}${g.groupTotal}</td>
+      </tr>
+    </tbody></table>`).join('');
+
+  el.innerHTML = `<div class="seclabel">Keeper Value by Group
+    <span style="font-size:9px;color:var(--dim);font-weight:400;">— divisions drawn 2026-08-12</span></div>
+    <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.5;">
+      Sums each owner's 2026 Keeper Value (see table above) across both their keeper picks, then sums
+      owners up to their division. Ungraded keepers (no Big Board match / no WAR projection / insufficient
+      peer data) count as 0 toward the total and are flagged separately rather than silently folded in.
+    </div>
+    ${groupBlocks}`;
 }
 
 // -------- snake cockpit panels --------

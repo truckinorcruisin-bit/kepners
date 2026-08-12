@@ -221,26 +221,41 @@ def grade_keepers(picks):
             surplus, keeper_value, verdict = None, None, "insufficient peer data"
         else:
             surplus = round(actual_war - avg, 1)
-            keeper_value = round(surplus * (actual_war / KEEPER_VALUE_WAR_CONST) * KEEPER_VALUE_WEIGHT, 1)
             if actual_war <= 0:
                 # VALUE FLOOR: no production above replacement means no value,
                 # regardless of how the cost math reads. Can't be "good" or
                 # "great" -- at best "fair" if the whole peer group also
                 # whiffed at this cost, or "bust" if peers proved real value
                 # was gettable at this cost/position and this pick missed it.
+                #
+                # BUG FIXED (this revision): keeper_value was still being
+                # computed as surplus * (actual_war / CONST) even here, and
+                # multiplying two negative numbers (a below-peers surplus
+                # times a negative actual_war) flips the sign -- a real bust
+                # could produce a large POSITIVE keeper_value even though the
+                # verdict correctly said "no value". Confirmed live in a past
+                # run: Jayden Daniels graded actual_war -120.9 (a clear bust)
+                # but keeper_value came out +144.2. The verdict text alone
+                # isn't enough protection if the numeric field disagrees with
+                # it -- anything that sums or sorts on keeper_value (e.g. a
+                # group/owner rollup) would silently inherit the inversion.
+                # Never compute keeper_value here; leave it None.
+                keeper_value = None
                 verdict = "bust (no value added)" if avg > PEER_MEANINGFUL_BAR else "fair (no value, but so was the field)"
-            elif keeper_value >= KV_ELITE_PLUS:
-                verdict = "elite value+"
-            elif keeper_value >= KV_ELITE:
-                verdict = "elite value"
-            elif keeper_value >= KV_GREAT:
-                verdict = "great value"
-            elif keeper_value >= KV_GOOD:
-                verdict = "good value"
-            elif keeper_value > KV_FAIR_FLOOR:
-                verdict = "fair"
             else:
-                verdict = "overpriced"
+                keeper_value = round(surplus * (actual_war / KEEPER_VALUE_WAR_CONST) * KEEPER_VALUE_WEIGHT, 1)
+                if keeper_value >= KV_ELITE_PLUS:
+                    verdict = "elite value+"
+                elif keeper_value >= KV_ELITE:
+                    verdict = "elite value"
+                elif keeper_value >= KV_GREAT:
+                    verdict = "great value"
+                elif keeper_value >= KV_GOOD:
+                    verdict = "good value"
+                elif keeper_value > KV_FAIR_FLOOR:
+                    verdict = "fair"
+                else:
+                    verdict = "overpriced"
 
         graded.append({
             "manager": p.get("manager"), "team": p.get("team"),
