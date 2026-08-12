@@ -18,6 +18,12 @@ name: Run Full Pipeline
 # before triggering anything else -- so a bad secret fails once, clearly,
 # instead of cascading into 12 confusing failures.
 #
+# The script is invoked as `bash .github/scripts/trigger-and-wait.sh ...`
+# rather than executed directly -- files added through GitHub's web file
+# editor don't get the executable bit set (no chmod +x available from that
+# interface), so calling it via bash explicitly avoids depending on file
+# permissions at all.
+#
 # DEPENDENCY ORDER (confirmed against each script's real file reads, not
 # assumed -- see the comment above each job below for the specific evidence):
 #
@@ -120,7 +126,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Kepners Draft Order
-        run: .github/scripts/trigger-and-wait.sh update-kepners-draft-order.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-kepners-draft-order.yml
 
   kepners-draft-history:
     needs: preflight
@@ -131,7 +137,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Kepners Draft History
-        run: .github/scripts/trigger-and-wait.sh update-kepners-history.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-kepners-history.yml
 
   zimmer-draft-history:
     needs: preflight
@@ -139,7 +145,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Zimmer Draft History
-        run: .github/scripts/trigger-and-wait.sh update-zimmer-history.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-zimmer-history.yml
 
   season-stats:
     needs: preflight
@@ -147,7 +153,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Season Stats
-        run: .github/scripts/trigger-and-wait.sh update-season-stats.yml "year=${{ github.event.inputs.current_season }}"
+        run: bash .github/scripts/trigger-and-wait.sh update-season-stats.yml "year=${{ github.event.inputs.current_season }}"
 
   weekly-stats:
     needs: season-stats
@@ -155,7 +161,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Weekly Stats
-        run: .github/scripts/trigger-and-wait.sh update-weekly-stats.yml "year=${{ github.event.inputs.current_season }}"
+        run: bash .github/scripts/trigger-and-wait.sh update-weekly-stats.yml "year=${{ github.event.inputs.current_season }}"
 
   player-values:
     needs: [preflight, kepners-draft-order]
@@ -163,7 +169,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Player Values
-        run: .github/scripts/trigger-and-wait.sh update-player-values.yml "year=${{ github.event.inputs.current_season }}"
+        run: bash .github/scripts/trigger-and-wait.sh update-player-values.yml "year=${{ github.event.inputs.current_season }}"
 
   # ---------------------------------------------------------------- STAGE 2
   big-board:
@@ -172,7 +178,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Big Board Data
-        run: .github/scripts/trigger-and-wait.sh update-bigboard.yml "xlsx_path=${{ github.event.inputs.xlsx_path }}"
+        run: bash .github/scripts/trigger-and-wait.sh update-bigboard.yml "xlsx_path=${{ github.event.inputs.xlsx_path }}"
 
   kepners-analysis:
     needs: kepners-draft-history
@@ -180,7 +186,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Kepners Analysis
-        run: .github/scripts/trigger-and-wait.sh update-kepners-analysis.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-kepners-analysis.yml
 
   kepners-draft-grades:
     needs: [season-stats, kepners-draft-history]
@@ -188,7 +194,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Kepners Draft Grades
-        run: .github/scripts/trigger-and-wait.sh update-kepners-draft-grades.yml "season=${{ github.event.inputs.grade_season }}"
+        run: bash .github/scripts/trigger-and-wait.sh update-kepners-draft-grades.yml "season=${{ github.event.inputs.grade_season }}"
 
   zimmer-draft-grades:
     needs: [zimmer-draft-history, weekly-stats]
@@ -196,7 +202,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Zimmer Draft Grades
-        run: .github/scripts/trigger-and-wait.sh update-draft-grades.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-draft-grades.yml
 
   bid-calibration:
     needs: [zimmer-draft-history, season-stats, player-values]
@@ -204,7 +210,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Update Bid Calibration
-        run: .github/scripts/trigger-and-wait.sh update-bid-calibration.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-bid-calibration.yml
 
   # ---------------------------------------------------------------- STAGE 3
   roster-optimizer:
@@ -213,4 +219,4 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Trigger and wait -- Run Roster Optimizer
-        run: .github/scripts/trigger-and-wait.sh update-roster-optimizer.yml
+        run: bash .github/scripts/trigger-and-wait.sh update-roster-optimizer.yml
