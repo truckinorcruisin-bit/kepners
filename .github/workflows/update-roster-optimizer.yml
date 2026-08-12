@@ -54,4 +54,12 @@ jobs:
           # the JSON is only produced on a successful run; add it only if present
           [ -f roster_optimizer_result.json ] && git add roster_optimizer_result.json
           git diff --staged --quiet || git commit -m "Update roster optimizer results"
-          git push
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely another workflow pushed to main first) -- rebasing and retrying ($i/5)..."
+            git pull --rebase origin main
+          done
+          echo "::error::git push failed after 5 retries. If this keeps happening, check for a genuine merge conflict that needs manual resolution."
+          exit 1
