@@ -61,6 +61,17 @@ import requests
 
 BASE = "https://fantasy.espn.com/apis/v3/games/ffl/seasons/{year}/segments/0/leagues/{lid}"
 OUT_FILE = "espn_live_draft.json"
+# A bare `requests` default User-Agent ("python-requests/2.x") is one of the
+# cheapest, most common bot-detection signals a CDN/WAF checks. This alone
+# won't get past an IP-reputation-based block (see the module docstring
+# section on the CloudFront "Request Blocked" failure mode -- that's a
+# different, IP-level problem this header can't fix), but it's a legitimate,
+# standard thing for any API client to send regardless, so there's no reason
+# not to.
+HEADERS = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+                  "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+}
 
 
 def get_credentials():
@@ -75,7 +86,19 @@ def fetch_draft_detail(lobby_id, year, espn_s2, swid):
     cookies = {}
     if espn_s2 and swid:
         cookies = {"espn_s2": espn_s2, "SWID": swid}
-    resp = requests.get(url, params=params, cookies=cookies, timeout=20)
+    resp = requests.get(url, params=params, cookies=cookies, headers=HEADERS, timeout=20)
+    if resp.status_code == 403 and "cloudfront" in resp.text.lower():
+        raise SystemExit(
+            "ESPN's CDN (CloudFront) blocked this request at the edge -- it never reached "
+            "ESPN's actual API. This is an IP-reputation/bot-detection block, not a bad "
+            "lobby ID or bad ESPN_S2/SWID cookie (those errors look different -- usually a "
+            "clean ESPN JSON error, not a CloudFront HTML page). GitHub Actions runner IPs "
+            "are a common target for this kind of block since they're well-known datacenter "
+            "ranges. Test whether this is specific to the Mock Draft Lobby product (more "
+            "exposed to abuse, likely more firewalled) or affects fantasy.espn.com generally "
+            "from these runners (which would also affect the existing ESPN pipeline scripts) "
+            "by re-running this same script against a real ESPN_LEAGUE_ID instead."
+        )
     if resp.status_code != 200:
         raise SystemExit(
             f"ESPN returned HTTP {resp.status_code} for lobby/league {lobby_id} "
@@ -103,7 +126,7 @@ def resolve_player_names_for_league(lobby_id, player_ids, year, espn_s2, swid):
         return {}
     url = BASE.format(year=year, lid=lobby_id)
     filt = {"players": {"filterIds": {"value": list(player_ids)}}}
-    headers = {"x-fantasy-filter": json.dumps(filt)}
+    headers = {**HEADERS, "x-fantasy-filter": json.dumps(filt)}
     cookies = {}
     if espn_s2 and swid:
         cookies = {"espn_s2": espn_s2, "SWID": swid}
