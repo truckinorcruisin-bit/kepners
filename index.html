@@ -1857,13 +1857,64 @@ function renderKeeperGrades(){
     ${(KEPG.unmatched_players||[]).length ? `<div class="do-unmatched">⚠ ${KEPG.unmatched_players.length} player(s) didn't match season stats: ${KEPG.unmatched_players.join(', ')}</div>` : ''}`;
 }
 
+// Confirmed + predicted 2026 keepers for a league, deduped the same way the
+// drafted-status greyout (ptDraftedMap) already does: a real sync result
+// always wins over a same-player prediction. Shared by the Live Feed ticker
+// and the draft-tab footer so the two can't disagree on a keeper count.
+function leagueKeeperItems(lg){
+  const confirmedIds = new Set();
+  const confirmed = [];
+  (lg.teams||[]).forEach(t=>{
+    (t.liveKeepers||[]).forEach(k=>{
+      const bp = findBigBoardPlayer(k.player);
+      if(bp) confirmedIds.add(bp.id);
+      confirmed.push({team:t.team, player:k.player, round:k.round});
+    });
+  });
+  const predicted = [];
+  const SUG = KEEPER_SUGGESTIONS[activeLeague];
+  if(SUG && SUG.by_manager){
+    (lg.teams||[]).forEach(t=>{
+      (SUG.by_manager[t.manager]||[]).forEach(k=>{
+        const bp = findBigBoardPlayer(k.player);
+        if(bp && confirmedIds.has(bp.id)) return;
+        predicted.push({team:t.team, player:k.player, round:k.round});
+      });
+    });
+  }
+  return {confirmed, predicted};
+}
+
 function renderTicker(lg){
-  // mock feed from keepers so it looks live; replace with poll results
-  const items = lg.keepers.length
-    ? lg.keepers.slice(0,8).map(k=>`<span><b>${k.team}</b> keeps ${k.player} (R${k.round})</span>`)
-    : [`<span>NO PICKS YET · <b>${lg.myTeam}</b> ON DECK</span>`];
-  const track=[...items,...items].join('');
-  document.getElementById('ticker').innerHTML=track;
+  // BUG FIXED: this read `lg.keepers` -- a stale 2025 snapshot baked directly
+  // into bigboard.json under the league object (short names like "Love",
+  // "Daniels", "Bucky" and last year's rounds -- that's why "Ranus keeps Love
+  // (R12)" kept showing up no matter what actually happened this year).
+  // The live/current data is per-team: `t.liveKeepers` for 2026 keepers (the
+  // same source the My Team panel and 2026 Keeper Value Grades already use),
+  // plus whatever's been logged in the Draft Log so far. Works identically
+  // for Kepners and Miami since it just walks whichever league object it's
+  // handed -- no Kepners-only assumptions.
+  const isAuction = isAuctionLeague();
+  const {confirmed, predicted} = leagueKeeperItems(lg);
+  const keeperItems = [
+    ...confirmed.map(k=>`<span><b>${k.team}</b> keeps ${k.player} (R${k.round})</span>`),
+    ...predicted.map(k=>`<span><b>${k.team}</b> keeps ${k.player} (R${k.round}) <span class="pt-sub" style="display:inline">*predicted</span></span>`),
+  ];
+
+  // Live draft picks -- most recent first; this is the actually-"live" part.
+  const draftPicks = isAuction ? zimmerDraft.picks : snakeDraft.picks;
+  const pickItems = (draftPicks||[]).slice().reverse().map(p=>{
+    const teamName = p.isMine ? (lg.teams.find(t=>t.isMe)||{}).team : (p.team||'—');
+    const suffix = isAuction ? (p.cost!=null?` $${p.cost}`:'') : (p.label?` @${p.label}`:'');
+    return `<span><b>${teamName}</b> drafts ${p.name}${suffix}</span>`;
+  });
+
+  const items = [...pickItems, ...keeperItems].slice(0,10);
+  const track = items.length
+    ? [...items,...items].join('')
+    : `<span>NO PICKS YET · <b>${lg.myTeam}</b> ON DECK</span>`;
+  document.getElementById('ticker').innerHTML = track;
 }
 
 function renderRoster(lg){
@@ -1900,10 +1951,17 @@ function renderBoard(list){
 }
 
 function renderFoot(lg){
+  // BUG FIXED: same stale-`lg.keepers` issue as the ticker (see
+  // leagueKeeperItems), plus this footer's "MOCK MODE" line predates live
+  // pick-logging entirely -- it's sitting directly under a working Draft Log
+  // and was actively wrong, not just imprecise.
+  const {confirmed, predicted} = leagueKeeperItems(lg);
+  const pickCount = (isAuctionLeague() ? zimmerDraft.picks : snakeDraft.picks).length;
   document.getElementById('foot').innerHTML=
     `SOURCE · ${DATA.players.length} players from FY${DATA.meta.season} Big Board · `+
-    `${lg.teams.length} teams · ${lg.keepers.length} keepers · platform ${lg.platform.toUpperCase()}.<br>`+
-    `MOCK MODE — live draft feed & roster fill activate when the ${lg.platform.toUpperCase()} poll is wired in.`;
+    `${lg.teams.length} teams · ${confirmed.length} keeper(s)${predicted.length?` (+${predicted.length} predicted)`:''} · `+
+    `${pickCount} pick(s) logged · platform ${lg.platform.toUpperCase()}.<br>`+
+    `Draft Log below is session-only — log every pick as it happens; a page reload clears it.`;
 }
 
 // ---------- Zimmer History view ----------
