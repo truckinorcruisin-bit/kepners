@@ -527,6 +527,8 @@
       <div class="seclabel">Draft Log — <span id="snakeLogTurn"></span></div>
       <div id="snakeDraftLog"></div>
 
+      <div id="liveDraftPullArea"></div>
+
       <div class="foot" id="foot"></div>
     </div>
 
@@ -896,7 +898,7 @@ function render(){
     document.querySelector('#snakeDraftUI .snakePlayerArea').innerHTML='';
     document.getElementById('deepDiveArea').innerHTML='';
     document.getElementById('snakeBanner').innerHTML='';
-    renderTicker(lg); renderFoot(lg); return;
+    renderTicker(lg); renderFoot(lg); renderLiveDraftPull(lg); return;
   }
 
   renderSnakeBanner(lg);
@@ -907,6 +909,7 @@ function render(){
   renderTicker(lg);
   wireSnakeResizer();
   renderFoot(lg);
+  renderLiveDraftPull(lg);
 }
 
 // -------- Prep tab (Kepners/Miami): Draft Order & Keepers, Owner Profiles,
@@ -1962,6 +1965,187 @@ function renderFoot(lg){
     `${lg.teams.length} teams · ${confirmed.length} keeper(s)${predicted.length?` (+${predicted.length} predicted)`:''} · `+
     `${pickCount} pick(s) logged · platform ${lg.platform.toUpperCase()}.<br>`+
     `Draft Log below is session-only — log every pick as it happens; a page reload clears it.`;
+}
+
+// ---------- "Update Draft Results" button (ESPN, Zimmer only for now) ----------
+// Yahoo (Kepners/Miami) needs the still-blocked Yahoo API; ESPN needs nothing
+// but a lobby/league ID, so this ships for Zimmer first and is testable TODAY
+// against a real ESPN Mock Draft Lobby (see espn_live_draft_pull.py's
+// docstring for exactly what's confirmed vs. best-effort about that).
+//
+// Architecture: the button calls GitHub's REST API directly from the browser
+// (api.github.com supports CORS for any origin -- confirmed, no proxy
+// server needed) to fire a workflow_dispatch on update-live-draft.yml, polls
+// that workflow's most recent run until it completes, then re-fetches the
+// JSON it wrote straight from raw.githubusercontent.com.
+//
+// SECURITY: this requires a GitHub token in the browser, and this repo is
+// PUBLIC. The token must NEVER be hardcoded here -- that would hand it to
+// every visitor. Sean pastes his own token once; it's kept in HIS OWN
+// browser's localStorage only (never committed, never sent anywhere but
+// api.github.com). He should generate a fine-grained PAT scoped to ONLY this
+// repo with ONLY "Actions: Read and write" permission -- NOT the broad
+// classic repo+workflow PAT the season pipeline uses. If this token ever
+// leaks, the blast radius should be "someone can trigger workflow runs",
+// never "someone can push code or read other data."
+const GH_OWNER = 'truckinorcruisin-bit';
+const GH_REPO = 'kepners';
+const LIVE_DRAFT_WORKFLOW = 'update-live-draft.yml';
+const LS_PAT_KEY = 'kepners_gh_actions_pat';
+const LS_LOBBY_KEY = 'kepners_espn_lobby_id';
+
+let liveDraftPull = { polling:false, status:null, error:null, result:null };
+
+function ghPat(promptIfMissing){
+  let pat = localStorage.getItem(LS_PAT_KEY);
+  if(!pat && promptIfMissing){
+    pat = window.prompt(
+      'Paste a GitHub fine-grained PAT for this button.\n\n'+
+      'Generate one at github.com/settings/personal-access-tokens/new:\n'+
+      '  • Repository access: Only select repositories -> '+GH_REPO+'\n'+
+      '  • Permissions: Actions -> Read and write (nothing else needed)\n\n'+
+      'Stored only in this browser (localStorage), never sent anywhere but api.github.com.'
+    );
+    if(pat) localStorage.setItem(LS_PAT_KEY, pat.trim());
+  }
+  return pat ? pat.trim() : null;
+}
+
+async function ghApi(path, opts){
+  const pat = ghPat(true);
+  if(!pat) throw new Error('No token provided.');
+  const resp = await fetch(`https://api.github.com${path}`, {
+    ...opts,
+    headers: {
+      'Authorization': `Bearer ${pat}`,
+      'Accept': 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      ...(opts && opts.headers),
+    },
+  });
+  if(resp.status===401){
+    localStorage.removeItem(LS_PAT_KEY); // stale/bad token -- don't keep re-trying it silently
+    throw new Error('GitHub rejected the token (401) -- it may be expired or wrong. Cleared it; try again to re-enter.');
+  }
+  if(!resp.ok && resp.status!==204){
+    const body = await resp.text().catch(()=>'');
+    throw new Error(`GitHub API ${resp.status}: ${body.slice(0,200)}`);
+  }
+  return resp.status===204 ? null : resp.json();
+}
+
+function sleep(ms){ return new Promise(r=>setTimeout(r,ms)); }
+
+async function runLiveDraftPull(lobbyId){
+  liveDraftPull = { polling:true, status:'Dispatching workflow…', error:null, result:null };
+  renderLiveDraftPull(DATA.leagues[activeLeague]);
+  try{
+    const dispatchedAt = new Date();
+    await ghApi(`/repos/${GH_OWNER}/${GH_REPO}/actions/workflows/${LIVE_DRAFT_WORKFLOW}/dispatches`, {
+      method:'POST',
+      body: JSON.stringify({ ref:'main', inputs:{ lobby_id:String(lobbyId), year:'2026' } }),
+    });
+
+    // Poll for a NEW run (created after dispatchedAt) to completion. Capped
+    // at ~40 tries / 3s each (2 min) -- a GH-hosted runner cold-starting plus
+    // a single HTTP pull is normally well under a minute; if it's still
+    // going past 2 min something's actually wrong and Sean should look at
+    // the Actions tab directly rather than staring at a spinner forever.
+    let run = null;
+    for(let i=0;i<40;i++){
+      liveDraftPull.status = i===0 ? 'Waiting for the run to start…' : `Waiting for the run to finish… (${i*3}s)`;
+      renderLiveDraftPull(DATA.leagues[activeLeague]);
+      await sleep(3000);
+      const runs = await ghApi(`/repos/${GH_OWNER}/${GH_REPO}/actions/workflows/${LIVE_DRAFT_WORKFLOW}/runs?per_page=5`);
+      const candidate = (runs.workflow_runs||[]).find(r=>new Date(r.created_at) >= dispatchedAt - 5000);
+      if(candidate){
+        run = candidate;
+        if(candidate.status==='completed') break;
+      }
+    }
+    if(!run){
+      throw new Error('No run showed up after 2 minutes -- check the Actions tab directly.');
+    }
+    if(run.status!=='completed'){
+      liveDraftPull = { polling:false, status:null,
+        error:`Run is still going after 2 min (status: ${run.status}). Check it here: ${run.html_url}`, result:null };
+      renderLiveDraftPull(DATA.leagues[activeLeague]);
+      return;
+    }
+    if(run.conclusion!=='success'){
+      throw new Error(`Run finished with conclusion "${run.conclusion}". Check the log: ${run.html_url}`);
+    }
+
+    liveDraftPull.status = 'Fetching results…';
+    renderLiveDraftPull(DATA.leagues[activeLeague]);
+    const resp = await fetch(`https://raw.githubusercontent.com/${GH_OWNER}/${GH_REPO}/main/espn_live_draft.json?t=${Date.now()}`);
+    if(!resp.ok) throw new Error(`Workflow succeeded but espn_live_draft.json fetch failed (HTTP ${resp.status}). It may not have committed -- check the run log: ${run.html_url}`);
+    const result = await resp.json();
+    liveDraftPull = { polling:false, status:null, error:null, result };
+  } catch(e){
+    liveDraftPull = { polling:false, status:null, error:e.message, result:null };
+  }
+  renderLiveDraftPull(DATA.leagues[activeLeague]);
+}
+
+function renderLiveDraftPull(lg){
+  const el = document.getElementById('liveDraftPullArea');
+  if(!el) return;
+  // ESPN-only for now (Zimmer). Yahoo (Kepners/Miami) needs the still-blocked
+  // Yahoo API -- this panel just hides rather than showing a dead button.
+  if(activeLeague!=='zimmer'){ el.innerHTML=''; return; }
+
+  const savedLobby = localStorage.getItem(LS_LOBBY_KEY) || '';
+  const hasToken = !!localStorage.getItem(LS_PAT_KEY);
+
+  const statusLine = liveDraftPull.polling
+    ? `<span style="color:var(--amber)">⏳ ${liveDraftPull.status}</span>`
+    : liveDraftPull.error
+      ? `<span style="color:var(--red)">⚠ ${liveDraftPull.error}</span>`
+      : liveDraftPull.result
+        ? `<span style="color:var(--green)">✓ Pulled ${liveDraftPull.result.generated ? 'as of '+new Date(liveDraftPull.result.generated).toLocaleTimeString() : ''} — ${liveDraftPull.result.picks.length} pick(s)${liveDraftPull.result.draft_status.in_progress?' (draft in progress)':liveDraftPull.result.draft_status.drafted?' (draft complete)':''}</span>`
+        : '';
+
+  const resultTable = (liveDraftPull.result && liveDraftPull.result.picks.length)
+    ? `<table class="kgTable" style="margin-top:8px;"><thead><tr>
+        <th>Pick</th><th>Team</th><th>Player</th>
+      </tr></thead><tbody>${
+        liveDraftPull.result.picks.map(p=>`<tr>
+          <td>${p.round}.${String(p.round_pick).padStart(2,'0')}</td>
+          <td>${p.team_name}</td>
+          <td>${p.player_name || `(player #${p.player_id} — name lookup failed)`}</td>
+        </tr>`).join('')
+      }</tbody></table>`
+    : '';
+
+  el.innerHTML = `<div class="seclabel">Update Draft Results
+      <span style="font-size:9px;color:var(--dim);font-weight:400;">— ESPN, testable now via a Mock Draft Lobby</span></div>
+    <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.4;">
+      Enter your ESPN Mock Draft Lobby ID (from the lobby's URL) or a real ESPN league ID, then click to pull
+      current picks. Click again every ~5 min during a live draft to refresh -- this is a manual pull, not
+      an auto-poll, to keep API calls to a minimum.
+      ${hasToken?' <a href="#" id="ldpForgetToken" style="color:var(--dim);text-decoration:underline;">forget saved token</a>':''}
+    </div>
+    <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
+      <input id="ldpLobbyId" type="text" placeholder="Lobby / League ID" value="${savedLobby}"
+        style="background:var(--panel);border:1px solid var(--line-2);color:var(--txt);padding:5px 8px;font-family:inherit;font-size:11px;width:160px;">
+      <button id="ldpPullBtn" ${liveDraftPull.polling?'disabled':''}
+        style="background:var(--amber);color:#000;border:none;padding:5px 12px;font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;${liveDraftPull.polling?'opacity:0.5;cursor:default;':''}">
+        ${liveDraftPull.polling?'Pulling…':'🔄 Pull Live Draft'}
+      </button>
+      <span>${statusLine}</span>
+    </div>
+    ${resultTable}`;
+
+  const btn = el.querySelector('#ldpPullBtn');
+  if(btn) btn.onclick = ()=>{
+    const lobbyId = el.querySelector('#ldpLobbyId').value.trim();
+    if(!lobbyId){ window.alert('Enter a lobby or league ID first.'); return; }
+    localStorage.setItem(LS_LOBBY_KEY, lobbyId);
+    runLiveDraftPull(lobbyId);
+  };
+  const forget = el.querySelector('#ldpForgetToken');
+  if(forget) forget.onclick = (e)=>{ e.preventDefault(); localStorage.removeItem(LS_PAT_KEY); renderLiveDraftPull(lg); };
 }
 
 // ---------- Zimmer History view ----------
