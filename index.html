@@ -1359,18 +1359,46 @@ function renderMyTeam(lg){
   const myLogged = snakeDraft.picks
     .filter(p=>p.isMine)
     .map(p=>({player:p.name, round:p.round, _pick:p.label}));
-  const remaining = [...myKeepers, ...myLogged];
-  const cells = roster.map(slot=>{
-    let fillIdx = -1;
-    if(slot==='FLEX') fillIdx = remaining.findIndex(k=>true); // any leftover
-    else fillIdx = remaining.findIndex(k=>{
-      const bp = findBigBoardPlayer(k.player);
-      return bp && bp.pos===slot;
-    });
-    let fill = null;
-    if(fillIdx>=0) fill = remaining.splice(fillIdx,1)[0];
-    return {slot, fill};
+  // Dedupe by normalized name: if a keeper also gets typed into the Draft Log
+  // (easy to do -- keepers consume real draft picks in this league), he'd
+  // otherwise occupy two roster slots and push a real player off the panel.
+  const seen = new Set();
+  const remaining = [...myKeepers, ...myLogged].filter(k=>{
+    const bp = findBigBoardPlayer(k.player);
+    const key = bp ? bp.id : (k.player||'').toLowerCase().trim();
+    if(seen.has(key)) return false;
+    seen.add(key);
+    return true;
   });
+
+  const posOf = (k)=>{ const bp = findBigBoardPlayer(k.player); return bp ? bp.pos : null; };
+  const cells = roster.map(slot=>({slot, fill:null}));
+  // Three passes, in priority order, because a single in-order pass lets an
+  // early wildcard slot swallow a player a later dedicated slot needed.
+  //
+  // BUG FIXED: BEN slots were matched with the same `bp.pos===slot` test used
+  // for real position slots -- but "BEN" is not a position, so that test can
+  // never be true and every pick past your starters silently vanished from
+  // the panel (drafting a 3rd/4th RB appeared to do nothing). BEN now takes
+  // any leftover. FLEX was the mirror-image bug: it matched `k=>true`, so it
+  // would happily absorb a QB/K/DEF that no real FLEX slot can start.
+  cells.forEach(c=>{                                   // 1. dedicated starters
+    if(['FLEX','BEN','IR'].includes(c.slot)) return;
+    const i = remaining.findIndex(k=>posOf(k)===c.slot);
+    if(i>=0) c.fill = remaining.splice(i,1)[0];
+  });
+  cells.forEach(c=>{                                   // 2. FLEX: RB/WR/TE only
+    if(c.slot!=='FLEX') return;
+    const i = remaining.findIndex(k=>FLEX_ELIGIBLE.includes(posOf(k)));
+    if(i>=0) c.fill = remaining.splice(i,1)[0];
+  });
+  cells.forEach(c=>{                                   // 3. bench: anything left
+    if(c.slot!=='BEN' && c.slot!=='IR') return;
+    if(remaining.length) c.fill = remaining.shift();
+  });
+  // If the roster config has fewer slots than players logged to me, say so
+  // rather than dropping them on the floor the way the old code did silently.
+  const overflow = remaining.length;
   el.innerHTML = `<div class="myteam-list">
     ${cells.map(c=>`
       <div class="myteam-cell ${c.fill?'filled':''}">
@@ -1381,7 +1409,9 @@ function renderMyTeam(lg){
       </div>`).join('')}
   </div>
   <div class="foot" style="margin-top:8px;">Slots fill from your keepers plus anything logged to you
-    in the Draft Log below. Positional needs here drive the Deep Dive's roster-fit read.</div>`;
+    in the Draft Log below. Positional needs here drive the Deep Dive's roster-fit read.
+    ${overflow?`<br><span class="sdl-warn">⚠ ${overflow} more player(s) logged to you than this roster has slots
+      (${roster.length}) — check for a mis-attributed pick in the Draft Log.</span>`:''}</div>`;
 }
 
 function renderSnakePlayerBoard(lg){
@@ -1424,20 +1454,28 @@ function markSelectedRow(container, pid){
 // Everything degrades gracefully when inputs are missing (no ranks, no draft
 // order synced, etc.) rather than erroring.
 
-function myRosterPositions(lg){
-  const myTeamObj = lg.teams.find(t=>t.isMe);
+// My roster composition by position: keepers PLUS anything live-logged to me,
+// reading whichever draft log the ACTIVE league actually uses (snake vs
+// auction). Shared by the Deep Dive roster-fit read and the Adjusted WAR
+// discount so those two can never disagree about what I already own.
+// Note the two logs store position under different keys -- snake picks use
+// `pos`, auction picks use `position`.
+function myPositionCounts(lg){
+  const myTeamObj = (lg && lg.teams) ? lg.teams.find(t=>t.isMe) : null;
   const counts = {};
   const bump = (pos)=>{ if(pos) counts[pos] = (counts[pos]||0)+1; };
   ((myTeamObj && myTeamObj.liveKeepers) || []).forEach(k=>{
     const bp = findBigBoardPlayer(k.player);
     if(bp) bump(bp.pos);
   });
-  // Live-logged picks count too -- otherwise roster fit stays frozen at the
-  // pre-draft (keepers-only) state and keeps reporting open starting slots
+  // Live-logged picks count too -- otherwise roster state stays frozen at the
+  // pre-draft (keepers-only) view and keeps reporting open starting slots
   // at positions already filled during the draft.
-  snakeDraft.picks.filter(p=>p.isMine).forEach(p=>bump(p.pos));
+  if(isAuctionLeague()) zimmerDraft.picks.filter(p=>p.isMine).forEach(p=>bump(p.position));
+  else snakeDraft.picks.filter(p=>p.isMine).forEach(p=>bump(p.pos));
   return {myTeamObj, counts};
 }
+function myRosterPositions(lg){ return myPositionCounts(lg); }
 
 function picksUntilMyNextTurn(lg){
   // Snake: from my slot, how many other picks happen before I'm up again.
@@ -2150,23 +2188,51 @@ function computeMissionControlBid(player){
 // own drafted picks. (Scarcity/opponent adjustments remain future work.)
 // Only meaningful for the league you're actively drafting; for the standalone
 // Players tab across leagues it uses the active league's roster context.
-function rosterFillFactor(pos){
-  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
-  const myCount = myPicks.filter(p=>p.position===pos).length;
+// BUGS FIXED (three, all of which pinned the factor at 1.00 for Kepners/Miami,
+// so Adj WAR always displayed identical to Raw WAR no matter what I drafted):
+//   1. It counted `zimmerDraft.picks` -- the AUCTION log. Snake leagues log to
+//      `snakeDraft.picks`, so my picks were invisible here. It also read
+//      `p.position`, which snake picks don't have (they use `p.pos`).
+//   2. It measured capacity against `ASSUMED_ROSTER` -- Zimmer's hardcoded
+//      placeholder roster -- instead of the active league's real `rosterSlots`.
+//   3. It ignored keepers entirely, so a kept RB didn't count against RB need.
+const ADJ_WAR_POSITIONS = ['QB','RB','WR','TE'];
+function rosterFillFactor(pos, counts, roster){
+  const myCount = counts[pos] || 0;
   // starting capacity for this position incl. flex share for RB/WR/TE
-  const starters = ASSUMED_ROSTER.filter(s=>s===pos).length;
-  const flex = (pos==='RB'||pos==='WR'||pos==='TE') ? ASSUMED_ROSTER.filter(s=>s==='FLEX').length : 0;
+  const starters = roster.filter(s=>s===pos).length;
+  const flex = FLEX_ELIGIBLE.includes(pos) ? roster.filter(s=>s==='FLEX').length : 0;
   const capacity = Math.max(1, starters + flex);
   // full value until starters filled, then decay toward a depth floor (0.35)
   if(myCount < capacity) return 1 - 0.15*myCount/capacity;  // mild taper within capacity
   const over = myCount - capacity + 1;
   return Math.max(0.35, 0.85 * Math.pow(0.6, over));         // steeper decay past capacity
 }
-function computeAdjustedWar(player){
-  const war = player.projectedWar;
+// Computed ONCE per board render, not per player: rosterFillFactor has to walk
+// my keepers through findBigBoardPlayer (a linear name scan), and doing that
+// inside a ~300-row map was 300x more work than needed for an answer that's
+// identical for every player at a given position.
+function rosterFillFactors(){
+  const lg = DATA.leagues[activeLeague];
+  const roster = (lg && lg.rosterSlots && lg.rosterSlots.length) ? lg.rosterSlots : ASSUMED_ROSTER;
+  const {counts} = myPositionCounts(lg);
+  const out = {};
+  ADJ_WAR_POSITIONS.forEach(pos=>{ out[pos] = rosterFillFactor(pos, counts, roster); });
+  return out;
+}
+// League-specific WAR. `projectedWar` is only the 12-team baseline; a shallower
+// league leaves better players on waivers, so the same player is worth less
+// above replacement there (Ja'Marr Chase: +95.9 Kepners vs +74.9 Miami).
+function warOf(p){
+  const w = p && p.warByLeague ? p.warByLeague[activeLeague] : null;
+  return w!=null ? w : (p ? p.projectedWar : null);
+}
+function computeAdjustedWar(player, factors){
+  const war = warOf(player);
   if(war==null) return null;
+  const f = factors || rosterFillFactors();
   // roster fit only applies to positions we track a roster for; K/DEF etc pass through
-  const factor = ['QB','RB','WR','TE'].includes(player.pos) ? rosterFillFactor(player.pos) : 1;
+  const factor = ADJ_WAR_POSITIONS.includes(player.pos) ? (f[player.pos] ?? 1) : 1;
   return Math.round(war * factor * 10) / 10;
 }
 
@@ -2310,13 +2376,15 @@ function leagueRosterablePositions(lg){
 
 function ptRows(){
   const drafted = ptDraftedMap();
+  const fillFactors = rosterFillFactors();   // once per render, not per row
   let rows = DATA.players.filter(p=>p.pos && p.pos!=='NA').map(p=>{
     const mc = computeMissionControlBid(p);
     const d = drafted[p.id];
     return {
       ...p,
+      projectedWar: warOf(p),
       missionBid: mc ? mc.bid : null,
-      adjWar: computeAdjustedWar(p),
+      adjWar: computeAdjustedWar(p, fillFactors),
       _drafted: !!d, _mine: d ? d.isMine : false, _cost: d ? d.cost : null,
       _suggested: d ? !!d.suggested : false, _keeperRound: d ? d.round : null,
       _pickLabel: d ? d.pickLabel : null,
@@ -2382,7 +2450,7 @@ function renderPlayerTable(container, opts){
       </select>
       <button class="clear">CLEAR</button>
     </div>
-    <div class="pt-count">${rows.length} players${!isAuctionLeague()?' · keepers shown as unavailable; live pick-logging is auction-only':''}
+    <div class="pt-count">${rows.length} players${!isAuctionLeague()?' · keepers shown as unavailable; log picks below to keep the board live':''}
       <span class="pt-warsrc">· WAR calculated based on 2026 ESPN Projections</span></div>`;
 
   const header = cols.map(c=>{
