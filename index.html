@@ -2259,7 +2259,21 @@ const PT_COL_COMMON_LEFT = [
     return `${r.name}${rookieBadge}`;
   }},
   {key:'team', label:'Team', num:false, render:r=>r.proTeamEspn||r.team||'—'},
-  {key:'pos', label:'Pos', num:false, render:r=>r.pos},
+  // Sean's own positional rank rides along INSIDE the Pos cell rather than
+  // taking a column of its own. The snake/Zimmer boards are the binding
+  // constraint: they're the middle panel of a 3-panel cockpit (~39% of a
+  // 1400px cap ≈ 550px) already carrying 10 columns at 10px, so an 11th
+  // would force horizontal scrolling in exactly the view that's used most
+  // during a live draft. The sub-line costs zero width and no extra row
+  // height -- the Yahoo Rk / Target Rk cells in the same row already render
+  // a `.pt-sub` line, so the rows are that tall regardless.
+  // Sort key is `seanPosRank`, not `pos`: alphabetical position sorting is
+  // already covered better by the All Pos filter dropdown, so the click is
+  // worth more spent on Sean's ranking. Ranks are per-position, so sorting
+  // globally interleaves positions (every #1, then every #2) -- pair it with
+  // the position filter to read one board at a time.
+  {key:'seanPosRank', label:'Pos · Rk', num:true, render:r=>
+    `${r.pos}<span class="pt-sub" title="Sean's ${r.pos} rank">${r.seanPosRank!=null?'#'+r.seanPosRank:'—'}</span>`},
   {key:'byeWeek', label:'Bye', num:true, render:r=>r.byeWeek||'—'},
   {key:'tier', label:'Tier', num:false, render:r=>(r.tier&&r.tier!=='0')?r.tier.split(' - ')[0]:'—'},
 ];
@@ -2541,6 +2555,7 @@ function dataSourceLegend(){
   const isAuction = isAuctionLeague();
   const rows = [
     ['Player · Team · Pos · Tier', 'Your Big Board Excel', '2026', 'Your own rankings, tiers, and team assignments. The amber "R" badge is inferred from your Notes column whenever it mentions "rookie" -- hover it to see the full note (draft slot/college, etc). Notes is general free text, so a few non-rookie notes (e.g. old keeper-round history) can also show there without triggering the badge.'],
+    ['Pos · Rk', 'Your Big Board Excel', '2026', 'The small "#N" under the position is YOUR rank at that position (not a consensus rank). Ranks are per-position, so sorting this column groups every #1 together, then every #2 — pair it with the position filter to read one board at a time. Players you haven’t ranked show "—".'],
     [isAuction ? 'Plat Rk' : 'Yahoo Rk', 'Big Board Excel (platform consensus)', '2026', 'Preseason consensus rank blended across platforms (Yahoo/ESPN/CBS/etc), from your Big Board.'],
     ['Target Rk', 'Derived from your Big Board', '2026', 'Your per-position ranks ordered into one overall list by projected value (VBD-style).'],
     ['Bye', 'NFL schedule', '2026', 'Set by the player’s NFL team (this season’s bye schedule).'],
