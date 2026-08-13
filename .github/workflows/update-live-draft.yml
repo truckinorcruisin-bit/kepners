@@ -1,0 +1,58 @@
+name: Update Live Draft
+
+# Triggered by the "Update Draft Results" button in index.html (via the
+# GitHub REST API's workflow_dispatch endpoint, called from a fine-grained
+# PAT scoped to Actions-only on this repo -- see index.html's liveDraftPull
+# code for the client side of this). Also runnable by hand from the Actions
+# tab for testing without touching the site at all.
+#
+# UNVERIFIED against a real ESPN Mock Draft Lobby -- see the docstring in
+# espn_live_draft_pull.py for what's confirmed vs. best-effort here. If a
+# real mock-lobby run fails, the Action log will show ESPN's actual response
+# shape; paste that back rather than re-guessing.
+#
+# Deliberately does NOT retry-with-rebase on push the way the season-level
+# pipeline workflows do (lesson #10 in the project notes) -- this can fire
+# every ~5 min during a live draft and always overwrites the same single
+# file, so a rebase-retry loop would just be fighting itself. Last write
+# wins, which is fine here: whichever click ran most recently has the freshest
+# picks anyway.
+on:
+  workflow_dispatch:
+    inputs:
+      lobby_id:
+        description: 'ESPN league ID (real draft) or Mock Draft Lobby ID (testing)'
+        required: true
+      year:
+        description: 'Season year'
+        required: false
+        default: '2026'
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    env:
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Pull live draft picks
+        run: python espn_live_draft_pull.py "${{ github.event.inputs.lobby_id }}" "${{ github.event.inputs.year }}"
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add espn_live_draft.json
+          git diff --staged --quiet || git commit -m "Update live draft picks (lobby ${{ github.event.inputs.lobby_id }})"
+          git push || (git pull --rebase origin main && git push)
