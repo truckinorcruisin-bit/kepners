@@ -59,8 +59,17 @@ from datetime import datetime, timezone
 
 import requests
 
-BASE = "https://fantasy.espn.com/apis/v3/games/ffl/seasons/{year}/segments/0/leagues/{lid}"
+BASE = "https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/{year}/segments/0/leagues/{lid}"
 OUT_FILE = "espn_live_draft.json"
+# BUG FIXED: this was hitting the legacy `fantasy.espn.com` host. That host
+# appears to be deprecated/in some half-decommissioned state now: it either
+# hard-blocks at the CDN edge (the CloudFront "Request Blocked" page seen
+# against a mock draft lobby) or accepts the request but returns an empty
+# `202 Accepted` instead of data (seen against a real league). Confirmed via
+# the espn_api library this repo's OTHER scripts already use successfully --
+# its FANTASY_BASE_ENDPOINT constant is `lm-api-reads.fantasy.espn.com`, not
+# `fantasy.espn.com`. Multiple independent community write-ups (2024-2025)
+# also describe this exact same migration. Matching that host here.
 # A bare `requests` default User-Agent ("python-requests/2.x") is one of the
 # cheapest, most common bot-detection signals a CDN/WAF checks. This alone
 # won't get past an IP-reputation-based block (see the module docstring
@@ -86,7 +95,25 @@ def fetch_draft_detail(lobby_id, year, espn_s2, swid):
     cookies = {}
     if espn_s2 and swid:
         cookies = {"espn_s2": espn_s2, "SWID": swid}
-    resp = requests.get(url, params=params, cookies=cookies, headers=HEADERS, timeout=20)
+
+    # A `202 Accepted` with an empty body has been seen even against the
+    # current host -- plausibly a read-replica lag ("lm-api-reads" is
+    # literally named for this) rather than a real error, especially
+    # mid-draft when picks are being written frequently. Retry a few times
+    # before giving up, rather than failing on what might just be a
+    # momentary cache miss.
+    import time
+    resp = None
+    for attempt in range(4):
+        resp = requests.get(url, params=params, cookies=cookies, headers=HEADERS, timeout=20)
+        if resp.status_code == 200 and resp.text.strip():
+            break
+        if resp.status_code == 403 and "cloudfront" in resp.text.lower():
+            break  # not transient -- fail fast, see message below
+        if attempt < 3:
+            print(f"  Got HTTP {resp.status_code} (attempt {attempt+1}/4) -- retrying in 2s...")
+            time.sleep(2)
+
     if resp.status_code == 403 and "cloudfront" in resp.text.lower():
         raise SystemExit(
             "ESPN's CDN (CloudFront) blocked this request at the edge -- it never reached "
@@ -102,7 +129,13 @@ def fetch_draft_detail(lobby_id, year, espn_s2, swid):
     if resp.status_code != 200:
         raise SystemExit(
             f"ESPN returned HTTP {resp.status_code} for lobby/league {lobby_id} "
-            f"(year {year}). Body (first 500 chars): {resp.text[:500]}"
+            f"(year {year}) after retries. Body (first 500 chars): {resp.text[:500]}"
+        )
+    if not resp.text.strip():
+        raise SystemExit(
+            f"ESPN returned HTTP 200 but an EMPTY body for lobby/league {lobby_id} after "
+            "retries. Not obviously a permanent error (looked transient/retry-able), but "
+            "4 attempts didn't resolve it -- try again in a minute, or double check the ID."
         )
     try:
         data = resp.json()
