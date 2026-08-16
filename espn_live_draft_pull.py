@@ -209,6 +209,13 @@ def main():
     draft, team_names, picks_raw, player_ids = parse_picks(data)
 
     print(f"  {len(picks_raw)} pick(s) so far. Resolving {len(player_ids)} player name(s)...")
+    if picks_raw:
+        # DEBUG: dump the raw first pick exactly as ESPN sent it. If player
+        # names keep failing, this tells us the REAL field names/shape
+        # instead of guessing again -- e.g. maybe mock lobbies use a
+        # different key than `playerId`, or don't populate it in this view
+        # at all and require a separate roster call instead.
+        print(f"  DEBUG raw first pick object: {json.dumps(picks_raw[0])}")
     names = resolve_player_names_for_league(lobby_id, player_ids, year, espn_s2, swid)
 
     picks = []
@@ -222,7 +229,13 @@ def main():
             "team_name": team_names.get(team_id, f"Team {team_id}"),
             "player_id": p.get("playerId"),
             "player_name": names.get(p.get("playerId")),
-            "bid_amount": p.get("bidAmount") if p.get("bidAmount", -1) >= 0 else None,
+            # BUG FIXED: was `>= 0`, which treated a $0 bid as "real" and kept
+            # it. A genuine winning auction bid is always >=$1 (this repo's
+            # own roster_optimizer.py assumes a $1 minimum bid) -- ESPN uses
+            # 0 (sometimes -1) as the "not applicable" sentinel for a snake
+            # pick, same idea as -1, just a different sentinel value. Zimmer
+            # is snake now, so every pick should show bid_amount: null.
+            "bid_amount": p.get("bidAmount") if p.get("bidAmount", 0) > 0 else None,
         })
 
     out = {
