@@ -150,6 +150,45 @@ def fetch_draft_detail(lobby_id, year, espn_s2, swid):
     return data
 
 
+def fetch_rosters(lobby_id, year, espn_s2, swid):
+    """EXPERIMENTAL: draftDetail.picks[].playerId came back -1 for every pick
+    in a real mock-lobby test, even for picks the person watched complete in
+    their browser -- every other field on those pick objects (nominatingTeamId,
+    lineupSlotId, autoDraftTypeId, keeper) was also at its zero/false default,
+    which looks like an unfilled placeholder slot, not a completed selection.
+    Working theory: Mock Draft Lobby picks may not get written into this same
+    field a real league's draft does. mRoster is a separately-populated,
+    well-established view (used successfully elsewhere in this project via
+    the espn_api library) -- testing whether COMPLETED picks show up there
+    instead, even without knowing yet whether roster-entry order reliably
+    matches actual pick order (that's a follow-up once this confirms data
+    exists at all)."""
+    url = BASE.format(year=year, lid=lobby_id)
+    cookies = {}
+    if espn_s2 and swid:
+        cookies = {"espn_s2": espn_s2, "SWID": swid}
+    try:
+        resp = requests.get(url, params={"view": "mRoster"}, cookies=cookies, headers=HEADERS, timeout=20)
+        resp.raise_for_status()
+        data = resp.json()
+    except Exception as e:
+        print(f"  (mRoster experiment failed, skipping: {e})")
+        return {}
+    out = {}
+    for t in data.get("teams", []):
+        tid = t.get("id")
+        entries = (t.get("roster") or {}).get("entries", [])
+        players = []
+        for e in entries:
+            p = (e.get("playerPoolEntry") or {}).get("player") or {}
+            name = f"{p.get('firstName','')} {p.get('lastName','')}".strip()
+            if name:
+                players.append({"player_id": p.get("id"), "name": name, "lineup_slot_id": e.get("lineupSlotId")})
+        if players:
+            out[tid] = players
+    return out
+
+
 def resolve_player_names_for_league(lobby_id, player_ids, year, espn_s2, swid):
     """Draft picks only carry playerId, not a name -- a separate player-pool
     call with an ID filter resolves them. Best-effort: any ID that can't be
@@ -218,6 +257,19 @@ def main():
         print(f"  DEBUG raw first pick object: {json.dumps(picks_raw[0])}")
     names = resolve_player_names_for_league(lobby_id, player_ids, year, espn_s2, swid)
 
+    # EXPERIMENTAL: see fetch_rosters() docstring. Only meaningful if the
+    # picks above came back empty/placeholder (playerId -1 across the board).
+    # Kept as a clearly separate, additive field -- does not touch the
+    # existing `picks` output at all -- so this is safe to ship and inspect
+    # without risking the parts that are already known to work correctly.
+    roster_check = fetch_rosters(lobby_id, year, espn_s2, swid)
+    if roster_check:
+        total_players = sum(len(v) for v in roster_check.values())
+        print(f"  ROSTER CHECK: found {total_players} named player(s) across "
+              f"{len(roster_check)} team(s) via mRoster (separate from picks[] above).")
+    else:
+        print("  ROSTER CHECK: mRoster came back with no named players either.")
+
     picks = []
     for p in sorted(picks_raw, key=lambda x: x.get("overallPickNumber", 0)):
         team_id = p.get("teamId")
@@ -248,6 +300,10 @@ def main():
         },
         "teams": [{"team_id": tid, "name": name} for tid, name in team_names.items()],
         "picks": picks,
+        # EXPERIMENTAL, see fetch_rosters() docstring -- {team_id: [{player_id, name, lineup_slot_id}]}.
+        # Not yet wired into the UI; here purely to inspect whether it holds
+        # real data that picks[] doesn't for mock lobbies.
+        "roster_check_experimental": {str(tid): plist for tid, plist in roster_check.items()},
     }
     with open(OUT_FILE, "w") as f:
         json.dump(out, f, indent=2)
