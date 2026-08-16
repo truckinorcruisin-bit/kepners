@@ -2119,15 +2119,17 @@ function renderLiveDraftPull(lg){
     : '';
 
   el.innerHTML = `<div class="seclabel">Update Draft Results
-      <span style="font-size:9px;color:var(--dim);font-weight:400;">— ESPN, testable now via a Mock Draft Lobby</span></div>
+      <span style="font-size:9px;color:var(--dim);font-weight:400;">— ESPN real leagues only</span></div>
     <div style="font-size:9px;color:var(--dim);margin-bottom:8px;line-height:1.4;">
-      Enter your ESPN Mock Draft Lobby ID (from the lobby's URL) or a real ESPN league ID, then click to pull
-      current picks. Click again every ~5 min during a live draft to refresh -- this is a manual pull, not
-      an auto-poll, to keep API calls to a minimum.
+      Enter your real ESPN league ID, then click to pull current picks. Click again every ~5 min during a
+      live draft to refresh -- this is a manual pull, not an auto-poll, to keep API calls to a minimum.
+      Confirmed NOT to work against ESPN Mock Draft Lobbies -- both draftDetail.picks and mRoster come back
+      as unfilled placeholders for those (mock picks appear to arrive client-side via a mechanism this API
+      doesn't expose). Untested until a real draft actually runs.
       ${hasToken?' <a href="#" id="ldpForgetToken" style="color:var(--dim);text-decoration:underline;">forget saved token</a>':''}
     </div>
     <div style="display:flex;gap:6px;align-items:center;flex-wrap:wrap;">
-      <input id="ldpLobbyId" type="text" placeholder="Lobby / League ID" value="${savedLobby}"
+      <input id="ldpLobbyId" type="text" placeholder="ESPN League ID" value="${savedLobby}"
         style="background:var(--panel);border:1px solid var(--line-2);color:var(--txt);padding:5px 8px;font-family:inherit;font-size:11px;width:160px;">
       <button id="ldpPullBtn" ${liveDraftPull.polling?'disabled':''}
         style="background:var(--amber);color:#000;border:none;padding:5px 12px;font-family:inherit;font-size:11px;font-weight:700;cursor:pointer;${liveDraftPull.polling?'opacity:0.5;cursor:default;':''}">
