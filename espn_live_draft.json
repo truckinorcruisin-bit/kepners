@@ -1,0 +1,1981 @@
+{
+  "lobby_id": "871603452",
+  "year": 2026,
+  "generated": "2026-08-16T16:46:54.512560+00:00",
+  "draft_status": {
+    "drafted": false,
+    "in_progress": true
+  },
+  "teams": [
+    {
+      "team_id": 1,
+      "name": "Sam's Smart Team"
+    },
+    {
+      "team_id": 2,
+      "name": "sean's Super Team"
+    },
+    {
+      "team_id": 3,
+      "name": "E's Excellent Team"
+    },
+    {
+      "team_id": 4,
+      "name": "Tyler's Talented Team"
+    },
+    {
+      "team_id": 5,
+      "name": "Jarrett's Scary Team"
+    },
+    {
+      "team_id": 6,
+      "name": "Scott's Sneaky Team"
+    },
+    {
+      "team_id": 7,
+      "name": "bryan's Best Team"
+    },
+    {
+      "team_id": 8,
+      "name": "Alex's Astounding Team"
+    },
+    {
+      "team_id": 9,
+      "name": "Niklaus's Nasty Team"
+    },
+    {
+      "team_id": 10,
+      "name": "RUDY's Rowdy Team"
+    },
+    {
+      "team_id": 11,
+      "name": "Nick's Nifty Team"
+    },
+    {
+      "team_id": 12,
+      "name": "Gilbert's Great Team"
+    }
+  ],
+  "picks": [
+    {
+      "overall": 1,
+      "round": 1,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 2,
+      "round": 1,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 3,
+      "round": 1,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 4,
+      "round": 1,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 5,
+      "round": 1,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 6,
+      "round": 1,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 7,
+      "round": 1,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 8,
+      "round": 1,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 9,
+      "round": 1,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 10,
+      "round": 1,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 11,
+      "round": 1,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 12,
+      "round": 1,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 13,
+      "round": 2,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 14,
+      "round": 2,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 15,
+      "round": 2,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 16,
+      "round": 2,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 17,
+      "round": 2,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 18,
+      "round": 2,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 19,
+      "round": 2,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 20,
+      "round": 2,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 21,
+      "round": 2,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 22,
+      "round": 2,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 23,
+      "round": 2,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 24,
+      "round": 2,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 25,
+      "round": 3,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 26,
+      "round": 3,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 27,
+      "round": 3,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 28,
+      "round": 3,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 29,
+      "round": 3,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 30,
+      "round": 3,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 31,
+      "round": 3,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 32,
+      "round": 3,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 33,
+      "round": 3,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 34,
+      "round": 3,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 35,
+      "round": 3,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 36,
+      "round": 3,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 37,
+      "round": 4,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 38,
+      "round": 4,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 39,
+      "round": 4,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 40,
+      "round": 4,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 41,
+      "round": 4,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 42,
+      "round": 4,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 43,
+      "round": 4,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 44,
+      "round": 4,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 45,
+      "round": 4,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 46,
+      "round": 4,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 47,
+      "round": 4,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 48,
+      "round": 4,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 49,
+      "round": 5,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 50,
+      "round": 5,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 51,
+      "round": 5,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 52,
+      "round": 5,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 53,
+      "round": 5,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 54,
+      "round": 5,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 55,
+      "round": 5,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 56,
+      "round": 5,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 57,
+      "round": 5,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 58,
+      "round": 5,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 59,
+      "round": 5,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 60,
+      "round": 5,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 61,
+      "round": 6,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 62,
+      "round": 6,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 63,
+      "round": 6,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 64,
+      "round": 6,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 65,
+      "round": 6,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 66,
+      "round": 6,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 67,
+      "round": 6,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 68,
+      "round": 6,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 69,
+      "round": 6,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 70,
+      "round": 6,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 71,
+      "round": 6,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 72,
+      "round": 6,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 73,
+      "round": 7,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 74,
+      "round": 7,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 75,
+      "round": 7,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 76,
+      "round": 7,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 77,
+      "round": 7,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 78,
+      "round": 7,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 79,
+      "round": 7,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 80,
+      "round": 7,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 81,
+      "round": 7,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 82,
+      "round": 7,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 83,
+      "round": 7,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 84,
+      "round": 7,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 85,
+      "round": 8,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 86,
+      "round": 8,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 87,
+      "round": 8,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 88,
+      "round": 8,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 89,
+      "round": 8,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 90,
+      "round": 8,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 91,
+      "round": 8,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 92,
+      "round": 8,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 93,
+      "round": 8,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 94,
+      "round": 8,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 95,
+      "round": 8,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 96,
+      "round": 8,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 97,
+      "round": 9,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 98,
+      "round": 9,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 99,
+      "round": 9,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 100,
+      "round": 9,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 101,
+      "round": 9,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 102,
+      "round": 9,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 103,
+      "round": 9,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 104,
+      "round": 9,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 105,
+      "round": 9,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 106,
+      "round": 9,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 107,
+      "round": 9,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 108,
+      "round": 9,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 109,
+      "round": 10,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 110,
+      "round": 10,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 111,
+      "round": 10,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 112,
+      "round": 10,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 113,
+      "round": 10,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 114,
+      "round": 10,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 115,
+      "round": 10,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 116,
+      "round": 10,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 117,
+      "round": 10,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 118,
+      "round": 10,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 119,
+      "round": 10,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 120,
+      "round": 10,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 121,
+      "round": 11,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 122,
+      "round": 11,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 123,
+      "round": 11,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 124,
+      "round": 11,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 125,
+      "round": 11,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 126,
+      "round": 11,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 127,
+      "round": 11,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 128,
+      "round": 11,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 129,
+      "round": 11,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 130,
+      "round": 11,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 131,
+      "round": 11,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 132,
+      "round": 11,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 133,
+      "round": 12,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 134,
+      "round": 12,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 135,
+      "round": 12,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 136,
+      "round": 12,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 137,
+      "round": 12,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 138,
+      "round": 12,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 139,
+      "round": 12,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 140,
+      "round": 12,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 141,
+      "round": 12,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 142,
+      "round": 12,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 143,
+      "round": 12,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 144,
+      "round": 12,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 145,
+      "round": 13,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 146,
+      "round": 13,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 147,
+      "round": 13,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 148,
+      "round": 13,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 149,
+      "round": 13,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 150,
+      "round": 13,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 151,
+      "round": 13,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 152,
+      "round": 13,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 153,
+      "round": 13,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 154,
+      "round": 13,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 155,
+      "round": 13,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 156,
+      "round": 13,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 157,
+      "round": 14,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 158,
+      "round": 14,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 159,
+      "round": 14,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 160,
+      "round": 14,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 161,
+      "round": 14,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 162,
+      "round": 14,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 163,
+      "round": 14,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 164,
+      "round": 14,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 165,
+      "round": 14,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 166,
+      "round": 14,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 167,
+      "round": 14,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 168,
+      "round": 14,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 169,
+      "round": 15,
+      "round_pick": 1,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 170,
+      "round": 15,
+      "round_pick": 2,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 171,
+      "round": 15,
+      "round_pick": 3,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 172,
+      "round": 15,
+      "round_pick": 4,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 173,
+      "round": 15,
+      "round_pick": 5,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 174,
+      "round": 15,
+      "round_pick": 6,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 175,
+      "round": 15,
+      "round_pick": 7,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 176,
+      "round": 15,
+      "round_pick": 8,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 177,
+      "round": 15,
+      "round_pick": 9,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 178,
+      "round": 15,
+      "round_pick": 10,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 179,
+      "round": 15,
+      "round_pick": 11,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 180,
+      "round": 15,
+      "round_pick": 12,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 181,
+      "round": 16,
+      "round_pick": 1,
+      "team_id": 12,
+      "team_name": "Gilbert's Great Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 182,
+      "round": 16,
+      "round_pick": 2,
+      "team_id": 11,
+      "team_name": "Nick's Nifty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 183,
+      "round": 16,
+      "round_pick": 3,
+      "team_id": 10,
+      "team_name": "RUDY's Rowdy Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 184,
+      "round": 16,
+      "round_pick": 4,
+      "team_id": 9,
+      "team_name": "Niklaus's Nasty Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 185,
+      "round": 16,
+      "round_pick": 5,
+      "team_id": 8,
+      "team_name": "Alex's Astounding Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 186,
+      "round": 16,
+      "round_pick": 6,
+      "team_id": 7,
+      "team_name": "bryan's Best Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 187,
+      "round": 16,
+      "round_pick": 7,
+      "team_id": 6,
+      "team_name": "Scott's Sneaky Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 188,
+      "round": 16,
+      "round_pick": 8,
+      "team_id": 5,
+      "team_name": "Jarrett's Scary Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 189,
+      "round": 16,
+      "round_pick": 9,
+      "team_id": 4,
+      "team_name": "Tyler's Talented Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 190,
+      "round": 16,
+      "round_pick": 10,
+      "team_id": 3,
+      "team_name": "E's Excellent Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 191,
+      "round": 16,
+      "round_pick": 11,
+      "team_id": 2,
+      "team_name": "sean's Super Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    },
+    {
+      "overall": 192,
+      "round": 16,
+      "round_pick": 12,
+      "team_id": 1,
+      "team_name": "Sam's Smart Team",
+      "player_id": -1,
+      "player_name": null,
+      "bid_amount": 0
+    }
+  ]
+}
