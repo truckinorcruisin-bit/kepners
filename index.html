@@ -539,15 +539,14 @@
           <div class="seclabel">Player Board</div>
           <div class="snakePlayerArea"></div>
         </div>
-        <div class="cockpit-resizer" id="snakeResizer" title="Drag to resize board vs deep-dive"></div>
-        <div class="cockpit-col">
-          <div class="seclabel">Player Deep Dive</div>
-          <div class="deepDiveArea panel-scroll" id="deepDiveArea"></div>
+        <div class="cockpit-resizer" id="snakeResizer" title="Drag to resize board vs draft log/deep-dive column"></div>
+        <div class="cockpit-col panel-scroll">
+          <div class="seclabel">Draft Log — <span id="snakeLogTurn"></span></div>
+          <div id="snakeDraftLog"></div>
+          <div class="seclabel" style="margin-top:14px;">Player Deep Dive</div>
+          <div class="deepDiveArea" id="deepDiveArea"></div>
         </div>
       </div>
-
-      <div class="seclabel">Draft Log — <span id="snakeLogTurn"></span></div>
-      <div id="snakeDraftLog"></div>
 
       <div id="rostersByTeamArea"></div>
 
