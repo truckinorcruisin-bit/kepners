@@ -1,0 +1,16 @@
+{
+  "_comment": "Hand-entered 2026 Miami draft order. Miami has no live Google Sheet sync (Yahoo API blocked) -- Sean reports the order directly and this file is updated by hand, same as league_rules.json / miami_roster_snapshot_2025.json's confirmed_keepers block. Manager names must match leagues.miami.teams[].manager in bigboard.json exactly, or convert_bigboard.py will flag them as unmatched instead of guessing.",
+  "manager_note": "Sean referred to the 'J White' manager informally as 'Jeff' when reporting this order -- mapped here to 'J White' to match the label used everywhere else (bigboard.json, miami_roster_snapshot_2025.json). Flag if this mapping is wrong.",
+  "source": "Reported directly by Sean",
+  "generated": "2026-08-20T00:00:00+00:00",
+  "draft_order": [
+    { "pick": 1, "manager": "Milligan" },
+    { "pick": 2, "manager": "Hewitt" },
+    { "pick": 3, "manager": "J White" },
+    { "pick": 4, "manager": "K Jack" },
+    { "pick": 5, "manager": "Mullins" },
+    { "pick": 6, "manager": "Lubeck" },
+    { "pick": 7, "manager": "Nemeth" },
+    { "pick": 8, "manager": "Mikey" }
+  ]
+}

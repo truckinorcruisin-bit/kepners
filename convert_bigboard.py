@@ -433,6 +433,35 @@ def merge_kepners_draft_order(kepners_league, path="kepners_draft_order.json"):
     kepners_league["draftOrderUnmatched"] = data.get("unmatched_managers", [])
 
 
+def merge_miami_draft_order(miami_league, path="miami_draft_order.json"):
+    """Attaches draftPosition onto each Miami team from a hand-maintained file.
+
+    Miami has no live Google Sheet sync (Yahoo API blocked), so Sean reports
+    the draft order directly and miami_draft_order.json is updated by hand
+    instead of pulled from a workflow. Optional -- if the file doesn't exist,
+    teams are left without draftPosition (site shows TBD, not an error).
+    Manager names that don't match a known team are surfaced via
+    draftOrderUnmatched rather than silently dropped, same as the Kepners
+    sync above.
+    """
+    if not os.path.exists(path):
+        return
+    data = json.load(open(path))
+    known = {(t.get("manager") or "").lower(): t for t in miami_league.get("teams", [])}
+    unmatched = []
+    for r in data.get("draft_order", []):
+        manager = r.get("manager")
+        if not manager:
+            continue
+        t = known.get(manager.lower())
+        if not t:
+            unmatched.append(manager)
+            continue
+        t["draftPosition"] = r["pick"]
+    miami_league["draftOrderGenerated"] = data.get("generated")
+    miami_league["draftOrderUnmatched"] = unmatched
+
+
 def keeper_value_tiers_for_league(players, league_key, teams, roster_slots):
     """Keeper Value tier cutoffs derived from this league's own distribution.
 
@@ -557,6 +586,7 @@ def main(src, dst):
                 players, league_key, team_count, slots)
 
     merge_kepners_draft_order(out["leagues"]["kepners"])
+    merge_miami_draft_order(out["leagues"]["miami"])
 
     with open(dst, "w") as f:
         json.dump(out, f, indent=2)
