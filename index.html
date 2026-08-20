@@ -1308,7 +1308,17 @@ function renderSnakeDraftLog(lg){
   // Draft slots may not be drawn yet (Zimmer's are null pre-draft), in which
   // case we can't say who's on the clock -- show the pick number only rather
   // than guessing at a team.
-  const onClockTeam = onClockSlot!=null ? lg.teams.find(t=>t.slot===onClockSlot) : null;
+  // BUG FIXED: was `t.slot===onClockSlot`. `slot` is NOT draft order -- it's
+  // just which column a team occupies in the Big Board Excel's Team sheet
+  // (col - 4 in convert_bigboard.py), an unrelated spreadsheet-layout
+  // artifact that happens to get reused elsewhere for roster-position slots
+  // (QB/RB/BEN) too. The actual live 2026 draft position is `draftPosition`,
+  // synced from the Google Sheet -- it's what My Draft Slot, the Draft Order
+  // table, and the Deep Dive's availability math already correctly use.
+  // This line was the one place still comparing against the wrong field, so
+  // "on the clock" could show a different team than everywhere else in the
+  // app once the two fields ever diverged (which they have, right now).
+  const onClockTeam = onClockSlot!=null ? lg.teams.find(t=>t.draftPosition===onClockSlot) : null;
 
   const turnEl = document.getElementById('snakeLogTurn');
   if(turnEl){
