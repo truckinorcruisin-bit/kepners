@@ -1572,9 +1572,24 @@ function renderMyTeam(lg){
 function renderSnakePlayerBoard(lg){
   const area = document.querySelector('#snakeDraftUI .snakePlayerArea');
   if(!area) return;
+  // BUG FIXED: selecting a player updated the Deep Dive but NOT the Draft
+  // Log, so the log's name prefill stayed one step behind -- it only picked
+  // up the selection on the next full render(), i.e. after you drafted
+  // somebody, which meant it showed the PREVIOUS selection at exactly the
+  // moment you wanted the current one.
+  // Deliberately calls renderSnakeDraftLog (not the global render()): a full
+  // re-render would rebuild this very board mid-click, throwing away the row
+  // highlight markSelectedRow is about to set and resetting scroll position.
+  const onSelect = (pid, container)=>{
+    snakeDraft.selectedPlayerId = pid;
+    zimmerDraft.selectedPlayerId = pid;
+    renderDeepDive(lg);
+    renderSnakeDraftLog(lg);
+    markSelectedRow(container, pid);
+  };
   const rerender = ()=>renderPlayerTable(area, {
     rerender, groupByTier:(snakeDraft.boardMode==='board'), selectable:true,
-    onSelect:(pid)=>{ snakeDraft.selectedPlayerId=pid; zimmerDraft.selectedPlayerId=pid; renderDeepDive(lg); markSelectedRow(area,pid); },
+    onSelect:(pid)=>onSelect(pid, area),
   });
   // toggle header (tiered vs flat), mirroring the Zimmer cockpit
   area.innerHTML = `<div class="pt-toggle">
@@ -1584,7 +1599,7 @@ function renderSnakePlayerBoard(lg){
   const mount = area.querySelector('.snakeTableMount');
   const rerenderMount = ()=>renderPlayerTable(mount, {
     rerender:rerenderMount, groupByTier:(snakeDraft.boardMode==='board'), selectable:true,
-    onSelect:(pid)=>{ snakeDraft.selectedPlayerId=pid; zimmerDraft.selectedPlayerId=pid; renderDeepDive(lg); markSelectedRow(mount,pid); },
+    onSelect:(pid)=>onSelect(pid, mount),
   });
   rerenderMount();
   area.querySelectorAll('.pt-toggle button[data-smode]').forEach(btn=>{
