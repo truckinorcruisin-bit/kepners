@@ -389,6 +389,28 @@
   .sdl-team{flex:0 0 150px;color:var(--cyan);font-size:9.5px;text-align:right;}
   .sdl-warn{color:var(--red);cursor:help;}
   .sdl-empty{color:var(--dim);font-size:10px;padding:8px 4px;}
+  /* per-row owner editing + delete (fix a pick from several turns back
+     without undoing everything after it) */
+  .sdl-owner{flex:0 0 150px;background:var(--bg);border:1px solid var(--line-2);
+    color:var(--cyan);font-family:inherit;font-size:9.5px;padding:2px 4px;}
+  .sdl-owner.mine{color:var(--amber);}
+  .sdl-del{flex:0 0 22px;background:transparent;border:1px solid var(--line-2);
+    color:var(--dim);cursor:pointer;font-family:inherit;font-size:10px;line-height:1;padding:2px 0;}
+  .sdl-del:hover{color:var(--red);border-color:var(--red);}
+  .sdl-prefill{color:var(--amber);}
+  /* rosters-by-team verification view */
+  .rbt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:8px;margin-top:6px;}
+  .rbt-card{border:1px solid var(--line);background:var(--panel);padding:6px 8px;}
+  .rbt-team{color:var(--cyan);font-size:10px;margin-bottom:4px;border-bottom:1px solid var(--line);
+    padding-bottom:3px;display:flex;justify-content:space-between;gap:6px;}
+  .rbt-team.mine{color:var(--amber);}
+  .rbt-count{color:var(--dim);font-size:9px;font-weight:400;}
+  .rbt-p{font-size:9.5px;padding:1px 0;display:flex;gap:6px;align-items:baseline;}
+  .rbt-lbl{color:var(--dim);flex:0 0 32px;font-variant-numeric:tabular-nums;}
+  .rbt-pos{color:var(--dim);flex:0 0 26px;}
+  .rbt-nm{flex:1 1 auto;}
+  .rbt-keep{color:var(--green);}
+  .rbt-empty{color:var(--dim);font-size:9.5px;padding:2px 0;}
   .pt-taken{color:var(--dim);font-size:10px;}
   .pt-suggested{color:var(--amber);font-size:10px;font-style:italic;}
   .name-suggested-keeper{text-decoration:line-through;text-decoration-color:var(--amber);
@@ -526,6 +548,8 @@
 
       <div class="seclabel">Draft Log — <span id="snakeLogTurn"></span></div>
       <div id="snakeDraftLog"></div>
+
+      <div id="rostersByTeamArea"></div>
 
       <div id="liveDraftPullArea"></div>
 
@@ -906,6 +930,7 @@ function render(){
   renderSnakePlayerBoard(lg);
   renderDeepDive(lg);
   renderSnakeDraftLog(lg);
+  renderRostersByTeam(lg);
   renderTicker(lg);
   wireSnakeResizer();
   renderFoot(lg);
@@ -1257,6 +1282,23 @@ function snakePickLabel(overall, teams){
   return {round, pickInRound, label:`${round}.${String(pickInRound).padStart(2,'0')}`};
 }
 
+// Pick numbers are POSITIONAL, not stored per pick: overall/round/label are
+// all derived from a pick's index in the array. So any insert or delete has
+// to renumber everything after it, or the log silently disagrees with the
+// snake order (and My Team / Deep Dive read the wrong round).
+// Owner (team/isMine) is deliberately NOT recomputed -- it's explicitly
+// recorded per pick, and after a mid-draft correction the recorded owner is
+// the truth, not whatever the snake order would predict.
+function renumberSnakePicks(teams){
+  snakeDraft.picks.forEach((p,i)=>{
+    const info = snakePickLabel(i+1, teams);
+    p.overall = i+1;
+    p.round = info.round;
+    p.pickInRound = info.pickInRound;
+    p.label = info.label;
+  });
+}
+
 function renderSnakeDraftLog(lg){
   const el = document.getElementById('snakeDraftLog');
   if(!el) return;
@@ -1283,17 +1325,37 @@ function renderSnakeDraftLog(lg){
     .filter(p=>p.pos && p.pos!=='NA' && !takenIds.has(p.id))
     .slice(0, 400);
 
-  const rows = snakeDraft.picks.slice().reverse().map(p=>`
+  // Prefill from whatever's selected on the Player Board, so logging a pick
+  // is click-player -> ADD instead of retyping a name that's already on
+  // screen. Skipped if that player is already logged, so the box doesn't
+  // keep re-offering someone who's off the board.
+  const selP = snakeDraft.selectedPlayerId
+    ? DATA.players.find(p=>p.id===snakeDraft.selectedPlayerId) : null;
+  const prefill = (selP && !takenIds.has(selP.id)) ? selP.name : '';
+
+  const ownerOptions = (p)=>`
+    <option value="" ${!p.isMine && !p.team?'selected':''}>— unassigned —</option>
+    <option value="__me__" ${p.isMine?'selected':''}>★ Me</option>
+    ${lg.teams.filter(t=>!t.isMe).map(t=>
+      `<option value="${t.team}" ${!p.isMine && p.team===t.team?'selected':''}>${t.team}</option>`).join('')}`;
+
+  // Newest first (matches how you read a draft board), but data-idx carries
+  // the TRUE array index so edit/delete hit the right pick regardless of
+  // display order.
+  const rows = snakeDraft.picks.map((p,idx)=>({p,idx})).reverse().map(({p,idx})=>`
     <div class="sdl-row ${p.isMine?'mine':''}">
       <span class="sdl-pick">${p.label}</span>
       <span class="sdl-name">${p.name}${p.playerId?'':' <span class="sdl-warn" title="No Big Board match -- this pick will NOT grey out on the board">⚠</span>'}</span>
       <span class="sdl-pos">${p.pos||'—'}</span>
-      <span class="sdl-team">${p.isMine?'★ me':(p.team||'—')}</span>
+      <select class="sdl-owner ${p.isMine?'mine':''}" data-idx="${idx}" title="Change who made this pick">
+        ${ownerOptions(p)}
+      </select>
+      <button class="sdl-del" data-idx="${idx}" title="Delete this pick (everything after it renumbers)">✕</button>
     </div>`).join('');
 
   el.innerHTML = `
     <div class="sdl-form">
-      <input id="sdlName" list="sdlPlayers" placeholder="Player name..." autocomplete="off">
+      <input id="sdlName" list="sdlPlayers" placeholder="Player name..." autocomplete="off" value="${prefill.replace(/"/g,'&quot;')}">
       <datalist id="sdlPlayers">${avail.map(p=>`<option value="${p.name}">`).join('')}</datalist>
       <select id="sdlTeam">
         <option value="">— drafted by —</option>
@@ -1301,14 +1363,14 @@ function renderSnakeDraftLog(lg){
         ${lg.teams.filter(t=>!t.isMe).map(t=>`<option value="${t.team}" ${onClockTeam&&onClockTeam.team===t.team?'selected':''}>${t.team}</option>`).join('')}
       </select>
       <button id="sdlAdd">ADD</button>
-      <button id="sdlUndo" class="sdl-secondary" ${snakeDraft.picks.length?'':'disabled'}>UNDO</button>
       <button id="sdlClear" class="sdl-secondary" ${snakeDraft.picks.length?'':'disabled'}>CLEAR</button>
     </div>
-    <div id="sdlMsg" class="sdl-msg"></div>
+    <div id="sdlMsg" class="sdl-msg">${prefill?`<span class="sdl-prefill">↑ filled from board selection: ${prefill}</span>`:''}</div>
     <div class="sdl-list">${rows||'<div class="sdl-empty">No picks logged yet.</div>'}</div>
     <div class="foot">Log EVERY pick as it happens (not just yours) so the board, My Team and
-      Deep Dive stay accurate. Pick number advances automatically. Session-only — a page
-      reload clears the log.</div>`;
+      Deep Dive stay accurate. Select a player on the board to fill the name automatically.
+      Use the dropdown on any row to fix who drafted it, or ✕ to delete a pick from any point
+      (later picks renumber). Session-only — a page reload clears the log.</div>`;
 
   const nameInput = document.getElementById('sdlName');
   const teamSel = document.getElementById('sdlTeam');
@@ -1330,6 +1392,9 @@ function renderSnakeDraftLog(lg){
       team: isMine ? (lg.teams.find(t=>t.isMe)||{}).team : (teamVal||null),
       isMine,
     });
+    // Clear the board selection once logged, so the prefill doesn't keep
+    // re-offering a player who's now taken.
+    if(bp && snakeDraft.selectedPlayerId===bp.id) snakeDraft.selectedPlayerId = null;
     // Flag unmatched names loudly -- a typo here means the player silently
     // stays "available" on the board, which is the failure mode that matters.
     msg.textContent = bp ? '' : `"${raw}" didn't match a Big Board player — logged, but it won't grey out on the board.`;
@@ -1342,12 +1407,99 @@ function renderSnakeDraftLog(lg){
 
   document.getElementById('sdlAdd').onclick = addPick;
   nameInput.onkeydown = (e)=>{ if(e.key==='Enter'){ e.preventDefault(); addPick(); } };
-  document.getElementById('sdlUndo').onclick = ()=>{ snakeDraft.picks.pop(); render(); };
   document.getElementById('sdlClear').onclick = ()=>{
     if(snakeDraft.picks.length && confirm(`Clear all ${snakeDraft.picks.length} logged picks?`)){
       snakeDraft.picks = []; render();
     }
   };
+
+  // Delete any pick, not just the most recent.
+  el.querySelectorAll('.sdl-del').forEach(btn=>{
+    btn.onclick = ()=>{
+      const idx = Number(btn.dataset.idx);
+      const p = snakeDraft.picks[idx];
+      if(!p) return;
+      // Only confirm when it's NOT the last pick -- deleting the most recent
+      // one is the cheap, common "oops" and shouldn't need a dialog, but
+      // removing one from mid-draft renumbers everything after it.
+      const isLast = idx === snakeDraft.picks.length - 1;
+      if(!isLast && !confirm(`Delete ${p.label} ${p.name}? The ${snakeDraft.picks.length-idx-1} pick(s) after it will renumber.`)) return;
+      snakeDraft.picks.splice(idx,1);
+      renumberSnakePicks(teams);
+      render();
+    };
+  });
+
+  // Reassign the owner of any past pick in place.
+  el.querySelectorAll('.sdl-owner').forEach(sel=>{
+    sel.onchange = ()=>{
+      const idx = Number(sel.dataset.idx);
+      const p = snakeDraft.picks[idx];
+      if(!p) return;
+      const v = sel.value;
+      p.isMine = v === '__me__';
+      p.team = p.isMine ? (lg.teams.find(t=>t.isMe)||{}).team : (v || null);
+      render();
+    };
+  });
+}
+
+// Rosters-by-team: a side-by-side read of what each team has, purely so a
+// manual-entry mistake (wrong owner, missed pick, duplicate) can be spotted
+// against the real platform without scrolling the chronological log.
+// Includes keepers as well as logged picks, since that's what the platform
+// shows on a roster -- a log that matches pick-for-pick can still look wrong
+// next to ESPN/Yahoo if keepers aren't accounted for.
+function renderRostersByTeam(lg){
+  const el = document.getElementById('rostersByTeamArea');
+  if(!el) return;
+  if(isAuctionLeague()){ el.innerHTML=''; return; }
+
+  const byTeam = new Map();
+  (lg.teams||[]).forEach(t=>byTeam.set(t.team, {team:t, keepers:[], picks:[]}));
+  // Unassigned picks still need somewhere to show up -- silently dropping
+  // them would hide exactly the data-entry mistake this view exists to catch.
+  byTeam.set('__unassigned__', {team:{team:'(unassigned)', isMe:false}, keepers:[], picks:[]});
+
+  (lg.teams||[]).forEach(t=>{
+    (t.liveKeepers||[]).forEach(k=>{
+      const bp = findBigBoardPlayer(k.player);
+      const entry = byTeam.get(t.team);
+      if(entry) entry.keepers.push({name:k.player, pos:bp?bp.pos:null, round:k.round});
+    });
+  });
+  snakeDraft.picks.forEach(p=>{
+    const key = p.team && byTeam.has(p.team) ? p.team : '__unassigned__';
+    byTeam.get(key).picks.push(p);
+  });
+
+  const cards = [...byTeam.entries()]
+    .filter(([key,v])=>key!=='__unassigned__' || v.picks.length)  // hide the unassigned card unless it has something
+    .map(([key,v])=>{
+      const total = v.keepers.length + v.picks.length;
+      const lines = [
+        ...v.keepers.map(k=>`<div class="rbt-p"><span class="rbt-lbl rbt-keep">K${k.round??''}</span><span class="rbt-pos">${k.pos||'—'}</span><span class="rbt-nm">${k.name}</span></div>`),
+        ...v.picks.map(p=>`<div class="rbt-p"><span class="rbt-lbl">${p.label}</span><span class="rbt-pos">${p.pos||'—'}</span><span class="rbt-nm">${p.name}${p.playerId?'':' <span class="sdl-warn" title="No Big Board match">⚠</span>'}</span></div>`),
+      ];
+      return `<div class="rbt-card">
+        <div class="rbt-team ${v.team.isMe?'mine':''}">
+          <span>${v.team.isMe?'★ ':''}${v.team.team}</span><span class="rbt-count">${total}</span>
+        </div>
+        ${lines.join('') || '<div class="rbt-empty">nothing yet</div>'}
+      </div>`;
+    }).join('');
+
+  el.innerHTML = `<details class="ds-legend" style="margin-top:10px;">
+    <summary>ⓘ Rosters by Team — verify my manual entry against the platform</summary>
+    <div style="padding:8px 11px;">
+      <div style="font-size:9px;color:var(--dim);line-height:1.5;">
+        Keepers (green <b>K</b>) plus every pick logged to that team. Compare against ESPN/Yahoo to catch a
+        pick logged to the wrong owner, a missed pick, or a duplicate. A ⚠ means the name didn't match the
+        Big Board, so that player is still showing as available on the board.
+      </div>
+      <div class="rbt-grid">${cards}</div>
+    </div>
+  </details>`;
 }
 
 function renderMyTeam(lg){
