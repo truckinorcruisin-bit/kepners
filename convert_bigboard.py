@@ -576,6 +576,29 @@ def main(src, dst):
     # that config exists.
     merge_espn_values(players, out["leagues"])
 
+    # Market drift / TruRank. Runs AFTER merge_espn_values because the talent
+    # half of the metric needs warByLeague to exist. Lazy import mirrors the
+    # openpyxl pattern and avoids an import cycle (market_drift borrows
+    # normalize_name/canonical_position back from this module).
+    import market_drift
+    board_2025 = market_drift.read_2025_board(
+        wb, fallback_cols={"player": 7, "team": 8, "pos": 9, "avgRank": 21})
+    repl_by_league = {}
+    for league_key, league_data in out["leagues"].items():
+        rules_for = league_data.get("rules") or {}
+        team_count = rules_for.get("teams")
+        slots = league_data.get("rosterSlots") or rules_for.get("rosterSlots") or []
+        if isinstance(team_count, int) and slots:
+            repl_by_league[league_key] = replacement_ranks_for_league(team_count, slots)
+    out["meta"]["marketDriftBands"] = market_drift.compute(
+        players, board_2025, list(out["leagues"]), repl_by_league)
+    out["meta"]["marketDriftConfig"] = {
+        "smoothWindow": market_drift.SMOOTH_WINDOW,
+        "neutralDeadband": market_drift.NEUTRAL_DEADBAND,
+        "talentPoolSize": market_drift.TALENT_POOL_SIZE,
+        "priorSeason": 2025,
+    }
+
     # Keeper Value tiers, calibrated to each league's own KV distribution.
     for league_key, league_data in out["leagues"].items():
         rules_for = league_data.get("rules") or {}
