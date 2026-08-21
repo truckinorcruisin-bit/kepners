@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-20T11:17:05.127442+00:00"
+    "generated": "2026-08-21T11:16:19.818258+00:00"
   },
   "players": [
     {
@@ -10152,7 +10152,16 @@
           "manager": "Greene",
           "isMe": false,
           "draftPosition": 1,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Cam Skattebo",
+              "round": 6
+            },
+            {
+              "player": "Terrance Ferguson",
+              "round": 14
+            }
+          ]
         },
         {
           "slot": 3,
@@ -10448,7 +10457,7 @@
         "fairFloor": -2.4
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-08-20T11:17:02.724231+00:00",
+      "draftOrderGenerated": "2026-08-21T11:16:17.254158+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
@@ -10459,49 +10468,57 @@
           "slot": 1,
           "team": "Nearys Nemesis",
           "manager": "Nemeth",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 7
         },
         {
           "slot": 2,
           "team": "Kevin Jacks",
           "manager": "K Jack",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 4
         },
         {
           "slot": 3,
           "team": "HannahLees",
           "manager": "Mullins",
-          "isMe": true
+          "isMe": true,
+          "draftPosition": 5
         },
         {
           "slot": 4,
           "team": "Michael Scotts",
           "manager": "Mikey",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 8
         },
         {
           "slot": 5,
           "team": "UrbanMeyers",
           "manager": "Lubeck",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 6
         },
         {
           "slot": 6,
           "team": "Fogels Moguls",
           "manager": "Hewitt",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 2
         },
         {
           "slot": 7,
           "team": "MakemyTeam",
           "manager": "J White",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 3
         },
         {
           "slot": 8,
           "team": "BagelNDeli",
           "manager": "Milligan",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 1
         }
       ],
       "rosterSlots": [
@@ -10551,7 +10568,9 @@
         "great": 9.0,
         "good": 0.6,
         "fairFloor": -1.3
-      }
+      },
+      "draftOrderGenerated": "2026-08-20T00:00:00+00:00",
+      "draftOrderUnmatched": []
     },
     "zimmer": {
       "platform": "espn",
