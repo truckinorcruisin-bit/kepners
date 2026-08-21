@@ -591,11 +591,14 @@ def main(src, dst):
         if isinstance(team_count, int) and slots:
             repl_by_league[league_key] = replacement_ranks_for_league(team_count, slots)
     out["meta"]["marketDriftBands"] = market_drift.compute(
-        players, board_2025, list(out["leagues"]), repl_by_league)
+        players, board_2025, list(out["leagues"]), repl_by_league,
+        platform_by_league={k: v.get("platform") for k, v in out["leagues"].items()})
     out["meta"]["marketDriftConfig"] = {
         "smoothWindow": market_drift.SMOOTH_WINDOW,
+        "talentSmoothWindow": market_drift.TALENT_SMOOTH_WINDOW,
         "neutralDeadband": market_drift.NEUTRAL_DEADBAND,
         "talentPoolSize": market_drift.TALENT_POOL_SIZE,
+        "talentWeight": market_drift.TALENT_WEIGHT,
         "priorSeason": 2025,
     }
 

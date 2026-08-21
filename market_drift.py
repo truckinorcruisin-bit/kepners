@@ -73,6 +73,17 @@ import re
 
 SKILL_POSITIONS = ("QB", "RB", "WR", "TE")
 
+# Which ADP column each league's drift is measured against. A league drafts on
+# one platform, and the price Sean actually pays is that platform's board -- not
+# a cross-platform blend. Keyed by the league's own `platform` field, so adding
+# a league needs no code change. Falls through to the blended average when a
+# platform column is missing or too sparse to trust.
+ADP_SOURCE_BY_PLATFORM = {"yahoo": "yahoo", "espn": "espn"}
+
+# A platform column must cover at least this share of ranked players before it's
+# used; below that the blended average is more reliable than a column with holes.
+MIN_ADP_COVERAGE = 0.80
+
 # Both years' WAR rankings are truncated to this many players so the two pools
 # span a comparable universe. Roughly board depth + a cushion.
 TALENT_POOL_SIZE = 200
@@ -121,6 +132,11 @@ def _detect_columns(ws, max_scan=12):
         "team": re.compile(r"^\s*team\s*$", re.I),
         "pos": re.compile(r"^\s*pos(ition)?\.?\s*$", re.I),
         "avgRank": re.compile(r"^\s*(avg|average)\.?\s*(rank|rk)\s*$", re.I),
+        # Per-platform ADP columns. Optional: if last season's tab carries them,
+        # drift is measured platform-to-platform (a true like-for-like); if not,
+        # it falls back to the blend and says so loudly.
+        "yahoo": re.compile(r"^\s*yahoo!?\s*(adp|rank|rk)?\s*$", re.I),
+        "espn": re.compile(r"^\s*espn\s*(adp|rank|rk)?\s*$", re.I),
     }
     for r in range(1, min(max_scan, ws.max_row) + 1):
         found = {}
@@ -181,8 +197,14 @@ def read_2025_board(wb, sheet="2025 Big Board", fallback_cols=None):
         if not isinstance(rank, (int, float)):
             bad_rank += 1
             continue
+        plat = {}
+        for pkey in ("yahoo", "espn"):
+            if pkey in cols:
+                pv = ws.cell(r, cols[pkey]).value
+                if isinstance(pv, (int, float)):
+                    plat[pkey] = float(pv)
         rows.append({"name": name, "team": team, "pos": pos,
-                     "avgRank": float(rank)})
+                     "avgRank": float(rank), "platform": plat})
 
     print(f"Market drift: parsed {len(rows)} ranked 2025 players "
           f"({skipped_scratch} scratch/incomplete rows skipped, "
@@ -248,14 +270,43 @@ def war_ranks_2025(replacement_ranks, path="espn_season_stats_2025.json"):
 
 # ---------------------------------------------------------------- drift math --
 
-def _slots(rows):
-    """Order each position's players by consensus rank -> positional slot list."""
+def _adp(row, adp_key):
+    """The rank this league actually drafts against. Prefers the league's own
+    platform column; falls back to the blended average per row."""
+    if adp_key:
+        v = (row.get("platform") or {}).get(adp_key)
+        if isinstance(v, (int, float)):
+            return float(v)
+    v = row.get("avgRank")
+    return float(v) if isinstance(v, (int, float)) else None
+
+
+def _coverage(rows, adp_key):
+    """Share of ranked skill players that have a usable value in this column."""
+    pool = [r for r in rows if r.get("pos") in SKILL_POSITIONS]
+    if not pool or not adp_key:
+        return 0.0
+    hit = sum(1 for r in pool
+              if isinstance((r.get("platform") or {}).get(adp_key), (int, float)))
+    return hit / len(pool)
+
+
+def _slots(rows, adp_key=None):
+    """Order each position's players by THIS LEAGUE'S ADP -> positional slot
+    list. Slot identity is platform-specific on purpose: "WR4" means the fourth
+    WR off the board on the platform this league drafts on, which is not
+    necessarily the fourth WR by blended consensus."""
     by_pos = {}
     for r in rows:
-        if r.get("pos") in SKILL_POSITIONS and r.get("avgRank") is not None:
-            by_pos.setdefault(r["pos"], []).append(r)
+        if r.get("pos") not in SKILL_POSITIONS:
+            continue
+        rank = _adp(r, adp_key)
+        if rank is None:
+            continue
+        r = dict(r, _adp=rank)
+        by_pos.setdefault(r["pos"], []).append(r)
     for plist in by_pos.values():
-        plist.sort(key=lambda x: x["avgRank"])
+        plist.sort(key=lambda x: x["_adp"])
     return by_pos
 
 
@@ -293,17 +344,44 @@ def _band(tru, cuts):
     return "neutral"
 
 
-def compute_for_league(players, board_2025, league_key, replacement_ranks):
-    """Attaches marketDrift[league_key] to every 2026 player and returns the
-    band cutoffs used. Mutates `players`."""
+def compute_for_league(players, board_2025, league_key, replacement_ranks,
+                       adp_key=None):
+    """Attaches marketDrift[league_key] to every 2026 player and returns
+    (band cutoffs, source description). Mutates `players`."""
     from convert_bigboard import normalize_name
 
-    slots26 = _slots([
-        {"name": p["name"], "pos": p.get("pos"),
-         "avgRank": p["avgRank"] if isinstance(p.get("avgRank"), (int, float)) else None,
-         "ref": p}
-        for p in players])
-    slots25 = _slots(board_2025)
+    rows26 = [{"name": p["name"], "pos": p.get("pos"),
+               "avgRank": p["avgRank"] if isinstance(p.get("avgRank"), (int, float)) else None,
+               "platform": p.get("platform") or {}, "ref": p}
+              for p in players]
+
+    # Decide the ADP column per season independently. If last season's tab
+    # doesn't carry the platform column, comparing this year's Yahoo board to
+    # last year's blended average would fold a constant Yahoo-vs-consensus lean
+    # into what's reported as year-over-year movement. That's still usable --
+    # the lean is roughly constant and the positional SHAPE survives -- but it's
+    # not like-for-like, so it's flagged all the way through to the UI.
+    cov26 = _coverage(rows26, adp_key)
+    cov25 = _coverage(board_2025, adp_key)
+    key26 = adp_key if cov26 >= MIN_ADP_COVERAGE else None
+    key25 = adp_key if cov25 >= MIN_ADP_COVERAGE else None
+    if adp_key and not key26:
+        print(f"  [{league_key}] 2026 '{adp_key}' column only {cov26:.0%} populated "
+              f"-- using blended average rank instead.")
+    if adp_key and key26 and not key25:
+        print(f"  [{league_key}] WARNING: 2026 uses '{adp_key}' ADP but the 2025 tab "
+              f"has no usable '{adp_key}' column ({cov25:.0%}) -- comparing against "
+              f"the 2025 blended average. Positional shape is still valid; the "
+              f"absolute level carries a constant {adp_key}-vs-consensus lean.")
+
+    source = {
+        "adpSource2026": key26 or "average",
+        "adpSource2025": key25 or "average",
+        "likeForLike": (key26 or "average") == (key25 or "average"),
+    }
+
+    slots26 = _slots(rows26, key26)
+    slots25 = _slots(board_2025, key25)
 
     wr26 = war_ranks_2026(players, league_key)
     wr25 = war_ranks_2025(replacement_ranks)
@@ -323,13 +401,13 @@ def compute_for_league(players, board_2025, league_key, replacement_ranks):
                 continue
             # 2026 minus 2025: a LARGER rank number means the slot falls later
             # in the draft this year, i.e. it got cheaper -> positive.
-            price_raw.append(cur[n]["avgRank"] - prev[n]["avgRank"])
+            price_raw.append(cur[n]["_adp"] - prev[n]["_adp"])
             a = wr26.get(normalize_name(cur[n]["name"]))
             b = wr25.get(normalize_name(prev[n]["name"]))
             t = (b - a) if (a is not None and b is not None) else None
             talent_raw.append(t)
             if t is not None:
-                recs.append((cur[n]["avgRank"], pos, n, t))
+                recs.append((cur[n]["_adp"], pos, n, t))
         raw[pos] = (price_raw, talent_raw, depth)
 
     # --- pass 2: detrend talent against board depth ------------------------
@@ -351,6 +429,26 @@ def compute_for_league(players, board_2025, league_key, replacement_ranks):
     # than everything else going around the same point in the draft. A position
     # that genuinely collapses still shows, because its neighbours at that depth
     # are mostly other positions and they didn't.
+    # --- remove any constant offset between the two price sources ----------
+    # When both seasons read the same column, overall ranks are a permutation of
+    # 1..N in each and the shifts already sum to ~zero, so this is a no-op. When
+    # they don't (2026 Yahoo vs a 2025 blended average, because last season's tab
+    # has no Yahoo column), the platform's constant lean off consensus rides
+    # along in every slot and tilts the entire board one colour -- the positional
+    # SHAPE is still right, but the level isn't. Subtracting the median puts the
+    # board back on a zero mean either way.
+    if not source["likeForLike"]:
+        flat_price = sorted(v for pr, _, _ in raw.values() for v in pr if v is not None)
+        lean = _percentile(flat_price, 50) or 0.0
+        if abs(lean) > 0.01:
+            print(f"  [{league_key}] removing constant "
+                  f"{source['adpSource2026']}-vs-{source['adpSource2025']} lean of "
+                  f"{lean:+.1f} picks from price drift.")
+            source["leanRemoved"] = round(lean, 1)
+            for pos in raw:
+                pr, tl, dp = raw[pos]
+                raw[pos] = ([None if v is None else v - lean for v in pr], tl, dp)
+
     recs.sort(key=lambda x: x[0])
     vals = [r[3] for r in recs]
     baseline = {}
@@ -409,23 +507,33 @@ def compute_for_league(players, board_2025, league_key, replacement_ranks):
         rec["band"] = _band(rec["tru"], cuts) if rec["sample"] in ("ok", "price-only") else "none"
         p.setdefault("marketDrift", {})[league_key] = rec
 
-    return cuts
+    return cuts, source
 
 
-def compute(players, board_2025, leagues, replacement_ranks_by_league):
-    """Top-level entry. Returns {league_key: band cutoffs} for the site to show
-    in its legend. No-ops safely if the 2025 tab was missing."""
+def compute(players, board_2025, leagues, replacement_ranks_by_league,
+            platform_by_league=None):
+    """Top-level entry. `leagues` may be a list of keys or a {key: leagueData}
+    mapping; `platform_by_league` gives each league's draft platform so drift is
+    measured against the board that league actually drafts from. Returns
+    {league_key: {bands, ...source info}} for the site's legend. No-ops safely
+    if the 2025 tab was missing."""
     if not board_2025:
         for p in players:
             p["marketDrift"] = {}
         return {}
-    bands = {}
+    platform_by_league = platform_by_league or {}
+    out = {}
     for lkey in leagues:
         ranks = replacement_ranks_by_league.get(lkey)
         if not ranks:
             continue
-        bands[lkey] = compute_for_league(players, board_2025, lkey, ranks)
+        adp_key = ADP_SOURCE_BY_PLATFORM.get(platform_by_league.get(lkey))
+        cuts, source = compute_for_league(players, board_2025, lkey, ranks, adp_key)
         rated = sum(1 for p in players
                     if (p.get("marketDrift") or {}).get(lkey, {}).get("sample") == "ok")
-        print(f"Market drift [{lkey}]: {rated} players rated; bands={bands[lkey]}")
-    return bands
+        out[lkey] = dict(source, bands=cuts)
+        print(f"Market drift [{lkey}]: {rated} players rated against "
+              f"{source['adpSource2026']} 2026 vs {source['adpSource2025']} 2025 "
+              f"({'like-for-like' if source['likeForLike'] else 'MIXED SOURCES'}); "
+              f"bands={cuts}")
+    return out

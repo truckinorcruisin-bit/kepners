@@ -21,10 +21,11 @@ import market_drift as md
 
 POS_COUNT = {"QB": 32, "RB": 65, "WR": 75, "TE": 28}
 REPL = {"QB": 15, "RB": 30, "WR": 36, "TE": 15}
+YAHOO_LEAN = 4.0   # Yahoo sits a constant ~4 picks off the blended average
 STATS = "espn_season_stats_2025.json"
 
 
-def build(seed, shifts, talent_hit=None):
+def build(seed, shifts, talent_hit=None, yahoo25=False, yahoo26=False):
     """shifts/talent_hit: fn(pos, slot_index) -> picks / points delta."""
     random.seed(seed)
     pool = [p for p, n in POS_COUNT.items() for _ in range(n)]
@@ -36,11 +37,17 @@ def build(seed, shifts, talent_hit=None):
 
     wb = openpyxl.Workbook(); ws = wb.active; ws.title = "2025 Big Board"
     HDR = 6
-    for c, lbl in [(7, "Player"), (8, "Team"), (9, "Pos"), (21, "Avg Rank")]:
+    cells = [(7, "Player"), (8, "Team"), (9, "Pos"), (21, "Avg Rank")]
+    if yahoo25:
+        cells.append((13, "Yahoo"))
+    for c, lbl in cells:
         ws.cell(HDR, c, lbl)
     for r, (pos, i, rk) in enumerate(board_rows, start=HDR + 1):
         ws.cell(r, 7, f"P25 {pos}{i+1}"); ws.cell(r, 8, "KC")
         ws.cell(r, 9, pos); ws.cell(r, 21, rk)
+        if yahoo25:
+            # Yahoo leans a constant offset off the blend, plus its own jitter
+            ws.cell(r, 13, rk + YAHOO_LEAN + random.uniform(-2, 2))
     board = md.read_2025_board(wb)
 
     quality = {(pos, i): 320 - rk * 0.85 for pos, i, rk in board_rows}
@@ -72,12 +79,17 @@ def build(seed, shifts, talent_hit=None):
     players = []
     for newrank, (_, pos, i) in enumerate(keyed, start=1):
         war = round(pts26[(pos, i)] - repl_pts[pos], 1)
-        players.append({"id": f"p-{pos}{i+1}", "name": f"P26 {pos}{i+1}",
-                        "pos": pos, "avgRank": float(newrank),
-                        "projectedWar": war, "warByLeague": {"kepners": war}})
+        rec = {"id": f"p-{pos}{i+1}", "name": f"P26 {pos}{i+1}",
+               "pos": pos, "avgRank": float(newrank),
+               "projectedWar": war, "warByLeague": {"kepners": war}}
+        if yahoo26:
+            rec["platform"] = {"yahoo": float(newrank) + YAHOO_LEAN + random.uniform(-2, 2)}
+        players.append(rec)
 
-    md.compute(players, board, ["kepners"], {"kepners": REPL})
-    return {p["name"]: p["marketDrift"]["kepners"] for p in players}, board, players
+    info = md.compute(players, board, ["kepners"], {"kepners": REPL},
+                      platform_by_league={"kepners": "yahoo"} if yahoo26 else None)
+    return ({p["name"]: p["marketDrift"]["kepners"] for p in players}, board,
+            players, info.get("kepners", {}))
 
 
 def mean(xs): return sum(xs) / len(xs)
@@ -90,7 +102,7 @@ def show(lbl, grp):
 
 # ---------------- Scenario A: price moves only ------------------------------
 print("\n== Scenario A: QB tier cheaper, RB dead zone pricier, talent flat ==")
-D, board, players = build(11, lambda p, i: (+12 if (p == "QB" and i < 8) else
+D, board, players, _ = build(11, lambda p, i: (+12 if (p == "QB" and i < 8) else
                                             -10 if (p == "RB" and 24 <= i < 45) else 0))
 qb = [D[f"P26 QB{i}"] for i in range(2, 8)]
 rb = [D[f"P26 RB{i}"] for i in range(28, 42)]
@@ -110,7 +122,7 @@ print("PASS: both injected price trends recovered; control position uncoloured")
 
 # ---------------- Scenario B: the confound ----------------------------------
 print("\n== Scenario B: TE tier cheaper by 12 BUT talent collapses ==")
-D2, _, _ = build(11, lambda p, i: (+12 if (p == "TE" and i < 10) else 0),
+D2, _, _, _ = build(11, lambda p, i: (+12 if (p == "TE" and i < 10) else 0),
                  talent_hit=lambda p, i: (60 if (p == "TE" and i < 10) else 0))
 te = [D2[f"P26 TE{i}"] for i in range(2, 9)]
 show("TE2-8", te)
@@ -143,6 +155,38 @@ print("PASS: missing 2025 tab degrades quietly")
 assert md._band(3.0, {"strongPos": 2, "pos": 1, "neg": -1, "strongNeg": -2}) == "neutral"
 assert md._band(None, None) == "none"
 print("PASS: deadband + null handling")
+
+# ---------------- league-specific ADP source --------------------------------
+print("\n== ADP source routing ==")
+shifts = lambda p, i: (+12 if (p == "QB" and i < 8) else 0)
+
+Dy, _, _, infoY = build(11, shifts, yahoo25=True, yahoo26=True)
+assert infoY["adpSource2026"] == "yahoo" and infoY["adpSource2025"] == "yahoo"
+assert infoY["likeForLike"] is True
+qy = [Dy[f"P26 QB{i}"] for i in range(2, 8)]
+assert 6 <= mean([d["tru"] for d in qy]) <= 18, mean([d["tru"] for d in qy])
+print(f"  yahoo->yahoo  like-for-like={infoY['likeForLike']}  "
+      f"QB2-7 tru={mean([d['tru'] for d in qy]):.1f}")
+print("PASS: platform-to-platform comparison cancels the constant Yahoo lean")
+
+Dm, _, _, infoM = build(11, shifts, yahoo25=False, yahoo26=True)
+assert infoM["adpSource2026"] == "yahoo" and infoM["adpSource2025"] == "average"
+assert infoM["likeForLike"] is False
+qm = [Dm[f"P26 QB{i}"] for i in range(2, 8)]
+wm = [Dm[f"P26 WR{i}"] for i in range(10, 40)]
+print(f"  yahoo->average  like-for-like={infoM['likeForLike']}  "
+      f"QB2-7 tru={mean([d['tru'] for d in qm]):.1f}  "
+      f"WR10-39 tru={mean([d['tru'] for d in wm]):.1f}")
+# The mixed-source run carries the constant lean, but the SHAPE must survive:
+# the shifted QB tier still has to stand well clear of the untouched WRs.
+assert mean([d["tru"] for d in qm]) - mean([d["tru"] for d in wm]) > 6, "shape lost"
+assert abs(mean([d["tru"] for d in wm])) < 6, "constant lean not removed from level"
+assert infoM.get("leanRemoved") is not None, "lean correction should have fired"
+print("PASS: mixed sources flagged, lean removed, positional shape recovered")
+
+Ds, _, _, infoS = build(11, shifts, yahoo25=True, yahoo26=False)
+assert infoS["adpSource2026"] == "average", infoS
+print("PASS: no 2026 platform column -> falls back to blended average")
 
 # scratch rows / #N/A ranks
 wb3 = openpyxl.Workbook(); ws3 = wb3.active; ws3.title = "2025 Big Board"

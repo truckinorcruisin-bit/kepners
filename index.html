@@ -437,6 +437,13 @@
   .drift-key{display:flex;flex-wrap:wrap;gap:12px;font-size:9.5px;margin-bottom:8px;}
   .drift-key span{display:flex;align-items:center;gap:4px;color:var(--dim);}
   .drift-key i{width:14px;height:0;border-top:2px solid;display:inline-block;}
+  .drift-tabs{display:flex;gap:5px;margin-bottom:9px;flex-wrap:wrap;}
+  .drift-tab{background:transparent;border:1px solid var(--line-2);color:var(--dim);
+    font-family:inherit;font-size:9.5px;padding:3px 9px;border-radius:3px;cursor:pointer;letter-spacing:.5px;}
+  .drift-tab:hover{color:var(--amber);border-color:var(--amber);}
+  .drift-tab.on{color:var(--bg);background:var(--cyan);border-color:var(--cyan);font-weight:700;}
+  .drift-sub{font-size:10px;color:var(--cyan);letter-spacing:1px;margin:16px 0 6px;
+    padding-top:12px;border-top:1px solid var(--line);}
   .pt-toggle{display:flex;gap:6px;margin-bottom:12px;}
   .pt-toggle button{flex:1;background:var(--panel);border:1px solid var(--line);color:var(--dim);
     font-family:inherit;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;
@@ -963,12 +970,14 @@ function render(){
 function renderPrepView(lg){
   const el = document.getElementById('prepView');
   el.innerHTML = `
+    <div id="driftPanelMountPrep"></div>
     <div id="draftOrderArea"></div>
     <div id="ownerProfilesArea"></div>
     <div id="keeper2026Area"></div>
     <div id="groupValueArea"></div>
     <div id="keeperGradesArea"></div>
   `;
+  mountDriftPanel(document.getElementById('driftPanelMountPrep'));
   renderDraftOrder(lg);
   renderOwnerProfiles(lg);
   // Computed once, shared by the 2026 grades table and the Group/Owner
@@ -1769,7 +1778,7 @@ function teamCorrelations(player, lg){
 function driftReadBlock(player){
   const d = driftOf(player);
   if(!d) return '';
-  const teams = (DATA.leagues[activeLeague].teams||[]).length || 12;
+  const teams = ((DATA.leagues[activeLeague]||{}).teams||[]).length || 12;
   const dir = d.tru>0 ? 'later' : 'earlier';
   const rounds = (Math.abs(d.tru)/teams).toFixed(1);
   let verdict;
@@ -2710,14 +2719,17 @@ function driftOf(p){
   const d = p && p.marketDrift ? p.marketDrift[activeLeague] : null;
   return (d && d.tru != null) ? d : null;
 }
+// Guarded against a null DATA: ptColumns() can be reached before/if the
+// bigboard fetch resolves, and an uncaught throw there takes the whole page
+// down rather than degrading to an empty board.
 function hasDriftData(){
-  return !!(DATA.players || []).some(p=>driftOf(p));
+  return !!((DATA && DATA.players) || []).some(p=>driftOf(p));
 }
 function mktCell(r){
   const d = driftOf(r);
   if(!d) return `<span class="pt-mkt mkt-none">—</span>`;
   const sign = d.tru>0?'+':'';
-  const teams = (DATA.leagues[activeLeague].teams||[]).length || 12;
+  const teams = ((DATA.leagues[activeLeague]||{}).teams||[]).length || 12;
   const rounds = (Math.abs(d.tru)/teams).toFixed(1);
   const parts = [
     `${d.slot}: ${sign}${d.tru} picks vs the same slot last year (${rounds} rd)`,
@@ -3093,73 +3105,198 @@ function dataSourceLegend(){
     <tbody>${body}</tbody></table></details>`;
 }
 
-// Market drift curve: one line per position, x = positional slot (WR1, WR2...),
-// y = TruRank. This is the panel to read BEFORE trusting any colour on the
-// board -- if a trend you already believe in doesn't show up as a hump or a
-// trough here, the underlying year-over-year comparison is wrong and the board
-// is just spreading that error across 234 rows.
+// ---- Market drift / TruRank visualisation ---------------------------------
+// Two panels, because TruRank is a composite and a single line hides that:
+//   1. CURVE  - drift by positional slot. On "ALL" it plots TruRank per
+//      position; pick a single position and it decomposes into the price move,
+//      the WAR correction, and the resulting TruRank, with the gap between the
+//      price line and the TruRank line shaded -- that shaded gap IS the WAR
+//      half doing its work, which is otherwise invisible.
+//   2. VALUE MAP - every slot plotted as price drift (x) against talent drift
+//      (y). The diagonal is TruRank = 0. Anything up-and-right of it is a real
+//      edge; the lower-right quadrant is the trap the metric exists to catch --
+//      slots that look cheap only because the tier got worse.
 const DRIFT_CURVE_COLORS = {QB:'#ffb703', RB:'#00d9ff', WR:'#3ddc84', TE:'#c88cff'};
-function driftCurvePanel(){
-  if(!hasDriftData()) return '';
-  const W=680, H=230, PADL=38, PADR=10, PADT=12, PADB=26;
-  const series = {};
-  DATA.players.forEach(p=>{
+let driftPos = 'ALL';
+
+function driftMeta(){
+  const m = (DATA && DATA.meta && DATA.meta.marketDriftBands) ? DATA.meta.marketDriftBands[activeLeague] : null;
+  return m || null;
+}
+function driftSeries(){
+  const out = {};
+  ((DATA && DATA.players) || []).forEach(p=>{
     const d = driftOf(p);
     if(!d || !d.slot || !DRIFT_CURVE_COLORS[p.pos]) return;
     const n = parseInt(String(d.slot).replace(/^[A-Z]+/,''),10);
     if(!isFinite(n)) return;
-    (series[p.pos] = series[p.pos] || []).push({n, tru:d.tru});
+    (out[p.pos] = out[p.pos] || []).push({n, name:p.name, tru:d.tru, price:d.price, talent:d.talent, band:d.band});
   });
-  const pts = Object.values(series).flat();
-  if(pts.length < 10) return '';
+  Object.values(out).forEach(l=>l.sort((a,b)=>a.n-b.n));
+  return out;
+}
+
+function driftCurveSvg(series){
+  const W=680, H=240, PADL=40, PADR=12, PADT=12, PADB=28;
+  const shown = driftPos==='ALL' ? series : (series[driftPos] ? {[driftPos]:series[driftPos]} : {});
+  const pts = Object.values(shown).flat();
+  if(!pts.length) return '<div class="empty-note">No drift data for this position.</div>';
   const maxN = Math.max(...pts.map(p=>p.n));
-  const absMax = Math.max(6, ...pts.map(p=>Math.abs(p.tru)));
+  const vals = driftPos==='ALL' ? pts.map(p=>p.tru)
+    : pts.flatMap(p=>[p.tru, p.price, p.talent].filter(v=>v!=null));
+  const absMax = Math.max(6, ...vals.map(Math.abs));
   const x = n => PADL + (n-1)/Math.max(1,maxN-1) * (W-PADL-PADR);
   const y = v => PADT + (absMax - v)/(2*absMax) * (H-PADT-PADB);
+  const path = (list, key) => list.filter(p=>p[key]!=null)
+    .map((p,i)=>`${i?'L':'M'}${x(p.n).toFixed(1)},${y(p[key]).toFixed(1)}`).join(' ');
 
-  const paths = Object.entries(series).map(([pos,list])=>{
-    list.sort((a,b)=>a.n-b.n);
-    const d = list.map((p,i)=>`${i?'L':'M'}${x(p.n).toFixed(1)},${y(p.tru).toFixed(1)}`).join(' ');
-    return `<path d="${d}" fill="none" stroke="${DRIFT_CURVE_COLORS[pos]}" stroke-width="1.6" opacity=".9"/>`;
+  const grid = [absMax, absMax/2, 0, -absMax/2, -absMax].map(v=>`
+    <line x1="${PADL}" y1="${y(v).toFixed(1)}" x2="${W-PADR}" y2="${y(v).toFixed(1)}"
+      stroke="${v===0?'#2a3542':'#1a222c'}" stroke-width="${v===0?1.2:1}"/>
+    <text x="${PADL-5}" y="${(y(v)+3).toFixed(1)}" fill="#7d8b99" font-size="8.5" text-anchor="end">${v>0?'+':''}${Math.round(v)}</text>`).join('');
+  const xlab = [1, Math.round(maxN/4), Math.round(maxN/2), Math.round(3*maxN/4), maxN]
+    .filter((v,i,a)=>a.indexOf(v)===i && v>=1)
+    .map(n=>`<text x="${x(n).toFixed(1)}" y="${H-10}" fill="#7d8b99" font-size="8.5" text-anchor="middle">${n}</text>`).join('');
+
+  let body;
+  if(driftPos==='ALL'){
+    body = Object.entries(shown).map(([pos,l])=>
+      `<path d="${path(l,'tru')}" fill="none" stroke="${DRIFT_CURVE_COLORS[pos]}" stroke-width="1.6" opacity=".9"/>`).join('');
+  } else {
+    const l = shown[driftPos], col = DRIFT_CURVE_COLORS[driftPos];
+    // shaded gap between the raw price move and the WAR-corrected TruRank
+    const usable = l.filter(p=>p.tru!=null && p.price!=null);
+    const area = usable.length ? `<path d="${
+      usable.map((p,i)=>`${i?'L':'M'}${x(p.n).toFixed(1)},${y(p.price).toFixed(1)}`).join(' ')} ${
+      usable.slice().reverse().map(p=>`L${x(p.n).toFixed(1)},${y(p.tru).toFixed(1)}`).join(' ')}Z"
+      fill="${col}" opacity=".13"/>` : '';
+    body = area
+      + `<path d="${path(l,'price')}" fill="none" stroke="#7d8b99" stroke-width="1.3" stroke-dasharray="5,3"/>`
+      + `<path d="${path(l,'talent')}" fill="none" stroke="#c88cff" stroke-width="1.1" stroke-dasharray="1.5,2.5" opacity=".8"/>`
+      + `<path d="${path(l,'tru')}" fill="none" stroke="${col}" stroke-width="2"/>`;
+  }
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet"
+      role="img" aria-label="Market drift by positional slot">${grid}${xlab}${body}
+    <text x="${PADL}" y="${H-1}" fill="#7d8b99" font-size="8.5">positional slot (${driftPos==='ALL'?'WR1, WR2, …':driftPos+'1, '+driftPos+'2, …'})</text></svg>`;
+}
+
+function driftValueMapSvg(series){
+  const W=680, H=300, PADL=44, PADR=14, PADT=14, PADB=32;
+  const pts = Object.entries(series).flatMap(([pos,l])=>l.filter(p=>p.talent!=null).map(p=>({...p,pos})));
+  if(pts.length < 8) return '<div class="empty-note">Not enough matched slots to map.</div>';
+  const w = ((DATA && DATA.meta && DATA.meta.marketDriftConfig)||{}).talentWeight ?? 0.5;
+  const xMax = Math.max(6, ...pts.map(p=>Math.abs(p.price)));
+  const yMax = Math.max(6, ...pts.map(p=>Math.abs(p.talent)));
+  const X = v => PADL + (v + xMax)/(2*xMax) * (W-PADL-PADR);
+  const Y = v => PADT + (yMax - v)/(2*yMax) * (H-PADT-PADB);
+
+  // TruRank = price + w*talent, so TruRank = 0 is the line talent = -price/w
+  const yAt = px => -px / w;
+  const clamp = v => Math.max(-yMax, Math.min(yMax, v));
+  const zero = `<line x1="${X(-xMax)}" y1="${Y(clamp(yAt(-xMax)))}" x2="${X(xMax)}" y2="${Y(clamp(yAt(xMax)))}"
+    stroke="var(--amber)" stroke-width="1.2" stroke-dasharray="6,4" opacity=".75"/>`;
+
+  const axes = `
+    <line x1="${X(0)}" y1="${PADT}" x2="${X(0)}" y2="${H-PADB}" stroke="#2a3542" stroke-width="1"/>
+    <line x1="${PADL}" y1="${Y(0)}" x2="${W-PADR}" y2="${Y(0)}" stroke="#2a3542" stroke-width="1"/>
+    <text x="${PADL-6}" y="${Y(yMax)+8}" fill="#7d8b99" font-size="8.5" text-anchor="end">+${Math.round(yMax)}</text>
+    <text x="${PADL-6}" y="${Y(-yMax)}" fill="#7d8b99" font-size="8.5" text-anchor="end">−${Math.round(yMax)}</text>
+    <text x="${X(-xMax)+2}" y="${H-PADB+12}" fill="#7d8b99" font-size="8.5">−${Math.round(xMax)}</text>
+    <text x="${X(xMax)-2}" y="${H-PADB+12}" fill="#7d8b99" font-size="8.5" text-anchor="end">+${Math.round(xMax)}</text>
+    <text x="${(W-PADL-PADR)/2+PADL}" y="${H-4}" fill="#7d8b99" font-size="9" text-anchor="middle">← pricier than last year · PRICE DRIFT (picks) · cheaper than last year →</text>`;
+
+  const quad = [
+    [X(xMax)-6, PADT+12, 'end', 'var(--green)', 'cheaper + stronger tier — real edge'],
+    [X(xMax)-6, H-PADB-6, 'end', 'var(--red)', 'cheaper but weaker tier — value trap'],
+    [PADL+6, PADT+12, 'start', '#7d8b99', 'pricier but stronger — premium earned'],
+    [PADL+6, H-PADB-6, 'start', 'var(--red)', 'pricier + weaker — avoid'],
+  ].map(([px,py,anc,col,t])=>`<text x="${px}" y="${py}" fill="${col}" font-size="8.5" text-anchor="${anc}" opacity=".85">${t}</text>`).join('');
+
+  const dots = pts.map(p=>{
+    const fill = p.band==='strong-pos'?'#8bf0b5':p.band==='pos'?'#3ddc84'
+      :p.band==='strong-neg'?'#ff9c9c':p.band==='neg'?'#ff4d4d':'#4a5866';
+    const r = (p.band==='neutral'||p.band==='none')?2:3;
+    return `<circle cx="${X(p.price).toFixed(1)}" cy="${Y(clamp(p.talent)).toFixed(1)}" r="${r}"
+      fill="${fill}" opacity="${r===2?.5:.9}"><title>${p.name} (${p.slot||p.pos+p.n}) — price ${p.price>0?'+':''}${p.price}, talent ${p.talent>0?'+':''}${p.talent}, TruRank ${p.tru>0?'+':''}${p.tru}</title></circle>`;
   }).join('');
 
-  const gridY = [absMax, absMax/2, 0, -absMax/2, -absMax].map(v=>`
-    <line x1="${PADL}" y1="${y(v).toFixed(1)}" x2="${W-PADR}" y2="${y(v).toFixed(1)}"
-      stroke="${v===0?'#2a3542':'#1f2833'}" stroke-width="${v===0?1.2:1}"/>
-    <text x="${PADL-5}" y="${(y(v)+3).toFixed(1)}" fill="#7d8b99" font-size="8.5" text-anchor="end">${v>0?'+':''}${Math.round(v)}</text>`).join('');
-  const gridX = [1, Math.round(maxN/4), Math.round(maxN/2), Math.round(3*maxN/4), maxN]
-    .filter((v,i,a)=>a.indexOf(v)===i)
-    .map(n=>`<text x="${x(n).toFixed(1)}" y="${H-9}" fill="#7d8b99" font-size="8.5" text-anchor="middle">${n}</text>`).join('');
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet"
+      role="img" aria-label="Price drift versus talent drift">${axes}${quad}${zero}${dots}
+    <text x="${X(0)+5}" y="${PADT+9}" fill="#7d8b99" font-size="8.5">talent drift ↑</text>
+    <text x="${W-PADR-4}" y="${Y(clamp(yAt(xMax)))-4}" fill="var(--amber)" font-size="8.5" text-anchor="end" opacity=".9">TruRank = 0</text></svg>`;
+}
 
-  const key = Object.keys(series).sort().map(pos=>
-    `<span><i style="border-color:${DRIFT_CURVE_COLORS[pos]}"></i>${pos}</span>`).join('');
+function driftPanelHtml(){
+  if(!hasDriftData()) return '';
+  const series = driftSeries();
   const cfg = (DATA.meta && DATA.meta.marketDriftConfig) || {};
+  const meta = driftMeta() || {};
+  const w = cfg.talentWeight ?? 0.5;
+  const tabs = ['ALL','QB','RB','WR','TE'].filter(p=>p==='ALL'||series[p])
+    .map(p=>`<button class="drift-tab ${driftPos===p?'on':''}" data-pos="${p}">${p}</button>`).join('');
+  const key = driftPos==='ALL'
+    ? Object.keys(series).sort().map(pos=>`<span><i style="border-color:${DRIFT_CURVE_COLORS[pos]}"></i>${pos}</span>`).join('')
+    : `<span><i style="border-color:#7d8b99;border-top-style:dashed"></i>price move</span>
+       <span><i style="border-color:#c88cff;border-top-style:dotted"></i>talent (WAR rank)</span>
+       <span><i style="border-color:${DRIFT_CURVE_COLORS[driftPos]};border-top-width:3px"></i>TruRank</span>`;
 
-  return `<details class="drift-wrap"><summary>◈ Market drift curve — how each positional slot is priced vs last year</summary>
+  const src = meta.adpSource2026
+    ? `Measured against <b>${String(meta.adpSource2026).toUpperCase()}</b> ADP for 2026 vs <b>${String(meta.adpSource2025).toUpperCase()}</b> for 2025`
+      + (meta.likeForLike ? ' (like-for-like).'
+        : ` — these are different columns, so a constant ${meta.leanRemoved!=null?`${meta.leanRemoved>0?'+':''}${meta.leanRemoved}-pick `:''}lean has been removed. Positional shape is reliable; treat the absolute level as approximate.`)
+    : '';
+
+  return `<details class="drift-wrap" open><summary>◈ Market drift &amp; TruRank — what each positional slot costs vs last year</summary>
     <div class="drift-body">
+      <div class="drift-tabs">${tabs}</div>
       <div class="drift-key">${key}</div>
-      <svg viewBox="0 0 ${W} ${H}" width="100%" preserveAspectRatio="xMidYMid meet" role="img"
-        aria-label="TruRank by positional slot">
-        ${gridY}${gridX}${paths}
-        <text x="${PADL}" y="${H-1}" fill="#7d8b99" font-size="8.5">positional slot (WR1, WR2, ...)</text>
-      </svg>
+      <div id="driftCurveMount">${driftCurveSvg(series)}</div>
       <div class="drift-note">
         Above the zero line = that slot is <b style="color:var(--green)">better value</b> than the same slot cost last year;
         below = <b style="color:var(--red)">more expensive</b> than it's worth. Units are draft picks.
-        Slots are compared like-for-like (WR4 vs last year's WR4), so rookies and new names cost nothing —
-        every player inherits the drift of the slot he occupies.
-        Smoothed over ±${cfg.smoothWindow ?? 2} slots; anything inside ±${cfg.neutralDeadband ?? 6} picks is treated as noise and left uncoloured.
-        <b>Read this before trusting the MKT colours</b> — a trend you already believe in should be visible as a hump or trough here.
+        Slots are compared like-for-like (WR4 vs last year's WR4), so rookies and new names cost nothing.
+        ${driftPos==='ALL'
+          ? `Pick a position above to split TruRank into its two halves.`
+          : `The dashed grey line is the raw price move. The shaded gap between it and the solid line is the
+             <b>WAR correction</b> — where the shading pulls the solid line down, that slot got cheaper because
+             the tier genuinely got worse, not because the market is wrong.`}
+        Smoothed over ±${cfg.smoothWindow ?? 2} slots (talent ±${cfg.talentSmoothWindow ?? 4}); anything inside ±${cfg.neutralDeadband ?? 6} picks is treated as noise.
+        ${src}
+      </div>
+
+      <div class="drift-sub">Value map — price drift vs talent drift</div>
+      ${driftValueMapSvg(series)}
+      <div class="drift-note">
+        Each dot is one positional slot. <b>TruRank = price + ${w} × talent</b>, so the amber diagonal is the
+        break-even line: everything above-right of it is a genuine edge, everything below-left is being
+        overpaid for. The bottom-right quadrant is the one worth staring at — slots that look cheap on price
+        alone but sit there because the tier lost talent. Talent carries ${w} weight because it compares 2026
+        projections against 2025 actuals across a methodology gap: enough to veto a fake bargain, not enough
+        to invent one. Hover any dot for the player and the split.
       </div>
     </div></details>`;
+}
+
+function mountDriftPanel(el){
+  if(!el) return;
+  el.innerHTML = driftPanelHtml();
+  el.querySelectorAll('.drift-tab').forEach(b=>b.addEventListener('click', e=>{
+    e.preventDefault();
+    driftPos = b.dataset.pos;
+    const open = el.querySelector('.drift-wrap')?.open;
+    mountDriftPanel(el);
+    const d = el.querySelector('.drift-wrap');
+    if(d) d.open = open !== false;
+  }));
 }
 
 function renderPlayersTab(){
   const el = document.getElementById('playersView');
   el.innerHTML = `<div class="seclabel">Player Search — all players${isAuctionLeague()?'':' · live drafted-status requires an auction draft log'}</div>
     ${dataSourceLegend()}
-    ${driftCurvePanel()}
+    <div id="driftPanelMount"></div>
     <div id="playersTableMount"></div>`;
+  mountDriftPanel(el.querySelector('#driftPanelMount'));
   const mount = el.querySelector('#playersTableMount');
   const rerender = ()=>renderPlayerTable(mount, {rerender});
   rerender();
