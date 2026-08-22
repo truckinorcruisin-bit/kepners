@@ -1397,8 +1397,8 @@ function renderSnakeDraftLog(lg){
       <datalist id="sdlPlayers">${avail.map(p=>`<option value="${p.name}">`).join('')}</datalist>
       <select id="sdlTeam">
         <option value="">— drafted by —</option>
-        <option value="__me__">★ Me</option>
-        ${lg.teams.filter(t=>!t.isMe).map(t=>`<option value="${t.team}" ${onClockTeam&&onClockTeam.team===t.team?'selected':''}>${t.team}</option>`).join('')}
+        <option value="__me__" ${onClockTeam&&onClockTeam.isMe?'selected':''}>★ Me</option>
+        ${lg.teams.filter(t=>!t.isMe).map(t=>`<option value="${t.team}" ${onClockTeam&&!onClockTeam.isMe&&onClockTeam.team===t.team?'selected':''}>${t.team}</option>`).join('')}
       </select>
       <button id="sdlAdd">ADD</button>
       <button id="sdlClear" class="sdl-secondary" ${snakeDraft.picks.length?'':'disabled'}>CLEAR</button>
