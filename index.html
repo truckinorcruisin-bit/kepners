@@ -2945,10 +2945,26 @@ function ptRows(){
 
   // sort
   const k = playerTable.sortKey, dir = playerTable.sortDir==='asc'?1:-1;
+  // BUG FIXED: "blank" only caught null/'' -- but some numeric fields (Yahoo
+  // Rk in particular) hold the literal string "#N/A", an Excel formula-error
+  // value that leaked through convert_bigboard.py unconverted to a real
+  // null. That string is neither null nor '', so it fell through to a STRING
+  // comparison against the numeric ranks, and "#" sorts before any digit --
+  // so #N/A rows bubbled to the TOP on ascending sort instead of the bottom,
+  // regardless of direction, exactly the opposite of every other blank value.
+  const isBlank = (v) => {
+    if(v==null || v==='') return true;
+    if(typeof v==='number' && Number.isNaN(v)) return true;
+    if(typeof v==='string'){
+      const t = v.trim().toUpperCase();
+      if(t==='#N/A' || t==='N/A' || t==='NAN') return true;
+    }
+    return false;
+  };
   rows.sort((a,b)=>{
     let av=a[k], bv=b[k];
-    // nulls always sort last regardless of direction
-    const an=(av==null||av===''), bn=(bv==null||bv==='');
+    // blanks always sort last regardless of direction
+    const an=isBlank(av), bn=isBlank(bv);
     if(an&&bn) return 0;
     if(an) return 1;
     if(bn) return -1;
