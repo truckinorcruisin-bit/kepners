@@ -298,6 +298,21 @@
 
   /* ===== owner drafting profiles (Kepners) ===== */
   .owner-card{background:var(--panel);border:1px solid var(--line);padding:9px 11px;margin-bottom:7px;}
+  /* QB/TE timing badges + league run summary */
+  .tm-row{display:flex;gap:6px;flex-wrap:wrap;margin:5px 0 4px;}
+  .tm-badge{font-size:9px;padding:2px 6px;border:1px solid var(--line-2);display:flex;
+    flex-direction:column;line-height:1.3;min-width:78px;}
+  .tm-badge .tm-sub{color:var(--dim);font-size:8px;}
+  .tm-aggr{border-color:var(--red);color:var(--red);}
+  .tm-pat{border-color:var(--cyan);color:var(--cyan);}
+  .tm-mkt{border-color:var(--line-2);color:var(--dim);}
+  .tm-none{border-style:dashed;color:var(--dim);}
+  .tm-summary{background:var(--panel);border:1px solid var(--line-2);padding:9px 11px;margin-bottom:9px;}
+  .tm-sum-hdr{font-size:9px;color:var(--amber);margin-bottom:4px;letter-spacing:0.5px;}
+  .tm-sum-row{font-size:9.5px;color:var(--txt);line-height:1.6;}
+  .tm-hl{color:var(--cyan);}
+  .tm-foot{font-size:8.5px;color:var(--dim);margin-top:7px;line-height:1.5;
+    border-top:1px solid var(--line);padding-top:6px;}
   .owner-card.me{border-color:var(--amber);}
   .owner-head{display:flex;justify-content:space-between;align-items:baseline;}
   .owner-name{font-size:12px;font-weight:700;color:var(--txt);}
@@ -514,6 +529,41 @@
   .myteam-cell .mt-empty{color:var(--line-2);}
 
   .deepDiveArea .dd-head{border-bottom:1px solid var(--line-2);padding-bottom:8px;margin-bottom:10px;}
+  /* --- Next Best Pick recommendation (shown when nothing is selected) --- */
+  .rec-wrap{border:1px solid var(--line-2);background:var(--panel);padding:9px 10px;}
+  .rec-hdr{font-size:9px;color:var(--dim);margin-bottom:7px;line-height:1.4;}
+  .rec-top{border:1px solid var(--amber);padding:7px 8px;margin-bottom:8px;background:rgba(255,183,3,0.05);}
+  .rec-top .rec-nm{color:var(--amber);font-size:13px;font-weight:700;}
+  .rec-top .rec-meta{font-size:9.5px;color:var(--dim);margin-top:2px;}
+  .rec-why{margin-top:5px;display:flex;flex-direction:column;gap:2px;}
+  .rec-why div{font-size:9.5px;color:var(--txt);}
+  .rec-why .rec-b{color:var(--cyan);}
+  .rec-alt{display:flex;gap:6px;align-items:baseline;font-size:10px;padding:3px 0;
+    border-top:1px solid var(--line);cursor:pointer;}
+  .rec-alt:hover{background:var(--line);}
+  .rec-alt .rec-rank{color:var(--dim);flex:0 0 14px;}
+  .rec-alt .rec-an{flex:1 1 auto;}
+  .rec-alt .rec-ap{color:var(--dim);flex:0 0 30px;}
+  .rec-alt .rec-aw{flex:0 0 46px;text-align:right;color:var(--green);font-variant-numeric:tabular-nums;}
+  /* --- Top liked players + availability colour coding --- */
+  .liked-wrap{border:1px solid var(--line-2);background:var(--panel);padding:8px 10px;margin-top:10px;}
+  .liked-row{display:flex;gap:6px;align-items:baseline;font-size:10px;padding:3px 0;
+    border-top:1px solid var(--line);cursor:pointer;}
+  .liked-row:first-of-type{border-top:none;}
+  .liked-row:hover{background:var(--line);}
+  .liked-dot{flex:0 0 8px;height:8px;border-radius:50%;align-self:center;}
+  .liked-dot.gone{background:var(--red);}
+  .liked-dot.risky{background:var(--amber);}
+  .liked-dot.safe{background:var(--green);}
+  .liked-nm{flex:1 1 auto;}
+  .liked-pos{color:var(--dim);flex:0 0 32px;}
+  .liked-edge{flex:0 0 52px;text-align:right;color:var(--cyan);font-variant-numeric:tabular-nums;}
+  .liked-war{flex:0 0 46px;text-align:right;font-variant-numeric:tabular-nums;}
+  .liked-legend{font-size:8.5px;color:var(--dim);margin-top:6px;line-height:1.5;display:flex;
+    gap:10px;flex-wrap:wrap;}
+  .liked-legend b{font-weight:400;}
+  .liked-key{display:inline-flex;gap:4px;align-items:center;}
+  .liked-key i{width:7px;height:7px;border-radius:50%;display:inline-block;}
   .dd-name{font-size:15px;font-weight:700;color:var(--amber);}
   .dd-sub{font-size:10px;color:var(--dim);margin-top:2px;}
   .dd-block{margin-bottom:11px;}
@@ -565,12 +615,13 @@
         <div class="cockpit-col">
           <div class="seclabel">Player Board</div>
           <div class="snakePlayerArea"></div>
+          <div id="likedBoardArea"></div>
         </div>
         <div class="cockpit-resizer" id="snakeResizer" title="Drag to resize board vs draft log/deep-dive column"></div>
         <div class="cockpit-col panel-scroll">
           <div class="seclabel">Draft Log — <span id="snakeLogTurn"></span></div>
           <div id="snakeDraftLog"></div>
-          <div class="seclabel" style="margin-top:14px;">Player Deep Dive</div>
+          <div class="seclabel" style="margin-top:14px;" id="deepDiveLabel">Player Deep Dive</div>
           <div class="deepDiveArea" id="deepDiveArea"></div>
         </div>
       </div>
@@ -954,6 +1005,7 @@ function render(){
   renderSnakeBanner(lg);
   renderMyTeam(lg);
   renderSnakePlayerBoard(lg);
+  renderLikedBoard(lg);
   renderDeepDive(lg);
   renderSnakeDraftLog(lg);
   renderRostersByTeam(lg);
@@ -1804,16 +1856,246 @@ function driftReadBlock(player){
     </div>`;
 }
 
+// ---------- Next Best Pick engine + "players I like" ----------
+
+// The overall pick numbers of my next two turns, accounting for picks already
+// logged. The older availabilityEstimate() approximates my next pick as my
+// draft slot (i.e. pre-draft only) -- that's fine for its purposes but useless
+// once a draft is underway, so these do it properly off the live log.
+function myUpcomingPicks(lg){
+  const teams = (lg.teams||[]).length;
+  const me = (lg.teams||[]).find(t=>t.isMe);
+  const slot = me && me.draftPosition;
+  if(!slot || !teams) return {next:null, after:null, teams, slot:slot||null};
+  const start = snakeDraft.picks.length + 1;
+  const mine = [];
+  // scan far enough ahead to always catch two of my turns (a snake turn gap
+  // is at most 2*teams), with headroom.
+  for(let o=start; o<start + teams*4 + 4 && mine.length<2; o++){
+    if(snakeSlotForOverall(o, teams) === slot) mine.push(o);
+  }
+  return {next: mine[0] ?? null, after: mine[1] ?? null, teams, slot};
+}
+
+// How much *I* like a player relative to the market.
+// Prefers the Big Board's explicit "like" column when populated; otherwise
+// derives it from how much higher I rank the player than consensus
+// (Target Rk vs Yahoo Rk). Returns null when there's no signal either way.
+// NOTE: as of this writing the explicit `like` column is empty for all 300
+// players in bigboard.json, so in practice this is running on the derived
+// signal -- see the note rendered in the panel header.
+function likeScore(p){
+  const raw = p.like;
+  if(raw!=null && String(raw).trim()!==''){
+    const s = String(raw).trim();
+    const n = Number(s);
+    if(!Number.isNaN(n)) return n * 6;          // numeric rating -> scale to rank-ish units
+    if(/^(y|yes|like|love|target|★+|\*+)$/i.test(s)) return 18;  // flag-style entry
+  }
+  // Derived: positive = I'm higher on him than the market is.
+  if(p.seanRankOverall!=null && p.avgRank!=null && !isBlankVal(p.avgRank)){
+    return p.avgRank - p.seanRankOverall;
+  }
+  return null;
+}
+
+// Shared blank test (Excel "#N/A" leaks through as a string, see ptRows sort).
+function isBlankVal(v){
+  if(v==null || v==='') return true;
+  if(typeof v==='number' && Number.isNaN(v)) return true;
+  if(typeof v==='string'){
+    const t = v.trim().toUpperCase();
+    if(t==='#N/A' || t==='N/A' || t==='NAN') return true;
+  }
+  return false;
+}
+
+// Will this player still be on the board at `targetOverall`?
+// Banded against consensus rank with one round of ADP noise as the tolerance,
+// since treating ADP as exact would make every call falsely confident.
+function availabilityAt(p, targetOverall, teams){
+  if(targetOverall==null || isBlankVal(p.avgRank) || p.avgRank==null){
+    return {cls:'risky', label:'unknown', cushion:null};
+  }
+  const cushion = p.avgRank - targetOverall;   // + = ADP says he lasts past my pick
+  const band = teams || 12;                    // ~one round of ADP slop
+  if(cushion >= band)  return {cls:'safe',  label:'should last', cushion};
+  if(cushion >= -band) return {cls:'risky', label:'coin flip',   cushion};
+  return {cls:'gone', label:'likely gone', cushion};
+}
+
+// Players I like best, still available, ranked by like-signal.
+function topLikedPlayers(lg, n){
+  const drafted = ptDraftedMap();
+  const rosterable = leagueRosterablePositions(lg);
+  return DATA.players
+    .filter(p=>p.pos && p.pos!=='NA' && !drafted[p.id] && (!rosterable || rosterable.has(p.pos)))
+    .map(p=>({p, like:likeScore(p), war:warOf(p)}))
+    .filter(x=>x.like!=null && x.like>0)      // only players I'm actually higher on
+    .sort((a,b)=>b.like-a.like)
+    .slice(0, n||10);
+}
+
+// The actual recommendation. Deliberately built on ADJUSTED WAR rather than
+// raw WAR, because adjusted already encodes roster construction -- it decays a
+// position's value once my starting slots there are full (see
+// rosterFillFactors), which is exactly the "factor in roster construction"
+// requirement. On top of that:
+//   + a like bonus, so my own board beats the market's when I disagree
+//   + a scarcity bonus for players who won't survive to my next turn, since
+//     equal value now vs later isn't equal if he's gone by then
+function recommendNextPicks(lg, n){
+  const drafted = ptDraftedMap();
+  const rosterable = leagueRosterablePositions(lg);
+  const {next, after, teams} = myUpcomingPicks(lg);
+  const factors = rosterFillFactors();
+
+  const scored = DATA.players
+    .filter(p=>p.pos && p.pos!=='NA' && !drafted[p.id] && (!rosterable || rosterable.has(p.pos)))
+    .map(p=>{
+      const adj = computeAdjustedWar(p, factors);
+      if(adj==null) return null;
+      const like = likeScore(p) || 0;
+      // Cap the like bonus so a deep sleeper I'm 60 spots high on can't
+      // leapfrog a genuinely elite player -- it should break ties and tilt
+      // close calls, not override the value model.
+      const likeBonus = Math.max(-15, Math.min(15, like * 0.35));
+      // Scarcity: only rewards players who won't be there next turn. Uses my
+      // pick AFTER next, because the real question is "if I pass now, is he
+      // there when I'm back?"
+      const av = availabilityAt(p, after, teams);
+      const scarcity = av.cls==='gone' ? 10 : av.cls==='risky' ? 4 : 0;
+      return {p, adj, like, likeBonus, scarcity, av, score: adj + likeBonus + scarcity};
+    })
+    .filter(Boolean)
+    .sort((a,b)=>b.score-a.score);
+
+  return {list: scored.slice(0, n||6), next, after, teams};
+}
+
+function renderNextBestPick(lg){
+  const rec = recommendNextPicks(lg, 6);
+  if(!rec.list.length){
+    return `<div class="empty-note">No recommendation available — needs WAR projections on the board.</div>`;
+  }
+  const top = rec.list[0];
+  const {counts} = myRosterPositions(lg);
+  const roster = lg.rosterSlots || [];
+  const startersAtPos = roster.filter(s=>s===top.p.pos).length;
+  const have = counts[top.p.pos] || 0;
+  const fitLine = have < startersAtPos
+    ? `fills an open ${top.p.pos} starting slot (${have}/${startersAtPos})`
+    : `${top.p.pos} starters already filled (${have}/${startersAtPos}) — valued as depth`;
+
+  const usingDerivedLike = !DATA.players.some(p=>p.like!=null && String(p.like).trim()!=='');
+
+  const alts = rec.list.slice(1).map((x,i)=>`
+    <div class="rec-alt" data-pid="${x.p.id}" title="Click to open in Deep Dive">
+      <span class="rec-rank">${i+2}</span>
+      <span class="rec-an">${x.p.name}</span>
+      <span class="rec-ap">${x.p.pos}</span>
+      <span class="rec-aw">${x.adj>0?'+':''}${x.adj}</span>
+    </div>`).join('');
+
+  return `<div class="rec-wrap">
+    <div class="rec-hdr">
+      Nothing selected — here's my recommendation for
+      <b style="color:var(--cyan)">${rec.next?`pick #${rec.next}`:'your next pick'}</b>.
+      Ranked on Adjusted WAR (already roster-aware), plus how much higher you rank them than
+      consensus, plus scarcity if they won't survive to your following pick${rec.after?` (#${rec.after})`:''}.
+    </div>
+    <div class="rec-top">
+      <div class="rec-nm">${top.p.name}</div>
+      <div class="rec-meta">${top.p.pos}${top.p.proTeamEspn||top.p.team?` · ${top.p.proTeamEspn||top.p.team}`:''}
+        · Yahoo ADP ${isBlankVal(top.p.avgRank)?'—':'#'+top.p.avgRank}
+        ${top.p.seanPosRank>0?` · your ${top.p.pos}#${top.p.seanPosRank}`:''}</div>
+      <div class="rec-why">
+        <div><span class="rec-b">Value:</span> ${top.adj>0?'+':''}${top.adj} adjusted WAR${
+          warOf(top.p)!=null&&warOf(top.p)!==top.adj?` (raw ${warOf(top.p)>0?'+':''}${Math.round(warOf(top.p)*10)/10})`:''}</div>
+        <div><span class="rec-b">Roster:</span> ${fitLine}</div>
+        <div><span class="rec-b">Your board:</span> ${
+          top.like>0?`you're ${Math.round(top.like)} spots higher on him than consensus`
+          : top.like<0?`consensus is ${Math.abs(Math.round(top.like))} spots higher on him than you`
+          : 'in line with consensus'}</div>
+        <div><span class="rec-b">If you pass:</span> ${top.av.label}${
+          rec.after?` at your next turn (#${rec.after})`:''}</div>
+      </div>
+    </div>
+    ${alts?`<div style="font-size:9px;color:var(--dim);margin-bottom:2px;">OTHER OPTIONS</div>${alts}`:''}
+    ${usingDerivedLike?`<div style="font-size:8.5px;color:var(--dim);margin-top:7px;line-height:1.4;">
+      Note: the Big Board's "like" column is empty, so "your board" is derived from Target Rk vs
+      Yahoo Rk. Fill column 6 of the Big Board to drive this from an explicit list instead.</div>`:''}
+  </div>`;
+}
+
+function renderLikedBoard(lg){
+  const el = document.getElementById('likedBoardArea');
+  if(!el) return;
+  if(isAuctionLeague()){ el.innerHTML=''; return; }
+  const {after, teams} = myUpcomingPicks(lg);
+  const liked = topLikedPlayers(lg, 10);
+  if(!liked.length){
+    el.innerHTML = `<div class="liked-wrap"><div style="font-size:9px;color:var(--dim);">
+      No "liked" players to show — needs either the Big Board's like column filled in, or your own
+      position ranks (Target Rk) to differ from consensus.</div></div>`;
+    return;
+  }
+  const rows = liked.map(x=>{
+    const av = availabilityAt(x.p, after, teams);
+    return `<div class="liked-row" data-pid="${x.p.id}" title="${av.label}${av.cushion!=null?` — ADP #${x.p.avgRank} vs your next-next pick #${after}`:''}. Click to open in Deep Dive.">
+      <span class="liked-dot ${av.cls}"></span>
+      <span class="liked-nm">${x.p.name}</span>
+      <span class="liked-pos">${x.p.pos}</span>
+      <span class="liked-edge">+${Math.round(x.like)}</span>
+      <span class="liked-war">${x.war!=null?(x.war>0?'+':'')+Math.round(x.war*10)/10:'—'}</span>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `<div class="liked-wrap">
+    <div style="font-size:9px;color:var(--dim);margin-bottom:5px;">
+      TOP 10 PLAYERS YOU LIKE — colour = will he last until your next turn${after?` (pick #${after})`:''}?
+    </div>
+    ${rows}
+    <div class="liked-legend">
+      <span class="liked-key"><i style="background:var(--green)"></i>should last</span>
+      <span class="liked-key"><i style="background:var(--amber)"></i>coin flip</span>
+      <span class="liked-key"><i style="background:var(--red)"></i>likely gone</span>
+      <span><b>+N</b> = spots higher you rank him vs consensus · last column = WAR</span>
+    </div>
+  </div>`;
+
+  el.querySelectorAll('.liked-row').forEach(r=>{
+    r.onclick = ()=>{
+      snakeDraft.selectedPlayerId = r.dataset.pid;
+      zimmerDraft.selectedPlayerId = r.dataset.pid;
+      render();
+    };
+  });
+}
+
 function renderDeepDive(lg){
   const el = document.getElementById('deepDiveArea');
   if(!el) return;
   const pid = snakeDraft.selectedPlayerId;
   const player = pid ? DATA.players.find(p=>p.id===pid) : null;
   if(!player){
-    el.innerHTML = `<div class="empty-note">Select a player from the board to see availability odds,
-      roster fit, bye overlaps, stacking, and tier read.</div>`;
+    // Nothing selected: this panel is prime real estate during a live draft,
+    // so use it for an actual recommendation instead of a "select a player"
+    // placeholder.
+    const lbl = document.getElementById('deepDiveLabel');
+    if(lbl) lbl.textContent = 'Next Best Pick';
+    el.innerHTML = renderNextBestPick(lg);
+    el.querySelectorAll('.rec-alt').forEach(r=>{
+      r.onclick = ()=>{
+        snakeDraft.selectedPlayerId = r.dataset.pid;
+        zimmerDraft.selectedPlayerId = r.dataset.pid;
+        render();
+      };
+    });
     return;
   }
+  const lbl = document.getElementById('deepDiveLabel');
+  if(lbl) lbl.textContent = 'Player Deep Dive';
 
   const {counts} = myRosterPositions(lg);
   const avail = availabilityEstimate(player, lg);
@@ -2031,20 +2313,98 @@ function renderOwnerProfiles(lg){
     return;
   }
   const single = KEPA.seasons_analyzed.length===1;
+  const TIMING_POS = ['QB','TE'];
+  const stanceCls = (s)=> s==='aggressive' ? 'tm-aggr' : s==='patient' ? 'tm-pat' : 'tm-mkt';
+
   const cards = KEPA.owners.map(o=>{
     const me = lg.teams.find(t=>t.manager===o.manager && t.isMe);
+    // QB/TE timing badges -- the signal RB/WR-centric profiling misses.
+    // "gone first" (how many at that position were already off the board) is
+    // what separates starting a run from getting swept up in one.
+    const badges = TIMING_POS.map(pos=>{
+      const t = (o.position_timing||{})[pos];
+      if(!t) return '';
+      if(!t.drafted) return `<span class="tm-badge tm-none">${pos} —<span class="tm-sub">none drafted</span></span>`;
+      // Reach vs the Yahoo board that year: + = took him earlier than ADP.
+      const rp = (o.reach_vs_adp||{})[pos];
+      const reachTxt = rp && rp.sample
+        ? `${rp.median_reach>0?'+':''}${Math.round(rp.median_reach)} vs ADP`
+        : `${t.started_the_run?'★ started the run':`${t.gone_before} gone first`}`;
+      return `<span class="tm-badge ${stanceCls(t.stance)}" title="${t.player} at overall #${t.overall}${t.vs_median_rounds!=null?`; ${Math.abs(t.vs_median_rounds)} round(s) ${t.vs_median_rounds<0?'earlier':'later'} than league median`:''}${rp&&rp.sample?`; median ${Math.abs(Math.round(rp.median_reach))} picks ${rp.median_reach>0?'earlier':'later'} than Yahoo ADP across ${rp.sample} ${pos} pick(s)`:''}">
+        ${pos} R${t.round}
+        <span class="tm-sub">${t.started_the_run?'★ ran first · ':''}${reachTxt}</span>
+      </span>`;
+    }).join('');
+    // Overall draft-wide reach tendency
+    const ov = (o.reach_vs_adp||{}).overall;
+    const ovBadge = ov && ov.sample
+      ? `<span class="tm-badge ${ov.median_reach>8?'tm-aggr':ov.median_reach<0?'tm-pat':'tm-mkt'}"
+           title="Median across ${ov.sample} non-keeper picks. Biggest reach: ${ov.biggest_reach.player} (${ov.biggest_reach.position}) at overall #${ov.biggest_reach.overall} vs ADP ${ov.biggest_reach.adp}.">
+          ALL ${ov.median_reach>0?'+':''}${Math.round(ov.median_reach)}<span class="tm-sub">vs Yahoo ADP</span></span>`
+      : '';
     return `<div class="owner-card ${me?'me':''}">
       <div class="owner-head">
         <span class="owner-name">${o.manager}${me?' ★':''}</span>
         <span class="owner-team">${o.team}</span>
       </div>
+      <div class="tm-row">${badges}${ovBadge}</div>
       <div class="owner-note">${o.strategy_note}</div>
     </div>`;
   }).join('');
+
+  // League-wide QB/TE timing reference + detected runs
+  const timing = KEPA.position_timing || {};
+  const runs = KEPA.positional_runs || [];
+  const timingSummary = TIMING_POS.filter(p=>timing[p]).map(pos=>{
+    const d = timing[pos];
+    const fo = d.first_off_board;
+    return `<div class="tm-sum-row"><b>${pos}</b>
+      first off the board: <b class="tm-hl">${fo.player}</b> at overall #${fo.overall}
+      (R${fo.round}, ${fo.manager}) · league median first ${pos}: <b class="tm-hl">R${d.median_first_round}</b>
+      · ${d.owners_who_drafted}/${KEPA.owners.length} owners drafted one</div>`;
+  }).join('');
+  const runsList = runs.length ? runs.map(r=>
+    `<div class="tm-sum-row">▸ <b>${r.count} ${r.position}s</b> went between overall
+      #${r.start_overall}–${r.end_overall} (from R${r.start_round}) — started by
+      <b class="tm-hl">${r.started_by||'—'}</b></div>`).join('')
+    : '<div class="tm-sum-row">No positional runs detected.</div>';
+
+  // Who reaches hardest at the scarce positions, vs the Yahoo board that year
+  const reachRank = (pos)=>{
+    const rows = KEPA.owners
+      .map(o=>({m:o.manager, r:(o.reach_vs_adp||{})[pos]}))
+      .filter(x=>x.r && x.r.sample)
+      .sort((a,b)=>b.r.median_reach-a.r.median_reach);
+    if(!rows.length) return '';
+    const fmt = x=>`<b class="tm-hl">${x.m}</b> ${x.r.median_reach>0?'+':''}${Math.round(x.r.median_reach)}`;
+    return `<div class="tm-sum-row"><b>${pos}</b> most aggressive vs ADP: ${
+      rows.slice(0,3).map(fmt).join(' · ')}${rows.length>3?` &nbsp;·&nbsp; most patient: ${fmt(rows[rows.length-1])}`:''}</div>`;
+  };
+  const hasReach = KEPA.owners.some(o=>(o.reach_vs_adp||{}).overall);
+  const reachBlock = hasReach
+    ? `<div class="tm-sum-hdr" style="margin-top:7px;">REACH vs YAHOO ADP (median picks earlier than ADP)</div>
+       ${TIMING_POS.map(reachRank).join('')}`
+    : `<div class="tm-sum-hdr" style="margin-top:7px;">REACH vs YAHOO ADP</div>
+       <div class="tm-sum-row">Not available — run "Update Big Board Data" to generate
+       <code>kepners_adp_2025.json</code>, then re-run "Update Kepners Analysis".</div>`;
+
   el.innerHTML = `<div class="seclabel">Owner Drafting Profiles
     <span style="font-size:9px;color:var(--dim);font-weight:400;">
       — ${KEPA.seasons_analyzed.join(', ')}${single?' (single season — will sharpen as more years are added)':''}
     </span></div>
+    ${timingSummary||runs.length ? `<div class="tm-summary">
+      <div class="tm-sum-hdr">QB / TE TIMING — when the scarce positions come off the board</div>
+      ${timingSummary}
+      <div class="tm-sum-hdr" style="margin-top:7px;">DETECTED RUNS (3+ at a position inside 14 picks)</div>
+      ${runsList}
+      ${reachBlock}
+      <div class="tm-foot">Reach is measured against the <b>Yahoo</b> ADP from that season's Big Board
+        (column M), since Kepners drafts on Yahoo — not a cross-platform blend nobody here drafted from.
+        Keepers are excluded: their round is set by last year's cost, not a decision made against this
+        year's board. Stance compares to this league's own median first-pick round, and "gone first"
+        counts how many at that position were already drafted — separating the owner who <b>starts</b>
+        a run from one swept into it.</div>
+    </div>` : ''}
     ${cards}
     ${(KEPA.unmatched_team_labels||[]).length ? `<div class="do-unmatched">⚠ unmatched team label(s) in the parsed history: ${KEPA.unmatched_team_labels.join(', ')}</div>` : ''}`;
 }
@@ -2952,19 +3312,13 @@ function ptRows(){
   // comparison against the numeric ranks, and "#" sorts before any digit --
   // so #N/A rows bubbled to the TOP on ascending sort instead of the bottom,
   // regardless of direction, exactly the opposite of every other blank value.
-  const isBlank = (v) => {
-    if(v==null || v==='') return true;
-    if(typeof v==='number' && Number.isNaN(v)) return true;
-    if(typeof v==='string'){
-      const t = v.trim().toUpperCase();
-      if(t==='#N/A' || t==='N/A' || t==='NAN') return true;
-    }
-    return false;
-  };
+  // Uses the shared isBlankVal() helper -- same rule the recommendation
+  // engine applies, so a value can't count as "blank" in one place and a real
+  // number in another.
   rows.sort((a,b)=>{
     let av=a[k], bv=b[k];
     // blanks always sort last regardless of direction
-    const an=isBlank(av), bn=isBlank(bv);
+    const an=isBlankVal(av), bn=isBlankVal(bv);
     if(an&&bn) return 0;
     if(an) return 1;
     if(bn) return -1;

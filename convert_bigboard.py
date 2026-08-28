@@ -527,6 +527,45 @@ def keeper_value_tiers_for_league(players, league_key, teams, roster_slots):
     }
 
 
+ADP_2025_SHEET = "2025 Big Board"
+ADP_2025_OUT = "kepners_adp_2025.json"
+
+
+def read_2025_yahoo_adp(wb):
+    """Extracts the 2025 season's Yahoo ADP from the '2025 Big Board' tab so
+    past drafts can be graded on reach-vs-ADP *as it stood that year*.
+
+    Column M ("Y!") is deliberately used rather than column U ("Avg Rank",
+    which market_drift.read_2025_board pulls): Kepners drafts on Yahoo, so the
+    Yahoo board is the market those owners were actually looking at. Grading
+    reach against a cross-platform blended average would measure it against a
+    market nobody in this league drafted from.
+
+    Defenses need special handling: the Big Board lists them as full team
+    names ("Denver Broncos") while the Yahoo draft export uses the nickname
+    only ("Broncos"), so both keys are emitted. Without this ~12 picks per
+    season silently drop out of the sample.
+    """
+    if ADP_2025_SHEET not in wb.sheetnames:
+        return {}
+    ws = wb[ADP_2025_SHEET]
+    COL_PLAYER, COL_POS, COL_YAHOO = 7, 9, 13   # G / I / M, header row 6
+    adp = {}
+    for r in range(7, ws.max_row + 1):
+        name = norm(ws.cell(r, COL_PLAYER).value)
+        if not name:
+            continue
+        raw = ws.cell(r, COL_YAHOO).value
+        if not isinstance(raw, (int, float)):
+            continue          # "-", "#N/A" or blank -> genuinely no Yahoo rank
+        rank = float(raw)
+        adp[normalize_name(name)] = rank
+        pos = canonical_position(norm(ws.cell(r, COL_POS).value))
+        if pos == "DEF":
+            adp[normalize_name(name.split()[-1])] = rank
+    return adp
+
+
 def main(src, dst):
     # Lazy import: openpyxl is only needed here (Excel parsing), not by the
     # rest of this module (e.g. normalize_name, which other scripts like
@@ -622,6 +661,21 @@ def main(src, dst):
         has_rules = "rules" in v
         print(f"  {k}: {len(v['teams'])} teams, {len(v['keepers'])} keepers, "
               f"roster={v['rosterSlots']}, rules_loaded={has_rules}")
+
+    # Historical Yahoo ADP, written as its own file rather than folded into
+    # bigboard.json because its only consumer is kepners_analysis.py, which
+    # runs in a DIFFERENT workflow. Keeping it separate means the analysis
+    # step doesn't have to parse the whole board just to grade reach.
+    adp_2025 = read_2025_yahoo_adp(wb)
+    if adp_2025:
+        with open(ADP_2025_OUT, "w") as f:
+            json.dump({"season": 2025, "source": f"{ADP_2025_SHEET} col M (Y!)",
+                       "yahoo_adp": adp_2025}, f, indent=2)
+        print(f"Wrote {ADP_2025_OUT}: {len(adp_2025)} player ADP entries "
+              f"(incl. defense nickname aliases).")
+    else:
+        print(f"NOTE: no '{ADP_2025_SHEET}' tab found -- skipped {ADP_2025_OUT}. "
+              "Reach-vs-ADP analysis will be unavailable in kepners_analysis.py.")
 
 
 if __name__ == "__main__":
