@@ -280,6 +280,354 @@
       }
     ]
   },
+  "position_timing": {
+    "QB": {
+      "total_drafted": 18,
+      "first_off_board": {
+        "overall": 23,
+        "round": 2,
+        "manager": "Greene",
+        "player": "Josh Allen"
+      },
+      "median_first_round": 7,
+      "owners_who_drafted": 12,
+      "first_pick_by_manager": {
+        "Greene": {
+          "round": 2,
+          "overall": 23,
+          "gone_before": 0,
+          "player": "Josh Allen"
+        },
+        "Bobby": {
+          "round": 3,
+          "overall": 25,
+          "gone_before": 1,
+          "player": "Lamar Jackson"
+        },
+        "Neary": {
+          "round": 3,
+          "overall": 28,
+          "gone_before": 2,
+          "player": "Jalen Hurts"
+        },
+        "Weber": {
+          "round": 3,
+          "overall": 35,
+          "gone_before": 3,
+          "player": "Joe Burrow"
+        },
+        "Matty": {
+          "round": 4,
+          "overall": 43,
+          "gone_before": 4,
+          "player": "Patrick Mahomes"
+        },
+        "Mike/Brad": {
+          "round": 5,
+          "overall": 60,
+          "gone_before": 5,
+          "player": "Bo Nix"
+        },
+        "Scott": {
+          "round": 7,
+          "overall": 80,
+          "gone_before": 6,
+          "player": "Baker Mayfield"
+        },
+        "Steve": {
+          "round": 7,
+          "overall": 82,
+          "gone_before": 7,
+          "player": "J.J. McCarthy"
+        },
+        "Ditto": {
+          "round": 8,
+          "overall": 92,
+          "gone_before": 8,
+          "player": "Brock Purdy"
+        },
+        "Berdine": {
+          "round": 10,
+          "overall": 112,
+          "gone_before": 10,
+          "player": "Kyler Murray"
+        },
+        "Mikey": {
+          "round": 11,
+          "overall": 123,
+          "gone_before": 12,
+          "player": "Dak Prescott"
+        },
+        "Mullins": {
+          "round": 12,
+          "overall": 138,
+          "gone_before": 13,
+          "player": "Caleb Williams"
+        }
+      }
+    },
+    "TE": {
+      "total_drafted": 13,
+      "first_off_board": {
+        "overall": 18,
+        "round": 2,
+        "manager": "Mullins",
+        "player": "George Kittle"
+      },
+      "median_first_round": 9,
+      "owners_who_drafted": 10,
+      "first_pick_by_manager": {
+        "Mullins": {
+          "round": 2,
+          "overall": 18,
+          "gone_before": 0,
+          "player": "George Kittle"
+        },
+        "Matty": {
+          "round": 5,
+          "overall": 54,
+          "gone_before": 1,
+          "player": "Mark Andrews"
+        },
+        "Bobby": {
+          "round": 7,
+          "overall": 73,
+          "gone_before": 2,
+          "player": "Travis Kelce"
+        },
+        "Neary": {
+          "round": 7,
+          "overall": 76,
+          "gone_before": 3,
+          "player": "David Njoku"
+        },
+        "Mike/Brad": {
+          "round": 8,
+          "overall": 85,
+          "gone_before": 4,
+          "player": "Tyler Warren"
+        },
+        "Mikey": {
+          "round": 9,
+          "overall": 99,
+          "gone_before": 5,
+          "player": "Tucker Kraft"
+        },
+        "Weber": {
+          "round": 9,
+          "overall": 107,
+          "gone_before": 6,
+          "player": "Evan Engram"
+        },
+        "Berdine": {
+          "round": 11,
+          "overall": 129,
+          "gone_before": 7,
+          "player": "Zach Ertz"
+        },
+        "Steve": {
+          "round": 11,
+          "overall": 130,
+          "gone_before": 8,
+          "player": "Colston Loveland"
+        },
+        "Greene": {
+          "round": 16,
+          "overall": 191,
+          "gone_before": 12,
+          "player": "Terrance Ferguson"
+        }
+      }
+    }
+  },
+  "positional_runs": [
+    {
+      "position": "QB",
+      "start_overall": 23,
+      "end_overall": 35,
+      "start_round": 2,
+      "count": 4,
+      "started_by": "Greene",
+      "started_by_team": "Phony Grossi",
+      "members": [
+        {
+          "overall": 23,
+          "round": 2,
+          "manager": "Greene",
+          "player": "Josh Allen"
+        },
+        {
+          "overall": 25,
+          "round": 3,
+          "manager": "Bobby",
+          "player": "Lamar Jackson"
+        },
+        {
+          "overall": 28,
+          "round": 3,
+          "manager": "Neary",
+          "player": "Jalen Hurts"
+        },
+        {
+          "overall": 35,
+          "round": 3,
+          "manager": "Weber",
+          "player": "Joe Burrow"
+        }
+      ]
+    },
+    {
+      "position": "QB",
+      "start_overall": 80,
+      "end_overall": 92,
+      "start_round": 7,
+      "count": 3,
+      "started_by": "Scott",
+      "started_by_team": "Browneye",
+      "members": [
+        {
+          "overall": 80,
+          "round": 7,
+          "manager": "Scott",
+          "player": "Baker Mayfield"
+        },
+        {
+          "overall": 82,
+          "round": 7,
+          "manager": "Steve",
+          "player": "J.J. McCarthy"
+        },
+        {
+          "overall": 92,
+          "round": 8,
+          "manager": "Ditto",
+          "player": "Brock Purdy"
+        }
+      ]
+    },
+    {
+      "position": "QB",
+      "start_overall": 110,
+      "end_overall": 123,
+      "start_round": 10,
+      "count": 4,
+      "started_by": "Weber",
+      "started_by_team": "Herdsmen",
+      "members": [
+        {
+          "overall": 110,
+          "round": 10,
+          "manager": "Weber",
+          "player": "Justin Fields"
+        },
+        {
+          "overall": 112,
+          "round": 10,
+          "manager": "Berdine",
+          "player": "Kyler Murray"
+        },
+        {
+          "overall": 121,
+          "round": 11,
+          "manager": "Bobby",
+          "player": "C.J. Stroud"
+        },
+        {
+          "overall": 123,
+          "round": 11,
+          "manager": "Mikey",
+          "player": "Dak Prescott"
+        }
+      ]
+    },
+    {
+      "position": "QB",
+      "start_overall": 178,
+      "end_overall": 184,
+      "start_round": 15,
+      "count": 3,
+      "started_by": "Steve",
+      "started_by_team": "Burrito",
+      "members": [
+        {
+          "overall": 178,
+          "round": 15,
+          "manager": "Steve",
+          "player": "Justin Herbert"
+        },
+        {
+          "overall": 181,
+          "round": 16,
+          "manager": "Mike/Brad",
+          "player": "Jaxson Dart"
+        },
+        {
+          "overall": 184,
+          "round": 16,
+          "manager": "Berdine",
+          "player": "Cam Ward"
+        }
+      ]
+    },
+    {
+      "position": "TE",
+      "start_overall": 73,
+      "end_overall": 85,
+      "start_round": 7,
+      "count": 3,
+      "started_by": "Bobby",
+      "started_by_team": "Demin",
+      "members": [
+        {
+          "overall": 73,
+          "round": 7,
+          "manager": "Bobby",
+          "player": "Travis Kelce"
+        },
+        {
+          "overall": 76,
+          "round": 7,
+          "manager": "Neary",
+          "player": "David Njoku"
+        },
+        {
+          "overall": 85,
+          "round": 8,
+          "manager": "Mike/Brad",
+          "player": "Tyler Warren"
+        }
+      ]
+    },
+    {
+      "position": "TE",
+      "start_overall": 157,
+      "end_overall": 168,
+      "start_round": 14,
+      "count": 3,
+      "started_by": "Mike/Brad",
+      "started_by_team": "Dads to Bone",
+      "members": [
+        {
+          "overall": 157,
+          "round": 14,
+          "manager": "Mike/Brad",
+          "player": "Harold Fannin Jr."
+        },
+        {
+          "overall": 158,
+          "round": 14,
+          "manager": "Weber",
+          "player": "Kyle Pitts Sr."
+        },
+        {
+          "overall": 168,
+          "round": 14,
+          "manager": "Bobby",
+          "player": "Dallas Goedert"
+        }
+      ]
+    }
+  ],
   "owners": [
     {
       "manager": "Berdine",
@@ -298,8 +646,33 @@
         "RB": 2
       },
       "first_position_taken": "WR",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 10,
+          "overall": 112,
+          "player": "Kyler Murray",
+          "gone_before": 10,
+          "vs_median_rounds": 3,
+          "stance": "patient",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 11,
+          "overall": 129,
+          "player": "Zach Ertz",
+          "gone_before": 7,
+          "vs_median_rounds": 2,
+          "stance": "patient",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with WR (round 1); leaned WR early (4 of first 6 rounds); kept 1 player(s): Chuba Hubbard (R9)."
+      "strategy_note": "opened with WR (round 1); leaned WR early (4 of first 6 rounds); QB in R10 (patient, 10 gone first); TE in R11 (patient, 7 gone first); kept 1 player(s): Chuba Hubbard (R9)."
     },
     {
       "manager": "Bobby",
@@ -312,8 +685,33 @@
         "QB": 1
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 3,
+          "overall": 25,
+          "player": "Lamar Jackson",
+          "gone_before": 1,
+          "vs_median_rounds": -4,
+          "stance": "aggressive",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 7,
+          "overall": 73,
+          "player": "Travis Kelce",
+          "gone_before": 2,
+          "vs_median_rounds": -2,
+          "stance": "aggressive",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); used 0 keepers."
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); QB in R3 (aggressive, 1 gone first); TE in R7 (aggressive, 2 gone first); used 0 keepers."
     },
     {
       "manager": "Ditto",
@@ -338,8 +736,27 @@
         "WR": 3
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 8,
+          "overall": 92,
+          "player": "Brock Purdy",
+          "gone_before": 8,
+          "vs_median_rounds": 1,
+          "stance": "market",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": false,
+          "note": "never drafted a TE (kept one, or streamed off waivers)"
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned RB early (3 of first 6 rounds); kept 2 player(s): Jerry Jeudy (R7), Sam LaPorta (R12)."
+      "strategy_note": "opened with RB (round 1); leaned RB early (3 of first 6 rounds); QB in R8 (market, 8 gone first); no TE drafted; kept 2 player(s): Jerry Jeudy (R7), Sam LaPorta (R12)."
     },
     {
       "manager": "Greene",
@@ -359,8 +776,33 @@
         "RB": 2
       },
       "first_position_taken": "WR",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 2,
+          "overall": 23,
+          "player": "Josh Allen",
+          "gone_before": 0,
+          "vs_median_rounds": -5,
+          "stance": "aggressive",
+          "started_the_run": true
+        },
+        "TE": {
+          "drafted": true,
+          "round": 16,
+          "overall": 191,
+          "player": "Terrance Ferguson",
+          "gone_before": 12,
+          "vs_median_rounds": 7,
+          "stance": "patient",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with WR (round 1); leaned WR early (3 of first 6 rounds); kept 1 player(s): T.J. Hockenson (R13)."
+      "strategy_note": "opened with WR (round 1); leaned WR early (3 of first 6 rounds); QB in R2 (aggressive, FIRST off the board); TE in R16 (patient, 12 gone first); kept 1 player(s): T.J. Hockenson (R13)."
     },
     {
       "manager": "Matty",
@@ -387,8 +829,33 @@
         "TE": 1
       },
       "first_position_taken": "WR",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 4,
+          "overall": 43,
+          "player": "Patrick Mahomes",
+          "gone_before": 4,
+          "vs_median_rounds": -3,
+          "stance": "aggressive",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 5,
+          "overall": 54,
+          "player": "Mark Andrews",
+          "gone_before": 1,
+          "vs_median_rounds": -4,
+          "stance": "aggressive",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with WR (round 1); leaned WR early (2 of first 6 rounds); kept 2 player(s): Nico Collins (R7), J.K. Dobbins (R10)."
+      "strategy_note": "opened with WR (round 1); leaned WR early (2 of first 6 rounds); QB in R4 (aggressive, 4 gone first); TE in R5 (aggressive, 1 gone first); kept 2 player(s): Nico Collins (R7), J.K. Dobbins (R10)."
     },
     {
       "manager": "Mike/Brad",
@@ -414,8 +881,33 @@
         "QB": 1
       },
       "first_position_taken": "WR",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 5,
+          "overall": 60,
+          "player": "Bo Nix",
+          "gone_before": 5,
+          "vs_median_rounds": -2,
+          "stance": "aggressive",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 8,
+          "overall": 85,
+          "player": "Tyler Warren",
+          "gone_before": 4,
+          "vs_median_rounds": -1,
+          "stance": "market",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 1,
-      "strategy_note": "opened with WR (round 1); leaned WR early (4 of first 6 rounds); kept 2 player(s): Garrett Wilson (R6), Chase Brown (R7); 1 missed/auto-passed pick(s)."
+      "strategy_note": "opened with WR (round 1); leaned WR early (4 of first 6 rounds); QB in R5 (aggressive, 5 gone first); TE in R8 (market, 4 gone first); kept 2 player(s): Garrett Wilson (R6), Chase Brown (R7); 1 missed/auto-passed pick(s)."
     },
     {
       "manager": "Mikey",
@@ -440,8 +932,33 @@
         "WR": 2
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 11,
+          "overall": 123,
+          "player": "Dak Prescott",
+          "gone_before": 12,
+          "vs_median_rounds": 4,
+          "stance": "patient",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 9,
+          "overall": 99,
+          "player": "Tucker Kraft",
+          "gone_before": 5,
+          "vs_median_rounds": 0,
+          "stance": "market",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned RB early (4 of first 6 rounds); kept 2 player(s): Ladd McConkey (R8), Jordan Love (R12)."
+      "strategy_note": "opened with RB (round 1); leaned RB early (4 of first 6 rounds); QB in R11 (patient, 12 gone first); TE in R9 (market, 5 gone first); kept 2 player(s): Ladd McConkey (R8), Jordan Love (R12)."
     },
     {
       "manager": "Mullins",
@@ -468,8 +985,33 @@
         "QB": 1
       },
       "first_position_taken": "WR",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 12,
+          "overall": 138,
+          "player": "Caleb Williams",
+          "gone_before": 13,
+          "vs_median_rounds": 5,
+          "stance": "patient",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 2,
+          "overall": 18,
+          "player": "George Kittle",
+          "gone_before": 0,
+          "vs_median_rounds": -7,
+          "stance": "aggressive",
+          "started_the_run": true
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with WR (round 1); leaned WR early (2 of first 6 rounds); kept 2 player(s): Jayden Daniels (R5), Bucky Irving (R10)."
+      "strategy_note": "opened with WR (round 1); leaned WR early (2 of first 6 rounds); QB in R12 (patient, 13 gone first); TE in R2 (aggressive, FIRST off the board); kept 2 player(s): Jayden Daniels (R5), Bucky Irving (R10)."
     },
     {
       "manager": "Neary",
@@ -495,8 +1037,33 @@
         "QB": 1
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 3,
+          "overall": 28,
+          "player": "Jalen Hurts",
+          "gone_before": 2,
+          "vs_median_rounds": -4,
+          "stance": "aggressive",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 7,
+          "overall": 76,
+          "player": "David Njoku",
+          "gone_before": 3,
+          "vs_median_rounds": -2,
+          "stance": "aggressive",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); kept 2 player(s): Drake London (R2), Zach Charbonnet (R9)."
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); QB in R3 (aggressive, 2 gone first); TE in R7 (aggressive, 3 gone first); kept 2 player(s): Drake London (R2), Zach Charbonnet (R9)."
     },
     {
       "manager": "Scott",
@@ -521,8 +1088,27 @@
         "WR": 4
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 7,
+          "overall": 80,
+          "player": "Baker Mayfield",
+          "gone_before": 6,
+          "vs_median_rounds": 0,
+          "stance": "market",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": false,
+          "note": "never drafted a TE (kept one, or streamed off waivers)"
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned WR early (4 of first 6 rounds); kept 2 player(s): Courtland Sutton (R6), Brock Bowers (R8)."
+      "strategy_note": "opened with RB (round 1); leaned WR early (4 of first 6 rounds); QB in R7 (market, 6 gone first); no TE drafted; kept 2 player(s): Courtland Sutton (R6), Brock Bowers (R8)."
     },
     {
       "manager": "Steve",
@@ -548,8 +1134,33 @@
         "TE": 1
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 7,
+          "overall": 82,
+          "player": "J.J. McCarthy",
+          "gone_before": 7,
+          "vs_median_rounds": 0,
+          "stance": "market",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 11,
+          "overall": 130,
+          "player": "Colston Loveland",
+          "gone_before": 8,
+          "vs_median_rounds": 2,
+          "stance": "patient",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); kept 2 player(s): Trey McBride (R3), De'Von Achane (R8)."
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); QB in R7 (market, 7 gone first); TE in R11 (patient, 8 gone first); kept 2 player(s): Trey McBride (R3), De'Von Achane (R8)."
     },
     {
       "manager": "Weber",
@@ -569,8 +1180,33 @@
         "WR": 3
       },
       "first_position_taken": "RB",
+      "position_timing": {
+        "QB": {
+          "drafted": true,
+          "round": 3,
+          "overall": 35,
+          "player": "Joe Burrow",
+          "gone_before": 3,
+          "vs_median_rounds": -4,
+          "stance": "aggressive",
+          "started_the_run": false
+        },
+        "TE": {
+          "drafted": true,
+          "round": 9,
+          "overall": 107,
+          "player": "Evan Engram",
+          "gone_before": 6,
+          "vs_median_rounds": 0,
+          "stance": "market",
+          "started_the_run": false
+        }
+      },
+      "reach_vs_adp": {
+        "sample": 0
+      },
       "missed_picks": 0,
-      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); kept 1 player(s): Brian Thomas Jr. (R5)."
+      "strategy_note": "opened with RB (round 1); leaned WR early (3 of first 6 rounds); QB in R3 (aggressive, 3 gone first); TE in R9 (market, 6 gone first); kept 1 player(s): Brian Thomas Jr. (R5)."
     }
   ],
   "unmatched_team_labels": []
