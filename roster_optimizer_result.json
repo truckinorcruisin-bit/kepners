@@ -1,26 +1,17 @@
 {
-  "generated": "2026-08-12T11:59:11.724544+00:00",
+  "generated": "2026-08-28T17:24:25.141329+00:00",
   "budget": 200,
   "skill_budget": 198,
   "kdef_reserve": 2,
   "roster": [
     {
       "slot": "QB",
-      "id": "jaxson-dart",
-      "name": "Jaxson Dart",
+      "id": "josh-allen",
+      "name": "Josh Allen",
       "pos": "QB",
-      "team": "NYG",
-      "cost": 5,
-      "war": 19.4
-    },
-    {
-      "slot": "RB",
-      "id": "josh-jacobs",
-      "name": "Josh Jacobs",
-      "pos": "RB",
-      "team": "GB",
-      "cost": 27,
-      "war": 85.2
+      "team": "BUF",
+      "cost": 34,
+      "war": 88.0
     },
     {
       "slot": "RB",
@@ -28,26 +19,17 @@
       "name": "Javonte Williams",
       "pos": "RB",
       "team": "DAL",
-      "cost": 22,
-      "war": 69.1
+      "cost": 26,
+      "war": 69.2
     },
     {
-      "slot": "WR",
-      "id": "rome-odunze",
-      "name": "Rome Odunze",
-      "pos": "WR",
-      "team": "CHI",
-      "cost": 8,
-      "war": 32.5
-    },
-    {
-      "slot": "WR",
-      "id": "alec-pierce",
-      "name": "Alec Pierce",
-      "pos": "WR",
-      "team": "IND",
-      "cost": 4,
-      "war": 14.9
+      "slot": "RB",
+      "id": "josh-jacobs",
+      "name": "Josh Jacobs",
+      "pos": "RB",
+      "team": "GB",
+      "cost": 25,
+      "war": 69.5
     },
     {
       "slot": "WR",
@@ -55,44 +37,44 @@
       "name": "Davante Adams",
       "pos": "WR",
       "team": "LAR",
-      "cost": 15,
-      "war": 44.0
+      "cost": 17,
+      "war": 45.3
+    },
+    {
+      "slot": "WR",
+      "id": "courtland-sutton",
+      "name": "Courtland Sutton",
+      "pos": "WR",
+      "team": "DEN",
+      "cost": 6,
+      "war": 15.6
+    },
+    {
+      "slot": "WR",
+      "id": "rome-odunze",
+      "name": "Rome Odunze",
+      "pos": "WR",
+      "team": "CHI",
+      "cost": 11,
+      "war": 33.8
     },
     {
       "slot": "TE",
-      "id": "mark-andrews",
-      "name": "Mark Andrews",
-      "pos": "TE",
-      "team": "BAL",
-      "cost": 1,
-      "war": 17.3
-    },
-    {
-      "slot": "FLEX",
-      "id": "breece-hall",
-      "name": "Breece Hall",
-      "pos": "RB",
-      "team": "NYJ",
-      "cost": 22,
-      "war": 68.4
-    },
-    {
-      "slot": "BEN",
-      "id": "josh-allen",
-      "name": "Josh Allen",
-      "pos": "QB",
-      "team": "BUF",
-      "cost": 28,
-      "war": 87.2
-    },
-    {
-      "slot": "BEN",
       "id": "dallas-goedert",
       "name": "Dallas Goedert",
       "pos": "TE",
       "team": "PHI",
       "cost": 2,
-      "war": 12.1
+      "war": 12.7
+    },
+    {
+      "slot": "FLEX",
+      "id": "tucker-kraft",
+      "name": "Tucker Kraft",
+      "pos": "TE",
+      "team": "GB",
+      "cost": 4,
+      "war": 15.5
     },
     {
       "slot": "BEN",
@@ -100,8 +82,26 @@
       "name": "Jalen Hurts",
       "pos": "QB",
       "team": "PHI",
-      "cost": 10,
-      "war": 38.7
+      "cost": 13,
+      "war": 38.6
+    },
+    {
+      "slot": "BEN",
+      "id": "george-kittle",
+      "name": "George Kittle",
+      "pos": "TE",
+      "team": "SF",
+      "cost": 4,
+      "war": 20.8
+    },
+    {
+      "slot": "BEN",
+      "id": "breece-hall",
+      "name": "Breece Hall",
+      "pos": "RB",
+      "team": "NYJ",
+      "cost": 27,
+      "war": 68.2
     },
     {
       "slot": "BEN",
@@ -109,8 +109,17 @@
       "name": "Drake Maye",
       "pos": "QB",
       "team": "NE",
-      "cost": 11,
-      "war": 36.9
+      "cost": 14,
+      "war": 37.7
+    },
+    {
+      "slot": "BEN",
+      "id": "mark-andrews",
+      "name": "Mark Andrews",
+      "pos": "TE",
+      "team": "BAL",
+      "cost": 2,
+      "war": 17.6
     },
     {
       "slot": "BEN",
@@ -118,20 +127,11 @@
       "name": "Jayden Daniels",
       "pos": "QB",
       "team": "WAS",
-      "cost": 10,
-      "war": 36.4
-    },
-    {
-      "slot": "BEN",
-      "id": "derrick-henry",
-      "name": "Derrick Henry",
-      "pos": "RB",
-      "team": "BAL",
-      "cost": 33,
-      "war": 100.5
+      "cost": 13,
+      "war": 36.7
     }
   ],
-  "total_war": 662.6,
+  "total_war": 569.2,
   "total_cost": 198,
   "budget_remaining": 0,
   "assumptions": [
