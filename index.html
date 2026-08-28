@@ -1878,26 +1878,39 @@ function myUpcomingPicks(lg){
 }
 
 // How much *I* like a player relative to the market.
-// Prefers the Big Board's explicit "like" column when populated; otherwise
-// derives it from how much higher I rank the player than consensus
-// (Target Rk vs Yahoo Rk). Returns null when there's no signal either way.
-// NOTE: as of this writing the explicit `like` column is empty for all 300
-// players in bigboard.json, so in practice this is running on the derived
-// signal -- see the note rendered in the panel header.
-function likeScore(p){
+// Returns {score, explicit, flag}:
+//   explicit=true  -> came from the Big Board's own "Like" column (Yes/No)
+//   explicit=false -> DERIVED from how much higher I rank him than consensus
+// The two are kept distinguishable because they're on incompatible scales: a
+// derived signal can reach +55 for a deep sleeper, which would otherwise
+// outrank a player I explicitly flagged "Yes". Explicit intent should win over
+// an inferred one, so callers tier on `explicit` first and only then on score.
+function likeSignal(p){
   const raw = p.like;
   if(raw!=null && String(raw).trim()!==''){
     const s = String(raw).trim();
-    const n = Number(s);
-    if(!Number.isNaN(n)) return n * 6;          // numeric rating -> scale to rank-ish units
-    if(/^(y|yes|like|love|target|★+|\*+)$/i.test(s)) return 18;  // flag-style entry
+    const up = s.toUpperCase();
+    // "#N/A" is an Excel formula error, NOT an opinion -- fall through to the
+    // derived signal rather than treating it as a real entry. 26 of the 48
+    // populated cells are currently this.
+    if(up!=='#N/A' && up!=='N/A' && up!=='NAN'){
+      const n = Number(s);
+      if(!Number.isNaN(n)) return {score:n*6, explicit:true, flag:null};   // numeric rating
+      if(/^(y|yes|like|love|target|★+|\*+)$/i.test(s)) return {score:18, explicit:true, flag:'yes'};
+      // Explicit AVOID. Previously this fell through to the derived signal,
+      // so a player I'd deliberately marked "No" could still be recommended
+      // on the strength of my position rank -- the opposite of the intent.
+      if(/^(n|no|avoid|fade|dislike|pass)$/i.test(s)) return {score:-18, explicit:true, flag:'no'};
+    }
   }
   // Derived: positive = I'm higher on him than the market is.
   if(p.seanRankOverall!=null && p.avgRank!=null && !isBlankVal(p.avgRank)){
-    return p.avgRank - p.seanRankOverall;
+    return {score: p.avgRank - p.seanRankOverall, explicit:false, flag:null};
   }
-  return null;
+  return {score:null, explicit:false, flag:null};
 }
+// Back-compat numeric accessor.
+function likeScore(p){ return likeSignal(p).score; }
 
 // Shared blank test (Excel "#N/A" leaks through as a string, see ptRows sort).
 function isBlankVal(v){
@@ -1930,9 +1943,18 @@ function topLikedPlayers(lg, n){
   const rosterable = leagueRosterablePositions(lg);
   return DATA.players
     .filter(p=>p.pos && p.pos!=='NA' && !drafted[p.id] && (!rosterable || rosterable.has(p.pos)))
-    .map(p=>({p, like:likeScore(p), war:warOf(p)}))
-    .filter(x=>x.like!=null && x.like>0)      // only players I'm actually higher on
-    .sort((a,b)=>b.like-a.like)
+    .map(p=>{ const sig = likeSignal(p); return {p, ...sig, like:sig.score, war:warOf(p)}; })
+    .filter(x=>x.score!=null && x.score>0 && x.flag!=='no')
+    // Explicitly-flagged players sort ABOVE derived ones regardless of score:
+    // "I marked this guy" is a stronger statement than "my rank happens to be
+    // higher than consensus", and the two scales aren't comparable anyway.
+    // Within each tier, WAR breaks the tie -- every explicit "Yes" carries the
+    // identical score of 18, so without this they'd order arbitrarily.
+    .sort((a,b)=>{
+      if(a.explicit!==b.explicit) return a.explicit ? -1 : 1;
+      if(a.explicit) return (b.war ?? -1e9) - (a.war ?? -1e9);
+      return b.score - a.score;
+    })
     .slice(0, n||10);
 }
 
@@ -1955,17 +1977,27 @@ function recommendNextPicks(lg, n){
     .map(p=>{
       const adj = computeAdjustedWar(p, factors);
       if(adj==null) return null;
-      const like = likeScore(p) || 0;
+      const sig = likeSignal(p);
+      const like = sig.score || 0;
       // Cap the like bonus so a deep sleeper I'm 60 spots high on can't
       // leapfrog a genuinely elite player -- it should break ties and tilt
       // close calls, not override the value model.
-      const likeBonus = Math.max(-15, Math.min(15, like * 0.35));
+      // An EXPLICIT flag gets a flat, stronger weight than a derived one:
+      // marking someone "Yes" is a deliberate statement, so it shouldn't be
+      // scaled down by the same 0.35 factor applied to an inferred signal.
+      // "No" is a hard penalty -- large enough to bury a player I've said I
+      // don't want, without hard-filtering him (if he's the last startable
+      // body at a position I need, I should still see him).
+      const likeBonus = sig.explicit
+        ? (sig.flag==='no' ? -60 : sig.flag==='yes' ? 12 : Math.max(-15, Math.min(15, like * 0.35)))
+        : Math.max(-15, Math.min(15, like * 0.35));
       // Scarcity: only rewards players who won't be there next turn. Uses my
       // pick AFTER next, because the real question is "if I pass now, is he
       // there when I'm back?"
       const av = availabilityAt(p, after, teams);
       const scarcity = av.cls==='gone' ? 10 : av.cls==='risky' ? 4 : 0;
-      return {p, adj, like, likeBonus, scarcity, av, score: adj + likeBonus + scarcity};
+      return {p, adj, like, likeBonus, scarcity, av, explicit:sig.explicit, flag:sig.flag,
+              score: adj + likeBonus + scarcity};
     })
     .filter(Boolean)
     .sort((a,b)=>b.score-a.score);
@@ -1987,7 +2019,11 @@ function renderNextBestPick(lg){
     ? `fills an open ${top.p.pos} starting slot (${have}/${startersAtPos})`
     : `${top.p.pos} starters already filled (${have}/${startersAtPos}) — valued as depth`;
 
-  const usingDerivedLike = !DATA.players.some(p=>p.like!=null && String(p.like).trim()!=='');
+  // "Derived" only if NO player carries a real explicit flag. Note this must
+  // ignore "#N/A" cells -- 26 of the 48 populated Like cells are Excel formula
+  // errors, and counting those as real entries would wrongly suppress the
+  // hint even though the column has usable data.
+  const usingDerivedLike = !DATA.players.some(p=>likeSignal(p).explicit);
 
   const alts = rec.list.slice(1).map((x,i)=>`
     <div class="rec-alt" data-pid="${x.p.id}" title="Click to open in Deep Dive">
@@ -2014,7 +2050,10 @@ function renderNextBestPick(lg){
           warOf(top.p)!=null&&warOf(top.p)!==top.adj?` (raw ${warOf(top.p)>0?'+':''}${Math.round(warOf(top.p)*10)/10})`:''}</div>
         <div><span class="rec-b">Roster:</span> ${fitLine}</div>
         <div><span class="rec-b">Your board:</span> ${
-          top.like>0?`you're ${Math.round(top.like)} spots higher on him than consensus`
+          top.explicit && top.flag==='yes' ? `<b style="color:var(--green)">marked "Like" on your Big Board</b>`
+          : top.explicit && top.flag==='no' ? `<b style="color:var(--red)">marked "No" on your Big Board</b> — only shown because nothing better fits`
+          : top.explicit ? `rated ${Math.round(top.like/6)} on your Big Board`
+          : top.like>0?`you're ${Math.round(top.like)} spots higher on him than consensus`
           : top.like<0?`consensus is ${Math.abs(Math.round(top.like))} spots higher on him than you`
           : 'in line with consensus'}</div>
         <div><span class="rec-b">If you pass:</span> ${top.av.label}${
@@ -2046,7 +2085,8 @@ function renderLikedBoard(lg){
       <span class="liked-dot ${av.cls}"></span>
       <span class="liked-nm">${x.p.name}</span>
       <span class="liked-pos">${x.p.pos}</span>
-      <span class="liked-edge">+${Math.round(x.like)}</span>
+      <span class="liked-edge" title="${x.explicit?'Marked \'Like\' on your Big Board':'Spots higher you rank him than consensus'}">${
+        x.explicit ? '★ Like' : '+'+Math.round(x.score)}</span>
       <span class="liked-war">${x.war!=null?(x.war>0?'+':'')+Math.round(x.war*10)/10:'—'}</span>
     </div>`;
   }).join('');
@@ -2060,7 +2100,7 @@ function renderLikedBoard(lg){
       <span class="liked-key"><i style="background:var(--green)"></i>should last</span>
       <span class="liked-key"><i style="background:var(--amber)"></i>coin flip</span>
       <span class="liked-key"><i style="background:var(--red)"></i>likely gone</span>
-      <span><b>+N</b> = spots higher you rank him vs consensus · last column = WAR</span>
+      <span><b>★ Like</b> = flagged on your Big Board (these sort first) · <b>+N</b> = spots higher you rank him vs consensus · last column = WAR</span>
     </div>
   </div>`;
 
