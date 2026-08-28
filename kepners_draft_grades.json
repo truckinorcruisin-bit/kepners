@@ -141,7 +141,7 @@
       "peer_sample_n": 6,
       "peer_window_rounds": 0,
       "surplus_war": -4.5,
-      "keeper_value": 0.5,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -155,7 +155,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 0,
       "surplus_war": 14.9,
-      "keeper_value": -2.8,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -169,7 +169,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 0,
       "surplus_war": 11.3,
-      "keeper_value": -2.5,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -183,7 +183,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 0,
       "surplus_war": -35.7,
-      "keeper_value": 11.2,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -197,7 +197,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 0,
       "surplus_war": 60.0,
-      "keeper_value": -19.2,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -211,7 +211,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 0,
       "surplus_war": -27.0,
-      "keeper_value": 10.4,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -225,7 +225,7 @@
       "peer_sample_n": 7,
       "peer_window_rounds": 2,
       "surplus_war": -119.3,
-      "keeper_value": 144.2,
+      "keeper_value": null,
       "verdict": "fair (no value, but so was the field)"
     },
     {
@@ -239,7 +239,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 1,
       "surplus_war": -44.3,
-      "keeper_value": -0.0,
+      "keeper_value": null,
       "verdict": "bust (no value added)"
     },
     {
@@ -253,7 +253,7 @@
       "peer_sample_n": 5,
       "peer_window_rounds": 2,
       "surplus_war": -42.3,
-      "keeper_value": 8.5,
+      "keeper_value": null,
       "verdict": "bust (no value added)"
     },
     {
@@ -267,7 +267,7 @@
       "peer_sample_n": 3,
       "peer_window_rounds": 1,
       "surplus_war": -59.0,
-      "keeper_value": 14.9,
+      "keeper_value": null,
       "verdict": "bust (no value added)"
     }
   ],
