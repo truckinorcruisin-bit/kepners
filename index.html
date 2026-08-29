@@ -298,6 +298,26 @@
 
   /* ===== owner drafting profiles (Kepners) ===== */
   .owner-card{background:var(--panel);border:1px solid var(--line);padding:9px 11px;margin-bottom:7px;}
+  /* position chip: hue = position, lightness = tier depth (dark = best tier) */
+  .pos-chip{display:inline-block;padding:0 4px;border-radius:2px;font-weight:700;
+    font-size:9px;letter-spacing:0.3px;min-width:26px;text-align:center;}
+  /* TruRank draft plan */
+  .tp-wrap{border:1px solid var(--line-2);background:var(--panel);padding:8px 9px;margin-top:10px;}
+  .tp-hdr{font-size:9px;color:var(--amber);letter-spacing:0.5px;margin-bottom:5px;}
+  .tp-note{font-size:8.5px;color:var(--dim);line-height:1.5;margin-bottom:6px;}
+  .tp-tbl{width:100%;border-collapse:collapse;font-size:9.5px;}
+  .tp-tbl th{color:var(--dim);font-weight:400;text-align:left;font-size:8.5px;
+    border-bottom:1px solid var(--line);padding:2px 3px;}
+  .tp-tbl td{padding:2px 3px;border-bottom:1px solid var(--line);}
+  .tp-tbl tr.mine-now td{background:rgba(255,183,3,0.10);}
+  .tp-rd{color:var(--dim);font-variant-numeric:tabular-nums;}
+  .tp-pick{color:var(--cyan);font-variant-numeric:tabular-nums;}
+  .tp-tru{font-variant-numeric:tabular-nums;text-align:right;}
+  .tp-pos-strong{color:var(--green);font-weight:700;}
+  .tp-pos-ok{color:var(--txt);}
+  .tp-pos-weak{color:var(--red);}
+  .tp-sum{font-size:9px;line-height:1.6;margin-top:6px;border-top:1px solid var(--line);padding-top:5px;}
+  .tp-sum b{color:var(--cyan);}
   /* QB/TE timing badges + league run summary */
   .tm-row{display:flex;gap:6px;flex-wrap:wrap;margin:5px 0 4px;}
   .tm-badge{font-size:9px;padding:2px 6px;border:1px solid var(--line-2);display:flex;
@@ -611,6 +631,7 @@
         <div class="cockpit-col">
           <div class="seclabel">My Team — <span id="myteamlbl"></span></div>
           <div class="myTeamArea panel-scroll" id="myTeamArea"></div>
+          <div id="truPlanArea"></div>
         </div>
         <div class="cockpit-col">
           <div class="seclabel">Player Board</div>
@@ -1004,6 +1025,7 @@ function render(){
 
   renderSnakeBanner(lg);
   renderMyTeam(lg);
+  renderTruPlan(lg);
   renderSnakePlayerBoard(lg);
   renderLikedBoard(lg);
   renderDeepDive(lg);
@@ -2113,6 +2135,193 @@ function renderLikedBoard(lg){
   });
 }
 
+// ---------- TruRank Draft Plan ----------
+// TruRank (marketDrift[league].tru) scores a POSITIONAL SLOT (e.g. "WR2") on
+// whether this year's market is pricing that slot favourably vs last year,
+// adjusted for talent. Positive = the slot is cheaper/better than it should
+// be, i.e. a good place to spend a pick.
+//
+// The plan answers "which position should I take in each of MY rounds?" by
+// looking at which players will realistically be on the board at each of my
+// picks and what their slots' TruRank says.
+
+function truOf(p){
+  const md = p.marketDrift && p.marketDrift[activeLeague];
+  return md && typeof md.tru === 'number' ? md : null;
+}
+
+// Every one of my pick numbers for the whole draft, not just the next two.
+function myAllPickOveralls(lg){
+  const teams = (lg.teams||[]).length;
+  const me = (lg.teams||[]).find(t=>t.isMe);
+  const slot = me && me.draftPosition;
+  const rounds = (lg.rosterSlots||[]).length;
+  if(!slot || !teams || !rounds) return [];
+  const out = [];
+  for(let r=1; r<=rounds; r++){
+    // snake: odd rounds run 1..N, even rounds N..1
+    const pickInRound = (r % 2 === 1) ? slot : (teams - slot + 1);
+    out.push({round:r, overall:(r-1)*teams + pickInRound});
+  }
+  return out;
+}
+
+function buildTruPlan(lg){
+  const teams = (lg.teams||[]).length;
+  const drafted = ptDraftedMap();
+  const rosterable = leagueRosterablePositions(lg);
+  const picks = myAllPickOveralls(lg);
+  if(!picks.length) return null;
+
+  const pool = DATA.players.filter(p=>
+    p.pos && p.pos!=='NA' && !drafted[p.id] &&
+    (!rosterable || rosterable.has(p.pos)) &&
+    !isBlankVal(p.avgRank) && p.avgRank!=null && truOf(p));
+
+  // What I already have, so the plan doesn't keep recommending a filled position.
+  const {counts} = myPositionCounts(lg);
+  const have = {...counts};
+  const roster = lg.rosterSlots || [];
+  const capacityOf = (pos)=>{
+    const starters = roster.filter(s=>s===pos).length;
+    const flex = FLEX_ELIGIBLE.includes(pos) ? roster.filter(s=>s==='FLEX').length : 0;
+    // one bench body beyond starters for the skill positions worth stashing
+    const bench = ['RB','WR'].includes(pos) ? 2 : ['QB','TE'].includes(pos) ? 1 : 0;
+    return Math.max(1, starters + flex + bench);
+  };
+
+  const POSNS = ['QB','RB','WR','TE'];
+  const rows = picks.map(({round, overall})=>{
+    // Players plausibly on the board at this pick: ADP within half a round
+    // before (might slip) through ~1.5 rounds after. A pure "ADP >= overall"
+    // cut would ignore that ADP is noisy in both directions.
+    const lo = overall - Math.round(teams*0.5);
+    const hi = overall + Math.round(teams*1.5);
+    const byPos = {};
+    POSNS.forEach(pos=>{
+      const cands = pool.filter(p=>p.pos===pos && p.avgRank>=lo && p.avgRank<=hi);
+      if(!cands.length){ byPos[pos]=null; return; }
+      // Best realistic TruRank at this position in this window, plus the
+      // player who represents it.
+      const best = cands.reduce((a,b)=> (truOf(b).tru > truOf(a).tru ? b : a));
+      // Best WAR available here too -- see the guard below.
+      const bestWar = cands.reduce((a,b)=> ((warOf(b)??-1e9) > (warOf(a)??-1e9) ? b : a));
+      byPos[pos] = {tru: truOf(best).tru, slot: truOf(best).slot,
+                    band: truOf(best).band, player: best,
+                    war: warOf(bestWar) ?? null, warPlayer: bestWar};
+    });
+    // VALUE GUARD: TruRank scores how efficiently a positional SLOT is priced,
+    // not how good the player is. Ranking on TruRank alone recommended a TE at
+    // pick #2 in testing -- correct on price, terrible as draft advice, since
+    // it punts ~100 WAR to save a few points of market inefficiency.
+    // So: only positions whose best available player is within WAR_TOLERANCE
+    // of the best player on the board are eligible, and TruRank then breaks
+    // the tie among those. Price efficiency decides between comparable
+    // options; it never justifies passing on a materially better player.
+    const eligible = POSNS.filter(pos=>byPos[pos] && (have[pos]||0) < capacityOf(pos));
+    const maxWar = Math.max(...eligible.map(pos=>byPos[pos].war ?? -1e9), -1e9);
+    const WAR_TOLERANCE = 20;
+    const inValueRange = eligible.filter(pos=>(byPos[pos].war ?? -1e9) >= maxWar - WAR_TOLERANCE);
+    const ranked = (inValueRange.length ? inValueRange : eligible)
+      .sort((a,b)=>byPos[b].tru - byPos[a].tru);
+    const pick = ranked[0] || null;
+    if(pick) have[pick] = (have[pick]||0) + 1;   // simulate taking it forward
+    return {round, overall, byPos, ranked, rec:pick};
+  });
+
+  // Per-position: which of MY rounds carry a positive TruRank for that position
+  const posWindows = {};
+  POSNS.forEach(pos=>{
+    const good = rows.filter(r=>r.byPos[pos] && r.byPos[pos].tru > 0).map(r=>r.round);
+    const best = rows.filter(r=>r.byPos[pos])
+      .sort((a,b)=>b.byPos[pos].tru - a.byPos[pos].tru)[0];
+    posWindows[pos] = {
+      positiveRounds: good,
+      best: best ? {round:best.round, tru:best.byPos[pos].tru,
+                    slot:best.byPos[pos].slot, player:best.byPos[pos].player.name} : null,
+    };
+  });
+
+  // RB vs WR lean, round by round -- called out explicitly because it's the
+  // decision that recurs most often through the middle of a draft.
+  const rbwr = rows.filter(r=>r.byPos.RB && r.byPos.WR).map(r=>({
+    round:r.round,
+    diff: r.byPos.RB.tru - r.byPos.WR.tru,
+    lean: r.byPos.RB.tru > r.byPos.WR.tru ? 'RB' : 'WR',
+  }));
+
+  return {rows, posWindows, rbwr, nextOverall: snakeDraft.picks.length + 1};
+}
+
+function renderTruPlan(lg){
+  const el = document.getElementById('truPlanArea');
+  if(!el) return;
+  if(isAuctionLeague()){ el.innerHTML=''; return; }
+  const plan = buildTruPlan(lg);
+  if(!plan){ el.innerHTML=''; return; }
+
+  const cls = (t)=> t>=6 ? 'tp-pos-strong' : t<=-6 ? 'tp-pos-weak' : 'tp-pos-ok';
+  const fmt = (v)=> (v>0?'+':'')+v.toFixed(1);
+
+  const body = plan.rows.map(r=>{
+    const isNext = r.overall >= plan.nextOverall &&
+      !plan.rows.some(o=>o.overall >= plan.nextOverall && o.overall < r.overall);
+    const cells = ['QB','RB','WR','TE'].map(pos=>{
+      const d = r.byPos[pos];
+      if(!d) return `<td class="tp-tru" style="color:var(--dim)">—</td>`;
+      return `<td class="tp-tru ${cls(d.tru)}" title="${d.slot}: ${d.player.name}">${fmt(d.tru)}</td>`;
+    }).join('');
+    return `<tr class="${isNext?'mine-now':''}">
+      <td class="tp-rd">R${r.round}</td>
+      <td class="tp-pick">#${r.overall}</td>
+      ${cells}
+      <td><b class="${r.rec?cls(r.byPos[r.rec].tru):''}">${r.rec||'—'}</b></td>
+    </tr>`;
+  }).join('');
+
+  const w = plan.posWindows;
+  const windowTxt = (pos)=>{
+    const d = w[pos];
+    if(!d || !d.positiveRounds.length){
+      return `<div><b>${pos}</b>: no round with positive TruRank — the market is charging full price at every slot you'd reach.</div>`;
+    }
+    const rs = d.positiveRounds;
+    // Collapse consecutive rounds into ranges so a 6-round span doesn't print
+    // as six separate numbers.
+    const ranges = [];
+    let start = rs[0], prev = rs[0];
+    rs.slice(1).forEach(x=>{ if(x===prev+1){prev=x;} else {ranges.push([start,prev]); start=prev=x;} });
+    ranges.push([start,prev]);
+    const txt = ranges.map(([a,b])=>a===b?`R${a}`:`R${a}–${b}`).join(', ');
+    return `<div><b>${pos}</b>: positive TruRank at ${txt}${
+      d.best?` · best is <b>R${d.best.round}</b> (${d.best.slot}, ${fmt(d.best.tru)}, e.g. ${d.best.player})`:''}</div>`;
+  };
+
+  const rbLean = plan.rbwr.filter(x=>x.lean==='RB').map(x=>x.round);
+  const wrLean = plan.rbwr.filter(x=>x.lean==='WR').map(x=>x.round);
+  const leanTxt = `<div style="margin-top:4px;"><b>RB vs WR</b>: lean
+    <b style="color:var(--green)">RB</b> in ${rbLean.length?'R'+rbLean.join(', R'):'—'};
+    lean <b style="color:var(--amber)">WR</b> in ${wrLean.length?'R'+wrLean.join(', R'):'—'}.</div>`;
+
+  el.innerHTML = `<div class="tp-wrap">
+    <div class="tp-hdr">TRURANK DRAFT PLAN</div>
+    <div class="tp-note">Best TruRank reachable at each of your picks, by position. Positive = the market
+      is underpricing that positional slot this year relative to last. The <b>Take</b> column is the
+      highest-TruRank position you still have room for <i>among those with comparable talent available</i>
+      — TruRank prices slots, so on its own it would happily punt 100 WAR to save a few points of
+      efficiency. It assumes you follow it, so later rows reflect earlier ones. Amber row = your next pick.</div>
+    <table class="tp-tbl">
+      <thead><tr><th>Rd</th><th>Pick</th><th style="text-align:right">QB</th><th style="text-align:right">RB</th>
+        <th style="text-align:right">WR</th><th style="text-align:right">TE</th><th>Take</th></tr></thead>
+      <tbody>${body}</tbody>
+    </table>
+    <div class="tp-sum">
+      ${['QB','TE','RB','WR'].map(windowTxt).join('')}
+      ${leanTxt}
+    </div>
+  </div>`;
+}
+
 function renderDeepDive(lg){
   const el = document.getElementById('deepDiveArea');
   if(!el) return;
@@ -3184,9 +3393,15 @@ const PT_COL_COMMON_LEFT = [
   // globally interleaves positions (every #1, then every #2) -- pair it with
   // the position filter to read one board at a time.
   {key:'seanPosRank', label:'Pos · Rk', num:true, render:r=>
-    `${r.pos}<span class="pt-sub" title="Sean's ${r.pos} rank">${r.seanPosRank!=null?'#'+r.seanPosRank:'—'}</span>`},
+    `<span class="pos-chip" style="${posTierStyle(r)}" title="${r.tier&&!isBlankVal(r.tier)?r.tier:'no tier assigned'}">${r.pos}</span><span class="pt-sub" title="Sean's ${r.pos} rank">${r.seanPosRank!=null?'#'+r.seanPosRank:'—'}</span>`},
   {key:'byeWeek', label:'Bye', num:true, render:r=>r.byeWeek||'—'},
-  {key:'tier', label:'Tier', num:false, render:r=>(r.tier&&r.tier!=='0')?r.tier.split(' - ')[0]:'—'},
+  // Shows the sub-tier too ("WR2.2"), since the board draws ~3 distinct tiers
+  // inside a single group and collapsing to "WR2" hides that.
+  {key:'tier', label:'Tier', num:false, render:r=>{
+    const t = parseTier(r.tier);
+    if(!t) return '—';
+    return `<span title="${r.tier}">${t.pos}${t.group}${t.sub>1?'.'+t.sub:''}</span>`;
+  }},
 ];
 const PT_COL_WAR = [
   {key:'projectedWar', label:'Raw WAR', num:true, render:r=>warCell(r.projectedWar)},
@@ -3300,6 +3515,82 @@ function ptDraftedMap(){
 // Returns null (meaning "don't filter") if a league has no roster config yet,
 // so a missing Team sheet can never blank out the whole board.
 const FLEX_ELIGIBLE = ['RB','WR','TE'];
+
+// ---------- Position colours + tier-depth shading ----------
+// Base hue per position (Sean's picks). DEF/K are deliberately near-zero
+// saturation so they read as neutral/black rather than competing with the
+// skill positions for attention.
+const POS_COLOR = {
+  QB:  {h:212, s:72},   // blue
+  WR:  {h:45,  s:88},   // yellow
+  RB:  {h:140, s:52},   // green
+  TE:  {h:24,  s:85},   // orange
+  DEF: {h:220, s:6},    // near-black
+  K:   {h:220, s:6},
+};
+
+// Tier strings look like "WR2 - 2 - Lower Floor": position group, then a
+// SUB-tier inside that group, then a label. The sub-tier matters -- the board
+// has ~3 distinct tiers inside WR2 alone -- so shading on the group alone
+// would flatten real distinctions Sean drew by hand.
+// Returns {group, sub, label} or null for "#N/A"/blank/unparseable.
+function parseTier(tier){
+  if(!tier || tier==='0' || isBlankVal(tier)) return null;
+  const s = String(tier).trim();
+  // "WR2 - 2 - Lower Floor"  |  "TE2"  (no sub-tier)
+  const m = s.match(/^([A-Za-z]+)(\d+)\s*(?:-\s*(\d+))?\s*(?:-\s*(.*))?$/);
+  if(!m) return null;
+  return {
+    pos: m[1].toUpperCase(),
+    group: parseInt(m[2], 10),
+    sub: m[3] ? parseInt(m[3], 10) : 1,
+    label: (m[4]||'').trim(),
+  };
+}
+
+// Ordered list of distinct tiers per position, best-first, so shade depth can
+// be assigned by RANK rather than by raw group number. Ranking by index keeps
+// the ramp evenly spread no matter how many tiers a position actually has
+// (QB has 6, WR has 12) -- using group number directly would make WR's ramp
+// wash out while QB's barely moved.
+let _tierOrderCache = null;
+function tierOrderIndex(p){
+  if(!_tierOrderCache){
+    const byPos = {};
+    DATA.players.forEach(pl=>{
+      const t = parseTier(pl.tier);
+      if(!t) return;
+      (byPos[pl.pos] = byPos[pl.pos] || new Set()).add(`${t.group}.${String(t.sub).padStart(2,'0')}`);
+    });
+    _tierOrderCache = {};
+    Object.entries(byPos).forEach(([pos, set])=>{
+      const sorted = [...set].sort((a,b)=>parseFloat(a)-parseFloat(b));
+      _tierOrderCache[pos] = sorted;
+    });
+  }
+  const t = parseTier(p.tier);
+  if(!t) return null;
+  const list = _tierOrderCache[p.pos];
+  if(!list) return null;
+  const key = `${t.group}.${String(t.sub).padStart(2,'0')}`;
+  const idx = list.indexOf(key);
+  return idx < 0 ? null : {idx, total: list.length, tier: t};
+}
+
+// Background/foreground for a position cell: position hue, lightness ramped
+// by tier depth (darkest = best tier).
+function posTierStyle(p){
+  const c = POS_COLOR[p.pos];
+  if(!c) return '';
+  const oi = tierOrderIndex(p);
+  // Unranked/#N/A tiers get the lightest, most washed-out treatment rather
+  // than a mid-tone that could be mistaken for a real tier.
+  const frac = oi ? (oi.total > 1 ? oi.idx/(oi.total-1) : 0) : 1;
+  const light = 26 + frac*46;                 // 26% (best) -> 72% (worst)
+  const sat = oi ? c.s : Math.max(4, c.s*0.25);
+  const fg = light > 52 ? '#0a0e14' : '#e8eef2';
+  return `background:hsl(${c.h} ${sat}% ${light}%);color:${fg};`;
+}
 function leagueRosterablePositions(lg){
   const slots = (lg && lg.rosterSlots) || [];
   if(!slots.length) return null;
