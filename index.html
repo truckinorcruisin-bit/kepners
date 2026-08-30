@@ -760,6 +760,26 @@ function findBigBoardPlayer(name){
   return DATA.players.find(p=>norm(p.name)===target);
 }
 
+// A team's LOCKED-IN keepers, regardless of source. `t.liveKeepers` only
+// exists for leagues with a live Google Sheet sync (Kepners) -- Miami has
+// none, so a manager's real picks arrive instead as a KEEPER_SUGGESTIONS
+// entry flagged `confirmed` (predict_miami_keepers.py promotes a manager's
+// reported choice out of the predicted list). The Prep tab's Draft Order
+// table already merges these two sources correctly; everything on the
+// Draft tab (My Team, Rosters by Team, Deep Dive roster-fit/byes/stacking,
+// the MY ROSTER count, and the Player Board's drafted-map) was still reading
+// `t.liveKeepers` directly, so a Miami keeper showed up on Prep but nowhere
+// on Draft. Route all of those through here instead. Real synced data wins
+// if a team somehow has both.
+function resolvedKeepers(t){
+  if(!t) return [];
+  const real = t.liveKeepers || [];
+  if(real.length) return real;
+  const SUG = KEEPER_SUGGESTIONS[activeLeague];
+  const suggested = (SUG && SUG.by_manager && SUG.by_manager[t.manager]) || [];
+  return suggested.filter(k=>k.confirmed);
+}
+
 // Mirrors zimmer_analysis.py's TIER_SIZES / tier_label EXACTLY -- if you tune
 // one, tune the other, or Expected Bid Range lookups will silently mismatch.
 const TIER_SIZES = {
@@ -1353,7 +1373,7 @@ function renderSnakeBanner(lg){
   const roster = lg.rosterSlots || [];
   // my roster fill from keepers (live draft logging isn't wired for snake yet;
   // keepers are the only locked picks we know pre-draft)
-  const myKeepers = (myTeamObj && myTeamObj.liveKeepers) ? myTeamObj.liveKeepers.length : 0;
+  const myKeepers = resolvedKeepers(myTeamObj).length;
   const myLogged = snakeDraft.picks.filter(p=>p.isMine).length;
   const nextOverall = snakeDraft.picks.length + 1;
   const next = snakePickLabel(nextOverall, teams);
@@ -1574,7 +1594,7 @@ function renderRostersByTeam(lg){
   byTeam.set('__unassigned__', {team:{team:'(unassigned)', isMe:false}, keepers:[], picks:[]});
 
   (lg.teams||[]).forEach(t=>{
-    (t.liveKeepers||[]).forEach(k=>{
+    resolvedKeepers(t).forEach(k=>{
       const bp = findBigBoardPlayer(k.player);
       const entry = byTeam.get(t.team);
       if(entry) entry.keepers.push({name:k.player, pos:bp?bp.pos:null, round:k.round});
@@ -1622,7 +1642,7 @@ function renderMyTeam(lg){
   // Slots fill from keepers PLUS anything logged to me in the live Draft Log,
   // so the panel (and the Deep Dive roster-fit read that depends on it) stays
   // accurate as the draft progresses rather than being frozen pre-draft.
-  const myKeepers = (myTeamObj && myTeamObj.liveKeepers) ? [...myTeamObj.liveKeepers] : [];
+  const myKeepers = [...resolvedKeepers(myTeamObj)];
   const myLogged = snakeDraft.picks
     .filter(p=>p.isMine)
     .map(p=>({player:p.name, round:p.round, _pick:p.label}));
@@ -1746,7 +1766,7 @@ function myPositionCounts(lg){
   const myTeamObj = (lg && lg.teams) ? lg.teams.find(t=>t.isMe) : null;
   const counts = {};
   const bump = (pos)=>{ if(pos) counts[pos] = (counts[pos]||0)+1; };
-  ((myTeamObj && myTeamObj.liveKeepers) || []).forEach(k=>{
+  resolvedKeepers(myTeamObj).forEach(k=>{
     const bp = findBigBoardPlayer(k.player);
     if(bp) bump(bp.pos);
   });
@@ -1827,7 +1847,7 @@ function byeOverlaps(player, lg){
   if(!player.byeWeek) return [];
   const {myTeamObj} = myRosterPositions(lg);
   const overlaps = [];
-  ((myTeamObj && myTeamObj.liveKeepers)||[]).forEach(k=>{
+  resolvedKeepers(myTeamObj).forEach(k=>{
     const bp = findBigBoardPlayer(k.player);
     if(bp && bp.byeWeek===player.byeWeek) overlaps.push(bp.name);
   });
@@ -1839,7 +1859,7 @@ function teamCorrelations(player, lg){
   if(!team) return [];
   const {myTeamObj} = myRosterPositions(lg);
   const mates = [];
-  ((myTeamObj && myTeamObj.liveKeepers)||[]).forEach(k=>{
+  resolvedKeepers(myTeamObj).forEach(k=>{
     const bp = findBigBoardPlayer(k.player);
     if(bp && (bp.proTeamEspn||bp.team)===team) mates.push(`${bp.name} (${bp.pos})`);
   });
@@ -2713,10 +2733,16 @@ function renderKeeperGrades(){
 // always wins over a same-player prediction. Shared by the Live Feed ticker
 // and the draft-tab footer so the two can't disagree on a keeper count.
 function leagueKeeperItems(lg){
+  // BUG FIXED: confirmed used to mean "only t.liveKeepers" -- correct for
+  // Kepners (live sheet sync) but Miami has no sync, so a manager's real
+  // pick only ever arrives as a KEEPER_SUGGESTIONS entry flagged `confirmed`.
+  // That meant Miami's confirmed keepers fell into the loop below and got
+  // mislabeled "*predicted" in the ticker. resolvedKeepers() already knows
+  // how to find a team's real keepers whichever source they came from.
   const confirmedIds = new Set();
   const confirmed = [];
   (lg.teams||[]).forEach(t=>{
-    (t.liveKeepers||[]).forEach(k=>{
+    resolvedKeepers(t).forEach(k=>{
       const bp = findBigBoardPlayer(k.player);
       if(bp) confirmedIds.add(bp.id);
       confirmed.push({team:t.team, player:k.player, round:k.round});
@@ -2727,6 +2753,7 @@ function leagueKeeperItems(lg){
   if(SUG && SUG.by_manager){
     (lg.teams||[]).forEach(t=>{
       (SUG.by_manager[t.manager]||[]).forEach(k=>{
+        if(k.confirmed) return; // already counted above via resolvedKeepers
         const bp = findBigBoardPlayer(k.player);
         if(bp && confirmedIds.has(bp.id)) return;
         predicted.push({team:t.team, player:k.player, round:k.round});
@@ -3485,15 +3512,24 @@ function ptDraftedMap(){
           if(bp) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:false, round:k.round};
         });
       });
-      if(activeLeague==='kepners' && typeof KEPS!=='undefined' && KEPS && KEPS.by_manager){
+      // BUG FIXED: this only ran for `activeLeague==='kepners'`, so Miami's
+      // predicted AND confirmed keepers (miami_suggested_keepers.json) never
+      // greyed out on the board at all -- Rashee Rice, Brock Bowers, etc.
+      // still showed "available" even though they're locked keepers. Every
+      // league with a suggestions file works the same way here; a `confirmed`
+      // entry (a manager's real pick, reported directly since Miami has no
+      // live sheet sync) renders solid like a real keeper, an unconfirmed
+      // prediction renders amber, same distinction the Prep tab already draws.
+      const SUG = KEEPER_SUGGESTIONS[activeLeague];
+      if(SUG && SUG.by_manager){
         lg.teams.forEach(t=>{
-          (KEPS.by_manager[t.manager]||[]).forEach(k=>{
+          (SUG.by_manager[t.manager]||[]).forEach(k=>{
             const bp = findBigBoardPlayer(k.player);
             // Only mark as suggested if not ALREADY real for this exact player
             // (a different manager's real keeper on the same player id would
             // be a data anomaly, not something to paper over -- but our own
             // suggestion should never override our own real entry).
-            if(bp && !map[bp.id]) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:true, round:k.round};
+            if(bp && !map[bp.id]) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:!k.confirmed, round:k.round};
           });
         });
       }
