@@ -1,26 +1,26 @@
 {
-  "generated": "2026-08-28T17:24:25.141329+00:00",
+  "generated": "2026-08-30T13:07:41.692078+00:00",
   "budget": 200,
   "skill_budget": 198,
   "kdef_reserve": 2,
   "roster": [
     {
       "slot": "QB",
-      "id": "josh-allen",
-      "name": "Josh Allen",
+      "id": "jayden-daniels",
+      "name": "Jayden Daniels",
       "pos": "QB",
-      "team": "BUF",
-      "cost": 34,
-      "war": 88.0
+      "team": "WAS",
+      "cost": 14,
+      "war": 36.7
     },
     {
       "slot": "RB",
-      "id": "javonte-williams",
-      "name": "Javonte Williams",
+      "id": "breece-hall",
+      "name": "Breece Hall",
       "pos": "RB",
-      "team": "DAL",
-      "cost": 26,
-      "war": 69.2
+      "team": "NYJ",
+      "cost": 27,
+      "war": 68.2
     },
     {
       "slot": "RB",
@@ -28,7 +28,7 @@
       "name": "Josh Jacobs",
       "pos": "RB",
       "team": "GB",
-      "cost": 25,
+      "cost": 24,
       "war": 69.5
     },
     {
@@ -42,12 +42,12 @@
     },
     {
       "slot": "WR",
-      "id": "courtland-sutton",
-      "name": "Courtland Sutton",
+      "id": "dk-metcalf",
+      "name": "DK Metcalf",
       "pos": "WR",
-      "team": "DEN",
-      "cost": 6,
-      "war": 15.6
+      "team": "PIT",
+      "cost": 5,
+      "war": 11.6
     },
     {
       "slot": "WR",
@@ -69,12 +69,12 @@
     },
     {
       "slot": "FLEX",
-      "id": "tucker-kraft",
-      "name": "Tucker Kraft",
-      "pos": "TE",
-      "team": "GB",
-      "cost": 4,
-      "war": 15.5
+      "id": "javonte-williams",
+      "name": "Javonte Williams",
+      "pos": "RB",
+      "team": "DAL",
+      "cost": 27,
+      "war": 69.2
     },
     {
       "slot": "BEN",
@@ -87,30 +87,12 @@
     },
     {
       "slot": "BEN",
-      "id": "george-kittle",
-      "name": "George Kittle",
+      "id": "sam-laporta",
+      "name": "Sam LaPorta",
       "pos": "TE",
-      "team": "SF",
-      "cost": 4,
-      "war": 20.8
-    },
-    {
-      "slot": "BEN",
-      "id": "breece-hall",
-      "name": "Breece Hall",
-      "pos": "RB",
-      "team": "NYJ",
-      "cost": 27,
-      "war": 68.2
-    },
-    {
-      "slot": "BEN",
-      "id": "drake-maye",
-      "name": "Drake Maye",
-      "pos": "QB",
-      "team": "NE",
-      "cost": 14,
-      "war": 37.7
+      "team": "DET",
+      "cost": 6,
+      "war": 16.5
     },
     {
       "slot": "BEN",
@@ -123,15 +105,33 @@
     },
     {
       "slot": "BEN",
-      "id": "jayden-daniels",
-      "name": "Jayden Daniels",
-      "pos": "QB",
-      "team": "WAS",
-      "cost": 13,
-      "war": 36.7
+      "id": "tucker-kraft",
+      "name": "Tucker Kraft",
+      "pos": "TE",
+      "team": "GB",
+      "cost": 4,
+      "war": 15.5
+    },
+    {
+      "slot": "BEN",
+      "id": "george-kittle",
+      "name": "George Kittle",
+      "pos": "TE",
+      "team": "SF",
+      "cost": 5,
+      "war": 20.8
+    },
+    {
+      "slot": "BEN",
+      "id": "derrick-henry",
+      "name": "Derrick Henry",
+      "pos": "RB",
+      "team": "BAL",
+      "cost": 41,
+      "war": 99.7
     }
   ],
-  "total_war": 569.2,
+  "total_war": 555.7,
   "total_cost": 198,
   "budget_remaining": 0,
   "assumptions": [
