@@ -434,7 +434,7 @@
   .sdl-del:hover{color:var(--red);border-color:var(--red);}
   .sdl-prefill{color:var(--amber);}
   /* rosters-by-team verification view */
-  .rbt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(185px,1fr));gap:8px;margin-top:6px;}
+  .rbt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(225px,1fr));gap:8px;margin-top:6px;}
   .rbt-card{border:1px solid var(--line);background:var(--panel);padding:6px 8px;}
   .rbt-team{color:var(--cyan);font-size:10px;margin-bottom:4px;border-bottom:1px solid var(--line);
     padding-bottom:3px;display:flex;justify-content:space-between;gap:6px;}
@@ -443,7 +443,17 @@
   .rbt-p{font-size:9.5px;padding:1px 0;display:flex;gap:6px;align-items:baseline;}
   .rbt-lbl{color:var(--dim);flex:0 0 32px;font-variant-numeric:tabular-nums;}
   .rbt-pos{color:var(--dim);flex:0 0 26px;}
-  .rbt-nm{flex:1 1 auto;}
+  .rbt-nm{flex:1 1 auto;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .rbt-war{flex:0 0 30px;text-align:right;font-variant-numeric:tabular-nums;color:var(--green);}
+  .rbt-warneg{color:var(--red);}
+  .rbt-warna{color:var(--dim);}
+  .rbt-openslot{opacity:0.45;font-style:italic;}
+  .rbt-bench{opacity:0.7;}
+  .rbt-over .rbt-nm{color:var(--red);white-space:normal;}
+  .rbt-wartot{font-size:9px;color:var(--dim);border-bottom:1px solid var(--line);
+    padding-bottom:3px;margin-bottom:3px;display:flex;justify-content:space-between;gap:6px;}
+  .rbt-wartot b{color:var(--cyan);font-size:10px;}
+  .rbt-startwar{color:var(--dim);}
   .rbt-keep{color:var(--green);}
   .rbt-empty{color:var(--dim);font-size:9.5px;padding:2px 0;}
   .pt-taken{color:var(--dim);font-size:10px;}
@@ -1582,6 +1592,58 @@ function renderSnakeDraftLog(lg){
 // Includes keepers as well as logged picks, since that's what the platform
 // shows on a roster -- a log that matches pick-for-pick can still look wrong
 // next to ESPN/Yahoo if keepers aren't accounted for.
+// Fills a league's roster slots from a set of players, in the order the slots
+// are declared. Shared by My Team and Rosters by Team so the two can never
+// disagree about which player occupies which slot.
+// `entries` items: {player, round, _pick, playerId, pos}
+// Three passes, in priority order, because a single in-order pass lets an
+// early wildcard slot swallow a player a later dedicated slot needed.
+//
+// BUG HISTORY: BEN slots were once matched with the same `pos===slot` test
+// used for real position slots -- but "BEN" is not a position, so that test
+// can never be true and every pick past the starters silently vanished. FLEX
+// was the mirror-image bug: it matched everything, so it would absorb a
+// QB/K/DEF that no real FLEX slot can start.
+function fillRosterSlots(roster, entries){
+  const remaining = [...entries];
+  const cells = roster.map(slot=>({slot, fill:null}));
+  const posOf = (k)=>{
+    if(k.pos) return k.pos;
+    const bp = findBigBoardPlayer(k.player);
+    return bp ? bp.pos : null;
+  };
+  cells.forEach(c=>{                                   // 1. dedicated starters
+    if(['FLEX','BEN','IR'].includes(c.slot)) return;
+    const i = remaining.findIndex(k=>posOf(k)===c.slot);
+    if(i>=0) c.fill = remaining.splice(i,1)[0];
+  });
+  cells.forEach(c=>{                                   // 2. FLEX: RB/WR/TE only
+    if(c.slot!=='FLEX') return;
+    const i = remaining.findIndex(k=>FLEX_ELIGIBLE.includes(posOf(k)));
+    if(i>=0) c.fill = remaining.splice(i,1)[0];
+  });
+  cells.forEach(c=>{                                   // 3. bench: anything left
+    if(c.slot!=='BEN' && c.slot!=='IR') return;
+    if(remaining.length) c.fill = remaining.shift();
+  });
+  return {cells, overflow: remaining.length, overflowPlayers: remaining};
+}
+
+// Dedupe by Big Board id (falling back to name): if a keeper also gets typed
+// into the Draft Log -- easy to do, since keepers consume real draft picks in
+// these leagues -- he'd otherwise occupy two roster slots and push a real
+// player off the panel.
+function dedupeRosterEntries(entries){
+  const seen = new Set();
+  return entries.filter(k=>{
+    const bp = findBigBoardPlayer(k.player);
+    const key = bp ? bp.id : (k.player||'').toLowerCase().trim();
+    if(seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}
+
 function renderRostersByTeam(lg){
   const el = document.getElementById('rostersByTeamArea');
   if(!el) return;
@@ -1597,27 +1659,85 @@ function renderRostersByTeam(lg){
     resolvedKeepers(t).forEach(k=>{
       const bp = findBigBoardPlayer(k.player);
       const entry = byTeam.get(t.team);
-      if(entry) entry.keepers.push({name:k.player, pos:bp?bp.pos:null, round:k.round});
+      if(entry) entry.keepers.push({player:k.player, pos:bp?bp.pos:null, round:k.round,
+                                    playerId:bp?bp.id:null, isKeeper:true});
     });
   });
   snakeDraft.picks.forEach(p=>{
     const key = p.team && byTeam.has(p.team) ? p.team : '__unassigned__';
-    byTeam.get(key).picks.push(p);
+    byTeam.get(key).picks.push({player:p.name, pos:p.pos, round:p.round,
+                                _pick:p.label, playerId:p.playerId, isKeeper:false});
   });
+
+  const roster = lg.rosterSlots || [];
+  const warFor = (e)=>{
+    const bp = e.playerId ? DATA.players.find(p=>p.id===e.playerId) : findBigBoardPlayer(e.player);
+    return bp ? warOf(bp) : null;
+  };
+  const isStarter = (slot)=> slot!=='BEN' && slot!=='IR';
 
   const cards = [...byTeam.entries()]
     .filter(([key,v])=>key!=='__unassigned__' || v.picks.length)  // hide the unassigned card unless it has something
     .map(([key,v])=>{
-      const total = v.keepers.length + v.picks.length;
-      const lines = [
-        ...v.keepers.map(k=>`<div class="rbt-p"><span class="rbt-lbl rbt-keep">K${k.round??''}</span><span class="rbt-pos">${k.pos||'—'}</span><span class="rbt-nm">${k.name}</span></div>`),
-        ...v.picks.map(p=>`<div class="rbt-p"><span class="rbt-lbl">${p.label}</span><span class="rbt-pos">${p.pos||'—'}</span><span class="rbt-nm">${p.name}${p.playerId?'':' <span class="sdl-warn" title="No Big Board match">⚠</span>'}</span></div>`),
-      ];
+      const entries = dedupeRosterEntries([...v.keepers, ...v.picks]);
+      const total = entries.length;
+      // The unassigned bucket has no roster shape to fill -- show it as a flat
+      // list rather than forcing it through slot allocation.
+      const unassigned = key==='__unassigned__';
+      const {cells, overflowPlayers} = unassigned
+        ? {cells: entries.map(e=>({slot:'?', fill:e})), overflowPlayers: []}
+        : fillRosterSlots(roster, entries);
+
+      // WAR totals. Negative WAR is floored at 0 per player rather than
+      // subtracted: a below-replacement player on your BENCH costs you
+      // nothing, since you'd simply start someone else (that's what
+      // "replacement level" means). Subtracting his negative would penalise a
+      // team for roster filler it never has to play.
+      // Starters are reported separately because in a start-9 league that's
+      // the number that actually decides matchups -- bench depth barely moves
+      // it, so a raw whole-roster total flatters teams who hoarded depth.
+      let sumAll = 0, sumStart = 0;
+      cells.forEach(c=>{
+        if(!c.fill) return;
+        const w = warFor(c.fill);
+        if(w==null || w<=0) return;
+        sumAll += w;
+        if(isStarter(c.slot)) sumStart += w;
+      });
+
+      const lines = cells.map(c=>{
+        if(!c.fill){
+          return `<div class="rbt-p rbt-openslot"><span class="rbt-lbl">${c.slot}</span>
+            <span class="rbt-pos">—</span><span class="rbt-nm">open</span><span class="rbt-war"></span></div>`;
+        }
+        const e = c.fill;
+        const w = warFor(e);
+        const bp = e.playerId ? DATA.players.find(p=>p.id===e.playerId) : findBigBoardPlayer(e.player);
+        const chip = bp ? `<span class="pos-chip" style="${posTierStyle(bp)}" title="${bp.tier&&!isBlankVal(bp.tier)?bp.tier:'no tier'}">${e.pos||bp.pos}</span>`
+                        : `<span class="rbt-pos">${e.pos||'—'}</span>`;
+        const when = e.isKeeper ? `K${e.round??''}` : (e._pick || `R${e.round??''}`);
+        return `<div class="rbt-p${isStarter(c.slot)?'':' rbt-bench'}">
+          <span class="rbt-lbl ${e.isKeeper?'rbt-keep':''}" title="${e.isKeeper?'keeper':'drafted'} ${when}">${c.slot}</span>
+          ${chip}
+          <span class="rbt-nm">${e.player}${e.playerId?'':' <span class="sdl-warn" title="No Big Board match">⚠</span>'}</span>
+          <span class="rbt-war ${w==null?'rbt-warna':w<0?'rbt-warneg':''}">${w==null?'—':(w>0?'+':'')+Math.round(w)}</span>
+        </div>`;
+      }).join('');
+
+      const overflowNote = (overflowPlayers && overflowPlayers.length)
+        ? `<div class="rbt-p rbt-over"><span class="rbt-lbl">!</span><span class="rbt-pos">—</span>
+           <span class="rbt-nm">${overflowPlayers.length} more than roster has slots: ${overflowPlayers.map(o=>o.player).join(', ')}</span></div>`
+        : '';
+
       return `<div class="rbt-card">
         <div class="rbt-team ${v.team.isMe?'mine':''}">
           <span>${v.team.isMe?'★ ':''}${v.team.team}</span><span class="rbt-count">${total}</span>
         </div>
-        ${lines.join('') || '<div class="rbt-empty">nothing yet</div>'}
+        ${unassigned?'':`<div class="rbt-wartot" title="Sum of positive WAR. Starters = non-bench slots only.">
+          Σ WAR <b>${Math.round(sumAll)}</b> <span class="rbt-startwar">starters ${Math.round(sumStart)}</span>
+        </div>`}
+        ${lines || '<div class="rbt-empty">nothing yet</div>'}
+        ${overflowNote}
       </div>`;
     }).join('');
 
@@ -1625,9 +1745,14 @@ function renderRostersByTeam(lg){
     <summary>ⓘ Rosters by Team — verify my manual entry against the platform</summary>
     <div style="padding:8px 11px;">
       <div style="font-size:9px;color:var(--dim);line-height:1.5;">
-        Keepers (green <b>K</b>) plus every pick logged to that team. Compare against ESPN/Yahoo to catch a
-        pick logged to the wrong owner, a missed pick, or a duplicate. A ⚠ means the name didn't match the
-        Big Board, so that player is still showing as available on the board.
+        Laid out by roster slot (same order as My Team) so open starting spots are obvious — an
+        <b>open</b> row means that team hasn't filled that slot yet. Position colour matches the Player
+        Board: hue = position, darker = better tier. <b>Σ WAR</b> sums positive WAR only — a
+        below-replacement player on the bench costs nothing, since you'd just start someone else — and
+        <b>starters</b> excludes bench slots, which is the number that actually decides matchups.
+        Compare against ESPN/Yahoo to catch a pick logged to the wrong owner, a missed pick, or a
+        duplicate. A ⚠ means the name didn't match the Big Board, so that player still shows as
+        available on the board.
       </div>
       <div class="rbt-grid">${cards}</div>
     </div>
@@ -1642,50 +1767,12 @@ function renderMyTeam(lg){
   // Slots fill from keepers PLUS anything logged to me in the live Draft Log,
   // so the panel (and the Deep Dive roster-fit read that depends on it) stays
   // accurate as the draft progresses rather than being frozen pre-draft.
-  const myKeepers = [...resolvedKeepers(myTeamObj)];
+  const myKeepers = resolvedKeepers(myTeamObj).map(k=>({player:k.player, round:k.round}));
   const myLogged = snakeDraft.picks
     .filter(p=>p.isMine)
-    .map(p=>({player:p.name, round:p.round, _pick:p.label}));
-  // Dedupe by normalized name: if a keeper also gets typed into the Draft Log
-  // (easy to do -- keepers consume real draft picks in this league), he'd
-  // otherwise occupy two roster slots and push a real player off the panel.
-  const seen = new Set();
-  const remaining = [...myKeepers, ...myLogged].filter(k=>{
-    const bp = findBigBoardPlayer(k.player);
-    const key = bp ? bp.id : (k.player||'').toLowerCase().trim();
-    if(seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
-
-  const posOf = (k)=>{ const bp = findBigBoardPlayer(k.player); return bp ? bp.pos : null; };
-  const cells = roster.map(slot=>({slot, fill:null}));
-  // Three passes, in priority order, because a single in-order pass lets an
-  // early wildcard slot swallow a player a later dedicated slot needed.
-  //
-  // BUG FIXED: BEN slots were matched with the same `bp.pos===slot` test used
-  // for real position slots -- but "BEN" is not a position, so that test can
-  // never be true and every pick past your starters silently vanished from
-  // the panel (drafting a 3rd/4th RB appeared to do nothing). BEN now takes
-  // any leftover. FLEX was the mirror-image bug: it matched `k=>true`, so it
-  // would happily absorb a QB/K/DEF that no real FLEX slot can start.
-  cells.forEach(c=>{                                   // 1. dedicated starters
-    if(['FLEX','BEN','IR'].includes(c.slot)) return;
-    const i = remaining.findIndex(k=>posOf(k)===c.slot);
-    if(i>=0) c.fill = remaining.splice(i,1)[0];
-  });
-  cells.forEach(c=>{                                   // 2. FLEX: RB/WR/TE only
-    if(c.slot!=='FLEX') return;
-    const i = remaining.findIndex(k=>FLEX_ELIGIBLE.includes(posOf(k)));
-    if(i>=0) c.fill = remaining.splice(i,1)[0];
-  });
-  cells.forEach(c=>{                                   // 3. bench: anything left
-    if(c.slot!=='BEN' && c.slot!=='IR') return;
-    if(remaining.length) c.fill = remaining.shift();
-  });
-  // If the roster config has fewer slots than players logged to me, say so
-  // rather than dropping them on the floor the way the old code did silently.
-  const overflow = remaining.length;
+    .map(p=>({player:p.name, round:p.round, _pick:p.label, pos:p.pos, playerId:p.playerId}));
+  const remaining = dedupeRosterEntries([...myKeepers, ...myLogged]);
+  const {cells, overflow} = fillRosterSlots(roster, remaining);
   el.innerHTML = `<div class="myteam-list">
     ${cells.map(c=>`
       <div class="myteam-cell ${c.fill?'filled':''}">
