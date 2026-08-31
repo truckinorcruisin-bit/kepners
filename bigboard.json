@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-30T15:06:42.979889+00:00",
+    "generated": "2026-08-31T17:45:19.783400+00:00",
     "marketDriftBands": {
       "kepners": {
         "adpSource2026": "yahoo",
@@ -18910,7 +18910,16 @@
           "manager": "Mikey",
           "isMe": false,
           "draftPosition": 12,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "JSN",
+              "round": 1
+            },
+            {
+              "player": "Dak Prescott",
+              "round": 9
+            }
+          ]
         },
         {
           "slot": 4,
@@ -18952,7 +18961,16 @@
           "manager": "Matty",
           "isMe": false,
           "draftPosition": 4,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Nico Collins",
+              "round": 5
+            },
+            {
+              "player": "Rico Dowdle",
+              "round": 13
+            }
+          ]
         },
         {
           "slot": 7,
@@ -18977,7 +18995,16 @@
           "manager": "Scott",
           "isMe": false,
           "draftPosition": 5,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "Brock Bowers",
+              "round": 6
+            },
+            {
+              "player": "Blake Corum",
+              "round": 13
+            }
+          ]
         },
         {
           "slot": 9,
@@ -19083,7 +19110,7 @@
         "fairFloor": -2.3
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-08-30T15:06:40.415506+00:00",
+      "draftOrderGenerated": "2026-08-31T17:45:13.945673+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
