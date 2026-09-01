@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-08-31T17:45:19.783400+00:00",
+    "generated": "2026-09-01T01:50:04.381157+00:00",
     "marketDriftBands": {
       "kepners": {
         "adpSource2026": "yahoo",
@@ -18885,7 +18885,12 @@
           "manager": "Bobby",
           "isMe": false,
           "draftPosition": 7,
-          "liveKeepers": []
+          "liveKeepers": [
+            {
+              "player": "George Pickens",
+              "round": 2
+            }
+          ]
         },
         {
           "slot": 2,
@@ -18899,8 +18904,8 @@
               "round": 6
             },
             {
-              "player": "Terrance Ferguson",
-              "round": 14
+              "player": "Justin Herbert",
+              "round": 13
             }
           ]
         },
@@ -18912,7 +18917,7 @@
           "draftPosition": 12,
           "liveKeepers": [
             {
-              "player": "JSN",
+              "player": "Jaxon Smith-Njigba",
               "round": 1
             },
             {
@@ -19032,7 +19037,7 @@
             },
             {
               "player": "De'Von Achane",
-              "round": 7
+              "round": 6
             }
           ]
         },
@@ -19110,7 +19115,7 @@
         "fairFloor": -2.3
       },
       "draftOrderSynced": true,
-      "draftOrderGenerated": "2026-08-31T17:45:13.945673+00:00",
+      "draftOrderGenerated": "2026-09-01T01:50:01.516501+00:00",
       "draftOrderUnmatched": []
     },
     "miami": {
