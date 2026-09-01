@@ -1,17 +1,17 @@
 {
-  "generated": "2026-08-30T13:07:41.692078+00:00",
+  "generated": "2026-09-01T01:51:27.153828+00:00",
   "budget": 200,
   "skill_budget": 198,
   "kdef_reserve": 2,
   "roster": [
     {
       "slot": "QB",
-      "id": "jayden-daniels",
-      "name": "Jayden Daniels",
+      "id": "jalen-hurts",
+      "name": "Jalen Hurts",
       "pos": "QB",
-      "team": "WAS",
-      "cost": 14,
-      "war": 36.7
+      "team": "PHI",
+      "cost": 13,
+      "war": 36.4
     },
     {
       "slot": "RB",
@@ -19,17 +19,26 @@
       "name": "Breece Hall",
       "pos": "RB",
       "team": "NYJ",
-      "cost": 27,
-      "war": 68.2
+      "cost": 26,
+      "war": 69.1
     },
     {
       "slot": "RB",
-      "id": "josh-jacobs",
-      "name": "Josh Jacobs",
+      "id": "javonte-williams",
+      "name": "Javonte Williams",
       "pos": "RB",
-      "team": "GB",
-      "cost": 24,
-      "war": 69.5
+      "team": "DAL",
+      "cost": 27,
+      "war": 68.6
+    },
+    {
+      "slot": "WR",
+      "id": "jameson-williams",
+      "name": "Jameson Williams",
+      "pos": "WR",
+      "team": "DET",
+      "cost": 10,
+      "war": 24.7
     },
     {
       "slot": "WR",
@@ -38,16 +47,7 @@
       "pos": "WR",
       "team": "LAR",
       "cost": 17,
-      "war": 45.3
-    },
-    {
-      "slot": "WR",
-      "id": "dk-metcalf",
-      "name": "DK Metcalf",
-      "pos": "WR",
-      "team": "PIT",
-      "cost": 5,
-      "war": 11.6
+      "war": 45.0
     },
     {
       "slot": "WR",
@@ -56,61 +56,25 @@
       "pos": "WR",
       "team": "CHI",
       "cost": 11,
-      "war": 33.8
+      "war": 34.1
     },
     {
       "slot": "TE",
-      "id": "dallas-goedert",
-      "name": "Dallas Goedert",
-      "pos": "TE",
-      "team": "PHI",
-      "cost": 2,
-      "war": 12.7
-    },
-    {
-      "slot": "FLEX",
-      "id": "javonte-williams",
-      "name": "Javonte Williams",
-      "pos": "RB",
-      "team": "DAL",
-      "cost": 27,
-      "war": 69.2
-    },
-    {
-      "slot": "BEN",
-      "id": "jalen-hurts",
-      "name": "Jalen Hurts",
-      "pos": "QB",
-      "team": "PHI",
-      "cost": 13,
-      "war": 38.6
-    },
-    {
-      "slot": "BEN",
       "id": "sam-laporta",
       "name": "Sam LaPorta",
       "pos": "TE",
       "team": "DET",
       "cost": 6,
-      "war": 16.5
+      "war": 16.8
     },
     {
-      "slot": "BEN",
-      "id": "mark-andrews",
-      "name": "Mark Andrews",
-      "pos": "TE",
-      "team": "BAL",
-      "cost": 2,
-      "war": 17.6
-    },
-    {
-      "slot": "BEN",
-      "id": "tucker-kraft",
-      "name": "Tucker Kraft",
-      "pos": "TE",
-      "team": "GB",
-      "cost": 4,
-      "war": 15.5
+      "slot": "FLEX",
+      "id": "travis-etienne",
+      "name": "Travis Etienne",
+      "pos": "RB",
+      "team": "NO",
+      "cost": 21,
+      "war": 48.1
     },
     {
       "slot": "BEN",
@@ -119,7 +83,43 @@
       "pos": "TE",
       "team": "SF",
       "cost": 5,
-      "war": 20.8
+      "war": 27.1
+    },
+    {
+      "slot": "BEN",
+      "id": "mark-andrews",
+      "name": "Mark Andrews",
+      "pos": "TE",
+      "team": "BAL",
+      "cost": 2,
+      "war": 17.5
+    },
+    {
+      "slot": "BEN",
+      "id": "dallas-goedert",
+      "name": "Dallas Goedert",
+      "pos": "TE",
+      "team": "PHI",
+      "cost": 2,
+      "war": 12.7
+    },
+    {
+      "slot": "BEN",
+      "id": "tucker-kraft",
+      "name": "Tucker Kraft",
+      "pos": "TE",
+      "team": "GB",
+      "cost": 4,
+      "war": 10.6
+    },
+    {
+      "slot": "BEN",
+      "id": "tyler-warren",
+      "name": "Tyler Warren",
+      "pos": "TE",
+      "team": "IND",
+      "cost": 12,
+      "war": 32.4
     },
     {
       "slot": "BEN",
@@ -127,11 +127,11 @@
       "name": "Derrick Henry",
       "pos": "RB",
       "team": "BAL",
-      "cost": 41,
-      "war": 99.7
+      "cost": 42,
+      "war": 103.0
     }
   ],
-  "total_war": 555.7,
+  "total_war": 546.1,
   "total_cost": 198,
   "budget_remaining": 0,
   "assumptions": [
