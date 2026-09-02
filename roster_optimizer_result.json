@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-01T01:51:27.153828+00:00",
+  "generated": "2026-09-02T17:54:42.434958+00:00",
   "budget": 200,
   "skill_budget": 198,
   "kdef_reserve": 2,
@@ -10,8 +10,17 @@
       "name": "Jalen Hurts",
       "pos": "QB",
       "team": "PHI",
-      "cost": 13,
+      "cost": 14,
       "war": 36.4
+    },
+    {
+      "slot": "RB",
+      "id": "derrick-henry",
+      "name": "Derrick Henry",
+      "pos": "RB",
+      "team": "BAL",
+      "cost": 43,
+      "war": 107.1
     },
     {
       "slot": "RB",
@@ -20,16 +29,7 @@
       "pos": "RB",
       "team": "NYJ",
       "cost": 26,
-      "war": 69.1
-    },
-    {
-      "slot": "RB",
-      "id": "javonte-williams",
-      "name": "Javonte Williams",
-      "pos": "RB",
-      "team": "DAL",
-      "cost": 27,
-      "war": 68.6
+      "war": 72.9
     },
     {
       "slot": "WR",
@@ -37,8 +37,8 @@
       "name": "Jameson Williams",
       "pos": "WR",
       "team": "DET",
-      "cost": 10,
-      "war": 24.7
+      "cost": 11,
+      "war": 23.4
     },
     {
       "slot": "WR",
@@ -46,8 +46,8 @@
       "name": "Davante Adams",
       "pos": "WR",
       "team": "LAR",
-      "cost": 17,
-      "war": 45.0
+      "cost": 18,
+      "war": 43.7
     },
     {
       "slot": "WR",
@@ -56,10 +56,19 @@
       "pos": "WR",
       "team": "CHI",
       "cost": 11,
-      "war": 34.1
+      "war": 32.8
     },
     {
       "slot": "TE",
+      "id": "dallas-goedert",
+      "name": "Dallas Goedert",
+      "pos": "TE",
+      "team": "PHI",
+      "cost": 2,
+      "war": 12.7
+    },
+    {
+      "slot": "FLEX",
       "id": "sam-laporta",
       "name": "Sam LaPorta",
       "pos": "TE",
@@ -68,22 +77,13 @@
       "war": 16.8
     },
     {
-      "slot": "FLEX",
-      "id": "travis-etienne",
-      "name": "Travis Etienne",
-      "pos": "RB",
-      "team": "NO",
-      "cost": 21,
-      "war": 48.1
-    },
-    {
       "slot": "BEN",
-      "id": "george-kittle",
-      "name": "George Kittle",
-      "pos": "TE",
-      "team": "SF",
-      "cost": 5,
-      "war": 27.1
+      "id": "quinshon-judkins",
+      "name": "Quinshon Judkins",
+      "pos": "RB",
+      "team": "CLE",
+      "cost": 18,
+      "war": 45.3
     },
     {
       "slot": "BEN",
@@ -96,21 +96,21 @@
     },
     {
       "slot": "BEN",
-      "id": "dallas-goedert",
-      "name": "Dallas Goedert",
-      "pos": "TE",
-      "team": "PHI",
-      "cost": 2,
-      "war": 12.7
+      "id": "javonte-williams",
+      "name": "Javonte Williams",
+      "pos": "RB",
+      "team": "DAL",
+      "cost": 27,
+      "war": 73.3
     },
     {
       "slot": "BEN",
-      "id": "tucker-kraft",
-      "name": "Tucker Kraft",
+      "id": "george-kittle",
+      "name": "George Kittle",
       "pos": "TE",
-      "team": "GB",
-      "cost": 4,
-      "war": 10.6
+      "team": "SF",
+      "cost": 5,
+      "war": 23.2
     },
     {
       "slot": "BEN",
@@ -123,15 +123,15 @@
     },
     {
       "slot": "BEN",
-      "id": "derrick-henry",
-      "name": "Derrick Henry",
-      "pos": "RB",
-      "team": "BAL",
-      "cost": 42,
-      "war": 103.0
+      "id": "travis-kelce",
+      "name": "Travis Kelce",
+      "pos": "TE",
+      "team": "KC",
+      "cost": 3,
+      "war": 9.7
     }
   ],
-  "total_war": 546.1,
+  "total_war": 547.2,
   "total_cost": 198,
   "budget_remaining": 0,
   "assumptions": [
