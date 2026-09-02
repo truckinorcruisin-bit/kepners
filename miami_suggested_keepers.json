@@ -39,7 +39,8 @@
         "keeper_value": 0.0,
         "verdict": "fair",
         "was_keeper_2025": false,
-        "confirmed": false
+        "confirmed": false,
+        "declined": true
       },
       {
         "player": "Jameson Williams",
@@ -56,7 +57,8 @@
         "keeper_value": -0.2,
         "verdict": "fair",
         "was_keeper_2025": false,
-        "confirmed": false
+        "confirmed": false,
+        "declined": true
       }
     ],
     "Lubeck": [
@@ -75,7 +77,8 @@
         "keeper_value": -0.0,
         "verdict": "fair",
         "was_keeper_2025": false,
-        "confirmed": false
+        "confirmed": false,
+        "declined": true
       },
       {
         "player": "Tucker Kraft",
@@ -92,7 +95,8 @@
         "keeper_value": -0.1,
         "verdict": "fair",
         "was_keeper_2025": false,
-        "confirmed": false
+        "confirmed": false,
+        "declined": true
       }
     ],
     "Mullins": [
@@ -166,7 +170,8 @@
         "keeper_value": 1.4,
         "verdict": "good value",
         "was_keeper_2025": false,
-        "confirmed": false
+        "confirmed": false,
+        "declined": true
       },
       {
         "player": "Rome Odunze",
@@ -183,7 +188,8 @@
         "keeper_value": 0.7,
         "verdict": "good value",
         "was_keeper_2025": true,
-        "confirmed": false
+        "confirmed": false,
+        "declined": true
       }
     ],
     "Nemeth": [
@@ -2023,5 +2029,14 @@
         "was_keeper_2025": false
       }
     ]
+  },
+  "opted_out_managers": {
+    "_comment": "Managers who confirmed directly they are keeping NOBODY this season. Distinct from a manager simply having no confirmed:true candidate yet -- that could mean \"undecided,\" this means \"decided, and the answer is zero.\" predict_miami_keepers.py should not re-populate suggestions here as if this were still an open question; resolvedKeepers() in index.html already returns [] for these managers via the confirmed:true fallback, this list exists so a future regeneration or reader knows WHY it is empty.",
+    "managers": [
+      "Milligan",
+      "K Jack",
+      "Lubeck"
+    ],
+    "confirmed_date": "2026-09-02"
   }
 }

@@ -764,8 +764,19 @@ function getOpponentOwners(){
 // position board can mark them drafted. Same lightweight normalization idea
 // as convert_bigboard.py's name matching (lowercase, trim) -- good enough for
 // live-draft speed-typing; unmatched names just won't highlight on the board.
+// BUG FIXED: this normalizer stripped punctuation but not generational
+// suffixes (Jr./Sr./II/III/IV/V), while the PYTHON-side normalize_name() in
+// convert_bigboard.py already does (used for the Big Board <-> ESPN join).
+// The two silently disagreed: any Big Board entry without a suffix ("Kyle
+// Pitts") would never match a keeper/draft-log entry WITH one ("Kyle Pitts
+// Sr."), permanently showing that player as unmatched (⚠) and still
+// available on the board. Mirrors the Python regex exactly so both sides of
+// the pipeline treat the same name the same way.
 function findBigBoardPlayer(name){
-  const norm = s => (s||'').toLowerCase().replace(/[.''\-]/g,'').trim();
+  const norm = s => (s||'').toLowerCase()
+    .replace(/[.''\-]/g,'')
+    .replace(/\b(jr|sr|ii|iii|iv|v)\b/g,'')
+    .replace(/\s+/g,' ').trim();
   const target = norm(name);
   return DATA.players.find(p=>norm(p.name)===target);
 }
