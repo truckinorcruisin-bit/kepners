@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-09-02T23:37:39.923276+00:00",
+    "generated": "2026-09-02T23:38:07.093522+00:00",
     "marketDriftBands": {
       "kepners": {
         "adpSource2026": "yahoo",
@@ -12,7 +12,7 @@
           "strongPos": 16.7,
           "pos": 9.0,
           "neg": -9.8,
-          "strongNeg": -27.8
+          "strongNeg": -27.6
         }
       },
       "miami": {
@@ -21,10 +21,10 @@
         "likeForLike": false,
         "leanRemoved": -5.0,
         "bands": {
-          "strongPos": 18.1,
+          "strongPos": 18.9,
           "pos": 9.0,
-          "neg": -10.3,
-          "strongNeg": -28.9
+          "neg": -10.5,
+          "strongNeg": -28.5
         }
       },
       "zimmer": {
@@ -33,9 +33,9 @@
         "likeForLike": true,
         "bands": {
           "strongPos": 12.6,
-          "pos": 3.9,
+          "pos": 4.1,
           "neg": -14.6,
-          "strongNeg": -30.0
+          "strongNeg": -30.1
         }
       }
     },
@@ -72,15 +72,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 70.85,
-      "projectedPoints": 297.1,
+      "espnRecommendedBid": 70.74,
+      "projectedPoints": 297.72,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": 147.8,
+      "projectedWar": 148.4,
       "warByLeague": {
-        "kepners": 147.8,
-        "miami": 129.0,
-        "zimmer": 156.4
+        "kepners": 148.4,
+        "miami": 129.6,
+        "zimmer": 157.0
       },
       "marketDrift": {
         "kepners": {
@@ -135,7 +135,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 68.47,
+      "espnRecommendedBid": 68.37,
       "projectedPoints": 277.02,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
@@ -198,7 +198,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 62.94,
+      "espnRecommendedBid": 62.83,
       "projectedPoints": 217.14,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
@@ -261,7 +261,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 60.26,
+      "espnRecommendedBid": 60.19,
       "projectedPoints": 230.5,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
@@ -324,7 +324,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 56.66,
+      "espnRecommendedBid": 56.55,
       "projectedPoints": 262.99,
       "proTeamEspn": "SF",
       "byeWeek": 8,
@@ -387,15 +387,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 58.84,
-      "projectedPoints": 265.85,
+      "espnRecommendedBid": 58.73,
+      "projectedPoints": 265.86,
       "proTeamEspn": "IND",
       "byeWeek": 13,
       "projectedWar": 116.6,
       "warByLeague": {
         "kepners": 116.6,
-        "miami": 97.7,
-        "zimmer": 125.1
+        "miami": 97.8,
+        "zimmer": 125.2
       },
       "marketDrift": {
         "kepners": {
@@ -450,7 +450,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 60.18,
+      "espnRecommendedBid": 60.08,
       "projectedPoints": 209.98,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
@@ -513,15 +513,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 57.97,
-      "projectedPoints": 206.07,
+      "espnRecommendedBid": 57.87,
+      "projectedPoints": 206.06,
       "proTeamEspn": "DET",
       "byeWeek": 6,
       "projectedWar": 85.1,
       "warByLeague": {
         "kepners": 85.1,
         "miami": 63.5,
-        "zimmer": 82.5
+        "zimmer": 82.6
       },
       "marketDrift": {
         "kepners": {
@@ -576,7 +576,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 54.28,
+      "espnRecommendedBid": 54.19,
       "projectedPoints": 244.39,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
@@ -639,7 +639,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 51.25,
+      "espnRecommendedBid": 51.16,
       "projectedPoints": 190.13,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
@@ -702,7 +702,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 50.9,
+      "espnRecommendedBid": 50.81,
       "projectedPoints": 183.18,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
@@ -765,7 +765,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 47.99,
+      "espnRecommendedBid": 47.89,
       "projectedPoints": 230.1,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
@@ -828,7 +828,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 43.83,
+      "espnRecommendedBid": 43.78,
       "projectedPoints": 207.27,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
@@ -891,7 +891,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 49.63,
+      "espnRecommendedBid": 49.53,
       "projectedPoints": 229.02,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
@@ -954,7 +954,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R1.6",
-      "espnRecommendedBid": 37.88,
+      "espnRecommendedBid": 37.81,
       "projectedPoints": 214.27,
       "proTeamEspn": "LV",
       "byeWeek": 13,
@@ -1017,7 +1017,7 @@
         "nfl": "-"
       },
       "notes": "FFB My Guy",
-      "espnRecommendedBid": 36.74,
+      "espnRecommendedBid": 36.63,
       "projectedPoints": 224.8,
       "proTeamEspn": "KC",
       "byeWeek": 5,
@@ -1080,7 +1080,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 43.18,
+      "espnRecommendedBid": 43.1,
       "projectedPoints": 256.43,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
@@ -1143,7 +1143,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R1.22. FFB My Guy",
-      "espnRecommendedBid": 42.85,
+      "espnRecommendedBid": 42.81,
       "projectedPoints": 210.11,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
@@ -1206,7 +1206,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 37.49,
+      "espnRecommendedBid": 37.42,
       "projectedPoints": 167.67,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
@@ -1214,7 +1214,7 @@
       "warByLeague": {
         "kepners": 46.7,
         "miami": 25.1,
-        "zimmer": 44.1
+        "zimmer": 44.2
       },
       "marketDrift": {
         "kepners": {
@@ -1269,7 +1269,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 33.7,
+      "espnRecommendedBid": 33.65,
       "projectedPoints": 142.21,
       "proTeamEspn": "LV",
       "byeWeek": 13,
@@ -1332,7 +1332,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 37.3,
+      "espnRecommendedBid": 37.23,
       "projectedPoints": 163.75,
       "proTeamEspn": "NE",
       "byeWeek": 11,
@@ -1395,7 +1395,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 33.21,
+      "espnRecommendedBid": 33.14,
       "projectedPoints": 161.46,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
@@ -1403,7 +1403,7 @@
       "warByLeague": {
         "kepners": 40.5,
         "miami": 18.9,
-        "zimmer": 37.9
+        "zimmer": 38.0
       },
       "marketDrift": {
         "kepners": {
@@ -1458,7 +1458,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 34.23,
+      "espnRecommendedBid": 34.17,
       "projectedPoints": 133.91,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
@@ -1521,7 +1521,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 29.96,
+      "espnRecommendedBid": 29.91,
       "projectedPoints": 159.4,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
@@ -1584,7 +1584,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 39.3,
+      "espnRecommendedBid": 39.19,
       "projectedPoints": 370.55,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
@@ -1647,7 +1647,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 29.63,
+      "espnRecommendedBid": 29.58,
       "projectedPoints": 166.79,
       "proTeamEspn": "KC",
       "byeWeek": 5,
@@ -1710,7 +1710,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 29.66,
+      "espnRecommendedBid": 29.62,
       "projectedPoints": 158.64,
       "proTeamEspn": "NO",
       "byeWeek": 8,
@@ -1737,7 +1737,7 @@
           "tru": 18.6,
           "sample": "ok",
           "priceRaw": 1.0,
-          "band": "strong-pos"
+          "band": "pos"
         },
         "zimmer": {
           "slot": "WR12",
@@ -1773,7 +1773,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 27.53,
+      "espnRecommendedBid": 27.44,
       "projectedPoints": 158.64,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
@@ -1836,7 +1836,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.3",
-      "espnRecommendedBid": 33.69,
+      "espnRecommendedBid": 33.63,
       "projectedPoints": 211.67,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
@@ -1899,7 +1899,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 26.15,
+      "espnRecommendedBid": 26.1,
       "projectedPoints": 198.56,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
@@ -1962,7 +1962,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 25.71,
+      "espnRecommendedBid": 25.67,
       "projectedPoints": 222.21,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
@@ -2025,7 +2025,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 23.53,
+      "espnRecommendedBid": 23.48,
       "projectedPoints": 148.58,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
@@ -2088,7 +2088,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 27.48,
+      "espnRecommendedBid": 27.43,
       "projectedPoints": 222.56,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
@@ -2151,7 +2151,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 20.28,
+      "espnRecommendedBid": 20.24,
       "projectedPoints": 156.78,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
@@ -2214,7 +2214,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 15.84,
+      "espnRecommendedBid": 15.62,
       "projectedPoints": 140.71,
       "proTeamEspn": "GB",
       "byeWeek": 11,
@@ -2228,8 +2228,8 @@
         "kepners": {
           "slot": "RB37",
           "price": -3.8,
-          "talent": -9.6,
-          "tru": -13.4,
+          "talent": -9.5,
+          "tru": -13.3,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -2237,8 +2237,8 @@
         "miami": {
           "slot": "RB37",
           "price": -3.8,
-          "talent": -10.7,
-          "tru": -14.5,
+          "talent": -10.8,
+          "tru": -14.6,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -2246,8 +2246,8 @@
         "zimmer": {
           "slot": "RB24",
           "price": -8.2,
-          "talent": 7.0,
-          "tru": -1.2,
+          "talent": 7.1,
+          "tru": -1.1,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neutral"
@@ -2277,15 +2277,15 @@
         "nfl": "-"
       },
       "notes": "FFB My Guy",
-      "espnRecommendedBid": 23.27,
-      "projectedPoints": 149.95,
+      "espnRecommendedBid": 23.25,
+      "projectedPoints": 149.96,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
       "projectedWar": 29.0,
       "warByLeague": {
         "kepners": 29.0,
         "miami": 7.4,
-        "zimmer": 26.4
+        "zimmer": 26.5
       },
       "marketDrift": {
         "kepners": {
@@ -2340,7 +2340,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 16.49,
+      "espnRecommendedBid": 16.46,
       "projectedPoints": 145.61,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
@@ -2403,7 +2403,7 @@
         "nfl": "-"
       },
       "notes": "FFB My Guy",
-      "espnRecommendedBid": 18.37,
+      "espnRecommendedBid": 18.34,
       "projectedPoints": 125.99,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
@@ -2435,8 +2435,8 @@
         "zimmer": {
           "slot": "TE3",
           "price": 0.2,
-          "talent": 18.0,
-          "tru": 18.2,
+          "talent": 17.9,
+          "tru": 18.1,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "strong-pos"
@@ -2466,7 +2466,7 @@
         "nfl": "-"
       },
       "notes": "2025 R1",
-      "espnRecommendedBid": 20.03,
+      "espnRecommendedBid": 19.99,
       "projectedPoints": 152.86,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
@@ -2474,7 +2474,7 @@
       "warByLeague": {
         "kepners": 31.9,
         "miami": 10.3,
-        "zimmer": 29.3
+        "zimmer": 29.4
       },
       "marketDrift": {
         "kepners": {
@@ -2529,7 +2529,7 @@
         "nfl": "-"
       },
       "notes": "FFB My Guy",
-      "espnRecommendedBid": 20.43,
+      "espnRecommendedBid": 20.38,
       "projectedPoints": 141.39,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
@@ -2561,8 +2561,8 @@
         "zimmer": {
           "slot": "WR19",
           "price": -3.8,
-          "talent": 17.5,
-          "tru": 13.7,
+          "talent": 17.6,
+          "tru": 13.8,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "strong-pos"
@@ -2592,7 +2592,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 21.44,
+      "espnRecommendedBid": 21.4,
       "projectedPoints": 201.48,
       "proTeamEspn": "NO",
       "byeWeek": 8,
@@ -2655,7 +2655,7 @@
         "nfl": "-"
       },
       "notes": "2025 R1",
-      "espnRecommendedBid": 20.62,
+      "espnRecommendedBid": 20.55,
       "projectedPoints": 159.38,
       "proTeamEspn": "TB",
       "byeWeek": 10,
@@ -2687,8 +2687,8 @@
         "zimmer": {
           "slot": "WR20",
           "price": -4.0,
-          "talent": 17.1,
-          "tru": 13.1,
+          "talent": 17.2,
+          "tru": 13.2,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-pos"
@@ -2718,7 +2718,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R4",
-      "espnRecommendedBid": 18.42,
+      "espnRecommendedBid": 18.38,
       "projectedPoints": 182.76,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
@@ -2781,7 +2781,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 16.61,
+      "espnRecommendedBid": 16.55,
       "projectedPoints": 136.52,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
@@ -2813,8 +2813,8 @@
         "zimmer": {
           "slot": "WR21",
           "price": -4.4,
-          "talent": 8.8,
-          "tru": 4.4,
+          "talent": 8.9,
+          "tru": 4.5,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neutral"
@@ -2844,7 +2844,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 16.11,
+      "espnRecommendedBid": 16.07,
       "projectedPoints": 179.75,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
@@ -2907,7 +2907,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 23.8,
+      "espnRecommendedBid": 23.71,
       "projectedPoints": 322.51,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
@@ -2970,7 +2970,7 @@
         "nfl": "-"
       },
       "notes": "2024 Rookie R4",
-      "espnRecommendedBid": 14.42,
+      "espnRecommendedBid": 14.36,
       "projectedPoints": 170.3,
       "proTeamEspn": "TB",
       "byeWeek": 10,
@@ -3033,8 +3033,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 12.39,
-      "projectedPoints": 126.06,
+      "espnRecommendedBid": 12.35,
+      "projectedPoints": 126.07,
       "proTeamEspn": "IND",
       "byeWeek": 13,
       "projectedWar": 32.4,
@@ -3065,8 +3065,8 @@
         "zimmer": {
           "slot": "TE4",
           "price": 0.6,
-          "talent": 21.9,
-          "tru": 22.5,
+          "talent": 21.8,
+          "tru": 22.4,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-pos"
@@ -3096,7 +3096,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R2",
-      "espnRecommendedBid": 17.92,
+      "espnRecommendedBid": 17.89,
       "projectedPoints": 194.62,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
@@ -3159,8 +3159,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 11.5,
-      "projectedPoints": 141.42,
+      "espnRecommendedBid": 11.46,
+      "projectedPoints": 141.43,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
       "projectedWar": 20.5,
@@ -3191,8 +3191,8 @@
         "zimmer": {
           "slot": "WR22",
           "price": -4.8,
-          "talent": 3.3,
-          "tru": -1.5,
+          "talent": 3.4,
+          "tru": -1.4,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neutral"
@@ -3222,7 +3222,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 12.31,
+      "espnRecommendedBid": 12.27,
       "projectedPoints": 168.11,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
@@ -3285,15 +3285,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 12.83,
-      "projectedPoints": 142.55,
+      "espnRecommendedBid": 12.79,
+      "projectedPoints": 142.56,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
       "projectedWar": 21.6,
       "warByLeague": {
         "kepners": 21.6,
         "miami": 0.0,
-        "zimmer": 19.0
+        "zimmer": 19.1
       },
       "marketDrift": {
         "kepners": {
@@ -3317,8 +3317,8 @@
         "zimmer": {
           "slot": "WR23",
           "price": -4.0,
-          "talent": -3.6,
-          "tru": -7.6,
+          "talent": -3.5,
+          "tru": -7.5,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neutral"
@@ -3348,7 +3348,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 17.5,
+      "espnRecommendedBid": 17.46,
       "projectedPoints": 164.61,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
@@ -3380,8 +3380,8 @@
         "zimmer": {
           "slot": "WR24",
           "price": -2.4,
-          "talent": -4.8,
-          "tru": -7.2,
+          "talent": -4.7,
+          "tru": -7.1,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "neutral"
@@ -3411,7 +3411,7 @@
         "nfl": "-"
       },
       "notes": "2025 R2",
-      "espnRecommendedBid": 8.84,
+      "espnRecommendedBid": 8.8,
       "projectedPoints": 131.06,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
@@ -3419,7 +3419,7 @@
       "warByLeague": {
         "kepners": 10.1,
         "miami": -11.5,
-        "zimmer": 7.5
+        "zimmer": 7.6
       },
       "marketDrift": {
         "kepners": {
@@ -3443,8 +3443,8 @@
         "zimmer": {
           "slot": "WR25",
           "price": -2.2,
-          "talent": -6.3,
-          "tru": -8.5,
+          "talent": -6.2,
+          "tru": -8.4,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neutral"
@@ -3474,14 +3474,14 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 10.54,
-      "projectedPoints": 144.32,
+      "espnRecommendedBid": 10.5,
+      "projectedPoints": 144.26,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": 23.4,
+      "projectedWar": 23.3,
       "warByLeague": {
-        "kepners": 23.4,
-        "miami": 1.8,
+        "kepners": 23.3,
+        "miami": 1.7,
         "zimmer": 20.8
       },
       "marketDrift": {
@@ -3506,8 +3506,8 @@
         "zimmer": {
           "slot": "WR26",
           "price": -1.2,
-          "talent": -5.4,
-          "tru": -6.6,
+          "talent": -5.2,
+          "tru": -6.4,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neutral"
@@ -3537,15 +3537,15 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R4",
-      "espnRecommendedBid": 13.26,
-      "projectedPoints": 171.81,
+      "espnRecommendedBid": 13.22,
+      "projectedPoints": 172.07,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": 22.5,
+      "projectedWar": 22.8,
       "warByLeague": {
-        "kepners": 22.5,
-        "miami": 3.7,
-        "zimmer": 31.1
+        "kepners": 22.8,
+        "miami": 4.0,
+        "zimmer": 31.4
       },
       "marketDrift": {
         "kepners": {
@@ -3569,8 +3569,8 @@
         "zimmer": {
           "slot": "RB23",
           "price": -8.4,
-          "talent": 10.9,
-          "tru": 2.5,
+          "talent": 11.0,
+          "tru": 2.6,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "neutral"
@@ -3600,8 +3600,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 16.35,
-      "projectedPoints": 320.18,
+      "espnRecommendedBid": 16.28,
+      "projectedPoints": 320.17,
       "proTeamEspn": "NE",
       "byeWeek": 11,
       "projectedWar": 36.8,
@@ -3663,7 +3663,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 10.66,
+      "espnRecommendedBid": 10.63,
       "projectedPoints": 153.68,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
@@ -3695,8 +3695,8 @@
         "zimmer": {
           "slot": "WR27",
           "price": -0.2,
-          "talent": -12.3,
-          "tru": -12.5,
+          "talent": -12.2,
+          "tru": -12.4,
           "sample": "ok",
           "priceRaw": 0.0,
           "band": "neutral"
@@ -3726,7 +3726,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.32",
-      "espnRecommendedBid": 13.05,
+      "espnRecommendedBid": 13.01,
       "projectedPoints": 167.01,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
@@ -3758,8 +3758,8 @@
         "zimmer": {
           "slot": "RB25",
           "price": -8.6,
-          "talent": 4.3,
-          "tru": -4.3,
+          "talent": 4.4,
+          "tru": -4.2,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neutral"
@@ -3789,8 +3789,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 14.38,
-      "projectedPoints": 304.32,
+      "espnRecommendedBid": 14.29,
+      "projectedPoints": 304.33,
       "proTeamEspn": "CIN",
       "byeWeek": 6,
       "projectedWar": 20.9,
@@ -3821,8 +3821,8 @@
         "zimmer": {
           "slot": "QB4",
           "price": 21.2,
-          "talent": -3.6,
-          "tru": 17.6,
+          "talent": -3.5,
+          "tru": 17.7,
           "sample": "ok",
           "priceRaw": 25.0,
           "band": "strong-pos"
@@ -3852,8 +3852,8 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R2",
-      "espnRecommendedBid": 7.46,
-      "projectedPoints": 159.13,
+      "espnRecommendedBid": 7.45,
+      "projectedPoints": 159.14,
       "proTeamEspn": "NE",
       "byeWeek": 11,
       "projectedWar": 9.8,
@@ -3884,8 +3884,8 @@
         "zimmer": {
           "slot": "RB26",
           "price": -9.2,
-          "talent": 7.8,
-          "tru": -1.4,
+          "talent": 7.9,
+          "tru": -1.3,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neutral"
@@ -3915,7 +3915,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.4",
-      "espnRecommendedBid": 6.21,
+      "espnRecommendedBid": 6.19,
       "projectedPoints": 123.53,
       "proTeamEspn": "SF",
       "byeWeek": 8,
@@ -3947,8 +3947,8 @@
         "zimmer": {
           "slot": "WR28",
           "price": 0.8,
-          "talent": -11.8,
-          "tru": -11.0,
+          "talent": -11.7,
+          "tru": -10.9,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -3978,7 +3978,7 @@
         "nfl": "-"
       },
       "notes": "FFB My Guy",
-      "espnRecommendedBid": 5.77,
+      "espnRecommendedBid": 5.75,
       "projectedPoints": 132.83,
       "proTeamEspn": "GB",
       "byeWeek": 11,
@@ -4041,7 +4041,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 15.02,
+      "espnRecommendedBid": 14.95,
       "projectedPoints": 317.49,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
@@ -4073,8 +4073,8 @@
         "zimmer": {
           "slot": "QB5",
           "price": 17.6,
-          "talent": -3.6,
-          "tru": 14.0,
+          "talent": -3.5,
+          "tru": 14.1,
           "sample": "ok",
           "priceRaw": 23.0,
           "band": "strong-pos"
@@ -4104,8 +4104,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 13.58,
-      "projectedPoints": 319.83,
+      "espnRecommendedBid": 13.5,
+      "projectedPoints": 319.84,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
       "projectedWar": 36.4,
@@ -4136,8 +4136,8 @@
         "zimmer": {
           "slot": "QB6",
           "price": 12.6,
-          "talent": -3.1,
-          "tru": 9.5,
+          "talent": -3.0,
+          "tru": 9.6,
           "sample": "ok",
           "priceRaw": 9.0,
           "band": "pos"
@@ -4167,14 +4167,14 @@
         "nfl": "-"
       },
       "notes": "2026 6th rd WR",
-      "espnRecommendedBid": 5.97,
-      "projectedPoints": 123.52,
+      "espnRecommendedBid": 5.95,
+      "projectedPoints": 123.5,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
       "projectedWar": 2.6,
       "warByLeague": {
         "kepners": 2.6,
-        "miami": -19.0,
+        "miami": -19.1,
         "zimmer": 0.0
       },
       "marketDrift": {
@@ -4199,8 +4199,8 @@
         "zimmer": {
           "slot": "WR30",
           "price": 2.4,
-          "talent": -3.8,
-          "tru": -1.4,
+          "talent": -3.9,
+          "tru": -1.5,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -4230,14 +4230,14 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 6.96,
+      "espnRecommendedBid": 6.93,
       "projectedPoints": 124.91,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
       "projectedWar": 4.0,
       "warByLeague": {
         "kepners": 4.0,
-        "miami": -17.6,
+        "miami": -17.7,
         "zimmer": 1.4
       },
       "marketDrift": {
@@ -4262,8 +4262,8 @@
         "zimmer": {
           "slot": "WR31",
           "price": 2.2,
-          "talent": -3.9,
-          "tru": -1.7,
+          "talent": -4.0,
+          "tru": -1.8,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -4293,8 +4293,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 6.7,
-      "projectedPoints": 160.89,
+      "espnRecommendedBid": 6.67,
+      "projectedPoints": 160.9,
       "proTeamEspn": "NE",
       "byeWeek": 11,
       "projectedWar": 11.6,
@@ -4325,8 +4325,8 @@
         "zimmer": {
           "slot": "RB27",
           "price": -9.4,
-          "talent": 11.6,
-          "tru": 2.2,
+          "talent": 11.4,
+          "tru": 2.0,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neutral"
@@ -4356,7 +4356,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 4.45,
+      "espnRecommendedBid": 4.42,
       "projectedPoints": 104.22,
       "proTeamEspn": "GB",
       "byeWeek": 11,
@@ -4370,8 +4370,8 @@
         "kepners": {
           "slot": "TE5",
           "price": 5.0,
-          "talent": 23.7,
-          "tru": 28.7,
+          "talent": 23.8,
+          "tru": 28.8,
           "sample": "ok",
           "priceRaw": 6.0,
           "band": "strong-pos"
@@ -4419,7 +4419,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.32",
-      "espnRecommendedBid": 5.92,
+      "espnRecommendedBid": 5.89,
       "projectedPoints": 110.42,
       "proTeamEspn": "DET",
       "byeWeek": 6,
@@ -4482,7 +4482,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.4. FFB My Guy",
-      "espnRecommendedBid": 6.86,
+      "espnRecommendedBid": 6.84,
       "projectedPoints": 127.73,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
@@ -4514,8 +4514,8 @@
         "zimmer": {
           "slot": "WR32",
           "price": 2.0,
-          "talent": -1.3,
-          "tru": 0.7,
+          "talent": -1.4,
+          "tru": 0.6,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -4545,7 +4545,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.8 ASU",
-      "espnRecommendedBid": 4.75,
+      "espnRecommendedBid": 4.74,
       "projectedPoints": 147.86,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
@@ -4577,8 +4577,8 @@
         "zimmer": {
           "slot": "RB28",
           "price": -11.4,
-          "talent": 8.6,
-          "tru": -2.8,
+          "talent": 8.3,
+          "tru": -3.1,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neutral"
@@ -4608,7 +4608,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 6.48,
+      "espnRecommendedBid": 6.46,
       "projectedPoints": 104.67,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
@@ -4622,8 +4622,8 @@
         "kepners": {
           "slot": "TE8",
           "price": 7.4,
-          "talent": 27.3,
-          "tru": 34.7,
+          "talent": 27.4,
+          "tru": 34.8,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "strong-pos"
@@ -4671,8 +4671,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.82,
-      "projectedPoints": 119.58,
+      "espnRecommendedBid": 2.81,
+      "projectedPoints": 119.59,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
       "projectedWar": -1.3,
@@ -4703,8 +4703,8 @@
         "zimmer": {
           "slot": "WR34",
           "price": 4.2,
-          "talent": 0.1,
-          "tru": 4.3,
+          "talent": 0.0,
+          "tru": 4.2,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -4734,7 +4734,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 5.56,
+      "espnRecommendedBid": 5.55,
       "projectedPoints": 105.05,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
@@ -4748,8 +4748,8 @@
         "kepners": {
           "slot": "TE7",
           "price": 4.6,
-          "talent": 27.2,
-          "tru": 31.8,
+          "talent": 27.3,
+          "tru": 31.9,
           "sample": "ok",
           "priceRaw": 7.0,
           "band": "strong-pos"
@@ -4797,7 +4797,7 @@
         "nfl": "-"
       },
       "notes": "FFB My Guy",
-      "espnRecommendedBid": 7.54,
+      "espnRecommendedBid": 7.48,
       "projectedPoints": 281.92,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
@@ -4811,8 +4811,8 @@
         "kepners": {
           "slot": "QB7",
           "price": 7.6,
-          "talent": -17.0,
-          "tru": -9.4,
+          "talent": -16.9,
+          "tru": -9.3,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -4829,8 +4829,8 @@
         "zimmer": {
           "slot": "QB7",
           "price": 6.2,
-          "talent": -14.8,
-          "tru": -8.6,
+          "talent": -14.7,
+          "tru": -8.5,
           "sample": "ok",
           "priceRaw": 5.0,
           "band": "neutral"
@@ -4860,7 +4860,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 5.43,
+      "espnRecommendedBid": 5.41,
       "projectedPoints": 131.03,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
@@ -4874,8 +4874,8 @@
         "kepners": {
           "slot": "WR34",
           "price": 6.8,
-          "talent": -0.3,
-          "tru": 6.5,
+          "talent": -0.2,
+          "tru": 6.6,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -4883,8 +4883,8 @@
         "miami": {
           "slot": "WR34",
           "price": 6.8,
-          "talent": -7.3,
-          "tru": -0.5,
+          "talent": -7.4,
+          "tru": -0.6,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -4892,8 +4892,8 @@
         "zimmer": {
           "slot": "WR33",
           "price": 2.6,
-          "talent": 0.1,
-          "tru": 2.7,
+          "talent": 0.0,
+          "tru": 2.6,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neutral"
@@ -4923,7 +4923,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 9.06,
+      "espnRecommendedBid": 9.0,
       "projectedPoints": 286.11,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
@@ -4937,8 +4937,8 @@
         "kepners": {
           "slot": "QB9",
           "price": -2.2,
-          "talent": -14.6,
-          "tru": -16.8,
+          "talent": -14.5,
+          "tru": -16.7,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neg"
@@ -4955,8 +4955,8 @@
         "zimmer": {
           "slot": "QB8",
           "price": 0.0,
-          "talent": -14.8,
-          "tru": -14.8,
+          "talent": -14.7,
+          "tru": -14.7,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neg"
@@ -4986,7 +4986,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 5.17,
+      "espnRecommendedBid": 5.16,
       "projectedPoints": 155.85,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
@@ -5000,8 +5000,8 @@
         "kepners": {
           "slot": "RB30",
           "price": -7.6,
-          "talent": 0.7,
-          "tru": -6.9,
+          "talent": 0.9,
+          "tru": -6.7,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neutral"
@@ -5013,13 +5013,13 @@
           "tru": -10.3,
           "sample": "ok",
           "priceRaw": -11.0,
-          "band": "neg"
+          "band": "neutral"
         },
         "zimmer": {
           "slot": "RB29",
           "price": -13.8,
-          "talent": 5.3,
-          "tru": -8.5,
+          "talent": 5.0,
+          "tru": -8.8,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "neutral"
@@ -5049,7 +5049,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 4.13,
+      "espnRecommendedBid": 4.11,
       "projectedPoints": 159.08,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
@@ -5081,8 +5081,8 @@
         "zimmer": {
           "slot": "RB30",
           "price": -13.6,
-          "talent": 3.4,
-          "tru": -10.2,
+          "talent": 3.1,
+          "tru": -10.5,
           "sample": "ok",
           "priceRaw": -17.0,
           "band": "neutral"
@@ -5112,15 +5112,15 @@
         "nfl": "-"
       },
       "notes": "2024 Rookie R2",
-      "espnRecommendedBid": 4.09,
-      "projectedPoints": 147.77,
+      "espnRecommendedBid": 4.07,
+      "projectedPoints": 143.23,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -1.5,
+      "projectedWar": -6.1,
       "warByLeague": {
-        "kepners": -1.5,
-        "miami": -20.3,
-        "zimmer": 7.1
+        "kepners": -6.1,
+        "miami": -24.9,
+        "zimmer": 2.5
       },
       "marketDrift": {
         "kepners": {
@@ -5144,8 +5144,8 @@
         "zimmer": {
           "slot": "RB31",
           "price": -13.2,
-          "talent": -4.1,
-          "tru": -17.3,
+          "talent": -4.4,
+          "tru": -17.6,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "neg"
@@ -5175,7 +5175,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 5.58,
+      "espnRecommendedBid": 5.56,
       "projectedPoints": 134.95,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
@@ -5189,8 +5189,8 @@
         "kepners": {
           "slot": "WR45",
           "price": 2.0,
-          "talent": 14.1,
-          "tru": 16.1,
+          "talent": 14.0,
+          "tru": 16.0,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -5198,8 +5198,8 @@
         "miami": {
           "slot": "WR45",
           "price": 2.0,
-          "talent": 10.4,
-          "tru": 12.4,
+          "talent": 10.6,
+          "tru": 12.6,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -5207,8 +5207,8 @@
         "zimmer": {
           "slot": "WR35",
           "price": 5.8,
-          "talent": -1.3,
-          "tru": 4.5,
+          "talent": -1.4,
+          "tru": 4.4,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neutral"
@@ -5238,8 +5238,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 7.34,
-      "projectedPoints": 283.57,
+      "espnRecommendedBid": 7.29,
+      "projectedPoints": 283.58,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
       "projectedWar": 0.2,
@@ -5252,8 +5252,8 @@
         "kepners": {
           "slot": "QB8",
           "price": -0.4,
-          "talent": -17.0,
-          "tru": -17.4,
+          "talent": -16.9,
+          "tru": -17.3,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neg"
@@ -5270,8 +5270,8 @@
         "zimmer": {
           "slot": "QB9",
           "price": -1.6,
-          "talent": -13.3,
-          "tru": -14.9,
+          "talent": -13.2,
+          "tru": -14.8,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neg"
@@ -5301,8 +5301,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 6.28,
-      "projectedPoints": 289.54,
+      "espnRecommendedBid": 6.22,
+      "projectedPoints": 289.55,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
       "projectedWar": 6.2,
@@ -5315,8 +5315,8 @@
         "kepners": {
           "slot": "QB10",
           "price": -3.2,
-          "talent": -13.8,
-          "tru": -17.0,
+          "talent": -13.6,
+          "tru": -16.8,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -5364,7 +5364,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 5.29,
+      "espnRecommendedBid": 5.28,
       "projectedPoints": 116.88,
       "proTeamEspn": "SF",
       "byeWeek": 8,
@@ -5378,8 +5378,8 @@
         "kepners": {
           "slot": "TE9",
           "price": 10.0,
-          "talent": 23.8,
-          "tru": 33.8,
+          "talent": 24.1,
+          "tru": 34.1,
           "sample": "ok",
           "priceRaw": 6.0,
           "band": "strong-pos"
@@ -5427,7 +5427,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.18,
+      "espnRecommendedBid": 3.16,
       "projectedPoints": 153.43,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
@@ -5441,8 +5441,8 @@
         "kepners": {
           "slot": "RB32",
           "price": -10.8,
-          "talent": -1.9,
-          "tru": -12.7,
+          "talent": -1.8,
+          "tru": -12.6,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neg"
@@ -5459,8 +5459,8 @@
         "zimmer": {
           "slot": "RB32",
           "price": -13.4,
-          "talent": -6.8,
-          "tru": -20.2,
+          "talent": -7.2,
+          "tru": -20.6,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -5490,7 +5490,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.0,
+      "espnRecommendedBid": 2.99,
       "projectedPoints": 105.83,
       "proTeamEspn": "ARI",
       "byeWeek": 14,
@@ -5504,8 +5504,8 @@
         "kepners": {
           "slot": "WR36",
           "price": 9.0,
-          "talent": -1.1,
-          "tru": 7.9,
+          "talent": -1.0,
+          "tru": 8.0,
           "sample": "ok",
           "priceRaw": 11.0,
           "band": "neutral"
@@ -5513,8 +5513,8 @@
         "miami": {
           "slot": "WR36",
           "price": 9.0,
-          "talent": -8.5,
-          "tru": 0.5,
+          "talent": -8.6,
+          "tru": 0.4,
           "sample": "ok",
           "priceRaw": 11.0,
           "band": "neutral"
@@ -5553,7 +5553,7 @@
         "nfl": "-"
       },
       "notes": "Ankle injury. Verify before draft",
-      "espnRecommendedBid": 3.16,
+      "espnRecommendedBid": 3.14,
       "projectedPoints": 125.5,
       "proTeamEspn": "IND",
       "byeWeek": 13,
@@ -5576,8 +5576,8 @@
         "miami": {
           "slot": "WR43",
           "price": 6.0,
-          "talent": 1.2,
-          "tru": 7.2,
+          "talent": 1.4,
+          "tru": 7.4,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -5585,8 +5585,8 @@
         "zimmer": {
           "slot": "WR38",
           "price": 11.4,
-          "talent": -4.0,
-          "tru": 7.4,
+          "talent": -4.1,
+          "tru": 7.3,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "pos"
@@ -5616,8 +5616,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.21,
-      "projectedPoints": 96.98,
+      "espnRecommendedBid": 2.2,
+      "projectedPoints": 96.99,
       "proTeamEspn": "TB",
       "byeWeek": 10,
       "projectedWar": -23.9,
@@ -5630,8 +5630,8 @@
         "kepners": {
           "slot": "WR35",
           "price": 7.0,
-          "talent": -3.1,
-          "tru": 3.9,
+          "talent": -2.9,
+          "tru": 4.1,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neutral"
@@ -5639,8 +5639,8 @@
         "miami": {
           "slot": "WR35",
           "price": 7.0,
-          "talent": -10.0,
-          "tru": -3.0,
+          "talent": -10.1,
+          "tru": -3.1,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neutral"
@@ -5679,7 +5679,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.20 USC",
-      "espnRecommendedBid": 2.73,
+      "espnRecommendedBid": 2.71,
       "projectedPoints": 142.58,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
@@ -5693,8 +5693,8 @@
         "kepners": {
           "slot": "RB35",
           "price": -7.2,
-          "talent": -11.3,
-          "tru": -18.5,
+          "talent": -11.1,
+          "tru": -18.3,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -5702,8 +5702,8 @@
         "miami": {
           "slot": "RB35",
           "price": -7.2,
-          "talent": -13.6,
-          "tru": -20.8,
+          "talent": -13.7,
+          "tru": -20.9,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -5711,8 +5711,8 @@
         "zimmer": {
           "slot": "RB34",
           "price": -11.2,
-          "talent": -9.8,
-          "tru": -21.0,
+          "talent": -10.3,
+          "tru": -21.5,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -5742,22 +5742,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.61,
-      "projectedPoints": 134.75,
+      "espnRecommendedBid": 2.6,
+      "projectedPoints": 139.14,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
-      "projectedWar": -14.5,
+      "projectedWar": -10.2,
       "warByLeague": {
-        "kepners": -14.5,
-        "miami": -33.4,
-        "zimmer": -6.0
+        "kepners": -10.2,
+        "miami": -29.0,
+        "zimmer": -1.6
       },
       "marketDrift": {
         "kepners": {
           "slot": "RB33",
           "price": -11.0,
-          "talent": -1.9,
-          "tru": -12.9,
+          "talent": -1.8,
+          "tru": -12.8,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -5774,8 +5774,8 @@
         "zimmer": {
           "slot": "RB33",
           "price": -13.0,
-          "talent": -6.8,
-          "tru": -19.8,
+          "talent": -7.2,
+          "tru": -20.2,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -5805,7 +5805,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R2 - UCF",
-      "espnRecommendedBid": 1.92,
+      "espnRecommendedBid": 1.91,
       "projectedPoints": 100.65,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
@@ -5828,8 +5828,8 @@
         "miami": {
           "slot": "RB39",
           "price": -3.2,
-          "talent": -9.1,
-          "tru": -12.3,
+          "talent": -9.2,
+          "tru": -12.4,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neg"
@@ -5837,8 +5837,8 @@
         "zimmer": {
           "slot": "RB35",
           "price": -11.6,
-          "talent": -14.0,
-          "tru": -25.6,
+          "talent": -14.5,
+          "tru": -26.1,
           "sample": "ok",
           "priceRaw": -15.0,
           "band": "neg"
@@ -5868,8 +5868,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 7.55,
-      "projectedPoints": 299.52,
+      "espnRecommendedBid": 7.49,
+      "projectedPoints": 299.53,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
       "projectedWar": 16.1,
@@ -5882,8 +5882,8 @@
         "kepners": {
           "slot": "QB13",
           "price": 1.4,
-          "talent": -12.9,
-          "tru": -11.5,
+          "talent": -12.6,
+          "tru": -11.2,
           "sample": "ok",
           "priceRaw": 0.0,
           "band": "neg"
@@ -5931,7 +5931,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 4.31,
+      "espnRecommendedBid": 4.3,
       "projectedPoints": 108.74,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
@@ -5954,8 +5954,8 @@
         "miami": {
           "slot": "WR47",
           "price": 0.8,
-          "talent": 7.4,
-          "tru": 8.2,
+          "talent": 7.5,
+          "tru": 8.3,
           "sample": "ok",
           "priceRaw": 0.0,
           "band": "neutral"
@@ -5994,22 +5994,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.97,
+      "espnRecommendedBid": 1.96,
       "projectedPoints": 112.61,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
       "projectedWar": -8.3,
       "warByLeague": {
         "kepners": -8.3,
-        "miami": -29.9,
+        "miami": -30.0,
         "zimmer": -10.9
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR38",
           "price": 11.6,
-          "talent": -4.5,
-          "tru": 7.1,
+          "talent": -4.4,
+          "tru": 7.2,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "neutral"
@@ -6017,8 +6017,8 @@
         "miami": {
           "slot": "WR38",
           "price": 11.6,
-          "talent": -11.5,
-          "tru": 0.1,
+          "talent": -11.6,
+          "tru": 0.0,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "neutral"
@@ -6057,7 +6057,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R7",
-      "espnRecommendedBid": 1.93,
+      "espnRecommendedBid": 1.92,
       "projectedPoints": 143.04,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
@@ -6071,8 +6071,8 @@
         "kepners": {
           "slot": "RB34",
           "price": -9.2,
-          "talent": -3.1,
-          "tru": -12.3,
+          "talent": -2.9,
+          "tru": -12.1,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -6089,8 +6089,8 @@
         "zimmer": {
           "slot": "RB37",
           "price": -11.6,
-          "talent": -21.3,
-          "tru": -32.9,
+          "talent": -21.5,
+          "tru": -33.1,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "strong-neg"
@@ -6120,8 +6120,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 4.76,
-      "projectedPoints": 292.04,
+      "espnRecommendedBid": 4.72,
+      "projectedPoints": 292.05,
       "proTeamEspn": "SF",
       "byeWeek": 8,
       "projectedWar": 8.7,
@@ -6134,8 +6134,8 @@
         "kepners": {
           "slot": "QB11",
           "price": -3.6,
-          "talent": -18.1,
-          "tru": -21.7,
+          "talent": -17.8,
+          "tru": -21.4,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neg"
@@ -6183,7 +6183,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.13,
+      "espnRecommendedBid": 3.12,
       "projectedPoints": 103.39,
       "proTeamEspn": "KC",
       "byeWeek": 5,
@@ -6197,8 +6197,8 @@
         "kepners": {
           "slot": "TE12",
           "price": 12.8,
-          "talent": 16.2,
-          "tru": 29.0,
+          "talent": 16.3,
+          "tru": 29.1,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "strong-pos"
@@ -6206,8 +6206,8 @@
         "miami": {
           "slot": "TE12",
           "price": 12.8,
-          "talent": 14.7,
-          "tru": 27.5,
+          "talent": 14.8,
+          "tru": 27.6,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "strong-pos"
@@ -6246,7 +6246,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.19,
+      "espnRecommendedBid": 2.17,
       "projectedPoints": 110.15,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
@@ -6254,14 +6254,14 @@
       "warByLeague": {
         "kepners": -10.8,
         "miami": -32.4,
-        "zimmer": -13.4
+        "zimmer": -13.3
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR41",
           "price": 9.6,
-          "talent": 1.2,
-          "tru": 10.8,
+          "talent": 1.3,
+          "tru": 10.9,
           "sample": "ok",
           "priceRaw": 11.0,
           "band": "pos"
@@ -6269,8 +6269,8 @@
         "miami": {
           "slot": "WR41",
           "price": 9.6,
-          "talent": -4.5,
-          "tru": 5.1,
+          "talent": -4.4,
+          "tru": 5.2,
           "sample": "ok",
           "priceRaw": 11.0,
           "band": "neutral"
@@ -6337,8 +6337,8 @@
         "zimmer": {
           "slot": "RB36",
           "price": -11.6,
-          "talent": -21.7,
-          "tru": -33.3,
+          "talent": -21.8,
+          "tru": -33.4,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "strong-neg"
@@ -6368,22 +6368,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.4,
-      "projectedPoints": 87.55,
+      "espnRecommendedBid": 1.39,
+      "projectedPoints": 87.56,
       "proTeamEspn": "IND",
       "byeWeek": 13,
       "projectedWar": -33.4,
       "warByLeague": {
         "kepners": -33.4,
         "miami": -55.0,
-        "zimmer": -36.0
+        "zimmer": -35.9
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR37",
           "price": 11.0,
-          "talent": -1.1,
-          "tru": 9.9,
+          "talent": -1.0,
+          "tru": 10.0,
           "sample": "ok",
           "priceRaw": 11.0,
           "band": "pos"
@@ -6391,8 +6391,8 @@
         "miami": {
           "slot": "WR37",
           "price": 11.0,
-          "talent": -8.5,
-          "tru": 2.5,
+          "talent": -8.6,
+          "tru": 2.4,
           "sample": "ok",
           "priceRaw": 11.0,
           "band": "neutral"
@@ -6400,8 +6400,8 @@
         "zimmer": {
           "slot": "WR43",
           "price": 8.2,
-          "talent": 1.3,
-          "tru": 9.5,
+          "talent": 1.2,
+          "tru": 9.4,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "pos"
@@ -6431,7 +6431,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 6.43,
+      "espnRecommendedBid": 6.39,
       "projectedPoints": 292.85,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
@@ -6445,8 +6445,8 @@
         "kepners": {
           "slot": "QB14",
           "price": 1.2,
-          "talent": -8.2,
-          "tru": -7.0,
+          "talent": -7.9,
+          "tru": -6.7,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neutral"
@@ -6463,8 +6463,8 @@
         "zimmer": {
           "slot": "QB13",
           "price": -4.8,
-          "talent": -16.1,
-          "tru": -20.9,
+          "talent": -16.2,
+          "tru": -21.0,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neg"
@@ -6494,7 +6494,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.29,
+      "espnRecommendedBid": 2.28,
       "projectedPoints": 106.34,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
@@ -6508,8 +6508,8 @@
         "kepners": {
           "slot": "TE11",
           "price": 12.4,
-          "talent": 19.9,
-          "tru": 32.3,
+          "talent": 20.1,
+          "tru": 32.5,
           "sample": "ok",
           "priceRaw": 20.0,
           "band": "strong-pos"
@@ -6517,8 +6517,8 @@
         "miami": {
           "slot": "TE11",
           "price": 12.4,
-          "talent": 18.5,
-          "tru": 30.9,
+          "talent": 18.6,
+          "tru": 31.0,
           "sample": "ok",
           "priceRaw": 20.0,
           "band": "strong-pos"
@@ -6526,8 +6526,8 @@
         "zimmer": {
           "slot": "TE11",
           "price": -2.6,
-          "talent": 20.1,
-          "tru": 17.5,
+          "talent": 20.0,
+          "tru": 17.4,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "strong-pos"
@@ -6557,7 +6557,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.35,
+      "espnRecommendedBid": 1.34,
       "projectedPoints": 109.1,
       "proTeamEspn": "GB",
       "byeWeek": 11,
@@ -6580,8 +6580,8 @@
         "miami": {
           "slot": "WR42",
           "price": 7.6,
-          "talent": 1.0,
-          "tru": 8.6,
+          "talent": 1.1,
+          "tru": 8.7,
           "sample": "ok",
           "priceRaw": 10.0,
           "band": "neutral"
@@ -6589,8 +6589,8 @@
         "zimmer": {
           "slot": "WR44",
           "price": 6.4,
-          "talent": 4.8,
-          "tru": 11.2,
+          "talent": 4.7,
+          "tru": 11.1,
           "sample": "ok",
           "priceRaw": 6.0,
           "band": "pos"
@@ -6620,7 +6620,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.2,
+      "espnRecommendedBid": 2.18,
       "projectedPoints": 138.27,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
@@ -6634,8 +6634,8 @@
         "kepners": {
           "slot": "RB36",
           "price": -5.4,
-          "talent": -12.2,
-          "tru": -17.6,
+          "talent": -12.0,
+          "tru": -17.4,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "neg"
@@ -6652,8 +6652,8 @@
         "zimmer": {
           "slot": "RB38",
           "price": -9.6,
-          "talent": -21.3,
-          "tru": -30.9,
+          "talent": -21.5,
+          "tru": -31.1,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "strong-neg"
@@ -6683,7 +6683,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 5.86,
+      "espnRecommendedBid": 5.81,
       "projectedPoints": 290.97,
       "proTeamEspn": "KC",
       "byeWeek": 5,
@@ -6697,8 +6697,8 @@
         "kepners": {
           "slot": "QB17",
           "price": -1.2,
-          "talent": -11.9,
-          "tru": -13.1,
+          "talent": -11.6,
+          "tru": -12.8,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -6715,8 +6715,8 @@
         "zimmer": {
           "slot": "QB14",
           "price": -5.2,
-          "talent": -11.9,
-          "tru": -17.1,
+          "talent": -12.0,
+          "tru": -17.2,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "neg"
@@ -6746,22 +6746,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.92,
-      "projectedPoints": 98.26,
+      "espnRecommendedBid": 2.9,
+      "projectedPoints": 98.27,
       "proTeamEspn": "WSH",
       "byeWeek": 7,
       "projectedWar": -22.7,
       "warByLeague": {
         "kepners": -22.7,
         "miami": -44.3,
-        "zimmer": -25.3
+        "zimmer": -25.2
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR39",
           "price": 11.6,
-          "talent": -0.7,
-          "tru": 10.9,
+          "talent": -0.6,
+          "tru": 11.0,
           "sample": "ok",
           "priceRaw": 13.0,
           "band": "pos"
@@ -6769,8 +6769,8 @@
         "miami": {
           "slot": "WR39",
           "price": 11.6,
-          "talent": -7.6,
-          "tru": 4.0,
+          "talent": -7.7,
+          "tru": 3.9,
           "sample": "ok",
           "priceRaw": 13.0,
           "band": "neutral"
@@ -6809,7 +6809,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 6.34,
+      "espnRecommendedBid": 6.29,
       "projectedPoints": 295.73,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
@@ -6823,8 +6823,8 @@
         "kepners": {
           "slot": "QB12",
           "price": -1.8,
-          "talent": -21.2,
-          "tru": -23.0,
+          "talent": -21.0,
+          "tru": -22.8,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neg"
@@ -6841,8 +6841,8 @@
         "zimmer": {
           "slot": "QB15",
           "price": -3.4,
-          "talent": -11.9,
-          "tru": -15.3,
+          "talent": -12.0,
+          "tru": -15.4,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neg"
@@ -6872,7 +6872,7 @@
         "nfl": "-"
       },
       "notes": "2025 Rookie R7",
-      "espnRecommendedBid": 2.04,
+      "espnRecommendedBid": 2.02,
       "projectedPoints": 149.29,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
@@ -6886,8 +6886,8 @@
         "kepners": {
           "slot": "RB38",
           "price": -2.6,
-          "talent": -9.6,
-          "tru": -12.2,
+          "talent": -9.5,
+          "tru": -12.1,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -6895,8 +6895,8 @@
         "miami": {
           "slot": "RB38",
           "price": -2.6,
-          "talent": -10.7,
-          "tru": -13.3,
+          "talent": -10.8,
+          "tru": -13.4,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -6904,8 +6904,8 @@
         "zimmer": {
           "slot": "RB39",
           "price": -9.0,
-          "talent": -21.0,
-          "tru": -30.0,
+          "talent": -21.2,
+          "tru": -30.2,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "strong-neg"
@@ -6958,8 +6958,8 @@
         "miami": {
           "slot": "WR49",
           "price": 0.4,
-          "talent": 3.8,
-          "tru": 4.2,
+          "talent": 3.9,
+          "tru": 4.3,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neutral"
@@ -6967,8 +6967,8 @@
         "zimmer": {
           "slot": "WR46",
           "price": 4.4,
-          "talent": 6.7,
-          "tru": 11.1,
+          "talent": 6.6,
+          "tru": 11.0,
           "sample": "ok",
           "priceRaw": 5.0,
           "band": "pos"
@@ -6998,7 +6998,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.55,
+      "espnRecommendedBid": 1.54,
       "projectedPoints": 96.27,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
@@ -7012,8 +7012,8 @@
         "kepners": {
           "slot": "TE10",
           "price": 11.0,
-          "talent": 20.6,
-          "tru": 31.6,
+          "talent": 20.8,
+          "tru": 31.8,
           "sample": "ok",
           "priceRaw": 20.0,
           "band": "strong-pos"
@@ -7030,8 +7030,8 @@
         "zimmer": {
           "slot": "TE12",
           "price": -4.6,
-          "talent": 14.6,
-          "tru": 10.0,
+          "talent": 14.5,
+          "tru": 9.9,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "pos"
@@ -7061,7 +7061,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R1.20 USC",
-      "espnRecommendedBid": 1.63,
+      "espnRecommendedBid": 1.62,
       "projectedPoints": 103.05,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
@@ -7084,8 +7084,8 @@
         "miami": {
           "slot": "WR48",
           "price": 1.4,
-          "talent": 2.2,
-          "tru": 3.6,
+          "talent": 2.4,
+          "tru": 3.8,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neutral"
@@ -7093,8 +7093,8 @@
         "zimmer": {
           "slot": "WR45",
           "price": 4.6,
-          "talent": 4.5,
-          "tru": 9.1,
+          "talent": 4.4,
+          "tru": 9.0,
           "sample": "ok",
           "priceRaw": 5.0,
           "band": "pos"
@@ -7124,7 +7124,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.02,
+      "espnRecommendedBid": 2.01,
       "projectedPoints": 92.11,
       "proTeamEspn": "NYG",
       "byeWeek": 8,
@@ -7138,8 +7138,8 @@
         "kepners": {
           "slot": "TE13",
           "price": 11.6,
-          "talent": 10.8,
-          "tru": 22.4,
+          "talent": 11.0,
+          "tru": 22.6,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "strong-pos"
@@ -7187,7 +7187,7 @@
         "nfl": "-"
       },
       "notes": "2025 R1",
-      "espnRecommendedBid": 2.5,
+      "espnRecommendedBid": 2.48,
       "projectedPoints": 120.92,
       "proTeamEspn": "GB",
       "byeWeek": 11,
@@ -7201,8 +7201,8 @@
         "kepners": {
           "slot": "WR46",
           "price": 1.0,
-          "talent": 12.2,
-          "tru": 13.2,
+          "talent": 12.1,
+          "tru": 13.1,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "pos"
@@ -7210,8 +7210,8 @@
         "miami": {
           "slot": "WR46",
           "price": 1.0,
-          "talent": 8.7,
-          "tru": 9.7,
+          "talent": 8.9,
+          "tru": 9.9,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "pos"
@@ -7219,8 +7219,8 @@
         "zimmer": {
           "slot": "WR47",
           "price": 3.6,
-          "talent": 7.1,
-          "tru": 10.7,
+          "talent": 7.0,
+          "tru": 10.6,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -7282,8 +7282,8 @@
         "zimmer": {
           "slot": "RB40",
           "price": -6.6,
-          "talent": -14.4,
-          "tru": -21.0,
+          "talent": -14.6,
+          "tru": -21.2,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -7313,7 +7313,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.62,
+      "espnRecommendedBid": 1.61,
       "projectedPoints": 112.15,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
@@ -7321,14 +7321,14 @@
       "warByLeague": {
         "kepners": -8.8,
         "miami": -30.4,
-        "zimmer": -11.4
+        "zimmer": -11.3
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR52",
           "price": -3.2,
-          "talent": 18.5,
-          "tru": 15.3,
+          "talent": 18.6,
+          "tru": 15.4,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "pos"
@@ -7345,8 +7345,8 @@
         "zimmer": {
           "slot": "WR50",
           "price": -0.6,
-          "talent": 9.0,
-          "tru": 8.4,
+          "talent": 8.9,
+          "tru": 8.3,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "pos"
@@ -7390,8 +7390,8 @@
         "kepners": {
           "slot": "WR44",
           "price": 4.0,
-          "talent": 12.3,
-          "tru": 16.3,
+          "talent": 12.1,
+          "tru": 16.1,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -7399,8 +7399,8 @@
         "miami": {
           "slot": "WR44",
           "price": 4.0,
-          "talent": 7.9,
-          "tru": 11.9,
+          "talent": 8.0,
+          "tru": 12.0,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -7408,8 +7408,8 @@
         "zimmer": {
           "slot": "WR48",
           "price": 3.4,
-          "talent": 5.8,
-          "tru": 9.2,
+          "talent": 5.7,
+          "tru": 9.1,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -7439,7 +7439,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.11,
+      "espnRecommendedBid": 2.1,
       "projectedPoints": 130.75,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
@@ -7471,8 +7471,8 @@
         "zimmer": {
           "slot": "RB41",
           "price": -5.2,
-          "talent": -14.4,
-          "tru": -19.6,
+          "talent": -14.6,
+          "tru": -19.8,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neg"
@@ -7516,8 +7516,8 @@
         "kepners": {
           "slot": "TE14",
           "price": 10.6,
-          "talent": 4.5,
-          "tru": 15.1,
+          "talent": 4.6,
+          "tru": 15.2,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "pos"
@@ -7534,8 +7534,8 @@
         "zimmer": {
           "slot": "TE15",
           "price": -5.8,
-          "talent": 8.6,
-          "tru": 2.8,
+          "talent": 8.5,
+          "tru": 2.7,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neutral"
@@ -7565,7 +7565,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.0,
+      "espnRecommendedBid": 1.99,
       "projectedPoints": 93.66,
       "proTeamEspn": "DAL",
       "byeWeek": 14,
@@ -7579,8 +7579,8 @@
         "kepners": {
           "slot": "TE16",
           "price": 9.8,
-          "talent": -0.8,
-          "tru": 9.0,
+          "talent": -0.7,
+          "tru": 9.1,
           "sample": "ok",
           "priceRaw": 15.0,
           "band": "pos"
@@ -7597,8 +7597,8 @@
         "zimmer": {
           "slot": "TE14",
           "price": -7.4,
-          "talent": 8.3,
-          "tru": 0.9,
+          "talent": 8.2,
+          "tru": 0.8,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neutral"
@@ -7628,7 +7628,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R2 Ole Miss. FFB My Guy",
-      "espnRecommendedBid": 2.18,
+      "espnRecommendedBid": 2.17,
       "projectedPoints": 107.95,
       "proTeamEspn": "SF",
       "byeWeek": 8,
@@ -7636,7 +7636,7 @@
       "warByLeague": {
         "kepners": -13.0,
         "miami": -34.6,
-        "zimmer": -15.6
+        "zimmer": -15.5
       },
       "marketDrift": {
         "kepners": {
@@ -7660,8 +7660,8 @@
         "zimmer": {
           "slot": "WR49",
           "price": 1.0,
-          "talent": 4.7,
-          "tru": 5.7,
+          "talent": 4.6,
+          "tru": 5.6,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neutral"
@@ -7691,22 +7691,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.0,
-      "projectedPoints": 269.14,
+      "espnRecommendedBid": 2.97,
+      "projectedPoints": 269.06,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": -14.2,
+      "projectedWar": -14.3,
       "warByLeague": {
-        "kepners": -14.2,
-        "miami": -22.9,
-        "zimmer": -14.2
+        "kepners": -14.3,
+        "miami": -23.0,
+        "zimmer": -14.3
       },
       "marketDrift": {
         "kepners": {
           "slot": "QB16",
           "price": -0.4,
-          "talent": -11.9,
-          "tru": -12.3,
+          "talent": -11.6,
+          "tru": -12.0,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neg"
@@ -7723,8 +7723,8 @@
         "zimmer": {
           "slot": "QB16",
           "price": -1.4,
-          "talent": -17.5,
-          "tru": -18.9,
+          "talent": -17.6,
+          "tru": -19.0,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -7768,8 +7768,8 @@
         "kepners": {
           "slot": "WR53",
           "price": -5.6,
-          "talent": 16.1,
-          "tru": 10.5,
+          "talent": 16.2,
+          "tru": 10.6,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "pos"
@@ -7786,8 +7786,8 @@
         "zimmer": {
           "slot": "WR52",
           "price": -5.2,
-          "talent": 8.7,
-          "tru": 3.5,
+          "talent": 8.6,
+          "tru": 3.4,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neutral"
@@ -7817,14 +7817,14 @@
         "nfl": "-"
       },
       "notes": "Check injury status",
-      "espnRecommendedBid": 1.6,
+      "espnRecommendedBid": 1.59,
       "projectedPoints": 117.41,
       "proTeamEspn": "KC",
       "byeWeek": 5,
       "projectedWar": -3.5,
       "warByLeague": {
         "kepners": -3.5,
-        "miami": -25.1,
+        "miami": -25.2,
         "zimmer": -6.1
       },
       "marketDrift": {
@@ -7849,8 +7849,8 @@
         "zimmer": {
           "slot": "WR51",
           "price": -3.6,
-          "talent": 9.0,
-          "tru": 5.4,
+          "talent": 8.9,
+          "tru": 5.3,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neutral"
@@ -7912,8 +7912,8 @@
         "zimmer": {
           "slot": "WR53",
           "price": -7.2,
-          "talent": 5.5,
-          "tru": -1.7,
+          "talent": 5.4,
+          "tru": -1.8,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neutral"
@@ -7957,8 +7957,8 @@
         "kepners": {
           "slot": "WR61",
           "price": -12.8,
-          "talent": 6.0,
-          "tru": -6.8,
+          "talent": 5.8,
+          "tru": -7.0,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "neutral"
@@ -7975,8 +7975,8 @@
         "zimmer": {
           "slot": "WR54",
           "price": -7.6,
-          "talent": 10.2,
-          "tru": 2.6,
+          "talent": 10.0,
+          "tru": 2.4,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "neutral"
@@ -8006,7 +8006,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.1,
+      "espnRecommendedBid": 3.07,
       "projectedPoints": 283.39,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
@@ -8020,8 +8020,8 @@
         "kepners": {
           "slot": "QB15",
           "price": 0.6,
-          "talent": -8.2,
-          "tru": -7.6,
+          "talent": -7.9,
+          "tru": -7.3,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neutral"
@@ -8038,8 +8038,8 @@
         "zimmer": {
           "slot": "QB17",
           "price": 0.4,
-          "talent": -17.5,
-          "tru": -17.1,
+          "talent": -17.6,
+          "tru": -17.2,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neg"
@@ -8069,15 +8069,15 @@
         "nfl": "-"
       },
       "notes": "Rookie R4 - Washington",
-      "espnRecommendedBid": 4.0,
-      "projectedPoints": 150.76,
+      "espnRecommendedBid": 3.98,
+      "projectedPoints": 150.59,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
-      "projectedWar": 37.9,
+      "projectedWar": 37.7,
       "warByLeague": {
-        "kepners": 37.9,
-        "miami": 22.4,
-        "zimmer": 37.9
+        "kepners": 37.7,
+        "miami": 22.2,
+        "zimmer": 37.7
       },
       "marketDrift": {
         "kepners": {
@@ -8132,22 +8132,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.54,
-      "projectedPoints": 67.42,
+      "espnRecommendedBid": 0.53,
+      "projectedPoints": 67.65,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -81.9,
+      "projectedWar": -81.6,
       "warByLeague": {
-        "kepners": -81.9,
-        "miami": -100.7,
-        "zimmer": -73.3
+        "kepners": -81.6,
+        "miami": -100.5,
+        "zimmer": -73.1
       },
       "marketDrift": {
         "kepners": {
           "slot": "RB40",
           "price": -4.8,
-          "talent": -20.0,
-          "tru": -24.8,
+          "talent": -20.2,
+          "tru": -25.0,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "neg"
@@ -8155,8 +8155,8 @@
         "miami": {
           "slot": "RB40",
           "price": -4.8,
-          "talent": -19.5,
-          "tru": -24.3,
+          "talent": -19.7,
+          "tru": -24.5,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "neg"
@@ -8164,8 +8164,8 @@
         "zimmer": {
           "slot": "RB43",
           "price": -2.2,
-          "talent": -3.2,
-          "tru": -5.4,
+          "talent": -3.4,
+          "tru": -5.6,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "neutral"
@@ -8286,8 +8286,8 @@
         "zimmer": {
           "slot": "RB44",
           "price": 0.4,
-          "talent": -2.7,
-          "tru": -2.3,
+          "talent": -2.8,
+          "tru": -2.4,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neutral"
@@ -8317,7 +8317,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.33,
+      "espnRecommendedBid": 2.3,
       "projectedPoints": 264.73,
       "proTeamEspn": "TB",
       "byeWeek": 10,
@@ -8331,8 +8331,8 @@
         "kepners": {
           "slot": "QB20",
           "price": -12.0,
-          "talent": -13.7,
-          "tru": -25.7,
+          "talent": -13.6,
+          "tru": -25.6,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "neg"
@@ -8349,8 +8349,8 @@
         "zimmer": {
           "slot": "QB18",
           "price": 0.4,
-          "talent": -12.4,
-          "tru": -12.0,
+          "talent": -12.6,
+          "tru": -12.2,
           "sample": "ok",
           "priceRaw": 6.0,
           "band": "neutral"
@@ -8380,14 +8380,14 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.14,
-      "projectedPoints": 101.21,
+      "espnRecommendedBid": 1.13,
+      "projectedPoints": 101.19,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
       "projectedWar": -19.7,
       "warByLeague": {
         "kepners": -19.7,
-        "miami": -41.3,
+        "miami": -41.4,
         "zimmer": -22.3
       },
       "marketDrift": {
@@ -8412,8 +8412,8 @@
         "zimmer": {
           "slot": "WR56",
           "price": -3.6,
-          "talent": 2.6,
-          "tru": -1.0,
+          "talent": 2.4,
+          "tru": -1.2,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "neutral"
@@ -8443,15 +8443,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.19,
-      "projectedPoints": 152.45,
+      "espnRecommendedBid": 3.18,
+      "projectedPoints": 152.43,
       "proTeamEspn": "DEN",
       "byeWeek": 10,
-      "projectedWar": 39.6,
+      "projectedWar": 39.5,
       "warByLeague": {
-        "kepners": 39.6,
+        "kepners": 39.5,
         "miami": 24.1,
-        "zimmer": 39.6
+        "zimmer": 39.5
       },
       "marketDrift": {
         "kepners": {
@@ -8538,8 +8538,8 @@
         "zimmer": {
           "slot": "WR55",
           "price": -7.4,
-          "talent": 3.3,
-          "tru": -4.1,
+          "talent": 3.1,
+          "tru": -4.3,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "neutral"
@@ -8569,7 +8569,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.92,
+      "espnRecommendedBid": 1.91,
       "projectedPoints": 263.44,
       "proTeamEspn": "GB",
       "byeWeek": 11,
@@ -8583,8 +8583,8 @@
         "kepners": {
           "slot": "QB18",
           "price": -4.6,
-          "talent": -7.8,
-          "tru": -12.4,
+          "talent": -7.6,
+          "tru": -12.2,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -8601,11 +8601,11 @@
         "zimmer": {
           "slot": "QB19",
           "price": -2.0,
-          "talent": -12.5,
-          "tru": -14.5,
+          "talent": -12.6,
+          "tru": -14.6,
           "sample": "ok",
           "priceRaw": 0.0,
-          "band": "neutral"
+          "band": "neg"
         }
       }
     },
@@ -8695,7 +8695,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 3.94,
+      "espnRecommendedBid": 3.93,
       "projectedPoints": 140.03,
       "proTeamEspn": "LAR",
       "byeWeek": 11,
@@ -8758,7 +8758,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.58,
+      "espnRecommendedBid": 0.57,
       "projectedPoints": 82.27,
       "proTeamEspn": "NO",
       "byeWeek": 8,
@@ -8772,8 +8772,8 @@
         "kepners": {
           "slot": "TE15",
           "price": 9.2,
-          "talent": 2.9,
-          "tru": 12.1,
+          "talent": 3.1,
+          "tru": 12.3,
           "sample": "ok",
           "priceRaw": 14.0,
           "band": "pos"
@@ -8790,8 +8790,8 @@
         "zimmer": {
           "slot": "TE16",
           "price": -3.2,
-          "talent": 6.2,
-          "tru": 3.0,
+          "talent": 6.1,
+          "tru": 2.9,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neutral"
@@ -8822,13 +8822,13 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.65,
-      "projectedPoints": 101.63,
+      "projectedPoints": 101.61,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
       "projectedWar": -19.3,
       "warByLeague": {
         "kepners": -19.3,
-        "miami": -40.9,
+        "miami": -41.0,
         "zimmer": -21.9
       },
       "marketDrift": {
@@ -8853,8 +8853,8 @@
         "zimmer": {
           "slot": "WR57",
           "price": -2.6,
-          "talent": -1.6,
-          "tru": -4.2,
+          "talent": -1.8,
+          "tru": -4.4,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neutral"
@@ -8884,7 +8884,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.16,
+      "espnRecommendedBid": 1.15,
       "projectedPoints": 113.68,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
@@ -8916,8 +8916,8 @@
         "zimmer": {
           "slot": "RB46",
           "price": 3.2,
-          "talent": 4.8,
-          "tru": 8.0,
+          "talent": 5.0,
+          "tru": 8.2,
           "sample": "ok",
           "priceRaw": 5.0,
           "band": "pos"
@@ -8947,7 +8947,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.98,
+      "espnRecommendedBid": 1.96,
       "projectedPoints": 265.55,
       "proTeamEspn": "NO",
       "byeWeek": 8,
@@ -8961,8 +8961,8 @@
         "kepners": {
           "slot": "QB21",
           "price": -11.8,
-          "talent": -9.4,
-          "tru": -21.2,
+          "talent": -9.2,
+          "tru": -21.0,
           "sample": "ok",
           "priceRaw": -26.0,
           "band": "neg"
@@ -8979,8 +8979,8 @@
         "zimmer": {
           "slot": "QB20",
           "price": -5.2,
-          "talent": -20.3,
-          "tru": -25.5,
+          "talent": -20.5,
+          "tru": -25.7,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neg"
@@ -9010,14 +9010,14 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 2.53,
-      "projectedPoints": 142.22,
+      "espnRecommendedBid": 2.51,
+      "projectedPoints": 142.19,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
       "projectedWar": 29.3,
       "warByLeague": {
         "kepners": 29.3,
-        "miami": 13.9,
+        "miami": 13.8,
         "zimmer": 29.3
       },
       "marketDrift": {
@@ -9105,8 +9105,8 @@
         "zimmer": {
           "slot": "RB50",
           "price": 0.4,
-          "talent": 3.5,
-          "tru": 3.9,
+          "talent": 3.8,
+          "tru": 4.2,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neutral"
@@ -9137,21 +9137,21 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.67,
-      "projectedPoints": 94.65,
+      "projectedPoints": 94.64,
       "proTeamEspn": "NE",
       "byeWeek": 11,
       "projectedWar": 1.0,
       "warByLeague": {
         "kepners": 1.0,
-        "miami": -8.7,
+        "miami": -8.8,
         "zimmer": 8.7
       },
       "marketDrift": {
         "kepners": {
           "slot": "TE20",
           "price": -1.2,
-          "talent": 4.1,
-          "tru": 2.9,
+          "talent": 4.0,
+          "tru": 2.8,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neutral"
@@ -9159,8 +9159,8 @@
         "miami": {
           "slot": "TE20",
           "price": -1.2,
-          "talent": 11.1,
-          "tru": 9.9,
+          "talent": 11.2,
+          "tru": 10.0,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "pos"
@@ -9168,8 +9168,8 @@
         "zimmer": {
           "slot": "TE17",
           "price": -0.2,
-          "talent": 14.0,
-          "tru": 13.8,
+          "talent": 13.9,
+          "tru": 13.7,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "strong-pos"
@@ -9231,8 +9231,8 @@
         "zimmer": {
           "slot": "RB47",
           "price": 2.8,
-          "talent": 4.8,
-          "tru": 7.6,
+          "talent": 5.0,
+          "tru": 7.8,
           "sample": "ok",
           "priceRaw": 6.0,
           "band": "pos"
@@ -9262,8 +9262,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.29,
-      "projectedPoints": 83.52,
+      "espnRecommendedBid": 0.28,
+      "projectedPoints": 83.53,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
       "projectedWar": -10.1,
@@ -9276,8 +9276,8 @@
         "kepners": {
           "slot": "TE21",
           "price": -2.8,
-          "talent": 6.0,
-          "tru": 3.2,
+          "talent": 5.9,
+          "tru": 3.1,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "neutral"
@@ -9285,8 +9285,8 @@
         "miami": {
           "slot": "TE21",
           "price": -2.8,
-          "talent": 12.5,
-          "tru": 9.7,
+          "talent": 12.6,
+          "tru": 9.8,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "pos"
@@ -9294,8 +9294,8 @@
         "zimmer": {
           "slot": "TE18",
           "price": -0.6,
-          "talent": 14.4,
-          "tru": 13.8,
+          "talent": 14.2,
+          "tru": 13.6,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "strong-pos"
@@ -9357,8 +9357,8 @@
         "zimmer": {
           "slot": "RB51",
           "price": 1.0,
-          "talent": -4.5,
-          "tru": -3.5,
+          "talent": -4.0,
+          "tru": -3.0,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -9388,7 +9388,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R4 - Arkansas",
-      "espnRecommendedBid": 0.9,
+      "espnRecommendedBid": 0.89,
       "projectedPoints": 58.2,
       "proTeamEspn": "LV",
       "byeWeek": 13,
@@ -9420,8 +9420,8 @@
         "zimmer": {
           "slot": "RB48",
           "price": 1.6,
-          "talent": 4.8,
-          "tru": 6.4,
+          "talent": 5.0,
+          "tru": 6.6,
           "sample": "ok",
           "priceRaw": 5.0,
           "band": "pos"
@@ -9483,8 +9483,8 @@
         "zimmer": {
           "slot": "RB49",
           "price": 0.8,
-          "talent": 3.5,
-          "tru": 4.3,
+          "talent": 3.8,
+          "tru": 4.6,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neutral"
@@ -9514,7 +9514,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.97,
+      "espnRecommendedBid": 0.95,
       "projectedPoints": 239.78,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
@@ -9528,8 +9528,8 @@
         "kepners": {
           "slot": "QB19",
           "price": -10.2,
-          "talent": -7.5,
-          "tru": -17.7,
+          "talent": -7.3,
+          "tru": -17.5,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "neg"
@@ -9546,8 +9546,8 @@
         "zimmer": {
           "slot": "QB21",
           "price": -7.6,
-          "talent": -15.1,
-          "tru": -22.7,
+          "talent": -15.2,
+          "tru": -22.8,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "neg"
@@ -9609,8 +9609,8 @@
         "zimmer": {
           "slot": "WR58",
           "price": -1.0,
-          "talent": -1.6,
-          "tru": -2.6,
+          "talent": -1.8,
+          "tru": -2.8,
           "sample": "ok",
           "priceRaw": 7.0,
           "band": "neutral"
@@ -9640,7 +9640,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.23,
+      "espnRecommendedBid": 1.22,
       "projectedPoints": 242.54,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
@@ -9654,8 +9654,8 @@
         "kepners": {
           "slot": "QB22",
           "price": -12.4,
-          "talent": -15.2,
-          "tru": -27.6,
+          "talent": -15.1,
+          "tru": -27.5,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "neg"
@@ -9672,8 +9672,8 @@
         "zimmer": {
           "slot": "QB22",
           "price": -8.4,
-          "talent": -19.2,
-          "tru": -27.6,
+          "talent": -19.3,
+          "tru": -27.7,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -9703,14 +9703,14 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.69,
+      "espnRecommendedBid": 1.68,
       "projectedPoints": 64.61,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
       "projectedWar": -56.3,
       "warByLeague": {
         "kepners": -56.3,
-        "miami": -77.9,
+        "miami": -78.0,
         "zimmer": -58.9
       },
       "marketDrift": {
@@ -9726,8 +9726,8 @@
         "miami": {
           "slot": "WR70",
           "price": -15.4,
-          "talent": -22.0,
-          "tru": -37.4,
+          "talent": -22.2,
+          "tru": -37.6,
           "sample": "ok",
           "priceRaw": -19.0,
           "band": "strong-neg"
@@ -9735,8 +9735,8 @@
         "zimmer": {
           "slot": "WR59",
           "price": 1.0,
-          "talent": -3.0,
-          "tru": -2.0,
+          "talent": -3.2,
+          "tru": -2.2,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neutral"
@@ -9839,8 +9839,8 @@
         "kepners": {
           "slot": "RB31",
           "price": -9.0,
-          "talent": -1.1,
-          "tru": -10.1,
+          "talent": -0.9,
+          "tru": -9.9,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -9857,8 +9857,8 @@
         "zimmer": {
           "slot": "RB42",
           "price": -3.6,
-          "talent": -9.2,
-          "tru": -12.8,
+          "talent": -9.4,
+          "tru": -13.0,
           "sample": "ok",
           "priceRaw": 0.0,
           "band": "neutral"
@@ -10069,7 +10069,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.36,
+      "espnRecommendedBid": 1.35,
       "projectedPoints": 266.58,
       "proTeamEspn": "IND",
       "byeWeek": 13,
@@ -10083,8 +10083,8 @@
         "kepners": {
           "slot": "QB23",
           "price": -8.2,
-          "talent": -24.0,
-          "tru": -32.2,
+          "talent": -23.9,
+          "tru": -32.1,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "strong-neg"
@@ -10101,8 +10101,8 @@
         "zimmer": {
           "slot": "QB23",
           "price": -4.6,
-          "talent": -27.2,
-          "tru": -31.8,
+          "talent": -27.4,
+          "tru": -32.0,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "strong-neg"
@@ -10132,7 +10132,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.34,
+      "espnRecommendedBid": 0.33,
       "projectedPoints": 60.45,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
@@ -10164,8 +10164,8 @@
         "zimmer": {
           "slot": "RB52",
           "price": 3.0,
-          "talent": -4.5,
-          "tru": -1.5,
+          "talent": -4.0,
+          "tru": -1.0,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neutral"
@@ -10209,8 +10209,8 @@
         "kepners": {
           "slot": "TE19",
           "price": -0.6,
-          "talent": -1.8,
-          "tru": -2.4,
+          "talent": -1.9,
+          "tru": -2.5,
           "sample": "ok",
           "priceRaw": 7.0,
           "band": "neutral"
@@ -10218,8 +10218,8 @@
         "miami": {
           "slot": "TE19",
           "price": -0.6,
-          "talent": 6.1,
-          "tru": 5.5,
+          "talent": 6.0,
+          "tru": 5.4,
           "sample": "ok",
           "priceRaw": 7.0,
           "band": "neutral"
@@ -10227,8 +10227,8 @@
         "zimmer": {
           "slot": "TE21",
           "price": -13.2,
-          "talent": 19.7,
-          "tru": 6.5,
+          "talent": 19.5,
+          "tru": 6.3,
           "sample": "ok",
           "priceRaw": -19.0,
           "band": "pos"
@@ -10258,7 +10258,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.58,
+      "espnRecommendedBid": 0.57,
       "projectedPoints": 82.69,
       "proTeamEspn": "NO",
       "byeWeek": 8,
@@ -10272,8 +10272,8 @@
         "kepners": {
           "slot": "RB59",
           "price": -5.6,
-          "talent": -22.5,
-          "tru": -28.1,
+          "talent": -22.0,
+          "tru": -27.6,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "strong-neg"
@@ -10281,8 +10281,8 @@
         "miami": {
           "slot": "RB59",
           "price": -5.6,
-          "talent": -21.5,
-          "tru": -27.1,
+          "talent": -21.0,
+          "tru": -26.6,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "neg"
@@ -10353,11 +10353,11 @@
         "zimmer": {
           "slot": "TE20",
           "price": -9.2,
-          "talent": 15.2,
-          "tru": 6.0,
+          "talent": 15.0,
+          "tru": 5.8,
           "sample": "ok",
           "priceRaw": -13.0,
-          "band": "pos"
+          "band": "neutral"
         }
       }
     },
@@ -10394,8 +10394,8 @@
         "kepners": {
           "slot": "TE18",
           "price": 5.2,
-          "talent": -2.8,
-          "tru": 2.4,
+          "talent": -2.9,
+          "tru": 2.3,
           "sample": "ok",
           "priceRaw": 7.0,
           "band": "neutral"
@@ -10412,8 +10412,8 @@
         "zimmer": {
           "slot": "TE19",
           "price": -6.0,
-          "talent": 14.7,
-          "tru": 8.7,
+          "talent": 14.6,
+          "tru": 8.6,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "pos"
@@ -10443,7 +10443,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 1.14,
+      "espnRecommendedBid": 1.17,
       "projectedPoints": 85.22,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
@@ -10475,8 +10475,8 @@
         "zimmer": {
           "slot": "RB53",
           "price": 3.2,
-          "talent": -4.5,
-          "tru": -1.3,
+          "talent": -4.0,
+          "tru": -0.8,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neutral"
@@ -10506,7 +10506,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.77,
+      "espnRecommendedBid": 0.76,
       "projectedPoints": 80.75,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
@@ -10520,8 +10520,8 @@
         "kepners": {
           "slot": "TE27",
           "price": -3.4,
-          "talent": 9.9,
-          "tru": 6.5,
+          "talent": 9.7,
+          "tru": 6.3,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -10529,8 +10529,8 @@
         "miami": {
           "slot": "TE27",
           "price": -3.4,
-          "talent": 3.8,
-          "tru": 0.4,
+          "talent": 4.7,
+          "tru": 1.3,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -10538,8 +10538,8 @@
         "zimmer": {
           "slot": "TE24",
           "price": -18.8,
-          "talent": 19.8,
-          "tru": 1.0,
+          "talent": 19.6,
+          "tru": 0.8,
           "sample": "ok",
           "priceRaw": -26.0,
           "band": "neutral"
@@ -10569,7 +10569,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.47,
+      "espnRecommendedBid": 0.46,
       "projectedPoints": 85.93,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
@@ -10583,8 +10583,8 @@
         "kepners": {
           "slot": "TE24",
           "price": 0.2,
-          "talent": 22.4,
-          "tru": 22.6,
+          "talent": 22.1,
+          "tru": 22.3,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "strong-pos"
@@ -10592,8 +10592,8 @@
         "miami": {
           "slot": "TE24",
           "price": 0.2,
-          "talent": 23.2,
-          "tru": 23.4,
+          "talent": 23.7,
+          "tru": 23.9,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "strong-pos"
@@ -10601,8 +10601,8 @@
         "zimmer": {
           "slot": "TE22",
           "price": -19.0,
-          "talent": 21.1,
-          "tru": 2.1,
+          "talent": 20.9,
+          "tru": 1.9,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "neutral"
@@ -10632,22 +10632,22 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.65,
-      "projectedPoints": 88.25,
+      "espnRecommendedBid": 0.64,
+      "projectedPoints": 62.1,
       "proTeamEspn": "DET",
       "byeWeek": 6,
-      "projectedWar": -61.0,
+      "projectedWar": -87.2,
       "warByLeague": {
-        "kepners": -61.0,
-        "miami": -79.9,
-        "zimmer": -52.5
+        "kepners": -87.2,
+        "miami": -106.0,
+        "zimmer": -78.6
       },
       "marketDrift": {
         "kepners": {
           "slot": "RB57",
           "price": -10.0,
-          "talent": -22.5,
-          "tru": -32.5,
+          "talent": -22.0,
+          "tru": -32.0,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "strong-neg"
@@ -10655,8 +10655,8 @@
         "miami": {
           "slot": "RB57",
           "price": -10.0,
-          "talent": -21.5,
-          "tru": -31.5,
+          "talent": -21.0,
+          "tru": -31.0,
           "sample": "ok",
           "priceRaw": -2.0,
           "band": "strong-neg"
@@ -10664,8 +10664,8 @@
         "zimmer": {
           "slot": "RB54",
           "price": 1.8,
-          "talent": -4.5,
-          "tru": -2.7,
+          "talent": -4.0,
+          "tru": -2.2,
           "sample": "ok",
           "priceRaw": 6.0,
           "band": "neutral"
@@ -10709,8 +10709,8 @@
         "kepners": {
           "slot": "RB58",
           "price": -8.0,
-          "talent": -22.5,
-          "tru": -30.5,
+          "talent": -22.0,
+          "tru": -30.0,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -10718,8 +10718,8 @@
         "miami": {
           "slot": "RB58",
           "price": -8.0,
-          "talent": -21.5,
-          "tru": -29.5,
+          "talent": -21.0,
+          "tru": -29.0,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -10765,15 +10765,15 @@
       "projectedWar": -35.3,
       "warByLeague": {
         "kepners": -35.3,
-        "miami": -56.9,
+        "miami": -57.0,
         "zimmer": -37.9
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR62",
           "price": -14.0,
-          "talent": -6.4,
-          "tru": -20.4,
+          "talent": -6.6,
+          "tru": -20.6,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -10781,8 +10781,8 @@
         "miami": {
           "slot": "WR62",
           "price": -14.0,
-          "talent": -7.1,
-          "tru": -21.1,
+          "talent": -7.2,
+          "tru": -21.2,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -10790,8 +10790,8 @@
         "zimmer": {
           "slot": "WR60",
           "price": 2.2,
-          "talent": -3.0,
-          "tru": -0.8,
+          "talent": -3.2,
+          "tru": -1.0,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neutral"
@@ -10821,7 +10821,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.94,
+      "espnRecommendedBid": 0.93,
       "projectedPoints": 246.06,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
@@ -10835,8 +10835,8 @@
         "kepners": {
           "slot": "QB24",
           "price": -3.2,
-          "talent": -24.0,
-          "tru": -27.2,
+          "talent": -23.9,
+          "tru": -27.1,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -10853,8 +10853,8 @@
         "zimmer": {
           "slot": "QB24",
           "price": -0.6,
-          "talent": -28.4,
-          "tru": -29.0,
+          "talent": -28.5,
+          "tru": -29.1,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neg"
@@ -10898,8 +10898,8 @@
         "kepners": {
           "slot": "TE30",
           "price": -10.8,
-          "talent": 1.7,
-          "tru": -9.1,
+          "talent": 1.5,
+          "tru": -9.3,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neutral"
@@ -10907,8 +10907,8 @@
         "miami": {
           "slot": "TE30",
           "price": -10.8,
-          "talent": -6.4,
-          "tru": -17.2,
+          "talent": -7.3,
+          "tru": -18.1,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neg"
@@ -10916,8 +10916,8 @@
         "zimmer": {
           "slot": "TE23",
           "price": -20.4,
-          "talent": 19.8,
-          "tru": -0.6,
+          "talent": 19.6,
+          "tru": -0.8,
           "sample": "ok",
           "priceRaw": -23.0,
           "band": "neutral"
@@ -10970,8 +10970,8 @@
         "miami": {
           "slot": "WR68",
           "price": -13.6,
-          "talent": -22.0,
-          "tru": -35.6,
+          "talent": -22.2,
+          "tru": -35.8,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "strong-neg"
@@ -10979,8 +10979,8 @@
         "zimmer": {
           "slot": "WR61",
           "price": 0.8,
-          "talent": -1.3,
-          "tru": -0.5,
+          "talent": -1.5,
+          "tru": -0.7,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -11011,13 +11011,13 @@
       },
       "notes": null,
       "espnRecommendedBid": 1.61,
-      "projectedPoints": 150.42,
+      "projectedPoints": 150.41,
       "proTeamEspn": "PIT",
       "byeWeek": 9,
       "projectedWar": 37.5,
       "warByLeague": {
         "kepners": 37.5,
-        "miami": 22.1,
+        "miami": 22.0,
         "zimmer": 37.5
       },
       "marketDrift": {
@@ -11073,8 +11073,8 @@
         "nfl": "-"
       },
       "notes": "Rookie R5 - Nebraska",
-      "espnRecommendedBid": 0.41,
-      "projectedPoints": 89.63,
+      "espnRecommendedBid": 0.4,
+      "projectedPoints": 89.62,
       "proTeamEspn": "LV",
       "byeWeek": 13,
       "projectedWar": -31.3,
@@ -11087,8 +11087,8 @@
         "kepners": {
           "slot": "WR60",
           "price": -9.8,
-          "talent": 4.4,
-          "tru": -5.4,
+          "talent": 4.2,
+          "tru": -5.6,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "neutral"
@@ -11144,14 +11144,14 @@
       "warByLeague": {
         "kepners": -41.0,
         "miami": -62.6,
-        "zimmer": -43.6
+        "zimmer": -43.5
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR71",
           "price": -17.4,
-          "talent": -10.5,
-          "tru": -27.9,
+          "talent": -10.2,
+          "tru": -27.6,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "strong-neg"
@@ -11168,8 +11168,8 @@
         "zimmer": {
           "slot": "WR67",
           "price": -7.0,
-          "talent": -27.9,
-          "tru": -34.9,
+          "talent": -27.8,
+          "tru": -34.8,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-neg"
@@ -11272,8 +11272,8 @@
         "kepners": {
           "slot": "RB56",
           "price": -7.6,
-          "talent": -22.5,
-          "tru": -30.1,
+          "talent": -22.0,
+          "tru": -29.6,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "strong-neg"
@@ -11281,8 +11281,8 @@
         "miami": {
           "slot": "RB56",
           "price": -7.6,
-          "talent": -21.5,
-          "tru": -29.1,
+          "talent": -21.0,
+          "tru": -28.6,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "strong-neg"
@@ -11321,7 +11321,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R6 - PSU",
-      "espnRecommendedBid": 1.46,
+      "espnRecommendedBid": 1.45,
       "projectedPoints": 142.9,
       "proTeamEspn": "BAL",
       "byeWeek": 13,
@@ -11444,7 +11444,7 @@
       },
       "notes": null,
       "espnRecommendedBid": 1.01,
-      "projectedPoints": 123.05,
+      "projectedPoints": 123.06,
       "proTeamEspn": "NE",
       "byeWeek": 11,
       "projectedWar": 10.2,
@@ -11529,8 +11529,8 @@
         "miami": {
           "slot": "WR73",
           "price": -20.8,
-          "talent": -10.2,
-          "tru": -31.0,
+          "talent": -10.0,
+          "tru": -30.8,
           "sample": "ok",
           "priceRaw": -22.0,
           "band": "strong-neg"
@@ -11569,7 +11569,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.29,
+      "espnRecommendedBid": 0.28,
       "projectedPoints": 64.03,
       "proTeamEspn": "NYJ",
       "byeWeek": 13,
@@ -11583,8 +11583,8 @@
         "kepners": {
           "slot": "RB55",
           "price": -4.2,
-          "talent": -11.8,
-          "tru": -16.0,
+          "talent": -11.5,
+          "tru": -15.7,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -11592,8 +11592,8 @@
         "miami": {
           "slot": "RB55",
           "price": -4.2,
-          "talent": -11.5,
-          "tru": -15.7,
+          "talent": -11.2,
+          "tru": -15.4,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -11632,15 +11632,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.27,
-      "projectedPoints": 99.25,
+      "espnRecommendedBid": 0.26,
+      "projectedPoints": 99.24,
       "proTeamEspn": "MIN",
       "byeWeek": 6,
-      "projectedWar": -13.6,
+      "projectedWar": -13.7,
       "warByLeague": {
-        "kepners": -13.6,
+        "kepners": -13.7,
         "miami": -29.1,
-        "zimmer": -13.6
+        "zimmer": -13.7
       },
       "marketDrift": {
         "kepners": {
@@ -11695,7 +11695,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.21,
+      "espnRecommendedBid": 0.2,
       "projectedPoints": 68.99,
       "proTeamEspn": "PHI",
       "byeWeek": 10,
@@ -11709,8 +11709,8 @@
         "kepners": {
           "slot": "WR63",
           "price": -14.6,
-          "talent": -12.5,
-          "tru": -27.1,
+          "talent": -12.7,
+          "tru": -27.3,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -11718,17 +11718,17 @@
         "miami": {
           "slot": "WR63",
           "price": -14.6,
-          "talent": -13.8,
-          "tru": -28.4,
+          "talent": -14.0,
+          "tru": -28.6,
           "sample": "ok",
           "priceRaw": -16.0,
-          "band": "neg"
+          "band": "strong-neg"
         },
         "zimmer": {
           "slot": "WR65",
           "price": -4.4,
-          "talent": -24.8,
-          "tru": -29.2,
+          "talent": -24.7,
+          "tru": -29.1,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -11772,8 +11772,8 @@
         "kepners": {
           "slot": "TE22",
           "price": -4.4,
-          "talent": 12.6,
-          "tru": 8.2,
+          "talent": 12.4,
+          "tru": 8.0,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "neutral"
@@ -11781,8 +11781,8 @@
         "miami": {
           "slot": "TE22",
           "price": -4.4,
-          "talent": 16.6,
-          "tru": 12.2,
+          "talent": 16.7,
+          "tru": 12.3,
           "sample": "ok",
           "priceRaw": 2.0,
           "band": "pos"
@@ -11790,8 +11790,8 @@
         "zimmer": {
           "slot": "TE25",
           "price": -20.0,
-          "talent": 16.8,
-          "tru": -3.2,
+          "talent": 16.7,
+          "tru": -3.3,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "neutral"
@@ -11853,8 +11853,8 @@
         "zimmer": {
           "slot": "WR69",
           "price": -10.8,
-          "talent": -27.9,
-          "tru": -38.7,
+          "talent": -27.8,
+          "tru": -38.6,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "strong-neg"
@@ -11898,8 +11898,8 @@
         "kepners": {
           "slot": "WR77",
           "price": -21.0,
-          "talent": -11.4,
-          "tru": -32.4,
+          "talent": -11.6,
+          "tru": -32.6,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "strong-neg"
@@ -11907,8 +11907,8 @@
         "miami": {
           "slot": "WR77",
           "price": -21.0,
-          "talent": -2.6,
-          "tru": -23.6,
+          "talent": -1.3,
+          "tru": -22.3,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "neg"
@@ -11916,8 +11916,8 @@
         "zimmer": {
           "slot": "WR70",
           "price": -12.4,
-          "talent": -27.9,
-          "tru": -40.3,
+          "talent": -27.8,
+          "tru": -40.2,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "strong-neg"
@@ -11979,8 +11979,8 @@
         "zimmer": {
           "slot": "WR66",
           "price": -6.0,
-          "talent": -27.9,
-          "tru": -33.9,
+          "talent": -27.8,
+          "tru": -33.8,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "strong-neg"
@@ -12081,14 +12081,14 @@
       "warByLeague": {
         "kepners": -76.6,
         "miami": -98.2,
-        "zimmer": -79.2
+        "zimmer": -79.1
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR64",
           "price": -14.0,
-          "talent": -21.0,
-          "tru": -35.0,
+          "talent": -21.2,
+          "tru": -35.2,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -12096,8 +12096,8 @@
         "miami": {
           "slot": "WR64",
           "price": -14.0,
-          "talent": -22.2,
-          "tru": -36.2,
+          "talent": -22.5,
+          "tru": -36.5,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -12105,8 +12105,8 @@
         "zimmer": {
           "slot": "WR68",
           "price": -8.8,
-          "talent": -27.9,
-          "tru": -36.7,
+          "talent": -27.8,
+          "tru": -36.6,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-neg"
@@ -12150,8 +12150,8 @@
         "kepners": {
           "slot": "QB25",
           "price": 1.2,
-          "talent": -18.0,
-          "tru": -16.8,
+          "talent": -17.8,
+          "tru": -16.6,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neg"
@@ -12168,8 +12168,8 @@
         "zimmer": {
           "slot": "QB25",
           "price": 2.4,
-          "talent": -22.8,
-          "tru": -20.4,
+          "talent": -22.9,
+          "tru": -20.5,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "neg"
@@ -12285,8 +12285,8 @@
         "miami": {
           "slot": "WR69",
           "price": -15.6,
-          "talent": -22.0,
-          "tru": -37.6,
+          "talent": -22.2,
+          "tru": -37.8,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "strong-neg"
@@ -12294,8 +12294,8 @@
         "zimmer": {
           "slot": "WR72",
           "price": -20.8,
-          "talent": -22.4,
-          "tru": -43.2,
+          "talent": -22.1,
+          "tru": -42.9,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -12339,8 +12339,8 @@
         "kepners": {
           "slot": "WR65",
           "price": -14.2,
-          "talent": -21.0,
-          "tru": -35.2,
+          "talent": -21.2,
+          "tru": -35.4,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -12348,8 +12348,8 @@
         "miami": {
           "slot": "WR65",
           "price": -14.2,
-          "talent": -22.2,
-          "tru": -36.4,
+          "talent": -22.5,
+          "tru": -36.7,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "strong-neg"
@@ -12357,8 +12357,8 @@
         "zimmer": {
           "slot": "WR73",
           "price": -23.8,
-          "talent": -22.4,
-          "tru": -46.2,
+          "talent": -22.1,
+          "tru": -45.9,
           "sample": "ok",
           "priceRaw": -27.0,
           "band": "strong-neg"
@@ -12388,7 +12388,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.48,
+      "espnRecommendedBid": 0.47,
       "projectedPoints": 238.15,
       "proTeamEspn": "CAR",
       "byeWeek": 5,
@@ -12402,11 +12402,11 @@
         "kepners": {
           "slot": "QB26",
           "price": 8.2,
-          "talent": -18.0,
-          "tru": -9.8,
+          "talent": -17.8,
+          "tru": -9.6,
           "sample": "ok",
           "priceRaw": -1.0,
-          "band": "neg"
+          "band": "neutral"
         },
         "miami": {
           "slot": "QB26",
@@ -12420,8 +12420,8 @@
         "zimmer": {
           "slot": "QB26",
           "price": 5.8,
-          "talent": -22.8,
-          "tru": -17.0,
+          "talent": -22.9,
+          "tru": -17.1,
           "sample": "ok",
           "priceRaw": 7.0,
           "band": "neg"
@@ -12451,7 +12451,7 @@
         "nfl": "-"
       },
       "notes": "Rookie R3 - Indiana",
-      "espnRecommendedBid": 0.21,
+      "espnRecommendedBid": 0.2,
       "projectedPoints": 52.25,
       "proTeamEspn": "SF",
       "byeWeek": 8,
@@ -12528,8 +12528,8 @@
         "kepners": {
           "slot": "WR66",
           "price": -13.4,
-          "talent": -34.5,
-          "tru": -47.9,
+          "talent": -34.8,
+          "tru": -48.2,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "strong-neg"
@@ -12537,8 +12537,8 @@
         "miami": {
           "slot": "WR66",
           "price": -13.4,
-          "talent": -35.8,
-          "tru": -49.2,
+          "talent": -36.2,
+          "tru": -49.6,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "strong-neg"
@@ -12577,15 +12577,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.43,
-      "projectedPoints": 93.05,
+      "espnRecommendedBid": 0.42,
+      "projectedPoints": 93.02,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
-      "projectedWar": -19.8,
+      "projectedWar": -19.9,
       "warByLeague": {
-        "kepners": -19.8,
+        "kepners": -19.9,
         "miami": -35.3,
-        "zimmer": -19.8
+        "zimmer": -19.9
       },
       "marketDrift": {
         "kepners": {
@@ -12654,8 +12654,8 @@
         "kepners": {
           "slot": "WR82",
           "price": -14.6,
-          "talent": -5.2,
-          "tru": -19.8,
+          "talent": -5.3,
+          "tru": -19.9,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -12663,8 +12663,8 @@
         "miami": {
           "slot": "WR82",
           "price": -14.6,
-          "talent": 0.4,
-          "tru": -14.2,
+          "talent": 2.4,
+          "tru": -12.2,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -12672,8 +12672,8 @@
         "zimmer": {
           "slot": "WR76",
           "price": -30.4,
-          "talent": -5.2,
-          "tru": -35.6,
+          "talent": -4.9,
+          "tru": -35.3,
           "sample": "ok",
           "priceRaw": -28.0,
           "band": "strong-neg"
@@ -12717,8 +12717,8 @@
         "kepners": {
           "slot": "WR76",
           "price": -22.4,
-          "talent": 4.4,
-          "tru": -18.0,
+          "talent": 4.2,
+          "tru": -18.2,
           "sample": "ok",
           "priceRaw": -24.0,
           "band": "neg"
@@ -12726,8 +12726,8 @@
         "miami": {
           "slot": "WR76",
           "price": -22.4,
-          "talent": -0.6,
-          "tru": -23.0,
+          "talent": 0.5,
+          "tru": -21.9,
           "sample": "ok",
           "priceRaw": -24.0,
           "band": "neg"
@@ -12735,8 +12735,8 @@
         "zimmer": {
           "slot": "WR75",
           "price": -29.2,
-          "talent": -25.4,
-          "tru": -54.6,
+          "talent": -24.9,
+          "tru": -54.1,
           "sample": "ok",
           "priceRaw": -29.0,
           "band": "strong-neg"
@@ -12767,21 +12767,21 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.14,
-      "projectedPoints": 69.58,
+      "projectedPoints": 69.55,
       "proTeamEspn": "MIA",
       "byeWeek": 6,
-      "projectedWar": -51.3,
+      "projectedWar": -51.4,
       "warByLeague": {
-        "kepners": -51.3,
+        "kepners": -51.4,
         "miami": -73.0,
-        "zimmer": -53.9
+        "zimmer": -54.0
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR80",
           "price": -16.8,
-          "talent": -7.6,
-          "tru": -24.4,
+          "talent": -7.8,
+          "tru": -24.6,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -12789,8 +12789,8 @@
         "miami": {
           "slot": "WR80",
           "price": -16.8,
-          "talent": -4.8,
-          "tru": -21.6,
+          "talent": -3.3,
+          "tru": -20.1,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -12798,8 +12798,8 @@
         "zimmer": {
           "slot": "WR77",
           "price": -29.0,
-          "talent": -5.2,
-          "tru": -34.2,
+          "talent": -4.9,
+          "tru": -33.9,
           "sample": "ok",
           "priceRaw": -30.0,
           "band": "strong-neg"
@@ -12830,7 +12830,7 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.61,
-      "projectedPoints": 112.78,
+      "projectedPoints": 112.76,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
       "projectedWar": -0.1,
@@ -12906,8 +12906,8 @@
         "kepners": {
           "slot": "WR59",
           "price": -7.8,
-          "talent": 4.4,
-          "tru": -3.4,
+          "talent": 4.2,
+          "tru": -3.6,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neutral"
@@ -12924,8 +12924,8 @@
         "zimmer": {
           "slot": "WR64",
           "price": -2.4,
-          "talent": -33.6,
-          "tru": -36.0,
+          "talent": -33.5,
+          "tru": -35.9,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "strong-neg"
@@ -12955,7 +12955,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.13,
+      "espnRecommendedBid": 0.12,
       "projectedPoints": 87.89,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
@@ -12969,8 +12969,8 @@
         "kepners": {
           "slot": "WR67",
           "price": -13.0,
-          "talent": -34.5,
-          "tru": -47.5,
+          "talent": -34.8,
+          "tru": -47.8,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "strong-neg"
@@ -12978,8 +12978,8 @@
         "miami": {
           "slot": "WR67",
           "price": -13.0,
-          "talent": -35.8,
-          "tru": -48.8,
+          "talent": -36.2,
+          "tru": -49.2,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "strong-neg"
@@ -12987,8 +12987,8 @@
         "zimmer": {
           "slot": "WR74",
           "price": -26.4,
-          "talent": -37.8,
-          "tru": -64.2,
+          "talent": -37.2,
+          "tru": -63.6,
           "sample": "ok",
           "priceRaw": -32.0,
           "band": "strong-neg"
@@ -13137,7 +13137,7 @@
       },
       "notes": "#N/A",
       "espnRecommendedBid": 0.89,
-      "projectedPoints": 130.67,
+      "projectedPoints": 130.66,
       "proTeamEspn": "DET",
       "byeWeek": 6,
       "projectedWar": 17.8,
@@ -13213,8 +13213,8 @@
         "kepners": {
           "slot": "TE23",
           "price": -3.4,
-          "talent": 17.3,
-          "tru": 13.9,
+          "talent": 17.0,
+          "tru": 13.6,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "pos"
@@ -13222,8 +13222,8 @@
         "miami": {
           "slot": "TE23",
           "price": -3.4,
-          "talent": 19.2,
-          "tru": 15.8,
+          "talent": 19.6,
+          "tru": 16.2,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "pos"
@@ -13231,8 +13231,8 @@
         "zimmer": {
           "slot": "TE26",
           "price": -19.6,
-          "talent": 6.4,
-          "tru": -13.2,
+          "talent": 6.3,
+          "tru": -13.3,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neutral"
@@ -13335,8 +13335,8 @@
         "kepners": {
           "slot": "RB63",
           "price": 2.0,
-          "talent": -22.5,
-          "tru": -20.5,
+          "talent": -22.0,
+          "tru": -20.0,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -13344,8 +13344,8 @@
         "miami": {
           "slot": "RB63",
           "price": 2.0,
-          "talent": -21.5,
-          "tru": -19.5,
+          "talent": -21.0,
+          "tru": -19.0,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neg"
@@ -13398,8 +13398,8 @@
         "kepners": {
           "slot": "TE25",
           "price": 0.0,
-          "talent": 17.0,
-          "tru": 17.0,
+          "talent": 16.8,
+          "tru": 16.8,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "strong-pos"
@@ -13407,8 +13407,8 @@
         "miami": {
           "slot": "TE25",
           "price": 0.0,
-          "talent": 17.6,
-          "tru": 17.6,
+          "talent": 18.1,
+          "tru": 18.1,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "pos"
@@ -13416,8 +13416,8 @@
         "zimmer": {
           "slot": "TE27",
           "price": -19.6,
-          "talent": 4.0,
-          "tru": -15.6,
+          "talent": 3.8,
+          "tru": -15.8,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "neg"
@@ -13461,8 +13461,8 @@
         "kepners": {
           "slot": "QB29",
           "price": 19.6,
-          "talent": -15.4,
-          "tru": 4.2,
+          "talent": -15.2,
+          "tru": 4.4,
           "sample": "ok",
           "priceRaw": 24.0,
           "band": "neutral"
@@ -13470,8 +13470,8 @@
         "miami": {
           "slot": "QB29",
           "price": 19.6,
-          "talent": 11.5,
-          "tru": 31.1,
+          "talent": 12.4,
+          "tru": 32.0,
           "sample": "ok",
           "priceRaw": 24.0,
           "band": "strong-pos"
@@ -13583,17 +13583,17 @@
         "kepners": {
           "slot": "TE26",
           "price": -1.2,
-          "talent": 10.2,
-          "tru": 9.0,
+          "talent": 10.0,
+          "tru": 8.8,
           "sample": "ok",
           "priceRaw": 4.0,
-          "band": "pos"
+          "band": "neutral"
         },
         "miami": {
           "slot": "TE26",
           "price": -1.2,
-          "talent": 5.0,
-          "tru": 3.8,
+          "talent": 5.7,
+          "tru": 4.5,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neutral"
@@ -13601,8 +13601,8 @@
         "zimmer": {
           "slot": "TE29",
           "price": -21.0,
-          "talent": 5.3,
-          "tru": -15.7,
+          "talent": 5.1,
+          "tru": -15.9,
           "sample": "ok",
           "priceRaw": -26.0,
           "band": "neg"
@@ -13646,8 +13646,8 @@
         "kepners": {
           "slot": "WR91",
           "price": -21.8,
-          "talent": -26.5,
-          "tru": -48.3,
+          "talent": -26.2,
+          "tru": -48.0,
           "sample": "ok",
           "priceRaw": -17.0,
           "band": "strong-neg"
@@ -13655,8 +13655,8 @@
         "miami": {
           "slot": "WR91",
           "price": -21.8,
-          "talent": -34.0,
-          "tru": -55.8,
+          "talent": -32.5,
+          "tru": -54.3,
           "sample": "ok",
           "priceRaw": -17.0,
           "band": "strong-neg"
@@ -13664,8 +13664,8 @@
         "zimmer": {
           "slot": "WR90",
           "price": -17.6,
-          "talent": -10.6,
-          "tru": -28.2,
+          "talent": -10.8,
+          "tru": -28.4,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neg"
@@ -13703,14 +13703,14 @@
       "warByLeague": {
         "kepners": -47.0,
         "miami": -68.6,
-        "zimmer": -49.6
+        "zimmer": -49.5
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR75",
           "price": -23.2,
-          "talent": 0.5,
-          "tru": -22.7,
+          "talent": 0.3,
+          "tru": -22.9,
           "sample": "ok",
           "priceRaw": -25.0,
           "band": "neg"
@@ -13718,8 +13718,8 @@
         "miami": {
           "slot": "WR75",
           "price": -23.2,
-          "talent": -4.6,
-          "tru": -27.8,
+          "talent": -3.8,
+          "tru": -27.0,
           "sample": "ok",
           "priceRaw": -25.0,
           "band": "neg"
@@ -13727,8 +13727,8 @@
         "zimmer": {
           "slot": "WR78",
           "price": -27.8,
-          "talent": -14.5,
-          "tru": -42.3,
+          "talent": -14.1,
+          "tru": -41.9,
           "sample": "ok",
           "priceRaw": -33.0,
           "band": "strong-neg"
@@ -13772,8 +13772,8 @@
         "kepners": {
           "slot": "WR81",
           "price": -15.4,
-          "talent": -5.2,
-          "tru": -20.6,
+          "talent": -5.3,
+          "tru": -20.7,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -13781,8 +13781,8 @@
         "miami": {
           "slot": "WR81",
           "price": -15.4,
-          "talent": 0.4,
-          "tru": -15.0,
+          "talent": 2.4,
+          "tru": -13.0,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -13790,8 +13790,8 @@
         "zimmer": {
           "slot": "WR81",
           "price": -22.4,
-          "talent": -6.8,
-          "tru": -29.2,
+          "talent": -6.4,
+          "tru": -28.8,
           "sample": "ok",
           "priceRaw": -24.0,
           "band": "neg"
@@ -13835,8 +13835,8 @@
         "kepners": {
           "slot": "TE31",
           "price": -9.6,
-          "talent": -6.1,
-          "tru": -15.7,
+          "talent": -6.3,
+          "tru": -15.9,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -13844,8 +13844,8 @@
         "miami": {
           "slot": "TE31",
           "price": -9.6,
-          "talent": -14.4,
-          "tru": -24.0,
+          "talent": -14.1,
+          "tru": -23.7,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "neg"
@@ -13853,8 +13853,8 @@
         "zimmer": {
           "slot": "TE28",
           "price": -19.4,
-          "talent": 6.0,
-          "tru": -13.4,
+          "talent": 5.8,
+          "tru": -13.6,
           "sample": "ok",
           "priceRaw": -21.0,
           "band": "neutral"
@@ -13944,7 +13944,7 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.28,
-      "projectedPoints": 91.92,
+      "projectedPoints": 91.93,
       "proTeamEspn": "TEN",
       "byeWeek": 9,
       "projectedWar": -29.0,
@@ -13957,8 +13957,8 @@
         "kepners": {
           "slot": "WR79",
           "price": -17.6,
-          "talent": -15.4,
-          "tru": -33.0,
+          "talent": -15.6,
+          "tru": -33.2,
           "sample": "ok",
           "priceRaw": -18.0,
           "band": "strong-neg"
@@ -13966,17 +13966,17 @@
         "miami": {
           "slot": "WR79",
           "price": -17.6,
-          "talent": -11.8,
-          "tru": -29.4,
+          "talent": -10.4,
+          "tru": -28.0,
           "sample": "ok",
           "priceRaw": -18.0,
-          "band": "strong-neg"
+          "band": "neg"
         },
         "zimmer": {
           "slot": "WR80",
           "price": -25.8,
-          "talent": -14.5,
-          "tru": -40.3,
+          "talent": -14.1,
+          "tru": -39.9,
           "sample": "ok",
           "priceRaw": -23.0,
           "band": "strong-neg"
@@ -14020,8 +14020,8 @@
         "kepners": {
           "slot": "QB32",
           "price": 12.4,
-          "talent": -14.2,
-          "tru": -1.8,
+          "talent": -14.5,
+          "tru": -2.1,
           "sample": "ok",
           "priceRaw": 14.0,
           "band": "neutral"
@@ -14029,11 +14029,11 @@
         "miami": {
           "slot": "QB32",
           "price": 12.4,
-          "talent": 5.5,
-          "tru": 17.9,
+          "talent": 7.2,
+          "tru": 19.6,
           "sample": "ok",
           "priceRaw": 14.0,
-          "band": "pos"
+          "band": "strong-pos"
         },
         "zimmer": {
           "slot": "QB28",
@@ -14083,8 +14083,8 @@
         "kepners": {
           "slot": "TE35",
           "price": -0.2,
-          "talent": 4.8,
-          "tru": 4.6,
+          "talent": 4.4,
+          "tru": 4.2,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neutral"
@@ -14092,8 +14092,8 @@
         "miami": {
           "slot": "TE35",
           "price": -0.2,
-          "talent": -5.3,
-          "tru": -5.5,
+          "talent": -7.5,
+          "tru": -7.7,
           "sample": "ok",
           "priceRaw": 4.0,
           "band": "neutral"
@@ -14101,8 +14101,8 @@
         "zimmer": {
           "slot": "TE32",
           "price": -18.0,
-          "talent": -5.5,
-          "tru": -23.5,
+          "talent": -5.8,
+          "tru": -23.8,
           "sample": "ok",
           "priceRaw": -21.0,
           "band": "neg"
@@ -14146,8 +14146,8 @@
         "kepners": {
           "slot": "TE29",
           "price": -7.8,
-          "talent": 6.1,
-          "tru": -1.7,
+          "talent": 5.8,
+          "tru": -2.0,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neutral"
@@ -14155,17 +14155,17 @@
         "miami": {
           "slot": "TE29",
           "price": -7.8,
-          "talent": -1.0,
-          "tru": -8.8,
+          "talent": -2.7,
+          "tru": -10.5,
           "sample": "ok",
           "priceRaw": -12.0,
-          "band": "neutral"
+          "band": "neg"
         },
         "zimmer": {
           "slot": "TE31",
           "price": -21.0,
-          "talent": -4.8,
-          "tru": -25.8,
+          "talent": -5.1,
+          "tru": -26.1,
           "sample": "ok",
           "priceRaw": -19.0,
           "band": "neg"
@@ -14209,8 +14209,8 @@
         "kepners": {
           "slot": "RB62",
           "price": 1.4,
-          "talent": -22.5,
-          "tru": -21.1,
+          "talent": -22.0,
+          "tru": -20.6,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neg"
@@ -14218,8 +14218,8 @@
         "miami": {
           "slot": "RB62",
           "price": 1.4,
-          "talent": -21.5,
-          "tru": -20.1,
+          "talent": -21.0,
+          "tru": -19.6,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neg"
@@ -14259,7 +14259,7 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.09,
-      "projectedPoints": 64.47,
+      "projectedPoints": 64.48,
       "proTeamEspn": "LAC",
       "byeWeek": 7,
       "projectedWar": -29.2,
@@ -14272,8 +14272,8 @@
         "kepners": {
           "slot": "TE28",
           "price": -5.0,
-          "talent": 9.4,
-          "tru": 4.4,
+          "talent": 9.1,
+          "tru": 4.1,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neutral"
@@ -14281,8 +14281,8 @@
         "miami": {
           "slot": "TE28",
           "price": -5.0,
-          "talent": 2.8,
-          "tru": -2.2,
+          "talent": 3.9,
+          "tru": -1.1,
           "sample": "ok",
           "priceRaw": -7.0,
           "band": "neutral"
@@ -14290,8 +14290,8 @@
         "zimmer": {
           "slot": "TE30",
           "price": -21.2,
-          "talent": 0.3,
-          "tru": -20.9,
+          "talent": 0.1,
+          "tru": -21.1,
           "sample": "ok",
           "priceRaw": -19.0,
           "band": "neg"
@@ -14335,8 +14335,8 @@
         "kepners": {
           "slot": "RB60",
           "price": -5.0,
-          "talent": -22.5,
-          "tru": -27.5,
+          "talent": -22.0,
+          "tru": -27.0,
           "sample": "ok",
           "priceRaw": 0.0,
           "band": "neg"
@@ -14344,8 +14344,8 @@
         "miami": {
           "slot": "RB60",
           "price": -5.0,
-          "talent": -21.5,
-          "tru": -26.5,
+          "talent": -21.0,
+          "tru": -26.0,
           "sample": "ok",
           "priceRaw": 0.0,
           "band": "neg"
@@ -14533,8 +14533,8 @@
         "miami": {
           "slot": "QB27",
           "price": 14.0,
-          "talent": -9.0,
-          "tru": 5.0,
+          "talent": -8.4,
+          "tru": 5.6,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neutral"
@@ -14542,8 +14542,8 @@
         "zimmer": {
           "slot": "QB29",
           "price": 3.0,
-          "talent": -25.0,
-          "tru": -22.0,
+          "talent": -24.8,
+          "tru": -21.8,
           "sample": "ok",
           "priceRaw": 8.0,
           "band": "neg"
@@ -14587,8 +14587,8 @@
         "kepners": {
           "slot": "RB61",
           "price": -2.0,
-          "talent": -22.5,
-          "tru": -24.5,
+          "talent": -22.0,
+          "tru": -24.0,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neg"
@@ -14596,8 +14596,8 @@
         "miami": {
           "slot": "RB61",
           "price": -2.0,
-          "talent": -21.5,
-          "tru": -23.5,
+          "talent": -21.0,
+          "tru": -23.0,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neg"
@@ -14770,14 +14770,14 @@
       "warByLeague": {
         "kepners": -57.3,
         "miami": -78.9,
-        "zimmer": -59.9
+        "zimmer": -59.8
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR89",
           "price": -9.2,
-          "talent": -26.5,
-          "tru": -35.7,
+          "talent": -26.2,
+          "tru": -35.4,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-neg"
@@ -14785,8 +14785,8 @@
         "miami": {
           "slot": "WR89",
           "price": -9.2,
-          "talent": -34.0,
-          "tru": -43.2,
+          "talent": -32.5,
+          "tru": -41.7,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-neg"
@@ -14794,8 +14794,8 @@
         "zimmer": {
           "slot": "WR85",
           "price": -18.0,
-          "talent": -21.2,
-          "tru": -39.2,
+          "talent": -21.1,
+          "tru": -39.1,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "strong-neg"
@@ -14839,8 +14839,8 @@
         "kepners": {
           "slot": "WR92",
           "price": -26.6,
-          "talent": -26.5,
-          "tru": -53.1,
+          "talent": -26.2,
+          "tru": -52.8,
           "sample": "ok",
           "priceRaw": -33.0,
           "band": "strong-neg"
@@ -14848,8 +14848,8 @@
         "miami": {
           "slot": "WR92",
           "price": -26.6,
-          "talent": -34.0,
-          "tru": -60.6,
+          "talent": -32.5,
+          "tru": -59.1,
           "sample": "ok",
           "priceRaw": -33.0,
           "band": "strong-neg"
@@ -14857,8 +14857,8 @@
         "zimmer": {
           "slot": "WR83",
           "price": -21.0,
-          "talent": -6.8,
-          "tru": -27.8,
+          "talent": -6.4,
+          "tru": -27.4,
           "sample": "ok",
           "priceRaw": -16.0,
           "band": "neg"
@@ -14961,8 +14961,8 @@
         "kepners": {
           "slot": "QB31",
           "price": 17.0,
-          "talent": -14.2,
-          "tru": 2.8,
+          "talent": -14.5,
+          "tru": 2.5,
           "sample": "ok",
           "priceRaw": 17.0,
           "band": "neutral"
@@ -14970,8 +14970,8 @@
         "miami": {
           "slot": "QB31",
           "price": 17.0,
-          "talent": 5.5,
-          "tru": 22.5,
+          "talent": 7.2,
+          "tru": 24.2,
           "sample": "ok",
           "priceRaw": 17.0,
           "band": "strong-pos"
@@ -15069,8 +15069,8 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.21,
-      "projectedPoints": 112.61,
+      "espnRecommendedBid": 0.2,
+      "projectedPoints": 112.6,
       "proTeamEspn": "GB",
       "byeWeek": 11,
       "projectedWar": -0.3,
@@ -15209,8 +15209,8 @@
         "kepners": {
           "slot": "WR85",
           "price": -10.2,
-          "talent": -28.1,
-          "tru": -38.3,
+          "talent": -28.0,
+          "tru": -38.2,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "strong-neg"
@@ -15218,8 +15218,8 @@
         "miami": {
           "slot": "WR85",
           "price": -10.2,
-          "talent": -26.7,
-          "tru": -36.9,
+          "talent": -25.2,
+          "tru": -35.4,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "strong-neg"
@@ -15227,8 +15227,8 @@
         "zimmer": {
           "slot": "WR82",
           "price": -21.6,
-          "talent": -6.8,
-          "tru": -28.4,
+          "talent": -6.4,
+          "tru": -28.0,
           "sample": "ok",
           "priceRaw": -24.0,
           "band": "neg"
@@ -15272,8 +15272,8 @@
         "kepners": {
           "slot": "WR83",
           "price": -14.0,
-          "talent": -5.2,
-          "tru": -19.2,
+          "talent": -5.3,
+          "tru": -19.3,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neg"
@@ -15281,8 +15281,8 @@
         "miami": {
           "slot": "WR83",
           "price": -14.0,
-          "talent": 0.4,
-          "tru": -13.6,
+          "talent": 2.4,
+          "tru": -11.6,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neg"
@@ -15290,8 +15290,8 @@
         "zimmer": {
           "slot": "WR84",
           "price": -20.2,
-          "talent": 4.4,
-          "tru": -15.8,
+          "talent": 4.6,
+          "tru": -15.6,
           "sample": "ok",
           "priceRaw": -21.0,
           "band": "neg"
@@ -15384,15 +15384,15 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.48,
-      "projectedPoints": 120.04,
+      "espnRecommendedBid": 0.47,
+      "projectedPoints": 120.03,
       "proTeamEspn": "KC",
       "byeWeek": 5,
-      "projectedWar": 7.2,
+      "projectedWar": 7.1,
       "warByLeague": {
-        "kepners": 7.2,
+        "kepners": 7.1,
         "miami": -8.3,
-        "zimmer": 7.2
+        "zimmer": 7.1
       },
       "marketDrift": {
         "kepners": {
@@ -15511,14 +15511,14 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.08,
-      "projectedPoints": 80.47,
+      "projectedPoints": 80.45,
       "proTeamEspn": "BUF",
       "byeWeek": 7,
-      "projectedWar": -32.4,
+      "projectedWar": -32.5,
       "warByLeague": {
-        "kepners": -32.4,
+        "kepners": -32.5,
         "miami": -47.9,
-        "zimmer": -32.4
+        "zimmer": -32.5
       },
       "marketDrift": {
         "kepners": {
@@ -15574,14 +15574,14 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.84,
-      "projectedPoints": 123.61,
+      "projectedPoints": 123.68,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
-      "projectedWar": 10.7,
+      "projectedWar": 10.8,
       "warByLeague": {
-        "kepners": 10.7,
-        "miami": -4.8,
-        "zimmer": 10.7
+        "kepners": 10.8,
+        "miami": -4.7,
+        "zimmer": 10.8
       },
       "marketDrift": {
         "kepners": {
@@ -15636,14 +15636,14 @@
         "nfl": "-"
       },
       "notes": "2025 R3",
-      "espnRecommendedBid": 0.11,
+      "espnRecommendedBid": 0.1,
       "projectedPoints": 81.11,
       "proTeamEspn": "HOU",
       "byeWeek": 8,
       "projectedWar": -39.8,
       "warByLeague": {
         "kepners": -39.8,
-        "miami": -61.4,
+        "miami": -61.5,
         "zimmer": -42.4
       },
       "marketDrift": {
@@ -15659,8 +15659,8 @@
         "miami": {
           "slot": "WR74",
           "price": -21.6,
-          "talent": -10.2,
-          "tru": -31.8,
+          "talent": -10.0,
+          "tru": -31.6,
           "sample": "ok",
           "priceRaw": -25.0,
           "band": "strong-neg"
@@ -15668,8 +15668,8 @@
         "zimmer": {
           "slot": "WR86",
           "price": -17.0,
-          "talent": -21.2,
-          "tru": -38.2,
+          "talent": -21.1,
+          "tru": -38.1,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "strong-neg"
@@ -15770,14 +15770,14 @@
       "warByLeague": {
         "kepners": -66.7,
         "miami": -88.3,
-        "zimmer": -69.3
+        "zimmer": -69.2
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR78",
           "price": -19.2,
-          "talent": -15.4,
-          "tru": -34.6,
+          "talent": -15.6,
+          "tru": -34.8,
           "sample": "ok",
           "priceRaw": -18.0,
           "band": "strong-neg"
@@ -15785,8 +15785,8 @@
         "miami": {
           "slot": "WR78",
           "price": -19.2,
-          "talent": -11.8,
-          "tru": -31.0,
+          "talent": -10.4,
+          "tru": -29.6,
           "sample": "ok",
           "priceRaw": -18.0,
           "band": "strong-neg"
@@ -15794,8 +15794,8 @@
         "zimmer": {
           "slot": "WR79",
           "price": -27.0,
-          "talent": -14.5,
-          "tru": -41.5,
+          "talent": -14.1,
+          "tru": -41.1,
           "sample": "ok",
           "priceRaw": -25.0,
           "band": "strong-neg"
@@ -15889,7 +15889,7 @@
       },
       "notes": "#N/A",
       "espnRecommendedBid": 0.02,
-      "projectedPoints": 43.96,
+      "projectedPoints": 43.97,
       "proTeamEspn": "LV",
       "byeWeek": 13,
       "projectedWar": -49.7,
@@ -15902,8 +15902,8 @@
         "kepners": {
           "slot": "TE32",
           "price": -6.6,
-          "talent": -12.0,
-          "tru": -18.6,
+          "talent": -12.2,
+          "tru": -18.8,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "neg"
@@ -15911,8 +15911,8 @@
         "miami": {
           "slot": "TE32",
           "price": -6.6,
-          "talent": -20.8,
-          "tru": -27.4,
+          "talent": -19.6,
+          "tru": -26.2,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "neg"
@@ -15920,8 +15920,8 @@
         "zimmer": {
           "slot": "TE33",
           "price": -15.8,
-          "talent": -1.0,
-          "tru": -16.8,
+          "talent": -1.2,
+          "tru": -17.0,
           "sample": "ok",
           "priceRaw": -20.0,
           "band": "neg"
@@ -16024,8 +16024,8 @@
         "kepners": {
           "slot": "TE34",
           "price": -2.2,
-          "talent": -3.6,
-          "tru": -5.8,
+          "talent": -3.9,
+          "tru": -6.1,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neutral"
@@ -16033,8 +16033,8 @@
         "miami": {
           "slot": "TE34",
           "price": -2.2,
-          "talent": -13.4,
-          "tru": -15.6,
+          "talent": -13.6,
+          "tru": -15.8,
           "sample": "ok",
           "priceRaw": 3.0,
           "band": "neg"
@@ -16042,8 +16042,8 @@
         "zimmer": {
           "slot": "TE34",
           "price": -13.6,
-          "talent": -0.5,
-          "tru": -14.1,
+          "talent": -0.8,
+          "tru": -14.4,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neutral"
@@ -16096,8 +16096,8 @@
         "miami": {
           "slot": "WR84",
           "price": -12.4,
-          "talent": -1.7,
-          "tru": -14.1,
+          "talent": 0.3,
+          "tru": -12.1,
           "sample": "ok",
           "priceRaw": -14.0,
           "band": "neg"
@@ -16105,8 +16105,8 @@
         "zimmer": {
           "slot": "WR89",
           "price": -13.2,
-          "talent": -10.6,
-          "tru": -23.8,
+          "talent": -10.8,
+          "tru": -24.0,
           "sample": "ok",
           "priceRaw": -12.0,
           "band": "neg"
@@ -16143,15 +16143,15 @@
       "projectedWar": -69.1,
       "warByLeague": {
         "kepners": -69.1,
-        "miami": -90.7,
+        "miami": -90.8,
         "zimmer": -71.7
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR90",
           "price": -14.8,
-          "talent": -26.5,
-          "tru": -41.3,
+          "talent": -26.2,
+          "tru": -41.0,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "strong-neg"
@@ -16159,8 +16159,8 @@
         "miami": {
           "slot": "WR90",
           "price": -14.8,
-          "talent": -34.0,
-          "tru": -48.8,
+          "talent": -32.5,
+          "tru": -47.3,
           "sample": "ok",
           "priceRaw": -10.0,
           "band": "strong-neg"
@@ -16168,8 +16168,8 @@
         "zimmer": {
           "slot": "WR87",
           "price": -15.2,
-          "talent": -10.6,
-          "tru": -25.8,
+          "talent": -10.8,
+          "tru": -26.0,
           "sample": "ok",
           "priceRaw": -13.0,
           "band": "neg"
@@ -16272,8 +16272,8 @@
         "kepners": {
           "slot": "WR87",
           "price": -8.0,
-          "talent": -7.2,
-          "tru": -15.2,
+          "talent": -7.0,
+          "tru": -15.0,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -16281,8 +16281,8 @@
         "miami": {
           "slot": "WR87",
           "price": -8.0,
-          "talent": -15.0,
-          "tru": -23.0,
+          "talent": -13.3,
+          "tru": -21.3,
           "sample": "ok",
           "priceRaw": -5.0,
           "band": "neg"
@@ -16290,8 +16290,8 @@
         "zimmer": {
           "slot": "WR88",
           "price": -13.4,
-          "talent": -10.6,
-          "tru": -24.0,
+          "talent": -10.8,
+          "tru": -24.2,
           "sample": "ok",
           "priceRaw": -11.0,
           "band": "neg"
@@ -16398,8 +16398,8 @@
         "kepners": {
           "slot": "TE33",
           "price": -3.6,
-          "talent": -5.6,
-          "tru": -9.2,
+          "talent": -5.8,
+          "tru": -9.4,
           "sample": "ok",
           "priceRaw": -1.0,
           "band": "neutral"
@@ -16416,8 +16416,8 @@
         "zimmer": {
           "slot": "TE35",
           "price": -11.2,
-          "talent": 4.2,
-          "tru": -7.0,
+          "talent": 3.8,
+          "tru": -7.4,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neutral"
@@ -16448,14 +16448,14 @@
       },
       "notes": "#N/A",
       "espnRecommendedBid": 0.12,
-      "projectedPoints": 93.04,
+      "projectedPoints": 92.82,
       "proTeamEspn": "CHI",
       "byeWeek": 10,
-      "projectedWar": -19.8,
+      "projectedWar": -20.1,
       "warByLeague": {
-        "kepners": -19.8,
-        "miami": -35.3,
-        "zimmer": -19.8
+        "kepners": -20.1,
+        "miami": -35.5,
+        "zimmer": -20.1
       },
       "marketDrift": {
         "kepners": {
@@ -16587,8 +16587,8 @@
         "kepners": {
           "slot": "QB33",
           "price": 12.6,
-          "talent": -14.2,
-          "tru": -1.6,
+          "talent": -14.5,
+          "tru": -1.9,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "neutral"
@@ -16596,8 +16596,8 @@
         "miami": {
           "slot": "QB33",
           "price": 12.6,
-          "talent": 5.5,
-          "tru": 18.1,
+          "talent": 7.2,
+          "tru": 19.8,
           "sample": "ok",
           "priceRaw": 12.0,
           "band": "strong-pos"
@@ -16718,8 +16718,8 @@
         "miami": {
           "slot": "QB28",
           "price": 16.0,
-          "talent": -9.0,
-          "tru": 7.0,
+          "talent": -8.4,
+          "tru": 7.6,
           "sample": "ok",
           "priceRaw": 31.0,
           "band": "neutral"
@@ -16731,7 +16731,7 @@
           "tru": -30.0,
           "sample": "ok",
           "priceRaw": -3.0,
-          "band": "strong-neg"
+          "band": "neg"
         }
       }
     },
@@ -16759,7 +16759,7 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.07,
-      "projectedPoints": 142.55,
+      "projectedPoints": 142.56,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
       "projectedWar": -140.8,
@@ -16772,8 +16772,8 @@
         "kepners": {
           "slot": "QB30",
           "price": 20.8,
-          "talent": -14.2,
-          "tru": 6.6,
+          "talent": -14.5,
+          "tru": 6.3,
           "sample": "ok",
           "priceRaw": 18.0,
           "band": "neutral"
@@ -16781,8 +16781,8 @@
         "miami": {
           "slot": "QB30",
           "price": 20.8,
-          "talent": 5.5,
-          "tru": 26.3,
+          "talent": 7.2,
+          "tru": 28.0,
           "sample": "ok",
           "priceRaw": 18.0,
           "band": "strong-pos"
@@ -16835,8 +16835,8 @@
         "kepners": {
           "slot": "WR93",
           "price": -31.6,
-          "talent": -26.5,
-          "tru": -58.1,
+          "talent": -26.2,
+          "tru": -57.8,
           "sample": "ok",
           "priceRaw": -41.0,
           "band": "strong-neg"
@@ -16844,8 +16844,8 @@
         "miami": {
           "slot": "WR93",
           "price": -31.6,
-          "talent": -34.0,
-          "tru": -65.6,
+          "talent": -32.5,
+          "tru": -64.1,
           "sample": "ok",
           "priceRaw": -41.0,
           "band": "strong-neg"
@@ -16853,8 +16853,8 @@
         "zimmer": {
           "slot": "WR91",
           "price": -22.6,
-          "talent": -10.6,
-          "tru": -33.2,
+          "talent": -10.8,
+          "tru": -33.4,
           "sample": "ok",
           "priceRaw": -19.0,
           "band": "strong-neg"
@@ -16892,14 +16892,14 @@
       "warByLeague": {
         "kepners": -67.5,
         "miami": -89.1,
-        "zimmer": -70.1
+        "zimmer": -70.0
       },
       "marketDrift": {
         "kepners": {
           "slot": "WR86",
           "price": -9.2,
-          "talent": -13.2,
-          "tru": -22.4,
+          "talent": -13.1,
+          "tru": -22.3,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neg"
@@ -16907,8 +16907,8 @@
         "miami": {
           "slot": "WR86",
           "price": -9.2,
-          "talent": -21.1,
-          "tru": -30.3,
+          "talent": -19.4,
+          "tru": -28.6,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "strong-neg"
@@ -16916,8 +16916,8 @@
         "zimmer": {
           "slot": "WR92",
           "price": -26.6,
-          "talent": -10.6,
-          "tru": -37.2,
+          "talent": -10.8,
+          "tru": -37.4,
           "sample": "ok",
           "priceRaw": -35.0,
           "band": "strong-neg"
@@ -16961,8 +16961,8 @@
         "kepners": {
           "slot": "TE37",
           "price": -9.8,
-          "talent": 4.9,
-          "tru": -4.9,
+          "talent": 4.5,
+          "tru": -5.3,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neutral"
@@ -16970,8 +16970,8 @@
         "miami": {
           "slot": "TE37",
           "price": -9.8,
-          "talent": -5.3,
-          "tru": -15.1,
+          "talent": -8.6,
+          "tru": -18.4,
           "sample": "ok",
           "priceRaw": -4.0,
           "band": "neg"
@@ -16979,8 +16979,8 @@
         "zimmer": {
           "slot": "TE37",
           "price": -16.5,
-          "talent": 6.9,
-          "tru": -9.6,
+          "talent": 6.5,
+          "tru": -10.0,
           "sample": "ok",
           "priceRaw": -9.0,
           "band": "neutral"
@@ -17024,8 +17024,8 @@
         "kepners": {
           "slot": "TE36",
           "price": -7.2,
-          "talent": 4.9,
-          "tru": -2.3,
+          "talent": 4.5,
+          "tru": -2.7,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "neutral"
@@ -17033,8 +17033,8 @@
         "miami": {
           "slot": "TE36",
           "price": -7.2,
-          "talent": -5.3,
-          "tru": -12.5,
+          "talent": -8.6,
+          "tru": -15.8,
           "sample": "ok",
           "priceRaw": -3.0,
           "band": "neg"
@@ -17042,8 +17042,8 @@
         "zimmer": {
           "slot": "TE36",
           "price": -15.4,
-          "talent": 6.9,
-          "tru": -8.5,
+          "talent": 6.5,
+          "tru": -8.9,
           "sample": "ok",
           "priceRaw": -8.0,
           "band": "neutral"
@@ -17136,7 +17136,7 @@
         "nfl": "-"
       },
       "notes": null,
-      "espnRecommendedBid": 0.11,
+      "espnRecommendedBid": 0.1,
       "projectedPoints": 78.21,
       "proTeamEspn": "CLE",
       "byeWeek": 11,
@@ -17150,8 +17150,8 @@
         "kepners": {
           "slot": "QB34",
           "price": 11.5,
-          "talent": -14.2,
-          "tru": -2.7,
+          "talent": -14.5,
+          "tru": -3.0,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "neutral"
@@ -17159,8 +17159,8 @@
         "miami": {
           "slot": "QB34",
           "price": 11.5,
-          "talent": 5.5,
-          "tru": 17.0,
+          "talent": 7.2,
+          "tru": 18.7,
           "sample": "ok",
           "priceRaw": 1.0,
           "band": "pos"
@@ -17276,8 +17276,8 @@
         "kepners": {
           "slot": "WR94",
           "price": -35.2,
-          "talent": 0.5,
-          "tru": -34.7,
+          "talent": 1.0,
+          "tru": -34.2,
           "sample": "ok",
           "priceRaw": -32.0,
           "band": "strong-neg"
@@ -17285,8 +17285,8 @@
         "miami": {
           "slot": "WR94",
           "price": -35.2,
-          "talent": -4.5,
-          "tru": -39.7,
+          "talent": -2.0,
+          "tru": -37.2,
           "sample": "ok",
           "priceRaw": -32.0,
           "band": "strong-neg"
@@ -17294,8 +17294,8 @@
         "zimmer": {
           "slot": "WR93",
           "price": -32.4,
-          "talent": -41.8,
-          "tru": -74.2,
+          "talent": -42.0,
+          "tru": -74.4,
           "sample": "ok",
           "priceRaw": -36.0,
           "band": "strong-neg"
@@ -17389,13 +17389,13 @@
       },
       "notes": "#N/A",
       "espnRecommendedBid": 0.02,
-      "projectedPoints": 78.5,
+      "projectedPoints": 78.54,
       "proTeamEspn": "ATL",
       "byeWeek": 11,
       "projectedWar": -34.4,
       "warByLeague": {
         "kepners": -34.4,
-        "miami": -49.9,
+        "miami": -49.8,
         "zimmer": -34.4
       },
       "marketDrift": {
@@ -17465,8 +17465,8 @@
         "kepners": {
           "slot": "WR88",
           "price": -7.4,
-          "talent": -7.2,
-          "tru": -14.6,
+          "talent": -7.0,
+          "tru": -14.4,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "neg"
@@ -17474,8 +17474,8 @@
         "miami": {
           "slot": "WR88",
           "price": -7.4,
-          "talent": -15.0,
-          "tru": -22.4,
+          "talent": -13.3,
+          "tru": -20.7,
           "sample": "ok",
           "priceRaw": -6.0,
           "band": "neg"
@@ -17528,17 +17528,17 @@
         "kepners": {
           "slot": "TE38",
           "price": -14.3,
-          "talent": 4.9,
-          "tru": -9.4,
+          "talent": 4.5,
+          "tru": -9.8,
           "sample": "ok",
           "priceRaw": -36.0,
-          "band": "neutral"
+          "band": "neg"
         },
         "miami": {
           "slot": "TE38",
           "price": -14.3,
-          "talent": -5.3,
-          "tru": -19.6,
+          "talent": -5.2,
+          "tru": -19.5,
           "sample": "ok",
           "priceRaw": -36.0,
           "band": "neg"
@@ -17546,8 +17546,8 @@
         "zimmer": {
           "slot": "TE38",
           "price": -19.3,
-          "talent": 5.4,
-          "tru": -13.9,
+          "talent": 5.0,
+          "tru": -14.3,
           "sample": "ok",
           "priceRaw": -41.0,
           "band": "neutral"
@@ -18019,14 +18019,14 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.01,
-      "projectedPoints": 43.87,
+      "projectedPoints": 43.86,
       "proTeamEspn": "SEA",
       "byeWeek": 11,
       "projectedWar": -77.1,
       "warByLeague": {
         "kepners": -77.1,
         "miami": -98.7,
-        "zimmer": -79.7
+        "zimmer": -79.6
       },
       "marketDrift": {
         "kepners": {
@@ -18410,8 +18410,8 @@
         "kepners": {
           "slot": "QB35",
           "price": 10.7,
-          "talent": -14.2,
-          "tru": -3.5,
+          "talent": -14.5,
+          "tru": -3.8,
           "sample": "ok",
           "priceRaw": 19.0,
           "band": "neutral"
@@ -18419,8 +18419,8 @@
         "miami": {
           "slot": "QB35",
           "price": 10.7,
-          "talent": 5.5,
-          "tru": 16.2,
+          "talent": 7.2,
+          "tru": 17.9,
           "sample": "ok",
           "priceRaw": 19.0,
           "band": "pos"
@@ -18830,7 +18830,7 @@
       },
       "notes": null,
       "espnRecommendedBid": 0.0,
-      "projectedPoints": 24.87,
+      "projectedPoints": 23.45,
       "proTeamEspn": "JAX",
       "byeWeek": 7,
       "projectedWar": null,
@@ -19104,8 +19104,8 @@
         }
       },
       "keeperValueTiers": {
-        "elitePlus": 127.0,
-        "elite": 44.6,
+        "elitePlus": 128.6,
+        "elite": 44.7,
         "great": 11.1,
         "good": 1.2,
         "fairFloor": -2.2
@@ -19431,11 +19431,11 @@
         ]
       },
       "keeperValueTiers": {
-        "elitePlus": 130.5,
-        "elite": 43.1,
+        "elitePlus": 131.6,
+        "elite": 43.2,
         "great": 10.5,
         "good": 0.9,
-        "fairFloor": -2.6
+        "fairFloor": -2.5
       }
     }
   }
