@@ -1,14 +1,17 @@
 name: Update Kepners Draft Order
 
-# Runs automatically once a day, and can still be triggered manually any time
-# right after the Google Sheet changes (owners claiming draft slots or
-# locking in keepers). Reads directly from the public Google Sheet -- no
-# secrets needed, no re-upload required. Run "Update Big Board" first if this
-# is the very first run (needs bigboard.json's manager list to match names).
+# LOCKED 2026-09-02: Sean has finalized keepers for the season. The daily
+# `schedule` trigger below is commented out on purpose -- it was silently
+# re-pulling the public Google Sheet every day, and anyone editing that
+# sheet after the deadline (accidentally or otherwise) would have overwritten
+# the now-final keeper data on the very next scheduled run. `workflow_dispatch`
+# is left available for an intentional, one-off manual re-sync if a genuine
+# correction is ever needed later -- re-enable the schedule block below only
+# if a future season needs ongoing live sync again.
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '0 11 * * *'  # ~6-7am US Eastern (UTC-5/-4 depending on DST)
+  # schedule:
+  #   - cron: '0 11 * * *'  # ~6-7am US Eastern (UTC-5/-4 depending on DST)
 
 jobs:
   sync:
