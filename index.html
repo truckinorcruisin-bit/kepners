@@ -72,13 +72,26 @@
     border-radius:2px;margin-left:6px;background:rgba(255,183,3,.15);color:var(--amber);
     vertical-align:middle;letter-spacing:0.03em;cursor:help;}
 
-  /* feed ticker */
-  .ticker{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-    overflow:hidden;white-space:nowrap;padding:8px 0;margin:6px 0 0;}
-  .ticker .track{display:inline-block;animation:scroll 26s linear infinite;}
-  .ticker span{font-size:10.5px;color:var(--dim);padding-right:34px;}
-  .ticker span b{color:var(--cyan);}
-  @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+  /* draft order banner -- replaces the old auto-scrolling ticker. Position
+     advances only when a pick is actually logged (via scrollIntoView in
+     renderDraftBanner), not on a timer, so the purpose is legibility of
+     "how far until my turn", not motion for its own sake. */
+  .draftbanner{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+    overflow-x:auto;overflow-y:hidden;white-space:nowrap;padding:8px 10px;margin:6px 0 0;scroll-behavior:smooth;}
+  .db-track{display:inline-flex;gap:6px;}
+  .db-slot{display:inline-flex;flex-direction:column;gap:2px;min-width:88px;max-width:120px;
+    padding:5px 7px;border:1px solid var(--line-2);background:var(--bg);white-space:normal;}
+  .db-slot .db-pick{font-size:8px;color:var(--dim);font-variant-numeric:tabular-nums;}
+  .db-slot .db-team{font-size:9.5px;color:var(--txt);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .db-slot .db-player{font-size:9px;color:var(--dim);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .db-slot.db-done{opacity:0.65;}
+  .db-slot.db-done .db-player{color:var(--green);}
+  .db-slot.db-onclock{border-color:var(--amber);background:rgba(255,183,3,0.08);}
+  .db-slot.db-onclock .db-team{color:var(--amber);font-weight:700;}
+  .db-slot.db-keeper{opacity:0.5;border-style:dashed;}
+  .db-slot.db-keeper .db-player{color:var(--green);}
+  .db-slot.db-mine{border-color:var(--cyan);}
+  .db-slot.db-mine .db-team{color:var(--cyan);}
 
   /* roster grid */
   .roster{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:7px;}
@@ -447,6 +460,7 @@
     padding-bottom:3px;display:flex;justify-content:space-between;gap:6px;}
   .rbt-team.mine{color:var(--amber);}
   .rbt-count{color:var(--dim);font-size:9px;font-weight:400;}
+  .rbt-draftpos{color:var(--dim);font-size:8.5px;}
   .rbt-p{font-size:9.5px;padding:1px 0;display:flex;gap:6px;align-items:baseline;}
   .rbt-lbl{color:var(--dim);flex:0 0 32px;font-variant-numeric:tabular-nums;}
   .rbt-pos{color:var(--dim);flex:0 0 26px;}
@@ -641,8 +655,8 @@
     <div id="snakeDraftUI">
       <div class="snake-banner" id="snakeBanner"></div>
 
-      <div class="seclabel">Live Feed</div>
-      <div class="ticker"><div class="track" id="ticker"></div></div>
+      <div class="seclabel">Draft Order — <span id="draftBannerRound"></span></div>
+      <div class="draftbanner" id="draftBannerWrap"><div class="db-track" id="draftBanner"></div></div>
 
       <div class="cockpit-cols snake-cockpit">
         <div class="cockpit-col">
@@ -1068,7 +1082,7 @@ function render(){
     document.querySelector('#snakeDraftUI .snakePlayerArea').innerHTML='';
     document.getElementById('deepDiveArea').innerHTML='';
     document.getElementById('snakeBanner').innerHTML='';
-    renderTicker(lg); renderFoot(lg); renderLiveDraftPull(lg); return;
+    renderDraftBanner(lg); renderFoot(lg); renderLiveDraftPull(lg); return;
   }
 
   renderSnakeBanner(lg);
@@ -1079,7 +1093,7 @@ function render(){
   renderDeepDive(lg);
   renderSnakeDraftLog(lg);
   renderRostersByTeam(lg);
-  renderTicker(lg);
+  renderDraftBanner(lg);
   wireSnakeResizer();
   renderFoot(lg);
   renderLiveDraftPull(lg);
@@ -1861,6 +1875,11 @@ function renderRostersByTeam(lg){
 
   const cards = [...byTeam.entries()]
     .filter(([key,v])=>key!=='__unassigned__' || v.picks.length)  // hide the unassigned card unless it has something
+    // Draft order, not whatever order teams happened to load in -- lets you
+    // scan left-to-right in the same order the actual draft ran. Unassigned
+    // has no draft position, so it sinks to the end rather than landing
+    // arbitrarily wherever a null happens to sort.
+    .sort(([,a],[,b])=>(a.team.draftPosition ?? 999) - (b.team.draftPosition ?? 999))
     .map(([key,v])=>{
       const entries = dedupeRosterEntries([...v.keepers, ...v.picks]);
       const total = entries.length;
@@ -1914,7 +1933,7 @@ function renderRostersByTeam(lg){
 
       return `<div class="rbt-card">
         <div class="rbt-team ${v.team.isMe?'mine':''}">
-          <span>${v.team.isMe?'★ ':''}${v.team.team}</span><span class="rbt-count">${total}</span>
+          <span>${v.team.draftPosition!=null?`<span class="rbt-draftpos">#${v.team.draftPosition}</span> `:''}${v.team.isMe?'★ ':''}${v.team.team}</span><span class="rbt-count">${total}</span>
         </div>
         ${unassigned?'':`<div class="rbt-wartot" title="Sum of positive WAR. Starters = non-bench slots only.">
           Σ WAR <b>${Math.round(sumAll)}</b> <span class="rbt-startwar">starters ${Math.round(sumStart)}</span>
@@ -3031,36 +3050,96 @@ function leagueKeeperItems(lg){
   return {confirmed, predicted};
 }
 
-function renderTicker(lg){
-  // BUG FIXED: this read `lg.keepers` -- a stale 2025 snapshot baked directly
-  // into bigboard.json under the league object (short names like "Love",
-  // "Daniels", "Bucky" and last year's rounds -- that's why "Ranus keeps Love
-  // (R12)" kept showing up no matter what actually happened this year).
-  // The live/current data is per-team: `t.liveKeepers` for 2026 keepers (the
-  // same source the My Team panel and 2026 Keeper Value Grades already use),
-  // plus whatever's been logged in the Draft Log so far. Works identically
-  // for Kepners and Miami since it just walks whichever league object it's
-  // handed -- no Kepners-only assumptions.
-  const isAuction = isAuctionLeague();
-  const {confirmed, predicted} = leagueKeeperItems(lg);
-  const keeperItems = [
-    ...confirmed.map(k=>`<span><b>${k.team}</b> keeps ${k.player} (R${k.round})</span>`),
-    ...predicted.map(k=>`<span><b>${k.team}</b> keeps ${k.player} (R${k.round}) <span class="pt-sub" style="display:inline">*predicted</span></span>`),
-  ];
+// Replaces the old auto-scrolling "Live Feed" ticker. That ticker moved on a
+// fixed timer regardless of anything happening in the draft, which made it
+// useless for the actual question during a live draft: how many picks until
+// MY turn. This shows the CURRENT round as a strip of slots in true draft
+// order -- made picks, the on-the-clock slot highlighted, upcoming slots
+// blank -- and only moves when a pick is actually logged (scrollIntoView
+// below), not continuously.
+function renderDraftBanner(lg){
+  const wrap = document.getElementById('draftBannerWrap');
+  const el = document.getElementById('draftBanner');
+  const roundLabel = document.getElementById('draftBannerRound');
+  if(!el) return;
 
-  // Live draft picks -- most recent first; this is the actually-"live" part.
-  const draftPicks = isAuction ? zimmerDraft.picks : snakeDraft.picks;
-  const pickItems = (draftPicks||[]).slice().reverse().map(p=>{
-    const teamName = p.isMine ? (lg.teams.find(t=>t.isMe)||{}).team : (p.team||'—');
-    const suffix = isAuction ? (p.cost!=null?` $${p.cost}`:'') : (p.label?` @${p.label}`:'');
-    return `<span><b>${teamName}</b> drafts ${p.name}${suffix}</span>`;
+  const teams = (lg.teams||[]).length;
+  const rounds = (lg.rosterSlots||[]).length;
+  if(!teams || !rounds){ el.innerHTML=''; if(roundLabel) roundLabel.textContent=''; return; }
+
+  const schedule = buildDraftSchedule(lg);
+  const nextOverall = snakeDraft.picks.length + 1;
+  const currentEntry = schedule.find(s=>s.overall===nextOverall);
+
+  if(!schedule.some(s=>s.team)){
+    el.innerHTML = `<span style="font-size:9.5px;color:var(--dim);padding:4px 0;">
+      Draft order not configured yet -- set each team's draft position to populate this.</span>`;
+    if(roundLabel) roundLabel.textContent='';
+    return;
+  }
+  if(!currentEntry){
+    el.innerHTML = `<span style="font-size:9.5px;color:var(--green);padding:4px 0;">
+      Draft complete -- all ${schedule.length} picks logged.</span>`;
+    if(roundLabel) roundLabel.textContent='';
+    return;
+  }
+
+  const round = currentEntry.round;
+  if(roundLabel) roundLabel.textContent = `Round ${round}`;
+  const consumed = keeperConsumptionBySlot(lg);
+  const bySlot = new Map(schedule.filter(s=>s.round===round).map(s=>[s.slot, s]));
+
+  // Natural (uncompressed) slot order for this round -- matches the
+  // keeper-reveal logic in the Draft Log, so a keeper-held slot shows
+  // exactly where it actually falls, not tacked onto an end.
+  const slots = [];
+  for(let i=1; i<=teams; i++) slots.push((round % 2 === 1) ? i : (teams - i + 1));
+
+  const cells = slots.map(slot=>{
+    const team = (lg.teams||[]).find(t=>t.draftPosition===slot);
+    const label = `${round}.${String(trueSlotInRound(round, slot, teams)).padStart(2,'0')}`;
+    const keeper = consumed.get(slot)?.get(round);
+    if(keeper){
+      return {slot, html: `<div class="db-slot db-keeper" title="${team?team.team:'?'} -- keeper, not a live pick this round">
+        <span class="db-pick">${label}</span>
+        <span class="db-team">${team?team.team:'?'}</span>
+        <span class="db-player">${keeper.player} (K)</span>
+      </div>`};
+    }
+    const entry = bySlot.get(slot);
+    const isMine = team && team.isMe;
+    if(entry && entry.overall < nextOverall){
+      const p = snakeDraft.picks[entry.overall-1];
+      return {slot, html: `<div class="db-slot db-done ${isMine?'db-mine':''}">
+        <span class="db-pick">${label}</span>
+        <span class="db-team">${team?team.team:'?'}</span>
+        <span class="db-player">${p?p.name:'—'}</span>
+      </div>`};
+    }
+    if(entry && entry.overall === nextOverall){
+      return {slot, isCurrent:true, html: `<div class="db-slot db-onclock ${isMine?'db-mine':''}" id="dbOnClock">
+        <span class="db-pick">${label}</span>
+        <span class="db-team">${team?team.team:'?'}${isMine?' ★':''}</span>
+        <span class="db-player">ON THE CLOCK</span>
+      </div>`};
+    }
+    return {slot, html: `<div class="db-slot ${isMine?'db-mine':''}">
+      <span class="db-pick">${label}</span>
+      <span class="db-team">${team?team.team:'?'}</span>
+      <span class="db-player">—</span>
+    </div>`};
   });
 
-  const items = [...pickItems, ...keeperItems].slice(0,10);
-  const track = items.length
-    ? [...items,...items].join('')
-    : `<span>NO PICKS YET · <b>${lg.myTeam}</b> ON DECK</span>`;
-  document.getElementById('ticker').innerHTML = track;
+  el.innerHTML = cells.map(c=>c.html).join('');
+
+  // Move to the current pick, but only on an actual position change -- not
+  // every re-render (typing in the name field re-renders this too, and
+  // re-centering mid-keystroke would be disorienting).
+  const onClockEl = document.getElementById('dbOnClock');
+  if(onClockEl && wrap && wrap.dataset.lastOverall !== String(nextOverall)){
+    wrap.dataset.lastOverall = String(nextOverall);
+    onClockEl.scrollIntoView({inline:'center', block:'nearest'});
+  }
 }
 
 function renderRoster(lg){
