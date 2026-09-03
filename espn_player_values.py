@@ -89,6 +89,64 @@ def fetch_full_player_pool(league, year, size=POOL_SIZE):
     raw_players = data.get("players", [])
 
     out = []
+    dropped = 0
+    for entry in raw_players:
+        try:
+            p = Player(entry, year)
+        except Exception:
+            dropped += 1
+            continue
+        out.append({
+            "player_id": p.playerId,
+            "name": p.name,
+            "position": p.position,
+            "pro_team": p.proTeam,
+            "bye_week": extract_bye_week(entry),
+            "projected_total_points": p.projected_total_points,
+            "auction_value_avg": extract_auction_value(entry),
+        })
+    if dropped:
+        # Was previously a silent `continue` with no trace at all -- if K (or
+        # any position) is missing from the output, "0 dropped" now rules out
+        # "parsed then discarded" as the cause, pointing straight at the fetch
+        # itself instead of sending someone hunting through Player.__init__.
+        print(f"  ({dropped} raw entries failed to parse and were dropped)")
+    return out
+
+
+# BUG FOUND: kickers never appear in fetch_full_player_pool's output, at ANY
+# pool size -- verified directly against a real run: requesting up to 3000
+# players sorted by ownership% returned 0 kickers, while D/ST (also a
+# low-ownership position) came through fine (32 of 32). That's not a
+# convert_bigboard.py matching problem downstream -- every Kicker's
+# projectedWar was null because there was never any ESPN entry to match
+# against in the first place.
+#
+# This looks like a real quirk of ESPN's ownership-sorted kona_player_info
+# query specifically, not something POOL_SIZE can fix. The workaround: a
+# SEPARATE request explicitly filtered to the Kicker slot (ESPN slot id 17,
+# confirmed against espn_api's own POSITION_MAP), which sidesteps the
+# ownership sort entirely and asks for kickers directly. UNVERIFIED against a
+# live league -- I have no network path to ESPN to confirm this filter shape
+# works. If it still returns 0, the printed count below will say so plainly;
+# paste that back and the ESPN response shape (add a raw-response dump if
+# needed) rather than guessing at a different filter blind.
+K_SLOT_ID = 17
+
+
+def fetch_position_pool(league, year, slot_id, size=100):
+    params = {"view": "kona_player_info", "scoringPeriodId": 0}
+    filters = {
+        "players": {
+            "limit": size,
+            "filterSlotIds": {"value": [slot_id]},
+            "sortPercOwned": {"sortPriority": 1, "sortAsc": False},
+        }
+    }
+    headers = {"x-fantasy-filter": json.dumps(filters)}
+    data = league.espn_request.league_get(params=params, headers=headers)
+    raw_players = data.get("players", [])
+    out = []
     for entry in raw_players:
         try:
             p = Player(entry, year)
@@ -113,6 +171,18 @@ def main():
 
     print("Fetching full player pool (projections + auction values)...")
     players = fetch_full_player_pool(league, YEAR)
+
+    kicker_count = sum(1 for p in players if p["position"] == "K")
+    if kicker_count == 0:
+        print("  0 kickers in the main pool (known ESPN quirk) -- trying an explicit K-slot fetch...")
+        kickers = fetch_position_pool(league, YEAR, K_SLOT_ID)
+        print(f"  Explicit K-slot fetch returned {len(kickers)} kicker(s).")
+        if kickers:
+            seen_ids = {p["player_id"] for p in players}
+            players.extend(k for k in kickers if k["player_id"] not in seen_ids)
+        else:
+            print("  Still 0 -- this filter shape didn't work either. Kickers will show '—' "
+                  "on the board until this is resolved differently.")
 
     have_proj = sum(1 for p in players if p["projected_total_points"])
     have_auction = sum(1 for p in players if p["auction_value_avg"])
