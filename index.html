@@ -1687,7 +1687,14 @@ function renderSnakeDraftLog(lg){
       <span class="sdl-owner-static">${k.team.team}</span>
       <span class="sdl-del-spacer"></span>
     </div>`})) : [];
-    const all = [...realRows, ...revealRows].sort((a,b)=>(complete ? a.sortKey-b.sortKey : b.sortKey-a.sortKey));
+    // BUG FIXED: completed rounds sorted ascending (a-b), in-progress rounds
+    // sorted descending (b-a) -- an inconsistency from when the keeper-reveal
+    // relabeling was added. Once a round finished, its most recent pick
+    // dropped to the BOTTOM of that round's block instead of staying at the
+    // top, which is backwards for a log you're scanning top-down for "what
+    // just happened." Both cases now sort descending -- newest pick-in-round
+    // first -- consistently.
+    const all = [...realRows, ...revealRows].sort((a,b)=>b.sortKey-a.sortKey);
     return all.map(r=>r.html).join('');
   });
   const rows = roundBlocks.join('');
@@ -1943,7 +1950,16 @@ function renderRostersByTeam(lg){
       </div>`;
     }).join('');
 
-  el.innerHTML = `<details class="ds-legend" style="margin-top:10px;">
+  // Defaults open (Sean checks this often during a live draft, and clicking
+  // it open on every single pick was adding friction). Re-renders happen on
+  // every logged pick though, so a HARDCODED open would force it back open
+  // even if he deliberately collapses it mid-draft -- instead, carry forward
+  // whatever state it's currently in, and only default to open the first
+  // time this ever renders (no existing <details> to read a state from yet).
+  const existingDetails = el.querySelector('details');
+  const shouldBeOpen = existingDetails ? existingDetails.open : true;
+
+  el.innerHTML = `<details class="ds-legend" style="margin-top:10px;" ${shouldBeOpen?'open':''}>
     <summary>ⓘ Rosters by Team — verify my manual entry against the platform</summary>
     <div style="padding:8px 11px;">
       <div style="font-size:9px;color:var(--dim);line-height:1.5;">
