@@ -1397,7 +1397,7 @@ function renderSnakeBanner(lg){
   const myKeepers = resolvedKeepers(myTeamObj).length;
   const myLogged = snakeDraft.picks.filter(p=>p.isMine).length;
   const nextOverall = snakeDraft.picks.length + 1;
-  const next = snakePickLabel(nextOverall, teams);
+  const next = scheduleAt(lg, nextOverall);   // keeper-aware, see buildDraftSchedule
   const chips = [
     myPos!=null ? {v:`#${myPos}`, l:'MY DRAFT SLOT'} : {v:'—', l:'MY DRAFT SLOT'},
     {v:teams, l:'TEAMS'},
@@ -1425,6 +1425,73 @@ function snakePickLabel(overall, teams){
   return {round, pickInRound, label:`${round}.${String(pickInRound).padStart(2,'0')}`};
 }
 
+// ---------- Keeper-aware draft schedule ----------
+// A keeper COSTS its owner that round's pick -- they're not on the clock in
+// the round their keeper is priced at. So the real order isn't a clean snake:
+// if the round-3 order is [A, B, C] and B has a round-3 keeper, round 3 runs
+// A -> C, and every later pick shifts up by one.
+//
+// The plain snakeSlotForOverall/snakePickLabel above are pure position math
+// with no knowledge of keepers, which is why they can't express this. Rather
+// than patch each consumer separately (draft log, My Team, Deep Dive, TruRank
+// plan all derive picks independently, and would drift apart), this builds ONE
+// schedule everything reads from.
+//
+// Falls back to a plain snake when nothing has a draftPosition (e.g. a league
+// whose order isn't drawn yet), so it's safe to call unconditionally.
+function buildDraftSchedule(lg){
+  const teamList = (lg && lg.teams) || [];
+  const teams = teamList.length;
+  const rounds = ((lg && lg.rosterSlots) || []).length;
+  if(!teams || !rounds) return [];
+
+  // slot -> Set of rounds consumed by that team's keepers.
+  // A Set dedupes the pathological case of two keepers priced at the same
+  // round for one team -- they only ever forfeit the one pick that exists.
+  const consumed = new Map();
+  teamList.forEach(t=>{
+    if(t.draftPosition==null) return;
+    const set = new Set();
+    resolvedKeepers(t).forEach(k=>{
+      const r = Number(k.round);
+      if(Number.isFinite(r) && r>=1 && r<=rounds) set.add(r);
+    });
+    consumed.set(t.draftPosition, set);
+  });
+
+  const sched = [];
+  for(let r=1; r<=rounds; r++){
+    for(let i=1; i<=teams; i++){
+      const slot = (r % 2 === 1) ? i : (teams - i + 1);   // snake
+      if((consumed.get(slot) || new Set()).has(r)) continue;  // keeper takes this pick
+      sched.push({round:r, slot, team: teamList.find(t=>t.draftPosition===slot) || null});
+    }
+  }
+  // Number the picks that ACTUALLY happen. pickInRound counts real picks only,
+  // so a round where someone was skipped runs 1..N-1 rather than leaving a gap.
+  const perRound = {};
+  sched.forEach((s,i)=>{
+    perRound[s.round] = (perRound[s.round]||0) + 1;
+    s.pickInRound = perRound[s.round];
+    s.overall = i+1;
+    s.label = `${s.round}.${String(s.pickInRound).padStart(2,'0')}`;
+  });
+  return sched;
+}
+
+// The schedule entry for the Nth overall pick (1-based). Falls back to plain
+// snake math past the end of the schedule so a mis-logged extra pick can't
+// crash the log.
+function scheduleAt(lg, overall){
+  const sched = buildDraftSchedule(lg);
+  if(!sched.length || overall<1 || overall>sched.length){
+    const teams = ((lg&&lg.teams)||[]).length;
+    const info = snakePickLabel(overall, teams);
+    return {...info, slot: snakeSlotForOverall(overall, teams), team:null, overall};
+  }
+  return sched[overall-1];
+}
+
 // Pick numbers are POSITIONAL, not stored per pick: overall/round/label are
 // all derived from a pick's index in the array. So any insert or delete has
 // to renumber everything after it, or the log silently disagrees with the
@@ -1432,9 +1499,12 @@ function snakePickLabel(overall, teams){
 // Owner (team/isMine) is deliberately NOT recomputed -- it's explicitly
 // recorded per pick, and after a mid-draft correction the recorded owner is
 // the truth, not whatever the snake order would predict.
-function renumberSnakePicks(teams){
+function renumberSnakePicks(lg){
+  // Uses the keeper-aware schedule, not raw snake math: deleting a pick
+  // mid-draft has to renumber against the SAME order the log is filling, or
+  // labels drift out of sync with who was actually on the clock.
   snakeDraft.picks.forEach((p,i)=>{
-    const info = snakePickLabel(i+1, teams);
+    const info = scheduleAt(lg, i+1);
     p.overall = i+1;
     p.round = info.round;
     p.pickInRound = info.pickInRound;
@@ -1447,27 +1517,31 @@ function renderSnakeDraftLog(lg){
   if(!el) return;
   const teams = lg.teams.length;
   const nextOverall = snakeDraft.picks.length + 1;
-  const {round, pickInRound, label} = snakePickLabel(nextOverall, teams);
-  const onClockSlot = snakeSlotForOverall(nextOverall, teams);
+  // Keeper-aware: an owner whose keeper is priced at this round is skipped
+  // entirely, so the schedule -- not raw snake math -- decides who's up.
+  const nextEntry = scheduleAt(lg, nextOverall);
+  const {round, pickInRound, label} = nextEntry;
+  const onClockSlot = nextEntry.slot;
   // Draft slots may not be drawn yet (Zimmer's are null pre-draft), in which
   // case we can't say who's on the clock -- show the pick number only rather
   // than guessing at a team.
-  // BUG FIXED: was `t.slot===onClockSlot`. `slot` is NOT draft order -- it's
-  // just which column a team occupies in the Big Board Excel's Team sheet
-  // (col - 4 in convert_bigboard.py), an unrelated spreadsheet-layout
-  // artifact that happens to get reused elsewhere for roster-position slots
-  // (QB/RB/BEN) too. The actual live 2026 draft position is `draftPosition`,
-  // synced from the Google Sheet -- it's what My Draft Slot, the Draft Order
-  // table, and the Deep Dive's availability math already correctly use.
-  // This line was the one place still comparing against the wrong field, so
-  // "on the clock" could show a different team than everywhere else in the
-  // app once the two fields ever diverged (which they have, right now).
-  const onClockTeam = onClockSlot!=null ? lg.teams.find(t=>t.draftPosition===onClockSlot) : null;
+  // `slot` here is draftPosition, NOT the Big Board Excel column index also
+  // confusingly called `slot` on team objects (col - 4 in convert_bigboard.py,
+  // which is reused for roster-position slots like QB/RB/BEN). Comparing
+  // against the wrong one made "on the clock" disagree with the rest of the app.
+  const onClockTeam = nextEntry.team
+    || (onClockSlot!=null ? lg.teams.find(t=>t.draftPosition===onClockSlot) : null);
+  // Who, if anyone, was skipped this round because a keeper consumed their pick.
+  const skippedThisRound = (lg.teams||[]).filter(t=>
+    t.draftPosition!=null && resolvedKeepers(t).some(k=>Number(k.round)===round));
 
   const turnEl = document.getElementById('snakeLogTurn');
   if(turnEl){
     turnEl.textContent = teams
       ? `next: ${label} (overall ${nextOverall})${onClockTeam?` · ${onClockTeam.team} on the clock`:''}`
+        + (skippedThisRound.length
+            ? ` · R${round} keeper skip: ${skippedThisRound.map(t=>t.team).join(', ')}`
+            : '')
       : 'no teams configured';
   }
 
@@ -1536,7 +1610,7 @@ function renderSnakeDraftLog(lg){
     const teamVal = teamSel.value;
     const isMine = teamVal === '__me__';
     const overall = snakeDraft.picks.length + 1;
-    const info = snakePickLabel(overall, teams);
+    const info = scheduleAt(lg, overall);
     snakeDraft.picks.push({
       name: bp ? bp.name : raw,
       pos: bp ? bp.pos : null,
@@ -1578,7 +1652,7 @@ function renderSnakeDraftLog(lg){
       const isLast = idx === snakeDraft.picks.length - 1;
       if(!isLast && !confirm(`Delete ${p.label} ${p.name}? The ${snakeDraft.picks.length-idx-1} pick(s) after it will renumber.`)) return;
       snakeDraft.picks.splice(idx,1);
-      renumberSnakePicks(teams);
+      renumberSnakePicks(lg);
       render();
     };
   });
@@ -2008,12 +2082,14 @@ function myUpcomingPicks(lg){
   const slot = me && me.draftPosition;
   if(!slot || !teams) return {next:null, after:null, teams, slot:slot||null};
   const start = snakeDraft.picks.length + 1;
-  const mine = [];
-  // scan far enough ahead to always catch two of my turns (a snake turn gap
-  // is at most 2*teams), with headroom.
-  for(let o=start; o<start + teams*4 + 4 && mine.length<2; o++){
-    if(snakeSlotForOverall(o, teams) === slot) mine.push(o);
-  }
+  // Read straight off the keeper-aware schedule rather than scanning raw
+  // snake positions: rounds where an owner is skipped for a keeper shift
+  // every subsequent pick, so position math alone puts my turns in the wrong
+  // place -- and this feeds the Deep Dive's "will he last?" read and the
+  // TruRank plan, both of which are only as good as the pick number.
+  const mine = buildDraftSchedule(lg)
+    .filter(s=>s.overall>=start && s.slot===slot)
+    .map(s=>s.overall);
   return {next: mine[0] ?? null, after: mine[1] ?? null, teams, slot};
 }
 
@@ -2270,18 +2346,14 @@ function truOf(p){
 
 // Every one of my pick numbers for the whole draft, not just the next two.
 function myAllPickOveralls(lg){
-  const teams = (lg.teams||[]).length;
   const me = (lg.teams||[]).find(t=>t.isMe);
   const slot = me && me.draftPosition;
-  const rounds = (lg.rosterSlots||[]).length;
-  if(!slot || !teams || !rounds) return [];
-  const out = [];
-  for(let r=1; r<=rounds; r++){
-    // snake: odd rounds run 1..N, even rounds N..1
-    const pickInRound = (r % 2 === 1) ? slot : (teams - slot + 1);
-    out.push({round:r, overall:(r-1)*teams + pickInRound});
-  }
-  return out;
+  if(!slot) return [];
+  // Keeper-aware, and it drops the rounds where MY OWN keeper takes the pick
+  // -- the TruRank plan shouldn't plan a selection in a round I don't pick in.
+  return buildDraftSchedule(lg)
+    .filter(s=>s.slot===slot)
+    .map(s=>({round:s.round, overall:s.overall}));
 }
 
 function buildTruPlan(lg){
