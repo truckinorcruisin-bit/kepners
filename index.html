@@ -461,6 +461,33 @@
   .rbt-team.mine{color:var(--amber);}
   .rbt-count{color:var(--dim);font-size:9px;font-weight:400;}
   .rbt-draftpos{color:var(--dim);font-size:8.5px;}
+  /* team WAR comparison chart */
+  .wc-wrap{border:1px solid var(--line-2);background:var(--panel);padding:10px 12px;margin-top:10px;}
+  .wc-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+  .wc-sorts{display:flex;gap:4px;flex-wrap:wrap;}
+  .wc-sortbtn{background:var(--bg);border:1px solid var(--line-2);color:var(--dim);
+    font-family:inherit;font-size:9px;padding:3px 7px;cursor:pointer;}
+  .wc-sortbtn:hover{color:var(--txt);}
+  .wc-sortbtn.active{border-color:var(--amber);color:var(--amber);}
+  .wc-legend{display:flex;gap:10px;font-size:8.5px;color:var(--dim);flex-wrap:wrap;}
+  .wc-key{display:inline-flex;gap:4px;align-items:center;}
+  .wc-key i{width:8px;height:8px;display:inline-block;}
+  .wc-rows{display:flex;flex-direction:column;gap:7px;}
+  .wc-row{display:grid;grid-template-columns:120px 1fr;gap:8px;align-items:center;}
+  .wc-name{font-size:9.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--txt);}
+  .wc-name.mine{color:var(--amber);font-weight:700;}
+  .wc-bars{display:flex;flex-direction:column;gap:2px;}
+  .wc-bar{display:flex;align-items:center;gap:5px;height:11px;}
+  .wc-fillwrap{flex:1 1 auto;position:relative;height:9px;background:var(--bg);}
+  .wc-zero{position:absolute;top:0;bottom:0;width:1px;background:var(--line-2);}
+  .wc-fill{position:absolute;top:0;bottom:0;}
+  .wc-fill.all{background:var(--cyan);opacity:0.55;}
+  .wc-fill.start{background:var(--green);opacity:0.75;}
+  .wc-fill.skill{background:var(--amber);}
+  .wc-fill.neg{background:var(--red);}
+  .wc-val{flex:0 0 42px;text-align:right;font-size:9px;font-variant-numeric:tabular-nums;color:var(--dim);}
+  .wc-note{font-size:8.5px;color:var(--dim);line-height:1.5;margin-top:8px;
+    border-top:1px solid var(--line);padding-top:6px;}
   .rbt-p{font-size:9.5px;padding:1px 0;display:flex;gap:6px;align-items:baseline;}
   .rbt-lbl{color:var(--dim);flex:0 0 32px;font-variant-numeric:tabular-nums;}
   .rbt-pos{color:var(--dim);flex:0 0 26px;}
@@ -688,6 +715,8 @@
       <div id="rostersByTeamArea"></div>
 
       <div id="liveDraftPullArea"></div>
+
+      <div id="warChartArea"></div>
 
       <div class="foot" id="foot"></div>
     </div>
@@ -1089,7 +1118,7 @@ function render(){
     document.querySelector('#snakeDraftUI .snakePlayerArea').innerHTML='';
     document.getElementById('deepDiveArea').innerHTML='';
     document.getElementById('snakeBanner').innerHTML='';
-    renderDraftBanner(lg); renderFoot(lg); renderLiveDraftPull(lg); return;
+    renderDraftBanner(lg); renderFoot(lg); renderLiveDraftPull(lg); renderWarChart(lg); return;
   }
 
   renderSnakeBanner(lg);
@@ -1104,6 +1133,7 @@ function render(){
   wireSnakeResizer();
   renderFoot(lg);
   renderLiveDraftPull(lg);
+  renderWarChart(lg);
 }
 
 // -------- Prep tab (Kepners/Miami): Draft Order & Keepers, Owner Profiles,
@@ -1855,11 +1885,22 @@ function dedupeRosterEntries(entries){
   });
 }
 
-function renderRostersByTeam(lg){
-  const el = document.getElementById('rostersByTeamArea');
-  if(!el) return;
-  if(isAuctionLeague()){ el.innerHTML=''; return; }
-
+// Per-team roster fill + WAR totals. Shared by the Rosters by Team cards and
+// the WAR comparison chart so the two can never report different numbers for
+// the same team.
+//
+// Three metrics, each answering a different question:
+//   sumAll        -- whole roster, negatives FLOORED at 0. A below-replacement
+//                    player on the BENCH costs nothing; you'd simply start
+//                    someone else. Measures total talent accumulated.
+//   sumStart      -- non-bench slots, SIGNED. A below-replacement starter is a
+//                    real weekly loss you can't opt out of (starting the TE14
+//                    is genuinely worse than the TE12), so negatives subtract.
+//   sumSkillStart -- same as sumStart but excluding K and DEF. Those are
+//                    near-random week to week and every team streams them, so
+//                    including them mostly injects noise into a comparison of
+//                    who actually drafted better.
+function teamRosterTotals(lg){
   const byTeam = new Map();
   (lg.teams||[]).forEach(t=>byTeam.set(t.team, {team:t, keepers:[], picks:[]}));
   // Unassigned picks still need somewhere to show up -- silently dropping
@@ -1886,45 +1927,136 @@ function renderRostersByTeam(lg){
     return bp ? warOf(bp) : null;
   };
   const isStarter = (slot)=> slot!=='BEN' && slot!=='IR';
+  const NON_SKILL = ['K','DEF'];
 
-  const cards = [...byTeam.entries()]
-    .filter(([key,v])=>key!=='__unassigned__' || v.picks.length)  // hide the unassigned card unless it has something
+  const out = [];
+  byTeam.forEach((v, key)=>{
+    const entries = dedupeRosterEntries([...v.keepers, ...v.picks]);
+    const unassigned = key==='__unassigned__';
+    const {cells, overflowPlayers} = unassigned
+      ? {cells: entries.map(e=>({slot:'?', fill:e})), overflowPlayers: []}
+      : fillRosterSlots(roster, entries);
+
+    let sumAll = 0, sumStart = 0, sumSkillStart = 0;
+    cells.forEach(c=>{
+      if(!c.fill) return;
+      const w = warFor(c.fill);
+      if(w==null) return;
+      if(isStarter(c.slot)){
+        sumStart += w;                                   // signed
+        if(!NON_SKILL.includes(c.slot)) sumSkillStart += w;
+      }
+      if(w > 0) sumAll += w;                             // floored
+    });
+
+    out.push({key, unassigned, team:v.team, entries, cells, overflowPlayers,
+              total:entries.length, sumAll, sumStart, sumSkillStart, warFor, isStarter});
+  });
+  return out;
+}
+
+// Sort state for the WAR chart. Module-level so it survives the re-render
+// that happens on every logged pick -- keeping it inside the render function
+// would silently reset the user's chosen sort every time a pick landed.
+let warChartSort = 'sumSkillStart';
+
+function renderWarChart(lg){
+  const el = document.getElementById('warChartArea');
+  if(!el) return;
+  if(isAuctionLeague()){ el.innerHTML=''; return; }
+
+  // Real teams only -- the "(unassigned)" bucket is a data-entry catch, not a
+  // competitor, and including it would distort the axis scale.
+  const rows = teamRosterTotals(lg).filter(v=>!v.unassigned);
+  if(!rows.length){ el.innerHTML=''; return; }
+
+  const METRICS = [
+    {key:'sumAll',        label:'Sum WAR',           cls:'all',
+     tip:'Whole roster, negatives floored at 0 (a bad bench player costs nothing)'},
+    {key:'sumStart',      label:'Starter WAR',       cls:'start',
+     tip:'Non-bench slots, signed -- a below-replacement starter subtracts'},
+    {key:'sumSkillStart', label:'Skill Starter WAR', cls:'skill',
+     tip:'Starter WAR excluding K and DEF, which every team streams anyway'},
+  ];
+
+  rows.sort((a,b)=>b[warChartSort]-a[warChartSort]);
+
+  // One shared scale across all three metrics so bars are visually comparable
+  // between rows AND between metrics -- scaling each metric independently
+  // would make a small Skill Starter number look as long as a big Sum WAR one.
+  const vals = rows.flatMap(r=>METRICS.map(m=>r[m.key]));
+  const maxV = Math.max(0, ...vals);
+  const minV = Math.min(0, ...vals);
+  const span = (maxV - minV) || 1;
+  // Where 0 sits within the track, as a %. With no negatives this is 0 and
+  // bars grow from the left edge as usual.
+  const zeroPct = (0 - minV) / span * 100;
+
+  const barFor = (v, cls)=>{
+    const pct = Math.abs(v) / span * 100;
+    const left = v >= 0 ? zeroPct : zeroPct - pct;
+    return `<div class="wc-fill ${v < 0 ? 'neg' : cls}" style="left:${left}%;width:${pct}%;"></div>`;
+  };
+
+  const body = rows.map(r=>`
+    <div class="wc-row">
+      <div class="wc-name ${r.team.isMe?'mine':''}" title="${r.team.team}">${r.team.isMe?'★ ':''}${r.team.team}</div>
+      <div class="wc-bars">
+        ${METRICS.map(m=>`
+          <div class="wc-bar" title="${m.label}: ${Math.round(r[m.key])} — ${m.tip}">
+            <div class="wc-fillwrap">
+              <div class="wc-zero" style="left:${zeroPct}%;"></div>
+              ${barFor(r[m.key], m.cls)}
+            </div>
+            <span class="wc-val">${Math.round(r[m.key])}</span>
+          </div>`).join('')}
+      </div>
+    </div>`).join('');
+
+  el.innerHTML = `<div class="wc-wrap">
+    <div class="wc-head">
+      <div class="seclabel" style="margin:0;">Team WAR Comparison</div>
+      <div class="wc-sorts">
+        <span style="font-size:9px;color:var(--dim);align-self:center;">sort:</span>
+        ${METRICS.map(m=>`<button class="wc-sortbtn ${warChartSort===m.key?'active':''}"
+          data-sort="${m.key}" title="${m.tip}">${m.label}</button>`).join('')}
+      </div>
+    </div>
+    <div class="wc-legend">
+      ${METRICS.map(m=>`<span class="wc-key"><i class="wc-fill ${m.cls}" style="position:static;"></i>${m.label}</span>`).join('')}
+      <span class="wc-key"><i style="background:var(--red)"></i>negative</span>
+    </div>
+    <div class="wc-rows" style="margin-top:7px;">${body}</div>
+    <div class="wc-note">All three bars share one scale, so lengths are comparable across metrics as
+      well as teams. <b>Skill Starter WAR</b> is the default sort — it strips K and DEF, which are
+      near-random week to week and streamed by everyone, so it best reflects who actually drafted well.
+      Bars run left of the zero line and turn red when a total is negative.</div>
+  </div>`;
+
+  el.querySelectorAll('.wc-sortbtn').forEach(b=>{
+    b.onclick = ()=>{ warChartSort = b.dataset.sort; renderWarChart(lg); };
+  });
+}
+
+function renderRostersByTeam(lg){
+  const el = document.getElementById('rostersByTeamArea');
+  if(!el) return;
+  if(isAuctionLeague()){ el.innerHTML=''; return; }
+
+  const roster = lg.rosterSlots || [];
+  const totals = teamRosterTotals(lg);
+  const warFor = totals.length ? totals[0].warFor : ()=>null;
+  const isStarter = (slot)=> slot!=='BEN' && slot!=='IR';
+
+  const cards = totals
+    .filter(v=>!v.unassigned || v.entries.length)  // hide the unassigned card unless it has something
     // Draft order, not whatever order teams happened to load in -- lets you
     // scan left-to-right in the same order the actual draft ran. Unassigned
     // has no draft position, so it sinks to the end rather than landing
     // arbitrarily wherever a null happens to sort.
-    .sort(([,a],[,b])=>(a.team.draftPosition ?? 999) - (b.team.draftPosition ?? 999))
-    .map(([key,v])=>{
-      const entries = dedupeRosterEntries([...v.keepers, ...v.picks]);
-      const total = entries.length;
-      // The unassigned bucket has no roster shape to fill -- show it as a flat
-      // list rather than forcing it through slot allocation.
-      const unassigned = key==='__unassigned__';
-      const {cells, overflowPlayers} = unassigned
-        ? {cells: entries.map(e=>({slot:'?', fill:e})), overflowPlayers: []}
-        : fillRosterSlots(roster, entries);
-
-      // WAR totals. Negative WAR is floored at 0 per player rather than
-      // subtracted: a below-replacement player on your BENCH costs you
-      // nothing, since you'd simply start someone else (that's what
-      // "replacement level" means). Subtracting his negative would penalise a
-      // team for roster filler it never has to play.
-      // Starters are reported separately because in a start-9 league that's
-      // the number that actually decides matchups -- bench depth barely moves
-      // it, so a raw whole-roster total flatters teams who hoarded depth.
-      // Starters COUNT negative WAR; bench does not. Sean's point: if you're
-      // forced to start the TE14, that's genuinely worse than starting the
-      // TE12 -- you eat those points every week and can't opt out. A
-      // below-replacement player on the BENCH still costs nothing, since you
-      // simply never start him, so those stay floored at 0.
-      let sumAll = 0, sumStart = 0;
-      cells.forEach(c=>{
-        if(!c.fill) return;
-        const w = warFor(c.fill);
-        if(w==null) return;
-        if(isStarter(c.slot)) sumStart += w;      // signed -- negatives hurt
-        if(w > 0) sumAll += w;                    // bench/total: floored
-      });
+    .sort((a,b)=>(a.team.draftPosition ?? 999) - (b.team.draftPosition ?? 999))
+    .map(v=>{
+      const {cells, overflowPlayers, total, sumAll, sumStart, unassigned} = v;
 
       const lines = cells.map(c=>{
         if(!c.fill){
