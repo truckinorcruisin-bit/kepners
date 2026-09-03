@@ -428,6 +428,13 @@
      without undoing everything after it) */
   .sdl-owner{flex:0 0 150px;background:var(--bg);border:1px solid var(--line-2);
     color:var(--cyan);font-family:inherit;font-size:9.5px;padding:2px 4px;}
+  /* keeper reveal row: same layout rhythm as a real pick row, but visually
+     inert -- no dropdown/delete, since it's not a logged action to edit. */
+  .sdl-keeper-reveal{opacity:0.8;background:rgba(61,220,132,0.05);}
+  .sdl-keeper-tag{color:var(--green);font-size:8px;letter-spacing:0.5px;
+    border:1px solid var(--green);border-radius:2px;padding:0 3px;margin-left:6px;}
+  .sdl-owner-static{flex:0 0 150px;color:var(--dim);font-size:9.5px;padding:2px 4px;}
+  .sdl-del-spacer{flex:0 0 22px;}
   .sdl-owner.mine{color:var(--amber);}
   .sdl-del{flex:0 0 22px;background:transparent;border:1px solid var(--line-2);
     color:var(--dim);cursor:pointer;font-family:inherit;font-size:10px;line-height:1;padding:2px 0;}
@@ -1439,31 +1446,37 @@ function snakePickLabel(overall, teams){
 //
 // Falls back to a plain snake when nothing has a draftPosition (e.g. a league
 // whose order isn't drawn yet), so it's safe to call unconditionally.
+// slot -> Set of rounds consumed by that team's keepers. Shared by
+// buildDraftSchedule (to skip those picks) and keeperRevealRows (to know
+// which team's TRUE slot to show once the round finishes) so the two can't
+// disagree about which rounds are affected.
+function keeperConsumptionBySlot(lg){
+  const rounds = ((lg && lg.rosterSlots) || []).length;
+  const consumed = new Map();
+  ((lg && lg.teams) || []).forEach(t=>{
+    if(t.draftPosition==null) return;
+    const byRound = new Map();  // round -> the keeper entry consuming it
+    resolvedKeepers(t).forEach(k=>{
+      const r = Number(k.round);
+      if(Number.isFinite(r) && r>=1 && r<=rounds && !byRound.has(r)) byRound.set(r, k);
+    });
+    consumed.set(t.draftPosition, byRound);
+  });
+  return consumed;
+}
+
 function buildDraftSchedule(lg){
   const teamList = (lg && lg.teams) || [];
   const teams = teamList.length;
   const rounds = ((lg && lg.rosterSlots) || []).length;
   if(!teams || !rounds) return [];
 
-  // slot -> Set of rounds consumed by that team's keepers.
-  // A Set dedupes the pathological case of two keepers priced at the same
-  // round for one team -- they only ever forfeit the one pick that exists.
-  const consumed = new Map();
-  teamList.forEach(t=>{
-    if(t.draftPosition==null) return;
-    const set = new Set();
-    resolvedKeepers(t).forEach(k=>{
-      const r = Number(k.round);
-      if(Number.isFinite(r) && r>=1 && r<=rounds) set.add(r);
-    });
-    consumed.set(t.draftPosition, set);
-  });
-
+  const consumed = keeperConsumptionBySlot(lg);
   const sched = [];
   for(let r=1; r<=rounds; r++){
     for(let i=1; i<=teams; i++){
       const slot = (r % 2 === 1) ? i : (teams - i + 1);   // snake
-      if((consumed.get(slot) || new Set()).has(r)) continue;  // keeper takes this pick
+      if((consumed.get(slot) || new Map()).has(r)) continue;  // keeper takes this pick
       sched.push({round:r, slot, team: teamList.find(t=>t.draftPosition===slot) || null});
     }
   }
@@ -1477,6 +1490,53 @@ function buildDraftSchedule(lg){
     s.label = `${s.round}.${String(s.pickInRound).padStart(2,'0')}`;
   });
   return sched;
+}
+
+// A team's TRUE (uncompressed) pick-in-round -- their real snake position,
+// ignoring keeper skips entirely. This is DIFFERENT from schedule.pickInRound,
+// which counts only real picks and so skips numbers for keeper-held slots.
+// Used exclusively for the completed-round keeper reveal below; the
+// compressed numbering everywhere else in the app (My Team, renumbering on
+// delete, etc.) is untouched.
+function trueSlotInRound(round, draftPosition, teams){
+  if(draftPosition==null || !teams) return null;
+  return (round % 2 === 1) ? draftPosition : (teams - draftPosition + 1);
+}
+
+// For a round that has finished (every REAL live pick in it has been logged),
+// returns the keeper(s) that consumed a slot in that round, each carrying its
+// TRUE pick-in-round position so it can be shown alongside the real picks as
+// if it were just made -- e.g. Ranus's round-1 keeper shows as "1.12" once
+// picks 1.01-1.11 are all logged.
+//
+// Deliberately keyed on round completeness, not "has this round started":
+// showing every future round's keepers immediately would spoil rounds nobody
+// has reached yet, which is exactly what was asked NOT to happen.
+function keeperRevealsForRound(lg, round){
+  const teams = (lg.teams||[]).length;
+  const consumed = keeperConsumptionBySlot(lg);
+  const out = [];
+  consumed.forEach((byRound, slot)=>{
+    const k = byRound.get(round);
+    if(!k) return;
+    const team = lg.teams.find(t=>t.draftPosition===slot);
+    if(!team) return;
+    const bp = findBigBoardPlayer(k.player);
+    out.push({
+      round, slot,
+      pickInRound: trueSlotInRound(round, slot, teams),
+      team, player: k.player, pos: bp ? bp.pos : null, playerId: bp ? bp.id : null,
+    });
+  });
+  return out;
+}
+
+// Is every REAL live pick for this round already logged? Compares against
+// buildDraftSchedule's own count so it can't drift from what actually skips.
+function isRoundComplete(lg, round, schedule){
+  const sched = schedule || buildDraftSchedule(lg);
+  const lastOverallInRound = sched.reduce((max,s)=> s.round===round ? Math.max(max,s.overall) : max, 0);
+  return lastOverallInRound>0 && snakeDraft.picks.length >= lastOverallInRound;
 }
 
 // The schedule entry for the Nth overall pick (1-based). Falls back to plain
@@ -1566,19 +1626,57 @@ function renderSnakeDraftLog(lg){
     ${lg.teams.filter(t=>!t.isMe).map(t=>
       `<option value="${t.team}" ${!p.isMine && p.team===t.team?'selected':''}>${t.team}</option>`).join('')}`;
 
-  // Newest first (matches how you read a draft board), but data-idx carries
-  // the TRUE array index so edit/delete hit the right pick regardless of
-  // display order.
-  const rows = snakeDraft.picks.map((p,idx)=>({p,idx})).reverse().map(({p,idx})=>`
+  // Grouped by round (newest round first, matches how you'd scan a draft
+  // board top-down). Within a completed round, keeper(s) that consumed a
+  // slot are appended using their TRUE pick-in-round position -- e.g.
+  // Ranus's round-1 keeper shows as "1.12" once 1.01-1.11 are all logged --
+  // sorted alongside the real picks so the round reads as a finished whole
+  // rather than the compressed numbering (1.01-1.11) that's used WHILE a
+  // round is still in progress. A round that hasn't finished yet shows only
+  // its real, already-logged picks with their normal compressed labels;
+  // future rounds' keepers never appear early, which is the whole point --
+  // showing them ahead of time would spoil every round before it's reached.
+  const schedule = buildDraftSchedule(lg);
+  const byRound = new Map();
+  snakeDraft.picks.forEach((p,idx)=>{
+    if(!byRound.has(p.round)) byRound.set(p.round, []);
+    byRound.get(p.round).push({p, idx});
+  });
+
+  const roundBlocks = [...byRound.keys()].sort((a,b)=>b-a).map(rnd=>{
+    const complete = isRoundComplete(lg, rnd, schedule);
+    const realRows = byRound.get(rnd).map(({p,idx})=>{
+      const displayLabel = complete
+        ? `${rnd}.${String(trueSlotInRound(rnd, (lg.teams.find(t=>t.team===p.team)||{}).draftPosition, teams) ?? p.pickInRound).padStart(2,'0')}`
+        : p.label;
+      const sortKey = complete
+        ? (trueSlotInRound(rnd, (lg.teams.find(t=>t.team===p.team)||{}).draftPosition, teams) ?? p.pickInRound)
+        : p.pickInRound;
+      return {sortKey, html: `
     <div class="sdl-row ${p.isMine?'mine':''}">
-      <span class="sdl-pick">${p.label}</span>
+      <span class="sdl-pick">${displayLabel}</span>
       <span class="sdl-name">${p.name}${p.playerId?'':' <span class="sdl-warn" title="No Big Board match -- this pick will NOT grey out on the board">⚠</span>'}</span>
       <span class="sdl-pos">${p.pos||'—'}</span>
       <select class="sdl-owner ${p.isMine?'mine':''}" data-idx="${idx}" title="Change who made this pick">
         ${ownerOptions(p)}
       </select>
       <button class="sdl-del" data-idx="${idx}" title="Delete this pick (everything after it renumbers)">✕</button>
-    </div>`).join('');
+    </div>`};
+    });
+    const revealRows = complete ? keeperRevealsForRound(lg, rnd).map(k=>({
+      sortKey: k.pickInRound ?? 999,
+      html: `
+    <div class="sdl-row sdl-keeper-reveal" title="Keeper -- consumed this team's pick in this round, not a live selection">
+      <span class="sdl-pick">${rnd}.${String(k.pickInRound).padStart(2,'0')}</span>
+      <span class="sdl-name">${k.player}<span class="sdl-keeper-tag">KEEPER</span></span>
+      <span class="sdl-pos">${k.pos||'—'}</span>
+      <span class="sdl-owner-static">${k.team.team}</span>
+      <span class="sdl-del-spacer"></span>
+    </div>`})) : [];
+    const all = [...realRows, ...revealRows].sort((a,b)=>(complete ? a.sortKey-b.sortKey : b.sortKey-a.sortKey));
+    return all.map(r=>r.html).join('');
+  });
+  const rows = roundBlocks.join('');
 
   el.innerHTML = `
     <div class="sdl-form">
