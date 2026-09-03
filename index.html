@@ -603,6 +603,13 @@
   .liked-row:first-of-type{border-top:none;}
   .liked-row:hover{background:var(--line);}
   .liked-dot{flex:0 0 8px;height:8px;border-radius:50%;align-self:center;}
+  /* availability dot on the Player Board -- same colour language as the
+     liked-players list so red/amber/green mean the same thing everywhere */
+  .avail-dot{display:inline-block;width:7px;height:7px;border-radius:50%;
+    margin-right:5px;vertical-align:middle;flex:0 0 7px;}
+  .avail-dot.gone{background:var(--red);}
+  .avail-dot.risky{background:var(--amber);}
+  .avail-dot.safe{background:var(--green);}
   .liked-dot.gone{background:var(--red);}
   .liked-dot.risky{background:var(--amber);}
   .liked-dot.safe{background:var(--green);}
@@ -1905,13 +1912,18 @@ function renderRostersByTeam(lg){
       // Starters are reported separately because in a start-9 league that's
       // the number that actually decides matchups -- bench depth barely moves
       // it, so a raw whole-roster total flatters teams who hoarded depth.
+      // Starters COUNT negative WAR; bench does not. Sean's point: if you're
+      // forced to start the TE14, that's genuinely worse than starting the
+      // TE12 -- you eat those points every week and can't opt out. A
+      // below-replacement player on the BENCH still costs nothing, since you
+      // simply never start him, so those stay floored at 0.
       let sumAll = 0, sumStart = 0;
       cells.forEach(c=>{
         if(!c.fill) return;
         const w = warFor(c.fill);
-        if(w==null || w<=0) return;
-        sumAll += w;
-        if(isStarter(c.slot)) sumStart += w;
+        if(w==null) return;
+        if(isStarter(c.slot)) sumStart += w;      // signed -- negatives hurt
+        if(w > 0) sumAll += w;                    // bench/total: floored
       });
 
       const lines = cells.map(c=>{
@@ -1942,7 +1954,7 @@ function renderRostersByTeam(lg){
         <div class="rbt-team ${v.team.isMe?'mine':''}">
           <span>${v.team.draftPosition!=null?`<span class="rbt-draftpos">#${v.team.draftPosition}</span> `:''}${v.team.isMe?'★ ':''}${v.team.team}</span><span class="rbt-count">${total}</span>
         </div>
-        ${unassigned?'':`<div class="rbt-wartot" title="Sum of positive WAR. Starters = non-bench slots only.">
+        ${unassigned?'':`<div class="rbt-wartot" title="Σ WAR: positive WAR only, whole roster. Starters: non-bench slots, signed -- a below-replacement starter subtracts, because you're stuck playing him.">
           Σ WAR <b>${Math.round(sumAll)}</b> <span class="rbt-startwar">starters ${Math.round(sumStart)}</span>
         </div>`}
         ${lines || '<div class="rbt-empty">nothing yet</div>'}
@@ -1965,9 +1977,12 @@ function renderRostersByTeam(lg){
       <div style="font-size:9px;color:var(--dim);line-height:1.5;">
         Laid out by roster slot (same order as My Team) so open starting spots are obvious — an
         <b>open</b> row means that team hasn't filled that slot yet. Position colour matches the Player
-        Board: hue = position, darker = better tier. <b>Σ WAR</b> sums positive WAR only — a
-        below-replacement player on the bench costs nothing, since you'd just start someone else — and
-        <b>starters</b> excludes bench slots, which is the number that actually decides matchups.
+        Board: hue = position, darker = better tier. <b>Σ WAR</b> sums positive WAR across the whole
+        roster — a below-replacement player on the <i>bench</i> costs nothing, since you'd just start
+        someone else. <b>Starters</b> counts non-bench slots and <i>does</i> subtract negatives: if
+        you're forced to start a below-replacement player you eat those points every week, so starting
+        the TE14 really is worse than starting the TE12. That makes starters the number that decides
+        matchups, and it can legitimately come out lower than Σ WAR.
         Compare against ESPN/Yahoo to catch a pick logged to the wrong owner, a missed pick, or a
         duplicate. A ⚠ means the name didn't match the Big Board, so that player still shows as
         available on the board.
@@ -2275,15 +2290,59 @@ function isBlankVal(v){
 // Will this player still be on the board at `targetOverall`?
 // Banded against consensus rank with one round of ADP noise as the tolerance,
 // since treating ADP as exact would make every call falsely confident.
+// Will this player still be on the board at `targetOverall`?
+//
+// REWRITTEN: the old version used a symmetric +/- one-round band, which was
+// far too generous -- a player whose ADP was a full round BEFORE your pick
+// still read "coin flip" even though he almost never lasts. Now it models the
+// actual question: what's the probability his real draft slot lands after
+// your pick?
+//
+// Treat true draft position as roughly normal around ADP. Then
+//   survival P = Phi(cushion / sigma),  cushion = adp - targetOverall
+// so cushion measured in sigmas IS the z-score. Sigma grows with ADP because
+// late-round players are far less predictable than early ones, floored and
+// capped so it stays sane at both extremes.
+//
+// Thresholds are deliberately ASYMMETRIC, erring toward red per Sean: it's
+// much costlier to pass on a player believing he'll last (and lose him) than
+// to reach slightly on someone who might have made it back around.
+//   green  >= ~80% survival
+//   yellow  ~35-80%
+//   red    < ~35%
+function adpSigma(adp, teams){
+  const t = teams || 12;
+  return Math.min(Math.max(0.22 * adp, 0.6 * t), 2.0 * t);
+}
+// Normal CDF (Abramowitz & Stegun 7.1.26 erf approximation) -- only used to
+// report a human-readable survival % in tooltips.
+function normCdf(z){
+  const s = z < 0 ? -1 : 1, x = Math.abs(z) / Math.sqrt(2);
+  const a1=0.254829592, a2=-0.284496736, a3=1.421413741, a4=-1.453152027, a5=1.061405429, pp=0.3275911;
+  const t = 1/(1+pp*x);
+  const y = 1 - (((((a5*t + a4)*t) + a3)*t + a2)*t + a1)*t*Math.exp(-x*x);
+  return 0.5*(1 + s*y);
+}
 function availabilityAt(p, targetOverall, teams){
   if(targetOverall==null || isBlankVal(p.avgRank) || p.avgRank==null){
-    return {cls:'risky', label:'unknown', cushion:null};
+    return {cls:'risky', label:'unknown', cushion:null, prob:null};
   }
   const cushion = p.avgRank - targetOverall;   // + = ADP says he lasts past my pick
-  const band = teams || 12;                    // ~one round of ADP slop
-  if(cushion >= band)  return {cls:'safe',  label:'should last', cushion};
-  if(cushion >= -band) return {cls:'risky', label:'coin flip',   cushion};
-  return {cls:'gone', label:'likely gone', cushion};
+  const sigma = adpSigma(p.avgRank, teams);
+  const z = cushion / sigma;
+  const prob = normCdf(z);
+  if(z >= 0.85) return {cls:'safe',  label:'should last', cushion, prob};
+  if(z >= -0.40) return {cls:'risky', label:'coin flip',   cushion, prob};
+  return {cls:'gone', label:'likely gone', cushion, prob};
+}
+
+// The next pick I own AFTER the current one -- i.e. "if I pass right now,
+// when do I get another shot?" If I'm on the clock, that's my following pick;
+// otherwise it's my upcoming one.
+function myNextDecisionPick(lg){
+  const {next, after, teams} = myUpcomingPicks(lg);
+  const onClock = next != null && next === snakeDraft.picks.length + 1;
+  return {target: onClock ? after : next, teams};
 }
 
 // Players I like best, still available, ranked by like-signal.
@@ -3763,10 +3822,19 @@ function rankToRoundPick(rank, teams){
 const PT_COL_COMMON_LEFT = [
   {key:'name', label:'Player', num:false, render:r=>{
     const rookieBadge = isRookie(r)?`<span class="rookie-badge" title="${(r.notes||'').replace(/"/g,'&quot;')}">R</span>`:'';
+    // Availability dot: will he still be here at my next shot? Drafted
+    // players get no dot -- the question is moot, and a coloured dot next to
+    // a struck-through name reads as noise.
+    let dot = '';
+    if(!r._drafted && _availTarget.target != null){
+      const av = availabilityAt(r, _availTarget.target, _availTarget.teams);
+      const pct = av.prob!=null ? ` (~${Math.round(av.prob*100)}% he lasts)` : '';
+      dot = `<span class="avail-dot ${av.cls}" title="${av.label}${pct} at your next pick (#${_availTarget.target})"></span>`;
+    }
     if(r._drafted && r._suggested){
       return `<span class="name-suggested-keeper" title="Predicted keeper -- not yet confirmed in the Google Sheet">${r.name}</span>${rookieBadge}`;
     }
-    return `${r.name}${rookieBadge}`;
+    return `${dot}${r.name}${rookieBadge}`;
   }},
   {key:'team', label:'Team', num:false, render:r=>r.proTeamEspn||r.team||'—'},
   // Sean's own positional rank rides along INSIDE the Pos cell rather than
@@ -4002,9 +4070,18 @@ function leagueRosterablePositions(lg){
   return set;
 }
 
+// Cached per render: which pick the Player Board's availability dot measures
+// against. Computed once in ptRows rather than per row, because
+// myNextDecisionPick walks the whole draft schedule and doing that ~300 times
+// per render would be wasteful for an answer identical on every row.
+let _availTarget = {target:null, teams:null};
+
 function ptRows(){
   const drafted = ptDraftedMap();
   const fillFactors = rosterFillFactors();   // once per render, not per row
+  _availTarget = isAuctionLeague()
+    ? {target:null, teams:null}              // no pick order in an auction
+    : myNextDecisionPick(DATA.leagues[activeLeague] || {});
   let rows = DATA.players.filter(p=>p.pos && p.pos!=='NA').map(p=>{
     const mc = computeMissionControlBid(p);
     const d = drafted[p.id];
