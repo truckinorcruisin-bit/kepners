@@ -4110,40 +4110,31 @@ function ptDraftedMap(){
       if(bp) map[bp.id] = {cost:pick.cost, isMine:!!pick.isMine, suggested:false};
     });
   } else {
-    // Snake leagues have no live pick log, but keepers ARE known ahead of the draft -- both confirmed (Google Sheet, real) and
-    // suggested (predicted from last year's roster, see KEPS). Mark both as
-    // unavailable so the board reflects reality: these players are already
-    // spoken for before the draft even starts. Real always wins over
-    // suggested for the same player, same priority as the Prep tab.
+    // Snake leagues have no live pick log, but keepers ARE known ahead of the
+    // draft. Real keepers via the live sync, or (for a league with no sync,
+    // like Miami) a manager-confirmed suggestion, both correctly block a
+    // player. An UNCONFIRMED prediction must NOT.
+    //
+    // BUG FIXED: this used to run two separate loops -- one for real
+    // liveKeepers, and a second one that reimplemented the suggested-keeper
+    // fallback independently, marking EVERY predicted candidate unavailable
+    // regardless of its `confirmed` flag and only using that flag to choose
+    // amber vs solid styling. So an unconfirmed GUESS -- e.g. Amon-Ra St.
+    // Brown, predicted for Berdine but never actually kept by anyone -- was
+    // blocking a real, available player from being drafted during Sean's
+    // live Kepners draft. resolvedKeepers(t) already gets this exactly right
+    // everywhere else in the app (My Team, Rosters by Team, the WAR chart):
+    // real keepers first, a CONFIRMED suggestion only as a fallback, an
+    // unconfirmed prediction never treated as real. Routing through the same
+    // function here means this can't silently diverge from those again.
     const lg = DATA.leagues[activeLeague];
     if(lg && lg.teams){
       lg.teams.forEach(t=>{
-        (t.liveKeepers||[]).forEach(k=>{
+        resolvedKeepers(t).forEach(k=>{
           const bp = findBigBoardPlayer(k.player);
           if(bp) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:false, round:k.round};
         });
       });
-      // BUG FIXED: this only ran for `activeLeague==='kepners'`, so Miami's
-      // predicted AND confirmed keepers (miami_suggested_keepers.json) never
-      // greyed out on the board at all -- Rashee Rice, Brock Bowers, etc.
-      // still showed "available" even though they're locked keepers. Every
-      // league with a suggestions file works the same way here; a `confirmed`
-      // entry (a manager's real pick, reported directly since Miami has no
-      // live sheet sync) renders solid like a real keeper, an unconfirmed
-      // prediction renders amber, same distinction the Prep tab already draws.
-      const SUG = KEEPER_SUGGESTIONS[activeLeague];
-      if(SUG && SUG.by_manager){
-        lg.teams.forEach(t=>{
-          (SUG.by_manager[t.manager]||[]).forEach(k=>{
-            const bp = findBigBoardPlayer(k.player);
-            // Only mark as suggested if not ALREADY real for this exact player
-            // (a different manager's real keeper on the same player id would
-            // be a data anomaly, not something to paper over -- but our own
-            // suggestion should never override our own real entry).
-            if(bp && !map[bp.id]) map[bp.id] = {cost:null, isMine:!!t.isMe, suggested:!k.confirmed, round:k.round};
-          });
-        });
-      }
     }
     // Live-logged picks applied LAST so they win over keeper/suggested
     // entries -- a pick actually seen in the draft room is the most current
