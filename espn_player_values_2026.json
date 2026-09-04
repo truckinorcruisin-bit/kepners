@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-09-03T14:17:29.964035+00:00",
+  "generated": "2026-09-04T01:19:17.555146+00:00",
   "players": [
     {
       "player_id": 4429795,
@@ -9,7 +9,7 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 297.72,
-      "auction_value_avg": 70.85
+      "auction_value_avg": 70.77
     },
     {
       "player_id": 4374302,
@@ -18,25 +18,7 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 206.06,
-      "auction_value_avg": 57.94
-    },
-    {
-      "player_id": 4362628,
-      "name": "Ja'Marr Chase",
-      "position": "WR",
-      "pro_team": "CIN",
-      "bye_week": null,
-      "projected_total_points": 217.14,
-      "auction_value_avg": 63.11
-    },
-    {
-      "player_id": 4430878,
-      "name": "Jaxon Smith-Njigba",
-      "position": "WR",
-      "pro_team": "SEA",
-      "bye_week": null,
-      "projected_total_points": 209.98,
-      "auction_value_avg": 60.15
+      "auction_value_avg": 57.86
     },
     {
       "player_id": 4241389,
@@ -45,7 +27,16 @@
       "pro_team": "DAL",
       "bye_week": null,
       "projected_total_points": 190.13,
-      "auction_value_avg": 51.28
+      "auction_value_avg": 51.22
+    },
+    {
+      "player_id": 4362628,
+      "name": "Ja'Marr Chase",
+      "position": "WR",
+      "pro_team": "CIN",
+      "bye_week": null,
+      "projected_total_points": 217.14,
+      "auction_value_avg": 63.05
     },
     {
       "player_id": 3918298,
@@ -54,7 +45,7 @@
       "pro_team": "BUF",
       "bye_week": null,
       "projected_total_points": 370.55,
-      "auction_value_avg": 39.55
+      "auction_value_avg": 39.42
     },
     {
       "player_id": 4426515,
@@ -63,7 +54,7 @@
       "pro_team": "LAR",
       "bye_week": null,
       "projected_total_points": 230.5,
-      "auction_value_avg": 60.23
+      "auction_value_avg": 60.19
     },
     {
       "player_id": 4430807,
@@ -72,7 +63,16 @@
       "pro_team": "ATL",
       "bye_week": null,
       "projected_total_points": 277.02,
-      "auction_value_avg": 68.47
+      "auction_value_avg": 68.4
+    },
+    {
+      "player_id": 4430878,
+      "name": "Jaxon Smith-Njigba",
+      "position": "WR",
+      "pro_team": "SEA",
+      "bye_week": null,
+      "projected_total_points": 209.98,
+      "auction_value_avg": 60.07
     },
     {
       "player_id": 3117251,
@@ -81,7 +81,7 @@
       "pro_team": "SF",
       "bye_week": null,
       "projected_total_points": 262.99,
-      "auction_value_avg": 56.59
+      "auction_value_avg": 56.5
     },
     {
       "player_id": 4379399,
@@ -90,7 +90,7 @@
       "pro_team": "BUF",
       "bye_week": null,
       "projected_total_points": 244.39,
-      "auction_value_avg": 54.6
+      "auction_value_avg": 54.52
     },
     {
       "player_id": 4262921,
@@ -99,7 +99,7 @@
       "pro_team": "MIN",
       "bye_week": null,
       "projected_total_points": 183.18,
-      "auction_value_avg": 50.91
+      "auction_value_avg": 50.86
     },
     {
       "player_id": 4242335,
@@ -108,7 +108,7 @@
       "pro_team": "IND",
       "bye_week": null,
       "projected_total_points": 265.86,
-      "auction_value_avg": 58.94
+      "auction_value_avg": 58.83
     },
     {
       "player_id": 4361307,
@@ -117,7 +117,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 133.91,
-      "auction_value_avg": 33.94
+      "auction_value_avg": 33.92
     },
     {
       "player_id": 4432665,
@@ -126,7 +126,7 @@
       "pro_team": "LV",
       "bye_week": null,
       "projected_total_points": 142.21,
-      "auction_value_avg": 33.74
+      "auction_value_avg": 33.71
     },
     {
       "player_id": 3929630,
@@ -135,7 +135,7 @@
       "pro_team": "PHI",
       "bye_week": null,
       "projected_total_points": 230.1,
-      "auction_value_avg": 48.28
+      "auction_value_avg": 48.18
     },
     {
       "player_id": 4429160,
@@ -144,7 +144,7 @@
       "pro_team": "MIA",
       "bye_week": null,
       "projected_total_points": 229.02,
-      "auction_value_avg": 49.28
+      "auction_value_avg": 49.18
     },
     {
       "player_id": 3043078,
@@ -153,7 +153,7 @@
       "pro_team": "BAL",
       "bye_week": null,
       "projected_total_points": 256.43,
-      "auction_value_avg": 43.51
+      "auction_value_avg": 43.42
     },
     {
       "player_id": 3916387,
@@ -162,7 +162,7 @@
       "pro_team": "BAL",
       "bye_week": null,
       "projected_total_points": 322.51,
-      "auction_value_avg": 24.23
+      "auction_value_avg": 24.15
     },
     {
       "player_id": 4426502,
@@ -171,7 +171,7 @@
       "pro_team": "ATL",
       "bye_week": null,
       "projected_total_points": 167.67,
-      "auction_value_avg": 37.22
+      "auction_value_avg": 37.14
     },
     {
       "player_id": 4426354,
@@ -180,7 +180,7 @@
       "pro_team": "DAL",
       "bye_week": null,
       "projected_total_points": 159.4,
-      "auction_value_avg": 30.21
+      "auction_value_avg": 30.17
     },
     {
       "player_id": 4047646,
@@ -189,7 +189,7 @@
       "pro_team": "NE",
       "bye_week": null,
       "projected_total_points": 163.75,
-      "auction_value_avg": 37.55
+      "auction_value_avg": 37.46
     },
     {
       "player_id": 4258173,
@@ -198,7 +198,7 @@
       "pro_team": "HOU",
       "bye_week": null,
       "projected_total_points": 161.46,
-      "auction_value_avg": 33.39
+      "auction_value_avg": 33.32
     },
     {
       "player_id": 4890973,
@@ -207,7 +207,7 @@
       "pro_team": "LV",
       "bye_week": null,
       "projected_total_points": 214.27,
-      "auction_value_avg": 37.71
+      "auction_value_avg": 37.66
     },
     {
       "player_id": 4723086,
@@ -216,7 +216,7 @@
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 125.99,
-      "auction_value_avg": 18.57
+      "auction_value_avg": 18.54
     },
     {
       "player_id": 4685382,
@@ -225,7 +225,7 @@
       "pro_team": "LAC",
       "bye_week": null,
       "projected_total_points": 210.11,
-      "auction_value_avg": 43.49
+      "auction_value_avg": 43.42
     },
     {
       "player_id": 4362238,
@@ -234,7 +234,7 @@
       "pro_team": "CIN",
       "bye_week": null,
       "projected_total_points": 207.27,
-      "auction_value_avg": 44.32
+      "auction_value_avg": 44.22
     },
     {
       "player_id": 4567048,
@@ -243,7 +243,7 @@
       "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 224.8,
-      "auction_value_avg": 36.88
+      "auction_value_avg": 36.71
     },
     {
       "player_id": 4428331,
@@ -252,7 +252,7 @@
       "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 166.79,
-      "auction_value_avg": 29.28
+      "auction_value_avg": 29.25
     },
     {
       "player_id": 4870808,
@@ -261,7 +261,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 211.67,
-      "auction_value_avg": 33.59
+      "auction_value_avg": 33.55
     },
     {
       "player_id": 4431452,
@@ -270,7 +270,7 @@
       "pro_team": "NE",
       "bye_week": null,
       "projected_total_points": 320.17,
-      "auction_value_avg": 16.42
+      "auction_value_avg": 16.33
     },
     {
       "player_id": 4361370,
@@ -279,7 +279,7 @@
       "pro_team": "NO",
       "bye_week": null,
       "projected_total_points": 158.64,
-      "auction_value_avg": 29.83
+      "auction_value_avg": 29.79
     },
     {
       "player_id": 4241478,
@@ -288,7 +288,7 @@
       "pro_team": "PHI",
       "bye_week": null,
       "projected_total_points": 148.58,
-      "auction_value_avg": 23.72
+      "auction_value_avg": 23.65
     },
     {
       "player_id": 4431459,
@@ -297,7 +297,7 @@
       "pro_team": "IND",
       "bye_week": null,
       "projected_total_points": 126.07,
-      "auction_value_avg": 12.38
+      "auction_value_avg": 12.35
     },
     {
       "player_id": 4595348,
@@ -306,7 +306,7 @@
       "pro_team": "NYG",
       "bye_week": null,
       "projected_total_points": 158.64,
-      "auction_value_avg": 27.42
+      "auction_value_avg": 27.3
     },
     {
       "player_id": 4426348,
@@ -315,7 +315,7 @@
       "pro_team": "WSH",
       "bye_week": null,
       "projected_total_points": 317.49,
-      "auction_value_avg": 15.05
+      "auction_value_avg": 14.94
     },
     {
       "player_id": -16034,
@@ -324,7 +324,7 @@
       "pro_team": "HOU",
       "bye_week": null,
       "projected_total_points": 150.59,
-      "auction_value_avg": 3.93
+      "auction_value_avg": 3.91
     },
     {
       "player_id": 4569618,
@@ -342,7 +342,7 @@
       "pro_team": "DAL",
       "bye_week": null,
       "projected_total_points": 222.56,
-      "auction_value_avg": 27.79
+      "auction_value_avg": 27.7
     },
     {
       "player_id": 4427366,
@@ -351,7 +351,7 @@
       "pro_team": "NYJ",
       "bye_week": null,
       "projected_total_points": 222.21,
-      "auction_value_avg": 25.65
+      "auction_value_avg": 25.59
     },
     {
       "player_id": 4685472,
@@ -360,7 +360,7 @@
       "pro_team": "CAR",
       "bye_week": null,
       "projected_total_points": 152.86,
-      "auction_value_avg": 19.99
+      "auction_value_avg": 19.95
     },
     {
       "player_id": -16007,
@@ -372,22 +372,22 @@
       "auction_value_avg": 3.18
     },
     {
-      "player_id": 16800,
-      "name": "Davante Adams",
-      "position": "WR",
-      "pro_team": "LAR",
-      "bye_week": null,
-      "projected_total_points": 164.61,
-      "auction_value_avg": 17.59
-    },
-    {
       "player_id": 4696981,
       "name": "Cam Skattebo",
       "position": "RB",
       "pro_team": "NYG",
       "bye_week": null,
       "projected_total_points": 182.76,
-      "auction_value_avg": 18.37
+      "auction_value_avg": 18.3
+    },
+    {
+      "player_id": 16800,
+      "name": "Davante Adams",
+      "position": "WR",
+      "pro_team": "LAR",
+      "bye_week": null,
+      "projected_total_points": 164.61,
+      "auction_value_avg": 17.53
     },
     {
       "player_id": 4430737,
@@ -396,7 +396,7 @@
       "pro_team": "LAR",
       "bye_week": null,
       "projected_total_points": 198.56,
-      "auction_value_avg": 26.66
+      "auction_value_avg": 26.57
     },
     {
       "player_id": 4429615,
@@ -405,7 +405,7 @@
       "pro_team": "BAL",
       "bye_week": null,
       "projected_total_points": 156.78,
-      "auction_value_avg": 20.36
+      "auction_value_avg": 20.32
     },
     {
       "player_id": 4040715,
@@ -414,7 +414,7 @@
       "pro_team": "PHI",
       "bye_week": null,
       "projected_total_points": 319.84,
-      "auction_value_avg": 13.56
+      "auction_value_avg": 13.47
     },
     {
       "player_id": -16026,
@@ -423,7 +423,7 @@
       "pro_team": "SEA",
       "bye_week": null,
       "projected_total_points": 142.19,
-      "auction_value_avg": 2.54
+      "auction_value_avg": 2.53
     },
     {
       "player_id": 4567750,
@@ -432,7 +432,7 @@
       "pro_team": "TB",
       "bye_week": null,
       "projected_total_points": 159.38,
-      "auction_value_avg": 20.7
+      "auction_value_avg": 20.63
     },
     {
       "player_id": 4239996,
@@ -441,7 +441,7 @@
       "pro_team": "NO",
       "bye_week": null,
       "projected_total_points": 201.48,
-      "auction_value_avg": 21.72
+      "auction_value_avg": 21.68
     },
     {
       "player_id": 3915511,
@@ -450,7 +450,7 @@
       "pro_team": "CIN",
       "bye_week": null,
       "projected_total_points": 304.33,
-      "auction_value_avg": 14.56
+      "auction_value_avg": 14.44
     },
     {
       "player_id": 4612826,
@@ -459,7 +459,7 @@
       "pro_team": "LAC",
       "bye_week": null,
       "projected_total_points": 141.39,
-      "auction_value_avg": 20.65
+      "auction_value_avg": 20.59
     },
     {
       "player_id": -16014,
@@ -468,7 +468,7 @@
       "pro_team": "LAR",
       "bye_week": null,
       "projected_total_points": 140.03,
-      "auction_value_avg": 4.04
+      "auction_value_avg": 4.05
     },
     {
       "player_id": 4239993,
@@ -477,7 +477,7 @@
       "pro_team": "CIN",
       "bye_week": null,
       "projected_total_points": 145.61,
-      "auction_value_avg": 16.7
+      "auction_value_avg": 16.65
     },
     {
       "player_id": 4372016,
@@ -486,7 +486,7 @@
       "pro_team": "DEN",
       "bye_week": null,
       "projected_total_points": 136.52,
-      "auction_value_avg": 16.62
+      "auction_value_avg": 16.52
     },
     {
       "player_id": 4360248,
@@ -495,7 +495,7 @@
       "pro_team": "ATL",
       "bye_week": null,
       "projected_total_points": 104.67,
-      "auction_value_avg": 6.44
+      "auction_value_avg": 6.42
     },
     {
       "player_id": 4685702,
@@ -504,7 +504,7 @@
       "pro_team": "CLE",
       "bye_week": null,
       "projected_total_points": 194.62,
-      "auction_value_avg": 18.1
+      "auction_value_avg": 18.05
     },
     {
       "player_id": -16023,
@@ -513,7 +513,7 @@
       "pro_team": "PIT",
       "bye_week": null,
       "projected_total_points": 150.41,
-      "auction_value_avg": 1.61
+      "auction_value_avg": 1.6
     },
     {
       "player_id": 4596448,
@@ -522,7 +522,7 @@
       "pro_team": "TB",
       "bye_week": null,
       "projected_total_points": 170.3,
-      "auction_value_avg": 14.37
+      "auction_value_avg": 14.3
     },
     {
       "player_id": 3121422,
@@ -531,7 +531,7 @@
       "pro_team": "WSH",
       "bye_week": null,
       "projected_total_points": 141.43,
-      "auction_value_avg": 11.42
+      "auction_value_avg": 11.38
     },
     {
       "player_id": 4430027,
@@ -540,7 +540,7 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 110.42,
-      "auction_value_avg": 5.86
+      "auction_value_avg": 5.82
     },
     {
       "player_id": 4426388,
@@ -549,7 +549,7 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 144.26,
-      "auction_value_avg": 10.69
+      "auction_value_avg": 10.64
     },
     {
       "player_id": 4259545,
@@ -558,7 +558,7 @@
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 179.75,
-      "auction_value_avg": 16.69
+      "auction_value_avg": 16.6
     },
     {
       "player_id": 3915416,
@@ -567,7 +567,7 @@
       "pro_team": "BUF",
       "bye_week": null,
       "projected_total_points": 142.56,
-      "auction_value_avg": 13.04
+      "auction_value_avg": 12.99
     },
     {
       "player_id": 5083076,
@@ -576,7 +576,7 @@
       "pro_team": "CLE",
       "bye_week": null,
       "projected_total_points": 105.05,
-      "auction_value_avg": 5.56
+      "auction_value_avg": 5.54
     },
     {
       "player_id": 4431299,
@@ -585,7 +585,7 @@
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 153.68,
-      "auction_value_avg": 10.68
+      "auction_value_avg": 10.61
     },
     {
       "player_id": 4035538,
@@ -594,16 +594,7 @@
       "pro_team": "HOU",
       "bye_week": null,
       "projected_total_points": 168.11,
-      "auction_value_avg": 12.48
-    },
-    {
-      "player_id": 4047365,
-      "name": "Josh Jacobs",
-      "position": "RB",
-      "pro_team": "GB",
-      "bye_week": null,
-      "projected_total_points": 140.71,
-      "auction_value_avg": 13.43
+      "auction_value_avg": 12.4
     },
     {
       "player_id": 4689114,
@@ -612,7 +603,16 @@
       "pro_team": "NYG",
       "bye_week": null,
       "projected_total_points": 299.53,
-      "auction_value_avg": 7.5
+      "auction_value_avg": 7.44
+    },
+    {
+      "player_id": 4047365,
+      "name": "Josh Jacobs",
+      "position": "RB",
+      "pro_team": "GB",
+      "bye_week": null,
+      "projected_total_points": 140.71,
+      "auction_value_avg": 13.15
     },
     {
       "player_id": 4685512,
@@ -621,7 +621,7 @@
       "pro_team": "SEA",
       "bye_week": null,
       "projected_total_points": 167.01,
-      "auction_value_avg": 13.35
+      "auction_value_avg": 13.26
     },
     {
       "player_id": 2577417,
@@ -630,16 +630,7 @@
       "pro_team": "DAL",
       "bye_week": null,
       "projected_total_points": 286.11,
-      "auction_value_avg": 9.12
-    },
-    {
-      "player_id": 12483,
-      "name": "Matthew Stafford",
-      "position": "QB",
-      "pro_team": "LAR",
-      "bye_week": null,
-      "projected_total_points": 292.85,
-      "auction_value_avg": 6.45
+      "auction_value_avg": 9.04
     },
     {
       "player_id": 4882093,
@@ -648,16 +639,16 @@
       "pro_team": "JAX",
       "bye_week": null,
       "projected_total_points": 172.07,
-      "auction_value_avg": 13.56
+      "auction_value_avg": 13.5
     },
     {
-      "player_id": 4871023,
-      "name": "Carnell Tate",
-      "position": "WR",
-      "pro_team": "TEN",
+      "player_id": 12483,
+      "name": "Matthew Stafford",
+      "position": "QB",
+      "pro_team": "LAR",
       "bye_week": null,
-      "projected_total_points": 127.73,
-      "auction_value_avg": 6.76
+      "projected_total_points": 292.85,
+      "auction_value_avg": 6.39
     },
     {
       "player_id": 3040151,
@@ -666,7 +657,16 @@
       "pro_team": "SF",
       "bye_week": null,
       "projected_total_points": 116.88,
-      "auction_value_avg": 5.48
+      "auction_value_avg": 5.46
+    },
+    {
+      "player_id": 4871023,
+      "name": "Carnell Tate",
+      "position": "WR",
+      "pro_team": "TEN",
+      "bye_week": null,
+      "projected_total_points": 127.73,
+      "auction_value_avg": 6.72
     },
     {
       "player_id": 4685278,
@@ -675,7 +675,7 @@
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 131.06,
-      "auction_value_avg": 8.94
+      "auction_value_avg": 8.9
     },
     {
       "player_id": 4432710,
@@ -684,7 +684,7 @@
       "pro_team": "NE",
       "bye_week": null,
       "projected_total_points": 159.14,
-      "auction_value_avg": 7.55
+      "auction_value_avg": 7.51
     },
     {
       "player_id": 3128429,
@@ -693,7 +693,7 @@
       "pro_team": "DEN",
       "bye_week": null,
       "projected_total_points": 134.95,
-      "auction_value_avg": 5.56
+      "auction_value_avg": 5.52
     },
     {
       "player_id": 4047650,
@@ -702,7 +702,7 @@
       "pro_team": "PIT",
       "bye_week": null,
       "projected_total_points": 131.03,
-      "auction_value_avg": 5.44
+      "auction_value_avg": 5.41
     },
     {
       "player_id": 4432708,
@@ -711,7 +711,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 124.91,
-      "auction_value_avg": 7.07
+      "auction_value_avg": 7.02
     },
     {
       "player_id": 4038941,
@@ -720,7 +720,7 @@
       "pro_team": "LAC",
       "bye_week": null,
       "projected_total_points": 283.58,
-      "auction_value_avg": 7.46
+      "auction_value_avg": 7.38
     },
     {
       "player_id": 4431611,
@@ -729,7 +729,7 @@
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 281.92,
-      "auction_value_avg": 7.65
+      "auction_value_avg": 7.58
     },
     {
       "player_id": 4572680,
@@ -738,7 +738,7 @@
       "pro_team": "GB",
       "bye_week": null,
       "projected_total_points": 104.22,
-      "auction_value_avg": 4.54
+      "auction_value_avg": 4.5
     },
     {
       "player_id": 15847,
@@ -747,7 +747,7 @@
       "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 103.39,
-      "auction_value_avg": 3.1
+      "auction_value_avg": 3.09
     },
     {
       "player_id": 16737,
@@ -756,7 +756,7 @@
       "pro_team": "SF",
       "bye_week": null,
       "projected_total_points": 123.53,
-      "auction_value_avg": 6.34
+      "auction_value_avg": 6.31
     },
     {
       "player_id": 4569173,
@@ -765,7 +765,7 @@
       "pro_team": "NE",
       "bye_week": null,
       "projected_total_points": 160.9,
-      "auction_value_avg": 6.83
+      "auction_value_avg": 6.78
     },
     {
       "player_id": 3121023,
@@ -774,7 +774,7 @@
       "pro_team": "PHI",
       "bye_week": null,
       "projected_total_points": 106.34,
-      "auction_value_avg": 2.28
+      "auction_value_avg": 2.27
     },
     {
       "player_id": -16033,
@@ -783,7 +783,7 @@
       "pro_team": "BAL",
       "bye_week": null,
       "projected_total_points": 142.9,
-      "auction_value_avg": 1.45
+      "auction_value_avg": 1.44
     },
     {
       "player_id": 4035687,
@@ -792,7 +792,7 @@
       "pro_team": "PIT",
       "bye_week": null,
       "projected_total_points": 108.74,
-      "auction_value_avg": 4.34
+      "auction_value_avg": 4.32
     },
     {
       "player_id": 4569987,
@@ -801,7 +801,7 @@
       "pro_team": "PIT",
       "bye_week": null,
       "projected_total_points": 147.86,
-      "auction_value_avg": 5.0
+      "auction_value_avg": 4.96
     },
     {
       "player_id": 4426338,
@@ -810,16 +810,7 @@
       "pro_team": "DEN",
       "bye_week": null,
       "projected_total_points": 295.73,
-      "auction_value_avg": 6.31
-    },
-    {
-      "player_id": 4248528,
-      "name": "Christian Watson",
-      "position": "WR",
-      "pro_team": "GB",
-      "bye_week": null,
-      "projected_total_points": 132.83,
-      "auction_value_avg": 5.93
+      "auction_value_avg": 6.23
     },
     {
       "player_id": 3916148,
@@ -828,7 +819,16 @@
       "pro_team": "TEN",
       "bye_week": null,
       "projected_total_points": 155.85,
-      "auction_value_avg": 5.41
+      "auction_value_avg": 5.37
+    },
+    {
+      "player_id": 4248528,
+      "name": "Christian Watson",
+      "position": "WR",
+      "pro_team": "GB",
+      "bye_week": null,
+      "projected_total_points": 132.83,
+      "auction_value_avg": 5.88
     },
     {
       "player_id": 4360310,
@@ -837,7 +837,7 @@
       "pro_team": "JAX",
       "bye_week": null,
       "projected_total_points": 289.55,
-      "auction_value_avg": 6.25
+      "auction_value_avg": 6.19
     },
     {
       "player_id": 4038815,
@@ -846,7 +846,7 @@
       "pro_team": "PIT",
       "bye_week": null,
       "projected_total_points": 159.08,
-      "auction_value_avg": 4.24
+      "auction_value_avg": 4.19
     },
     {
       "player_id": 4432620,
@@ -855,7 +855,7 @@
       "pro_team": "JAX",
       "bye_week": null,
       "projected_total_points": 123.5,
-      "auction_value_avg": 6.11
+      "auction_value_avg": 6.06
     },
     {
       "player_id": -16021,
@@ -864,7 +864,7 @@
       "pro_team": "PHI",
       "bye_week": null,
       "projected_total_points": 128.36,
-      "auction_value_avg": 1.35
+      "auction_value_avg": 1.34
     },
     {
       "player_id": 3139477,
@@ -873,7 +873,7 @@
       "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 290.97,
-      "auction_value_avg": 5.8
+      "auction_value_avg": 5.73
     },
     {
       "player_id": 4242355,
@@ -882,7 +882,7 @@
       "pro_team": "DAL",
       "bye_week": null,
       "projected_total_points": 93.66,
-      "auction_value_avg": 1.97
+      "auction_value_avg": 1.95
     },
     {
       "player_id": 4360761,
@@ -891,7 +891,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 105.83,
-      "auction_value_avg": 2.96
+      "auction_value_avg": 2.94
     },
     {
       "player_id": 4360078,
@@ -900,7 +900,7 @@
       "pro_team": "IND",
       "bye_week": null,
       "projected_total_points": 125.5,
-      "auction_value_avg": 3.16
+      "auction_value_avg": 3.14
     },
     {
       "player_id": 4701936,
@@ -909,16 +909,7 @@
       "pro_team": "GB",
       "bye_week": null,
       "projected_total_points": 120.92,
-      "auction_value_avg": 2.46
-    },
-    {
-      "player_id": 4361741,
-      "name": "Brock Purdy",
-      "position": "QB",
-      "pro_team": "SF",
-      "bye_week": null,
-      "projected_total_points": 292.05,
-      "auction_value_avg": 4.78
+      "auction_value_avg": 2.43
     },
     {
       "player_id": 4371733,
@@ -927,7 +918,16 @@
       "pro_team": "TB",
       "bye_week": null,
       "projected_total_points": 125.75,
-      "auction_value_avg": 2.99
+      "auction_value_avg": 2.97
+    },
+    {
+      "player_id": 4361741,
+      "name": "Brock Purdy",
+      "position": "QB",
+      "pro_team": "SF",
+      "bye_week": null,
+      "projected_total_points": 292.05,
+      "auction_value_avg": 4.72
     },
     {
       "player_id": 4241416,
@@ -936,7 +936,7 @@
       "pro_team": "CAR",
       "bye_week": null,
       "projected_total_points": 139.14,
-      "auction_value_avg": 2.69
+      "auction_value_avg": 2.66
     },
     {
       "player_id": 4432773,
@@ -945,7 +945,7 @@
       "pro_team": "JAX",
       "bye_week": null,
       "projected_total_points": 119.59,
-      "auction_value_avg": 2.85
+      "auction_value_avg": 2.82
     },
     {
       "player_id": 4241985,
@@ -954,7 +954,7 @@
       "pro_team": "DEN",
       "bye_week": null,
       "projected_total_points": 153.43,
-      "auction_value_avg": 3.27
+      "auction_value_avg": 3.23
     },
     {
       "player_id": 4678008,
@@ -963,7 +963,7 @@
       "pro_team": "CAR",
       "bye_week": null,
       "projected_total_points": 143.23,
-      "auction_value_avg": 4.16
+      "auction_value_avg": 4.11
     },
     {
       "player_id": 4569587,
@@ -972,7 +972,7 @@
       "pro_team": "TEN",
       "bye_week": null,
       "projected_total_points": 96.04,
-      "auction_value_avg": 2.24
+      "auction_value_avg": 2.23
     },
     {
       "player_id": 3116365,
@@ -981,7 +981,7 @@
       "pro_team": "BAL",
       "bye_week": null,
       "projected_total_points": 111.13,
-      "auction_value_avg": 1.54
+      "auction_value_avg": 1.53
     },
     {
       "player_id": 3042519,
@@ -990,25 +990,7 @@
       "pro_team": "MIN",
       "bye_week": null,
       "projected_total_points": 130.75,
-      "auction_value_avg": 2.13
-    },
-    {
-      "player_id": 4429205,
-      "name": "Jordan Addison",
-      "position": "WR",
-      "pro_team": "MIN",
-      "bye_week": null,
-      "projected_total_points": 110.15,
-      "auction_value_avg": 2.2
-    },
-    {
-      "player_id": 4361050,
-      "name": "Isaiah Likely",
-      "position": "TE",
-      "pro_team": "NYG",
-      "bye_week": null,
-      "projected_total_points": 92.11,
-      "auction_value_avg": 2.05
+      "auction_value_avg": 2.12
     },
     {
       "player_id": 2976212,
@@ -1017,7 +999,25 @@
       "pro_team": "WSH",
       "bye_week": null,
       "projected_total_points": 98.27,
-      "auction_value_avg": 3.01
+      "auction_value_avg": 2.99
+    },
+    {
+      "player_id": 4361050,
+      "name": "Isaiah Likely",
+      "position": "TE",
+      "pro_team": "NYG",
+      "bye_week": null,
+      "projected_total_points": 92.11,
+      "auction_value_avg": 2.03
+    },
+    {
+      "player_id": 4429205,
+      "name": "Jordan Addison",
+      "position": "WR",
+      "pro_team": "MIN",
+      "bye_week": null,
+      "projected_total_points": 110.15,
+      "auction_value_avg": 2.17
     },
     {
       "player_id": 3916433,
@@ -1026,7 +1026,7 @@
       "pro_team": "JAX",
       "bye_week": null,
       "projected_total_points": 112.15,
-      "auction_value_avg": 1.61
+      "auction_value_avg": 1.6
     },
     {
       "player_id": 4608686,
@@ -1035,7 +1035,7 @@
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 149.29,
-      "auction_value_avg": 2.08
+      "auction_value_avg": 2.06
     },
     {
       "player_id": 4429096,
@@ -1044,7 +1044,7 @@
       "pro_team": "LAR",
       "bye_week": null,
       "projected_total_points": 142.58,
-      "auction_value_avg": 2.83
+      "auction_value_avg": 2.79
     },
     {
       "player_id": 4683062,
@@ -1053,7 +1053,7 @@
       "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 117.41,
-      "auction_value_avg": 1.6
+      "auction_value_avg": 1.58
     },
     {
       "player_id": 4568490,
@@ -1062,7 +1062,7 @@
       "pro_team": "DEN",
       "bye_week": null,
       "projected_total_points": 100.65,
-      "auction_value_avg": 1.95
+      "auction_value_avg": 1.93
     },
     {
       "player_id": 3116165,
@@ -1071,16 +1071,7 @@
       "pro_team": "TB",
       "bye_week": null,
       "projected_total_points": 96.99,
-      "auction_value_avg": 2.27
-    },
-    {
-      "player_id": 4870795,
-      "name": "Makai Lemon",
-      "position": "WR",
-      "pro_team": "PHI",
-      "bye_week": null,
-      "projected_total_points": 103.05,
-      "auction_value_avg": 1.64
+      "auction_value_avg": 2.25
     },
     {
       "player_id": 4429025,
@@ -1089,7 +1080,16 @@
       "pro_team": "LAC",
       "bye_week": null,
       "projected_total_points": 112.61,
-      "auction_value_avg": 2.01
+      "auction_value_avg": 2.0
+    },
+    {
+      "player_id": 4870795,
+      "name": "Makai Lemon",
+      "position": "WR",
+      "pro_team": "PHI",
+      "bye_week": null,
+      "projected_total_points": 103.05,
+      "auction_value_avg": 1.62
     },
     {
       "player_id": 4385690,
@@ -1107,7 +1107,7 @@
       "pro_team": "WSH",
       "bye_week": null,
       "projected_total_points": 124.03,
-      "auction_value_avg": 1.6
+      "auction_value_avg": 1.59
     },
     {
       "player_id": 4685415,
@@ -1125,7 +1125,7 @@
       "pro_team": "GB",
       "bye_week": null,
       "projected_total_points": 114.09,
-      "auction_value_avg": 4.1
+      "auction_value_avg": 4.09
     },
     {
       "player_id": 4362249,
@@ -1143,7 +1143,7 @@
       "pro_team": "IND",
       "bye_week": null,
       "projected_total_points": 87.56,
-      "auction_value_avg": 1.4
+      "auction_value_avg": 1.39
     },
     {
       "player_id": 4575131,
@@ -1152,7 +1152,7 @@
       "pro_team": "WSH",
       "bye_week": null,
       "projected_total_points": 143.04,
-      "auction_value_avg": 1.97
+      "auction_value_avg": 1.95
     },
     {
       "player_id": -16008,
@@ -1170,7 +1170,7 @@
       "pro_team": "BUF",
       "bye_week": null,
       "projected_total_points": 101.19,
-      "auction_value_avg": 1.13
+      "auction_value_avg": 1.12
     },
     {
       "player_id": -16017,
@@ -1188,7 +1188,7 @@
       "pro_team": "SF",
       "bye_week": null,
       "projected_total_points": 101.92,
-      "auction_value_avg": 1.16
+      "auction_value_avg": 1.15
     },
     {
       "player_id": 3046779,
@@ -1197,7 +1197,7 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 269.06,
-      "auction_value_avg": 3.03
+      "auction_value_avg": 3.0
     },
     {
       "player_id": 4360569,
@@ -1206,7 +1206,7 @@
       "pro_team": "MIN",
       "bye_week": null,
       "projected_total_points": 138.27,
-      "auction_value_avg": 2.29
+      "auction_value_avg": 2.26
     },
     {
       "player_id": 4870653,
@@ -1215,7 +1215,7 @@
       "pro_team": "CLE",
       "bye_week": null,
       "projected_total_points": 97.35,
-      "auction_value_avg": 1.36
+      "auction_value_avg": 1.35
     },
     {
       "player_id": 3917315,
@@ -1224,7 +1224,7 @@
       "pro_team": "MIN",
       "bye_week": null,
       "projected_total_points": 283.39,
-      "auction_value_avg": 3.12
+      "auction_value_avg": 3.08
     },
     {
       "player_id": 4036133,
@@ -1233,7 +1233,7 @@
       "pro_team": "MIN",
       "bye_week": null,
       "projected_total_points": 80.75,
-      "auction_value_avg": 0.73
+      "auction_value_avg": 0.72
     },
     {
       "player_id": 4361432,
@@ -1251,7 +1251,7 @@
       "pro_team": "SF",
       "bye_week": null,
       "projected_total_points": 107.95,
-      "auction_value_avg": 2.29
+      "auction_value_avg": 2.27
     },
     {
       "player_id": 4429059,
@@ -1260,7 +1260,7 @@
       "pro_team": "HOU",
       "bye_week": null,
       "projected_total_points": 107.57,
-      "auction_value_avg": 1.04
+      "auction_value_avg": 1.03
     },
     {
       "player_id": -16005,
@@ -1287,7 +1287,7 @@
       "pro_team": "TB",
       "bye_week": null,
       "projected_total_points": 264.73,
-      "auction_value_avg": 2.33
+      "auction_value_avg": 2.29
     },
     {
       "player_id": 4426385,
@@ -1296,7 +1296,7 @@
       "pro_team": "SEA",
       "bye_week": null,
       "projected_total_points": 113.68,
-      "auction_value_avg": 1.18
+      "auction_value_avg": 1.17
     },
     {
       "player_id": -16030,
@@ -1314,7 +1314,7 @@
       "pro_team": "LAC",
       "bye_week": null,
       "projected_total_points": 112.76,
-      "auction_value_avg": 0.63
+      "auction_value_avg": 0.62
     },
     {
       "player_id": 4428557,
@@ -1326,15 +1326,6 @@
       "auction_value_avg": 0.91
     },
     {
-      "player_id": 5083315,
-      "name": "Kenyon Sadiq",
-      "position": "TE",
-      "pro_team": "NYJ",
-      "bye_week": null,
-      "projected_total_points": 85.93,
-      "auction_value_avg": 0.43
-    },
-    {
       "player_id": 4695883,
       "name": "Jalen Coker",
       "position": "WR",
@@ -1344,13 +1335,22 @@
       "auction_value_avg": 0.84
     },
     {
+      "player_id": 5083315,
+      "name": "Kenyon Sadiq",
+      "position": "TE",
+      "pro_team": "NYJ",
+      "bye_week": null,
+      "projected_total_points": 85.93,
+      "auction_value_avg": 0.42
+    },
+    {
       "player_id": 4360689,
       "name": "Tyler Shough",
       "position": "QB",
       "pro_team": "NO",
       "bye_week": null,
       "projected_total_points": 265.55,
-      "auction_value_avg": 1.99
+      "auction_value_avg": 1.97
     },
     {
       "player_id": 4032473,
@@ -1359,7 +1359,7 @@
       "pro_team": "SEA",
       "bye_week": null,
       "projected_total_points": 101.61,
-      "auction_value_avg": 0.64
+      "auction_value_avg": 0.63
     },
     {
       "player_id": 3929645,
@@ -1377,7 +1377,7 @@
       "pro_team": "NO",
       "bye_week": null,
       "projected_total_points": 64.22,
-      "auction_value_avg": 0.56
+      "auction_value_avg": 0.55
     },
     {
       "player_id": 4361529,
@@ -1386,16 +1386,7 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 62.1,
-      "auction_value_avg": 0.62
-    },
-    {
-      "player_id": 3054850,
-      "name": "Alvin Kamara",
-      "position": "RB",
-      "pro_team": "NO",
-      "bye_week": null,
-      "projected_total_points": 82.69,
-      "auction_value_avg": 0.57
+      "auction_value_avg": 0.61
     },
     {
       "player_id": 4036378,
@@ -1404,7 +1395,16 @@
       "pro_team": "GB",
       "bye_week": null,
       "projected_total_points": 263.44,
-      "auction_value_avg": 1.96
+      "auction_value_avg": 1.92
+    },
+    {
+      "player_id": 3054850,
+      "name": "Alvin Kamara",
+      "position": "RB",
+      "pro_team": "NO",
+      "bye_week": null,
+      "projected_total_points": 82.69,
+      "auction_value_avg": 0.56
     },
     {
       "player_id": 4686658,
@@ -1413,7 +1413,7 @@
       "pro_team": "LV",
       "bye_week": null,
       "projected_total_points": 58.2,
-      "auction_value_avg": 0.92
+      "auction_value_avg": 0.9
     },
     {
       "player_id": -16012,
@@ -1431,7 +1431,7 @@
       "pro_team": "IND",
       "bye_week": null,
       "projected_total_points": 266.58,
-      "auction_value_avg": 1.35
+      "auction_value_avg": 1.32
     },
     {
       "player_id": 4373626,
@@ -1440,7 +1440,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 74.26,
-      "auction_value_avg": 0.64
+      "auction_value_avg": 0.63
     },
     {
       "player_id": 4366031,
@@ -1476,7 +1476,7 @@
       "pro_team": "CLE",
       "bye_week": null,
       "projected_total_points": 87.9,
-      "auction_value_avg": 0.31
+      "auction_value_avg": 0.3
     },
     {
       "player_id": 15818,
@@ -1494,16 +1494,7 @@
       "pro_team": "ATL",
       "bye_week": null,
       "projected_total_points": 85.22,
-      "auction_value_avg": 1.19
-    },
-    {
-      "player_id": 3912547,
-      "name": "Sam Darnold",
-      "position": "QB",
-      "pro_team": "SEA",
-      "bye_week": null,
-      "projected_total_points": 242.54,
-      "auction_value_avg": 1.24
+      "auction_value_avg": 1.2
     },
     {
       "player_id": 4428718,
@@ -1512,7 +1503,16 @@
       "pro_team": "LV",
       "bye_week": null,
       "projected_total_points": 89.62,
-      "auction_value_avg": 0.4
+      "auction_value_avg": 0.39
+    },
+    {
+      "player_id": 3912547,
+      "name": "Sam Darnold",
+      "position": "QB",
+      "pro_team": "SEA",
+      "bye_week": null,
+      "projected_total_points": 242.54,
+      "auction_value_avg": 1.21
     },
     {
       "player_id": 3925357,
@@ -1521,7 +1521,7 @@
       "pro_team": "TEN",
       "bye_week": null,
       "projected_total_points": 91.93,
-      "auction_value_avg": 0.29
+      "auction_value_avg": 0.28
     },
     {
       "player_id": 4832800,
@@ -1557,7 +1557,7 @@
       "pro_team": "HOU",
       "bye_week": null,
       "projected_total_points": 246.06,
-      "auction_value_avg": 0.94
+      "auction_value_avg": 0.92
     },
     {
       "player_id": 4702555,
@@ -1566,7 +1566,7 @@
       "pro_team": "DEN",
       "bye_week": null,
       "projected_total_points": 56.95,
-      "auction_value_avg": 0.6
+      "auction_value_avg": 0.59
     },
     {
       "player_id": 4242512,
@@ -1575,7 +1575,7 @@
       "pro_team": "MIA",
       "bye_week": null,
       "projected_total_points": 239.78,
-      "auction_value_avg": 0.96
+      "auction_value_avg": 0.94
     },
     {
       "player_id": 4596334,
@@ -1674,7 +1674,7 @@
       "pro_team": "MIN",
       "bye_week": null,
       "projected_total_points": 99.24,
-      "auction_value_avg": 0.27
+      "auction_value_avg": 0.26
     },
     {
       "player_id": -16027,
@@ -1692,7 +1692,7 @@
       "pro_team": "LV",
       "bye_week": null,
       "projected_total_points": 79.96,
-      "auction_value_avg": 0.27
+      "auction_value_avg": 0.26
     },
     {
       "player_id": 4429022,
@@ -1710,16 +1710,7 @@
       "pro_team": "NYJ",
       "bye_week": null,
       "projected_total_points": 64.03,
-      "auction_value_avg": 0.29
-    },
-    {
-      "player_id": 4819231,
-      "name": "Kaleb Johnson",
-      "position": "RB",
-      "pro_team": "GB",
-      "bye_week": null,
-      "projected_total_points": 6.46,
-      "auction_value_avg": 0.07
+      "auction_value_avg": 0.28
     },
     {
       "player_id": -16006,
@@ -1740,6 +1731,15 @@
       "auction_value_avg": 0.16
     },
     {
+      "player_id": 4819231,
+      "name": "Kaleb Johnson",
+      "position": "RB",
+      "pro_team": "GB",
+      "bye_week": null,
+      "projected_total_points": 6.46,
+      "auction_value_avg": 0.07
+    },
+    {
       "player_id": -16003,
       "name": "Bears D/ST",
       "position": "D/ST",
@@ -1755,7 +1755,7 @@
       "pro_team": "CAR",
       "bye_week": null,
       "projected_total_points": 238.15,
-      "auction_value_avg": 0.48
+      "auction_value_avg": 0.47
     },
     {
       "player_id": 4569559,
@@ -1767,6 +1767,15 @@
       "auction_value_avg": 0.14
     },
     {
+      "player_id": 4241457,
+      "name": "Najee Harris",
+      "position": "RB",
+      "pro_team": "NYG",
+      "bye_week": null,
+      "projected_total_points": 66.36,
+      "auction_value_avg": 0.15
+    },
+    {
       "player_id": 4429501,
       "name": "Ray Davis",
       "position": "RB",
@@ -1776,13 +1785,22 @@
       "auction_value_avg": 0.16
     },
     {
-      "player_id": 4241457,
-      "name": "Najee Harris",
+      "player_id": 4696044,
+      "name": "Kaelon Black",
       "position": "RB",
-      "pro_team": "NYG",
+      "pro_team": "SF",
       "bye_week": null,
-      "projected_total_points": 66.36,
-      "auction_value_avg": 0.15
+      "projected_total_points": 52.25,
+      "auction_value_avg": 0.22
+    },
+    {
+      "player_id": 4428850,
+      "name": "Dontayvion Wicks",
+      "position": "WR",
+      "pro_team": "PHI",
+      "bye_week": null,
+      "projected_total_points": 68.99,
+      "auction_value_avg": 0.2
     },
     {
       "player_id": 4837248,
@@ -1800,34 +1818,7 @@
       "pro_team": "TEN",
       "bye_week": null,
       "projected_total_points": 219.56,
-      "auction_value_avg": 0.46
-    },
-    {
-      "player_id": 4428850,
-      "name": "Dontayvion Wicks",
-      "position": "WR",
-      "pro_team": "PHI",
-      "bye_week": null,
-      "projected_total_points": 68.99,
-      "auction_value_avg": 0.2
-    },
-    {
-      "player_id": 4696044,
-      "name": "Kaelon Black",
-      "position": "RB",
-      "pro_team": "SF",
-      "bye_week": null,
-      "projected_total_points": 52.25,
-      "auction_value_avg": 0.22
-    },
-    {
-      "player_id": 4360516,
-      "name": "Tyrone Tracy Jr.",
-      "position": "RB",
-      "pro_team": "NYG",
-      "bye_week": null,
-      "projected_total_points": 29.02,
-      "auction_value_avg": 0.06
+      "auction_value_avg": 0.45
     },
     {
       "player_id": 4360939,
@@ -1837,6 +1828,15 @@
       "bye_week": null,
       "projected_total_points": 84.67,
       "auction_value_avg": 0.17
+    },
+    {
+      "player_id": 4360516,
+      "name": "Tyrone Tracy Jr.",
+      "position": "RB",
+      "pro_team": "NYG",
+      "bye_week": null,
+      "projected_total_points": 29.02,
+      "auction_value_avg": 0.06
     },
     {
       "player_id": 4586312,
@@ -1872,7 +1872,7 @@
       "pro_team": "MIA",
       "bye_week": null,
       "projected_total_points": 69.55,
-      "auction_value_avg": 0.14
+      "auction_value_avg": 0.13
     },
     {
       "player_id": -16025,
@@ -1899,7 +1899,16 @@
       "pro_team": "PIT",
       "bye_week": null,
       "projected_total_points": 218.83,
-      "auction_value_avg": 0.29
+      "auction_value_avg": 0.28
+    },
+    {
+      "player_id": 3116389,
+      "name": "Samaje Perine",
+      "position": "RB",
+      "pro_team": "CIN",
+      "bye_week": null,
+      "projected_total_points": 81.51,
+      "auction_value_avg": 0.09
     },
     {
       "player_id": 4576297,
@@ -1929,15 +1938,6 @@
       "auction_value_avg": 0.05
     },
     {
-      "player_id": 3116389,
-      "name": "Samaje Perine",
-      "position": "RB",
-      "pro_team": "CIN",
-      "bye_week": null,
-      "projected_total_points": 81.51,
-      "auction_value_avg": 0.09
-    },
-    {
       "player_id": 3149687,
       "name": "Chris Brooks",
       "position": "RB",
@@ -1965,6 +1965,15 @@
       "auction_value_avg": 0.02
     },
     {
+      "player_id": 4832955,
+      "name": "Emmett Johnson",
+      "position": "RB",
+      "pro_team": "KC",
+      "bye_week": null,
+      "projected_total_points": 45.48,
+      "auction_value_avg": 0.14
+    },
+    {
       "player_id": 4428209,
       "name": "Ricky Pearsall",
       "position": "WR",
@@ -1972,15 +1981,6 @@
       "bye_week": null,
       "projected_total_points": 0.0,
       "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4832955,
-      "name": "Emmett Johnson",
-      "position": "RB",
-      "pro_team": "KC",
-      "bye_week": null,
-      "projected_total_points": 45.48,
-      "auction_value_avg": 0.15
     },
     {
       "player_id": 4870612,
@@ -2025,7 +2025,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 198.53,
-      "auction_value_avg": 0.28
+      "auction_value_avg": 0.27
     },
     {
       "player_id": 4686612,
@@ -2046,15 +2046,6 @@
       "auction_value_avg": 0.07
     },
     {
-      "player_id": 5083754,
-      "name": "Ryan Flournoy",
-      "position": "WR",
-      "pro_team": "DAL",
-      "bye_week": null,
-      "projected_total_points": 55.53,
-      "auction_value_avg": 0.05
-    },
-    {
       "player_id": 4682648,
       "name": "Malachi Fields",
       "position": "WR",
@@ -2064,13 +2055,13 @@
       "auction_value_avg": 0.06
     },
     {
-      "player_id": 15864,
-      "name": "Geno Smith",
-      "position": "QB",
-      "pro_team": "NYJ",
+      "player_id": 5083754,
+      "name": "Ryan Flournoy",
+      "position": "WR",
+      "pro_team": "DAL",
       "bye_week": null,
-      "projected_total_points": 233.16,
-      "auction_value_avg": 0.21
+      "projected_total_points": 55.53,
+      "auction_value_avg": 0.05
     },
     {
       "player_id": 4429835,
@@ -2080,6 +2071,15 @@
       "bye_week": null,
       "projected_total_points": 33.45,
       "auction_value_avg": 0.02
+    },
+    {
+      "player_id": 15864,
+      "name": "Geno Smith",
+      "position": "QB",
+      "pro_team": "NYJ",
+      "bye_week": null,
+      "projected_total_points": 233.16,
+      "auction_value_avg": 0.21
     },
     {
       "player_id": 4595342,
@@ -2100,6 +2100,15 @@
       "auction_value_avg": 0.04
     },
     {
+      "player_id": -16020,
+      "name": "Jets D/ST",
+      "position": "D/ST",
+      "pro_team": "NYJ",
+      "bye_week": null,
+      "projected_total_points": 110.5,
+      "auction_value_avg": 0.03
+    },
+    {
       "player_id": 4367209,
       "name": "Greg Dulcich",
       "position": "TE",
@@ -2107,15 +2116,6 @@
       "bye_week": null,
       "projected_total_points": 67.39,
       "auction_value_avg": 0.04
-    },
-    {
-      "player_id": 4685397,
-      "name": "Jordan James",
-      "position": "RB",
-      "pro_team": "SF",
-      "bye_week": null,
-      "projected_total_points": 25.07,
-      "auction_value_avg": 0.05
     },
     {
       "player_id": 5123663,
@@ -2127,13 +2127,13 @@
       "auction_value_avg": 0.04
     },
     {
-      "player_id": -16020,
-      "name": "Jets D/ST",
-      "position": "D/ST",
-      "pro_team": "NYJ",
+      "player_id": 4685397,
+      "name": "Jordan James",
+      "position": "RB",
+      "pro_team": "SF",
       "bye_week": null,
-      "projected_total_points": 110.5,
-      "auction_value_avg": 0.03
+      "projected_total_points": 25.07,
+      "auction_value_avg": 0.05
     },
     {
       "player_id": 3116406,
@@ -2196,7 +2196,7 @@
       "pro_team": "LV",
       "bye_week": null,
       "projected_total_points": 45.81,
-      "auction_value_avg": 0.08
+      "auction_value_avg": 0.07
     },
     {
       "player_id": -16011,
@@ -2235,15 +2235,6 @@
       "auction_value_avg": 0.02
     },
     {
-      "player_id": 5081432,
-      "name": "Antonio Williams",
-      "position": "WR",
-      "pro_team": "WSH",
-      "bye_week": null,
-      "projected_total_points": 51.81,
-      "auction_value_avg": 0.02
-    },
-    {
       "player_id": 4682745,
       "name": "Jaylen Wright",
       "position": "RB",
@@ -2251,6 +2242,15 @@
       "bye_week": null,
       "projected_total_points": 38.34,
       "auction_value_avg": 0.04
+    },
+    {
+      "player_id": 5081432,
+      "name": "Antonio Williams",
+      "position": "WR",
+      "pro_team": "WSH",
+      "bye_week": null,
+      "projected_total_points": 51.81,
+      "auction_value_avg": 0.02
     },
     {
       "player_id": 4432762,
@@ -2298,15 +2298,6 @@
       "auction_value_avg": 0.01
     },
     {
-      "player_id": 4600981,
-      "name": "Pat Bryant",
-      "position": "WR",
-      "pro_team": "DEN",
-      "bye_week": null,
-      "projected_total_points": 44.37,
-      "auction_value_avg": 0.04
-    },
-    {
       "player_id": 4430034,
       "name": "Xavier Legette",
       "position": "WR",
@@ -2314,6 +2305,15 @@
       "bye_week": null,
       "projected_total_points": 58.29,
       "auction_value_avg": 0.02
+    },
+    {
+      "player_id": 4600981,
+      "name": "Pat Bryant",
+      "position": "WR",
+      "pro_team": "DEN",
+      "bye_week": null,
+      "projected_total_points": 44.37,
+      "auction_value_avg": 0.04
     },
     {
       "player_id": 3122840,
@@ -2334,15 +2334,6 @@
       "auction_value_avg": 0.02
     },
     {
-      "player_id": 4685279,
-      "name": "Jaydon Blue",
-      "position": "RB",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0.0,
-      "auction_value_avg": 0.03
-    },
-    {
       "player_id": 4241479,
       "name": "Tua Tagovailoa",
       "position": "QB",
@@ -2359,6 +2350,15 @@
       "bye_week": null,
       "projected_total_points": 72.42,
       "auction_value_avg": 0.02
+    },
+    {
+      "player_id": 4685279,
+      "name": "Jaydon Blue",
+      "position": "RB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0.0,
+      "auction_value_avg": 0.03
     },
     {
       "player_id": 3915411,
@@ -2406,6 +2406,15 @@
       "auction_value_avg": 0.02
     },
     {
+      "player_id": 4383429,
+      "name": "Jacob Saylors",
+      "position": "RB",
+      "pro_team": "DET",
+      "bye_week": null,
+      "projected_total_points": 42.46,
+      "auction_value_avg": 0.01
+    },
+    {
       "player_id": 4869748,
       "name": "Zavion Thomas",
       "position": "WR",
@@ -2449,15 +2458,6 @@
       "bye_week": null,
       "projected_total_points": 78.54,
       "auction_value_avg": 0.02
-    },
-    {
-      "player_id": 4383429,
-      "name": "Jacob Saylors",
-      "position": "RB",
-      "pro_team": "DET",
-      "bye_week": null,
-      "projected_total_points": 42.46,
-      "auction_value_avg": 0.01
     },
     {
       "player_id": 4242557,
@@ -2538,7 +2538,7 @@
       "pro_team": "ATL",
       "bye_week": null,
       "projected_total_points": 113.21,
-      "auction_value_avg": 0.06
+      "auction_value_avg": 0.05
     },
     {
       "player_id": 4249417,
@@ -2548,6 +2548,15 @@
       "bye_week": null,
       "projected_total_points": 54.18,
       "auction_value_avg": 0.01
+    },
+    {
+      "player_id": 4426386,
+      "name": "Roschon Johnson",
+      "position": "RB",
+      "pro_team": "CHI",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
     },
     {
       "player_id": 4362921,
@@ -2586,15 +2595,6 @@
       "auction_value_avg": 0.01
     },
     {
-      "player_id": 4430841,
-      "name": "Carson Beck",
-      "position": "QB",
-      "pro_team": "ARI",
-      "bye_week": null,
-      "projected_total_points": 29.3,
-      "auction_value_avg": 0.02
-    },
-    {
       "player_id": 4686472,
       "name": "Marvin Mims Jr.",
       "position": "WR",
@@ -2602,6 +2602,15 @@
       "bye_week": null,
       "projected_total_points": 45.9,
       "auction_value_avg": 0.01
+    },
+    {
+      "player_id": 4430841,
+      "name": "Carson Beck",
+      "position": "QB",
+      "pro_team": "ARI",
+      "bye_week": null,
+      "projected_total_points": 29.3,
+      "auction_value_avg": 0.02
     },
     {
       "player_id": 3930086,
@@ -2613,6 +2622,15 @@
       "auction_value_avg": 0.01
     },
     {
+      "player_id": 4258595,
+      "name": "Cole Kmet",
+      "position": "TE",
+      "pro_team": "CHI",
+      "bye_week": null,
+      "projected_total_points": 31.97,
+      "auction_value_avg": 0.02
+    },
+    {
       "player_id": 4832846,
       "name": "Demond Claiborne",
       "position": "RB",
@@ -2620,15 +2638,6 @@
       "bye_week": null,
       "projected_total_points": 12.35,
       "auction_value_avg": 0.01
-    },
-    {
-      "player_id": 4258595,
-      "name": "Cole Kmet",
-      "position": "TE",
-      "pro_team": "CHI",
-      "bye_week": null,
-      "projected_total_points": 31.97,
-      "auction_value_avg": 0.03
     },
     {
       "player_id": 4597703,
@@ -2640,15 +2649,6 @@
       "auction_value_avg": 0.01
     },
     {
-      "player_id": 4433970,
-      "name": "J.J. McCarthy",
-      "position": "QB",
-      "pro_team": "MIN",
-      "bye_week": null,
-      "projected_total_points": 10.07,
-      "auction_value_avg": 0.02
-    },
-    {
       "player_id": 4695404,
       "name": "Isaiah Davis",
       "position": "RB",
@@ -2656,6 +2656,15 @@
       "bye_week": null,
       "projected_total_points": 38.14,
       "auction_value_avg": 0.01
+    },
+    {
+      "player_id": 4433970,
+      "name": "J.J. McCarthy",
+      "position": "QB",
+      "pro_team": "MIN",
+      "bye_week": null,
+      "projected_total_points": 10.07,
+      "auction_value_avg": 0.02
     },
     {
       "player_id": 4683153,
@@ -2721,6 +2730,15 @@
       "auction_value_avg": 0.01
     },
     {
+      "player_id": 4911851,
+      "name": "LeQuint Allen Jr.",
+      "position": "RB",
+      "pro_team": "JAX",
+      "bye_week": null,
+      "projected_total_points": 23.45,
+      "auction_value_avg": 0.01
+    },
+    {
       "player_id": 4431574,
       "name": "Eli Stowers",
       "position": "TE",
@@ -2730,12 +2748,12 @@
       "auction_value_avg": 0.01
     },
     {
-      "player_id": 4911851,
-      "name": "LeQuint Allen Jr.",
-      "position": "RB",
-      "pro_team": "JAX",
+      "player_id": 4686422,
+      "name": "Xavier Hutchinson",
+      "position": "WR",
+      "pro_team": "HOU",
       "bye_week": null,
-      "projected_total_points": 23.45,
+      "projected_total_points": 56.76,
       "auction_value_avg": 0.01
     },
     {
@@ -2757,12 +2775,12 @@
       "auction_value_avg": 0.01
     },
     {
-      "player_id": 4686422,
-      "name": "Xavier Hutchinson",
-      "position": "WR",
-      "pro_team": "HOU",
+      "player_id": 4596602,
+      "name": "Brashard Smith",
+      "position": "RB",
+      "pro_team": "KC",
       "bye_week": null,
-      "projected_total_points": 56.76,
+      "projected_total_points": 43.28,
       "auction_value_avg": 0.01
     },
     {
@@ -2784,12 +2802,12 @@
       "auction_value_avg": 0.01
     },
     {
-      "player_id": 4596602,
-      "name": "Brashard Smith",
-      "position": "RB",
-      "pro_team": "KC",
+      "player_id": 4429148,
+      "name": "Theo Johnson",
+      "position": "TE",
+      "pro_team": "NYG",
       "bye_week": null,
-      "projected_total_points": 43.28,
+      "projected_total_points": 36.26,
       "auction_value_avg": 0.01
     },
     {
@@ -2799,15 +2817,6 @@
       "pro_team": "IND",
       "bye_week": null,
       "projected_total_points": 11.29,
-      "auction_value_avg": 0.01
-    },
-    {
-      "player_id": 4429148,
-      "name": "Theo Johnson",
-      "position": "TE",
-      "pro_team": "NYG",
-      "bye_week": null,
-      "projected_total_points": 36.26,
       "auction_value_avg": 0.01
     },
     {
@@ -2892,15 +2901,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4613202,
-      "name": "Kyle Williams",
-      "position": "WR",
-      "pro_team": "NE",
-      "bye_week": null,
-      "projected_total_points": 34.89,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 2573401,
       "name": "Tyler Higbee",
       "position": "TE",
@@ -2916,6 +2916,15 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 70.23,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4613202,
+      "name": "Kyle Williams",
+      "position": "WR",
+      "pro_team": "NE",
+      "bye_week": null,
+      "projected_total_points": 34.89,
       "auction_value_avg": 0.0
     },
     {
@@ -3027,15 +3036,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4912274,
-      "name": "Sione Vaki",
-      "position": "RB",
-      "pro_team": "DET",
-      "bye_week": null,
-      "projected_total_points": 5.81,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4831959,
       "name": "Eli Raridon",
       "position": "TE",
@@ -3045,12 +3045,12 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4372561,
-      "name": "Isaac Guerendo",
+      "player_id": 4912274,
+      "name": "Sione Vaki",
       "position": "RB",
-      "pro_team": "SF",
+      "pro_team": "DET",
       "bye_week": null,
-      "projected_total_points": 0.0,
+      "projected_total_points": 5.81,
       "auction_value_avg": 0.0
     },
     {
@@ -3060,6 +3060,15 @@
       "pro_team": "CAR",
       "bye_week": null,
       "projected_total_points": 22.8,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4372561,
+      "name": "Isaac Guerendo",
+      "position": "RB",
+      "pro_team": "SF",
+      "bye_week": null,
+      "projected_total_points": 0.0,
       "auction_value_avg": 0.0
     },
     {
@@ -3162,6 +3171,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4429084,
+      "name": "Anthony Richardson Sr.",
+      "position": "QB",
+      "pro_team": "IND",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 2973405,
       "name": "Kalif Raymond",
       "position": "WR",
@@ -3216,15 +3234,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 5092508,
-      "name": "Colbie Young",
-      "position": "WR",
-      "pro_team": "CIN",
-      "bye_week": null,
-      "projected_total_points": 19.0,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4883647,
       "name": "Elic Ayomanor",
       "position": "WR",
@@ -3234,12 +3243,12 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4429084,
-      "name": "Anthony Richardson Sr.",
-      "position": "QB",
-      "pro_team": "IND",
+      "player_id": 4685307,
+      "name": "Kevin Coleman Jr.",
+      "position": "WR",
+      "pro_team": "MIA",
       "bye_week": null,
-      "projected_total_points": 0,
+      "projected_total_points": 39.9,
       "auction_value_avg": 0.0
     },
     {
@@ -3279,21 +3288,21 @@
       "auction_value_avg": 0.02
     },
     {
+      "player_id": 5092508,
+      "name": "Colbie Young",
+      "position": "WR",
+      "pro_team": "CIN",
+      "bye_week": null,
+      "projected_total_points": 19.0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 3116385,
       "name": "Joe Mixon",
       "position": "RB",
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4685307,
-      "name": "Kevin Coleman Jr.",
-      "position": "WR",
-      "pro_team": "MIA",
-      "bye_week": null,
-      "projected_total_points": 39.9,
       "auction_value_avg": 0.0
     },
     {
@@ -3324,6 +3333,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4695193,
+      "name": "Efton Chism III",
+      "position": "WR",
+      "pro_team": "NE",
+      "bye_week": null,
+      "projected_total_points": 6.59,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 5150247,
       "name": "Malik Benson",
       "position": "WR",
@@ -3340,6 +3358,15 @@
       "bye_week": null,
       "projected_total_points": 17.99,
       "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4384852,
+      "name": "Dohnte Meyers",
+      "position": "WR",
+      "pro_team": "CIN",
+      "bye_week": null,
+      "projected_total_points": 6.48,
+      "auction_value_avg": 0.01
     },
     {
       "player_id": 4708486,
@@ -3387,39 +3414,12 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4695193,
-      "name": "Efton Chism III",
-      "position": "WR",
-      "pro_team": "NE",
-      "bye_week": null,
-      "projected_total_points": 6.59,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 5160110,
       "name": "Jahdae Walker",
       "position": "WR",
       "pro_team": "CHI",
       "bye_week": null,
       "projected_total_points": 5.5,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4384852,
-      "name": "Dohnte Meyers",
-      "position": "WR",
-      "pro_team": "CIN",
-      "bye_week": null,
-      "projected_total_points": 6.48,
-      "auction_value_avg": 0.01
-    },
-    {
-      "player_id": 4429939,
-      "name": "Jawhar Jordan",
-      "position": "RB",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0.0,
       "auction_value_avg": 0.0
     },
     {
@@ -3450,6 +3450,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4383396,
+      "name": "Hunter Luepke",
+      "position": "RB",
+      "pro_team": "DAL",
+      "bye_week": null,
+      "projected_total_points": 16.47,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 4685413,
       "name": "Cade Klubnik",
       "position": "QB",
@@ -3468,21 +3477,12 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4426386,
-      "name": "Roschon Johnson",
+      "player_id": 4429939,
+      "name": "Jawhar Jordan",
       "position": "RB",
-      "pro_team": "CHI",
+      "pro_team": "None",
       "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4383396,
-      "name": "Hunter Luepke",
-      "position": "RB",
-      "pro_team": "DAL",
-      "bye_week": null,
-      "projected_total_points": 16.47,
+      "projected_total_points": 0.0,
       "auction_value_avg": 0.0
     },
     {
@@ -3538,6 +3538,15 @@
       "bye_week": null,
       "projected_total_points": 21.82,
       "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4808759,
+      "name": "Camden Brown",
+      "position": "WR",
+      "pro_team": "DAL",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.01
     },
     {
       "player_id": 4428085,
@@ -3628,15 +3637,6 @@
       "bye_week": null,
       "projected_total_points": 0.0,
       "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4808759,
-      "name": "Camden Brown",
-      "position": "WR",
-      "pro_team": "DAL",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.01
     },
     {
       "player_id": 3917914,
@@ -3778,15 +3778,6 @@
       "name": "Josh Williams",
       "position": "RB",
       "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0.0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4682652,
-      "name": "Devin Neal",
-      "position": "RB",
-      "pro_team": "NO",
       "bye_week": null,
       "projected_total_points": 0.0,
       "auction_value_avg": 0.0
@@ -3936,10 +3927,10 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4912052,
-      "name": "Justin Joly",
-      "position": "TE",
-      "pro_team": "MIA",
+      "player_id": 4682652,
+      "name": "Devin Neal",
+      "position": "RB",
+      "pro_team": "NO",
       "bye_week": null,
       "projected_total_points": 0.0,
       "auction_value_avg": 0.0
@@ -3987,15 +3978,6 @@
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0.0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4374033,
-      "name": "Jermar Jefferson",
-      "position": "RB",
-      "pro_team": "MIN",
-      "bye_week": null,
-      "projected_total_points": 0,
       "auction_value_avg": 0.0
     },
     {
@@ -4107,6 +4089,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4912052,
+      "name": "Justin Joly",
+      "position": "TE",
+      "pro_team": "MIA",
+      "bye_week": null,
+      "projected_total_points": 0.0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 4430870,
       "name": "KeAndre Lambert-Smith",
       "position": "WR",
@@ -4152,6 +4143,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4374033,
+      "name": "Jermar Jefferson",
+      "position": "RB",
+      "pro_team": "MIN",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 5344782,
       "name": "Jack Strand",
       "position": "QB",
@@ -4176,7 +4176,7 @@
       "pro_team": "ARI",
       "bye_week": null,
       "projected_total_points": 7.13,
-      "auction_value_avg": 0.01
+      "auction_value_avg": 0.0
     },
     {
       "player_id": 4429805,
@@ -4356,15 +4356,6 @@
       "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 5.43,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 3886812,
-      "name": "Jake Browning",
-      "position": "QB",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0.0,
       "auction_value_avg": 0.0
     },
     {
@@ -4566,6 +4557,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 3886812,
+      "name": "Jake Browning",
+      "position": "QB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0.0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 3929914,
       "name": "Adam Prentice",
       "position": "RB",
@@ -4626,15 +4626,6 @@
       "pro_team": "TB",
       "bye_week": null,
       "projected_total_points": 3.7,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 16460,
-      "name": "Adam Thielen",
-      "position": "WR",
-      "pro_team": "PIT",
-      "bye_week": null,
-      "projected_total_points": 0,
       "auction_value_avg": 0.0
     },
     {
@@ -4719,15 +4710,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4432338,
-      "name": "Luke Lachey",
-      "position": "TE",
-      "pro_team": "GB",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4035004,
       "name": "Mecole Hardman Jr.",
       "position": "WR",
@@ -4788,15 +4770,6 @@
       "pro_team": "JAX",
       "bye_week": null,
       "projected_total_points": 5.73,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4565859,
-      "name": "Joe Royer",
-      "position": "TE",
-      "pro_team": "CLE",
-      "bye_week": null,
-      "projected_total_points": 0.0,
       "auction_value_avg": 0.0
     },
     {
@@ -4899,15 +4872,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4429105,
-      "name": "Arian Smith",
-      "position": "WR",
-      "pro_team": "NYJ",
-      "bye_week": null,
-      "projected_total_points": 3.52,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4036032,
       "name": "Brittain Brown",
       "position": "RB",
@@ -5005,15 +4969,6 @@
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4431506,
-      "name": "Ja'Corey Brooks",
-      "position": "WR",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.01
     },
     {
       "player_id": 3126997,
@@ -5121,6 +5076,15 @@
       "pro_team": "NYG",
       "bye_week": null,
       "projected_total_points": 2.32,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 16460,
+      "name": "Adam Thielen",
+      "position": "WR",
+      "pro_team": "PIT",
+      "bye_week": null,
+      "projected_total_points": 0,
       "auction_value_avg": 0.0
     },
     {
@@ -5241,6 +5205,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4432338,
+      "name": "Luke Lachey",
+      "position": "TE",
+      "pro_team": "GB",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 4573697,
       "name": "Mason Tipton",
       "position": "WR",
@@ -5322,6 +5295,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4565859,
+      "name": "Joe Royer",
+      "position": "TE",
+      "pro_team": "CLE",
+      "bye_week": null,
+      "projected_total_points": 0.0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 15168,
       "name": "Case Keenum",
       "position": "QB",
@@ -5335,6 +5317,15 @@
       "name": "Colson Yankoff",
       "position": "TE",
       "pro_team": "WSH",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4430723,
+      "name": "Jared Wiley",
+      "position": "TE",
+      "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
@@ -5448,6 +5439,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4429105,
+      "name": "Arian Smith",
+      "position": "WR",
+      "pro_team": "NYJ",
+      "bye_week": null,
+      "projected_total_points": 3.52,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 4050373,
       "name": "Quez Watkins",
       "position": "WR",
@@ -5520,19 +5520,19 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4372071,
-      "name": "Hassan Haskins",
-      "position": "RB",
+      "player_id": 5178972,
+      "name": "Jakobie Keeney-James",
+      "position": "WR",
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 5178972,
-      "name": "Jakobie Keeney-James",
+      "player_id": 4685441,
+      "name": "Kendrick Law",
       "position": "WR",
-      "pro_team": "None",
+      "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
@@ -5572,6 +5572,15 @@
       "bye_week": null,
       "projected_total_points": 0.0,
       "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4431506,
+      "name": "Ja'Corey Brooks",
+      "position": "WR",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.01
     },
     {
       "player_id": 4429466,
@@ -5727,15 +5736,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4245645,
-      "name": "Gary Brightwell",
-      "position": "RB",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4698253,
       "name": "Lan Larison",
       "position": "RB",
@@ -5805,6 +5805,15 @@
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0.0,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4686104,
+      "name": "Johnny Wilson",
+      "position": "WR",
+      "pro_team": "PHI",
+      "bye_week": null,
+      "projected_total_points": 0,
       "auction_value_avg": 0.0
     },
     {
@@ -5916,6 +5925,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4878878,
+      "name": "Amar Johnson",
+      "position": "RB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 4360739,
       "name": "Simi Fehoko",
       "position": "WR",
@@ -5970,15 +5988,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4039358,
-      "name": "Patrick Taylor Jr.",
-      "position": "RB",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4250360,
       "name": "Bailey Zappe",
       "position": "QB",
@@ -6010,15 +6019,6 @@
       "name": "Athan Kaliakmanis",
       "position": "QB",
       "pro_team": "WSH",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4430723,
-      "name": "Jared Wiley",
-      "position": "TE",
-      "pro_team": "KC",
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
@@ -6153,15 +6153,6 @@
       "player_id": 4242540,
       "name": "Isaiah Hodgins",
       "position": "WR",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4035693,
-      "name": "Velus Jones Jr.",
-      "position": "RB",
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0,
@@ -6384,6 +6375,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4372071,
+      "name": "Hassan Haskins",
+      "position": "RB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 3929637,
       "name": "Dan Chisena",
       "position": "WR",
@@ -6415,15 +6415,6 @@
       "name": "Ricky White III",
       "position": "WR",
       "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4685441,
-      "name": "Kendrick Law",
-      "position": "WR",
-      "pro_team": "DET",
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
@@ -7113,6 +7104,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4245645,
+      "name": "Gary Brightwell",
+      "position": "RB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 3115255,
       "name": "Brandon Powell",
       "position": "WR",
@@ -7239,6 +7239,15 @@
       "auction_value_avg": 0.0
     },
     {
+      "player_id": 4362603,
+      "name": "Brenden Bates",
+      "position": "TE",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
       "player_id": 3121427,
       "name": "Curtis Samuel",
       "position": "WR",
@@ -7315,15 +7324,6 @@
       "name": "Kyle Trask",
       "position": "QB",
       "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4686104,
-      "name": "Johnny Wilson",
-      "position": "WR",
-      "pro_team": "PHI",
       "bye_week": null,
       "projected_total_points": 0,
       "auction_value_avg": 0.0
@@ -7581,15 +7581,6 @@
       "auction_value_avg": 0.0
     },
     {
-      "player_id": 4878878,
-      "name": "Amar Johnson",
-      "position": "RB",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
       "player_id": 4700712,
       "name": "Cam Grandy",
       "position": "TE",
@@ -7601,6 +7592,15 @@
     {
       "player_id": 4039274,
       "name": "Jonathan Ward",
+      "position": "RB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4039358,
+      "name": "Patrick Taylor Jr.",
       "position": "RB",
       "pro_team": "None",
       "bye_week": null,
@@ -8088,6 +8088,15 @@
       "player_id": 3722362,
       "name": "Brett Rypien",
       "position": "QB",
+      "pro_team": "None",
+      "bye_week": null,
+      "projected_total_points": 0,
+      "auction_value_avg": 0.0
+    },
+    {
+      "player_id": 4035693,
+      "name": "Velus Jones Jr.",
+      "position": "RB",
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0,
@@ -8610,15 +8619,6 @@
       "player_id": 4043016,
       "name": "Dee Eskridge",
       "position": "WR",
-      "pro_team": "None",
-      "bye_week": null,
-      "projected_total_points": 0,
-      "auction_value_avg": 0.0
-    },
-    {
-      "player_id": 4362603,
-      "name": "Brenden Bates",
-      "position": "TE",
       "pro_team": "None",
       "bye_week": null,
       "projected_total_points": 0,
