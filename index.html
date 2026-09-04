@@ -984,6 +984,51 @@ function wireModes(){
   });
 }
 
+// Per-league draft-log storage. `snakeDraft.picks`/`zimmerDraft.picks` are
+// single shared arrays read by dozens of functions across the app (Draft Log,
+// My Team, ptDraftedMap, the WAR chart, TruRank plan...) -- rather than touch
+// every one of those call sites, this snapshots whichever league's log is
+// active into here right before the tab switches, and restores the new
+// league's own log into the same shared arrays.
+//
+// BUG FIXED: switching league tabs never touched the picks arrays at all, so
+// logging a full draft in one league (e.g. Miami, ~128 picks) left every one
+// of those picks sitting in memory when you switched to another league (e.g.
+// Kepners) -- ptDraftedMap() has no per-league filter, so it read Miami's
+// leftover picks as if they were Kepners picks and marked real, undrafted
+// Kepners players (Amon-Ra St. Brown among them) as already gone. Confirmed
+// live during Sean's actual Kepners draft.
+const _leagueDraftStore = {}; // { [league]: {picks, selectedPlayerId, wasAuction} }
+
+function saveActiveLeagueDraftState(){
+  const wasAuction = isAuctionLeague();
+  _leagueDraftStore[activeLeague] = {
+    picks: (wasAuction ? zimmerDraft.picks : snakeDraft.picks).slice(),
+    selectedPlayerId: snakeDraft.selectedPlayerId,
+    wasAuction,
+  };
+}
+
+// Must be called AFTER activeLeague is set to the league being switched TO --
+// isAuctionLeague() reads that global, and the new league's own format (not
+// the departing one's) decides which array the restored picks land in.
+function restoreLeagueDraftState(){
+  const saved = _leagueDraftStore[activeLeague];
+  const picks = (saved && saved.picks) ? saved.picks.slice() : [];
+  const selected = saved ? saved.selectedPlayerId : null;
+  if(isAuctionLeague()){
+    zimmerDraft.picks = picks;
+    zimmerDraft.selectedPlayerId = selected;
+    snakeDraft.picks = [];
+    snakeDraft.selectedPlayerId = null;
+  } else {
+    snakeDraft.picks = picks;
+    snakeDraft.selectedPlayerId = selected;
+    zimmerDraft.picks = [];
+    zimmerDraft.selectedPlayerId = null;
+  }
+}
+
 function renderLeagueTabs(){
   const el=document.getElementById('leagues');
   const names={kepners:'KEPNERS KEEPERS',miami:'MIAMI DOMERS',zimmer:'ZIMMER'};
@@ -993,7 +1038,10 @@ function renderLeagueTabs(){
       <span class="plat">${lg.platform.toUpperCase()} · ${lg.myTeam}</span></button>`;
   }).join('');
   el.querySelectorAll('button').forEach(b=>b.onclick=()=>{
+    if(b.dataset.k===activeLeague) return;   // no-op click on the already-active tab
+    saveActiveLeagueDraftState();
     activeLeague=b.dataset.k;
+    restoreLeagueDraftState();
     el.querySelectorAll('button').forEach(x=>x.classList.toggle('on',x===b));
     render();
   });
