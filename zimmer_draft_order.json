@@ -1,0 +1,20 @@
+{
+  "_comment": "Hand-entered 2026 Zimmer draft order. Zimmer (ESPN) has no live draft-order sync of any kind -- Sean reports the order directly and this file is updated by hand, same pattern as miami_draft_order.json / miami_roster_snapshot_2025.json's confirmed_keepers block. Team names must match leagues.zimmer.teams[].team in bigboard.json exactly (Zimmer has no separate manager identity -- that field just duplicates the team name), or convert_bigboard.py will flag them as unmatched instead of guessing.",
+  "manager_note": "Sean reported this order using casual nicknames/renamed labels rather than the exact bigboard.json team names. Mapped as follows -- flag if any of these are wrong: Jim -> 'Schuylkill River Clams' (pick 1, corrected from an initial 'Letten' guess); Zimmer -> \"IT'S COMING HOME\" (pick 2, corrected from an initial 'Its coming home' guess -- same team, just exact-cased here); Fe Brees -> 'The Fe-Brees Brothers'; Dangerous Nights -> 'Dangerous Nights Crew'; Bake N Shake / Flacco -> 'Flacco Tuesday' (renamed team, same owner); Spokane Bears / Cole -> 'Spokane Beers' (renamed team, same owner); Texas Chup / Pablo -> 'TEXAS CHUPACABRAS'; Maryland Mennace / McKenna -> 'Maryland Menace' (same team, Sean's spelling varies); Da Bears / Violi -> \"ZANDER HORVATH'S TEAM\"; DQuans Friend -> \"D'Quan's Friend\"; Ben Jarvis -> 'Ben Jarvis Green Ellis LLP'.",
+  "source": "Reported directly by Sean",
+  "generated": "2026-09-06T00:00:00+00:00",
+  "draft_order": [
+    { "pick": 1,  "team": "Schuylkill River Clams" },
+    { "pick": 2,  "team": "IT'S COMING HOME" },
+    { "pick": 3,  "team": "The Fe-Brees Brothers" },
+    { "pick": 4,  "team": "Dangerous Nights Crew" },
+    { "pick": 5,  "team": "Elements of Intrigue" },
+    { "pick": 6,  "team": "Flacco Tuesday" },
+    { "pick": 7,  "team": "Spokane Beers" },
+    { "pick": 8,  "team": "TEXAS CHUPACABRAS" },
+    { "pick": 9,  "team": "Maryland Menace" },
+    { "pick": 10, "team": "ZANDER HORVATH'S TEAM" },
+    { "pick": 11, "team": "D'Quan's Friend" },
+    { "pick": 12, "team": "Ben Jarvis Green Ellis LLP" }
+  ]
+}
