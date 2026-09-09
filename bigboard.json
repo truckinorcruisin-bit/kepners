@@ -1,7 +1,7 @@
 {
   "meta": {
     "season": 2026,
-    "generated": "2026-09-09T01:01:39.465114+00:00",
+    "generated": "2026-09-09T01:04:47.614214+00:00",
     "marketDriftBands": {
       "kepners": {
         "adpSource2026": "yahoo",
@@ -19226,73 +19226,85 @@
           "slot": null,
           "team": "IT'S COMING HOME",
           "manager": "IT'S COMING HOME",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 2
         },
         {
           "slot": null,
           "team": "Schuylkill River Clams",
           "manager": "Schuylkill River Clams",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 1
         },
         {
           "slot": null,
           "team": "Ben Jarvis Green Ellis LLP",
           "manager": "Ben Jarvis Green Ellis LLP",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 12
         },
         {
           "slot": null,
           "team": "D'Quan's Friend",
           "manager": "D'Quan's Friend",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 11
         },
         {
           "slot": null,
           "team": "The Fe-Brees Brothers",
           "manager": "The Fe-Brees Brothers",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 3
         },
         {
           "slot": null,
           "team": "Flacco Tuesday",
           "manager": "Flacco Tuesday",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 6
         },
         {
           "slot": null,
           "team": "Spokane Beers",
           "manager": "Spokane Beers",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 7
         },
         {
           "slot": null,
           "team": "ZANDER HORVATH'S TEAM",
           "manager": "ZANDER HORVATH'S TEAM",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 10
         },
         {
           "slot": null,
           "team": "TEXAS CHUPACABRAS",
           "manager": "TEXAS CHUPACABRAS",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 8
         },
         {
           "slot": null,
           "team": "Elements of Intrigue",
           "manager": "Elements of Intrigue",
-          "isMe": true
+          "isMe": true,
+          "draftPosition": 5
         },
         {
           "slot": null,
           "team": "Maryland Menace",
           "manager": "Maryland Menace",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 9
         },
         {
           "slot": null,
           "team": "Dangerous Nights Crew",
           "manager": "Dangerous Nights Crew",
-          "isMe": false
+          "isMe": false,
+          "draftPosition": 4
         }
       ],
       "rosterSlots": [
@@ -19428,7 +19440,9 @@
         "great": 9.9,
         "good": 0.8,
         "fairFloor": -2.6
-      }
+      },
+      "draftOrderGenerated": "2026-09-06T00:00:00+00:00",
+      "draftOrderUnmatched": []
     }
   }
 }
