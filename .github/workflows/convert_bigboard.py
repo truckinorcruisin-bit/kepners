@@ -319,39 +319,19 @@ def read_players(wb):
                seanPosRank=11, yahoo=13, underdog=14, cbs=16, espn=17,
                ffpc=18, sleeper=19, nfl=20, avgRank=21, avgRound=22,
                myDiff=23, notes=25)
-
-    def blank(v):
-        return v in (None, "", "#N/A")
-
-    players_by_name = {}   # normalized name -> merged player dict
-    order = []              # preserves first-seen order for stable output
-    skipped_stray = 0
-    merged_dupes = 0
-
+    players = []
     for r in range(7, ws.max_row + 1):
         name = norm(ws.cell(r, COL["player"]).value)
         if not name:
             continue
-        team = norm(ws.cell(r, COL["team"]).value)
-        raw_pos = norm(ws.cell(r, COL["pos"]).value)
-        # A real Big Board row ALWAYS has team + position filled in. The
-        # workbook has a trailing scratch/watch list of bare names below the
-        # real table (no header, no row-number boundary that survives the
-        # board being resized) -- those rows have every other field blank and
-        # are not real ranked entries. Skip them outright rather than
-        # ingesting them as phantom players.
-        if blank(team) and blank(raw_pos):
-            skipped_stray += 1
-            continue
-
-        pos = canonical_position(raw_pos)
+        pos = canonical_position(norm(ws.cell(r, COL["pos"]).value))
         if pos in (None, "#N/A"):
             pos = "NA"
         tier = norm(ws.cell(r, COL["tier"]).value)
-        row_data = {
+        players.append({
             "id": slug(name),
             "name": name,
-            "team": team,
+            "team": norm(ws.cell(r, COL["team"]).value),
             "pos": pos,
             "seanPosRank": ws.cell(r, COL["seanPosRank"]).value,
             "tier": tier,
@@ -371,37 +351,8 @@ def read_players(wb):
                 "nfl": ws.cell(r, COL["nfl"]).value,
             },
             "notes": norm(ws.cell(r, COL["notes"]).value),
-        }
-
-        key = name.lower()
-        if key not in players_by_name:
-            players_by_name[key] = row_data
-            order.append(key)
-        else:
-            # Genuine duplicate row for the same player (confirmed against
-            # the 2026 workbook: these are never conflicting edits -- one
-            # occurrence is sometimes missing a field, like a Notes/rookie
-            # tag, that the other has). Merge field-by-field, first
-            # non-blank value wins, so nothing gets silently dropped.
-            merged_dupes += 1
-            existing = players_by_name[key]
-            for k, v in row_data.items():
-                if k == "platform":
-                    for pk, pv in v.items():
-                        if blank(existing["platform"].get(pk)) and not blank(pv):
-                            existing["platform"][pk] = pv
-                elif blank(existing.get(k)) and not blank(v):
-                    existing[k] = v
-
-    if skipped_stray:
-        print(f"Skipped {skipped_stray} row(s) with no team/pos (trailing "
-              f"scratch list, not real Big Board entries).")
-    if merged_dupes:
-        print(f"Merged {merged_dupes} duplicate player row(s) found in the "
-              f"sheet -- same player listed more than once. Consider "
-              f"cleaning these up in the workbook directly.")
-
-    return [players_by_name[k] for k in order]
+        })
+    return players
 
 
 def read_team_sheet(wb, sheet, platform, my_team):
@@ -482,6 +433,70 @@ def merge_kepners_draft_order(kepners_league, path="kepners_draft_order.json"):
     kepners_league["draftOrderUnmatched"] = data.get("unmatched_managers", [])
 
 
+def merge_miami_draft_order(miami_league, path="miami_draft_order.json"):
+    """Attaches draftPosition onto each Miami team from a hand-maintained file.
+
+    Miami has no live Google Sheet sync (Yahoo API blocked), so Sean reports
+    the draft order directly and miami_draft_order.json is updated by hand
+    instead of pulled from a workflow. Optional -- if the file doesn't exist,
+    teams are left without draftPosition (site shows TBD, not an error).
+    Manager names that don't match a known team are surfaced via
+    draftOrderUnmatched rather than silently dropped, same as the Kepners
+    sync above.
+    """
+    if not os.path.exists(path):
+        return
+    data = json.load(open(path))
+    known = {(t.get("manager") or "").lower(): t for t in miami_league.get("teams", [])}
+    unmatched = []
+    for r in data.get("draft_order", []):
+        manager = r.get("manager")
+        if not manager:
+            continue
+        t = known.get(manager.lower())
+        if not t:
+            unmatched.append(manager)
+            continue
+        t["draftPosition"] = r["pick"]
+    miami_league["draftOrderGenerated"] = data.get("generated")
+    miami_league["draftOrderUnmatched"] = unmatched
+
+
+def merge_zimmer_draft_order(zimmer_league, path="zimmer_draft_order.json"):
+    """Attaches draftPosition onto each Zimmer team from a hand-maintained file.
+
+    Zimmer (ESPN) has no live draft-order sync of any kind -- unlike Kepners'
+    Google Sheet pull, this is reported directly and zimmer_draft_order.json
+    is updated by hand. Optional -- if the file doesn't exist, teams are left
+    without draftPosition and the snake cockpit (My Team, on-the-clock, Deep
+    Dive, TruRank plan) simply can't compute picks for this league yet,
+    rather than erroring.
+
+    KEYED ON TEAM NAME, not manager: Zimmer's `manager` field currently just
+    duplicates the team name (no separate person-name source exists for this
+    league the way Kepners/Miami have real nicknames), so team name is the
+    only stable, already-correct identifier available to match against.
+    Unmatched names are surfaced via draftOrderUnmatched rather than silently
+    dropped, same as the Kepners/Miami merges above.
+    """
+    if not os.path.exists(path):
+        return
+    data = json.load(open(path))
+    known = {(t.get("team") or "").strip().lower(): t for t in zimmer_league.get("teams", [])}
+    unmatched = []
+    for r in data.get("draft_order", []):
+        team = r.get("team")
+        if not team:
+            continue
+        t = known.get(team.strip().lower())
+        if not t:
+            unmatched.append(team)
+            continue
+        t["draftPosition"] = r["pick"]
+    zimmer_league["draftOrderGenerated"] = data.get("generated")
+    zimmer_league["draftOrderUnmatched"] = unmatched
+
+
 def keeper_value_tiers_for_league(players, league_key, teams, roster_slots):
     """Keeper Value tier cutoffs derived from this league's own distribution.
 
@@ -547,6 +562,45 @@ def keeper_value_tiers_for_league(players, league_key, teams, roster_slots):
     }
 
 
+ADP_2025_SHEET = "2025 Big Board"
+ADP_2025_OUT = "kepners_adp_2025.json"
+
+
+def read_2025_yahoo_adp(wb):
+    """Extracts the 2025 season's Yahoo ADP from the '2025 Big Board' tab so
+    past drafts can be graded on reach-vs-ADP *as it stood that year*.
+
+    Column M ("Y!") is deliberately used rather than column U ("Avg Rank",
+    which market_drift.read_2025_board pulls): Kepners drafts on Yahoo, so the
+    Yahoo board is the market those owners were actually looking at. Grading
+    reach against a cross-platform blended average would measure it against a
+    market nobody in this league drafted from.
+
+    Defenses need special handling: the Big Board lists them as full team
+    names ("Denver Broncos") while the Yahoo draft export uses the nickname
+    only ("Broncos"), so both keys are emitted. Without this ~12 picks per
+    season silently drop out of the sample.
+    """
+    if ADP_2025_SHEET not in wb.sheetnames:
+        return {}
+    ws = wb[ADP_2025_SHEET]
+    COL_PLAYER, COL_POS, COL_YAHOO = 7, 9, 13   # G / I / M, header row 6
+    adp = {}
+    for r in range(7, ws.max_row + 1):
+        name = norm(ws.cell(r, COL_PLAYER).value)
+        if not name:
+            continue
+        raw = ws.cell(r, COL_YAHOO).value
+        if not isinstance(raw, (int, float)):
+            continue          # "-", "#N/A" or blank -> genuinely no Yahoo rank
+        rank = float(raw)
+        adp[normalize_name(name)] = rank
+        pos = canonical_position(norm(ws.cell(r, COL_POS).value))
+        if pos == "DEF":
+            adp[normalize_name(name.split()[-1])] = rank
+    return adp
+
+
 def main(src, dst):
     # Lazy import: openpyxl is only needed here (Excel parsing), not by the
     # rest of this module (e.g. normalize_name, which other scripts like
@@ -596,6 +650,32 @@ def main(src, dst):
     # that config exists.
     merge_espn_values(players, out["leagues"])
 
+    # Market drift / TruRank. Runs AFTER merge_espn_values because the talent
+    # half of the metric needs warByLeague to exist. Lazy import mirrors the
+    # openpyxl pattern and avoids an import cycle (market_drift borrows
+    # normalize_name/canonical_position back from this module).
+    import market_drift
+    board_2025 = market_drift.read_2025_board(
+        wb, fallback_cols={"player": 7, "team": 8, "pos": 9, "avgRank": 21})
+    repl_by_league = {}
+    for league_key, league_data in out["leagues"].items():
+        rules_for = league_data.get("rules") or {}
+        team_count = rules_for.get("teams")
+        slots = league_data.get("rosterSlots") or rules_for.get("rosterSlots") or []
+        if isinstance(team_count, int) and slots:
+            repl_by_league[league_key] = replacement_ranks_for_league(team_count, slots)
+    out["meta"]["marketDriftBands"] = market_drift.compute(
+        players, board_2025, list(out["leagues"]), repl_by_league,
+        platform_by_league={k: v.get("platform") for k, v in out["leagues"].items()})
+    out["meta"]["marketDriftConfig"] = {
+        "smoothWindow": market_drift.SMOOTH_WINDOW,
+        "talentSmoothWindow": market_drift.TALENT_SMOOTH_WINDOW,
+        "neutralDeadband": market_drift.NEUTRAL_DEADBAND,
+        "talentPoolSize": market_drift.TALENT_POOL_SIZE,
+        "talentWeight": market_drift.TALENT_WEIGHT,
+        "priorSeason": 2025,
+    }
+
     # Keeper Value tiers, calibrated to each league's own KV distribution.
     for league_key, league_data in out["leagues"].items():
         rules_for = league_data.get("rules") or {}
@@ -606,6 +686,8 @@ def main(src, dst):
                 players, league_key, team_count, slots)
 
     merge_kepners_draft_order(out["leagues"]["kepners"])
+    merge_miami_draft_order(out["leagues"]["miami"])
+    merge_zimmer_draft_order(out["leagues"]["zimmer"])
 
     with open(dst, "w") as f:
         json.dump(out, f, indent=2)
@@ -615,6 +697,21 @@ def main(src, dst):
         has_rules = "rules" in v
         print(f"  {k}: {len(v['teams'])} teams, {len(v['keepers'])} keepers, "
               f"roster={v['rosterSlots']}, rules_loaded={has_rules}")
+
+    # Historical Yahoo ADP, written as its own file rather than folded into
+    # bigboard.json because its only consumer is kepners_analysis.py, which
+    # runs in a DIFFERENT workflow. Keeping it separate means the analysis
+    # step doesn't have to parse the whole board just to grade reach.
+    adp_2025 = read_2025_yahoo_adp(wb)
+    if adp_2025:
+        with open(ADP_2025_OUT, "w") as f:
+            json.dump({"season": 2025, "source": f"{ADP_2025_SHEET} col M (Y!)",
+                       "yahoo_adp": adp_2025}, f, indent=2)
+        print(f"Wrote {ADP_2025_OUT}: {len(adp_2025)} player ADP entries "
+              f"(incl. defense nickname aliases).")
+    else:
+        print(f"NOTE: no '{ADP_2025_SHEET}' tab found -- skipped {ADP_2025_OUT}. "
+              "Reach-vs-ADP analysis will be unavailable in kepners_analysis.py.")
 
 
 if __name__ == "__main__":
