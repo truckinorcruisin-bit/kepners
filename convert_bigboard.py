@@ -462,6 +462,41 @@ def merge_miami_draft_order(miami_league, path="miami_draft_order.json"):
     miami_league["draftOrderUnmatched"] = unmatched
 
 
+def merge_zimmer_draft_order(zimmer_league, path="zimmer_draft_order.json"):
+    """Attaches draftPosition onto each Zimmer team from a hand-maintained file.
+
+    Zimmer (ESPN) has no live draft-order sync of any kind -- unlike Kepners'
+    Google Sheet pull, this is reported directly and zimmer_draft_order.json
+    is updated by hand. Optional -- if the file doesn't exist, teams are left
+    without draftPosition and the snake cockpit (My Team, on-the-clock, Deep
+    Dive, TruRank plan) simply can't compute picks for this league yet,
+    rather than erroring.
+
+    KEYED ON TEAM NAME, not manager: Zimmer's `manager` field currently just
+    duplicates the team name (no separate person-name source exists for this
+    league the way Kepners/Miami have real nicknames), so team name is the
+    only stable, already-correct identifier available to match against.
+    Unmatched names are surfaced via draftOrderUnmatched rather than silently
+    dropped, same as the Kepners/Miami merges above.
+    """
+    if not os.path.exists(path):
+        return
+    data = json.load(open(path))
+    known = {(t.get("team") or "").strip().lower(): t for t in zimmer_league.get("teams", [])}
+    unmatched = []
+    for r in data.get("draft_order", []):
+        team = r.get("team")
+        if not team:
+            continue
+        t = known.get(team.strip().lower())
+        if not t:
+            unmatched.append(team)
+            continue
+        t["draftPosition"] = r["pick"]
+    zimmer_league["draftOrderGenerated"] = data.get("generated")
+    zimmer_league["draftOrderUnmatched"] = unmatched
+
+
 def keeper_value_tiers_for_league(players, league_key, teams, roster_slots):
     """Keeper Value tier cutoffs derived from this league's own distribution.
 
@@ -652,6 +687,7 @@ def main(src, dst):
 
     merge_kepners_draft_order(out["leagues"]["kepners"])
     merge_miami_draft_order(out["leagues"]["miami"])
+    merge_zimmer_draft_order(out["leagues"]["zimmer"])
 
     with open(dst, "w") as f:
         json.dump(out, f, indent=2)
