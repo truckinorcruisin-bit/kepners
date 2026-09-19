@@ -305,12 +305,12 @@ def positional_strength(teams, roster_slots):
                 "leagueMedian": round(median, 2),
                 "gapToMedian": round(mine["value"] - median, 2),
                 "leagueBest": round(max(values), 2) if values else 0.0,
-                # Min AND max, so the UI can plot where this player actually
-                # falls within the league's real spread at this slot rather
-                # than only showing an ordinal. A rank is close to meaningless
-                # without the range behind it: QB2-of-12 sounds like a
-                # strength, but when the whole league sits between 18.0 and
-                # 22.3 per week it is worth well under a point a game.
+                # Min/max as a FALLBACK only. The Manager Cockpit derives the
+                # league spread itself from the team rows, so the bar renders
+                # correctly even against a JSON built before this field
+                # existed -- which is exactly how it shipped blank once.
+                # Emitted anyway so the file is self-describing for anything
+                # else that reads it.
                 "leagueMin": round(min(values), 2) if values else 0.0,
                 "leagueMax": round(max(values), 2) if values else 0.0,
                 # Only QB/RB/WR/TE/FLEX are worth acting on -- see
@@ -335,100 +335,6 @@ def roster_slots_for(key, bigboard, rules):
     if slots:
         return list(slots)
     return list((rules.get(key, {}) or {}).get("rosterSlots") or [])
-
-
-def depth_chart(teams, lineups):
-    """Rank every player by POSITIONAL DEPTH INDEX across the league.
-
-    The starting-lineup view answers "is my RB1 good?". This answers "is my
-    RB3 good?" -- which is the bench question, and it is a real question:
-    bench depth is what covers a bye, absorbs an injury, and gives you
-    something to trade from.
-
-    METHOD -- deliberately the same one used for starters, extended past the
-    starting slots. Within each team, sort that team's players at a position
-    by value: RB1, RB2, RB3... Then rank my RB3 against every other team's
-    RB3. Comparing like-for-like depth slots is what makes the number mean
-    something; ranking a bench RB against the league's whole RB pool would
-    just tell you he isn't a starter, which you already knew.
-
-    Two wrinkles worth knowing about:
-
-    1. DEPTH INDEX IS NOT THE SAME AS LINEUP SLOT, because of FLEX. A player
-       can be your RB3 by depth and still be starting at FLEX. Each entry is
-       therefore tagged `starting` from the actual optimal lineup rather than
-       inferred from the index, and the UI lists only the non-starters as
-       bench -- otherwise a FLEX starter would appear in both sections and
-       read as though you rostered him twice.
-
-    2. TEAMS HAVE UNEQUAL DEPTH. If only 5 teams roster a 4th RB, then RB4 is
-       a 12-way comparison where 7 teams hold nothing. Those are scored 0 and
-       rank last, which is correct -- holding a playable 4th RB when most of
-       the league doesn't IS an advantage -- but it makes deep indices
-       progressively less meaningful. `holding` records how many teams
-       actually have someone there so the UI can say so instead of implying a
-       clean 12-way race.
-    """
-    by_team_pos = {}
-    for t in teams:
-        pos_map = {}
-        for p in t["roster"]:
-            if p.get("effective_per_week") is None:
-                continue
-            pos_map.setdefault(p["position"], []).append(p)
-        for plist in pos_map.values():
-            plist.sort(key=lambda p: p["effective_per_week"], reverse=True)
-        by_team_pos[t["team_id"]] = pos_map
-
-    # Which players are actually starting, by identity not by name -- two
-    # players can share a name across teams, and a name-only check would mark
-    # the wrong man as a starter.
-    starting_ids = {}
-    for tid, lineup in lineups.items():
-        starting_ids[tid] = {id(s["player"]) for s in lineup if s["player"]}
-
-    positions = sorted({pos for pm in by_team_pos.values() for pos in pm})
-    max_depth = {pos: max((len(pm.get(pos, [])) for pm in by_team_pos.values()), default=0)
-                 for pos in positions}
-
-    out = {t["team_id"]: [] for t in teams}
-    for pos in positions:
-        if pos not in STRENGTH_POSITIONS:
-            # K/DEF depth is not a thing worth ranking -- see STRENGTH_POSITIONS.
-            continue
-        for idx in range(max_depth[pos]):
-            entries = []
-            for t in teams:
-                plist = by_team_pos[t["team_id"]].get(pos, [])
-                p = plist[idx] if idx < len(plist) else None
-                entries.append({"team_id": t["team_id"], "p": p,
-                                "value": p["effective_per_week"] if p else 0.0})
-            entries.sort(key=lambda e: e["value"], reverse=True)
-            for i, e in enumerate(entries):
-                e["rank"] = i + 1
-            values = [e["value"] for e in entries]
-            holding = sum(1 for e in entries if e["p"] is not None)
-            n = len(entries)
-            median = sorted(values)[n // 2] if n else 0.0
-            for e in entries:
-                if e["p"] is None:
-                    continue
-                out[e["team_id"]].append({
-                    "slot": f"{pos}{idx+1}",
-                    "position": pos,
-                    "depthIndex": idx + 1,
-                    "player": e["p"]["name"],
-                    "perWeek": round(e["value"], 2),
-                    "injury": e["p"].get("injury_status"),
-                    "starting": id(e["p"]) in starting_ids.get(e["team_id"], set()),
-                    "rank": e["rank"],
-                    "of": n,
-                    "holding": holding,
-                    "leagueMin": round(min(values), 2),
-                    "leagueMax": round(max(values), 2),
-                    "leagueMedian": round(median, 2),
-                })
-    return out
 
 
 def build_league(key, raw, roster_slots, ros_index):
@@ -465,11 +371,8 @@ def build_league(key, raw, roster_slots, ros_index):
     if roster_slots and teams:
         strength, lineups = positional_strength(teams, roster_slots)
 
-    depth = depth_chart(teams, lineups) if (roster_slots and teams) else {}
-
     for t in teams:
         t["positionStrength"] = strength.get(t["team_id"], [])
-        t["depthChart"] = depth.get(t["team_id"], [])
         t["startingLineup"] = [
             {"slot": s["slot_label"],
              "player": s["player"]["name"] if s["player"] else None,
