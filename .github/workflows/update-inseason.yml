@@ -112,11 +112,26 @@ jobs:
           PY
 
       - name: Commit updated files
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json
-          git diff --staged --quiet || git commit -m "Update in-season data (week refresh) for ${YEAR}"
+          # BUG FIXED (second live run): `git add a.json b.json` aborts with
+          # exit 128 the instant ANY listed pattern matches zero files -- and
+          # it aborts before staging the patterns that DID match, so one
+          # missing file type (Yahoo down that week) killed the commit for
+          # every league, including ones that pulled fine. shopt -s nullglob
+          # makes an unmatched glob expand to nothing instead of surviving as
+          # a literal string, so each pattern is only passed to `git add` when
+          # something real backs it. Also needs `shell: bash` above --
+          # Actions' default `sh` doesn't have shopt/nullglob at all, which is
+          # its own way to silently not do what this looks like it does.
+          shopt -s nullglob
+          for pattern in inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json; do
+            git add $pattern
+          done
+          git diff --staged --quiet && { echo "Nothing changed -- nothing to commit."; exit 0; }
+          git commit -m "Update in-season data (week refresh) for ${YEAR}"
           for i in 1 2 3 4 5; do
             if git push; then
               exit 0
