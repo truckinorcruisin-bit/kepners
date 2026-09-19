@@ -1,0 +1,136 @@
+name: Update In-Season Data (Rosters + Free Agents + ROS Projections)
+
+# THE FIRST SCHEDULED WORKFLOW IN THIS REPO.
+# Every other workflow is manual-dispatch, which is right for draft prep -- you
+# run it when you're working on it. In-season is different: the data goes stale
+# on its own every week whether or not anyone presses a button, and the whole
+# point of the Manager Cockpit is to be correct when you open it on a Tuesday
+# morning without having done anything first.
+#
+# Tuesday 13:00 UTC = 8am ET / 5am PT. Chosen because waivers in all three
+# leagues process overnight Tuesday, so this runs AFTER the rosters settle but
+# well before any Tuesday-morning decision gets made.
+#
+# GitHub note: scheduled workflows are paused automatically after 60 days of no
+# repository activity, and the schedule itself is read from the DEFAULT BRANCH
+# only. Also, GitHub's cron is best-effort and can run late under load -- this
+# is not a real-time system and should never be treated as one.
+on:
+  schedule:
+    - cron: '0 13 * * 2'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year'
+        required: false
+        default: '2026'
+
+jobs:
+  pull-inseason:
+    runs-on: ubuntu-latest
+    env:
+      YEAR: ${{ github.event.inputs.year || '2026' }}
+      ESPN_LEAGUE_ID: ${{ secrets.ESPN_LEAGUE_ID }}
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+      ESPN_MY_TEAM: ${{ secrets.ESPN_MY_TEAM }}
+      YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
+      YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
+      YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install espn_api requests
+
+      # ORDER MATTERS: projections must exist before the merge, or every
+      # player joins to nothing and the output looks structurally fine while
+      # being entirely valueless.
+      - name: Pull rest-of-season projections (ESPN, global pool)
+        run: |
+          set -o pipefail
+          python espn_ros_projections.py "$YEAR" 2>&1 | tee -a inseason_run.log
+
+      - name: Pull ESPN league state (Zimmer)
+        run: |
+          set -o pipefail
+          python espn_inseason_pull.py "$YEAR" 2>&1 | tee -a inseason_run.log
+
+      # continue-on-error until Yahoo auth is confirmed working in CI. A Yahoo
+      # failure must not cost us the Zimmer refresh -- two of three leagues is
+      # a usable cockpit, zero is not. Flip this to false once a run succeeds.
+      - name: Pull Yahoo league state (Kepners + Miami)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python yahoo_inseason_pull.py "$YEAR" 2>&1 | tee -a inseason_run.log
+
+      - name: Build merged inseason JSON
+        run: |
+          set -o pipefail
+          python build_inseason.py "$YEAR" 2>&1 | tee -a inseason_run.log
+
+      # A structurally valid file full of unvalued players is the dangerous
+      # failure here -- it renders fine and quietly recommends nonsense. Fail
+      # the run instead of committing it.
+      - name: Sanity check the output
+        run: |
+          python - "$YEAR" <<'PY'
+          import json, sys
+          year = sys.argv[1]
+          with open(f"inseason_{year}.json") as f:
+              doc = json.load(f)
+          leagues = doc.get("leagues") or {}
+          if not leagues:
+              sys.exit("No leagues in output -- every pull step must have failed.")
+          bad = []
+          for key, lg in leagues.items():
+              teams = lg.get("teams") or []
+              me = [t for t in teams if t.get("is_me")]
+              rostered = sum(len(t.get("roster") or []) for t in teams)
+              valued = sum(1 for t in teams for p in (t.get("roster") or [])
+                           if p.get("ros_per_week") is not None)
+              pct = (100.0 * valued / rostered) if rostered else 0.0
+              print(f"{key}: {len(teams)} teams, {rostered} rostered, "
+                    f"{pct:.0f}% valued, {len(lg.get('freeAgents') or [])} FAs, "
+                    f"my team {'found' if me else 'MISSING'}")
+              if not teams:
+                  bad.append(f"{key}: no teams")
+              elif pct < 70:
+                  bad.append(f"{key}: only {pct:.0f}% of rostered players have a projection")
+              elif not me:
+                  bad.append(f"{key}: no team flagged as mine")
+          if bad:
+              sys.exit("Sanity check failed:\n  " + "\n  ".join(bad))
+          print("Sanity check passed.")
+          PY
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json
+          git diff --staged --quiet || git commit -m "Update in-season data (week refresh) for ${YEAR}"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely another workflow pushed to main first) -- rebasing and retrying ($i/5)..."
+            git pull --rebase origin main
+          done
+          echo "::error::git push failed after 5 retries. Check for a genuine merge conflict."
+          exit 1
+
+      - name: Upload run log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: inseason-run-log
+          path: inseason_run.log
+          if-no-files-found: ignore
