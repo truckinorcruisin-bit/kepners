@@ -679,6 +679,87 @@
   .dd-fit.fit-good{color:var(--green);}
   .dd-fit.fit-ok{color:var(--amber);}
   .dd-fit.fit-low{color:var(--dim);}
+
+  /* ===== top-level view tabs: Manager / Draft / Players =====
+     Manager is the DEFAULT view (mobile-first: this is the thing you check
+     from your phone on a Tuesday morning). Draft is the desktop-oriented
+     cockpit, now a second-tier tab rather than the whole app. Distinct
+     styling from .modes below it -- .modes is the Draft view's OWN internal
+     sub-nav (draft/prep/history/replay) and only makes sense once you're
+     already inside Draft, so the two navs must never be visually confusable. */
+  .viewTabs{display:flex;gap:0;background:var(--bg);border-bottom:1px solid var(--line-2);}
+  .viewTabs button{flex:1;background:none;border:none;border-bottom:2px solid transparent;
+    color:var(--dim);font-family:inherit;font-size:11px;font-weight:700;letter-spacing:0.12em;
+    text-transform:uppercase;padding:12px 4px;cursor:pointer;}
+  .viewTabs button.on{color:var(--cyan);border-bottom-color:var(--cyan);}
+
+  /* ===== Manager Cockpit -- MOBILE FIRST =====
+     Single-column card stack by default, since this view's whole reason to
+     exist is "check it from your phone before you've had coffee." It widens
+     to a 2-up grid only well past phone width (see the 900px block at the
+     bottom of this section) -- the Draft cockpit is the one built for a
+     monitor; this one is built for a thumb. */
+  .mgr-actions{background:var(--panel);border:1px solid var(--amber);padding:10px 12px;margin-bottom:14px;}
+  .mgr-actions .mgr-actions-lbl{font-size:9px;letter-spacing:0.1em;text-transform:uppercase;
+    color:var(--amber);margin-bottom:6px;}
+  .mgr-action-row{display:flex;gap:8px;align-items:baseline;padding:5px 0;font-size:11px;
+    border-top:1px solid var(--line);cursor:pointer;}
+  .mgr-action-row:first-of-type{border-top:none;}
+  .mgr-action-row:hover{background:var(--line);}
+  .mgr-action-lg{color:var(--dim);font-size:9px;flex:0 0 52px;text-transform:uppercase;}
+  .mgr-action-txt{flex:1 1 auto;}
+  .mgr-action-badge{flex:0 0 auto;font-size:9px;font-weight:700;padding:1px 6px;border-radius:8px;}
+  .mgr-action-badge.hurt{background:rgba(255,77,77,.15);color:var(--red);}
+  .mgr-action-badge.weak{background:rgba(255,183,3,.15);color:var(--amber);}
+
+  .mgr-stack{display:flex;flex-direction:column;gap:10px;}
+  .mgr-card{background:var(--panel);border:1px solid var(--line);padding:12px 14px;cursor:pointer;}
+  .mgr-card:active,.mgr-card:hover{border-color:var(--line-2);}
+  .mgr-card-top{display:flex;justify-content:space-between;align-items:baseline;}
+  .mgr-card-name{font-size:13px;font-weight:700;color:var(--amber);letter-spacing:0.04em;}
+  .mgr-card-rec{font-size:10.5px;color:var(--dim);}
+  .mgr-card-sub{font-size:9.5px;color:var(--dim);margin-top:2px;}
+  .mgr-card-row{display:flex;gap:8px;align-items:center;margin-top:8px;flex-wrap:wrap;}
+  .mgr-pill{font-size:9.5px;font-weight:600;padding:3px 8px;border-radius:10px;
+    background:rgba(255,77,77,.12);color:var(--red);}
+  .mgr-pill.mgr-pill-ok{background:rgba(61,220,132,.12);color:var(--green);}
+  .mgr-card-chev{color:var(--line-2);font-size:14px;}
+
+  /* league detail (tap-through from a card) */
+  .mgr-detail-head{display:flex;align-items:center;gap:10px;margin-bottom:12px;}
+  .mgr-back{background:none;border:1px solid var(--line-2);color:var(--dim);font-family:inherit;
+    font-size:9px;letter-spacing:0.08em;text-transform:uppercase;padding:7px 10px;cursor:pointer;}
+  .mgr-back:hover{color:var(--txt);border-color:var(--txt);}
+  .mgr-detail-title{font-size:15px;font-weight:700;color:var(--amber);}
+
+  .mgr-strength-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line);
+    font-size:11px;}
+  .mgr-strength-row:first-of-type{border-top:none;}
+  .mgr-strength-slot{flex:0 0 42px;color:var(--dim);font-size:9.5px;letter-spacing:0.04em;}
+  .mgr-strength-player{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .mgr-strength-injury{color:var(--red);font-size:9px;margin-left:4px;}
+  .mgr-strength-rank{flex:0 0 56px;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;}
+  .mgr-strength-rank.tier-strong{color:var(--green);}
+  .mgr-strength-rank.tier-mid{color:var(--dim);}
+  .mgr-strength-rank.tier-weak{color:var(--red);}
+  .mgr-strength-bar{flex:0 0 60px;height:5px;background:var(--line);border-radius:3px;position:relative;
+    overflow:hidden;}
+  .mgr-strength-bar i{position:absolute;top:0;bottom:0;left:0;border-radius:3px;}
+  .mgr-strength-bar i.tier-strong{background:var(--green);}
+  .mgr-strength-bar i.tier-mid{background:var(--dim);}
+  .mgr-strength-bar i.tier-weak{background:var(--red);}
+  .mgr-strength-notactionable{opacity:0.45;}
+  .mgr-section-lbl{font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);
+    margin:16px 0 6px;}
+  .mgr-empty{font-size:10.5px;color:var(--dim);line-height:1.6;padding:14px;text-align:center;
+    border:1px dashed var(--line-2);}
+  .mgr-comingsoon{font-size:10px;color:var(--dim);line-height:1.6;padding:10px 12px;
+    border:1px dashed var(--line-2);background:var(--panel);}
+
+  @media(min-width:900px){
+    .wrap.mgr-wrap{max-width:1000px;}
+    .mgr-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  }
 </style>
 </head>
 <body>
@@ -688,13 +769,26 @@
     <div class="logo">DRAFT<b>CONTROL</b></div>
     <div class="status"><span class="dot"></span><span id="statustxt">DATA LOADED · MOCK MODE</span></div>
   </div>
-  <div class="leagues" id="leagues"></div>
+  <div class="viewTabs" id="viewTabs">
+    <button data-view="manager" class="on">Manager</button>
+    <button data-view="draft">Draft</button>
+    <button data-view="players">Players</button>
+  </div>
+  <!-- League tabs are Draft/Players-scoped -- the Manager Cockpit shows all
+       of Sean's leagues at once by design, so a single active-league selector
+       above it would be actively wrong there. Hidden via #leagueTabsWrap
+       rather than removed, so Draft/Players keep working exactly as before. -->
+  <div id="leagueTabsWrap">
+    <div class="leagues" id="leagues"></div>
+  </div>
 </header>
 
-<div class="wrap">
+<div class="wrap" id="mainWrap">
+  <!-- MANAGER VIEW (default) -->
+  <div id="managerView"></div>
+
   <div class="modes" id="modes">
     <button data-mode="draft" class="on">Draft</button>
-    <button data-mode="players">Players</button>
     <button data-mode="prep">Prep</button>
     <button data-mode="history">History</button>
     <button data-mode="replay">Replay</button>
@@ -758,7 +852,23 @@
 </footer>
 
 <script>
+// Hardcoded once here rather than derived, since every other filename in this
+// repo (bigboard.json, kepners_draft_history.json, etc.) is year-agnostic and
+// only the in-season pipeline's outputs are year-stamped. Bump this at the
+// start of each new season.
+const SEASON_YEAR = 2026;
 let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, KEPA=null, KEPG=null, activeLeague='kepners', activeMode='draft';
+// INSEASON holds inseason_<year>.json (rosters, free agents, positional
+// strength) -- entirely separate from DATA/bigboard.json, which is the
+// preseason/draft artifact. See build_inseason.py's module docstring for why
+// these are kept apart rather than merged into one file.
+let INSEASON=null;
+// activeView is the NEW top-level nav (Manager/Draft/Players). activeMode
+// stays exactly what it was -- the Draft view's OWN internal sub-nav
+// (draft/prep/history/replay) -- and is only consulted while
+// activeView==='draft'. mgrDetailLeague is null on the Manager summary
+// screen, or a league key once the person has tapped into one team's detail.
+let activeView='manager', mgrDetailLeague=null;
 
 // Predicted keepers, keyed by league. Each league has its own file and its own
 // prediction script, since keeper rules differ (Kepners: cost -2; Miami: cost
@@ -952,9 +1062,20 @@ async function boot(){
     if(r10.ok) KEEPER_SUGGESTIONS.miami = await r10.json();
   }catch(e){ /* Miami just won't show suggestions */ }
 
+  // In-season roster/free-agent/positional-strength data, powering the
+  // Manager Cockpit. Entirely optional at this stage of the build (waiver and
+  // trade engines aren't wired up yet) -- its absence degrades the Manager
+  // view to an empty state, not a broken page, since the whole rest of the
+  // site (Draft, Players) has nothing to do with it.
+  try{
+    const rIS = await fetch(`inseason_${SEASON_YEAR}.json?t=${Date.now()}`);
+    if(rIS.ok) INSEASON = await rIS.json();
+  }catch(e){ /* Manager view will show its own empty state */ }
+
   computeSeanOverallRanks();
   renderLeagueTabs();
   wireModes();
+  wireViews();
   render();
 }
 
@@ -992,12 +1113,214 @@ function wireModes(){
       document.getElementById('draftView').style.display = activeMode==='draft'?'':'none';
       document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
       document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
-      document.getElementById('playersView').style.display = activeMode==='players'?'':'none';
       document.getElementById('prepView').style.display = activeMode==='prep'?'':'none';
       if(activeMode!=='replay'){ stopReplayTimer(); restoreLivePicks(); }
       render();
     };
   });
+}
+
+// Top-level nav: Manager (default) / Draft / Players. Manager owns its own
+// league selection internally (a card per league, all shown at once) so the
+// header's per-league tab strip and the Draft cockpit's own Draft/Prep/
+// History/Replay sub-nav both only make sense once you're inside Draft or
+// Players -- hidden entirely on the Manager screen rather than left visible
+// and inert, which would silently suggest a league-scoping that isn't real.
+function wireViews(){
+  document.querySelectorAll('#viewTabs button').forEach(b=>{
+    b.onclick=()=>{
+      if(b.dataset.view===activeView) return;
+      activeView=b.dataset.view;
+      document.querySelectorAll('#viewTabs button').forEach(x=>x.classList.toggle('on',x===b));
+      if(activeView!=='replay'){ stopReplayTimer(); }
+      render();
+    };
+  });
+}
+
+// ---------- Manager Cockpit (in-season) ----------
+// This step ships the SHELL and the read-only overview: cross-league summary
+// cards, drill-down into one league's positional strength + roster, and a
+// merged "this week" list of things worth noticing. Waiver targets and trade
+// targets are NOT computed here yet -- see the labelled placeholders below --
+// those are the next two steps and need their own engines, not just a UI slot.
+
+const MGR_LEAGUE_NAMES = {kepners:'Kepners Keepers', miami:'Miami Domers', zimmer:'Zimmer'};
+
+// Bottom/top third of a slot's league-wide field -- the same "how do I
+// compare to everyone else at this exact job" read the position-strength
+// table uses, just bucketed for a quick color instead of a raw rank number.
+function strengthTier(rank, of){
+  if(!of) return 'mid';
+  if(rank <= Math.ceil(of/3)) return 'strong';
+  if(rank > of - Math.ceil(of/3)) return 'weak';
+  return 'mid';
+}
+
+function mgrMyTeam(leagueData){
+  return (leagueData.teams||[]).find(t=>t.is_me);
+}
+
+// Every actionable weak slot across every league, plus any STARTER (a player
+// occupying a real lineup slot, not a bench body) whose injury status is
+// non-null. No waiver/trade recommendation logic yet -- this is raw state,
+// surfaced because "your starting TE is Questionable" is useful on its own
+// even before there's an engine suggesting who to replace him with.
+function mgrThisWeekActions(){
+  const perLeague = {};
+  Object.keys(INSEASON.leagues || {}).forEach(key=>{
+    const lg = INSEASON.leagues[key];
+    const me = mgrMyTeam(lg);
+    if(!me) return;
+    const rosterByName = new Map((me.roster||[]).map(p=>[p.name, p]));
+    const items = [];
+    (me.positionStrength||[]).forEach(row=>{
+      if(!row.actionable) return;
+      const tier = strengthTier(row.rank, row.of);
+      const rp = row.player ? rosterByName.get(row.player) : null;
+      const hurt = rp && rp.injury_status;
+      if(hurt){
+        items.push({league:key, severity:3, badge:'hurt',
+          text:`${row.slot} ${row.player} is ${rp.injury_status.toLowerCase()}`});
+      } else if(tier==='weak'){
+        items.push({league:key, severity:1 + Math.max(0,-row.gapToMedian)/5, badge:'weak',
+          text:`${row.slot} ${row.player||'(empty)'} ranks ${row.rank}/${row.of} at the position`});
+      }
+    });
+    items.sort((a,b)=>b.severity-a.severity);
+    // Capped PER LEAGUE before merging: a smaller/weaker league (e.g. an
+    // 8-team Miami vs a 12-team Kepners) naturally produces more "bottom
+    // third" slots just from having a smaller field, and would otherwise
+    // flood a shared top-8 list and crowd out real issues in your other
+    // leagues -- exactly the cross-league blind spot this list exists to fix.
+    perLeague[key] = items.slice(0,3);
+  });
+  const out = Object.values(perLeague).flat();
+  out.sort((a,b)=>b.severity-a.severity);
+  return out.slice(0,8);
+}
+
+function renderManagerView(){
+  const el = document.getElementById('managerView');
+  if(!INSEASON || !INSEASON.leagues || !Object.keys(INSEASON.leagues).length){
+    el.innerHTML = `<div class="mgr-empty">No in-season data yet.<br>
+      Run the <b>Update In-Season Data</b> workflow, or check back after it's
+      scheduled to run (Tuesday mornings once the season's under way).</div>`;
+    return;
+  }
+
+  if(mgrDetailLeague && INSEASON.leagues[mgrDetailLeague]){
+    renderManagerLeagueDetail(el, mgrDetailLeague);
+    return;
+  }
+
+  const actions = mgrThisWeekActions();
+  const actionsHtml = actions.length ? `
+    <div class="mgr-actions">
+      <div class="mgr-actions-lbl">This week, across all your teams</div>
+      ${actions.map(a=>`
+        <div class="mgr-action-row" data-lg="${a.league}">
+          <span class="mgr-action-lg">${(MGR_LEAGUE_NAMES[a.league]||a.league).split(' ')[0]}</span>
+          <span class="mgr-action-txt">${a.text}</span>
+          <span class="mgr-action-badge ${a.badge}">${a.badge==='hurt'?'INJURY':'WEAK'}</span>
+        </div>`).join('')}
+    </div>` : '';
+
+  const cards = Object.keys(INSEASON.leagues).map(key=>{
+    const lg = INSEASON.leagues[key];
+    const me = mgrMyTeam(lg);
+    if(!me){
+      return `<div class="mgr-card" data-lg="${key}">
+        <div class="mgr-card-top"><span class="mgr-card-name">${MGR_LEAGUE_NAMES[key]||key}</span>
+          <span class="mgr-card-chev">›</span></div>
+        <div class="mgr-card-sub">Couldn't identify your team in this league's pull.</div>
+      </div>`;
+    }
+    const rec = (me.wins!=null) ? `${me.wins}-${me.losses}${me.ties?`-${me.ties}`:''}` : '—';
+    const standing = me.standing ? ` · ${ordinal(me.standing)}` : '';
+    const weakSlots = (me.positionStrength||[])
+      .filter(r=>r.actionable && strengthTier(r.rank,r.of)==='weak');
+    const strongSlots = (me.positionStrength||[])
+      .filter(r=>r.actionable && strengthTier(r.rank,r.of)==='strong');
+    const pills = weakSlots.length
+      ? weakSlots.slice(0,3).map(r=>`<span class="mgr-pill">${r.slot} weak</span>`).join('')
+      : (strongSlots.length ? `<span class="mgr-pill mgr-pill-ok">no glaring holes</span>` : '');
+    return `<div class="mgr-card" data-lg="${key}">
+      <div class="mgr-card-top">
+        <span class="mgr-card-name">${MGR_LEAGUE_NAMES[key]||key}</span>
+        <span class="mgr-card-rec">${rec}${standing}</span>
+      </div>
+      <div class="mgr-card-sub">${me.team_name||''} · ${lg.platform?lg.platform.toUpperCase():''}
+        · ${me.rosPerWeekTotal!=null?me.rosPerWeekTotal+' proj pts/wk':''}</div>
+      <div class="mgr-card-row">${pills}</div>
+    </div>`;
+  }).join('');
+
+  el.innerHTML = `${actionsHtml}<div class="mgr-stack">${cards}</div>`;
+
+  el.querySelectorAll('.mgr-action-row[data-lg], .mgr-card[data-lg]').forEach(node=>{
+    node.onclick = ()=>{ mgrDetailLeague = node.dataset.lg; render(); };
+  });
+}
+
+function renderManagerLeagueDetail(el, key){
+  const lg = INSEASON.leagues[key];
+  const me = mgrMyTeam(lg);
+  if(!me){
+    el.innerHTML = `<div class="mgr-detail-head">
+        <button class="mgr-back" id="mgrBackBtn">‹ Back</button>
+        <span class="mgr-detail-title">${MGR_LEAGUE_NAMES[key]||key}</span>
+      </div>
+      <div class="mgr-empty">Couldn't identify your team in this league's last pull.
+      Check ESPN_MY_TEAM (or the Yahoo login-match) and re-run the workflow.</div>`;
+    document.getElementById('mgrBackBtn').onclick = ()=>{ mgrDetailLeague=null; render(); };
+    return;
+  }
+
+  const rosterByName = new Map((me.roster||[]).map(p=>[p.name, p]));
+  const strengthRows = (me.positionStrength||[]).map(row=>{
+    const tier = row.actionable ? strengthTier(row.rank, row.of) : 'mid';
+    const rp = row.player ? rosterByName.get(row.player) : null;
+    const pct = row.of ? Math.max(6, 100 - Math.round(((row.rank-1)/row.of)*100)) : 0;
+    return `<div class="mgr-strength-row ${row.actionable?'':'mgr-strength-notactionable'}">
+      <span class="mgr-strength-slot">${row.slot}</span>
+      <span class="mgr-strength-player">${row.player||'(empty)'}${
+        rp && rp.injury_status ? `<span class="mgr-strength-injury">${rp.injury_status}</span>` : ''}</span>
+      <span class="mgr-strength-bar"><i class="tier-${tier}" style="width:${pct}%"></i></span>
+      <span class="mgr-strength-rank tier-${tier}">${row.actionable?`${row.rank}/${row.of}`:'—'}</span>
+    </div>`;
+  }).join('');
+
+  const rec = (me.wins!=null) ? `${me.wins}-${me.losses}${me.ties?`-${me.ties}`:''}` : '—';
+  const standing = me.standing ? ` · ${ordinal(me.standing)} of ${lg.teams.length}` : '';
+
+  el.innerHTML = `
+    <div class="mgr-detail-head">
+      <button class="mgr-back" id="mgrBackBtn">‹ Back</button>
+      <span class="mgr-detail-title">${MGR_LEAGUE_NAMES[key]||key}</span>
+    </div>
+    <div class="mgr-card-sub">${me.team_name||''} · ${rec}${standing}
+      ${me.rosPerWeekTotal!=null?` · ${me.rosPerWeekTotal} proj pts/wk`:''}</div>
+
+    <div class="mgr-section-lbl">Starting lineup vs. the rest of the league (rest of season)</div>
+    ${strengthRows || '<div class="mgr-empty">No roster shape configured for this league yet.</div>'}
+
+    <div class="mgr-section-lbl">Waiver Targets</div>
+    <div class="mgr-comingsoon">Coming next: free agents scored against YOUR weakest starter at
+      each position, not raw value -- so this only surfaces a add if he'd actually
+      improve a lineup slot above. (${(lg.freeAgents||[]).length} free agents already
+      pulled and valued, ready for that engine.)</div>
+
+    <div class="mgr-section-lbl">Trade Targets</div>
+    <div class="mgr-comingsoon">Coming next: buy/sell suggestions matched against other teams'
+      surplus and need, valued by starting-lineup impact on both sides.</div>
+  `;
+  document.getElementById('mgrBackBtn').onclick = ()=>{ mgrDetailLeague=null; render(); };
+}
+
+function ordinal(n){
+  const s=['th','st','nd','rd'], v=n%100;
+  return n + (s[(v-20)%10] || s[v] || s[0]);
 }
 
 // Per-league draft-log storage. `snakeDraft.picks`/`zimmerDraft.picks` are
@@ -1110,6 +1433,33 @@ function isAuctionLeague(){
 }
 
 function render(){
+  // ---- top-level view switch (Manager / Draft / Players) ----
+  // League tabs and the Draft sub-nav (.modes) are both Draft/Players-scoped:
+  // Manager shows every league at once, so a single "active league" selector
+  // above it would misrepresent what's on screen. Hidden outright rather than
+  // disabled, so nothing dead-looking sits on the Manager screen.
+  document.getElementById('leagueTabsWrap').style.display = activeView==='manager' ? 'none' : '';
+  document.getElementById('modes').style.display = activeView==='draft' ? '' : 'none';
+  document.getElementById('managerView').style.display = activeView==='manager' ? '' : 'none';
+  document.getElementById('mainWrap').classList.toggle('mgr-wrap', activeView==='manager');
+  document.getElementById('draftView').style.display = (activeView==='draft' && activeMode==='draft') ? '' : 'none';
+  document.getElementById('historyView').style.display = (activeView==='draft' && activeMode==='history') ? '' : 'none';
+  document.getElementById('replayView').style.display = (activeView==='draft' && activeMode==='replay') ? '' : 'none';
+  document.getElementById('prepView').style.display = (activeView==='draft' && activeMode==='prep') ? '' : 'none';
+  document.getElementById('playersView').style.display = activeView==='players' ? '' : 'none';
+
+  if(activeView==='manager'){
+    stopReplayTimer();
+    renderManagerView();
+    return;
+  }
+  if(activeView==='players'){
+    stopReplayTimer();
+    renderPlayersTab();
+    return;
+  }
+
+  // ---- everything below is the Draft view, exactly as before ----
   const lg=DATA.leagues[activeLeague];
 
   // Only the auction cockpit wants the extra-wide breakpoints (its Opponent
@@ -1150,12 +1500,10 @@ function render(){
   document.getElementById('draftView').style.display = activeMode==='draft'?'':'none';
   document.getElementById('historyView').style.display = activeMode==='history'?'':'none';
   document.getElementById('replayView').style.display = activeMode==='replay'?'':'none';
-  document.getElementById('playersView').style.display = activeMode==='players'?'':'none';
   document.getElementById('prepView').style.display = activeMode==='prep'?'':'none';
 
   if(activeMode==='history'){ renderHistory(); return; }
   if(activeMode==='replay'){ renderReplay(); return; }
-  if(activeMode==='players'){ renderPlayersTab(); return; }
   if(activeMode==='prep'){ renderPrepView(lg); return; }
 
   // Draft mode branches by FORMAT, not by league: auction needs a
