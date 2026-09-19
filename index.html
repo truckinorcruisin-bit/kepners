@@ -749,6 +749,48 @@
   .mgr-strength-bar i.tier-mid{background:var(--dim);}
   .mgr-strength-bar i.tier-weak{background:var(--red);}
   .mgr-strength-notactionable{opacity:0.45;}
+
+  /* ===== positional strength as a RANGE PLOT =====
+     The bar is scaled to the league's actual min..max at this slot, with a
+     marker where my player falls -- not to his ordinal rank. A rank alone is
+     misleading in both directions: "QB 5/12" reads as a problem until you see
+     the whole league sits inside 17.1-22.3 per week, and "WR2 9/12" reads as
+     a crisis when it costs under two points a game. The raw min/median/max
+     numbers are printed alongside so the underlying data can be sanity-checked
+     rather than taken on faith. */
+  .mgr-str-row{padding:9px 0;border-top:1px solid var(--line);}
+  .mgr-str-row:first-of-type{border-top:none;}
+  .mgr-str-head{display:flex;align-items:baseline;gap:8px;}
+  .mgr-str-slot{flex:0 0 42px;color:var(--dim);font-size:9.5px;letter-spacing:0.04em;}
+  .mgr-str-name{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
+    white-space:nowrap;font-size:11.5px;}
+  .mgr-str-injury{color:var(--red);font-size:9px;margin-left:5px;}
+  .mgr-str-val{flex:0 0 auto;font-size:11px;font-variant-numeric:tabular-nums;font-weight:700;}
+  .mgr-str-val.tier-strong{color:var(--green);}
+  .mgr-str-val.tier-mid{color:var(--txt);}
+  .mgr-str-val.tier-weak{color:var(--red);}
+  .mgr-str-rank{flex:0 0 42px;text-align:right;font-size:10px;font-variant-numeric:tabular-nums;
+    color:var(--dim);}
+  .mgr-str-scale{display:flex;align-items:center;gap:6px;margin-top:5px;}
+  .mgr-str-end{flex:0 0 auto;font-size:8.5px;color:var(--dim);font-variant-numeric:tabular-nums;
+    min-width:26px;}
+  .mgr-str-end.hi{text-align:right;}
+  .mgr-str-track{flex:1 1 auto;position:relative;height:8px;background:var(--line);border-radius:4px;}
+  .mgr-str-fill{position:absolute;top:0;bottom:0;left:0;border-radius:4px;opacity:.5;}
+  .mgr-str-fill.tier-strong{background:var(--green);}
+  .mgr-str-fill.tier-mid{background:var(--dim);}
+  .mgr-str-fill.tier-weak{background:var(--red);}
+  /* league median tick -- the "am I above average" read, which the min/max
+     ends alone don't give you */
+  .mgr-str-med{position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--line-2);}
+  .mgr-str-dot{position:absolute;top:50%;width:9px;height:9px;border-radius:50%;
+    transform:translate(-50%,-50%);border:1.5px solid var(--bg);}
+  .mgr-str-dot.tier-strong{background:var(--green);}
+  .mgr-str-dot.tier-mid{background:var(--txt);}
+  .mgr-str-dot.tier-weak{background:var(--red);}
+  .mgr-str-flat{font-size:8.5px;color:var(--dim);margin-top:4px;}
+  .mgr-bench-note{font-size:9px;color:var(--dim);line-height:1.5;margin-bottom:6px;}
+  .mgr-str-holding{font-size:8.5px;color:var(--dim);}
   .mgr-section-lbl{font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);
     margin:16px 0 6px;}
   .mgr-empty{font-size:10.5px;color:var(--dim);line-height:1.6;padding:14px;text-align:center;
@@ -1157,6 +1199,26 @@ function strengthTier(rank, of){
   return 'mid';
 }
 
+// A slot is only worth flagging if it's both bottom-third AND actually
+// costing points. Rank alone over-reports badly: on a real Zimmer roster the
+// WR2 slot ranked 9/12 while sitting 0.5 pts/wk below median, because the
+// whole league's WR2s fall inside a 2.4-point band. Flagging that as a
+// problem trains you to ignore the list -- which defeats the entire purpose
+// of a cross-league summary.
+const MGR_WEAK_PTS = 1.0;   // pts/wk below median before a slot is "weak"
+function mgrIsWeak(row){
+  if(!row || !row.actionable) return false;
+  if(strengthTier(row.rank, row.of) !== 'weak') return false;
+  const gap = (row.gapToMedian != null)
+    ? row.gapToMedian
+    : ((row.perWeek!=null && row.leagueMedian!=null) ? row.perWeek - row.leagueMedian : null);
+  return gap != null && gap <= -MGR_WEAK_PTS;
+}
+function mgrWeakGap(row){
+  return (row.gapToMedian != null) ? row.gapToMedian
+    : ((row.perWeek!=null && row.leagueMedian!=null) ? row.perWeek - row.leagueMedian : 0);
+}
+
 function mgrMyTeam(leagueData){
   return (leagueData.teams||[]).find(t=>t.is_me);
 }
@@ -1176,15 +1238,17 @@ function mgrThisWeekActions(){
     const items = [];
     (me.positionStrength||[]).forEach(row=>{
       if(!row.actionable) return;
-      const tier = strengthTier(row.rank, row.of);
       const rp = row.player ? rosterByName.get(row.player) : null;
       const hurt = rp && rp.injury_status;
       if(hurt){
-        items.push({league:key, severity:3, badge:'hurt',
+        items.push({league:key, severity:100, badge:'hurt',
           text:`${row.slot} ${row.player} is ${rp.injury_status.toLowerCase()}`});
-      } else if(tier==='weak'){
-        items.push({league:key, severity:1 + Math.max(0,-row.gapToMedian)/5, badge:'weak',
-          text:`${row.slot} ${row.player||'(empty)'} ranks ${row.rank}/${row.of} at the position`});
+      } else if(mgrIsWeak(row)){
+        const gap = mgrWeakGap(row);
+        // Severity IS the points gap, so the merged cross-league list sorts
+        // by what actually costs the most rather than by ordinal rank.
+        items.push({league:key, severity:-gap, badge:'weak',
+          text:`${row.slot} ${row.player||'(empty)'} is ${Math.abs(gap).toFixed(1)}/wk below median (${row.rank}/${row.of})`});
       }
     });
     items.sort((a,b)=>b.severity-a.severity);
@@ -1239,11 +1303,12 @@ function renderManagerView(){
     const rec = (me.wins!=null) ? `${me.wins}-${me.losses}${me.ties?`-${me.ties}`:''}` : '—';
     const standing = me.standing ? ` · ${ordinal(me.standing)}` : '';
     const weakSlots = (me.positionStrength||[])
-      .filter(r=>r.actionable && strengthTier(r.rank,r.of)==='weak');
+      .filter(mgrIsWeak)
+      .sort((a,b)=>mgrWeakGap(a)-mgrWeakGap(b));
     const strongSlots = (me.positionStrength||[])
       .filter(r=>r.actionable && strengthTier(r.rank,r.of)==='strong');
     const pills = weakSlots.length
-      ? weakSlots.slice(0,3).map(r=>`<span class="mgr-pill">${r.slot} weak</span>`).join('')
+      ? weakSlots.slice(0,3).map(r=>`<span class="mgr-pill">${r.slot} ${mgrWeakGap(r).toFixed(1)}/wk</span>`).join('')
       : (strongSlots.length ? `<span class="mgr-pill mgr-pill-ok">no glaring holes</span>` : '');
     return `<div class="mgr-card" data-lg="${key}">
       <div class="mgr-card-top">
@@ -1278,18 +1343,69 @@ function renderManagerLeagueDetail(el, key){
   }
 
   const rosterByName = new Map((me.roster||[]).map(p=>[p.name, p]));
-  const strengthRows = (me.positionStrength||[]).map(row=>{
-    const tier = row.actionable ? strengthTier(row.rank, row.of) : 'mid';
+
+  // One row renderer shared by the starting lineup and the bench, so a depth
+  // slot is read exactly the same way as a starting slot -- same scale, same
+  // colours, same meaning.
+  const strengthRow = (row, opts)=>{
+    opts = opts || {};
+    const actionable = opts.forceActionable!=null ? opts.forceActionable : row.actionable;
+    const tier = actionable ? strengthTier(row.rank, row.of) : 'mid';
     const rp = row.player ? rosterByName.get(row.player) : null;
-    const pct = row.of ? Math.max(6, 100 - Math.round(((row.rank-1)/row.of)*100)) : 0;
-    return `<div class="mgr-strength-row ${row.actionable?'':'mgr-strength-notactionable'}">
-      <span class="mgr-strength-slot">${row.slot}</span>
-      <span class="mgr-strength-player">${row.player||'(empty)'}${
-        rp && rp.injury_status ? `<span class="mgr-strength-injury">${rp.injury_status}</span>` : ''}</span>
-      <span class="mgr-strength-bar"><i class="tier-${tier}" style="width:${pct}%"></i></span>
-      <span class="mgr-strength-rank tier-${tier}">${row.actionable?`${row.rank}/${row.of}`:'—'}</span>
+    const injury = row.injury || (rp && rp.injury_status);
+    const lo = row.leagueMin, hi = row.leagueMax, med = row.leagueMedian, mine = row.perWeek;
+    const span = (hi!=null && lo!=null) ? (hi - lo) : 0;
+    // A zero span means every team is identical at this slot -- park the
+    // marker mid-track rather than dividing by zero and rendering NaN%.
+    const pctOf = v => span>0 ? Math.min(100, Math.max(0, ((v - lo)/span)*100)) : 50;
+    const minePct = pctOf(mine);
+    const medPct = med!=null ? pctOf(med) : null;
+    // The decision-relevant number is not the rank, it's what the slot is
+    // costing you per week. "WR2 9/12" sounds like a crisis; "0.6 below
+    // median, 1.7 behind the best" tells you it is nearly irrelevant, and
+    // that an upgrade there is worth far less than the rank implies.
+    // Suppressed when the median is 0 (deep bench slots where most of the
+    // league rosters nobody) -- "vs median" is meaningless against nothing.
+    let gapLine = '';
+    if(actionable && mine!=null && med!=null && hi!=null && med>0){
+      const vsMed = mine - med, vsBest = mine - hi;
+      const fmt = v => (v>0?'+':'') + v.toFixed(1);
+      gapLine = `<div class="mgr-str-flat">${fmt(vsMed)} vs median${
+        vsBest<-0.05?` · ${fmt(vsBest)} vs best`:' · league best'}</div>`;
+    }
+    const scale = (lo==null||hi==null) ? '' : `
+      <div class="mgr-str-scale">
+        <span class="mgr-str-end">${lo.toFixed(1)}</span>
+        <div class="mgr-str-track" title="league range ${lo.toFixed(1)}–${hi.toFixed(1)} · median ${med!=null?med.toFixed(1):'—'} · you ${mine!=null?mine.toFixed(1):'—'}">
+          <i class="mgr-str-fill tier-${tier}" style="width:${minePct}%"></i>
+          ${medPct!=null?`<span class="mgr-str-med" style="left:${medPct}%"></span>`:''}
+          <b class="mgr-str-dot tier-${tier}" style="left:${minePct}%"></b>
+        </div>
+        <span class="mgr-str-end hi">${hi.toFixed(1)}</span>
+      </div>
+      ${gapLine}`;
+    return `<div class="mgr-str-row ${actionable?'':'mgr-strength-notactionable'}">
+      <div class="mgr-str-head">
+        <span class="mgr-str-slot">${row.slot}</span>
+        <span class="mgr-str-name">${row.player||'(empty)'}${
+          injury?` <span class="mgr-str-injury">${injury}</span>`:''}</span>
+        <span class="mgr-str-val tier-${tier}">${mine!=null?mine.toFixed(1):'—'}</span>
+        <span class="mgr-str-rank">${actionable?`${row.rank}/${row.of}`:'—'}</span>
+      </div>
+      ${scale}
+      ${row.holding!=null && row.holding < row.of ? `<div class="mgr-str-holding">only ${row.holding} of ${row.of} teams roster anyone here</div>` : ''}
     </div>`;
-  }).join('');
+  };
+
+  const strengthRows = (me.positionStrength||[]).map(r=>strengthRow(r)).join('');
+
+  // Bench = depth-chart entries NOT occupying a starting slot. Filtering on
+  // the `starting` flag rather than on depth index matters because of FLEX:
+  // a player can be your RB3 by depth and still be starting, and listing him
+  // in both places would read as though you rostered him twice.
+  const benchRows = (me.depthChart||[])
+    .filter(r=>!r.starting)
+    .map(r=>strengthRow(r, {forceActionable:true})).join('');
 
   const rec = (me.wins!=null) ? `${me.wins}-${me.losses}${me.ties?`-${me.ties}`:''}` : '—';
   const standing = me.standing ? ` · ${ordinal(me.standing)} of ${lg.teams.length}` : '';
@@ -1303,7 +1419,15 @@ function renderManagerLeagueDetail(el, key){
       ${me.rosPerWeekTotal!=null?` · ${me.rosPerWeekTotal} proj pts/wk`:''}</div>
 
     <div class="mgr-section-lbl">Starting lineup vs. the rest of the league (rest of season)</div>
+    <div class="mgr-bench-note">Bar spans the league's actual min-to-max at each slot; the dot is you,
+      the faint tick is the league median. Numbers are projected points per week.</div>
     ${strengthRows || '<div class="mgr-empty">No roster shape configured for this league yet.</div>'}
+
+    <div class="mgr-section-lbl">Bench depth</div>
+    <div class="mgr-bench-note">Your Nth-best player at each position, ranked against every other team's
+      Nth-best — so RB5 is measured against the league's other RB5s, not against starters.
+      Teams with nobody at that depth score zero and rank last.</div>
+    ${benchRows || '<div class="mgr-empty">No ranked bench players — everyone with a projection is starting.</div>'}
 
     <div class="mgr-section-lbl">Waiver Targets</div>
     <div class="mgr-comingsoon">Coming next: free agents scored against YOUR weakest starter at

@@ -154,32 +154,49 @@ def summarize(p, current_week, weeks_remaining):
         per_week = ros / weeks_projected
         method = "weekly"
     elif season_proj is not None:
-        remainder = season_proj - (season_actual or 0.0)
-        weeks_played = max(0, current_week - 1)
-        if remainder > 0:
-            ros = remainder
-            method = "season_rollup"
-        elif weeks_played and (season_actual or 0) > 0:
-            # He has already beaten his own full-season projection. Taking the
-            # remainder literally would value a league-winner at ZERO and sort
-            # him below waiver fodder -- the single most damaging error this
-            # file could make. ESPN's preseason number is simply stale for
-            # him, so fall back to his own scoring pace instead.
-            ros = (season_actual / weeks_played) * weeks_remaining
-            method = "pace"
-        else:
-            ros = 0.0
-            method = "season_rollup"
-        per_week = (ros / weeks_remaining) if weeks_remaining else None
+        # RATE, not remainder.
+        #
+        # BUG FIXED (week 2, 2026): this used to compute
+        # `season_proj - points_already_scored`, which is only correct if ESPN
+        # re-forecasts the season projection as the year goes. It evidently
+        # does NOT -- the number stays at its preseason value -- so subtracting
+        # banked points mechanically PENALISED every player for having already
+        # produced. Real example that exposed it: Josh Allen carried the
+        # league's highest season projection (379.7) but scored 76.5 in week 1,
+        # so the subtraction left him with less "remaining" than Jayden Daniels
+        # (proj 327.7, scored 17.7) -- ranking the best QB in the league 5th,
+        # behind a QB who had done nothing. Anti-correlated with performance,
+        # which is the exact opposite of what a projection should do.
+        #
+        # Using the per-week RATE implied by the season projection removes the
+        # inversion entirely: a player's forward-looking value no longer
+        # depends on what he has already banked.
+        per_week = season_proj / MAX_WEEK
+        ros = per_week * weeks_remaining
         weeks_projected = weeks_remaining
+        method = "season_rate"
     else:
         ros, per_week, method = 0.0, None, "none"
+
+    # Diagnostics, carried so the open modelling question is answerable from
+    # real data rather than argued about: does ESPN re-forecast the season
+    # projection during the year? Compare season_projected_total for the same
+    # player across two weekly runs. If it moves, the projection absorbs
+    # results and the rate method is simply right. If it never moves, the rate
+    # method ignores mounting in-season evidence and should be blended with
+    # actual_rate (shrinkage toward the projection, weight growing with games
+    # played). Deliberately NOT blended yet -- at week 2 that is a one-game
+    # sample, and guessing now is how you overfit to a single outlier.
+    games_played = max(0, current_week - 1)
+    actual_rate = (season_actual / games_played) if games_played else None
 
     return {
         "ros_points": round(ros, 2),
         "ros_per_week": round(per_week, 2) if per_week is not None else None,
         "weeks_projected": weeks_projected,
         "ros_method": method,
+        "actual_rate": round(actual_rate, 2) if actual_rate is not None else None,
+        "games_played": games_played,
         "season_projected_total": round(season_proj, 2) if season_proj is not None else None,
         "season_points_actual": round(season_actual, 2),
         "last3_actual": round(last3_actual, 2),
@@ -285,13 +302,11 @@ def main():
         methods[p.get("ros_method")] = methods.get(p.get("ros_method"), 0) + 1
     print(f"{len(players)} players, {have_ros} with a nonzero ROS projection.")
     print(f"  ROS method breakdown: {methods}")
-    if methods.get("pace"):
-        print(f"  NOTE: {methods['pace']} player(s) have already outscored their own "
-              f"season projection; their ROS is extrapolated from actual pace instead.")
-    if methods.get("season_rollup"):
-        print("  NOTE: using the season-rollup fallback (ESPN returned season totals, "
-              "not per-week projections). Valid, but blind to upcoming byes -- "
-              "ros_per_week runs slightly high for a player whose bye is ahead.")
+    if methods.get("season_rate"):
+        print("  NOTE: using the season-RATE fallback (ESPN returned season totals, not "
+              "per-week projections). ros_per_week = season projection / 17. Blind to "
+              "upcoming byes, and ignores in-season results -- see the comment in "
+              "summarize() for the re-forecast question this raises.")
 
     top = sorted((p for p in players if p["ros_per_week"] is not None),
                  key=lambda p: p["ros_per_week"], reverse=True)[:5]
