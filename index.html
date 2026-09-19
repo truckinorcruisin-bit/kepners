@@ -783,6 +783,9 @@
   /* league median tick -- the "am I above average" read, which the min/max
      ends alone don't give you */
   .mgr-str-med{position:absolute;top:-2px;bottom:-2px;width:1px;background:var(--line-2);}
+  /* the startable bar on bench rows -- brighter than the median tick because
+     it's a threshold to clear, not just a reference point */
+  .mgr-str-bar-tick{position:absolute;top:-3px;bottom:-3px;width:2px;background:var(--amber);opacity:.85;}
   .mgr-str-dot{position:absolute;top:50%;width:9px;height:9px;border-radius:50%;
     transform:translate(-50%,-50%);border:1.5px solid var(--bg);}
   .mgr-str-dot.tier-strong{background:var(--green);}
@@ -1219,6 +1222,83 @@ function mgrWeakGap(row){
     : ((row.perWeek!=null && row.leagueMedian!=null) ? row.perWeek - row.leagueMedian : 0);
 }
 
+// ---- client-side distributions ----
+// Derived from the league's own team rows rather than read from the JSON.
+// Every team's positionStrength and full roster are already in INSEASON, so
+// the numbers are computable here -- which makes the view independent of
+// which build_inseason.py version last ran. It shipped blank once because
+// leagueMin/depthChart were added to the pipeline but the pipeline file
+// wasn't deployed, and the UI silently rendered nothing instead of saying so.
+function mgrSlotSpread(lgData, slotLabel){
+  const vals = [];
+  (lgData.teams||[]).forEach(t=>{
+    const row = (t.positionStrength||[]).find(r=>r.slot===slotLabel);
+    if(row && row.perWeek!=null) vals.push(row.perWeek);
+  });
+  if(!vals.length) return null;
+  const sorted = [...vals].sort((a,b)=>a-b);
+  return {min:sorted[0], max:sorted[sorted.length-1],
+          median:sorted[Math.floor(sorted.length/2)], n:vals.length};
+}
+
+// Every rostered player at a position, league-wide -- the scale a bench
+// player is plotted against, since "where does he sit among all the WRs in
+// this league" is the question for depth, not "how does he compare to other
+// teams' WR5s".
+function mgrPositionSpread(lgData, pos){
+  const vals = [];
+  (lgData.teams||[]).forEach(t=>(t.roster||[]).forEach(p=>{
+    if(p.position===pos && p.effective_per_week!=null) vals.push(p.effective_per_week);
+  }));
+  if(!vals.length) return null;
+  const sorted = [...vals].sort((a,b)=>a-b);
+  return {min:sorted[0], max:sorted[sorted.length-1],
+          median:sorted[Math.floor(sorted.length/2)], n:vals.length};
+}
+
+// THE STARTABLE BAR: what a bench player has to beat to crack the lineup.
+//
+// Sean's idea, and it's the right yardstick. Depth-index ranking ("your RB5 vs
+// their RB5") answers a question nobody asks; what actually matters is whether
+// a bench player would start. In a 2-FLEX league the lowest starting job is
+// FLEX2, so the league-wide median FLEX2 is the bar for anyone FLEX-eligible.
+// For a position that can't take a FLEX slot (QB here), the bar is that
+// position's own last dedicated slot.
+//
+// Returns the league median at that slot, so it reads as "would he start on a
+// typical team in this league", not just "would he start for me" -- the
+// latter would make a strong roster look like it has no usable depth.
+const MGR_FLEX_ELIGIBLE = ['RB','WR','TE'];
+function mgrStartableBar(lgData, pos){
+  const slots = lgData.rosterSlots || [];
+  const labelsFor = p => (lgData.teams[0].positionStrength||[])
+    .filter(r=>r.position===p).map(r=>r.slot);
+  if(MGR_FLEX_ELIGIBLE.includes(pos) && slots.includes('FLEX')){
+    const flexLabels = labelsFor('FLEX');
+    const last = flexLabels[flexLabels.length-1];
+    if(last){
+      const sp = mgrSlotSpread(lgData, last);
+      if(sp) return {value:sp.median, label:last};
+    }
+  }
+  const own = labelsFor(pos);
+  const last = own[own.length-1];
+  if(last){
+    const sp = mgrSlotSpread(lgData, last);
+    if(sp) return {value:sp.median, label:last};
+  }
+  return null;
+}
+
+// Bench = rostered, projected, and not in the optimal starting lineup.
+// Derived from startingLineup by name within this team only.
+function mgrBenchPlayers(lgData, team){
+  const starters = new Set((team.startingLineup||[]).map(s=>s.player).filter(Boolean));
+  return (team.roster||[])
+    .filter(p=>p.effective_per_week!=null && !starters.has(p.name))
+    .sort((a,b)=>b.effective_per_week-a.effective_per_week);
+}
+
 function mgrMyTeam(leagueData){
   return (leagueData.teams||[]).find(t=>t.is_me);
 }
@@ -1353,7 +1433,14 @@ function renderManagerLeagueDetail(el, key){
     const tier = actionable ? strengthTier(row.rank, row.of) : 'mid';
     const rp = row.player ? rosterByName.get(row.player) : null;
     const injury = row.injury || (rp && rp.injury_status);
-    const lo = row.leagueMin, hi = row.leagueMax, med = row.leagueMedian, mine = row.perWeek;
+    // Spread comes from the live team rows first; the pipeline's own
+    // leagueMin/leagueMax are only a fallback. Deriving it here means the bar
+    // renders correctly regardless of which build_inseason.py version ran.
+    const spread = opts.spread || null;
+    const lo = spread ? spread.min : row.leagueMin;
+    const hi = spread ? spread.max : row.leagueMax;
+    const med = spread ? spread.median : row.leagueMedian;
+    const mine = row.perWeek;
     const span = (hi!=null && lo!=null) ? (hi - lo) : 0;
     // A zero span means every team is identical at this slot -- park the
     // marker mid-track rather than dividing by zero and rendering NaN%.
@@ -1373,7 +1460,12 @@ function renderManagerLeagueDetail(el, key){
       gapLine = `<div class="mgr-str-flat">${fmt(vsMed)} vs median${
         vsBest<-0.05?` · ${fmt(vsBest)} vs best`:' · league best'}</div>`;
     }
-    const scale = (lo==null||hi==null) ? '' : `
+    // Blank is never an acceptable render here. This section shipped once
+    // showing bare numbers with no bar at all, because the fields it wanted
+    // didn't exist in that build's JSON -- and it looked like a styling bug
+    // rather than missing data. Say which it is.
+    const scale = (lo==null||hi==null) ? `<div class="mgr-str-flat">No league range available
+      for this slot — re-run Update In-Season Data.</div>` : `
       <div class="mgr-str-scale">
         <span class="mgr-str-end">${lo.toFixed(1)}</span>
         <div class="mgr-str-track" title="league range ${lo.toFixed(1)}–${hi.toFixed(1)} · median ${med!=null?med.toFixed(1):'—'} · you ${mine!=null?mine.toFixed(1):'—'}">
@@ -1397,15 +1489,47 @@ function renderManagerLeagueDetail(el, key){
     </div>`;
   };
 
-  const strengthRows = (me.positionStrength||[]).map(r=>strengthRow(r)).join('');
+  const strengthRows = (me.positionStrength||[])
+    .map(r=>strengthRow(r, {spread: mgrSlotSpread(lg, r.slot)})).join('');
 
-  // Bench = depth-chart entries NOT occupying a starting slot. Filtering on
-  // the `starting` flag rather than on depth index matters because of FLEX:
-  // a player can be your RB3 by depth and still be starting, and listing him
-  // in both places would read as though you rostered him twice.
-  const benchRows = (me.depthChart||[])
-    .filter(r=>!r.starting)
-    .map(r=>strengthRow(r, {forceActionable:true})).join('');
+  // Bench players, each measured against the STARTABLE BAR for his position
+  // (see mgrStartableBar) and plotted on that position's league-wide spread.
+  // Sorted by how close he is to starting, which is the order you'd actually
+  // review them in.
+  const benchList = mgrBenchPlayers(lg, me);
+  const benchRows = benchList.map(p=>{
+    const sp = mgrPositionSpread(lg, p.position);
+    const bar = mgrStartableBar(lg, p.position);
+    const mine = p.effective_per_week;
+    const span = sp ? (sp.max - sp.min) : 0;
+    const pctOf = v => span>0 ? Math.min(100, Math.max(0, ((v - sp.min)/span)*100)) : 50;
+    const minePct = sp ? pctOf(mine) : 50;
+    const barPct = (sp && bar) ? pctOf(bar.value) : null;
+    const diff = bar ? mine - bar.value : null;
+    // Green only when he'd genuinely displace a starting-calibre player.
+    const tier = diff==null ? 'mid' : (diff >= 0 ? 'strong' : (diff > -2 ? 'mid' : 'weak'));
+    return `<div class="mgr-str-row">
+      <div class="mgr-str-head">
+        <span class="mgr-str-slot">${p.position}</span>
+        <span class="mgr-str-name">${p.name}${
+          p.injury_status?` <span class="mgr-str-injury">${p.injury_status}</span>`:''}</span>
+        <span class="mgr-str-val tier-${tier}">${mine.toFixed(1)}</span>
+        <span class="mgr-str-rank">${diff!=null?(diff>0?'+':'')+diff.toFixed(1):'—'}</span>
+      </div>
+      ${sp?`<div class="mgr-str-scale">
+        <span class="mgr-str-end">${sp.min.toFixed(1)}</span>
+        <div class="mgr-str-track" title="all ${sp.n} ${p.position}s rostered in this league: ${sp.min.toFixed(1)}–${sp.max.toFixed(1)}${bar?` · startable bar (${bar.label} median) ${bar.value.toFixed(1)}`:''}">
+          <i class="mgr-str-fill tier-${tier}" style="width:${minePct}%"></i>
+          ${barPct!=null?`<span class="mgr-str-bar-tick" style="left:${barPct}%"></span>`:''}
+          <b class="mgr-str-dot tier-${tier}" style="left:${minePct}%"></b>
+        </div>
+        <span class="mgr-str-end hi">${sp.max.toFixed(1)}</span>
+      </div>`:''}
+      ${bar?`<div class="mgr-str-flat">${diff>=0
+        ? `would start over a typical ${bar.label} (+${diff.toFixed(1)}/wk)`
+        : `${Math.abs(diff).toFixed(1)}/wk short of a typical ${bar.label}`}</div>`:''}
+    </div>`;
+  }).join('');
 
   const rec = (me.wins!=null) ? `${me.wins}-${me.losses}${me.ties?`-${me.ties}`:''}` : '—';
   const standing = me.standing ? ` · ${ordinal(me.standing)} of ${lg.teams.length}` : '';
@@ -1424,10 +1548,11 @@ function renderManagerLeagueDetail(el, key){
     ${strengthRows || '<div class="mgr-empty">No roster shape configured for this league yet.</div>'}
 
     <div class="mgr-section-lbl">Bench depth</div>
-    <div class="mgr-bench-note">Your Nth-best player at each position, ranked against every other team's
-      Nth-best — so RB5 is measured against the league's other RB5s, not against starters.
-      Teams with nobody at that depth score zero and rank last.</div>
-    ${benchRows || '<div class="mgr-empty">No ranked bench players — everyone with a projection is starting.</div>'}
+    <div class="mgr-bench-note">Bar spans every ${''}player at that position rostered anywhere in the league.
+      The bright tick is the <b>startable bar</b> — the league-median ${(()=>{const b=mgrStartableBar(lg,'RB');return b?b.label:'last starting slot';})()}
+      a flex-eligible bench player has to beat to be worth starting. The right-hand number is
+      how far above or below that bar he is, per week.</div>
+    ${benchRows || '<div class="mgr-empty">No bench players with projections.</div>'}
 
     <div class="mgr-section-lbl">Waiver Targets</div>
     <div class="mgr-comingsoon">Coming next: free agents scored against YOUR weakest starter at
