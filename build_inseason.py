@@ -342,10 +342,21 @@ def build_league(key, raw, roster_slots, ros_index):
         teams.append(team)
 
     free_agents = [enrich(p, ros_index) for p in raw.get("free_agents", [])]
-    # Unprojected free agents are noise -- they're the deep tail that has no
-    # ESPN forecast because nobody is expected to play. Dropping them here
-    # keeps the waiver engine from having to re-filter downstream.
-    free_agents = [p for p in free_agents if p.get("ros_per_week") is not None]
+    # Unprojected free agents are noise -- the deep tail nobody expects to
+    # play. Dropped so the waiver engine doesn't have to re-filter.
+    #
+    # BUT: only when the drop is selective. If NOTHING has a projection, the
+    # cause is a broken projection join, not a worthless free-agent pool, and
+    # silently emitting an empty list turns a data failure into what looks
+    # like a quiet league. Keep them and say so instead.
+    valued = [p for p in free_agents if p.get("ros_per_week") is not None]
+    if valued or not free_agents:
+        free_agents = valued
+    else:
+        print(f"  ::warning::{key}: all {len(free_agents)} free agents are unprojected. "
+              f"Keeping them unvalued -- this is a projection-join failure, not an "
+              f"empty waiver wire. Check player_ros_{YEAR}.json before trusting "
+              f"anything downstream.")
     free_agents.sort(key=lambda p: p.get("effective_per_week") or 0, reverse=True)
 
     strength, lineups = ({}, {})
