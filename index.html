@@ -794,6 +794,30 @@
   .mgr-str-flat{font-size:8.5px;color:var(--dim);margin-top:4px;}
   .mgr-bench-note{font-size:9px;color:var(--dim);line-height:1.5;margin-bottom:6px;}
   .mgr-str-holding{font-size:8.5px;color:var(--dim);}
+
+  /* ===== league power-ranking boards ===== */
+  .mgr-rank-row{display:flex;align-items:center;gap:7px;padding:6px 4px;font-size:10.5px;
+    border-top:1px solid var(--line);}
+  .mgr-rank-row:first-of-type{border-top:none;}
+  .mgr-rank-row.is-me{background:rgba(255,183,3,.07);}
+  .mgr-rank-n{flex:0 0 16px;color:var(--dim);font-size:9px;font-variant-numeric:tabular-nums;
+    text-align:right;}
+  .mgr-rank-name{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .mgr-rank-row.is-me .mgr-rank-name{color:var(--amber);font-weight:700;}
+  .mgr-rank-bar{flex:0 0 68px;height:6px;background:var(--line);border-radius:3px;overflow:hidden;}
+  .mgr-rank-bar i{display:block;height:100%;border-radius:3px;opacity:.75;}
+  .mgr-rank-bar i.tier-strong{background:var(--green);}
+  .mgr-rank-bar i.tier-mid{background:var(--dim);}
+  .mgr-rank-bar i.tier-weak{background:var(--red);}
+  .mgr-rank-bar i.tier-me{background:var(--amber);}
+  .mgr-rank-val{flex:0 0 46px;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;}
+  .mgr-rank-val.tier-strong{color:var(--green);}
+  .mgr-rank-val.tier-mid{color:var(--txt);}
+  .mgr-rank-val.tier-weak{color:var(--red);}
+  .mgr-rank-val.tier-me{color:var(--amber);}
+  @media(min-width:760px){
+    .mgr-boards{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:start;}
+  }
   .mgr-section-lbl{font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:var(--dim);
     margin:16px 0 6px;}
   .mgr-empty{font-size:10.5px;color:var(--dim);line-height:1.6;padding:14px;text-align:center;
@@ -1229,6 +1253,17 @@ function mgrWeakGap(row){
 // which build_inseason.py version last ran. It shipped blank once because
 // leagueMin/depthChart were added to the pipeline but the pipeline file
 // wasn't deployed, and the UI silently rendered nothing instead of saying so.
+// True median: for an even count, the AVERAGE of the two middle values, not
+// the upper one. Taking sorted[n/2] on a 12-team league silently biases the
+// median upward, which made league-wide starter surpluses sum to -7.7 instead
+// of ~0 -- i.e. it reported more below-average teams than can exist.
+function mgrMedian(sortedAsc){
+  const n = sortedAsc.length;
+  if(!n) return null;
+  const mid = Math.floor(n/2);
+  return (n % 2) ? sortedAsc[mid] : (sortedAsc[mid-1] + sortedAsc[mid]) / 2;
+}
+
 function mgrSlotSpread(lgData, slotLabel){
   const vals = [];
   (lgData.teams||[]).forEach(t=>{
@@ -1238,7 +1273,7 @@ function mgrSlotSpread(lgData, slotLabel){
   if(!vals.length) return null;
   const sorted = [...vals].sort((a,b)=>a-b);
   return {min:sorted[0], max:sorted[sorted.length-1],
-          median:sorted[Math.floor(sorted.length/2)], n:vals.length};
+          median:mgrMedian(sorted), n:vals.length};
 }
 
 // Every rostered player at a position, league-wide -- the scale a bench
@@ -1253,7 +1288,7 @@ function mgrPositionSpread(lgData, pos){
   if(!vals.length) return null;
   const sorted = [...vals].sort((a,b)=>a-b);
   return {min:sorted[0], max:sorted[sorted.length-1],
-          median:sorted[Math.floor(sorted.length/2)], n:vals.length};
+          median:mgrMedian(sorted), n:vals.length};
 }
 
 // THE STARTABLE BAR: what a bench player has to beat to crack the lineup.
@@ -1297,6 +1332,70 @@ function mgrBenchPlayers(lgData, team){
   return (team.roster||[])
     .filter(p=>p.effective_per_week!=null && !starters.has(p.name))
     .sort((a,b)=>b.effective_per_week-a.effective_per_week);
+}
+
+// ---- league-wide power rankings ----
+// Two separate boards, because they answer different questions and a single
+// blended "power score" would hide which one a team is actually winning on.
+//
+// STARTERS: sum across every starting slot of (that team's value at the slot
+// minus the LEAGUE MEDIAN at that slot). Summing surpluses rather than raw
+// points is what makes it readable -- a raw starting-lineup total is
+// dominated by how many slots the league starts, and leaves you doing the
+// "is 98 good?" arithmetic yourself. Zero means a perfectly median lineup.
+//
+// BENCH: sum of the top 3 FLEX-eligible bench players only. Sean's call, and
+// it's right -- totalling the whole bench punishes a team for holding
+// long-shot stashes, which is a strategy rather than a weakness. Three is
+// about how many bodies actually cover a bye or an injury before you'd be on
+// waivers anyway. QBs are excluded: a backup QB can't fill a flex slot, so
+// he isn't depth in the sense this measures.
+function mgrLeagueRankings(lgData){
+  const teams = lgData.teams || [];
+  const spreads = {};
+  ((teams[0] || {}).positionStrength || []).forEach(r=>{
+    spreads[r.slot] = mgrSlotSpread(lgData, r.slot);
+  });
+  return teams.map(t=>{
+    let surplus = 0;
+    (t.positionStrength||[]).forEach(r=>{
+      const sp = spreads[r.slot];
+      if(!sp || r.perWeek==null) return;
+      surplus += r.perWeek - sp.median;
+    });
+    const top3 = mgrBenchPlayers(lgData, t)
+      .filter(p=>MGR_FLEX_ELIGIBLE.includes(p.position))
+      .slice(0,3);
+    return {
+      team: t,
+      isMe: !!t.is_me,
+      surplus: Math.round(surplus*10)/10,
+      benchSum: Math.round(top3.reduce((a,p)=>a+p.effective_per_week,0)*10)/10,
+      top3: top3,
+    };
+  });
+}
+
+// One ranked board. `key` picks the metric; everything else is shared so the
+// two boards stay visually identical and can be compared at a glance.
+function mgrRankBoard(rows, key, fmt){
+  const sorted = [...rows].sort((a,b)=>b[key]-a[key]);
+  const vals = sorted.map(r=>r[key]);
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  const span = hi - lo;
+  return sorted.map((r,i)=>{
+    // Bar is scaled across the league's own spread on this metric, so the
+    // visual gap between 1st and 2nd is the real gap, not a fixed step.
+    const pct = span>0 ? ((r[key]-lo)/span)*100 : 50;
+    const tier = r.isMe ? 'me' : (i < Math.ceil(sorted.length/3) ? 'strong'
+                : (i >= sorted.length - Math.ceil(sorted.length/3) ? 'weak' : 'mid'));
+    return `<div class="mgr-rank-row${r.isMe?' is-me':''}">
+      <span class="mgr-rank-n">${i+1}</span>
+      <span class="mgr-rank-name">${r.team.team_name||('Team '+r.team.team_id)}</span>
+      <span class="mgr-rank-bar"><i class="tier-${tier}" style="width:${Math.max(2,pct)}%"></i></span>
+      <span class="mgr-rank-val tier-${tier}">${fmt(r[key])}</span>
+    </div>`;
+  }).join('');
 }
 
 function mgrMyTeam(leagueData){
@@ -1533,6 +1632,7 @@ function renderManagerLeagueDetail(el, key){
 
   const rec = (me.wins!=null) ? `${me.wins}-${me.losses}${me.ties?`-${me.ties}`:''}` : '—';
   const standing = me.standing ? ` · ${ordinal(me.standing)} of ${lg.teams.length}` : '';
+  const rankRows = mgrLeagueRankings(lg);
 
   el.innerHTML = `
     <div class="mgr-detail-head">
@@ -1553,6 +1653,20 @@ function renderManagerLeagueDetail(el, key){
       a flex-eligible bench player has to beat to be worth starting. The right-hand number is
       how far above or below that bar he is, per week.</div>
     ${benchRows || '<div class="mgr-empty">No bench players with projections.</div>'}
+
+    <div class="mgr-section-lbl">League power rankings</div>
+    <div class="mgr-boards">
+      <div>
+        <div class="mgr-bench-note"><b>Starters</b> — points per week above a median lineup,
+          summed across every starting slot. 0.0 is a perfectly average team.</div>
+        ${mgrRankBoard(rankRows, 'surplus', v=>(v>0?'+':'')+v.toFixed(1))}
+      </div>
+      <div>
+        <div class="mgr-bench-note"><b>Bench depth</b> — combined pts/wk of the top 3 flex-eligible
+          bench players. Only 3, so holding long-shot stashes isn't counted against you.</div>
+        ${mgrRankBoard(rankRows, 'benchSum', v=>v.toFixed(1))}
+      </div>
+    </div>
 
     <div class="mgr-section-lbl">Waiver Targets</div>
     <div class="mgr-comingsoon">Coming next: free agents scored against YOUR weakest starter at

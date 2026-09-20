@@ -293,7 +293,11 @@ def positional_strength(teams, roster_slots):
             mine = next(e for e in entries if e["team_id"] == t["team_id"])
             values = [e["value"] for e in entries]
             n = len(values)
-            median = sorted(values)[n // 2] if n else 0.0
+            # True median: average the two middle values on an even count.
+            # sorted(values)[n//2] takes the upper-middle, which biases the
+            # median up and makes league-wide surpluses fail to sum to zero.
+            sv = sorted(values)
+            median = (sv[n // 2] if n % 2 else (sv[n // 2 - 1] + sv[n // 2]) / 2) if n else 0.0
             pos = label.rstrip("0123456789") or label
             rows.append({
                 "slot": label,
@@ -305,6 +309,14 @@ def positional_strength(teams, roster_slots):
                 "leagueMedian": round(median, 2),
                 "gapToMedian": round(mine["value"] - median, 2),
                 "leagueBest": round(max(values), 2) if values else 0.0,
+                # Min/max as a FALLBACK only. The Manager Cockpit derives the
+                # league spread itself from the team rows, so the bar renders
+                # correctly even against a JSON built before this field
+                # existed -- which is exactly how it shipped blank once.
+                # Emitted anyway so the file is self-describing for anything
+                # else that reads it.
+                "leagueMin": round(min(values), 2) if values else 0.0,
+                "leagueMax": round(max(values), 2) if values else 0.0,
                 # Only QB/RB/WR/TE/FLEX are worth acting on -- see
                 # STRENGTH_POSITIONS. K/DEF are carried but flagged so the UI
                 # can grey them out instead of prompting a trade for a kicker.
