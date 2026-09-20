@@ -326,14 +326,22 @@ def positional_strength(teams, roster_slots):
     return out, lineups
 
 
-def roster_slots_for(key, bigboard, rules):
-    """Roster shape, preferring bigboard.json.
+def roster_slots_for(key, raw, bigboard, rules):
+    """Roster shape, in order of trust: live ESPN settings, then bigboard.json,
+    then the hand-maintained fallback in league_rules.json.
 
-    Only Zimmer's shape lives in league_rules.json; Kepners' and Miami's come
-    off their Big Board Team sheets and are merged into bigboard.json by
-    convert_bigboard.py. Reading bigboard first means all three resolve from
-    one place and nobody has to hand-maintain a second copy that can drift.
+    espn_inseason_pull.py now derives an ESPN league's shape directly from
+    that league's own settings on every run (see its module docstring) --
+    that's ground truth and can never drift, so it wins whenever present.
+    Kepners' and Miami's still come off their Big Board Team sheets via
+    convert_bigboard.py (Yahoo doesn't expose an equivalent settings read the
+    same way), so bigboard.json remains their real source. league_rules.json
+    is now purely a last-resort fallback for whenever neither of the above
+    has an answer yet.
     """
+    slots = (raw or {}).get("rosterSlots") or []
+    if slots:
+        return list(slots)
     lg = ((bigboard or {}).get("leagues") or {}).get(key) or {}
     slots = lg.get("rosterSlots") or []
     if slots:
@@ -434,7 +442,7 @@ def main():
     for doc in (yahoo, espn):
         for key, raw in ((doc or {}).get("leagues") or {}).items():
             leagues[key] = build_league(
-                key, raw, roster_slots_for(key, bigboard, rules), ros_index)
+                key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index)
 
     if not leagues:
         raise SystemExit(
