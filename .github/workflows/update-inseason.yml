@@ -37,6 +37,7 @@ jobs:
       YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
       YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
       YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
+      GH_SECRETS_PAT: ${{ secrets.GH_SECRETS_PAT }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -66,10 +67,30 @@ jobs:
       # failure must not cost us the Zimmer refresh -- two of three leagues is
       # a usable cockpit, zero is not. Flip this to false once a run succeeds.
       - name: Pull Yahoo league state (Kepners + Miami)
+        id: pull_yahoo
         continue-on-error: true
         run: |
           set -o pipefail
           python yahoo_inseason_pull.py "$YEAR" 2>&1 | tee -a inseason_run.log
+
+      # yahoo_setup.py refreshes on every CI run (no cached local token
+      # survives between runs), and Yahoo can return a NEW refresh_token on
+      # any refresh. When it does, it writes that value to $GITHUB_OUTPUT --
+      # see _save_token() -- but a step's own output only exists for THIS
+      # run; nothing carries it into the stored secret automatically. Left
+      # alone, the secret silently goes stale the first time Yahoo rotates it,
+      # and every run after that fails with an auth error that looks
+      # unrelated to rotation. This step closes that gap: if a rotated token
+      # came back, write it straight back to the secret Yahoo's step reads
+      # next time. Uses GH_SECRETS_PAT (repo+workflow scopes) via `gh secret
+      # set`, same credential the draft-season workflows already rely on.
+      - name: Persist rotated Yahoo refresh token
+        if: always() && steps.pull_yahoo.outputs.refresh_token != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_SECRETS_PAT }}
+        run: |
+          echo "Yahoo issued a new refresh token this run -- updating the secret."
+          echo -n "${{ steps.pull_yahoo.outputs.refresh_token }}" | gh secret set YAHOO_REFRESH_TOKEN
 
       - name: Build merged inseason JSON
         run: |
@@ -108,6 +129,15 @@ jobs:
                   bad.append(f"{key}: no team flagged as mine")
           if bad:
               sys.exit("Sanity check failed:\n  " + "\n  ".join(bad))
+          # Non-fatal: Yahoo is expected to be flaky until auth is confirmed
+          # working in CI (see the continue-on-error Yahoo step above), so
+          # this doesn't fail the run -- but it's easy to miss a quiet
+          # two-of-three-leagues run for weeks, so say it plainly every time.
+          missing = {"kepners", "miami"} - set(leagues)
+          if missing:
+              print(f"NOTE: {', '.join(sorted(missing))} absent this run -- "
+                    f"Yahoo pull likely failed. Check the 'Pull Yahoo league "
+                    f"state' step's log above.")
           print("Sanity check passed.")
           PY
 
