@@ -731,23 +731,6 @@
     font-size:9px;letter-spacing:0.08em;text-transform:uppercase;padding:7px 10px;cursor:pointer;}
   .mgr-back:hover{color:var(--txt);border-color:var(--txt);}
   .mgr-detail-title{font-size:15px;font-weight:700;color:var(--amber);}
-
-  .mgr-strength-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-top:1px solid var(--line);
-    font-size:11px;}
-  .mgr-strength-row:first-of-type{border-top:none;}
-  .mgr-strength-slot{flex:0 0 42px;color:var(--dim);font-size:9.5px;letter-spacing:0.04em;}
-  .mgr-strength-player{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
-  .mgr-strength-injury{color:var(--red);font-size:9px;margin-left:4px;}
-  .mgr-strength-rank{flex:0 0 56px;text-align:right;font-variant-numeric:tabular-nums;font-weight:700;}
-  .mgr-strength-rank.tier-strong{color:var(--green);}
-  .mgr-strength-rank.tier-mid{color:var(--dim);}
-  .mgr-strength-rank.tier-weak{color:var(--red);}
-  .mgr-strength-bar{flex:0 0 60px;height:5px;background:var(--line);border-radius:3px;position:relative;
-    overflow:hidden;}
-  .mgr-strength-bar i{position:absolute;top:0;bottom:0;left:0;border-radius:3px;}
-  .mgr-strength-bar i.tier-strong{background:var(--green);}
-  .mgr-strength-bar i.tier-mid{background:var(--dim);}
-  .mgr-strength-bar i.tier-weak{background:var(--red);}
   .mgr-strength-notactionable{opacity:0.45;}
 
   /* ===== positional strength as a RANGE PLOT =====
@@ -1854,30 +1837,6 @@ function renderLeagueTabs(){
   });
 }
 
-// ---------- recommendation engine (v1 heuristic) ----------
-// Score = your-rank priority + positional need bump + scarcity-before-turn.
-// Live draft state (drafted[], myRoster) is empty in mock mode; wire the
-// proxy poll here later — everything below already reacts to it.
-function computeRecs(lg){
-  const drafted=new Set();            // playerIds already gone (from live feed)
-  const rosterCounts={};              // your filled counts by position
-  const need=neededPositions(lg,rosterCounts);
-  const pool=DATA.players
-    .filter(p=>p.pos!=='NA' && p.seanPosRank!=null && !drafted.has(p.id))
-    .map(p=>{
-      let score=1000-(p.avgRank||300);           // consensus baseline
-      if(need.has(p.pos)) score+=120;            // fills a need
-      if(p.tierGroup==='avoid') score-=400;
-      if(p.tierGroup==='handcuff') score-=150;
-      if(typeof p.myDiff==='number') score+=p.myDiff*4; // you rate above ADP
-      // keeper lock: if a player is kept in THIS league, remove from pool
-      if(lg.keepers.some(k=>k.playerId===p.id)) score=-1e9;
-      return {...p,_score:score};
-    })
-    .filter(p=>p._score>-1e8)
-    .sort((a,b)=>b._score-a._score);
-  return {pool,need};
-}
 
 function neededPositions(lg,counts){
   // crude v1: any starter slot type not yet filled is a need
@@ -3285,8 +3244,6 @@ function likeSignal(p){
   }
   return {score:null, explicit:false, flag:null};
 }
-// Back-compat numeric accessor.
-function likeScore(p){ return likeSignal(p).score; }
 
 // Shared blank test (Excel "#N/A" leaks through as a string, see ptRows sort).
 function isBlankVal(v){
@@ -3973,28 +3930,6 @@ function attachResizer(resizer, cols, defaults){
   }
 }
 
-function renderRec(p,need,lg){
-  if(!p){document.getElementById('recArea').innerHTML='';return;}
-  const survives=p.avgRank!=null && p.avgRank<24 ? 'likely gone by your next pick'
-                 : 'expected to survive to your next pick';
-  const survClass = p.avgRank!=null && p.avgRank<24 ? 'warn':'';
-  document.getElementById('recArea').innerHTML=`
-    <div class="card rec">
-      <div class="top">
-        <div class="name">${p.name.toUpperCase()}${isRookie(p)?`<span class="rookie-badge">R</span>`:''}
-          <span class="tierpill">${p.tier||'—'}</span></div>
-        <div class="posbadge">${p.pos}</div>
-      </div>
-      <div class="meta">${p.team||''} · YOUR POS RANK #${p.seanPosRank>0?p.seanPosRank:'—'} · CONSENSUS ADP #${p.avgRank??'—'}${
-        typeof p.myDiff==='number'?` · YOUR DIFF ${p.myDiff>0?'+':''}${p.myDiff}`:''}${p.notes?' · '+p.notes:''}</div>
-      <div class="row"><span>Positional need</span>
-        <span class="why">${need.has(p.pos)?'fills open '+p.pos+' starter':'depth / BPA'}</span></div>
-      <div class="row"><span>Survival to next pick</span>
-        <span class="why ${survClass}">${survives}</span></div>
-      <div class="row"><span>Keeper impact (this league)</span>
-        <span class="why">${lg.keepers.length} players kept league-wide</span></div>
-    </div>`;
-}
 
 function renderDraftOrder(lg){
   const el = document.getElementById('draftOrderArea');
@@ -4354,38 +4289,7 @@ function renderDraftBanner(lg){
   if(wrap) wrap.dataset.lastOverall = String(nextOverall);
 }
 
-function renderRoster(lg){
-  const keptForMe=lg.keepers.filter(k=>{
-    const me=lg.teams.find(t=>t.isMe); return me && k.team===me.team;
-  });
-  document.getElementById('roster').innerHTML=lg.rosterSlots.map((slot,i)=>{
-    const kept=keptForMe[i];
-    const cls = kept?'filled keeper':(['BEN'].includes(slot)?'empty':'empty need');
-    return `<div class="slot ${cls}">
-      <div class="s-pos">${slot}</div>
-      <div class="s-val">${kept?kept.player:'—'}</div></div>`;
-  }).join('');
-}
 
-function renderBoard(list){
-  document.getElementById('boardArea').innerHTML=`
-    <table><thead><tr>
-      <th>Player</th><th>Pos</th><th class="num">You</th>
-      <th class="num">ADP</th><th class="num">Diff</th><th>Tier</th>
-    </tr></thead><tbody>${
-      list.map(p=>{
-        const d=typeof p.myDiff==='number'?p.myDiff:null;
-        const dc=d==null?'':(d>0?'diff-pos':'diff-neg');
-        return `<tr>
-          <td>${p.name}</td><td>${p.pos}</td>
-          <td class="num">${p.seanPosRank}</td>
-          <td class="num">${p.avgRank??'—'}</td>
-          <td class="num ${dc}">${d==null?'—':(d>0?'+':'')+d}</td>
-          <td style="color:var(--dim)">${(p.tier||'').split(' - ')[0]||'—'}</td>
-        </tr>`;
-      }).join('')
-    }</tbody></table>`;
-}
 
 function renderFoot(lg){
   // BUG FIXED: same stale-`lg.keepers` issue as the ticker (see
@@ -5880,16 +5784,6 @@ function renderPlayerCard(player, root){
     </div>`;
 }
 
-function myBudgetForPlayer(){
-  // My current max feasible bid = budget left minus $1 reserve per other
-  // remaining slot. Same math as the banner MAX BID (independent of the
-  // specific player -- it's "the most I could spend on any single player now").
-  const myPicks = zimmerDraft.picks.filter(p=>p.isMine);
-  const spent = myPicks.reduce((s,p)=>s+p.cost,0);
-  const remaining = ASSUMED_BUDGET - spent;
-  const slotsLeft = ASSUMED_ROSTER.length - myPicks.length;
-  return Math.max(1, remaining - Math.max(0, slotsLeft - 1));
-}
 
 function renderOpponentPanel(player, root){
   const area = (root||document).querySelector('.opponentPanelArea');
