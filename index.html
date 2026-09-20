@@ -1398,6 +1398,80 @@ function mgrRankBoard(rows, key, fmt){
   }).join('');
 }
 
+// ---- waiver engine ----
+// The design constraint from the start: score a free agent against MY OWN
+// weakest starter he could actually replace, not against league value or
+// raw points. A free agent with a big raw number is irrelevant if he can't
+// crack my lineup; a mediocre one is a real add if my current starter at
+// that slot is worse. This only ever surfaces a genuine lineup upgrade.
+//
+// "Could actually replace" resolves per position:
+//   - a FLEX-eligible position (RB/WR/TE) can bump ANY currently starting
+//     FLEX slot, regardless of what's occupying it, plus its own dedicated
+//     slot(s) -- a FLEX takes any of the three, so a bench-quality TE
+//     sitting in FLEX2 is fair game for an RB pickup, not just other TEs.
+//   - a non-flex position (QB, DEF) can only bump its own dedicated slot.
+//   - a position with no starting slot at all in this league (K, in a league
+//     with no K slot) naturally finds no eligible slot and is skipped --
+//     this falls out of the roster shape rather than a hardcoded exclusion
+//     list, so it never needs updating if a league's shape changes.
+// The specific starter bumped is whichever eligible starter is WEAKEST,
+// since that's who a rational manager actually drops.
+function mgrWaiverTargets(lgData, team, limit){
+  limit = limit || 8;
+  const lineup = team.startingLineup || [];
+  const rosterByName = new Map((team.roster||[]).map(p=>[p.name, p]));
+
+  // Eligibility is decided from the SLOT LABEL, not the current occupant --
+  // a dedicated slot named "TE" wants a TE whether or not anyone is in it
+  // right now. This matters specifically for an unfilled slot (a bye with no
+  // valued replacement): there is no occupant to look up a position from, so
+  // resolving eligibility from the occupant silently drops that slot from
+  // consideration entirely, which is the one case a waiver engine most needs
+  // to catch -- an empty starting slot is the clearest possible upgrade.
+  // FLEX is the one label that isn't itself a position, so it's handled
+  // separately: any flex-eligible free agent can bump a FLEX slot regardless
+  // of who (if anyone) currently sits in it.
+  const starters = lineup.map(entry=>({
+    slot: entry.slot, player: entry.player, perWeek: entry.perWeek,
+    dedicatedPosition: entry.slot.startsWith('FLEX') ? null : entry.slot.replace(/\d+$/,''),
+  }));
+
+  const byPosition = {};
+  (lgData.freeAgents||[]).forEach(fa=>{
+    if(fa.effective_per_week==null) return;
+    const eligible = starters.filter(s=>
+      s.slot.startsWith('FLEX') ? MGR_FLEX_ELIGIBLE.includes(fa.position)
+                                 : s.dedicatedPosition===fa.position);
+    if(!eligible.length) return;
+    // Weakest eligible starter, treating an unfilled slot as -Infinity so it
+    // always wins the comparison -- there is nothing weaker than nothing.
+    const worst = eligible.reduce((min,cur)=>{
+      const cv = cur.perWeek==null ? -Infinity : cur.perWeek;
+      const mv = min.perWeek==null ? -Infinity : min.perWeek;
+      return cv < mv ? cur : min;
+    });
+    const gain = fa.effective_per_week - (worst.perWeek==null ? 0 : worst.perWeek);
+    if(gain <= 0.3) return;   // rounding noise / not a real upgrade
+    (byPosition[fa.position] = byPosition[fa.position]||[]).push({
+      fa, gain: Math.round(gain*10)/10, dropPlayer: worst.player, dropSlot: worst.slot,
+      dropValue: worst.perWeek,
+    });
+  });
+
+  // Capped PER POSITION before merging, same fix as the cross-league "this
+  // week" list: a streaming position (DEF is the real case) can produce
+  // several plausible adds at once and would otherwise flood the whole list,
+  // crowding out real upgrades at other positions.
+  const out = [];
+  Object.values(byPosition).forEach(list=>{
+    list.sort((a,b)=>b.gain-a.gain);
+    out.push(...list.slice(0,2));
+  });
+  out.sort((a,b)=>b.gain-a.gain);
+  return out.slice(0, limit);
+}
+
 function mgrMyTeam(leagueData){
   return (leagueData.teams||[]).find(t=>t.is_me);
 }
@@ -1669,10 +1743,41 @@ function renderManagerLeagueDetail(el, key){
     </div>
 
     <div class="mgr-section-lbl">Waiver Targets</div>
-    <div class="mgr-comingsoon">Coming next: free agents scored against YOUR weakest starter at
-      each position, not raw value -- so this only surfaces a add if he'd actually
-      improve a lineup slot above. (${(lg.freeAgents||[]).length} free agents already
-      pulled and valued, ready for that engine.)</div>
+    <div class="mgr-bench-note">Free agents that would <b>genuinely start</b> on your team right now --
+      each one is scored against the specific starter he'd bump, not against raw value.
+      The right-hand number is the weekly gain from making that exact swap.</div>
+    ${(()=>{
+      const targets = mgrWaiverTargets(lg, me);
+      if(!targets.length) return '<div class="mgr-empty">No free agent beats a current starter right now.</div>';
+      return targets.map(t=>{
+        const fa = t.fa;
+        const sp = mgrPositionSpread(lg, fa.position);
+        const span = sp ? (sp.max - sp.min) : 0;
+        const pctOf = v => span>0 ? Math.min(100, Math.max(0, ((v - sp.min)/span)*100)) : 50;
+        const faPct = sp ? pctOf(fa.effective_per_week) : 50;
+        const dropPct = (sp && t.dropValue!=null) ? pctOf(t.dropValue) : null;
+        return `<div class="mgr-str-row">
+          <div class="mgr-str-head">
+            <span class="mgr-str-slot">${fa.position}</span>
+            <span class="mgr-str-name">${fa.name}${
+              fa.injury_status?` <span class="mgr-str-injury">${fa.injury_status}</span>`:''}</span>
+            <span class="mgr-str-val tier-strong">${fa.effective_per_week.toFixed(1)}</span>
+            <span class="mgr-str-rank">+${t.gain.toFixed(1)}</span>
+          </div>
+          ${sp?`<div class="mgr-str-scale">
+            <span class="mgr-str-end">${sp.min.toFixed(1)}</span>
+            <div class="mgr-str-track" title="all ${sp.n} ${fa.position}s rostered in this league: ${sp.min.toFixed(1)}–${sp.max.toFixed(1)}${t.dropValue!=null?` · your ${t.dropSlot} (${t.dropPlayer}) ${t.dropValue.toFixed(1)}`:''}">
+              <i class="mgr-str-fill tier-strong" style="width:${faPct}%"></i>
+              ${dropPct!=null?`<span class="mgr-str-bar-tick" style="left:${dropPct}%"></span>`:''}
+              <b class="mgr-str-dot tier-strong" style="left:${faPct}%"></b>
+            </div>
+            <span class="mgr-str-end hi">${sp.max.toFixed(1)}</span>
+          </div>`:''}
+          <div class="mgr-str-flat">would start over ${t.dropPlayer?`${t.dropPlayer} at ${t.dropSlot}`:`an empty ${t.dropSlot} slot`}
+            (+${t.gain.toFixed(1)}/wk)${fa.percent_owned!=null?` · ${Math.round(fa.percent_owned)}% rostered league-wide`:''}</div>
+        </div>`;
+      }).join('');
+    })()}
 
     <div class="mgr-section-lbl">Trade Targets</div>
     <div class="mgr-comingsoon">Coming next: buy/sell suggestions matched against other teams'
