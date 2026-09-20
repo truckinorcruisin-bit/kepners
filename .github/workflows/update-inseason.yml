@@ -34,6 +34,12 @@ jobs:
       ESPN_S2: ${{ secrets.ESPN_S2 }}
       ESPN_SWID: ${{ secrets.ESPN_SWID }}
       ESPN_MY_TEAM: ${{ secrets.ESPN_MY_TEAM }}
+      # Inspire11: same ESPN login as Zimmer, so it reuses ESPN_S2/ESPN_SWID
+      # above -- only the league id and team id differ. See
+      # espn_inseason_pull.py's ESPN_LEAGUES config for how a league on a
+      # DIFFERENT account would get its own cookie secrets instead.
+      ESPN_LEAGUE_ID_INSPIRE11: ${{ secrets.ESPN_LEAGUE_ID_INSPIRE11 }}
+      ESPN_MY_TEAM_ID_INSPIRE11: ${{ secrets.ESPN_MY_TEAM_ID_INSPIRE11 }}
       YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
       YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
       YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
@@ -58,7 +64,7 @@ jobs:
           set -o pipefail
           python espn_ros_projections.py "$YEAR" 2>&1 | tee -a inseason_run.log
 
-      - name: Pull ESPN league state (Zimmer)
+      - name: Pull ESPN league state (Zimmer + Inspire11)
         run: |
           set -o pipefail
           python espn_inseason_pull.py "$YEAR" 2>&1 | tee -a inseason_run.log
