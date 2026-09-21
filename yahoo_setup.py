@@ -48,7 +48,7 @@ import requests
 
 CLIENT_ID = os.environ.get("YAHOO_CLIENT_ID", "PASTE_YOUR_CLIENT_ID_HERE")
 CLIENT_SECRET = os.environ.get("YAHOO_CLIENT_SECRET", "PASTE_YOUR_CLIENT_SECRET_HERE")
-REDIRECT_URI = "https://localhost:8000"
+REDIRECT_URI ="oob"
 SCOPE = "fspt-r"  # Fantasy Sports read-only
 
 AUTHORIZE_URL = "https://api.login.yahoo.com/oauth2/request_auth"
