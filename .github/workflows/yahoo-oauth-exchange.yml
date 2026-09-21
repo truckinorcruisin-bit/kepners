@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       verifier_code:
-        description: 'Verifier code shown on the Yahoo authorize page'
+        description: 'Auth code from the ?code= param after approving on Yahoo'
         required: true
         type: string
 
@@ -12,11 +12,11 @@ jobs:
   exchange:
     runs-on: ubuntu-latest
     steps:
-      - name: Exchange verifier code for tokens
+      - name: Exchange auth code for tokens
         run: |
           curl -s -X POST https://api.login.yahoo.com/oauth2/get_token \
             -u "${{ secrets.YAHOO_CLIENT_ID }}:${{ secrets.YAHOO_CLIENT_SECRET }}" \
-            -d "grant_type=authorization_code&redirect_uri=oob&code=${{ github.event.inputs.verifier_code }}" \
+            -d "grant_type=authorization_code&redirect_uri=https://truckinorcruisin-bit.github.io/kepners&code=${{ github.event.inputs.verifier_code }}" \
             -o response.json
           echo "---- Yahoo response ----"
           cat response.json
