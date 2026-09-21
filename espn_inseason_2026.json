@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-09-21T13:21:54.493296+00:00",
+  "generated": "2026-09-21T14:30:01.455100+00:00",
   "current_week": 2,
   "leagues": {
     "zimmer": {
@@ -69,7 +69,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.57,
+              "percent_owned": 98.56,
               "acquisition_type": "DRAFT"
             },
             {
@@ -201,7 +201,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 74.29,
+              "percent_owned": 74.28,
               "acquisition_type": "ADD"
             },
             {
@@ -730,7 +730,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 19.05,
+              "percent_owned": 19.04,
               "acquisition_type": "DRAFT"
             },
             {
@@ -888,7 +888,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 54.41,
+              "percent_owned": 54.4,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1112,7 +1112,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 10.83,
+              "percent_owned": 10.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1755,7 +1755,7 @@
               "lineup_slot": "QB",
               "injury_status": "DOUBTFUL",
               "injured": false,
-              "percent_owned": 98.85,
+              "percent_owned": 98.84,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2328,7 +2328,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 30.55,
+          "percent_owned": 30.54,
           "acquisition_type": []
         },
         {
@@ -2559,7 +2559,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.98,
+          "percent_owned": 7.97,
           "acquisition_type": []
         },
         {
@@ -2570,7 +2570,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.63,
+          "percent_owned": 7.62,
           "acquisition_type": []
         },
         {
@@ -2801,7 +2801,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 4.02,
+          "percent_owned": 4.01,
           "acquisition_type": []
         },
         {
@@ -2922,7 +2922,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 2.98,
+          "percent_owned": 2.99,
           "acquisition_type": []
         },
         {
@@ -3109,7 +3109,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.84,
+          "percent_owned": 1.85,
           "acquisition_type": []
         },
         {
@@ -3245,17 +3245,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4599739,
-          "name": "Kendre Miller",
-          "position": "RB",
-          "pro_team": "NO",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 1.49,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4242557,
           "name": "Colby Parkinson",
           "position": "TE",
@@ -3263,6 +3252,17 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
+          "percent_owned": 1.5,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4599739,
+          "name": "Kendre Miller",
+          "position": "RB",
+          "pro_team": "NO",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
           "percent_owned": 1.49,
           "acquisition_type": []
         },
@@ -3641,21 +3641,21 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4431545,
-          "name": "Will Shipley",
-          "position": "RB",
-          "pro_team": "PHI",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.54,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4710855,
           "name": "Konata Mumpfield",
           "position": "WR",
           "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.55,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4431545,
+          "name": "Will Shipley",
+          "position": "RB",
+          "pro_team": "PHI",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -3703,7 +3703,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.46,
+          "percent_owned": 0.45,
           "acquisition_type": []
         },
         {
@@ -5095,7 +5095,7 @@
               "lineup_slot": "BE",
               "injury_status": "DOUBTFUL",
               "injured": false,
-              "percent_owned": 98.85,
+              "percent_owned": 98.84,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5745,7 +5745,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 30.55,
+              "percent_owned": 30.54,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5991,7 +5991,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 7.63,
+              "percent_owned": 7.62,
               "acquisition_type": "DRAFT"
             }
           ]
@@ -6149,7 +6149,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 54.41,
+              "percent_owned": 54.4,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6634,7 +6634,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.57,
+              "percent_owned": 98.56,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7372,7 +7372,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 74.29,
+              "percent_owned": 74.28,
               "acquisition_type": "ADD"
             }
           ]
@@ -7574,7 +7574,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 19.05,
+          "percent_owned": 19.04,
           "acquisition_type": []
         },
         {
@@ -7662,7 +7662,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 10.83,
+          "percent_owned": 10.85,
           "acquisition_type": []
         },
         {
@@ -7772,7 +7772,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.98,
+          "percent_owned": 7.97,
           "acquisition_type": []
         },
         {
@@ -8014,7 +8014,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 4.02,
+          "percent_owned": 4.01,
           "acquisition_type": []
         },
         {
@@ -8135,7 +8135,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 2.98,
+          "percent_owned": 2.99,
           "acquisition_type": []
         },
         {
@@ -8355,7 +8355,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.84,
+          "percent_owned": 1.85,
           "acquisition_type": []
         },
         {
@@ -8502,17 +8502,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4599739,
-          "name": "Kendre Miller",
-          "position": "RB",
-          "pro_team": "NO",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 1.49,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4242557,
           "name": "Colby Parkinson",
           "position": "TE",
@@ -8520,6 +8509,17 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
+          "percent_owned": 1.5,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4599739,
+          "name": "Kendre Miller",
+          "position": "RB",
+          "pro_team": "NO",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
           "percent_owned": 1.49,
           "acquisition_type": []
         },
@@ -8953,21 +8953,21 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4431545,
-          "name": "Will Shipley",
-          "position": "RB",
-          "pro_team": "PHI",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.54,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4710855,
           "name": "Konata Mumpfield",
           "position": "WR",
           "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.55,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4431545,
+          "name": "Will Shipley",
+          "position": "RB",
+          "pro_team": "PHI",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9026,7 +9026,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.46,
+          "percent_owned": 0.45,
           "acquisition_type": []
         },
         {
