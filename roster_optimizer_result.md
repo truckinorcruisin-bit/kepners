@@ -1,6 +1,6 @@
 # Roster Optimizer Results
 
-Generated 2026-09-21 13:14 UTC from bigboard.json.
+Generated 2026-09-21 14:28 UTC from bigboard.json.
 
 ```
 Loaded 251 skill-position (QB/RB/WR/TE) players with both WAR and an ESPN bid from bigboard.json. (K/DEF excluded entirely -- see script docstring.)
