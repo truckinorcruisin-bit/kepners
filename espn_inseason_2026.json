@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-09-20T19:53:51.505569+00:00",
+  "generated": "2026-09-21T13:21:54.493296+00:00",
   "current_week": 2,
   "leagues": {
     "zimmer": {
@@ -58,7 +58,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 97.21,
+              "percent_owned": 97.2,
               "acquisition_type": "DRAFT"
             },
             {
@@ -69,7 +69,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.62,
+              "percent_owned": 98.57,
               "acquisition_type": "DRAFT"
             },
             {
@@ -80,7 +80,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 97.3,
+              "percent_owned": 97.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -91,7 +91,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.01,
+              "percent_owned": 91.94,
               "acquisition_type": "DRAFT"
             },
             {
@@ -102,7 +102,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.22,
+              "percent_owned": 92.14,
               "acquisition_type": "DRAFT"
             },
             {
@@ -111,9 +111,9 @@
               "position": "WR",
               "pro_team": "SF",
               "lineup_slot": "WR",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 93.2,
+              "percent_owned": 93.15,
               "acquisition_type": "DRAFT"
             },
             {
@@ -124,7 +124,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 74.9,
+              "percent_owned": 74.82,
               "acquisition_type": "DRAFT"
             },
             {
@@ -135,7 +135,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.98,
+              "percent_owned": 90.9,
               "acquisition_type": "DRAFT"
             },
             {
@@ -144,9 +144,9 @@
               "position": "WR",
               "pro_team": "GB",
               "lineup_slot": "BE",
-              "injury_status": "OUT",
-              "injured": true,
-              "percent_owned": 65.39,
+              "injury_status": "QUESTIONABLE",
+              "injured": false,
+              "percent_owned": 65.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -157,7 +157,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 91.41,
+              "percent_owned": 91.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -168,7 +168,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.24,
+              "percent_owned": 15.21,
               "acquisition_type": "DRAFT"
             },
             {
@@ -179,7 +179,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 19.06,
+              "percent_owned": 19.01,
               "acquisition_type": "DRAFT"
             },
             {
@@ -190,7 +190,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.73,
+              "percent_owned": 15.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -201,7 +201,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 74.44,
+              "percent_owned": 74.29,
               "acquisition_type": "ADD"
             },
             {
@@ -212,7 +212,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 44.68,
+              "percent_owned": 44.6,
               "acquisition_type": "ADD"
             }
           ]
@@ -249,7 +249,7 @@
               "lineup_slot": "IR",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 99.33,
+              "percent_owned": 99.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -269,9 +269,9 @@
               "position": "RB",
               "pro_team": "SEA",
               "lineup_slot": "RB",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 93.52,
+              "percent_owned": 93.43,
               "acquisition_type": "DRAFT"
             },
             {
@@ -282,7 +282,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 95.77,
+              "percent_owned": 95.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -293,7 +293,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.37,
+              "percent_owned": 90.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -304,7 +304,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.12,
+              "percent_owned": 96.09,
               "acquisition_type": "DRAFT"
             },
             {
@@ -315,7 +315,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 93.65,
+              "percent_owned": 93.61,
               "acquisition_type": "DRAFT"
             },
             {
@@ -326,7 +326,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.18,
+              "percent_owned": 83.08,
               "acquisition_type": "DRAFT"
             },
             {
@@ -337,7 +337,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 25.43,
+              "percent_owned": 25.35,
               "acquisition_type": "DRAFT"
             },
             {
@@ -348,7 +348,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 39.77,
+              "percent_owned": 39.65,
               "acquisition_type": "DRAFT"
             },
             {
@@ -359,7 +359,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 98.18,
+              "percent_owned": 98.16,
               "acquisition_type": "DRAFT"
             },
             {
@@ -370,7 +370,7 @@
               "lineup_slot": "BE",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 91.75,
+              "percent_owned": 91.73,
               "acquisition_type": "DRAFT"
             },
             {
@@ -381,7 +381,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 57.96,
+              "percent_owned": 57.87,
               "acquisition_type": "DRAFT"
             },
             {
@@ -392,7 +392,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 17.01,
+              "percent_owned": 16.99,
               "acquisition_type": "ADD"
             },
             {
@@ -403,7 +403,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 24.23,
+              "percent_owned": 24.39,
               "acquisition_type": "ADD"
             }
           ]
@@ -438,7 +438,7 @@
               "position": "RB",
               "pro_team": "PHI",
               "lineup_slot": "RB",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
               "percent_owned": 99.85,
               "acquisition_type": "DRAFT"
@@ -462,7 +462,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 95.53,
+              "percent_owned": 95.49,
               "acquisition_type": "DRAFT"
             },
             {
@@ -473,7 +473,7 @@
               "lineup_slot": "QB",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 95.22,
+              "percent_owned": 95.13,
               "acquisition_type": "DRAFT"
             },
             {
@@ -484,7 +484,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 93.16,
+              "percent_owned": 93.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -495,7 +495,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 79.4,
+              "percent_owned": 79.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -504,9 +504,9 @@
               "position": "RB",
               "pro_team": "CAR",
               "lineup_slot": "BE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 79.58,
+              "percent_owned": 79.5,
               "acquisition_type": "DRAFT"
             },
             {
@@ -517,7 +517,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 65.43,
+              "percent_owned": 65.33,
               "acquisition_type": "DRAFT"
             },
             {
@@ -528,7 +528,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 75.14,
+              "percent_owned": 75.06,
               "acquisition_type": "DRAFT"
             },
             {
@@ -539,7 +539,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 65.09,
+              "percent_owned": 65.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -550,7 +550,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 87.54,
+              "percent_owned": 87.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -561,7 +561,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 50.15,
+              "percent_owned": 50.02,
               "acquisition_type": "DRAFT"
             },
             {
@@ -572,7 +572,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 21.9,
+              "percent_owned": 21.85,
               "acquisition_type": "ADD"
             },
             {
@@ -583,7 +583,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.39,
+              "percent_owned": 15.38,
               "acquisition_type": "ADD"
             }
           ]
@@ -642,7 +642,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 98.46,
+              "percent_owned": 98.44,
               "acquisition_type": "DRAFT"
             },
             {
@@ -653,7 +653,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 96.16,
+              "percent_owned": 96.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -664,7 +664,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.07,
+              "percent_owned": 94.04,
               "acquisition_type": "DRAFT"
             },
             {
@@ -675,7 +675,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 86.76,
+              "percent_owned": 86.67,
               "acquisition_type": "DRAFT"
             },
             {
@@ -684,9 +684,9 @@
               "position": "RB",
               "pro_team": "DEN",
               "lineup_slot": "RB",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 82.68,
+              "percent_owned": 82.59,
               "acquisition_type": "DRAFT"
             },
             {
@@ -697,7 +697,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.21,
+              "percent_owned": 90.19,
               "acquisition_type": "DRAFT"
             },
             {
@@ -708,7 +708,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.26,
+              "percent_owned": 90.07,
               "acquisition_type": "DRAFT"
             },
             {
@@ -719,7 +719,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 81.07,
+              "percent_owned": 80.98,
               "acquisition_type": "DRAFT"
             },
             {
@@ -730,7 +730,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 19.18,
+              "percent_owned": 19.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -741,7 +741,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 28.99,
+              "percent_owned": 28.88,
               "acquisition_type": "DRAFT"
             },
             {
@@ -752,7 +752,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 92.29,
+              "percent_owned": 92.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -763,7 +763,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 17.55,
+              "percent_owned": 17.51,
               "acquisition_type": "DRAFT"
             }
           ]
@@ -786,10 +786,10 @@
               "name": "Puka Nacua",
               "position": "WR",
               "pro_team": "LAR",
-              "lineup_slot": "WR",
+              "lineup_slot": "BE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 99.92,
+              "percent_owned": 99.91,
               "acquisition_type": "DRAFT"
             },
             {
@@ -811,7 +811,7 @@
               "lineup_slot": "IR",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 99.79,
+              "percent_owned": 99.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -822,7 +822,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 93.7,
+              "percent_owned": 93.63,
               "acquisition_type": "DRAFT"
             },
             {
@@ -833,7 +833,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.24,
+              "percent_owned": 92.16,
               "acquisition_type": "DRAFT"
             },
             {
@@ -844,7 +844,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 88.69,
+              "percent_owned": 88.59,
               "acquisition_type": "DRAFT"
             },
             {
@@ -855,7 +855,7 @@
               "lineup_slot": "BE",
               "injury_status": "DAY_TO_DAY",
               "injured": false,
-              "percent_owned": 85.9,
+              "percent_owned": 85.84,
               "acquisition_type": "DRAFT"
             },
             {
@@ -866,7 +866,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 88.4,
+              "percent_owned": 88.33,
               "acquisition_type": "DRAFT"
             },
             {
@@ -877,7 +877,7 @@
               "lineup_slot": "BE",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 62.18,
+              "percent_owned": 62.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -888,7 +888,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 54.48,
+              "percent_owned": 54.41,
               "acquisition_type": "DRAFT"
             },
             {
@@ -899,7 +899,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 64.55,
+              "percent_owned": 64.48,
               "acquisition_type": "DRAFT"
             },
             {
@@ -910,7 +910,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 29.35,
+              "percent_owned": 29.23,
               "acquisition_type": "DRAFT"
             },
             {
@@ -921,7 +921,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 24.5,
+              "percent_owned": 24.49,
               "acquisition_type": "DRAFT"
             },
             {
@@ -930,9 +930,9 @@
               "position": "WR",
               "pro_team": "MIA",
               "lineup_slot": "RB/WR/TE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 39.43,
+              "percent_owned": 39.39,
               "acquisition_type": "ADD"
             },
             {
@@ -941,9 +941,9 @@
               "position": "TE",
               "pro_team": "LAC",
               "lineup_slot": "TE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 6.03,
+              "percent_owned": 6.02,
               "acquisition_type": "ADD"
             },
             {
@@ -954,7 +954,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 60.59,
+              "percent_owned": 60.71,
               "acquisition_type": "ADD"
             }
           ]
@@ -1002,7 +1002,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 97.65,
+              "percent_owned": 97.62,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1013,7 +1013,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.72,
+              "percent_owned": 98.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1024,7 +1024,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 99.04,
+              "percent_owned": 99.02,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1035,7 +1035,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.44,
+              "percent_owned": 94.38,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1046,7 +1046,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 84.77,
+              "percent_owned": 84.69,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1057,7 +1057,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.64,
+              "percent_owned": 89.56,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1068,7 +1068,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 76.5,
+              "percent_owned": 76.42,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1079,7 +1079,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 27.38,
+              "percent_owned": 27.34,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1090,7 +1090,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 51.97,
+              "percent_owned": 51.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1101,7 +1101,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 23.43,
+              "percent_owned": 23.39,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1112,7 +1112,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 10.2,
+              "percent_owned": 10.83,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1123,7 +1123,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 34.27,
+              "percent_owned": 34.28,
               "acquisition_type": "ADD"
             },
             {
@@ -1134,7 +1134,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 61.12,
+              "percent_owned": 61.1,
               "acquisition_type": "ADD"
             }
           ]
@@ -1193,7 +1193,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.14,
+              "percent_owned": 98.13,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1204,7 +1204,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.93,
+              "percent_owned": 98.88,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1215,7 +1215,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.39,
+              "percent_owned": 89.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1226,7 +1226,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.34,
+              "percent_owned": 94.25,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1237,7 +1237,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 77.43,
+              "percent_owned": 77.35,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1248,7 +1248,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.66,
+              "percent_owned": 83.62,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1259,7 +1259,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 68.73,
+              "percent_owned": 68.68,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1270,7 +1270,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 82.45,
+              "percent_owned": 82.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1281,7 +1281,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 37.88,
+              "percent_owned": 37.81,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1292,7 +1292,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.73,
+              "percent_owned": 83.65,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1303,7 +1303,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 88.51,
+              "percent_owned": 88.45,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1314,7 +1314,7 @@
               "lineup_slot": "BE",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 29.12,
+              "percent_owned": 29.07,
               "acquisition_type": "ADD"
             }
           ]
@@ -1351,7 +1351,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.93,
+              "percent_owned": 98.92,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1362,7 +1362,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.18,
+              "percent_owned": 98.2,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1373,7 +1373,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.26,
+              "percent_owned": 98.2,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1384,7 +1384,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.76,
+              "percent_owned": 98.73,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1393,9 +1393,9 @@
               "position": "RB",
               "pro_team": "PIT",
               "lineup_slot": "RB/WR/TE",
-              "injury_status": "OUT",
-              "injured": true,
-              "percent_owned": 85.39,
+              "injury_status": "QUESTIONABLE",
+              "injured": false,
+              "percent_owned": 85.29,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1406,7 +1406,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.12,
+              "percent_owned": 92.07,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1417,7 +1417,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 80.59,
+              "percent_owned": 80.52,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1428,7 +1428,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 74.6,
+              "percent_owned": 74.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1439,7 +1439,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 84.8,
+              "percent_owned": 84.72,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1450,7 +1450,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 50.71,
+              "percent_owned": 50.62,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1461,7 +1461,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 49.67,
+              "percent_owned": 49.66,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1472,7 +1472,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 36.91,
+              "percent_owned": 36.84,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1483,7 +1483,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 37.53,
+              "percent_owned": 37.5,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1553,7 +1553,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.03,
+              "percent_owned": 98.01,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1564,7 +1564,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 95.19,
+              "percent_owned": 95.14,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1575,7 +1575,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.53,
+              "percent_owned": 94.47,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1586,7 +1586,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 87.05,
+              "percent_owned": 86.97,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1597,7 +1597,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 81.23,
+              "percent_owned": 81.15,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1608,7 +1608,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 65.14,
+              "percent_owned": 65.02,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1619,7 +1619,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 81.91,
+              "percent_owned": 81.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1641,7 +1641,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 13.07,
+              "percent_owned": 13.03,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1663,7 +1663,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 26.14,
+              "percent_owned": 26.19,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1674,7 +1674,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 54.35,
+              "percent_owned": 54.23,
               "acquisition_type": "ADD"
             },
             {
@@ -1685,7 +1685,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.02,
+              "percent_owned": 15.07,
               "acquisition_type": "ADD"
             }
           ]
@@ -1722,7 +1722,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 99.07,
+              "percent_owned": 99.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1744,7 +1744,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.41,
+              "percent_owned": 96.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1753,9 +1753,9 @@
               "position": "QB",
               "pro_team": "WSH",
               "lineup_slot": "QB",
-              "injury_status": "ACTIVE",
+              "injury_status": "DOUBTFUL",
               "injured": false,
-              "percent_owned": 98.87,
+              "percent_owned": 98.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1766,7 +1766,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.79,
+              "percent_owned": 89.71,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1775,9 +1775,9 @@
               "position": "WR",
               "pro_team": "IND",
               "lineup_slot": "BE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 83.55,
+              "percent_owned": 83.51,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1788,7 +1788,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 75.44,
+              "percent_owned": 75.23,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1799,7 +1799,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 70.6,
+              "percent_owned": 70.51,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1810,7 +1810,7 @@
               "lineup_slot": "TE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 93.0,
+              "percent_owned": 92.9,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1821,7 +1821,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 57.59,
+              "percent_owned": 57.5,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1832,7 +1832,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 34.39,
+              "percent_owned": 34.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1843,7 +1843,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 49.03,
+              "percent_owned": 48.98,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1854,7 +1854,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 90.45,
+              "percent_owned": 90.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1865,7 +1865,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 14.43,
+              "percent_owned": 14.4,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1876,7 +1876,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 20.15,
+              "percent_owned": 20.11,
               "acquisition_type": "ADD"
             }
           ]
@@ -1935,7 +1935,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.74,
+              "percent_owned": 96.71,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1946,7 +1946,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 97.41,
+              "percent_owned": 97.39,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1957,7 +1957,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.17,
+              "percent_owned": 92.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1968,7 +1968,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.98,
+              "percent_owned": 89.91,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1979,7 +1979,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.99,
+              "percent_owned": 90.91,
               "acquisition_type": "DRAFT"
             },
             {
@@ -1990,7 +1990,7 @@
               "lineup_slot": "IR",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 72.39,
+              "percent_owned": 72.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2001,7 +2001,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 84.76,
+              "percent_owned": 84.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2012,7 +2012,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 75.4,
+              "percent_owned": 75.33,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2023,7 +2023,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 52.68,
+              "percent_owned": 52.59,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2045,7 +2045,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 65.59,
+              "percent_owned": 65.56,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2056,7 +2056,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 26.37,
+              "percent_owned": 26.34,
               "acquisition_type": "ADD"
             },
             {
@@ -2067,7 +2067,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 22.15,
+              "percent_owned": 22.14,
               "acquisition_type": "ADD"
             }
           ]
@@ -2115,7 +2115,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.87,
+              "percent_owned": 98.86,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2126,7 +2126,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.4,
+              "percent_owned": 96.36,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2148,7 +2148,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.38,
+              "percent_owned": 89.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2159,7 +2159,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 91.16,
+              "percent_owned": 91.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2170,7 +2170,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 74.96,
+              "percent_owned": 74.89,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2181,7 +2181,7 @@
               "lineup_slot": "BE",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 39.98,
+              "percent_owned": 39.87,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2192,7 +2192,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 88.75,
+              "percent_owned": 88.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2203,7 +2203,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 91.09,
+              "percent_owned": 91.01,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2214,7 +2214,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.08,
+              "percent_owned": 83.04,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2225,7 +2225,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 61.89,
+              "percent_owned": 61.83,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2236,7 +2236,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 26.41,
+              "percent_owned": 26.4,
               "acquisition_type": "DRAFT"
             },
             {
@@ -2247,7 +2247,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 36.91,
+              "percent_owned": 36.89,
               "acquisition_type": "DRAFT"
             }
           ]
@@ -2262,7 +2262,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 69.31,
+          "percent_owned": 69.27,
           "acquisition_type": []
         },
         {
@@ -2273,7 +2273,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 53.1,
+          "percent_owned": 52.97,
           "acquisition_type": []
         },
         {
@@ -2284,7 +2284,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 51.78,
+          "percent_owned": 51.74,
           "acquisition_type": []
         },
         {
@@ -2295,7 +2295,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 49.86,
+          "percent_owned": 49.8,
           "acquisition_type": []
         },
         {
@@ -2306,7 +2306,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 43.02,
+          "percent_owned": 42.94,
           "acquisition_type": []
         },
         {
@@ -2317,7 +2317,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 35.75,
+          "percent_owned": 35.61,
           "acquisition_type": []
         },
         {
@@ -2328,7 +2328,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 30.6,
+          "percent_owned": 30.55,
           "acquisition_type": []
         },
         {
@@ -2339,7 +2339,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 29.19,
+          "percent_owned": 29.15,
           "acquisition_type": []
         },
         {
@@ -2350,7 +2350,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 28.4,
+          "percent_owned": 28.52,
           "acquisition_type": []
         },
         {
@@ -2361,7 +2361,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 22.14,
+          "percent_owned": 22.08,
           "acquisition_type": []
         },
         {
@@ -2372,7 +2372,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 21.63,
+          "percent_owned": 21.59,
           "acquisition_type": []
         },
         {
@@ -2383,7 +2383,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 21.35,
+          "percent_owned": 21.36,
           "acquisition_type": []
         },
         {
@@ -2394,7 +2394,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 20.11,
+          "percent_owned": 20.07,
           "acquisition_type": []
         },
         {
@@ -2405,7 +2405,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 20.05,
+          "percent_owned": 20.02,
           "acquisition_type": []
         },
         {
@@ -2416,7 +2416,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 16.27,
+          "percent_owned": 16.23,
           "acquisition_type": []
         },
         {
@@ -2427,7 +2427,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 16.03,
+          "percent_owned": 15.99,
           "acquisition_type": []
         },
         {
@@ -2438,7 +2438,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 13.75,
+          "percent_owned": 13.99,
           "acquisition_type": []
         },
         {
@@ -2449,7 +2449,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 13.29,
+          "percent_owned": 13.28,
           "acquisition_type": []
         },
         {
@@ -2471,7 +2471,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 11.49,
+          "percent_owned": 11.46,
           "acquisition_type": []
         },
         {
@@ -2482,7 +2482,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 10.61,
+          "percent_owned": 10.62,
           "acquisition_type": []
         },
         {
@@ -2493,7 +2493,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 10.54,
+          "percent_owned": 10.51,
           "acquisition_type": []
         },
         {
@@ -2504,7 +2504,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 10.46,
+          "percent_owned": 10.44,
           "acquisition_type": []
         },
         {
@@ -2515,7 +2515,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 10.29,
+          "percent_owned": 10.27,
           "acquisition_type": []
         },
         {
@@ -2526,7 +2526,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 9.03,
+          "percent_owned": 9.01,
           "acquisition_type": []
         },
         {
@@ -2537,7 +2537,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 8.2,
+          "percent_owned": 8.19,
           "acquisition_type": []
         },
         {
@@ -2548,7 +2548,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 8.15,
+          "percent_owned": 8.16,
           "acquisition_type": []
         },
         {
@@ -2559,7 +2559,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.99,
+          "percent_owned": 7.98,
           "acquisition_type": []
         },
         {
@@ -2570,7 +2570,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.72,
+          "percent_owned": 7.63,
           "acquisition_type": []
         },
         {
@@ -2592,7 +2592,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.28,
+          "percent_owned": 7.27,
           "acquisition_type": []
         },
         {
@@ -2603,7 +2603,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.15,
+          "percent_owned": 7.14,
           "acquisition_type": []
         },
         {
@@ -2614,7 +2614,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.08,
+          "percent_owned": 7.07,
           "acquisition_type": []
         },
         {
@@ -2625,7 +2625,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 6.87,
+          "percent_owned": 6.86,
           "acquisition_type": []
         },
         {
@@ -2636,7 +2636,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 6.7,
+          "percent_owned": 6.71,
           "acquisition_type": []
         },
         {
@@ -2647,7 +2647,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 6.31,
+          "percent_owned": 6.3,
           "acquisition_type": []
         },
         {
@@ -2658,7 +2658,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 6.07,
+          "percent_owned": 6.05,
           "acquisition_type": []
         },
         {
@@ -2669,7 +2669,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 5.82,
+          "percent_owned": 5.83,
           "acquisition_type": []
         },
         {
@@ -2680,7 +2680,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 5.56,
+          "percent_owned": 5.54,
           "acquisition_type": []
         },
         {
@@ -2702,7 +2702,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 5.32,
+          "percent_owned": 5.36,
           "acquisition_type": []
         },
         {
@@ -2713,7 +2713,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 5.06,
+          "percent_owned": 5.03,
           "acquisition_type": []
         },
         {
@@ -2735,7 +2735,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.66,
+          "percent_owned": 4.65,
           "acquisition_type": []
         },
         {
@@ -2746,7 +2746,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 4.61,
+          "percent_owned": 4.62,
           "acquisition_type": []
         },
         {
@@ -2757,7 +2757,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.49,
+          "percent_owned": 4.5,
           "acquisition_type": []
         },
         {
@@ -2768,7 +2768,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.39,
+          "percent_owned": 4.37,
           "acquisition_type": []
         },
         {
@@ -2779,7 +2779,18 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.14,
+          "percent_owned": 4.13,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 3043116,
+          "name": "Demarcus Robinson",
+          "position": "WR",
+          "pro_team": "SF",
+          "lineup_slot": null,
+          "injury_status": "DOUBTFUL",
+          "injured": false,
+          "percent_owned": 4.03,
           "acquisition_type": []
         },
         {
@@ -2790,18 +2801,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 4.03,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 3043116,
-          "name": "Demarcus Robinson",
-          "position": "WR",
-          "pro_team": "SF",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 4.0,
+          "percent_owned": 4.02,
           "acquisition_type": []
         },
         {
@@ -2812,7 +2812,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.93,
+          "percent_owned": 3.92,
           "acquisition_type": []
         },
         {
@@ -2823,7 +2823,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.83,
+          "percent_owned": 3.82,
           "acquisition_type": []
         },
         {
@@ -2845,7 +2845,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.78,
+          "percent_owned": 3.74,
           "acquisition_type": []
         },
         {
@@ -2856,7 +2856,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 3.56,
+          "percent_owned": 3.58,
           "acquisition_type": []
         },
         {
@@ -2871,10 +2871,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4870612,
-          "name": "Zachariah Branch",
-          "position": "WR",
-          "pro_team": "ATL",
+          "player_id": 14880,
+          "name": "Kirk Cousins",
+          "position": "QB",
+          "pro_team": "LV",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -2882,10 +2882,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 14880,
-          "name": "Kirk Cousins",
-          "position": "QB",
-          "pro_team": "LV",
+          "player_id": 4870612,
+          "name": "Zachariah Branch",
+          "position": "WR",
+          "pro_team": "ATL",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -2900,7 +2900,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.25,
+          "percent_owned": 3.23,
           "acquisition_type": []
         },
         {
@@ -2922,7 +2922,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 2.93,
+          "percent_owned": 2.98,
           "acquisition_type": []
         },
         {
@@ -2933,7 +2933,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 2.92,
+          "percent_owned": 2.91,
           "acquisition_type": []
         },
         {
@@ -2944,7 +2944,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.85,
+          "percent_owned": 2.86,
           "acquisition_type": []
         },
         {
@@ -2955,7 +2955,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.8,
+          "percent_owned": 2.79,
           "acquisition_type": []
         },
         {
@@ -2966,7 +2966,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 2.79,
+          "percent_owned": 2.78,
           "acquisition_type": []
         },
         {
@@ -2977,7 +2977,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 2.64,
+          "percent_owned": 2.62,
           "acquisition_type": []
         },
         {
@@ -2999,7 +2999,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 2.59,
+          "percent_owned": 2.58,
           "acquisition_type": []
         },
         {
@@ -3010,7 +3010,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.4,
+          "percent_owned": 2.45,
           "acquisition_type": []
         },
         {
@@ -3021,7 +3021,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.36,
+          "percent_owned": 2.35,
           "acquisition_type": []
         },
         {
@@ -3054,7 +3054,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.25,
+          "percent_owned": 2.23,
           "acquisition_type": []
         },
         {
@@ -3065,7 +3065,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.19,
+          "percent_owned": 2.18,
           "acquisition_type": []
         },
         {
@@ -3074,9 +3074,9 @@
           "position": "RB",
           "pro_team": "MIA",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
-          "percent_owned": 2.1,
+          "percent_owned": 2.09,
           "acquisition_type": []
         },
         {
@@ -3087,7 +3087,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.97,
+          "percent_owned": 1.96,
           "acquisition_type": []
         },
         {
@@ -3109,7 +3109,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.75,
+          "percent_owned": 1.84,
           "acquisition_type": []
         },
         {
@@ -3153,7 +3153,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 1.64,
+          "percent_owned": 1.65,
           "acquisition_type": []
         },
         {
@@ -3252,7 +3252,18 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 1.5,
+          "percent_owned": 1.49,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4242557,
+          "name": "Colby Parkinson",
+          "position": "TE",
+          "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 1.49,
           "acquisition_type": []
         },
         {
@@ -3263,7 +3274,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.44,
+          "percent_owned": 1.43,
           "acquisition_type": []
         },
         {
@@ -3275,17 +3286,6 @@
           "injury_status": "ACTIVE",
           "injured": false,
           "percent_owned": 1.38,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4242557,
-          "name": "Colby Parkinson",
-          "position": "TE",
-          "pro_team": "LAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 1.36,
           "acquisition_type": []
         },
         {
@@ -3318,7 +3318,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 1.23,
+          "percent_owned": 1.22,
           "acquisition_type": []
         },
         {
@@ -3472,7 +3472,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.72,
+          "percent_owned": 0.73,
           "acquisition_type": []
         },
         {
@@ -3494,7 +3494,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.71,
+          "percent_owned": 0.7,
           "acquisition_type": []
         },
         {
@@ -3509,6 +3509,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4431492,
+          "name": "Roman Wilson",
+          "position": "WR",
+          "pro_team": "PIT",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.66,
+          "acquisition_type": []
+        },
+        {
           "player_id": 3895856,
           "name": "Christian Kirk",
           "position": "WR",
@@ -3517,17 +3528,6 @@
           "injury_status": "INJURY_RESERVE",
           "injured": true,
           "percent_owned": 0.66,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4431492,
-          "name": "Roman Wilson",
-          "position": "WR",
-          "pro_team": "PIT",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.65,
           "acquisition_type": []
         },
         {
@@ -3549,7 +3549,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 0.63,
+          "percent_owned": 0.62,
           "acquisition_type": []
         },
         {
@@ -3582,7 +3582,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 0.61,
+          "percent_owned": 0.6,
           "acquisition_type": []
         },
         {
@@ -3652,6 +3652,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4710855,
+          "name": "Konata Mumpfield",
+          "position": "WR",
+          "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.54,
+          "acquisition_type": []
+        },
+        {
           "player_id": 4911851,
           "name": "LeQuint Allen Jr.",
           "position": "RB",
@@ -3678,6 +3689,17 @@
           "name": "Kyle Williams",
           "position": "WR",
           "pro_team": "NE",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.46,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4360797,
+          "name": "Tutu Atwell",
+          "position": "WR",
+          "pro_team": "LAR",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -3718,25 +3740,14 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4360797,
-          "name": "Tutu Atwell",
+          "player_id": 4241372,
+          "name": "Hollywood Brown",
           "position": "WR",
-          "pro_team": "LAR",
+          "pro_team": "PHI",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.4,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4710855,
-          "name": "Konata Mumpfield",
-          "position": "WR",
-          "pro_team": "LAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.4,
+          "percent_owned": 0.39,
           "acquisition_type": []
         },
         {
@@ -3744,17 +3755,6 @@
           "name": "Jaydon Blue",
           "position": "RB",
           "pro_team": "None",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.4,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4241372,
-          "name": "Hollywood Brown",
-          "position": "WR",
-          "pro_team": "PHI",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -3767,7 +3767,7 @@
           "position": "TE",
           "pro_team": "NYJ",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
           "percent_owned": 0.38,
           "acquisition_type": []
@@ -3861,17 +3861,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4426386,
-          "name": "Roschon Johnson",
-          "position": "RB",
-          "pro_team": "CHI",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.34,
-          "acquisition_type": []
-        },
-        {
           "player_id": 11252,
           "name": "Joe Flacco",
           "position": "QB",
@@ -3887,6 +3876,17 @@
           "name": "Noah Fant",
           "position": "TE",
           "pro_team": "NO",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.33,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4426386,
+          "name": "Roschon Johnson",
+          "position": "RB",
+          "pro_team": "CHI",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -3932,8 +3932,8 @@
           "position": "RB",
           "pro_team": "IND",
           "lineup_slot": null,
-          "injury_status": "QUESTIONABLE",
-          "injured": false,
+          "injury_status": "OUT",
+          "injured": true,
           "percent_owned": 0.3,
           "acquisition_type": []
         },
@@ -3956,7 +3956,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.29,
+          "percent_owned": 0.3,
           "acquisition_type": []
         },
         {
@@ -4136,17 +4136,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 3059915,
-          "name": "Kareem Hunt",
-          "position": "RB",
-          "pro_team": "None",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.19,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4690013,
           "name": "Rasheen Ali",
           "position": "RB",
@@ -4173,6 +4162,17 @@
           "name": "Devontez Walker",
           "position": "WR",
           "pro_team": "BAL",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.18,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 3059915,
+          "name": "Kareem Hunt",
+          "position": "RB",
+          "pro_team": "None",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -4282,7 +4282,7 @@
           "player_id": 4362748,
           "name": "Tyler Badie",
           "position": "RB",
-          "pro_team": "None",
+          "pro_team": "DEN",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -4305,17 +4305,6 @@
           "name": "Tommy Tremble",
           "position": "TE",
           "pro_team": "CAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.14,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 3128720,
-          "name": "Nick Chubb",
-          "position": "RB",
-          "pro_team": "None",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -4374,6 +4363,17 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
+          "percent_owned": 0.13,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 3128720,
+          "name": "Nick Chubb",
+          "position": "RB",
+          "pro_team": "None",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
           "percent_owned": 0.13,
           "acquisition_type": []
         },
@@ -4532,6 +4532,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4386544,
+          "name": "Xavier Smith",
+          "position": "WR",
+          "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.11,
+          "acquisition_type": []
+        },
+        {
           "player_id": 4039057,
           "name": "Lil'Jordan Humphrey",
           "position": "WR",
@@ -4570,7 +4581,7 @@
           "position": "TE",
           "pro_team": "LAC",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
           "percent_owned": 0.1,
           "acquisition_type": []
@@ -4620,10 +4631,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4386544,
-          "name": "Xavier Smith",
-          "position": "WR",
-          "pro_team": "LAR",
+          "player_id": 4685413,
+          "name": "Cade Klubnik",
+          "position": "QB",
+          "pro_team": "NYJ",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -4631,10 +4642,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4685413,
-          "name": "Cade Klubnik",
+          "player_id": 3115293,
+          "name": "Kyle Allen",
           "position": "QB",
-          "pro_team": "NYJ",
+          "pro_team": "BUF",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -4774,17 +4785,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 3115293,
-          "name": "Kyle Allen",
-          "position": "QB",
-          "pro_team": "BUF",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.08,
-          "acquisition_type": []
-        },
-        {
           "player_id": 3123075,
           "name": "Braxton Berrios",
           "position": "WR",
@@ -4895,6 +4895,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4690923,
+          "name": "Ben Sinnott",
+          "position": "TE",
+          "pro_team": "WSH",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.07,
+          "acquisition_type": []
+        },
+        {
           "player_id": 14163,
           "name": "Tyrod Taylor",
           "position": "QB",
@@ -4992,17 +5003,6 @@
           "injured": false,
           "percent_owned": 0.07,
           "acquisition_type": []
-        },
-        {
-          "player_id": 4430191,
-          "name": "Skyy Moore",
-          "position": "WR",
-          "pro_team": "GB",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.07,
-          "acquisition_type": []
         }
       ]
     },
@@ -5073,7 +5073,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.18,
+              "percent_owned": 98.2,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5084,7 +5084,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.74,
+              "percent_owned": 96.71,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5093,9 +5093,9 @@
               "position": "QB",
               "pro_team": "WSH",
               "lineup_slot": "BE",
-              "injury_status": "ACTIVE",
+              "injury_status": "DOUBTFUL",
               "injured": false,
-              "percent_owned": 98.87,
+              "percent_owned": 98.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5106,7 +5106,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.01,
+              "percent_owned": 91.94,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5117,7 +5117,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.39,
+              "percent_owned": 89.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5128,7 +5128,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 75.4,
+              "percent_owned": 75.33,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5139,7 +5139,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 84.77,
+              "percent_owned": 84.69,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5150,7 +5150,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.26,
+              "percent_owned": 90.07,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5161,7 +5161,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 49.03,
+              "percent_owned": 48.98,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5172,7 +5172,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 81.91,
+              "percent_owned": 81.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5183,7 +5183,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 17.55,
+              "percent_owned": 17.51,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5194,7 +5194,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 80.52,
+              "percent_owned": 80.47,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5205,7 +5205,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 16.03,
+              "percent_owned": 15.99,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5216,7 +5216,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 61.12,
+              "percent_owned": 61.1,
               "acquisition_type": "ADD"
             }
           ]
@@ -5253,7 +5253,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 99.79,
+              "percent_owned": 99.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5275,7 +5275,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.41,
+              "percent_owned": 96.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5286,7 +5286,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 95.77,
+              "percent_owned": 95.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5297,7 +5297,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.22,
+              "percent_owned": 92.14,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5308,7 +5308,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.37,
+              "percent_owned": 90.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5317,9 +5317,9 @@
               "position": "RB",
               "pro_team": "PIT",
               "lineup_slot": "BE",
-              "injury_status": "OUT",
-              "injured": true,
-              "percent_owned": 85.39,
+              "injury_status": "QUESTIONABLE",
+              "injured": false,
+              "percent_owned": 85.29,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5330,7 +5330,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 75.14,
+              "percent_owned": 75.06,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5341,7 +5341,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 65.09,
+              "percent_owned": 65.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5352,7 +5352,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 69.31,
+              "percent_owned": 69.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5363,7 +5363,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 57.96,
+              "percent_owned": 57.87,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5374,7 +5374,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 86.35,
+              "percent_owned": 86.22,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5385,7 +5385,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 50.71,
+              "percent_owned": 50.62,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5396,7 +5396,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 65.59,
+              "percent_owned": 65.56,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5407,7 +5407,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 19.06,
+              "percent_owned": 19.01,
               "acquisition_type": "DRAFT"
             }
           ]
@@ -5442,7 +5442,7 @@
               "position": "RB",
               "pro_team": "PHI",
               "lineup_slot": "RB",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
               "percent_owned": 99.85,
               "acquisition_type": "DRAFT"
@@ -5455,7 +5455,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.72,
+              "percent_owned": 98.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5466,7 +5466,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 96.16,
+              "percent_owned": 96.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5477,7 +5477,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.76,
+              "percent_owned": 98.73,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5488,7 +5488,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.98,
+              "percent_owned": 89.91,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5497,9 +5497,9 @@
               "position": "WR",
               "pro_team": "SF",
               "lineup_slot": "WR",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 93.2,
+              "percent_owned": 93.15,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5510,7 +5510,7 @@
               "lineup_slot": "BE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 95.22,
+              "percent_owned": 95.13,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5521,7 +5521,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 75.44,
+              "percent_owned": 75.23,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5532,7 +5532,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 64.55,
+              "percent_owned": 64.48,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5543,7 +5543,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 91.41,
+              "percent_owned": 91.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5554,7 +5554,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 25.43,
+              "percent_owned": 25.35,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5565,7 +5565,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 14.43,
+              "percent_owned": 14.4,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5576,7 +5576,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 29.49,
+              "percent_owned": 29.45,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5587,7 +5587,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 60.59,
+              "percent_owned": 60.71,
               "acquisition_type": "ADD"
             },
             {
@@ -5598,7 +5598,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 13.75,
+              "percent_owned": 13.99,
               "acquisition_type": "ADD"
             }
           ]
@@ -5657,7 +5657,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 97.3,
+              "percent_owned": 97.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5679,7 +5679,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 86.76,
+              "percent_owned": 86.67,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5690,7 +5690,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 93.16,
+              "percent_owned": 93.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5701,7 +5701,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 74.96,
+              "percent_owned": 74.89,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5712,7 +5712,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 72.39,
+              "percent_owned": 72.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5723,7 +5723,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 74.6,
+              "percent_owned": 74.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5734,7 +5734,7 @@
               "lineup_slot": "BE",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 62.18,
+              "percent_owned": 62.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5745,7 +5745,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 30.6,
+              "percent_owned": 30.55,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5756,7 +5756,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 23.43,
+              "percent_owned": 23.39,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5767,7 +5767,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 87.45,
+              "percent_owned": 87.38,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5778,7 +5778,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 22.14,
+              "percent_owned": 22.08,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5789,7 +5789,7 @@
               "lineup_slot": "BE",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 35.75,
+              "percent_owned": 35.61,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5800,7 +5800,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 87.54,
+              "percent_owned": 87.27,
               "acquisition_type": "ADD"
             }
           ]
@@ -5826,7 +5826,7 @@
               "lineup_slot": "BE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 99.92,
+              "percent_owned": 99.91,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5859,7 +5859,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.4,
+              "percent_owned": 96.36,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5870,7 +5870,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 95.19,
+              "percent_owned": 95.14,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5881,7 +5881,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 88.69,
+              "percent_owned": 88.59,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5892,7 +5892,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 77.43,
+              "percent_owned": 77.35,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5903,7 +5903,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 84.8,
+              "percent_owned": 84.72,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5914,7 +5914,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 81.07,
+              "percent_owned": 80.98,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5923,9 +5923,9 @@
               "position": "WR",
               "pro_team": "GB",
               "lineup_slot": "RB/WR/TE",
-              "injury_status": "OUT",
-              "injured": true,
-              "percent_owned": 65.39,
+              "injury_status": "QUESTIONABLE",
+              "injured": false,
+              "percent_owned": 65.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5936,7 +5936,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 82.45,
+              "percent_owned": 82.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5947,7 +5947,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 44.68,
+              "percent_owned": 44.6,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5958,7 +5958,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 90.45,
+              "percent_owned": 90.37,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5969,7 +5969,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 26.37,
+              "percent_owned": 26.34,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5980,7 +5980,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.42,
+              "percent_owned": 15.4,
               "acquisition_type": "DRAFT"
             },
             {
@@ -5991,7 +5991,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 7.72,
+              "percent_owned": 7.63,
               "acquisition_type": "DRAFT"
             }
           ]
@@ -6028,7 +6028,7 @@
               "lineup_slot": "IR",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 99.33,
+              "percent_owned": 99.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6050,7 +6050,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.03,
+              "percent_owned": 98.01,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6061,7 +6061,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.24,
+              "percent_owned": 92.16,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6072,7 +6072,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.12,
+              "percent_owned": 92.07,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6083,7 +6083,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.18,
+              "percent_owned": 83.08,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6092,9 +6092,9 @@
               "position": "WR",
               "pro_team": "IND",
               "lineup_slot": "WR",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 83.55,
+              "percent_owned": 83.51,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6105,7 +6105,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 80.59,
+              "percent_owned": 80.52,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6116,7 +6116,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.66,
+              "percent_owned": 83.62,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6127,7 +6127,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 88.75,
+              "percent_owned": 88.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6138,7 +6138,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.63,
+              "percent_owned": 94.57,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6149,7 +6149,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 54.48,
+              "percent_owned": 54.41,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6160,7 +6160,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 37.53,
+              "percent_owned": 37.5,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6171,7 +6171,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 13.29,
+              "percent_owned": 13.28,
               "acquisition_type": "ADD"
             },
             {
@@ -6182,7 +6182,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 54.35,
+              "percent_owned": 54.23,
               "acquisition_type": "ADD"
             },
             {
@@ -6241,7 +6241,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.93,
+              "percent_owned": 98.92,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6252,7 +6252,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 99.04,
+              "percent_owned": 99.02,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6263,7 +6263,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.53,
+              "percent_owned": 94.47,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6274,7 +6274,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 91.09,
+              "percent_owned": 91.01,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6296,7 +6296,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 84.76,
+              "percent_owned": 84.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6305,9 +6305,9 @@
               "position": "RB",
               "pro_team": "DEN",
               "lineup_slot": "RB/WR/TE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 82.68,
+              "percent_owned": 82.59,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6318,7 +6318,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 53.1,
+              "percent_owned": 52.97,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6329,7 +6329,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 68.73,
+              "percent_owned": 68.68,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6340,7 +6340,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.08,
+              "percent_owned": 83.04,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6351,7 +6351,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 92.29,
+              "percent_owned": 92.27,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6362,7 +6362,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 52.68,
+              "percent_owned": 52.59,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6373,7 +6373,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 39.77,
+              "percent_owned": 39.65,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6384,7 +6384,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 26.41,
+              "percent_owned": 26.4,
               "acquisition_type": "DRAFT"
             }
           ]
@@ -6421,7 +6421,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 97.21,
+              "percent_owned": 97.2,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6432,7 +6432,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 99.07,
+              "percent_owned": 99.05,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6443,7 +6443,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.26,
+              "percent_owned": 98.2,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6454,7 +6454,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 87.05,
+              "percent_owned": 86.97,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6465,7 +6465,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 93.7,
+              "percent_owned": 93.63,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6476,7 +6476,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.98,
+              "percent_owned": 90.9,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6498,7 +6498,7 @@
               "lineup_slot": "TE",
               "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 93.0,
+              "percent_owned": 92.9,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6509,7 +6509,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 98.18,
+              "percent_owned": 98.16,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6531,7 +6531,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 61.89,
+              "percent_owned": 61.83,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6542,7 +6542,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 27.38,
+              "percent_owned": 27.34,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6553,7 +6553,7 @@
               "lineup_slot": "BE",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 29.12,
+              "percent_owned": 29.07,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6564,7 +6564,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 65.14,
+              "percent_owned": 65.02,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6575,7 +6575,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 7.08,
+              "percent_owned": 7.07,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6586,7 +6586,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 20.15,
+              "percent_owned": 20.11,
               "acquisition_type": "ADD"
             }
           ]
@@ -6634,7 +6634,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.62,
+              "percent_owned": 98.57,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6645,7 +6645,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.14,
+              "percent_owned": 98.13,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6656,7 +6656,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.93,
+              "percent_owned": 98.88,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6667,7 +6667,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.79,
+              "percent_owned": 89.71,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6678,7 +6678,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 93.65,
+              "percent_owned": 93.61,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6689,7 +6689,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.64,
+              "percent_owned": 89.56,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6700,7 +6700,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 65.43,
+              "percent_owned": 65.33,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6711,7 +6711,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 70.6,
+              "percent_owned": 70.51,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6722,7 +6722,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 49.67,
+              "percent_owned": 49.66,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6733,7 +6733,7 @@
               "lineup_slot": "IR",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 51.97,
+              "percent_owned": 51.85,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6744,7 +6744,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 24.5,
+              "percent_owned": 24.49,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6755,7 +6755,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 2.77,
+              "percent_owned": 2.78,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6766,7 +6766,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 43.02,
+              "percent_owned": 42.94,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6777,7 +6777,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 21.35,
+              "percent_owned": 21.36,
               "acquisition_type": "ADD"
             },
             {
@@ -6786,9 +6786,9 @@
               "position": "WR",
               "pro_team": "MIA",
               "lineup_slot": "BE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 39.43,
+              "percent_owned": 39.39,
               "acquisition_type": "ADD"
             }
           ]
@@ -6836,7 +6836,7 @@
               "lineup_slot": "RB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 98.87,
+              "percent_owned": 98.86,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6847,7 +6847,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 97.65,
+              "percent_owned": 97.62,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6858,7 +6858,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.44,
+              "percent_owned": 94.38,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6869,7 +6869,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 97.41,
+              "percent_owned": 97.39,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6880,7 +6880,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.07,
+              "percent_owned": 94.04,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6891,7 +6891,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 91.16,
+              "percent_owned": 91.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6902,7 +6902,7 @@
               "lineup_slot": "BE",
               "injury_status": "DAY_TO_DAY",
               "injured": false,
-              "percent_owned": 85.9,
+              "percent_owned": 85.84,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6913,7 +6913,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 94.34,
+              "percent_owned": 94.25,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6924,7 +6924,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 91.75,
+              "percent_owned": 91.73,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6935,7 +6935,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.7,
+              "percent_owned": 96.69,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6946,7 +6946,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 22.15,
+              "percent_owned": 22.14,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6957,7 +6957,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 28.99,
+              "percent_owned": 28.88,
               "acquisition_type": "DRAFT"
             },
             {
@@ -6968,7 +6968,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 28.4,
+              "percent_owned": 28.52,
               "acquisition_type": "ADD"
             },
             {
@@ -6979,7 +6979,7 @@
               "lineup_slot": "IR",
               "injury_status": "INJURY_RESERVE",
               "injured": true,
-              "percent_owned": 39.98,
+              "percent_owned": 39.87,
               "acquisition_type": "ADD"
             },
             {
@@ -6990,7 +6990,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.24,
+              "percent_owned": 15.21,
               "acquisition_type": "ADD"
             }
           ]
@@ -7038,7 +7038,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 98.46,
+              "percent_owned": 98.44,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7060,7 +7060,7 @@
               "lineup_slot": "WR",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 92.17,
+              "percent_owned": 92.1,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7071,7 +7071,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 96.12,
+              "percent_owned": 96.09,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7082,7 +7082,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 79.4,
+              "percent_owned": 79.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7091,9 +7091,9 @@
               "position": "RB",
               "pro_team": "CAR",
               "lineup_slot": "BE",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 79.58,
+              "percent_owned": 79.5,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7104,7 +7104,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 74.9,
+              "percent_owned": 74.82,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7115,7 +7115,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 88.4,
+              "percent_owned": 88.33,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7126,7 +7126,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 57.59,
+              "percent_owned": 57.5,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7137,7 +7137,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 15.73,
+              "percent_owned": 15.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7148,7 +7148,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 88.51,
+              "percent_owned": 88.45,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7159,7 +7159,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 29.35,
+              "percent_owned": 29.23,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7170,7 +7170,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 28.8,
+              "percent_owned": 28.79,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7181,7 +7181,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 17.01,
+              "percent_owned": 16.99,
               "acquisition_type": "ADD"
             }
           ]
@@ -7240,7 +7240,7 @@
               "lineup_slot": "RB/WR/TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 95.53,
+              "percent_owned": 95.49,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7249,9 +7249,9 @@
               "position": "RB",
               "pro_team": "SEA",
               "lineup_slot": "RB",
-              "injury_status": "ACTIVE",
+              "injury_status": "QUESTIONABLE",
               "injured": false,
-              "percent_owned": 93.52,
+              "percent_owned": 93.43,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7262,7 +7262,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 89.38,
+              "percent_owned": 89.31,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7273,7 +7273,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 81.23,
+              "percent_owned": 81.15,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7284,7 +7284,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 76.5,
+              "percent_owned": 76.42,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7295,7 +7295,7 @@
               "lineup_slot": "TE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.99,
+              "percent_owned": 90.91,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7306,7 +7306,7 @@
               "lineup_slot": "QB",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 90.21,
+              "percent_owned": 90.19,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7317,7 +7317,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 83.73,
+              "percent_owned": 83.65,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7328,7 +7328,7 @@
               "lineup_slot": "BE",
               "injury_status": "OUT",
               "injured": true,
-              "percent_owned": 49.86,
+              "percent_owned": 49.8,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7339,7 +7339,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 36.91,
+              "percent_owned": 36.84,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7350,7 +7350,7 @@
               "lineup_slot": "K",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 79.79,
+              "percent_owned": 79.7,
               "acquisition_type": "DRAFT"
             },
             {
@@ -7361,7 +7361,7 @@
               "lineup_slot": "BE",
               "injury_status": "ACTIVE",
               "injured": false,
-              "percent_owned": 50.15,
+              "percent_owned": 50.02,
               "acquisition_type": "ADD"
             },
             {
@@ -7372,7 +7372,7 @@
               "lineup_slot": "D/ST",
               "injury_status": "NORMAL",
               "injured": false,
-              "percent_owned": 74.44,
+              "percent_owned": 74.29,
               "acquisition_type": "ADD"
             }
           ]
@@ -7387,7 +7387,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 68.02,
+          "percent_owned": 67.96,
           "acquisition_type": []
         },
         {
@@ -7398,7 +7398,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 56.68,
+          "percent_owned": 56.64,
           "acquisition_type": []
         },
         {
@@ -7409,7 +7409,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 51.78,
+          "percent_owned": 51.74,
           "acquisition_type": []
         },
         {
@@ -7420,7 +7420,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 43.95,
+          "percent_owned": 43.92,
           "acquisition_type": []
         },
         {
@@ -7431,7 +7431,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 37.88,
+          "percent_owned": 37.81,
           "acquisition_type": []
         },
         {
@@ -7442,7 +7442,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 36.91,
+          "percent_owned": 36.89,
           "acquisition_type": []
         },
         {
@@ -7453,7 +7453,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 35.2,
+          "percent_owned": 35.13,
           "acquisition_type": []
         },
         {
@@ -7464,7 +7464,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 34.39,
+          "percent_owned": 34.31,
           "acquisition_type": []
         },
         {
@@ -7475,7 +7475,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 34.27,
+          "percent_owned": 34.28,
           "acquisition_type": []
         },
         {
@@ -7486,7 +7486,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 29.19,
+          "percent_owned": 29.15,
           "acquisition_type": []
         },
         {
@@ -7497,7 +7497,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 26.14,
+          "percent_owned": 26.19,
           "acquisition_type": []
         },
         {
@@ -7508,7 +7508,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 24.23,
+          "percent_owned": 24.39,
           "acquisition_type": []
         },
         {
@@ -7519,7 +7519,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 21.9,
+          "percent_owned": 21.85,
           "acquisition_type": []
         },
         {
@@ -7530,7 +7530,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 21.63,
+          "percent_owned": 21.59,
           "acquisition_type": []
         },
         {
@@ -7541,7 +7541,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 20.11,
+          "percent_owned": 20.07,
           "acquisition_type": []
         },
         {
@@ -7552,7 +7552,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 20.05,
+          "percent_owned": 20.02,
           "acquisition_type": []
         },
         {
@@ -7563,7 +7563,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 19.46,
+          "percent_owned": 19.48,
           "acquisition_type": []
         },
         {
@@ -7574,7 +7574,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 19.18,
+          "percent_owned": 19.05,
           "acquisition_type": []
         },
         {
@@ -7596,7 +7596,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 16.27,
+          "percent_owned": 16.23,
           "acquisition_type": []
         },
         {
@@ -7607,7 +7607,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 15.39,
+          "percent_owned": 15.38,
           "acquisition_type": []
         },
         {
@@ -7618,7 +7618,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 15.02,
+          "percent_owned": 15.07,
           "acquisition_type": []
         },
         {
@@ -7629,7 +7629,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 13.07,
+          "percent_owned": 13.03,
           "acquisition_type": []
         },
         {
@@ -7651,51 +7651,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 11.49,
-          "acquisition_type": []
-        },
-        {
-          "player_id": -16016,
-          "name": "Vikings D/ST",
-          "position": "D/ST",
-          "pro_team": "MIN",
-          "lineup_slot": null,
-          "injury_status": [],
-          "injured": false,
-          "percent_owned": 10.61,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 3116389,
-          "name": "Samaje Perine",
-          "position": "RB",
-          "pro_team": "CIN",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 10.54,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4382466,
-          "name": "Jalen Nailor",
-          "position": "WR",
-          "pro_team": "LV",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 10.46,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 2973405,
-          "name": "Kalif Raymond",
-          "position": "WR",
-          "pro_team": "CHI",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 10.29,
+          "percent_owned": 11.46,
           "acquisition_type": []
         },
         {
@@ -7706,7 +7662,51 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 10.2,
+          "percent_owned": 10.83,
+          "acquisition_type": []
+        },
+        {
+          "player_id": -16016,
+          "name": "Vikings D/ST",
+          "position": "D/ST",
+          "pro_team": "MIN",
+          "lineup_slot": null,
+          "injury_status": [],
+          "injured": false,
+          "percent_owned": 10.62,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 3116389,
+          "name": "Samaje Perine",
+          "position": "RB",
+          "pro_team": "CIN",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 10.51,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4382466,
+          "name": "Jalen Nailor",
+          "position": "WR",
+          "pro_team": "LV",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 10.44,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 2973405,
+          "name": "Kalif Raymond",
+          "position": "WR",
+          "pro_team": "CHI",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 10.27,
           "acquisition_type": []
         },
         {
@@ -7717,7 +7717,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 9.03,
+          "percent_owned": 9.01,
           "acquisition_type": []
         },
         {
@@ -7739,7 +7739,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 8.33,
+          "percent_owned": 8.32,
           "acquisition_type": []
         },
         {
@@ -7750,7 +7750,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 8.2,
+          "percent_owned": 8.19,
           "acquisition_type": []
         },
         {
@@ -7761,7 +7761,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 8.15,
+          "percent_owned": 8.16,
           "acquisition_type": []
         },
         {
@@ -7772,7 +7772,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.99,
+          "percent_owned": 7.98,
           "acquisition_type": []
         },
         {
@@ -7794,7 +7794,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.28,
+          "percent_owned": 7.27,
           "acquisition_type": []
         },
         {
@@ -7805,7 +7805,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 7.15,
+          "percent_owned": 7.14,
           "acquisition_type": []
         },
         {
@@ -7816,7 +7816,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 6.87,
+          "percent_owned": 6.86,
           "acquisition_type": []
         },
         {
@@ -7827,7 +7827,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 6.7,
+          "percent_owned": 6.71,
           "acquisition_type": []
         },
         {
@@ -7838,7 +7838,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 6.31,
+          "percent_owned": 6.3,
           "acquisition_type": []
         },
         {
@@ -7849,7 +7849,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 6.07,
+          "percent_owned": 6.05,
           "acquisition_type": []
         },
         {
@@ -7858,9 +7858,9 @@
           "position": "TE",
           "pro_team": "LAC",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
-          "percent_owned": 6.03,
+          "percent_owned": 6.02,
           "acquisition_type": []
         },
         {
@@ -7871,7 +7871,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 5.82,
+          "percent_owned": 5.83,
           "acquisition_type": []
         },
         {
@@ -7893,7 +7893,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 5.56,
+          "percent_owned": 5.54,
           "acquisition_type": []
         },
         {
@@ -7915,7 +7915,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 5.32,
+          "percent_owned": 5.36,
           "acquisition_type": []
         },
         {
@@ -7926,7 +7926,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 5.06,
+          "percent_owned": 5.03,
           "acquisition_type": []
         },
         {
@@ -7937,7 +7937,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.66,
+          "percent_owned": 4.65,
           "acquisition_type": []
         },
         {
@@ -7948,7 +7948,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 4.61,
+          "percent_owned": 4.62,
           "acquisition_type": []
         },
         {
@@ -7959,7 +7959,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.49,
+          "percent_owned": 4.5,
           "acquisition_type": []
         },
         {
@@ -7970,7 +7970,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.43,
+          "percent_owned": 4.42,
           "acquisition_type": []
         },
         {
@@ -7981,7 +7981,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.39,
+          "percent_owned": 4.37,
           "acquisition_type": []
         },
         {
@@ -7992,7 +7992,18 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 4.14,
+          "percent_owned": 4.13,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 3043116,
+          "name": "Demarcus Robinson",
+          "position": "WR",
+          "pro_team": "SF",
+          "lineup_slot": null,
+          "injury_status": "DOUBTFUL",
+          "injured": false,
+          "percent_owned": 4.03,
           "acquisition_type": []
         },
         {
@@ -8003,18 +8014,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 4.03,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 3043116,
-          "name": "Demarcus Robinson",
-          "position": "WR",
-          "pro_team": "SF",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 4.0,
+          "percent_owned": 4.02,
           "acquisition_type": []
         },
         {
@@ -8025,7 +8025,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.93,
+          "percent_owned": 3.92,
           "acquisition_type": []
         },
         {
@@ -8036,7 +8036,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.83,
+          "percent_owned": 3.82,
           "acquisition_type": []
         },
         {
@@ -8058,7 +8058,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.78,
+          "percent_owned": 3.74,
           "acquisition_type": []
         },
         {
@@ -8069,7 +8069,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 3.56,
+          "percent_owned": 3.58,
           "acquisition_type": []
         },
         {
@@ -8084,10 +8084,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4870612,
-          "name": "Zachariah Branch",
-          "position": "WR",
-          "pro_team": "ATL",
+          "player_id": 14880,
+          "name": "Kirk Cousins",
+          "position": "QB",
+          "pro_team": "LV",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -8095,10 +8095,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 14880,
-          "name": "Kirk Cousins",
-          "position": "QB",
-          "pro_team": "LV",
+          "player_id": 4870612,
+          "name": "Zachariah Branch",
+          "position": "WR",
+          "pro_team": "ATL",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -8113,7 +8113,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 3.25,
+          "percent_owned": 3.23,
           "acquisition_type": []
         },
         {
@@ -8135,7 +8135,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 2.93,
+          "percent_owned": 2.98,
           "acquisition_type": []
         },
         {
@@ -8146,7 +8146,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 2.92,
+          "percent_owned": 2.91,
           "acquisition_type": []
         },
         {
@@ -8157,7 +8157,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.85,
+          "percent_owned": 2.86,
           "acquisition_type": []
         },
         {
@@ -8168,7 +8168,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.8,
+          "percent_owned": 2.79,
           "acquisition_type": []
         },
         {
@@ -8179,18 +8179,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 2.79,
-          "acquisition_type": []
-        },
-        {
-          "player_id": -16010,
-          "name": "Titans D/ST",
-          "position": "D/ST",
-          "pro_team": "TEN",
-          "lineup_slot": null,
-          "injury_status": [],
-          "injured": false,
-          "percent_owned": 2.64,
+          "percent_owned": 2.78,
           "acquisition_type": []
         },
         {
@@ -8202,6 +8191,17 @@
           "injury_status": [],
           "injured": false,
           "percent_owned": 2.63,
+          "acquisition_type": []
+        },
+        {
+          "player_id": -16010,
+          "name": "Titans D/ST",
+          "position": "D/ST",
+          "pro_team": "TEN",
+          "lineup_slot": null,
+          "injury_status": [],
+          "injured": false,
+          "percent_owned": 2.62,
           "acquisition_type": []
         },
         {
@@ -8223,7 +8223,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 2.59,
+          "percent_owned": 2.58,
           "acquisition_type": []
         },
         {
@@ -8234,7 +8234,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.4,
+          "percent_owned": 2.45,
           "acquisition_type": []
         },
         {
@@ -8256,7 +8256,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.36,
+          "percent_owned": 2.35,
           "acquisition_type": []
         },
         {
@@ -8289,7 +8289,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.25,
+          "percent_owned": 2.23,
           "acquisition_type": []
         },
         {
@@ -8300,7 +8300,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 2.19,
+          "percent_owned": 2.18,
           "acquisition_type": []
         },
         {
@@ -8309,9 +8309,9 @@
           "position": "RB",
           "pro_team": "MIA",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
-          "percent_owned": 2.1,
+          "percent_owned": 2.09,
           "acquisition_type": []
         },
         {
@@ -8322,7 +8322,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.97,
+          "percent_owned": 1.96,
           "acquisition_type": []
         },
         {
@@ -8344,7 +8344,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.88,
+          "percent_owned": 1.9,
           "acquisition_type": []
         },
         {
@@ -8355,7 +8355,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.75,
+          "percent_owned": 1.84,
           "acquisition_type": []
         },
         {
@@ -8399,7 +8399,7 @@
           "lineup_slot": null,
           "injury_status": [],
           "injured": false,
-          "percent_owned": 1.64,
+          "percent_owned": 1.65,
           "acquisition_type": []
         },
         {
@@ -8454,7 +8454,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.58,
+          "percent_owned": 1.59,
           "acquisition_type": []
         },
         {
@@ -8509,7 +8509,18 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 1.5,
+          "percent_owned": 1.49,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4242557,
+          "name": "Colby Parkinson",
+          "position": "TE",
+          "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 1.49,
           "acquisition_type": []
         },
         {
@@ -8520,7 +8531,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 1.44,
+          "percent_owned": 1.43,
           "acquisition_type": []
         },
         {
@@ -8532,17 +8543,6 @@
           "injury_status": "ACTIVE",
           "injured": false,
           "percent_owned": 1.38,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4242557,
-          "name": "Colby Parkinson",
-          "position": "TE",
-          "pro_team": "LAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 1.36,
           "acquisition_type": []
         },
         {
@@ -8586,7 +8586,7 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 1.23,
+          "percent_owned": 1.22,
           "acquisition_type": []
         },
         {
@@ -8740,7 +8740,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.74,
+          "percent_owned": 0.75,
           "acquisition_type": []
         },
         {
@@ -8751,7 +8751,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.72,
+          "percent_owned": 0.73,
           "acquisition_type": []
         },
         {
@@ -8773,7 +8773,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.71,
+          "percent_owned": 0.7,
           "acquisition_type": []
         },
         {
@@ -8788,6 +8788,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4431492,
+          "name": "Roman Wilson",
+          "position": "WR",
+          "pro_team": "PIT",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.66,
+          "acquisition_type": []
+        },
+        {
           "player_id": 3895856,
           "name": "Christian Kirk",
           "position": "WR",
@@ -8796,17 +8807,6 @@
           "injury_status": "INJURY_RESERVE",
           "injured": true,
           "percent_owned": 0.66,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4431492,
-          "name": "Roman Wilson",
-          "position": "WR",
-          "pro_team": "PIT",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.65,
           "acquisition_type": []
         },
         {
@@ -8832,17 +8832,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4249417,
-          "name": "Jalen Tolbert",
-          "position": "WR",
-          "pro_team": "MIA",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 0.63,
-          "acquisition_type": []
-        },
-        {
           "player_id": 3124084,
           "name": "Joey Slye",
           "position": "K",
@@ -8851,6 +8840,17 @@
           "injury_status": "ACTIVE",
           "injured": false,
           "percent_owned": 0.63,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4249417,
+          "name": "Jalen Tolbert",
+          "position": "WR",
+          "pro_team": "MIA",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
+          "percent_owned": 0.62,
           "acquisition_type": []
         },
         {
@@ -8894,7 +8894,7 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
-          "percent_owned": 0.61,
+          "percent_owned": 0.6,
           "acquisition_type": []
         },
         {
@@ -8964,6 +8964,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4710855,
+          "name": "Konata Mumpfield",
+          "position": "WR",
+          "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.54,
+          "acquisition_type": []
+        },
+        {
           "player_id": 4683153,
           "name": "Skyler Bell",
           "position": "WR",
@@ -9001,6 +9012,17 @@
           "name": "Kyle Williams",
           "position": "WR",
           "pro_team": "NE",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.46,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4360797,
+          "name": "Tutu Atwell",
+          "position": "WR",
+          "pro_team": "LAR",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9052,43 +9074,21 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4360797,
-          "name": "Tutu Atwell",
-          "position": "WR",
-          "pro_team": "LAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.4,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4710855,
-          "name": "Konata Mumpfield",
-          "position": "WR",
-          "pro_team": "LAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.4,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4685279,
-          "name": "Jaydon Blue",
-          "position": "RB",
-          "pro_team": "None",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.4,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4243371,
           "name": "Riley Patterson",
           "position": "K",
           "pro_team": "MIA",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.39,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4258620,
+          "name": "Andre Szmyt",
+          "position": "K",
+          "pro_team": "CLE",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9107,12 +9107,23 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4685279,
+          "name": "Jaydon Blue",
+          "position": "RB",
+          "pro_team": "None",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.39,
+          "acquisition_type": []
+        },
+        {
           "player_id": 4808766,
           "name": "Mason Taylor",
           "position": "TE",
           "pro_team": "NYJ",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
           "percent_owned": 0.38,
           "acquisition_type": []
@@ -9125,17 +9136,6 @@
           "lineup_slot": null,
           "injury_status": "INJURY_RESERVE",
           "injured": true,
-          "percent_owned": 0.38,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4258620,
-          "name": "Andre Szmyt",
-          "position": "K",
-          "pro_team": "CLE",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
           "percent_owned": 0.38,
           "acquisition_type": []
         },
@@ -9217,17 +9217,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4426386,
-          "name": "Roschon Johnson",
-          "position": "RB",
-          "pro_team": "CHI",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.34,
-          "acquisition_type": []
-        },
-        {
           "player_id": 11252,
           "name": "Joe Flacco",
           "position": "QB",
@@ -9243,6 +9232,17 @@
           "name": "Noah Fant",
           "position": "TE",
           "pro_team": "NO",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.33,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 4426386,
+          "name": "Roschon Johnson",
+          "position": "RB",
+          "pro_team": "CHI",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9288,8 +9288,8 @@
           "position": "RB",
           "pro_team": "IND",
           "lineup_slot": null,
-          "injury_status": "QUESTIONABLE",
-          "injured": false,
+          "injury_status": "OUT",
+          "injured": true,
           "percent_owned": 0.3,
           "acquisition_type": []
         },
@@ -9312,7 +9312,7 @@
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
-          "percent_owned": 0.29,
+          "percent_owned": 0.3,
           "acquisition_type": []
         },
         {
@@ -9349,17 +9349,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 15683,
-          "name": "Justin Tucker",
-          "position": "K",
-          "pro_team": "None",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.27,
-          "acquisition_type": []
-        },
-        {
           "player_id": 2969939,
           "name": "Jameis Winston",
           "position": "QB",
@@ -9375,6 +9364,17 @@
           "name": "Elijah Sarratt",
           "position": "WR",
           "pro_team": "BAL",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.26,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 15683,
+          "name": "Justin Tucker",
+          "position": "K",
+          "pro_team": "None",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9525,17 +9525,6 @@
           "acquisition_type": []
         },
         {
-          "player_id": 3059915,
-          "name": "Kareem Hunt",
-          "position": "RB",
-          "pro_team": "None",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.19,
-          "acquisition_type": []
-        },
-        {
           "player_id": 4690013,
           "name": "Rasheen Ali",
           "position": "RB",
@@ -9569,9 +9558,9 @@
           "acquisition_type": []
         },
         {
-          "player_id": 5208518,
-          "name": "Charlie Smyth",
-          "position": "K",
+          "player_id": 3059915,
+          "name": "Kareem Hunt",
+          "position": "RB",
           "pro_team": "None",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
@@ -9606,6 +9595,17 @@
           "name": "Jahdae Walker",
           "position": "WR",
           "pro_team": "CHI",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.17,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 5208518,
+          "name": "Charlie Smyth",
+          "position": "K",
+          "pro_team": "None",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9679,10 +9679,21 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4566158,
+          "name": "Ben Sauls",
+          "position": "K",
+          "pro_team": "NYG",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.15,
+          "acquisition_type": []
+        },
+        {
           "player_id": 4362748,
           "name": "Tyler Badie",
           "position": "RB",
-          "pro_team": "None",
+          "pro_team": "DEN",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9705,28 +9716,6 @@
           "name": "Tommy Tremble",
           "position": "TE",
           "pro_team": "CAR",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.14,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 3128720,
-          "name": "Nick Chubb",
-          "position": "RB",
-          "pro_team": "None",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.14,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 4566158,
-          "name": "Ben Sauls",
-          "position": "K",
-          "pro_team": "NYG",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -9785,6 +9774,17 @@
           "lineup_slot": null,
           "injury_status": "OUT",
           "injured": true,
+          "percent_owned": 0.13,
+          "acquisition_type": []
+        },
+        {
+          "player_id": 3128720,
+          "name": "Nick Chubb",
+          "position": "RB",
+          "pro_team": "None",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
           "percent_owned": 0.13,
           "acquisition_type": []
         },
@@ -9943,6 +9943,17 @@
           "acquisition_type": []
         },
         {
+          "player_id": 4386544,
+          "name": "Xavier Smith",
+          "position": "WR",
+          "pro_team": "LAR",
+          "lineup_slot": null,
+          "injury_status": "ACTIVE",
+          "injured": false,
+          "percent_owned": 0.11,
+          "acquisition_type": []
+        },
+        {
           "player_id": 4039057,
           "name": "Lil'Jordan Humphrey",
           "position": "WR",
@@ -9981,7 +9992,7 @@
           "position": "TE",
           "pro_team": "LAC",
           "lineup_slot": null,
-          "injury_status": "ACTIVE",
+          "injury_status": "QUESTIONABLE",
           "injured": false,
           "percent_owned": 0.1,
           "acquisition_type": []
@@ -10042,10 +10053,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4386544,
-          "name": "Xavier Smith",
-          "position": "WR",
-          "pro_team": "LAR",
+          "player_id": 4685413,
+          "name": "Cade Klubnik",
+          "position": "QB",
+          "pro_team": "NYJ",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -10053,10 +10064,10 @@
           "acquisition_type": []
         },
         {
-          "player_id": 4685413,
-          "name": "Cade Klubnik",
+          "player_id": 3115293,
+          "name": "Kyle Allen",
           "position": "QB",
-          "pro_team": "NYJ",
+          "pro_team": "BUF",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
@@ -10112,17 +10123,6 @@
           "name": "Adam Trautman",
           "position": "TE",
           "pro_team": "DEN",
-          "lineup_slot": null,
-          "injury_status": "ACTIVE",
-          "injured": false,
-          "percent_owned": 0.08,
-          "acquisition_type": []
-        },
-        {
-          "player_id": 3917914,
-          "name": "Olamide Zaccheaus",
-          "position": "WR",
-          "pro_team": "ATL",
           "lineup_slot": null,
           "injury_status": "ACTIVE",
           "injured": false,
