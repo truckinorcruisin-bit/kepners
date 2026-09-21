@@ -48,7 +48,12 @@ import requests
 
 CLIENT_ID = os.environ.get("YAHOO_CLIENT_ID", "PASTE_YOUR_CLIENT_ID_HERE")
 CLIENT_SECRET = os.environ.get("YAHOO_CLIENT_SECRET", "PASTE_YOUR_CLIENT_SECRET_HERE")
-REDIRECT_URI ="oob"
+REDIRECT_URI = "oob"  # out-of-band -- must match whatever redirect_uri was used
+# when the current refresh token was originally issued. Yahoo rejects a refresh
+# call whose redirect_uri doesn't match the one from the original authorization,
+# even though the value plays no other role in that request (HTTP 400). If you
+# ever re-run the interactive flow with a different redirect_uri, update this
+# constant to match or every subsequent refresh will fail the same way.
 SCOPE = "fspt-r"  # Fantasy Sports read-only
 
 AUTHORIZE_URL = "https://api.login.yahoo.com/oauth2/request_auth"
@@ -124,10 +129,7 @@ def first_time_auth():
             "code": code,
         },
     )
-   if not resp.ok:
-        print(f"::error::Yahoo token refresh failed ({resp.status_code}): {resp.text}")
-    
-   resp.raise_for_status()
+    resp.raise_for_status()
     token_data = resp.json()
     _save_token(token_data)
     print("\nAuth successful. Token cached in yahoo_token.json.")
@@ -144,6 +146,8 @@ def refresh_token(token_data):
             "refresh_token": token_data["refresh_token"],
         },
     )
+    if not resp.ok:
+        print(f"::error::Yahoo token refresh failed ({resp.status_code}): {resp.text}")
     resp.raise_for_status()
     new_token = resp.json()
     # Yahoo's refresh response sometimes omits refresh_token if unchanged -- keep the old one
