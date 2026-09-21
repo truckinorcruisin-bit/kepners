@@ -48,13 +48,13 @@ import requests
 
 CLIENT_ID = os.environ.get("YAHOO_CLIENT_ID", "PASTE_YOUR_CLIENT_ID_HERE")
 CLIENT_SECRET = os.environ.get("YAHOO_CLIENT_SECRET", "PASTE_YOUR_CLIENT_SECRET_HERE")
-REDIRECT_URI = "oob"  # out-of-band -- must match whatever redirect_uri was used
-# when the current refresh token was originally issued. Yahoo rejects a refresh
-# call whose redirect_uri doesn't match the one from the original authorization,
-# even though the value plays no other role in that request (HTTP 400). If you
-# ever re-run the interactive flow with a different redirect_uri, update this
-# constant to match or every subsequent refresh will fail the same way.
-SCOPE = "fspt-r"  # Fantasy Sports read-only
+REDIRECT_URI = "https://truckinorcruisin-bit.github.io/kepners"  # must exactly
+# match the Redirect URI registered on the Yahoo app (see developer.yahoo.com/apps).
+# "oob" was tried first and Yahoo accepted it without error, but silently issued
+# a token missing the requested fspt-r scope -- every Fantasy Sports call then
+# 403'd even though the token itself was valid. Only the registered redirect_uri
+# actually carries the scope through. If this app's registered URI ever changes,
+# update this to match or every refresh will start failing again.
 
 AUTHORIZE_URL = "https://api.login.yahoo.com/oauth2/request_auth"
 TOKEN_URL = "https://api.login.yahoo.com/oauth2/get_token"
