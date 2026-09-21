@@ -1,17 +1,26 @@
 {
-  "generated": "2026-09-04T01:20:27.519041+00:00",
+  "generated": "2026-09-21T13:14:58.613601+00:00",
   "budget": 200,
   "skill_budget": 198,
   "kdef_reserve": 2,
   "roster": [
     {
       "slot": "QB",
-      "id": "jalen-hurts",
-      "name": "Jalen Hurts",
+      "id": "kyler-murray",
+      "name": "Kyler Murray",
       "pos": "QB",
-      "team": "PHI",
-      "cost": 13,
-      "war": 36.4
+      "team": "MIN",
+      "cost": 1,
+      "war": 24.4
+    },
+    {
+      "slot": "RB",
+      "id": "chuba-hubbard",
+      "name": "Chuba Hubbard",
+      "pos": "RB",
+      "team": "CAR",
+      "cost": 3,
+      "war": 25.4
     },
     {
       "slot": "RB",
@@ -19,71 +28,89 @@
       "name": "Derrick Henry",
       "pos": "RB",
       "team": "BAL",
-      "cost": 43,
-      "war": 107.1
-    },
-    {
-      "slot": "RB",
-      "id": "quinshon-judkins",
-      "name": "Quinshon Judkins",
-      "pos": "RB",
-      "team": "CLE",
-      "cost": 18,
-      "war": 45.3
+      "cost": 39,
+      "war": 106.2
     },
     {
       "slot": "WR",
-      "id": "jameson-williams",
-      "name": "Jameson Williams",
+      "id": "christian-watson",
+      "name": "Christian Watson",
       "pos": "WR",
-      "team": "DET",
-      "cost": 11,
-      "war": 23.3
+      "team": "GB",
+      "cost": 5,
+      "war": 39.4
     },
     {
       "slot": "WR",
-      "id": "davante-adams",
-      "name": "Davante Adams",
+      "id": "jalen-coker",
+      "name": "Jalen Coker",
       "pos": "WR",
-      "team": "LAR",
-      "cost": 18,
-      "war": 43.7
+      "team": "CAR",
+      "cost": 2,
+      "war": 15.1
     },
     {
       "slot": "WR",
-      "id": "rome-odunze",
-      "name": "Rome Odunze",
+      "id": "parker-washington",
+      "name": "Parker Washington",
       "pos": "WR",
-      "team": "CHI",
-      "cost": 11,
-      "war": 32.8
+      "team": "JAX",
+      "cost": 5,
+      "war": 38.1
     },
     {
       "slot": "TE",
-      "id": "dallas-goedert",
-      "name": "Dallas Goedert",
-      "pos": "TE",
-      "team": "PHI",
-      "cost": 2,
-      "war": 12.7
-    },
-    {
-      "slot": "FLEX",
       "id": "sam-laporta",
       "name": "Sam LaPorta",
       "pos": "TE",
       "team": "DET",
-      "cost": 6,
-      "war": 16.8
+      "cost": 4,
+      "war": 25.5
+    },
+    {
+      "slot": "FLEX",
+      "id": "cam-skattebo",
+      "name": "Cam Skattebo",
+      "pos": "RB",
+      "team": "NYG",
+      "cost": 14,
+      "war": 47.9
     },
     {
       "slot": "BEN",
-      "id": "breece-hall",
-      "name": "Breece Hall",
+      "id": "bucky-irving",
+      "name": "Bucky Irving",
       "pos": "RB",
-      "team": "NYJ",
-      "cost": 26,
-      "war": 72.9
+      "team": "TB",
+      "cost": 11,
+      "war": 59.8
+    },
+    {
+      "slot": "BEN",
+      "id": "jaxson-dart",
+      "name": "Jaxson Dart",
+      "pos": "QB",
+      "team": "NYG",
+      "cost": 5,
+      "war": 36.4
+    },
+    {
+      "slot": "BEN",
+      "id": "jahmyr-gibbs",
+      "name": "Jahmyr Gibbs",
+      "pos": "RB",
+      "team": "DET",
+      "cost": 63,
+      "war": 187.9
+    },
+    {
+      "slot": "BEN",
+      "id": "isaiah-likely",
+      "name": "Isaiah Likely",
+      "pos": "TE",
+      "team": "NYG",
+      "cost": 4,
+      "war": 28.9
     },
     {
       "slot": "BEN",
@@ -91,47 +118,20 @@
       "name": "George Kittle",
       "pos": "TE",
       "team": "SF",
-      "cost": 5,
-      "war": 23.2
+      "cost": 4,
+      "war": 35.8
     },
     {
       "slot": "BEN",
-      "id": "javonte-williams",
-      "name": "Javonte Williams",
+      "id": "de-von-achane",
+      "name": "De'Von Achane",
       "pos": "RB",
-      "team": "DAL",
-      "cost": 28,
-      "war": 73.3
-    },
-    {
-      "slot": "BEN",
-      "id": "travis-kelce",
-      "name": "Travis Kelce",
-      "pos": "TE",
-      "team": "KC",
-      "cost": 3,
-      "war": 9.7
-    },
-    {
-      "slot": "BEN",
-      "id": "tyler-warren",
-      "name": "Tyler Warren",
-      "pos": "TE",
-      "team": "IND",
-      "cost": 12,
-      "war": 32.4
-    },
-    {
-      "slot": "BEN",
-      "id": "mark-andrews",
-      "name": "Mark Andrews",
-      "pos": "TE",
-      "team": "BAL",
-      "cost": 2,
-      "war": 17.5
+      "team": "MIA",
+      "cost": 38,
+      "war": 101.0
     }
   ],
-  "total_war": 547.1,
+  "total_war": 771.8,
   "total_cost": 198,
   "budget_remaining": 0,
   "assumptions": [
