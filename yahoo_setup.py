@@ -124,7 +124,10 @@ def first_time_auth():
             "code": code,
         },
     )
-    resp.raise_for_status()
+   if not resp.ok:
+        print(f"::error::Yahoo token refresh failed ({resp.status_code}): {resp.text}")
+    
+   resp.raise_for_status()
     token_data = resp.json()
     _save_token(token_data)
     print("\nAuth successful. Token cached in yahoo_token.json.")
