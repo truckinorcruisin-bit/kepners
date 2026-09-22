@@ -55,6 +55,7 @@ REDIRECT_URI = "https://truckinorcruisin-bit.github.io/kepners"  # must exactly
 # 403'd even though the token itself was valid. Only the registered redirect_uri
 # actually carries the scope through. If this app's registered URI ever changes,
 # update this to match or every refresh will start failing again.
+SCOPE = "fspt-r"  # Fantasy Sports read-only
 
 AUTHORIZE_URL = "https://api.login.yahoo.com/oauth2/request_auth"
 TOKEN_URL = "https://api.login.yahoo.com/oauth2/get_token"
