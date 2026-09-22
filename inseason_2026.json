@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-09-22T01:54:57.872605+00:00",
+  "generated": "2026-09-22T02:02:55.178473+00:00",
   "currentWeek": 2,
   "weeksRemaining": 16,
   "leagues": {
@@ -99,12 +99,12 @@
               "injured": false,
               "percent_owned": 97.26,
               "acquisition_type": "DRAFT",
-              "ros_points": 112.02,
-              "ros_per_week": 7.0,
+              "ros_points": 111.65,
+              "ros_per_week": 6.98,
               "trend": 5.06,
               "season_points_actual": 17.7,
               "ros_matched": true,
-              "effective_per_week": 7.0
+              "effective_per_week": 6.98
             },
             {
               "player_id": 4569173,
@@ -133,7 +133,7 @@
               "injured": false,
               "percent_owned": 92.11,
               "acquisition_type": "DRAFT",
-              "ros_points": 138.77,
+              "ros_points": 138.7,
               "ros_per_week": 8.67,
               "trend": 19.06,
               "season_points_actual": 36.8,
@@ -201,7 +201,7 @@
               "injured": false,
               "percent_owned": 65.28,
               "acquisition_type": "DRAFT",
-              "ros_points": 82.92,
+              "ros_points": 82.85,
               "ros_per_week": 5.18,
               "trend": -4.25,
               "season_points_actual": 2.4,
@@ -252,7 +252,7 @@
               "injured": false,
               "percent_owned": 18.99,
               "acquisition_type": "DRAFT",
-              "ros_points": 52.39,
+              "ros_points": 52.31,
               "ros_per_week": 3.27,
               "trend": -4.16,
               "season_points_actual": 4.8,
@@ -319,8 +319,8 @@
               "perWeek": 14.28,
               "rank": 10,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": -1.85,
+              "leagueMedian": 15.92,
+              "gapToMedian": -1.64,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -372,11 +372,11 @@
               "slot": "WR2",
               "position": "WR",
               "player": "Ladd McConkey",
-              "perWeek": 7.0,
-              "rank": 9,
+              "perWeek": 6.98,
+              "rank": 10,
               "of": 12,
               "leagueMedian": 7.18,
-              "gapToMedian": -0.18,
+              "gapToMedian": -0.2,
               "leagueBest": 8.81,
               "leagueMin": 6.47,
               "leagueMax": 8.81,
@@ -387,12 +387,12 @@
               "position": "TE",
               "player": "Isaiah Likely",
               "perWeek": 6.36,
-              "rank": 3,
+              "rank": 4,
               "of": 12,
               "leagueMedian": 5.76,
               "gapToMedian": 0.6,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -463,7 +463,7 @@
             {
               "slot": "WR2",
               "player": "Ladd McConkey",
-              "perWeek": 7.0
+              "perWeek": 6.98
             },
             {
               "slot": "TE",
@@ -486,7 +486,7 @@
               "perWeek": 7.39
             }
           ],
-          "rosPerWeekTotal": 81.36
+          "rosPerWeekTotal": 81.34
         },
         {
           "team_id": 5,
@@ -732,7 +732,7 @@
               "injured": false,
               "percent_owned": 57.82,
               "acquisition_type": "DRAFT",
-              "ros_points": 234.48,
+              "ros_points": 234.5,
               "ros_per_week": 14.66,
               "trend": -4.64,
               "season_points_actual": 23.82,
@@ -780,10 +780,10 @@
               "position": "QB",
               "player": "Dak Prescott",
               "perWeek": 15.75,
-              "rank": 8,
+              "rank": 7,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": -0.38,
+              "leagueMedian": 15.92,
+              "gapToMedian": -0.17,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -808,7 +808,7 @@
               "position": "RB",
               "player": "David Montgomery",
               "perWeek": 8.88,
-              "rank": 9,
+              "rank": 8,
               "of": 12,
               "leagueMedian": 9.32,
               "gapToMedian": -0.44,
@@ -855,7 +855,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": 0.35,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -991,7 +991,7 @@
               "injured": false,
               "percent_owned": 99.85,
               "acquisition_type": "DRAFT",
-              "ros_points": 201.7,
+              "ros_points": 201.77,
               "ros_per_week": 12.61,
               "trend": -7.12,
               "season_points_actual": 10.0,
@@ -1008,12 +1008,12 @@
               "injured": false,
               "percent_owned": 99.11,
               "acquisition_type": "DRAFT",
-              "ros_points": 134.41,
-              "ros_per_week": 8.4,
+              "ros_points": 134.61,
+              "ros_per_week": 8.41,
               "trend": -4.18,
               "season_points_actual": 23.0,
               "ros_matched": true,
-              "effective_per_week": 8.4
+              "effective_per_week": 8.41
             },
             {
               "player_id": 4685702,
@@ -1025,12 +1025,12 @@
               "injured": false,
               "percent_owned": 95.47,
               "acquisition_type": "DRAFT",
-              "ros_points": 145.68,
-              "ros_per_week": 9.11,
+              "ros_points": 142.12,
+              "ros_per_week": 8.88,
               "trend": -6.25,
               "season_points_actual": 9.8,
               "ros_matched": true,
-              "effective_per_week": 9.11
+              "effective_per_week": 8.88
             },
             {
               "player_id": 4431611,
@@ -1144,12 +1144,12 @@
               "injured": false,
               "percent_owned": 65.04,
               "acquisition_type": "DRAFT",
-              "ros_points": 77.84,
-              "ros_per_week": 4.87,
+              "ros_points": 83.45,
+              "ros_per_week": 5.22,
               "trend": -1.32,
               "season_points_actual": 10.9,
               "ros_matched": true,
-              "effective_per_week": 4.87
+              "effective_per_week": 5.22
             },
             {
               "player_id": -16014,
@@ -1228,8 +1228,8 @@
               "perWeek": 12.7,
               "rank": 11,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": -3.43,
+              "leagueMedian": 15.92,
+              "gapToMedian": -3.22,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -1253,11 +1253,11 @@
               "slot": "RB2",
               "position": "RB",
               "player": "Quinshon Judkins",
-              "perWeek": 9.11,
-              "rank": 7,
+              "perWeek": 8.88,
+              "rank": 9,
               "of": 12,
               "leagueMedian": 9.32,
-              "gapToMedian": -0.21,
+              "gapToMedian": -0.44,
               "leagueBest": 12.97,
               "leagueMin": 3.82,
               "leagueMax": 12.97,
@@ -1281,11 +1281,11 @@
               "slot": "WR2",
               "position": "WR",
               "player": "DeVonta Smith",
-              "perWeek": 8.4,
+              "perWeek": 8.41,
               "rank": 2,
               "of": 12,
               "leagueMedian": 7.18,
-              "gapToMedian": 1.22,
+              "gapToMedian": 1.23,
               "leagueBest": 8.81,
               "leagueMin": 6.47,
               "leagueMax": 8.81,
@@ -1296,12 +1296,12 @@
               "position": "TE",
               "player": "Kyle Pitts Sr.",
               "perWeek": 5.19,
-              "rank": 10,
+              "rank": 11,
               "of": 12,
               "leagueMedian": 5.76,
               "gapToMedian": -0.57,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -1362,7 +1362,7 @@
             {
               "slot": "RB2",
               "player": "Quinshon Judkins",
-              "perWeek": 9.11
+              "perWeek": 8.88
             },
             {
               "slot": "WR1",
@@ -1372,7 +1372,7 @@
             {
               "slot": "WR2",
               "player": "DeVonta Smith",
-              "perWeek": 8.4
+              "perWeek": 8.41
             },
             {
               "slot": "TE",
@@ -1395,7 +1395,7 @@
               "perWeek": 5.84
             }
           ],
-          "rosPerWeekTotal": 77.23
+          "rosPerWeekTotal": 77.01
         },
         {
           "team_id": 7,
@@ -1471,7 +1471,7 @@
               "injured": true,
               "percent_owned": 98.43,
               "acquisition_type": "DRAFT",
-              "ros_points": 145.43,
+              "ros_points": 145.42,
               "ros_per_week": 9.09,
               "trend": 11.72,
               "season_points_actual": 21.0,
@@ -1576,7 +1576,7 @@
               "ros_points": 248.83,
               "ros_per_week": 15.55,
               "trend": -13.4,
-              "season_points_actual": 17.46,
+              "season_points_actual": 18.22,
               "ros_matched": true,
               "effective_per_week": 15.55
             },
@@ -1674,8 +1674,8 @@
               "perWeek": 18.36,
               "rank": 2,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": 2.23,
+              "leagueMedian": 15.92,
+              "gapToMedian": 2.44,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -1747,7 +1747,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": 1.12,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -1968,7 +1968,7 @@
               "injured": false,
               "percent_owned": 85.8,
               "acquisition_type": "DRAFT",
-              "ros_points": 135.47,
+              "ros_points": 135.45,
               "ros_per_week": 8.47,
               "trend": null,
               "season_points_actual": 0.0,
@@ -2036,12 +2036,12 @@
               "injured": false,
               "percent_owned": 64.46,
               "acquisition_type": "DRAFT",
-              "ros_points": 51.98,
-              "ros_per_week": 3.25,
+              "ros_points": 54.13,
+              "ros_per_week": 3.38,
               "trend": -6.2,
               "season_points_actual": 0.4,
               "ros_matched": true,
-              "effective_per_week": 3.25
+              "effective_per_week": 3.38
             },
             {
               "player_id": 4686658,
@@ -2104,12 +2104,12 @@
               "injured": true,
               "percent_owned": 6.01,
               "acquisition_type": "ADD",
-              "ros_points": 54.67,
-              "ros_per_week": 3.42,
+              "ros_points": 0.0,
+              "ros_per_week": 0.0,
               "trend": 1.61,
               "season_points_actual": 6.7,
               "ros_matched": true,
-              "effective_per_week": 2.56
+              "effective_per_week": 0.0
             },
             {
               "player_id": -16012,
@@ -2135,10 +2135,10 @@
               "position": "QB",
               "player": "Trevor Lawrence",
               "perWeek": 15.63,
-              "rank": 9,
+              "rank": 8,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": -0.5,
+              "leagueMedian": 15.92,
+              "gapToMedian": -0.29,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -2210,7 +2210,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": -0.49,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -2346,7 +2346,7 @@
               "injured": false,
               "percent_owned": 99.36,
               "acquisition_type": "DRAFT",
-              "ros_points": 174.79,
+              "ros_points": 174.64,
               "ros_per_week": 10.92,
               "trend": -6.32,
               "season_points_actual": 23.8,
@@ -2431,12 +2431,12 @@
               "injured": false,
               "percent_owned": 84.65,
               "acquisition_type": "DRAFT",
-              "ros_points": 101.73,
-              "ros_per_week": 6.36,
+              "ros_points": 101.65,
+              "ros_per_week": 6.35,
               "trend": 2.48,
               "season_points_actual": 15.3,
               "ros_matched": true,
-              "effective_per_week": 6.36
+              "effective_per_week": 6.35
             },
             {
               "player_id": 4241416,
@@ -2583,8 +2583,8 @@
               "perWeek": 16.91,
               "rank": 4,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": 0.78,
+              "leagueMedian": 15.92,
+              "gapToMedian": 0.99,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -2656,7 +2656,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": -0.35,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -2692,11 +2692,11 @@
               "slot": "FLEX2",
               "position": "FLEX",
               "player": "Matthew Golden",
-              "perWeek": 6.36,
+              "perWeek": 6.35,
               "rank": 9,
               "of": 12,
               "leagueMedian": 6.58,
-              "gapToMedian": -0.22,
+              "gapToMedian": -0.23,
               "leagueBest": 8.63,
               "leagueMin": 4.39,
               "leagueMax": 8.63,
@@ -2747,10 +2747,10 @@
             {
               "slot": "FLEX2",
               "player": "Matthew Golden",
-              "perWeek": 6.36
+              "perWeek": 6.35
             }
           ],
-          "rosPerWeekTotal": 82.17
+          "rosPerWeekTotal": 82.16
         },
         {
           "team_id": 14,
@@ -2843,12 +2843,12 @@
               "injured": false,
               "percent_owned": 98.87,
               "acquisition_type": "DRAFT",
-              "ros_points": 101.8,
-              "ros_per_week": 6.36,
+              "ros_points": 104.35,
+              "ros_per_week": 6.52,
               "trend": 0.02,
               "season_points_actual": 15.7,
               "ros_matched": true,
-              "effective_per_week": 6.36
+              "effective_per_week": 6.52
             },
             {
               "player_id": 4569987,
@@ -2873,8 +2873,8 @@
               "position": "QB",
               "pro_team": "NYG",
               "lineup_slot": "QB",
-              "injury_status": "QUESTIONABLE",
-              "injured": false,
+              "injury_status": "OUT",
+              "injured": true,
               "percent_owned": 94.18,
               "acquisition_type": "DRAFT",
               "ros_points": 275.06,
@@ -2882,7 +2882,7 @@
               "trend": 8.08,
               "season_points_actual": 27.4,
               "ros_matched": true,
-              "effective_per_week": 16.67
+              "effective_per_week": 12.89
             },
             {
               "player_id": 4429023,
@@ -2894,7 +2894,7 @@
               "injured": false,
               "percent_owned": 77.32,
               "acquisition_type": "DRAFT",
-              "ros_points": 61.12,
+              "ros_points": 61.11,
               "ros_per_week": 3.82,
               "trend": -7.37,
               "season_points_actual": 10.3,
@@ -3025,12 +3025,12 @@
             {
               "slot": "QB",
               "position": "QB",
-              "player": "Jaxson Dart",
-              "perWeek": 16.67,
-              "rank": 5,
+              "player": "Bo Nix",
+              "perWeek": 15.44,
+              "rank": 9,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": 0.54,
+              "leagueMedian": 15.92,
+              "gapToMedian": -0.48,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -3096,13 +3096,13 @@
               "slot": "TE",
               "position": "TE",
               "player": "Tyler Warren",
-              "perWeek": 6.36,
-              "rank": 4,
+              "perWeek": 6.52,
+              "rank": 3,
               "of": 12,
               "leagueMedian": 5.76,
-              "gapToMedian": 0.6,
+              "gapToMedian": 0.76,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -3152,8 +3152,8 @@
           "startingLineup": [
             {
               "slot": "QB",
-              "player": "Jaxson Dart",
-              "perWeek": 16.67
+              "player": "Bo Nix",
+              "perWeek": 15.44
             },
             {
               "slot": "RB1",
@@ -3178,7 +3178,7 @@
             {
               "slot": "TE",
               "player": "Tyler Warren",
-              "perWeek": 6.36
+              "perWeek": 6.52
             },
             {
               "slot": "DEF",
@@ -3196,7 +3196,7 @@
               "perWeek": 8.63
             }
           ],
-          "rosPerWeekTotal": 80.5
+          "rosPerWeekTotal": 79.43
         },
         {
           "team_id": 15,
@@ -3475,8 +3475,8 @@
               "perWeek": 16.93,
               "rank": 3,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": 0.8,
+              "leagueMedian": 15.92,
+              "gapToMedian": 1.01,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -3501,7 +3501,7 @@
               "position": "RB",
               "player": "Jeremiyah Love",
               "perWeek": 9.11,
-              "rank": 8,
+              "rank": 7,
               "of": 12,
               "leagueMedian": 9.32,
               "gapToMedian": -0.21,
@@ -3548,7 +3548,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": -0.48,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -3888,12 +3888,12 @@
               "injured": false,
               "percent_owned": 26.17,
               "acquisition_type": "DRAFT",
-              "ros_points": 69.07,
-              "ros_per_week": 4.32,
+              "ros_points": 72.17,
+              "ros_per_week": 4.51,
               "trend": -0.78,
               "season_points_actual": 3.7,
               "ros_matched": true,
-              "effective_per_week": 4.32
+              "effective_per_week": 4.51
             },
             {
               "player_id": 4569559,
@@ -3938,8 +3938,8 @@
               "perWeek": 20.25,
               "rank": 1,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": 4.12,
+              "leagueMedian": 15.92,
+              "gapToMedian": 4.33,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -4011,7 +4011,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": 0.4,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -4130,12 +4130,12 @@
               "injured": false,
               "percent_owned": 99.9,
               "acquisition_type": "DRAFT",
-              "ros_points": 256.73,
-              "ros_per_week": 16.05,
+              "ros_points": 257.2,
+              "ros_per_week": 16.08,
               "trend": 7.3,
               "season_points_actual": 47.3,
               "ros_matched": true,
-              "effective_per_week": 16.05
+              "effective_per_week": 16.08
             },
             {
               "player_id": 4361579,
@@ -4232,12 +4232,12 @@
               "injured": false,
               "percent_owned": 83.48,
               "acquisition_type": "DRAFT",
-              "ros_points": 99.56,
-              "ros_per_week": 6.22,
+              "ros_points": 71.33,
+              "ros_per_week": 4.46,
               "trend": -0.45,
               "season_points_actual": 7.2,
               "ros_matched": true,
-              "effective_per_week": 5.6
+              "effective_per_week": 4.01
             },
             {
               "player_id": 4429096,
@@ -4252,7 +4252,7 @@
               "ros_points": 112.4,
               "ros_per_week": 7.03,
               "trend": -2.98,
-              "season_points_actual": 7.8,
+              "season_points_actual": 8.1,
               "ros_matched": true,
               "effective_per_week": 7.03
             },
@@ -4266,12 +4266,12 @@
               "injured": false,
               "percent_owned": 70.48,
               "acquisition_type": "DRAFT",
-              "ros_points": 92.97,
-              "ros_per_week": 5.81,
+              "ros_points": 98.07,
+              "ros_per_week": 6.13,
               "trend": -5.59,
               "season_points_actual": 3.1,
               "ros_matched": true,
-              "effective_per_week": 5.81
+              "effective_per_week": 6.13
             },
             {
               "player_id": 3121023,
@@ -4283,12 +4283,12 @@
               "injured": false,
               "percent_owned": 92.85,
               "acquisition_type": "DRAFT",
-              "ros_points": 91.6,
-              "ros_per_week": 5.72,
+              "ros_points": 79.32,
+              "ros_per_week": 4.96,
               "trend": 12.93,
               "season_points_actual": 20.1,
               "ros_matched": true,
-              "effective_per_week": 5.15
+              "effective_per_week": 4.46
             },
             {
               "player_id": 4870653,
@@ -4385,7 +4385,7 @@
               "injured": false,
               "percent_owned": 20.08,
               "acquisition_type": "ADD",
-              "ros_points": 39.42,
+              "ros_points": 39.41,
               "ros_per_week": 2.46,
               "trend": -2.97,
               "season_points_actual": 5.5,
@@ -4401,8 +4401,8 @@
               "perWeek": 11.21,
               "rank": 12,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": -4.92,
+              "leagueMedian": 15.92,
+              "gapToMedian": -4.71,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -4412,11 +4412,11 @@
               "slot": "RB1",
               "position": "RB",
               "player": "Jonathan Taylor",
-              "perWeek": 16.05,
+              "perWeek": 16.08,
               "rank": 2,
               "of": 12,
               "leagueMedian": 13.21,
-              "gapToMedian": 2.84,
+              "gapToMedian": 2.86,
               "leagueBest": 18.77,
               "leagueMin": 8.84,
               "leagueMax": 18.77,
@@ -4468,13 +4468,13 @@
               "slot": "TE",
               "position": "TE",
               "player": "Dallas Goedert",
-              "perWeek": 5.15,
-              "rank": 11,
+              "perWeek": 4.46,
+              "rank": 12,
               "of": 12,
               "leagueMedian": 5.76,
-              "gapToMedian": -0.61,
+              "gapToMedian": -1.3,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -4530,7 +4530,7 @@
             {
               "slot": "RB1",
               "player": "Jonathan Taylor",
-              "perWeek": 16.05
+              "perWeek": 16.08
             },
             {
               "slot": "RB2",
@@ -4550,7 +4550,7 @@
             {
               "slot": "TE",
               "player": "Dallas Goedert",
-              "perWeek": 5.15
+              "perWeek": 4.46
             },
             {
               "slot": "DEF",
@@ -4568,7 +4568,7 @@
               "perWeek": 7.03
             }
           ],
-          "rosPerWeekTotal": 81.08
+          "rosPerWeekTotal": 80.42
         },
         {
           "team_id": 19,
@@ -4712,12 +4712,12 @@
               "injured": false,
               "percent_owned": 90.88,
               "acquisition_type": "DRAFT",
-              "ros_points": 79.66,
-              "ros_per_week": 4.98,
+              "ros_points": 84.38,
+              "ros_per_week": 5.27,
               "trend": 1.12,
               "season_points_actual": 8.0,
               "ros_matched": true,
-              "effective_per_week": 4.98
+              "effective_per_week": 5.27
             },
             {
               "player_id": 4568490,
@@ -4831,12 +4831,12 @@
               "injured": false,
               "percent_owned": 26.32,
               "acquisition_type": "ADD",
-              "ros_points": 84.69,
-              "ros_per_week": 5.29,
+              "ros_points": 85.5,
+              "ros_per_week": 5.34,
               "trend": 8.52,
               "season_points_actual": 20.7,
               "ros_matched": true,
-              "effective_per_week": 5.29
+              "effective_per_week": 5.34
             },
             {
               "player_id": 4702555,
@@ -4862,10 +4862,10 @@
               "position": "QB",
               "player": "Joe Burrow",
               "perWeek": 16.09,
-              "rank": 7,
+              "rank": 6,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": -0.04,
+              "leagueMedian": 15.92,
+              "gapToMedian": 0.17,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -4931,13 +4931,13 @@
               "slot": "TE",
               "position": "TE",
               "player": "Tucker Kraft",
-              "perWeek": 4.98,
-              "rank": 12,
+              "perWeek": 5.27,
+              "rank": 10,
               "of": 12,
               "leagueMedian": 5.76,
-              "gapToMedian": -0.78,
+              "gapToMedian": -0.49,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -5013,7 +5013,7 @@
             {
               "slot": "TE",
               "player": "Tucker Kraft",
-              "perWeek": 4.98
+              "perWeek": 5.27
             },
             {
               "slot": "DEF",
@@ -5031,7 +5031,7 @@
               "perWeek": 6.48
             }
           ],
-          "rosPerWeekTotal": 86.47
+          "rosPerWeekTotal": 86.76
         },
         {
           "team_id": 20,
@@ -5073,7 +5073,7 @@
               "injured": false,
               "percent_owned": 99.89,
               "acquisition_type": "DRAFT",
-              "ros_points": 131.84,
+              "ros_points": 131.85,
               "ros_per_week": 8.24,
               "trend": 7.64,
               "season_points_actual": 25.6,
@@ -5308,10 +5308,10 @@
               "position": "QB",
               "player": "Patrick Mahomes",
               "perWeek": 16.17,
-              "rank": 6,
+              "rank": 5,
               "of": 12,
-              "leagueMedian": 16.13,
-              "gapToMedian": 0.04,
+              "leagueMedian": 15.92,
+              "gapToMedian": 0.25,
               "leagueBest": 20.25,
               "leagueMin": 11.21,
               "leagueMax": 20.25,
@@ -5364,7 +5364,7 @@
               "position": "WR",
               "player": "Deebo Samuel Sr.",
               "perWeek": 7.0,
-              "rank": 10,
+              "rank": 9,
               "of": 12,
               "leagueMedian": 7.18,
               "gapToMedian": -0.18,
@@ -5383,7 +5383,7 @@
               "leagueMedian": 5.76,
               "gapToMedian": 2.48,
               "leagueBest": 8.24,
-              "leagueMin": 4.98,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -5508,7 +5508,7 @@
           "injured": false,
           "percent_owned": 69.25,
           "acquisition_type": [],
-          "ros_points": 240.01,
+          "ros_points": 240.02,
           "ros_per_week": 15.0,
           "trend": 0.66,
           "season_points_actual": 46.22,
@@ -5525,7 +5525,7 @@
           "injured": false,
           "percent_owned": 29.13,
           "acquisition_type": [],
-          "ros_points": 219.86,
+          "ros_points": 219.87,
           "ros_per_week": 13.74,
           "trend": 0.23,
           "season_points_actual": 33.48,
@@ -5593,7 +5593,7 @@
           "injured": false,
           "percent_owned": 1.63,
           "acquisition_type": [],
-          "ros_points": 195.39,
+          "ros_points": 195.4,
           "ros_per_week": 12.21,
           "trend": 1.4,
           "season_points_actual": 33.72,
@@ -5695,7 +5695,7 @@
           "injured": false,
           "percent_owned": 3.05,
           "acquisition_type": [],
-          "ros_points": 102.7,
+          "ros_points": 102.66,
           "ros_per_week": 6.42,
           "trend": -2.57,
           "season_points_actual": 10.0,
@@ -5780,12 +5780,12 @@
           "injured": false,
           "percent_owned": 42.9,
           "acquisition_type": [],
-          "ros_points": 84.24,
-          "ros_per_week": 5.26,
+          "ros_points": 84.26,
+          "ros_per_week": 5.27,
           "trend": -7.68,
           "season_points_actual": 5.0,
           "ros_matched": true,
-          "effective_per_week": 5.26
+          "effective_per_week": 5.27
         },
         {
           "player_id": -16006,
@@ -5797,12 +5797,12 @@
           "injured": false,
           "percent_owned": 9.0,
           "acquisition_type": [],
-          "ros_points": 82.79,
-          "ros_per_week": 5.17,
+          "ros_points": 82.64,
+          "ros_per_week": 5.16,
           "trend": -6.25,
           "season_points_actual": 2.0,
           "ros_matched": true,
-          "effective_per_week": 5.17
+          "effective_per_week": 5.16
         },
         {
           "player_id": -16008,
@@ -5941,6 +5941,23 @@
           "effective_per_week": 4.35
         },
         {
+          "player_id": 4595342,
+          "name": "Oronde Gadsden",
+          "position": "TE",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 1.96,
+          "acquisition_type": [],
+          "ros_points": 68.95,
+          "ros_per_week": 4.31,
+          "trend": 0.15,
+          "season_points_actual": 11.0,
+          "ros_matched": true,
+          "effective_per_week": 4.31
+        },
+        {
           "player_id": -16010,
           "name": "Titans D/ST",
           "position": "DEF",
@@ -6007,6 +6024,23 @@
           "season_points_actual": 10.7,
           "ros_matched": true,
           "effective_per_week": 4.12
+        },
+        {
+          "player_id": 4686612,
+          "name": "Tre' Harris",
+          "position": "WR",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 3.8,
+          "acquisition_type": [],
+          "ros_points": 64.69,
+          "ros_per_week": 4.04,
+          "trend": -1.64,
+          "season_points_actual": 7.3,
+          "ros_matched": true,
+          "effective_per_week": 4.04
         },
         {
           "player_id": 4686422,
@@ -6222,29 +6256,12 @@
           "injured": false,
           "percent_owned": 0.88,
           "acquisition_type": [],
-          "ros_points": 56.47,
-          "ros_per_week": 3.53,
+          "ros_points": 56.36,
+          "ros_per_week": 3.52,
           "trend": 8.66,
           "season_points_actual": 12.0,
           "ros_matched": true,
-          "effective_per_week": 3.53
-        },
-        {
-          "player_id": 4686612,
-          "name": "Tre' Harris",
-          "position": "WR",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 3.8,
-          "acquisition_type": [],
-          "ros_points": 55.86,
-          "ros_per_week": 3.49,
-          "trend": -1.64,
-          "season_points_actual": 7.3,
-          "ros_matched": true,
-          "effective_per_week": 3.49
+          "effective_per_week": 3.52
         },
         {
           "player_id": 4569371,
@@ -6715,7 +6732,7 @@
           "injured": false,
           "percent_owned": 0.12,
           "acquisition_type": [],
-          "ros_points": 43.81,
+          "ros_points": 43.82,
           "ros_per_week": 2.74,
           "trend": 6.18,
           "season_points_actual": 14.0,
@@ -6738,6 +6755,23 @@
           "season_points_actual": 14.4,
           "ros_matched": true,
           "effective_per_week": 2.59
+        },
+        {
+          "player_id": 4601080,
+          "name": "Raheim Sanders",
+          "position": "RB",
+          "pro_team": "CLE",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.65,
+          "acquisition_type": [],
+          "ros_points": 41.26,
+          "ros_per_week": 2.58,
+          "trend": null,
+          "season_points_actual": 3.7,
+          "ros_matched": true,
+          "effective_per_week": 2.58
         },
         {
           "player_id": 3915411,
@@ -6808,23 +6842,6 @@
           "effective_per_week": 2.48
         },
         {
-          "player_id": 4601080,
-          "name": "Raheim Sanders",
-          "position": "RB",
-          "pro_team": "CLE",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.65,
-          "acquisition_type": [],
-          "ros_points": 39.28,
-          "ros_per_week": 2.45,
-          "trend": null,
-          "season_points_actual": 3.7,
-          "ros_matched": true,
-          "effective_per_week": 2.45
-        },
-        {
           "player_id": 4603186,
           "name": "Jack Bech",
           "position": "WR",
@@ -6840,23 +6857,6 @@
           "season_points_actual": 10.8,
           "ros_matched": true,
           "effective_per_week": 2.35
-        },
-        {
-          "player_id": 4595342,
-          "name": "Oronde Gadsden",
-          "position": "TE",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 1.96,
-          "acquisition_type": [],
-          "ros_points": 36.29,
-          "ros_per_week": 2.27,
-          "trend": 0.15,
-          "season_points_actual": 11.0,
-          "ros_matched": true,
-          "effective_per_week": 2.27
         },
         {
           "player_id": 3930086,
@@ -6995,21 +6995,21 @@
           "effective_per_week": 1.97
         },
         {
-          "player_id": 3054212,
-          "name": "Jonnu Smith",
-          "position": "TE",
-          "pro_team": "GB",
+          "player_id": 4686468,
+          "name": "Seth McGowan",
+          "position": "RB",
+          "pro_team": "IND",
           "lineup_slot": null,
           "injury_status": null,
           "injured": false,
-          "percent_owned": 0.19,
+          "percent_owned": 1.04,
           "acquisition_type": [],
-          "ros_points": 31.5,
-          "ros_per_week": 1.97,
-          "trend": 2.96,
-          "season_points_actual": 5.0,
+          "ros_points": 30.7,
+          "ros_per_week": 1.92,
+          "trend": -2.2,
+          "season_points_actual": 0.0,
           "ros_matched": true,
-          "effective_per_week": 1.97
+          "effective_per_week": 1.92
         },
         {
           "player_id": 4431280,
@@ -7027,23 +7027,6 @@
           "season_points_actual": 3.2,
           "ros_matched": true,
           "effective_per_week": 1.92
-        },
-        {
-          "player_id": 4686468,
-          "name": "Seth McGowan",
-          "position": "RB",
-          "pro_team": "IND",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 1.04,
-          "acquisition_type": [],
-          "ros_points": 30.63,
-          "ros_per_week": 1.91,
-          "trend": -2.2,
-          "season_points_actual": 0.0,
-          "ros_matched": true,
-          "effective_per_week": 1.91
         },
         {
           "player_id": 4258595,
@@ -7095,6 +7078,23 @@
           "season_points_actual": -0.2,
           "ros_matched": true,
           "effective_per_week": 1.78
+        },
+        {
+          "player_id": 3054212,
+          "name": "Jonnu Smith",
+          "position": "TE",
+          "pro_team": "GB",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.19,
+          "acquisition_type": [],
+          "ros_points": 27.08,
+          "ros_per_week": 1.69,
+          "trend": 2.96,
+          "season_points_actual": 5.0,
+          "ros_matched": true,
+          "effective_per_week": 1.69
         },
         {
           "player_id": 3921690,
@@ -7157,7 +7157,7 @@
           "injured": false,
           "percent_owned": 2.79,
           "acquisition_type": [],
-          "ros_points": 25.17,
+          "ros_points": 25.16,
           "ros_per_week": 1.57,
           "trend": -1.01,
           "season_points_actual": 3.2,
@@ -7361,7 +7361,7 @@
           "injured": false,
           "percent_owned": 0.54,
           "acquisition_type": [],
-          "ros_points": 20.91,
+          "ros_points": 20.92,
           "ros_per_week": 1.31,
           "trend": 0.11,
           "season_points_actual": 4.1,
@@ -7539,6 +7539,23 @@
           "effective_per_week": 1.09
         },
         {
+          "player_id": 4685553,
+          "name": "Brenen Thompson",
+          "position": "WR",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.11,
+          "acquisition_type": [],
+          "ros_points": 17.06,
+          "ros_per_week": 1.07,
+          "trend": -1.23,
+          "season_points_actual": 1.3,
+          "ros_matched": true,
+          "effective_per_week": 1.07
+        },
+        {
           "player_id": 4429501,
           "name": "Ray Davis",
           "position": "RB",
@@ -7684,10 +7701,27 @@
           "injured": false,
           "percent_owned": 0.08,
           "acquisition_type": [],
-          "ros_points": 14.07,
+          "ros_points": 14.08,
           "ros_per_week": 0.88,
           "trend": 1.07,
           "season_points_actual": 1.4,
+          "ros_matched": true,
+          "effective_per_week": 0.88
+        },
+        {
+          "player_id": 4715355,
+          "name": "Darius Cooper",
+          "position": "WR",
+          "pro_team": "PHI",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.07,
+          "acquisition_type": [],
+          "ros_points": 14.09,
+          "ros_per_week": 0.88,
+          "trend": -0.34,
+          "season_points_actual": 8.6,
           "ros_matched": true,
           "effective_per_week": 0.88
         },
@@ -7758,57 +7792,6 @@
           "season_points_actual": 0.0,
           "ros_matched": true,
           "effective_per_week": 0.85
-        },
-        {
-          "player_id": 4685553,
-          "name": "Brenen Thompson",
-          "position": "WR",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.11,
-          "acquisition_type": [],
-          "ros_points": 12.87,
-          "ros_per_week": 0.8,
-          "trend": -1.23,
-          "season_points_actual": 1.3,
-          "ros_matched": true,
-          "effective_per_week": 0.8
-        },
-        {
-          "player_id": 4715355,
-          "name": "Darius Cooper",
-          "position": "WR",
-          "pro_team": "PHI",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.07,
-          "acquisition_type": [],
-          "ros_points": 12.88,
-          "ros_per_week": 0.8,
-          "trend": -0.34,
-          "season_points_actual": 8.6,
-          "ros_matched": true,
-          "effective_per_week": 0.8
-        },
-        {
-          "player_id": 4241263,
-          "name": "Charlie Kolar",
-          "position": "TE",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 0.1,
-          "acquisition_type": [],
-          "ros_points": 16.22,
-          "ros_per_week": 1.01,
-          "trend": -1.41,
-          "season_points_actual": 2.1,
-          "ros_matched": true,
-          "effective_per_week": 0.76
         },
         {
           "player_id": 3043275,
@@ -7930,6 +7913,23 @@
           "effective_per_week": 0.56
         },
         {
+          "player_id": 4061956,
+          "name": "Ashton Dulin",
+          "position": "WR",
+          "pro_team": "IND",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
+          "percent_owned": 0.17,
+          "acquisition_type": [],
+          "ros_points": 11.11,
+          "ros_per_week": 0.69,
+          "trend": -1.53,
+          "season_points_actual": 0.0,
+          "ros_matched": true,
+          "effective_per_week": 0.52
+        },
+        {
           "player_id": 4685504,
           "name": "Sam Roush",
           "position": "TE",
@@ -8007,7 +8007,7 @@
           "injured": false,
           "percent_owned": 0.39,
           "acquisition_type": [],
-          "ros_points": 7.53,
+          "ros_points": 7.54,
           "ros_per_week": 0.47,
           "trend": null,
           "season_points_actual": 1.2,
@@ -8024,7 +8024,7 @@
           "injured": false,
           "percent_owned": 2.17,
           "acquisition_type": [],
-          "ros_points": 7.43,
+          "ros_points": 7.42,
           "ros_per_week": 0.46,
           "trend": -1.97,
           "season_points_actual": 0.0,
@@ -8061,23 +8061,6 @@
           "ros_points": 6.58,
           "ros_per_week": 0.41,
           "trend": -0.85,
-          "season_points_actual": 0.0,
-          "ros_matched": true,
-          "effective_per_week": 0.41
-        },
-        {
-          "player_id": 4061956,
-          "name": "Ashton Dulin",
-          "position": "WR",
-          "pro_team": "IND",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 0.17,
-          "acquisition_type": [],
-          "ros_points": 8.69,
-          "ros_per_week": 0.54,
-          "trend": -1.53,
           "season_points_actual": 0.0,
           "ros_matched": true,
           "effective_per_week": 0.41
@@ -8234,6 +8217,23 @@
           "season_points_actual": 1.0,
           "ros_matched": true,
           "effective_per_week": 0.24
+        },
+        {
+          "player_id": 15835,
+          "name": "Zach Ertz",
+          "position": "TE",
+          "pro_team": "None",
+          "lineup_slot": null,
+          "injury_status": "QUESTIONABLE",
+          "injured": false,
+          "percent_owned": 0.24,
+          "acquisition_type": [],
+          "ros_points": 3.86,
+          "ros_per_week": 0.24,
+          "trend": null,
+          "season_points_actual": 0.0,
+          "ros_matched": true,
+          "effective_per_week": 0.23
         },
         {
           "player_id": 4602667,
@@ -8860,7 +8860,7 @@
           "ros_points": 0.0,
           "ros_per_week": 0.0,
           "trend": null,
-          "season_points_actual": 0.0,
+          "season_points_actual": 1.9,
           "ros_matched": true,
           "effective_per_week": 0.0
         },
@@ -9290,6 +9290,23 @@
           "effective_per_week": 0.0
         },
         {
+          "player_id": 4241263,
+          "name": "Charlie Kolar",
+          "position": "TE",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
+          "percent_owned": 0.1,
+          "acquisition_type": [],
+          "ros_points": 0.0,
+          "ros_per_week": 0.0,
+          "trend": -1.41,
+          "season_points_actual": 2.1,
+          "ros_matched": true,
+          "effective_per_week": 0.0
+        },
+        {
           "player_id": 4596472,
           "name": "Jalon Daniels",
           "position": "QB",
@@ -9591,7 +9608,7 @@
               "injured": false,
               "percent_owned": 99.89,
               "acquisition_type": "DRAFT",
-              "ros_points": 131.84,
+              "ros_points": 131.85,
               "ros_per_week": 8.24,
               "trend": 7.64,
               "season_points_actual": 25.6,
@@ -9710,12 +9727,12 @@
               "injured": false,
               "percent_owned": 84.65,
               "acquisition_type": "DRAFT",
-              "ros_points": 101.73,
-              "ros_per_week": 6.36,
+              "ros_points": 101.65,
+              "ros_per_week": 6.35,
               "trend": 2.48,
               "season_points_actual": 15.3,
               "ros_matched": true,
-              "effective_per_week": 6.36
+              "effective_per_week": 6.35
             },
             {
               "player_id": 12483,
@@ -9730,7 +9747,7 @@
               "ros_points": 248.83,
               "ros_per_week": 15.55,
               "trend": -13.4,
-              "season_points_actual": 17.46,
+              "season_points_actual": 18.22,
               "ros_matched": true,
               "effective_per_week": 15.55
             },
@@ -9844,8 +9861,8 @@
               "perWeek": 15.55,
               "rank": 10,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": -0.87,
+              "leagueMedian": 16.13,
+              "gapToMedian": -0.58,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -9917,7 +9934,7 @@
               "leagueMedian": 5.85,
               "gapToMedian": 2.39,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -10121,7 +10138,7 @@
               "injured": false,
               "percent_owned": 92.11,
               "acquisition_type": "DRAFT",
-              "ros_points": 138.77,
+              "ros_points": 138.7,
               "ros_per_week": 8.67,
               "trend": 19.06,
               "season_points_actual": 36.8,
@@ -10189,12 +10206,12 @@
               "injured": false,
               "percent_owned": 65.04,
               "acquisition_type": "DRAFT",
-              "ros_points": 77.84,
-              "ros_per_week": 4.87,
+              "ros_points": 83.45,
+              "ros_per_week": 5.22,
               "trend": -1.32,
               "season_points_actual": 10.9,
               "ros_matched": true,
-              "effective_per_week": 4.87
+              "effective_per_week": 5.22
             },
             {
               "player_id": 3046779,
@@ -10206,7 +10223,7 @@
               "injured": false,
               "percent_owned": 69.25,
               "acquisition_type": "DRAFT",
-              "ros_points": 240.01,
+              "ros_points": 240.02,
               "ros_per_week": 15.0,
               "trend": 0.66,
               "season_points_actual": 46.22,
@@ -10223,7 +10240,7 @@
               "injured": false,
               "percent_owned": 57.82,
               "acquisition_type": "DRAFT",
-              "ros_points": 234.48,
+              "ros_points": 234.5,
               "ros_per_week": 14.66,
               "trend": -4.64,
               "season_points_actual": 23.82,
@@ -10290,7 +10307,7 @@
               "injured": false,
               "percent_owned": 18.99,
               "acquisition_type": "DRAFT",
-              "ros_points": 52.39,
+              "ros_points": 52.31,
               "ros_per_week": 3.27,
               "trend": -4.16,
               "season_points_actual": 4.8,
@@ -10306,8 +10323,8 @@
               "perWeek": 15.0,
               "rank": 11,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": -1.42,
+              "leagueMedian": 16.13,
+              "gapToMedian": -1.13,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -10332,7 +10349,7 @@
               "position": "RB",
               "player": "David Montgomery",
               "perWeek": 8.88,
-              "rank": 9,
+              "rank": 8,
               "of": 12,
               "leagueMedian": 9.64,
               "gapToMedian": -0.76,
@@ -10379,7 +10396,7 @@
               "leagueMedian": 5.85,
               "gapToMedian": -0.57,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -10515,7 +10532,7 @@
               "injured": false,
               "percent_owned": 99.85,
               "acquisition_type": "DRAFT",
-              "ros_points": 201.7,
+              "ros_points": 201.77,
               "ros_per_week": 12.61,
               "trend": -7.12,
               "season_points_actual": 10.0,
@@ -10637,7 +10654,7 @@
               "ros_points": 112.4,
               "ros_per_week": 7.03,
               "trend": -2.98,
-              "season_points_actual": 7.8,
+              "season_points_actual": 8.1,
               "ros_matched": true,
               "effective_per_week": 7.03
             },
@@ -10651,12 +10668,12 @@
               "injured": false,
               "percent_owned": 64.46,
               "acquisition_type": "DRAFT",
-              "ros_points": 51.98,
-              "ros_per_week": 3.25,
+              "ros_points": 54.13,
+              "ros_per_week": 3.38,
               "trend": -6.2,
               "season_points_actual": 0.4,
               "ros_matched": true,
-              "effective_per_week": 3.25
+              "effective_per_week": 3.38
             },
             {
               "player_id": 4361050,
@@ -10768,8 +10785,8 @@
               "perWeek": 16.93,
               "rank": 3,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": 0.51,
+              "leagueMedian": 16.13,
+              "gapToMedian": 0.8,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -10836,12 +10853,12 @@
               "position": "TE",
               "player": "Isaiah Likely",
               "perWeek": 6.36,
-              "rank": 4,
+              "rank": 5,
               "of": 12,
               "leagueMedian": 5.85,
               "gapToMedian": 0.51,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -11011,12 +11028,12 @@
               "injured": false,
               "percent_owned": 97.26,
               "acquisition_type": "DRAFT",
-              "ros_points": 112.02,
-              "ros_per_week": 7.0,
+              "ros_points": 111.65,
+              "ros_per_week": 6.98,
               "trend": 5.06,
               "season_points_actual": 17.7,
               "ros_matched": true,
-              "effective_per_week": 7.0
+              "effective_per_week": 6.98
             },
             {
               "player_id": 3916387,
@@ -11247,8 +11264,8 @@
               "perWeek": 18.36,
               "rank": 2,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": 1.94,
+              "leagueMedian": 16.13,
+              "gapToMedian": 2.23,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -11300,11 +11317,11 @@
               "slot": "WR2",
               "position": "WR",
               "player": "Ladd McConkey",
-              "perWeek": 7.0,
-              "rank": 8,
+              "perWeek": 6.98,
+              "rank": 9,
               "of": 12,
               "leagueMedian": 7.01,
-              "gapToMedian": -0.01,
+              "gapToMedian": -0.03,
               "leagueBest": 8.81,
               "leagueMin": 6.58,
               "leagueMax": 8.81,
@@ -11315,12 +11332,12 @@
               "position": "TE",
               "player": "Kyle Pitts Sr.",
               "perWeek": 5.19,
-              "rank": 9,
+              "rank": 10,
               "of": 12,
               "leagueMedian": 5.85,
               "gapToMedian": -0.66,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -11391,7 +11408,7 @@
             {
               "slot": "WR2",
               "player": "Ladd McConkey",
-              "perWeek": 7.0
+              "perWeek": 6.98
             },
             {
               "slot": "TE",
@@ -11414,7 +11431,7 @@
               "perWeek": 6.67
             }
           ],
-          "rosPerWeekTotal": 83.22
+          "rosPerWeekTotal": 83.2
         },
         {
           "team_id": 5,
@@ -11541,7 +11558,7 @@
               "injured": false,
               "percent_owned": 77.32,
               "acquisition_type": "DRAFT",
-              "ros_points": 61.12,
+              "ros_points": 61.11,
               "ros_per_week": 3.82,
               "trend": -7.37,
               "season_points_actual": 10.3,
@@ -11592,7 +11609,7 @@
               "injured": false,
               "percent_owned": 65.28,
               "acquisition_type": "DRAFT",
-              "ros_points": 82.92,
+              "ros_points": 82.85,
               "ros_per_week": 5.18,
               "trend": -4.25,
               "season_points_actual": 2.4,
@@ -11660,12 +11677,12 @@
               "injured": false,
               "percent_owned": 26.32,
               "acquisition_type": "DRAFT",
-              "ros_points": 84.69,
-              "ros_per_week": 5.29,
+              "ros_points": 85.5,
+              "ros_per_week": 5.34,
               "trend": 8.52,
               "season_points_actual": 20.7,
               "ros_matched": true,
-              "effective_per_week": 5.29
+              "effective_per_week": 5.34
             },
             {
               "player_id": 4869461,
@@ -11709,8 +11726,8 @@
               "perWeek": 20.25,
               "rank": 1,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": 3.83,
+              "leagueMedian": 16.13,
+              "gapToMedian": 4.12,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -11782,7 +11799,7 @@
               "leagueMedian": 5.85,
               "gapToMedian": -0.27,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -11901,12 +11918,12 @@
               "injured": false,
               "percent_owned": 99.9,
               "acquisition_type": "DRAFT",
-              "ros_points": 256.73,
-              "ros_per_week": 16.05,
+              "ros_points": 257.2,
+              "ros_per_week": 16.08,
               "trend": 7.3,
               "season_points_actual": 47.3,
               "ros_matched": true,
-              "effective_per_week": 16.05
+              "effective_per_week": 16.08
             },
             {
               "player_id": 4258173,
@@ -12020,12 +12037,12 @@
               "injured": false,
               "percent_owned": 83.48,
               "acquisition_type": "DRAFT",
-              "ros_points": 99.56,
-              "ros_per_week": 6.22,
+              "ros_points": 71.33,
+              "ros_per_week": 4.46,
               "trend": -0.45,
               "season_points_actual": 7.2,
               "ros_matched": true,
-              "effective_per_week": 5.6
+              "effective_per_week": 4.01
             },
             {
               "player_id": 4608686,
@@ -12186,10 +12203,10 @@
               "position": "QB",
               "player": "Patrick Mahomes",
               "perWeek": 16.17,
-              "rank": 7,
+              "rank": 6,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": -0.25,
+              "leagueMedian": 16.13,
+              "gapToMedian": 0.04,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -12199,11 +12216,11 @@
               "slot": "RB1",
               "position": "RB",
               "player": "Jonathan Taylor",
-              "perWeek": 16.05,
+              "perWeek": 16.08,
               "rank": 2,
               "of": 12,
               "leagueMedian": 13.21,
-              "gapToMedian": 2.84,
+              "gapToMedian": 2.86,
               "leagueBest": 18.77,
               "leagueMin": 9.68,
               "leagueMax": 18.77,
@@ -12256,12 +12273,12 @@
               "position": "TE",
               "player": "Harold Fannin Jr.",
               "perWeek": 4.62,
-              "rank": 12,
+              "rank": 11,
               "of": 12,
               "leagueMedian": 5.85,
               "gapToMedian": -1.23,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -12317,7 +12334,7 @@
             {
               "slot": "RB1",
               "player": "Jonathan Taylor",
-              "perWeek": 16.05
+              "perWeek": 16.08
             },
             {
               "slot": "RB2",
@@ -12355,7 +12372,7 @@
               "perWeek": 6.59
             }
           ],
-          "rosPerWeekTotal": 70.81
+          "rosPerWeekTotal": 70.84
         },
         {
           "team_id": 7,
@@ -12650,8 +12667,8 @@
               "perWeek": 16.91,
               "rank": 4,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": 0.49,
+              "leagueMedian": 16.13,
+              "gapToMedian": 0.78,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -12704,7 +12721,7 @@
               "position": "WR",
               "player": "Deebo Samuel Sr.",
               "perWeek": 7.0,
-              "rank": 9,
+              "rank": 8,
               "of": 12,
               "leagueMedian": 7.01,
               "gapToMedian": -0.01,
@@ -12718,12 +12735,12 @@
               "position": "TE",
               "player": "Travis Kelce",
               "perWeek": 6.49,
-              "rank": 3,
+              "rank": 4,
               "of": 12,
               "leagueMedian": 5.85,
               "gapToMedian": 0.64,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -12978,12 +12995,12 @@
               "injured": false,
               "percent_owned": 92.85,
               "acquisition_type": "DRAFT",
-              "ros_points": 91.6,
-              "ros_per_week": 5.72,
+              "ros_points": 79.32,
+              "ros_per_week": 4.96,
               "trend": 12.93,
               "season_points_actual": 20.1,
               "ros_matched": true,
-              "effective_per_week": 5.15
+              "effective_per_week": 4.46
             },
             {
               "player_id": -16026,
@@ -13113,7 +13130,7 @@
               "injured": false,
               "percent_owned": 20.08,
               "acquisition_type": "ADD",
-              "ros_points": 39.42,
+              "ros_points": 39.41,
               "ros_per_week": 2.46,
               "trend": -2.97,
               "season_points_actual": 5.5,
@@ -13129,8 +13146,8 @@
               "perWeek": 14.0,
               "rank": 12,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": -2.42,
+              "leagueMedian": 16.13,
+              "gapToMedian": -2.13,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -13196,13 +13213,13 @@
               "slot": "TE",
               "position": "TE",
               "player": "Dallas Goedert",
-              "perWeek": 5.15,
-              "rank": 10,
+              "perWeek": 4.46,
+              "rank": 12,
               "of": 12,
               "leagueMedian": 5.85,
-              "gapToMedian": -0.7,
+              "gapToMedian": -1.39,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -13278,7 +13295,7 @@
             {
               "slot": "TE",
               "player": "Dallas Goedert",
-              "perWeek": 5.15
+              "perWeek": 4.46
             },
             {
               "slot": "DEF",
@@ -13296,7 +13313,7 @@
               "perWeek": 7.49
             }
           ],
-          "rosPerWeekTotal": 74.77
+          "rosPerWeekTotal": 74.08
         },
         {
           "team_id": 9,
@@ -13389,12 +13406,12 @@
               "injured": false,
               "percent_owned": 98.87,
               "acquisition_type": "DRAFT",
-              "ros_points": 101.8,
-              "ros_per_week": 6.36,
+              "ros_points": 104.35,
+              "ros_per_week": 6.52,
               "trend": 0.02,
               "season_points_actual": 15.7,
               "ros_matched": true,
-              "effective_per_week": 6.36
+              "effective_per_week": 6.52
             },
             {
               "player_id": 3128429,
@@ -13474,12 +13491,12 @@
               "injured": false,
               "percent_owned": 70.48,
               "acquisition_type": "DRAFT",
-              "ros_points": 92.97,
-              "ros_per_week": 5.81,
+              "ros_points": 98.07,
+              "ros_per_week": 6.13,
               "trend": -5.59,
               "season_points_actual": 3.1,
               "ros_matched": true,
-              "effective_per_week": 5.81
+              "effective_per_week": 6.13
             },
             {
               "player_id": 4360689,
@@ -13558,12 +13575,12 @@
               "injured": false,
               "percent_owned": 42.9,
               "acquisition_type": "DRAFT",
-              "ros_points": 84.24,
-              "ros_per_week": 5.26,
+              "ros_points": 84.26,
+              "ros_per_week": 5.27,
               "trend": -7.68,
               "season_points_actual": 5.0,
               "ros_matched": true,
-              "effective_per_week": 5.26
+              "effective_per_week": 5.27
             },
             {
               "player_id": 3117256,
@@ -13608,8 +13625,8 @@
               "perWeek": 15.97,
               "rank": 8,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": -0.45,
+              "leagueMedian": 16.13,
+              "gapToMedian": -0.16,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -13675,13 +13692,13 @@
               "slot": "TE",
               "position": "TE",
               "player": "Tyler Warren",
-              "perWeek": 6.36,
-              "rank": 5,
+              "perWeek": 6.52,
+              "rank": 3,
               "of": 12,
               "leagueMedian": 5.85,
-              "gapToMedian": 0.51,
+              "gapToMedian": 0.67,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -13689,11 +13706,11 @@
               "slot": "DEF",
               "position": "DEF",
               "player": "Chargers D/ST",
-              "perWeek": 5.26,
+              "perWeek": 5.27,
               "rank": 10,
               "of": 12,
               "leagueMedian": 6.77,
-              "gapToMedian": -1.51,
+              "gapToMedian": -1.5,
               "leagueBest": 7.86,
               "leagueMin": 4.36,
               "leagueMax": 7.86,
@@ -13757,12 +13774,12 @@
             {
               "slot": "TE",
               "player": "Tyler Warren",
-              "perWeek": 6.36
+              "perWeek": 6.52
             },
             {
               "slot": "DEF",
               "player": "Chargers D/ST",
-              "perWeek": 5.26
+              "perWeek": 5.27
             },
             {
               "slot": "K",
@@ -13775,7 +13792,7 @@
               "perWeek": 9.53
             }
           ],
-          "rosPerWeekTotal": 81.65
+          "rosPerWeekTotal": 81.82
         },
         {
           "team_id": 10,
@@ -13936,7 +13953,7 @@
               "injured": false,
               "percent_owned": 85.8,
               "acquisition_type": "DRAFT",
-              "ros_points": 135.47,
+              "ros_points": 135.45,
               "ros_per_week": 8.47,
               "trend": null,
               "season_points_actual": 0.0,
@@ -13949,8 +13966,8 @@
               "position": "QB",
               "pro_team": "NYG",
               "lineup_slot": "QB",
-              "injury_status": "QUESTIONABLE",
-              "injured": false,
+              "injury_status": "OUT",
+              "injured": true,
               "percent_owned": 94.18,
               "acquisition_type": "DRAFT",
               "ros_points": 275.06,
@@ -13958,7 +13975,7 @@
               "trend": 8.08,
               "season_points_actual": 27.4,
               "ros_matched": true,
-              "effective_per_week": 16.67
+              "effective_per_week": 12.89
             },
             {
               "player_id": -16007,
@@ -14083,12 +14100,12 @@
             {
               "slot": "QB",
               "position": "QB",
-              "player": "Jaxson Dart",
-              "perWeek": 16.67,
-              "rank": 6,
+              "player": "Joe Burrow",
+              "perWeek": 16.09,
+              "rank": 7,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": 0.25,
+              "leagueMedian": 16.13,
+              "gapToMedian": -0.04,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -14160,7 +14177,7 @@
               "leagueMedian": 5.85,
               "gapToMedian": 1.03,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -14210,8 +14227,8 @@
           "startingLineup": [
             {
               "slot": "QB",
-              "player": "Jaxson Dart",
-              "perWeek": 16.67
+              "player": "Joe Burrow",
+              "perWeek": 16.09
             },
             {
               "slot": "RB1",
@@ -14254,7 +14271,7 @@
               "perWeek": 8.47
             }
           ],
-          "rosPerWeekTotal": 81.15
+          "rosPerWeekTotal": 80.57
         },
         {
           "team_id": 11,
@@ -14296,7 +14313,7 @@
               "injured": false,
               "percent_owned": 99.36,
               "acquisition_type": "DRAFT",
-              "ros_points": 174.79,
+              "ros_points": 174.64,
               "ros_per_week": 10.92,
               "trend": -6.32,
               "season_points_actual": 23.8,
@@ -14313,7 +14330,7 @@
               "injured": true,
               "percent_owned": 98.43,
               "acquisition_type": "DRAFT",
-              "ros_points": 145.43,
+              "ros_points": 145.42,
               "ros_per_week": 9.09,
               "trend": 11.72,
               "season_points_actual": 21.0,
@@ -14330,12 +14347,12 @@
               "injured": false,
               "percent_owned": 99.11,
               "acquisition_type": "DRAFT",
-              "ros_points": 134.41,
-              "ros_per_week": 8.4,
+              "ros_points": 134.61,
+              "ros_per_week": 8.41,
               "trend": -4.18,
               "season_points_actual": 23.0,
               "ros_matched": true,
-              "effective_per_week": 8.4
+              "effective_per_week": 8.41
             },
             {
               "player_id": 4685278,
@@ -14549,8 +14566,8 @@
               "perWeek": 15.63,
               "rank": 9,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": -0.79,
+              "leagueMedian": 16.13,
+              "gapToMedian": -0.5,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -14588,11 +14605,11 @@
               "slot": "WR1",
               "position": "WR",
               "player": "DeVonta Smith",
-              "perWeek": 8.4,
+              "perWeek": 8.41,
               "rank": 9,
               "of": 12,
               "leagueMedian": 9.12,
-              "gapToMedian": -0.72,
+              "gapToMedian": -0.71,
               "leagueBest": 11.57,
               "leagueMin": 7.9,
               "leagueMax": 11.57,
@@ -14622,7 +14639,7 @@
               "leagueMedian": 5.85,
               "gapToMedian": 0.26,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -14688,7 +14705,7 @@
             {
               "slot": "WR1",
               "player": "DeVonta Smith",
-              "perWeek": 8.4
+              "perWeek": 8.41
             },
             {
               "slot": "WR2",
@@ -14716,7 +14733,7 @@
               "perWeek": 7.39
             }
           ],
-          "rosPerWeekTotal": 74.84
+          "rosPerWeekTotal": 74.85
         },
         {
           "team_id": 12,
@@ -14792,12 +14809,12 @@
               "injured": false,
               "percent_owned": 95.47,
               "acquisition_type": "DRAFT",
-              "ros_points": 145.68,
-              "ros_per_week": 9.11,
+              "ros_points": 142.12,
+              "ros_per_week": 8.88,
               "trend": -6.25,
               "season_points_actual": 9.8,
               "ros_matched": true,
-              "effective_per_week": 9.11
+              "effective_per_week": 8.88
             },
             {
               "player_id": 4685512,
@@ -14877,12 +14894,12 @@
               "injured": false,
               "percent_owned": 90.88,
               "acquisition_type": "DRAFT",
-              "ros_points": 79.66,
-              "ros_per_week": 4.98,
+              "ros_points": 84.38,
+              "ros_per_week": 5.27,
               "trend": 1.12,
               "season_points_actual": 8.0,
               "ros_matched": true,
-              "effective_per_week": 4.98
+              "effective_per_week": 5.27
             },
             {
               "player_id": 4361741,
@@ -15011,8 +15028,8 @@
               "perWeek": 16.68,
               "rank": 5,
               "of": 12,
-              "leagueMedian": 16.42,
-              "gapToMedian": 0.26,
+              "leagueMedian": 16.13,
+              "gapToMedian": 0.55,
               "leagueBest": 20.25,
               "leagueMin": 14.0,
               "leagueMax": 20.25,
@@ -15036,11 +15053,11 @@
               "slot": "RB2",
               "position": "RB",
               "player": "Quinshon Judkins",
-              "perWeek": 9.11,
-              "rank": 8,
+              "perWeek": 8.88,
+              "rank": 9,
               "of": 12,
               "leagueMedian": 9.64,
-              "gapToMedian": -0.54,
+              "gapToMedian": -0.76,
               "leagueBest": 12.19,
               "leagueMin": 8.03,
               "leagueMax": 12.19,
@@ -15078,13 +15095,13 @@
               "slot": "TE",
               "position": "TE",
               "player": "Tucker Kraft",
-              "perWeek": 4.98,
-              "rank": 11,
+              "perWeek": 5.27,
+              "rank": 9,
               "of": 12,
               "leagueMedian": 5.85,
-              "gapToMedian": -0.87,
+              "gapToMedian": -0.58,
               "leagueBest": 8.24,
-              "leagueMin": 4.62,
+              "leagueMin": 4.46,
               "leagueMax": 8.24,
               "actionable": true
             },
@@ -15145,7 +15162,7 @@
             {
               "slot": "RB2",
               "player": "Quinshon Judkins",
-              "perWeek": 9.11
+              "perWeek": 8.88
             },
             {
               "slot": "WR1",
@@ -15160,7 +15177,7 @@
             {
               "slot": "TE",
               "player": "Tucker Kraft",
-              "perWeek": 4.98
+              "perWeek": 5.27
             },
             {
               "slot": "DEF",
@@ -15178,7 +15195,7 @@
               "perWeek": 8.1
             }
           ],
-          "rosPerWeekTotal": 73.44
+          "rosPerWeekTotal": 73.5
         }
       ],
       "freeAgents": [
@@ -15209,7 +15226,7 @@
           "injured": false,
           "percent_owned": 29.13,
           "acquisition_type": [],
-          "ros_points": 219.86,
+          "ros_points": 219.87,
           "ros_per_week": 13.74,
           "trend": 0.23,
           "season_points_actual": 33.48,
@@ -15294,7 +15311,7 @@
           "injured": false,
           "percent_owned": 1.63,
           "acquisition_type": [],
-          "ros_points": 195.39,
+          "ros_points": 195.4,
           "ros_per_week": 12.21,
           "trend": 1.4,
           "season_points_actual": 33.72,
@@ -15396,7 +15413,7 @@
           "injured": false,
           "percent_owned": 3.05,
           "acquisition_type": [],
-          "ros_points": 102.7,
+          "ros_points": 102.66,
           "ros_per_week": 6.42,
           "trend": -2.57,
           "season_points_actual": 10.0,
@@ -15498,12 +15515,12 @@
           "injured": false,
           "percent_owned": 9.0,
           "acquisition_type": [],
-          "ros_points": 82.79,
-          "ros_per_week": 5.17,
+          "ros_points": 82.64,
+          "ros_per_week": 5.16,
           "trend": -6.25,
           "season_points_actual": 2.0,
           "ros_matched": true,
-          "effective_per_week": 5.17
+          "effective_per_week": 5.16
         },
         {
           "player_id": -16008,
@@ -15591,6 +15608,23 @@
           "effective_per_week": 4.73
         },
         {
+          "player_id": 15818,
+          "name": "Keenan Allen",
+          "position": "WR",
+          "pro_team": "IND",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 26.17,
+          "acquisition_type": [],
+          "ros_points": 72.17,
+          "ros_per_week": 4.51,
+          "trend": -0.78,
+          "season_points_actual": 3.7,
+          "ros_matched": true,
+          "effective_per_week": 4.51
+        },
+        {
           "player_id": 4360939,
           "name": "Rashod Bateman",
           "position": "WR",
@@ -15625,21 +15659,21 @@
           "effective_per_week": 4.35
         },
         {
-          "player_id": 15818,
-          "name": "Keenan Allen",
-          "position": "WR",
-          "pro_team": "IND",
+          "player_id": 4595342,
+          "name": "Oronde Gadsden",
+          "position": "TE",
+          "pro_team": "LAC",
           "lineup_slot": null,
           "injury_status": null,
           "injured": false,
-          "percent_owned": 26.17,
+          "percent_owned": 1.96,
           "acquisition_type": [],
-          "ros_points": 69.07,
-          "ros_per_week": 4.32,
-          "trend": -0.78,
-          "season_points_actual": 3.7,
+          "ros_points": 68.95,
+          "ros_per_week": 4.31,
+          "trend": 0.15,
+          "season_points_actual": 11.0,
           "ros_matched": true,
-          "effective_per_week": 4.32
+          "effective_per_week": 4.31
         },
         {
           "player_id": -16010,
@@ -15691,6 +15725,23 @@
           "season_points_actual": 10.0,
           "ros_matched": true,
           "effective_per_week": 4.14
+        },
+        {
+          "player_id": 4686612,
+          "name": "Tre' Harris",
+          "position": "WR",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 3.8,
+          "acquisition_type": [],
+          "ros_points": 64.69,
+          "ros_per_week": 4.04,
+          "trend": -1.64,
+          "season_points_actual": 7.3,
+          "ros_matched": true,
+          "effective_per_week": 4.04
         },
         {
           "player_id": 4686422,
@@ -15931,23 +15982,6 @@
           "effective_per_week": 3.57
         },
         {
-          "player_id": -16022,
-          "name": "Cardinals D/ST",
-          "position": "DEF",
-          "pro_team": "ARI",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.88,
-          "acquisition_type": [],
-          "ros_points": 56.47,
-          "ros_per_week": 3.53,
-          "trend": 8.66,
-          "season_points_actual": 12.0,
-          "ros_matched": true,
-          "effective_per_week": 3.53
-        },
-        {
           "player_id": 5083315,
           "name": "Kenyon Sadiq",
           "position": "TE",
@@ -15965,21 +15999,21 @@
           "effective_per_week": 3.52
         },
         {
-          "player_id": 4686612,
-          "name": "Tre' Harris",
-          "position": "WR",
-          "pro_team": "LAC",
+          "player_id": -16022,
+          "name": "Cardinals D/ST",
+          "position": "DEF",
+          "pro_team": "ARI",
           "lineup_slot": null,
           "injury_status": null,
           "injured": false,
-          "percent_owned": 3.8,
+          "percent_owned": 0.88,
           "acquisition_type": [],
-          "ros_points": 55.86,
-          "ros_per_week": 3.49,
-          "trend": -1.64,
-          "season_points_actual": 7.3,
+          "ros_points": 56.36,
+          "ros_per_week": 3.52,
+          "trend": 8.66,
+          "season_points_actual": 12.0,
           "ros_matched": true,
-          "effective_per_week": 3.49
+          "effective_per_week": 3.52
         },
         {
           "player_id": 4569371,
@@ -16450,7 +16484,7 @@
           "injured": false,
           "percent_owned": 0.12,
           "acquisition_type": [],
-          "ros_points": 43.81,
+          "ros_points": 43.82,
           "ros_per_week": 2.74,
           "trend": 6.18,
           "season_points_actual": 14.0,
@@ -16475,21 +16509,21 @@
           "effective_per_week": 2.59
         },
         {
-          "player_id": 3123076,
-          "name": "David Njoku",
-          "position": "TE",
-          "pro_team": "LAC",
+          "player_id": 4601080,
+          "name": "Raheim Sanders",
+          "position": "RB",
+          "pro_team": "CLE",
           "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 6.01,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.65,
           "acquisition_type": [],
-          "ros_points": 54.67,
-          "ros_per_week": 3.42,
-          "trend": 1.61,
-          "season_points_actual": 6.7,
+          "ros_points": 41.26,
+          "ros_per_week": 2.58,
+          "trend": null,
+          "season_points_actual": 3.7,
           "ros_matched": true,
-          "effective_per_week": 2.56
+          "effective_per_week": 2.58
         },
         {
           "player_id": 3915411,
@@ -16560,23 +16594,6 @@
           "effective_per_week": 2.48
         },
         {
-          "player_id": 4601080,
-          "name": "Raheim Sanders",
-          "position": "RB",
-          "pro_team": "CLE",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.65,
-          "acquisition_type": [],
-          "ros_points": 39.28,
-          "ros_per_week": 2.45,
-          "trend": null,
-          "season_points_actual": 3.7,
-          "ros_matched": true,
-          "effective_per_week": 2.45
-        },
-        {
           "player_id": 4603186,
           "name": "Jack Bech",
           "position": "WR",
@@ -16592,23 +16609,6 @@
           "season_points_actual": 10.8,
           "ros_matched": true,
           "effective_per_week": 2.35
-        },
-        {
-          "player_id": 4595342,
-          "name": "Oronde Gadsden",
-          "position": "TE",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 1.96,
-          "acquisition_type": [],
-          "ros_points": 36.29,
-          "ros_per_week": 2.27,
-          "trend": 0.15,
-          "season_points_actual": 11.0,
-          "ros_matched": true,
-          "effective_per_week": 2.27
         },
         {
           "player_id": 3930086,
@@ -16679,21 +16679,21 @@
           "effective_per_week": 2.03
         },
         {
-          "player_id": 3054212,
-          "name": "Jonnu Smith",
-          "position": "TE",
-          "pro_team": "GB",
+          "player_id": 4686468,
+          "name": "Seth McGowan",
+          "position": "RB",
+          "pro_team": "IND",
           "lineup_slot": null,
           "injury_status": null,
           "injured": false,
-          "percent_owned": 0.19,
+          "percent_owned": 1.04,
           "acquisition_type": [],
-          "ros_points": 31.5,
-          "ros_per_week": 1.97,
-          "trend": 2.96,
-          "season_points_actual": 5.0,
+          "ros_points": 30.7,
+          "ros_per_week": 1.92,
+          "trend": -2.2,
+          "season_points_actual": 0.0,
           "ros_matched": true,
-          "effective_per_week": 1.97
+          "effective_per_week": 1.92
         },
         {
           "player_id": 4431280,
@@ -16711,23 +16711,6 @@
           "season_points_actual": 3.2,
           "ros_matched": true,
           "effective_per_week": 1.92
-        },
-        {
-          "player_id": 4686468,
-          "name": "Seth McGowan",
-          "position": "RB",
-          "pro_team": "IND",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 1.04,
-          "acquisition_type": [],
-          "ros_points": 30.63,
-          "ros_per_week": 1.91,
-          "trend": -2.2,
-          "season_points_actual": 0.0,
-          "ros_matched": true,
-          "effective_per_week": 1.91
         },
         {
           "player_id": 4258595,
@@ -16779,6 +16762,23 @@
           "season_points_actual": -0.2,
           "ros_matched": true,
           "effective_per_week": 1.78
+        },
+        {
+          "player_id": 3054212,
+          "name": "Jonnu Smith",
+          "position": "TE",
+          "pro_team": "GB",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.19,
+          "acquisition_type": [],
+          "ros_points": 27.08,
+          "ros_per_week": 1.69,
+          "trend": 2.96,
+          "season_points_actual": 5.0,
+          "ros_matched": true,
+          "effective_per_week": 1.69
         },
         {
           "player_id": 3921690,
@@ -16841,7 +16841,7 @@
           "injured": false,
           "percent_owned": 2.79,
           "acquisition_type": [],
-          "ros_points": 25.17,
+          "ros_points": 25.16,
           "ros_per_week": 1.57,
           "trend": -1.01,
           "season_points_actual": 3.2,
@@ -17045,7 +17045,7 @@
           "injured": false,
           "percent_owned": 0.54,
           "acquisition_type": [],
-          "ros_points": 20.91,
+          "ros_points": 20.92,
           "ros_per_week": 1.31,
           "trend": 0.11,
           "season_points_actual": 4.1,
@@ -17204,6 +17204,23 @@
           "season_points_actual": 0.8,
           "ros_matched": true,
           "effective_per_week": 1.09
+        },
+        {
+          "player_id": 4685553,
+          "name": "Brenen Thompson",
+          "position": "WR",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 0.11,
+          "acquisition_type": [],
+          "ros_points": 17.06,
+          "ros_per_week": 1.07,
+          "trend": -1.23,
+          "season_points_actual": 1.3,
+          "ros_matched": true,
+          "effective_per_week": 1.07
         },
         {
           "player_id": 4429501,
@@ -17393,40 +17410,6 @@
           "effective_per_week": 0.85
         },
         {
-          "player_id": 4685553,
-          "name": "Brenen Thompson",
-          "position": "WR",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.11,
-          "acquisition_type": [],
-          "ros_points": 12.87,
-          "ros_per_week": 0.8,
-          "trend": -1.23,
-          "season_points_actual": 1.3,
-          "ros_matched": true,
-          "effective_per_week": 0.8
-        },
-        {
-          "player_id": 4241263,
-          "name": "Charlie Kolar",
-          "position": "TE",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 0.1,
-          "acquisition_type": [],
-          "ros_points": 16.22,
-          "ros_per_week": 1.01,
-          "trend": -1.41,
-          "season_points_actual": 2.1,
-          "ros_matched": true,
-          "effective_per_week": 0.76
-        },
-        {
           "player_id": 4597703,
           "name": "Tory Horton",
           "position": "WR",
@@ -17529,6 +17512,23 @@
           "effective_per_week": 0.56
         },
         {
+          "player_id": 4061956,
+          "name": "Ashton Dulin",
+          "position": "WR",
+          "pro_team": "IND",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
+          "percent_owned": 0.17,
+          "acquisition_type": [],
+          "ros_points": 11.11,
+          "ros_per_week": 0.69,
+          "trend": -1.53,
+          "season_points_actual": 0.0,
+          "ros_matched": true,
+          "effective_per_week": 0.52
+        },
+        {
           "player_id": 4240631,
           "name": "DeeJay Dallas",
           "position": "RB",
@@ -17572,7 +17572,7 @@
           "injured": false,
           "percent_owned": 0.39,
           "acquisition_type": [],
-          "ros_points": 7.53,
+          "ros_points": 7.54,
           "ros_per_week": 0.47,
           "trend": null,
           "season_points_actual": 1.2,
@@ -17589,7 +17589,7 @@
           "injured": false,
           "percent_owned": 2.17,
           "acquisition_type": [],
-          "ros_points": 7.43,
+          "ros_points": 7.42,
           "ros_per_week": 0.46,
           "trend": -1.97,
           "season_points_actual": 0.0,
@@ -17626,23 +17626,6 @@
           "ros_points": 6.58,
           "ros_per_week": 0.41,
           "trend": -0.85,
-          "season_points_actual": 0.0,
-          "ros_matched": true,
-          "effective_per_week": 0.41
-        },
-        {
-          "player_id": 4061956,
-          "name": "Ashton Dulin",
-          "position": "WR",
-          "pro_team": "IND",
-          "lineup_slot": null,
-          "injury_status": "OUT",
-          "injured": true,
-          "percent_owned": 0.17,
-          "acquisition_type": [],
-          "ros_points": 8.69,
-          "ros_per_week": 0.54,
-          "trend": -1.53,
           "season_points_actual": 0.0,
           "ros_matched": true,
           "effective_per_week": 0.41
@@ -17714,6 +17697,23 @@
           "season_points_actual": 1.0,
           "ros_matched": true,
           "effective_per_week": 0.24
+        },
+        {
+          "player_id": 15835,
+          "name": "Zach Ertz",
+          "position": "TE",
+          "pro_team": "None",
+          "lineup_slot": null,
+          "injury_status": "QUESTIONABLE",
+          "injured": false,
+          "percent_owned": 0.24,
+          "acquisition_type": [],
+          "ros_points": 3.86,
+          "ros_per_week": 0.24,
+          "trend": null,
+          "season_points_actual": 0.0,
+          "ros_matched": true,
+          "effective_per_week": 0.23
         },
         {
           "player_id": 4602667,
@@ -17984,6 +17984,23 @@
           "ros_per_week": 0.0,
           "trend": 18.69,
           "season_points_actual": 25.54,
+          "ros_matched": true,
+          "effective_per_week": 0.0
+        },
+        {
+          "player_id": 3123076,
+          "name": "David Njoku",
+          "position": "TE",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
+          "percent_owned": 6.01,
+          "acquisition_type": [],
+          "ros_points": 0.0,
+          "ros_per_week": 0.0,
+          "trend": 1.61,
+          "season_points_actual": 6.7,
           "ros_matched": true,
           "effective_per_week": 0.0
         },
@@ -18289,7 +18306,7 @@
           "ros_points": 0.0,
           "ros_per_week": 0.0,
           "trend": null,
-          "season_points_actual": 0.0,
+          "season_points_actual": 1.9,
           "ros_matched": true,
           "effective_per_week": 0.0
         },
@@ -18715,6 +18732,23 @@
           "ros_per_week": 0.0,
           "trend": null,
           "season_points_actual": 0.0,
+          "ros_matched": true,
+          "effective_per_week": 0.0
+        },
+        {
+          "player_id": 4241263,
+          "name": "Charlie Kolar",
+          "position": "TE",
+          "pro_team": "LAC",
+          "lineup_slot": null,
+          "injury_status": "OUT",
+          "injured": true,
+          "percent_owned": 0.1,
+          "acquisition_type": [],
+          "ros_points": 0.0,
+          "ros_per_week": 0.0,
+          "trend": -1.41,
+          "season_points_actual": 2.1,
           "ros_matched": true,
           "effective_per_week": 0.0
         },
