@@ -808,6 +808,32 @@
   .mgr-comingsoon{font-size:10px;color:var(--dim);line-height:1.6;padding:10px 12px;
     border:1px dashed var(--line-2);background:var(--panel);}
 
+  /* cross-league player ownership search */
+  .mgr-psearch{position:relative;margin-bottom:14px;}
+  .mgr-psearch input{width:100%;background:var(--panel);border:1px solid var(--line-2);color:var(--txt);
+    font-family:inherit;font-size:14px;padding:11px 34px 11px 12px;box-sizing:border-box;}
+  .mgr-psearch input:focus{outline:none;border-color:var(--amber);}
+  .mgr-psearch-clear{position:absolute;right:8px;top:50%;transform:translateY(-50%);
+    background:none;border:none;color:var(--dim);font-size:15px;cursor:pointer;padding:6px;line-height:1;}
+  .mgr-psearch-clear:hover{color:var(--txt);}
+  .mgr-pname-block{margin-bottom:14px;}
+  .mgr-pname-head{font-size:13px;font-weight:700;color:var(--amber);letter-spacing:0.03em;margin-bottom:6px;}
+  .mgr-pown-row{display:flex;align-items:center;gap:8px;padding:8px 10px;border:1px solid var(--line);
+    border-left:2px solid var(--line-2);margin-bottom:5px;font-size:11px;}
+  .mgr-pown-row.mgr-pown-mine{border-left-color:var(--amber);}
+  .mgr-pown-row.mgr-pown-available{border-left-color:var(--green);}
+  .mgr-pown-row.mgr-pown-rostered{border-left-color:var(--dim);}
+  .mgr-pown-lg{flex:0 0 62px;color:var(--dim);font-size:9px;text-transform:uppercase;letter-spacing:0.04em;}
+  .mgr-pown-status{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .mgr-pown-status .who{font-weight:700;color:var(--txt);}
+  .mgr-pown-status.mine .who{color:var(--amber);}
+  .mgr-pown-status.available .who{color:var(--green);}
+  .mgr-pown-status.unknown .who,.mgr-pown-status.no-data .who{color:var(--dim);font-weight:400;font-style:italic;}
+  .mgr-pown-val{flex:0 0 auto;text-align:right;font-size:10px;color:var(--dim);white-space:nowrap;}
+  .mgr-pown-val b{color:var(--txt);font-variant-numeric:tabular-nums;font-size:11px;}
+  .mgr-pown-injury{color:var(--red);font-size:9px;margin-left:5px;font-weight:700;}
+  .mgr-pown-more{font-size:9.5px;color:var(--dim);text-align:center;padding:4px 0 2px;}
+
   @media(min-width:900px){
     .wrap.mgr-wrap{max-width:1000px;}
     .mgr-stack{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
@@ -921,6 +947,7 @@ let INSEASON=null;
 // activeView==='draft'. mgrDetailLeague is null on the Manager summary
 // screen, or a league key once the person has tapped into one team's detail.
 let activeView='manager', mgrDetailLeague=null;
+let mgrPlayerQuery='';  // cross-league player ownership search, top-level Manager Cockpit only
 
 // Predicted keepers, keyed by league. Each league has its own file and its own
 // prediction script, since keeper rules differ (Kepners: cost -2; Miami: cost
@@ -1500,6 +1527,133 @@ function mgrThisWeekActions(){
   return out.slice(0,8);
 }
 
+// Minimal HTML escape -- only needed because the search box below echoes
+// raw keyboard input (the query itself) back into innerHTML on a "no
+// matches" message; player names/data elsewhere come from ESPN/Yahoo's own
+// APIs, not free-form user text.
+function escapeHtml(s){
+  return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+// ---- cross-league player search ----
+// The Tuesday-morning problem this exists for: "is <hot pickup> still
+// available, and if not, who has him" -- across four separate league pulls,
+// each with its own rosters and free-agent list, with no single index today.
+// Fixed order regardless of what INSEASON.leagues happens to contain, so a
+// league that's temporarily missing (Yahoo, while blocked) still gets its own
+// "no data" row instead of silently vanishing from the results.
+const MGR_LEAGUE_ORDER = ['kepners','miami','zimmer','inspire11'];
+
+// Distinct matching player NAMES across every league's rosters + free agents,
+// substring / case-insensitive. Two characters minimum so every league's full
+// player pool isn't scanned+rendered on the first keystroke. Matching is by
+// name string, not player_id -- Yahoo's own IDs won't line up with ESPN's for
+// the same real person, and name is the one field both platforms share (see
+// yahoo_inseason_pull.py's player_row vs espn_inseason_pull.py's), so once
+// Kepners/Miami are live this keeps working without changes here.
+function mgrPlayerSearchMatches(query){
+  const q = query.trim().toLowerCase();
+  if(q.length < 2) return [];
+  const seen = new Map();
+  Object.values(INSEASON.leagues||{}).forEach(lg=>{
+    (lg.teams||[]).forEach(t=>(t.roster||[]).forEach(p=>{
+      if(p.name && p.name.toLowerCase().includes(q)) seen.set(p.name.toLowerCase(), p.name);
+    }));
+    (lg.freeAgents||[]).forEach(p=>{
+      if(p.name && p.name.toLowerCase().includes(q)) seen.set(p.name.toLowerCase(), p.name);
+    });
+  });
+  return Array.from(seen.values()).sort((a,b)=>a.localeCompare(b));
+}
+
+// One exact player name -> a status row per league. Checks EVERY team's
+// roster in that league, not just mine, so "who has him" is answered
+// directly instead of only "is he on my team." Falls back to that league's
+// free-agent list, then to an explicit "not found in this league's pulled
+// data" rather than assuming available -- free-agent lists are a top-N pull
+// (FA_LIMIT in espn_inseason_pull.py / yahoo_inseason_pull.py), so a very
+// deep, low-value name can be genuinely available and still not show up.
+function mgrPlayerOwnership(playerName){
+  const pnLower = playerName.toLowerCase();
+  return MGR_LEAGUE_ORDER.map(key=>{
+    const label = MGR_LEAGUE_NAMES[key] || key;
+    const lg = INSEASON.leagues ? INSEASON.leagues[key] : null;
+    if(!lg) return {key, label, status:'no-data'};
+    for(const t of (lg.teams||[])){
+      const hit = (t.roster||[]).find(p=>p.name && p.name.toLowerCase()===pnLower);
+      if(hit){
+        return {
+          key, label, status: t.is_me ? 'mine' : 'rostered',
+          teamName: t.team_name, manager: t.manager,
+          position: hit.position, perWeek: hit.effective_per_week,
+          lineupSlot: hit.lineup_slot, injury: hit.injury_status,
+        };
+      }
+    }
+    const fa = (lg.freeAgents||[]).find(p=>p.name && p.name.toLowerCase()===pnLower);
+    if(fa){
+      return {
+        key, label, status:'available',
+        position: fa.position, perWeek: fa.effective_per_week,
+        percentOwned: fa.percent_owned,
+      };
+    }
+    return {key, label, status:'unknown'};
+  });
+}
+
+function mgrPownRowHtml(row){
+  let statusHtml;
+  if(row.status==='no-data'){
+    statusHtml = `<span class="who">No live data for this league yet</span>`;
+  } else if(row.status==='mine'){
+    const slotTxt = row.lineupSlot && row.lineupSlot!=='BE' ? `starting · ${row.lineupSlot}` : 'on your bench';
+    statusHtml = `<span class="who">Your team</span> · ${slotTxt}`;
+  } else if(row.status==='rostered'){
+    statusHtml = `<span class="who">${row.teamName || row.manager || 'Another team'}</span>`;
+  } else if(row.status==='available'){
+    statusHtml = `<span class="who">Available</span> · free agent`;
+  } else {
+    statusHtml = `<span class="who">Not in this league's pulled data</span>`;
+  }
+  const valBits = [];
+  if(row.perWeek!=null) valBits.push(`<b>${row.perWeek}</b> pts/wk`);
+  else if(row.percentOwned!=null) valBits.push(`${row.percentOwned}% owned`);
+  const injuryHtml = row.injury ? `<span class="mgr-pown-injury">${row.injury}</span>` : '';
+  return `<div class="mgr-pown-row mgr-pown-${row.status}">
+    <span class="mgr-pown-lg">${(row.label||row.key).split(' ')[0]}</span>
+    <span class="mgr-pown-status ${row.status}">${statusHtml}${injuryHtml}</span>
+    <span class="mgr-pown-val">${valBits.join(' · ')}</span>
+  </div>`;
+}
+
+// Targeted update of ONLY the results container -- deliberately never touches
+// the search <input> itself or calls the app's full render(), so typing never
+// loses cursor position/focus. Mirrors the existing Zimmer nomination-search
+// pattern (renderSearchResults / #searchResults) rather than introducing a
+// second approach to the same problem.
+function mgrRenderPlayerSearchResults(query){
+  const box = document.getElementById('mgrPlayerSearchResults');
+  if(!box) return;
+  const q = query.trim();
+  if(q.length < 2){ box.innerHTML=''; return; }
+  const matches = mgrPlayerSearchMatches(q);
+  if(!matches.length){
+    box.innerHTML = `<div class="mgr-empty">No player matching "${escapeHtml(q)}" in any
+      league's pulled rosters or free-agent list. Free-agent lists are a top slice by value,
+      not every available player -- a very deep name can be real and still not show up here.</div>`;
+    return;
+  }
+  const shown = matches.slice(0,6);
+  box.innerHTML = shown.map(name=>`<div class="mgr-pname-block">
+      <div class="mgr-pname-head">${escapeHtml(name)}</div>
+      ${mgrPlayerOwnership(name).map(mgrPownRowHtml).join('')}
+    </div>`).join('')
+    + (matches.length>shown.length
+        ? `<div class="mgr-pown-more">+ ${matches.length-shown.length} more match${matches.length-shown.length>1?'es':''} -- keep typing to narrow</div>`
+        : '');
+}
+
 function renderManagerView(){
   const el = document.getElementById('managerView');
   if(!INSEASON || !INSEASON.leagues || !Object.keys(INSEASON.leagues).length){
@@ -1557,11 +1711,53 @@ function renderManagerView(){
     </div>`;
   }).join('');
 
-  el.innerHTML = `${actionsHtml}<div class="mgr-stack">${cards}</div>`;
+  const searchHtml = `
+    <div class="mgr-psearch">
+      <input id="mgrPlayerSearchInput" placeholder="Search a player across all your leagues..."
+        autocomplete="off" value="${escapeHtml(mgrPlayerQuery)}">
+      ${mgrPlayerQuery ? `<button class="mgr-psearch-clear" id="mgrPlayerSearchClear" title="Clear">✕</button>` : ''}
+    </div>
+    <div id="mgrPlayerSearchResults"></div>`;
+
+  el.innerHTML = `${searchHtml}${actionsHtml}<div class="mgr-stack">${cards}</div>`;
 
   el.querySelectorAll('.mgr-action-row[data-lg], .mgr-card[data-lg]').forEach(node=>{
     node.onclick = ()=>{ mgrDetailLeague = node.dataset.lg; render(); };
   });
+
+  // Deliberately NOT wired through the app's normal full render() on every
+  // keystroke -- that would blow away focus/cursor position in the input on
+  // every character typed. oninput updates state (so the value survives an
+  // unrelated full render, e.g. switching tabs and back) and repaints ONLY
+  // the results container. Same approach as the existing Zimmer nomination
+  // search (#searchResults) elsewhere in this file.
+  const psInput = document.getElementById('mgrPlayerSearchInput');
+  if(psInput){
+    psInput.oninput = (e)=>{
+      mgrPlayerQuery = e.target.value;
+      mgrRenderPlayerSearchResults(mgrPlayerQuery);
+      const clearBtn = document.getElementById('mgrPlayerSearchClear');
+      // The clear button's presence is gated on mgrPlayerQuery in the markup
+      // above, but that markup only gets re-evaluated on a full render --
+      // add/remove it directly here so it appears/disappears as you type
+      // without needing one.
+      if(mgrPlayerQuery && !clearBtn){
+        const btn = document.createElement('button');
+        btn.className = 'mgr-psearch-clear';
+        btn.title = 'Clear';
+        btn.textContent = '✕';
+        btn.onclick = ()=>{ mgrPlayerQuery=''; render(); };
+        psInput.parentElement.appendChild(btn);
+      } else if(!mgrPlayerQuery && clearBtn){
+        clearBtn.remove();
+      }
+    };
+  }
+  const psClear = document.getElementById('mgrPlayerSearchClear');
+  if(psClear){
+    psClear.onclick = ()=>{ mgrPlayerQuery=''; render(); };
+  }
+  mgrRenderPlayerSearchResults(mgrPlayerQuery);
 }
 
 function renderManagerLeagueDetail(el, key){

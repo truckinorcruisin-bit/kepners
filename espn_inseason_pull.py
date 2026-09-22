@@ -227,6 +227,27 @@ def pull_one_league(cfg):
               f"Continuing with rosters only.")
         fas = []
     free_agents = [player_row(p) for p in fas]
+
+    # Cross-check against this SAME league's own rosters. ESPN's
+    # free_agents() endpoint and its roster endpoint are two independent
+    # calls, and can briefly disagree -- a player claimed off waivers can
+    # still show up as "available" for a short window afterward. Since we
+    # already pulled real roster data for this exact league above, this is a
+    # free sanity check: never surface a recommendation for someone another
+    # team in THIS league already rosters, no matter what free_agents() says.
+    rostered_ids = {
+        p.get("player_id") for t in teams for p in t["roster"]
+        if p.get("player_id") is not None
+    }
+    dropped = [p["name"] for p in free_agents if p.get("player_id") in rostered_ids]
+    free_agents = [p for p in free_agents if p.get("player_id") not in rostered_ids]
+    if dropped:
+        print(f"    ::warning::{cfg['key']}: dropped {len(dropped)} name(s) ESPN's "
+              f"free_agents() call listed as available but who are actually rostered "
+              f"per this same pull's team data: {', '.join(dropped)}. This is ESPN's "
+              f"raw feed briefly disagreeing with itself, not a bug here -- but if this "
+              f"keeps happening for the same player across runs, it's worth a closer look.")
+
     print(f"    {len(free_agents)} free agents.")
 
     return {
