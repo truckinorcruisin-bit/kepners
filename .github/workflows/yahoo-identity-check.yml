@@ -30,8 +30,11 @@ jobs:
             exit 1
           fi
           echo "---- Yahoo userinfo response ----"
-          curl -s https://api.login.yahoo.com/openid/v1/userinfo \
+          curl -sL -w "\nHTTP_STATUS:%{http_code}\n" https://api.login.yahoo.com/openid/v1/userinfo \
             -H "Authorization: Bearer $ACCESS_TOKEN"
-          echo ""
           echo "----------------------------------"
-          echo "The 'email' or 'sub' field above identifies which Yahoo account this token is tied to."
+          echo "---- Fallback: basic Fantasy Sports game-list call ----"
+          curl -sL -w "\nHTTP_STATUS:%{http_code}\n" "https://fantasysports.yahooapis.com/fantasy/v2/users;use_login=1?format=json" \
+            -H "Authorization: Bearer $ACCESS_TOKEN"
+          echo "---------------------------------------------------------"
+          echo "A 200 status with an email/sub/guid above identifies the account. A 401/403 status means even identity lookups are being rejected for this token -- itself useful information for Yahoo."
