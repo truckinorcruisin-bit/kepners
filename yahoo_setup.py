@@ -179,6 +179,13 @@ def api_get(path):
     url = f"https://fantasysports.yahooapis.com/fantasy/v2/{path}"
     sep = "&" if "?" in url else "?"
     r = requests.get(f"{url}{sep}format=json", headers={"Authorization": f"Bearer {token}"})
+    if not r.ok:
+        # Same blind spot as the token endpoint had: raise_for_status() alone
+        # discards the response body, and Yahoo's Fantasy API errors (unlike
+        # the OAuth token endpoint) come back as XML, not JSON, so the real
+        # reason -- missing scope, no leagues for this game key, account not
+        # a league member, etc. -- was invisible. Print it before raising.
+        print(f"::error::Yahoo API call failed ({r.status_code}) for {path}: {r.text}")
     r.raise_for_status()
     return r.json()
 
