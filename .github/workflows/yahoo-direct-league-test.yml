@@ -1,0 +1,60 @@
+name: Yahoo Direct League Test (diagnostic)
+
+# One-off: tests whether fetching known leagues DIRECTLY by league_key succeeds,
+# as opposed to the discovery call (users;use_login=1/.../leagues) that's been
+# failing. This is a genuinely different Yahoo API code path -- no use_login,
+# no traversal, just "give me this specific resource." A different result here
+# (success, or a different error) tells us something the discovery call hasn't.
+#
+# "nfl" is used as the game_key instead of a season-specific numeric ID --
+# Yahoo's docs confirm the game CODE "nfl" resolves to the current season's
+# game automatically when used as a game_key, so nfl.l.<league_id> is valid
+# without needing to know this season's specific numeric game ID.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Refresh access token
+        run: |
+          curl -s -X POST https://api.login.yahoo.com/oauth2/get_token \
+            -u "${{ secrets.YAHOO_CLIENT_ID }}:${{ secrets.YAHOO_CLIENT_SECRET }}" \
+            -d "grant_type=refresh_token&redirect_uri=https://truckinorcruisin-bit.github.io/kepners&refresh_token=${{ secrets.YAHOO_REFRESH_TOKEN }}" \
+            -o refresh_response.json
+          python3 -c "import json; d=json.load(open('refresh_response.json')); assert d.get('access_token'), 'No access_token -- refresh itself failed, see below'" \
+            || (cat refresh_response.json && exit 1)
+          echo "Refresh OK"
+
+      - name: Fetch Miami league directly (nfl.l.391024)
+        run: |
+          ACCESS_TOKEN=$(python3 -c "import json; print(json.load(open('refresh_response.json'))['access_token'])")
+          echo "---- Miami (nfl.l.391024) ----"
+          curl -sL -w "\nHTTP_STATUS:%{http_code}\n" \
+            "https://fantasysports.yahooapis.com/fantasy/v2/league/nfl.l.391024?format=json" \
+            -H "Authorization: Bearer $ACCESS_TOKEN"
+          echo "-------------------------------"
+
+      - name: Fetch Kepners league directly (nfl.l.102398)
+        run: |
+          ACCESS_TOKEN=$(python3 -c "import json; print(json.load(open('refresh_response.json'))['access_token'])")
+          echo "---- Kepners (nfl.l.102398) ----"
+          curl -sL -w "\nHTTP_STATUS:%{http_code}\n" \
+            "https://fantasysports.yahooapis.com/fantasy/v2/league/nfl.l.102398?format=json" \
+            -H "Authorization: Bearer $ACCESS_TOKEN"
+          echo "---------------------------------"
+
+      - name: Fetch both at once via leagues;league_keys=
+        run: |
+          ACCESS_TOKEN=$(python3 -c "import json; print(json.load(open('refresh_response.json'))['access_token'])")
+          echo "---- Both leagues in one call ----"
+          curl -sL -w "\nHTTP_STATUS:%{http_code}\n" \
+            "https://fantasysports.yahooapis.com/fantasy/v2/leagues;league_keys=nfl.l.391024,nfl.l.102398?format=json" \
+            -H "Authorization: Bearer $ACCESS_TOKEN"
+          echo "-----------------------------------"
+          echo "A 200 here with real league data would mean direct-by-key calls work"
+          echo "even though the use_login discovery call doesn't -- a usable workaround."
+          echo "A 403 with the same 'not authorized' message confirms it's an app-wide"
+          echo "block, not something specific to the discovery endpoint."
