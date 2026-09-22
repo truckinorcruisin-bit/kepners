@@ -22,6 +22,12 @@ jobs:
           cat response.json
           echo "-------------------------"
 
+      # Manually copying a ~60-char token with tildes and a trailing hyphen
+      # through phone -> log -> clipboard -> secret field has failed twice in a
+      # row with "invalid_grant: Invalid refresh token" -- the exchange itself
+      # was fine both times, only the transcription wasn't. Writing it straight
+      # to the secret via GH_SECRETS_PAT (same mechanism the in-season pipeline
+      # already uses for rotated tokens) removes that step entirely.
       - name: Extract refresh_token
         id: extract
         run: |
@@ -38,6 +44,6 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_SECRETS_PAT }}
         run: |
-          gh secret set YAHOO_REFRESH_TOKEN < refresh_token.txt
+          gh secret set YAHOO_REFRESH_TOKEN --repo truckinorcruisin-bit/kepners < refresh_token.txt
           echo "YAHOO_REFRESH_TOKEN updated directly -- no copy/paste needed."
           rm -f refresh_token.txt
