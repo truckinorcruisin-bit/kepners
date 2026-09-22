@@ -18,9 +18,16 @@ jobs:
             -u "${{ secrets.YAHOO_CLIENT_ID }}:${{ secrets.YAHOO_CLIENT_SECRET }}" \
             -d "grant_type=refresh_token&redirect_uri=https://truckinorcruisin-bit.github.io/kepners&refresh_token=${{ secrets.YAHOO_REFRESH_TOKEN }}" \
             -o refresh_response.json
-          echo "---- Refresh response ----"
-          cat refresh_response.json
-          echo "---------------------------"
+          echo "---- Refresh response (full, untruncated) ----"
+          python3 -m json.tool refresh_response.json
+          echo "------------------------------------------------"
+          echo "---- Account identifier (xoauth_yahoo_guid) ----"
+          python3 -c "import json; d=json.load(open('refresh_response.json')); print(d.get('xoauth_yahoo_guid', 'NOT PRESENT in this response'))"
+          echo "--------------------------------------------------"
+          echo "This GUID is permanent per Yahoo account. Compare it against the GUID from"
+          echo "the original smullins99 exchange (rerun this workflow after switching the"
+          echo "stored refresh token) to confirm whether the two attempts are actually"
+          echo "hitting two different Yahoo accounts."
 
       - name: Ask Yahoo who this token belongs to
         run: |
