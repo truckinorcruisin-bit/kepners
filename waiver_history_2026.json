@@ -1,0 +1,8408 @@
+{
+ "year": 2026,
+ "generated": "2026-09-23T13:16:59.055973+00:00",
+ "leagues": {
+  "zimmer": {
+   "platform": "espn",
+   "faab": true,
+   "budget": 100,
+   "currentWeek": 3,
+   "teams": {
+    "1": {
+     "team_id": 1,
+     "team_name": "EVIL EMPIRE",
+     "manager": "Zach Zimmer",
+     "faab_spent": 1,
+     "waiver_rank": 12,
+     "acquisitions": 4
+    },
+    "5": {
+     "team_id": 5,
+     "team_name": "Letter of the Day is \"TD\"",
+     "manager": "Jim Young",
+     "faab_spent": 13,
+     "waiver_rank": 8,
+     "acquisitions": 3
+    },
+    "6": {
+     "team_id": 6,
+     "team_name": "Ben Jarvis Green Ellis LLP",
+     "manager": "Matthew Letten",
+     "faab_spent": 30,
+     "waiver_rank": 9,
+     "acquisitions": 4
+    },
+    "7": {
+     "team_id": 7,
+     "team_name": "D'Quan's Friend",
+     "manager": "Oliver Reed",
+     "faab_spent": 0,
+     "waiver_rank": 1,
+     "acquisitions": 0
+    },
+    "10": {
+     "team_id": 10,
+     "team_name": "The Fe-Brees Brothers",
+     "manager": "Andrew Piotrowski",
+     "faab_spent": 11,
+     "waiver_rank": 6,
+     "acquisitions": 4
+    },
+    "11": {
+     "team_id": 11,
+     "team_name": "Bake N' Shake",
+     "manager": "Dan Beringer",
+     "faab_spent": 4,
+     "waiver_rank": 7,
+     "acquisitions": 3
+    },
+    "14": {
+     "team_id": 14,
+     "team_name": "Spokane Beers",
+     "manager": "Cole Davis",
+     "faab_spent": 1,
+     "waiver_rank": 4,
+     "acquisitions": 1
+    },
+    "15": {
+     "team_id": 15,
+     "team_name": "DA BEARS FORCE ONE",
+     "manager": "Michael Violi",
+     "faab_spent": 0,
+     "waiver_rank": 2,
+     "acquisitions": 0
+    },
+    "16": {
+     "team_id": 16,
+     "team_name": "TEXAS CHUPACABRAS",
+     "manager": "Pablo De Luna",
+     "faab_spent": 9,
+     "waiver_rank": 11,
+     "acquisitions": 3
+    },
+    "18": {
+     "team_id": 18,
+     "team_name": "Elements of  Intrigue",
+     "manager": "sean mullins",
+     "faab_spent": 17,
+     "waiver_rank": 10,
+     "acquisitions": 4
+    },
+    "19": {
+     "team_id": 19,
+     "team_name": "Maryland Menace",
+     "manager": "Matt McKenna",
+     "faab_spent": 0,
+     "waiver_rank": 5,
+     "acquisitions": 2
+    },
+    "20": {
+     "team_id": 20,
+     "team_name": "Dangerous  Nights Crew",
+     "manager": "Sean Wilkinson",
+     "faab_spent": 0,
+     "waiver_rank": 3,
+     "acquisitions": 0
+    }
+   },
+   "priorBudget": 100,
+   "claims": [
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1788959802010,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4702555,
+      "name": "Jonah Coleman"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1789025341508,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 14,
+     "bid": 1,
+     "add": {
+      "id": 4361529,
+      "name": "Isiah Pacheco",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4241463,
+      "name": "Jerry Jeudy"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1789025341609,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1789025341610,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1788920302326,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1789025341508,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16012,
+      "name": "Chiefs D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1789025341609,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 0,
+     "add": {
+      "id": 4428850,
+      "name": "Dontayvion Wicks",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345089,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": 4569559,
+      "name": "Devaughn Vele",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345088,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 7,
+     "add": {
+      "id": 4869645,
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3912547,
+      "name": "Sam Darnold"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345090,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 2,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16008,
+      "name": "Lions D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345090,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4869645,
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345089,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 6,
+     "add": {
+      "id": 4569559,
+      "name": "Devaughn Vele",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345090,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 2,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429086,
+      "name": "Michael Mayer"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345090,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 1,
+     "add": {
+      "id": 4569559,
+      "name": "Devaughn Vele",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429501,
+      "name": "Ray Davis"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789715507269,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": 4036378,
+      "name": "Jordan Love",
+      "position": "QB"
+     },
+     "drop": {
+      "id": -16025,
+      "name": "49ers D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789801764005,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": -16025,
+      "name": "49ers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16030,
+      "name": "Jaguars D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345090,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 16,
+     "bid": 3,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543345089,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 6,
+     "add": {
+      "id": 4869645,
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4430834,
+      "name": "Jalen McMillan"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790114276071,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3149687,
+      "name": "Chris Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143195,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 13,
+     "add": {
+      "id": 4887558,
+      "name": "Emanuel Wilson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3052587,
+      "name": "Baker Mayfield"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143195,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143195,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 19,
+     "bid": 7,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4242512,
+      "name": "Malik Willis"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143196,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3149687,
+      "name": "Chris Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143179,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 23,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4429022,
+      "name": "Kayshon Boutte"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143196,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 5,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4362619,
+      "name": "Chris Rodriguez Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143195,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4362249,
+      "name": "Jayden Reed"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127351423,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127378327,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4432577,
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143196,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4360078,
+      "name": "Alec Pierce"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127402276,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4432577,
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143196,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 3,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 5081432,
+      "name": "Antonio Williams"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143194,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 19,
+     "bid": 15,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4242512,
+      "name": "Malik Willis"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 2,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3052587,
+      "name": "Baker Mayfield"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143198,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790114155686,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4360078,
+      "name": "Alec Pierce"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790114296002,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3149687,
+      "name": "Chris Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143195,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 7,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4430539,
+      "name": "Brenton Strange"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3149687,
+      "name": "Chris Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4362249,
+      "name": "Jayden Reed"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143196,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 3,
+     "add": {
+      "id": -16004,
+      "name": "Bengals D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16034,
+      "name": "Texans D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 1,
+     "date": 1757056490855,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4362619,
+      "name": "Chris Rodriguez Jr.",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 1,
+     "date": 1757056490854,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 1,
+     "add": {
+      "id": 4688380,
+      "name": "Cam Ward",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4242433,
+      "name": "Joshua Palmer"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 1,
+     "date": 1757056490856,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4429059,
+      "name": "Woody Marks",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 1,
+     "date": 1757056490855,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": -16003,
+      "name": "Bears D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16020,
+      "name": "Jets D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757462506122,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 16460,
+      "name": "Adam Thielen"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830769,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3059915,
+      "name": "Kareem Hunt",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830599,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 4,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757462426402,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757574785788,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 3068267,
+      "name": "Austin Ekeler",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4433970,
+      "name": "J.J. McCarthy"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830712,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4360238,
+      "name": "Dameon Pierce"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757463840302,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 19,
+     "bid": 0,
+     "add": {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830610,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 3,
+     "add": {
+      "id": -16014,
+      "name": "Rams D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757574785787,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": 3068267,
+      "name": "Austin Ekeler",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429501,
+      "name": "Ray Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830550,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 7,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757574785788,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 19,
+     "bid": 0,
+     "add": {
+      "id": 3068267,
+      "name": "Austin Ekeler",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4819231,
+      "name": "Kaleb Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830538,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 10,
+     "add": {
+      "id": 3917792,
+      "name": "Daniel Jones",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4431545,
+      "name": "Will Shipley"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830598,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 16460,
+      "name": "Adam Thielen"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830714,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 1,
+     "add": {
+      "id": 3929645,
+      "name": "Juwan Johnson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830770,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": -16015,
+      "name": "Dolphins D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830715,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 1,
+     "add": {
+      "id": 4036131,
+      "name": "Noah Fant",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830527,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 35,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4241479,
+      "name": "Tua Tagovailoa"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830610,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 7,
+     "bid": 3,
+     "add": {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4723086,
+      "name": "Colston Loveland"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757462524955,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 16460,
+      "name": "Adam Thielen"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757462343814,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 3059915,
+      "name": "Kareem Hunt",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757638291948,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 3051876,
+      "name": "Evan Engram",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4361432,
+      "name": "Romeo Doubs"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830716,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 3059915,
+      "name": "Kareem Hunt",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757473635854,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830713,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 3929645,
+      "name": "Juwan Johnson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4372561,
+      "name": "Isaac Guerendo"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757462388565,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4038441,
+      "name": "Justice Hill",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757473785679,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4372561,
+      "name": "Isaac Guerendo"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830769,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4874509,
+      "name": "DJ Giddens",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830770,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4372561,
+      "name": "Isaac Guerendo"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757462448706,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757473760423,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 3929645,
+      "name": "Juwan Johnson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4372561,
+      "name": "Isaac Guerendo"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830768,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4038441,
+      "name": "Justice Hill",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757473630166,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4429025,
+      "name": "Quentin Johnston",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429059,
+      "name": "Woody Marks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830715,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830771,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4883647,
+      "name": "Elic Ayomanor",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830597,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 16460,
+      "name": "Adam Thielen"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830715,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 19,
+     "bid": 1,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830611,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 2,
+     "add": {
+      "id": 4243389,
+      "name": "Calvin Austin III",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4808766,
+      "name": "Mason Taylor"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830714,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 1,
+     "add": {
+      "id": 5083076,
+      "name": "Harold Fannin Jr.",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 2,
+     "date": 1757490830527,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 7,
+     "bid": 12,
+     "add": {
+      "id": 3059915,
+      "name": "Kareem Hunt",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3068267,
+      "name": "Austin Ekeler"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425333,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4431280,
+      "name": "Troy Franklin",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4433970,
+      "name": "J.J. McCarthy"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425331,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": 4429059,
+      "name": "Woody Marks",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429013,
+      "name": "Tank Bigsby"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758352464832,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4372019,
+      "name": "Jerome Ford"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425325,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 7,
+     "add": {
+      "id": 4431280,
+      "name": "Troy Franklin",
+      "position": "WR"
+     },
+     "drop": {
+      "id": -16014,
+      "name": "Rams D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758070081367,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16001,
+      "name": "Falcons D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425332,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": 4429059,
+      "name": "Woody Marks",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 11252,
+      "name": "Joe Flacco"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425334,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16028,
+      "name": "Commanders D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16022,
+      "name": "Cardinals D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425332,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4360238,
+      "name": "Dameon Pierce"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758070053656,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425333,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429013,
+      "name": "Tank Bigsby"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758120488453,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4819231,
+      "name": "Kaleb Johnson",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425326,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 6,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16022,
+      "name": "Cardinals D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425332,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 19,
+     "bid": 2,
+     "add": {
+      "id": 4242355,
+      "name": "Jake Ferguson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4819231,
+      "name": "Kaleb Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758318077574,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4372019,
+      "name": "Jerome Ford"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425332,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16001,
+      "name": "Falcons D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758068994669,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4429059,
+      "name": "Woody Marks",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685279,
+      "name": "Jaydon Blue"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758070344344,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425326,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 6,
+     "add": {
+      "id": 4242355,
+      "name": "Jake Ferguson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4243389,
+      "name": "Calvin Austin III"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425334,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16022,
+      "name": "Cardinals D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425335,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425333,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4038441,
+      "name": "Justice Hill"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425333,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 15835,
+      "name": "Zach Ertz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429013,
+      "name": "Tank Bigsby"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758070480396,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16028,
+      "name": "Commanders D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425334,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4242355,
+      "name": "Jake Ferguson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429013,
+      "name": "Tank Bigsby"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758069941725,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4038441,
+      "name": "Justice Hill"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425334,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16001,
+      "name": "Falcons D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16022,
+      "name": "Cardinals D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425334,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16022,
+      "name": "Cardinals D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425335,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": -16024,
+      "name": "Chargers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16025,
+      "name": "49ers D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425331,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16021,
+      "name": "Eagles D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758267883196,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": 4819231,
+      "name": "Kaleb Johnson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425335,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16028,
+      "name": "Commanders D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425327,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425325,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 10,
+     "bid": 7,
+     "add": {
+      "id": 4431280,
+      "name": "Troy Franklin",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4243331,
+      "name": "Cade Otton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 3,
+     "date": 1758095425326,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 10,
+     "bid": 6,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16017,
+      "name": "Patriots D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776790,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 3,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4361577,
+      "name": "Dyami Brown"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776795,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4428718,
+      "name": "Tre Tucker",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758670911811,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 4689114,
+      "name": "Jaxson Dart",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4360423,
+      "name": "Michael Penix Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776797,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4362619,
+      "name": "Chris Rodriguez Jr.",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776791,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 1,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776789,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 9,
+     "add": {
+      "id": 3895856,
+      "name": "Christian Kirk",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758677599331,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758677644128,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4038441,
+      "name": "Justice Hill",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776791,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4819231,
+      "name": "Kaleb Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776796,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4038441,
+      "name": "Justice Hill",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776789,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 11,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3045147,
+      "name": "James Conner"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776790,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 4,
+     "add": {
+      "id": 4428718,
+      "name": "Tre Tucker",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776791,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": 4428557,
+      "name": "Tyjae Spears",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776795,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4689114,
+      "name": "Jaxson Dart",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 14881,
+      "name": "Russell Wilson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758674698064,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4883647,
+      "name": "Elic Ayomanor",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4608686,
+      "name": "Kyle Monangai"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776797,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4883647,
+      "name": "Elic Ayomanor",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776790,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 4689114,
+      "name": "Jaxson Dart",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4360423,
+      "name": "Michael Penix Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776790,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4428718,
+      "name": "Tre Tucker",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4608686,
+      "name": "Kyle Monangai"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776791,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4883647,
+      "name": "Elic Ayomanor",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4608686,
+      "name": "Kyle Monangai"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776795,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4241457,
+      "name": "Najee Harris"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776795,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776796,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4429096,
+      "name": "Blake Corum",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776796,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 15864,
+      "name": "Geno Smith",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4360310,
+      "name": "Trevor Lawrence"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758700776788,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 51,
+     "add": {
+      "id": 4428718,
+      "name": "Tre Tucker",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4243331,
+      "name": "Cade Otton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 4,
+     "date": 1758674658418,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4428718,
+      "name": "Tre Tucker",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4608686,
+      "name": "Kyle Monangai"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759288213527,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027718,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4360423,
+      "name": "Michael Penix Jr.",
+      "position": "QB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759648554543,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3929645,
+      "name": "Juwan Johnson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3123076,
+      "name": "David Njoku"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027716,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 1,
+     "add": {
+      "id": 4362619,
+      "name": "Chris Rodriguez Jr.",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027719,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4361741,
+      "name": "Brock Purdy",
+      "position": "QB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759288315331,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16014,
+      "name": "Rams D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759275452666,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": 4361741,
+      "name": "Brock Purdy",
+      "position": "QB"
+     },
+     "drop": {
+      "id": -16033,
+      "name": "Ravens D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759288328822,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027715,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": 15835,
+      "name": "Zach Ertz",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027717,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": -16019,
+      "name": "Giants D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4428850,
+      "name": "Dontayvion Wicks"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027697,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 7,
+     "add": {
+      "id": 2576925,
+      "name": "Darren Waller",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027714,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 2,
+     "add": {
+      "id": -16022,
+      "name": "Cardinals D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759478631410,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 2,
+     "add": {
+      "id": 4038815,
+      "name": "Rico Dowdle",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 2977187,
+      "name": "Cooper Kupp"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027716,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 2,
+     "add": {
+      "id": 15835,
+      "name": "Zach Ertz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4361050,
+      "name": "Isaiah Likely"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027696,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 11,
+     "add": {
+      "id": 2576925,
+      "name": "Darren Waller",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4361577,
+      "name": "Dyami Brown"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027697,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 6,
+     "add": {
+      "id": 3120348,
+      "name": "JuJu Smith-Schuster",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4369863,
+      "name": "Cedric Tillman"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027717,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 1,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027698,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 3916945,
+      "name": "Darius Slayton",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429022,
+      "name": "Kayshon Boutte"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027717,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4599739,
+      "name": "Kendre Miller",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4361050,
+      "name": "Isaiah Likely"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027714,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759391714947,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 1,
+     "add": {
+      "id": -16024,
+      "name": "Chargers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16003,
+      "name": "Bears D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759478631444,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4038815,
+      "name": "Rico Dowdle",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040761,
+      "name": "Devin Singletary"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027718,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4361050,
+      "name": "Isaiah Likely"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759262068594,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": -16017,
+      "name": "Patriots D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027719,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4571557,
+      "name": "Spencer Shrader",
+      "position": "K"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027698,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 5,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16033,
+      "name": "Ravens D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027715,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4599739,
+      "name": "Kendre Miller",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4038441,
+      "name": "Justice Hill"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759288101963,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 3916945,
+      "name": "Darius Slayton",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429022,
+      "name": "Kayshon Boutte"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759288232017,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": -16022,
+      "name": "Cardinals D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027718,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16014,
+      "name": "Rams D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027696,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 8,
+     "add": {
+      "id": 2576925,
+      "name": "Darren Waller",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4361050,
+      "name": "Isaiah Likely"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027716,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759288190574,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4599739,
+      "name": "Kendre Miller",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4038441,
+      "name": "Justice Hill"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759478631425,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4040761,
+      "name": "Devin Singletary"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027716,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": -16022,
+      "name": "Cardinals D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 5,
+     "date": 1759302027719,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16001,
+      "name": "Falcons D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759882917109,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4874509,
+      "name": "DJ Giddens",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3916945,
+      "name": "Darius Slayton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969471,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 18,
+     "add": {
+      "id": 4372071,
+      "name": "Hassan Haskins",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3916945,
+      "name": "Darius Slayton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969477,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 10,
+     "bid": 2,
+     "add": {
+      "id": -16007,
+      "name": "Broncos D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3895856,
+      "name": "Christian Kirk"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969473,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 9,
+     "add": {
+      "id": 4430968,
+      "name": "Kimani Vidal",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430871,
+      "name": "Sean Tucker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969476,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 3,
+     "add": {
+      "id": -16007,
+      "name": "Broncos D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4685415,
+      "name": "Travis Hunter"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969478,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4259147,
+      "name": "Jake Tonges",
+      "position": "TE"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759882957202,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4874509,
+      "name": "DJ Giddens",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685350,
+      "name": "Trevor Etienne"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759882855905,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 18,
+     "add": {
+      "id": 4372071,
+      "name": "Hassan Haskins",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3916945,
+      "name": "Darius Slayton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969477,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4819231,
+      "name": "Kaleb Johnson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685350,
+      "name": "Trevor Etienne"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759882869498,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 15,
+     "add": {
+      "id": 4430968,
+      "name": "Kimani Vidal",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3916945,
+      "name": "Darius Slayton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969474,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 8,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4372780,
+      "name": "Tommy Tremble"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969475,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 5,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759882996869,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4819231,
+      "name": "Kaleb Johnson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685350,
+      "name": "Trevor Etienne"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969480,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4431545,
+      "name": "Will Shipley",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430871,
+      "name": "Sean Tucker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969472,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 15,
+     "add": {
+      "id": 4808766,
+      "name": "Mason Taylor",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4360423,
+      "name": "Michael Penix Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969479,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4596602,
+      "name": "Brashard Smith",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430871,
+      "name": "Sean Tucker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969476,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 5,
+     "add": {
+      "id": 4372071,
+      "name": "Hassan Haskins",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430871,
+      "name": "Sean Tucker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969473,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 9,
+     "add": {
+      "id": 4372071,
+      "name": "Hassan Haskins",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4695404,
+      "name": "Isaiah Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969479,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4874509,
+      "name": "DJ Giddens",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3916945,
+      "name": "Darius Slayton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969475,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 6,
+     "bid": 5,
+     "add": {
+      "id": 4596602,
+      "name": "Brashard Smith",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4360423,
+      "name": "Michael Penix Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759879116189,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4808766,
+      "name": "Mason Taylor",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 15835,
+      "name": "Zach Ertz"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969474,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 7,
+     "add": {
+      "id": 4808766,
+      "name": "Mason Taylor",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4372780,
+      "name": "Tommy Tremble"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969477,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4034949,
+      "name": "Eddy Pineiro",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4571557,
+      "name": "Spencer Shrader"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969477,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16007,
+      "name": "Broncos D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16014,
+      "name": "Rams D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759889274523,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4808766,
+      "name": "Mason Taylor",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3929645,
+      "name": "Juwan Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969473,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 15,
+     "add": {
+      "id": 4430968,
+      "name": "Kimani Vidal",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3916945,
+      "name": "Darius Slayton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969475,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 6,
+     "add": {
+      "id": -16007,
+      "name": "Broncos D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4362478,
+      "name": "Emari Demercado"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969476,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 3,
+     "add": {
+      "id": 3045523,
+      "name": "Kendrick Bourne",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3120348,
+      "name": "JuJu Smith-Schuster"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969476,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 5,
+     "add": {
+      "id": 4808766,
+      "name": "Mason Taylor",
+      "position": "TE"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759889268520,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3929645,
+      "name": "Juwan Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969474,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 7,
+     "add": {
+      "id": 3045523,
+      "name": "Kendrick Bourne",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4685415,
+      "name": "Travis Hunter"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969479,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4874509,
+      "name": "DJ Giddens",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430871,
+      "name": "Sean Tucker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759882819536,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16007,
+      "name": "Broncos D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16014,
+      "name": "Rams D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969476,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 19,
+     "bid": 3,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4430539,
+      "name": "Brenton Strange"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759909969478,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4361741,
+      "name": "Brock Purdy",
+      "position": "QB"
+     },
+     "drop": {
+      "id": -16019,
+      "name": "Giants D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 6,
+     "date": 1759879081295,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 3045523,
+      "name": "Kendrick Bourne",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4360423,
+      "name": "Michael Penix Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679705,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 5,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4259147,
+      "name": "Jake Tonges"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679645,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 11,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4032473,
+      "name": "Rashid Shaheed"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679706,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679707,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": 17372,
+      "name": "Chris Boswell",
+      "position": "K"
+     },
+     "drop": {
+      "id": 2985659,
+      "name": "Wil Lutz"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679706,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 5,
+     "add": {
+      "id": 8439,
+      "name": "Aaron Rodgers",
+      "position": "QB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679706,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": 4036133,
+      "name": "T.J. Hockenson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4808766,
+      "name": "Mason Taylor"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679708,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4685415,
+      "name": "Travis Hunter",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4259147,
+      "name": "Jake Tonges"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760500718791,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": 4243331,
+      "name": "Cade Otton",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4711533,
+      "name": "Ollie Gordon II"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679646,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 10,
+     "add": {
+      "id": 4685415,
+      "name": "Travis Hunter",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4608686,
+      "name": "Kyle Monangai"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679707,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4259147,
+      "name": "Jake Tonges"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679707,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4596602,
+      "name": "Brashard Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760581190415,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4032473,
+      "name": "Rashid Shaheed",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4819231,
+      "name": "Kaleb Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760515679705,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 5,
+     "add": {
+      "id": 4429022,
+      "name": "Kayshon Boutte",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4711533,
+      "name": "Ollie Gordon II"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 7,
+     "date": 1760598836030,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4032473,
+      "name": "Rashid Shaheed",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4819231,
+      "name": "Kaleb Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761093292813,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4608686,
+      "name": "Kyle Monangai",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089057,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 6,
+     "add": {
+      "id": 4686472,
+      "name": "Marvin Mims Jr.",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4569603,
+      "name": "Malik Washington"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089083,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 4,
+     "add": {
+      "id": 2985659,
+      "name": "Wil Lutz",
+      "position": "K"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089085,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761099931486,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089083,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 4,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4711533,
+      "name": "Ollie Gordon II"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089058,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 5,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4685278,
+      "name": "Luther Burden III"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089082,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 11,
+     "bid": 5,
+     "add": {
+      "id": 11252,
+      "name": "Joe Flacco",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4569603,
+      "name": "Malik Washington"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761100214479,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4682652,
+      "name": "Devin Neal",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089085,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 1,
+     "add": {
+      "id": -16004,
+      "name": "Bengals D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16013,
+      "name": "Raiders D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761298864192,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4432577,
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4362887,
+      "name": "Justin Fields"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089086,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4685720,
+      "name": "Bryce Young"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089086,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4608686,
+      "name": "Kyle Monangai",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 2576581,
+      "name": "Chris Moore"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761093344034,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4695404,
+      "name": "Isaiah Davis",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089087,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16002,
+      "name": "Bills D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16009,
+      "name": "Packers D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089084,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4596602,
+      "name": "Brashard Smith",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089088,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4682652,
+      "name": "Devin Neal",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089087,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089084,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": 4360310,
+      "name": "Trevor Lawrence",
+      "position": "QB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761099983698,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4038441,
+      "name": "Justice Hill",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089085,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 16,
+     "bid": 1,
+     "add": {
+      "id": -16003,
+      "name": "Bears D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16013,
+      "name": "Raiders D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761093276259,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4596602,
+      "name": "Brashard Smith",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089056,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 15,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089085,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": 4596602,
+      "name": "Brashard Smith",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685278,
+      "name": "Luther Burden III"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089088,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089057,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 11,
+     "add": {
+      "id": 4608686,
+      "name": "Kyle Monangai",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685278,
+      "name": "Luther Burden III"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089087,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4695404,
+      "name": "Isaiah Davis",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089086,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 2976592,
+      "name": "Sterling Shepard",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4685278,
+      "name": "Luther Burden III"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089058,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4608686,
+      "name": "Kyle Monangai",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 8,
+     "date": 1761120089088,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4038441,
+      "name": "Justice Hill",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891541,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 1,
+     "add": {
+      "id": 2971573,
+      "name": "Ka'imi Fairbairn",
+      "position": "K"
+     },
+     "drop": {
+      "id": 3050478,
+      "name": "Jake Elliott"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891538,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 6,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040655,
+      "name": "Darnell Mooney"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891544,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16002,
+      "name": "Bills D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761706754871,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040655,
+      "name": "Darnell Mooney"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891543,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 16,
+     "bid": 0,
+     "add": {
+      "id": 2473037,
+      "name": "Jason Myers",
+      "position": "K"
+     },
+     "drop": {
+      "id": 3050478,
+      "name": "Jake Elliott"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891536,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 12,
+     "add": {
+      "id": 4429013,
+      "name": "Tank Bigsby",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3045523,
+      "name": "Kendrick Bourne"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891544,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16033,
+      "name": "Ravens D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16002,
+      "name": "Bills D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891542,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4711533,
+      "name": "Ollie Gordon II",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891540,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 2,
+     "add": {
+      "id": 3912547,
+      "name": "Sam Darnold",
+      "position": "QB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891537,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 7,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16002,
+      "name": "Bills D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891542,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891539,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 6,
+     "bid": 4,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16012,
+      "name": "Chiefs D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761706736918,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4429013,
+      "name": "Tank Bigsby",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040655,
+      "name": "Darnell Mooney"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891541,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 1,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16012,
+      "name": "Chiefs D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891542,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 3912547,
+      "name": "Sam Darnold",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 14880,
+      "name": "Kirk Cousins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891543,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4248528,
+      "name": "Christian Watson",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891538,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": 4429013,
+      "name": "Tank Bigsby",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040655,
+      "name": "Darnell Mooney"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761706783164,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4635008,
+      "name": "Keon Coleman"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891540,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4635008,
+      "name": "Keon Coleman"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891540,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 16,
+     "bid": 3,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16004,
+      "name": "Bengals D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891543,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4697745,
+      "name": "Tyler Loop",
+      "position": "K"
+     },
+     "drop": {
+      "id": 17372,
+      "name": "Chris Boswell"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 9,
+     "date": 1761725891542,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4429013,
+      "name": "Tank Bigsby",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450091,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 1,
+     "add": {
+      "id": 3917914,
+      "name": "Olamide Zaccheaus",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762314575698,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762675575762,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4360078,
+      "name": "Alec Pierce",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450090,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450063,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 11,
+     "add": {
+      "id": 4040761,
+      "name": "Devin Singletary",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3116389,
+      "name": "Samaje Perine"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762300389631,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3150744,
+      "name": "Chase McLaughlin",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450090,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": 4361050,
+      "name": "Isaiah Likely",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450092,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450093,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 11122,
+      "name": "Matt Prater",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450092,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 11122,
+      "name": "Matt Prater",
+      "position": "K"
+     },
+     "drop": {
+      "id": 3116389,
+      "name": "Samaje Perine"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762314257058,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4362478,
+      "name": "Emari Demercado",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450062,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 12,
+     "add": {
+      "id": 4723086,
+      "name": "Colston Loveland",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762300458693,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 11,
+     "add": {
+      "id": 3916945,
+      "name": "Darius Slayton",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450092,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLIMIT",
+     "won": false,
+     "team_id": 6,
+     "bid": 1,
+     "add": {
+      "id": -16002,
+      "name": "Bills D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450091,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 1,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450064,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": 4362478,
+      "name": "Emari Demercado",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450065,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4362478,
+      "name": "Emari Demercado",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450090,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 1,
+     "add": {
+      "id": 3150744,
+      "name": "Chase McLaughlin",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4697745,
+      "name": "Tyler Loop"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450063,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 11,
+     "add": {
+      "id": 3916945,
+      "name": "Darius Slayton",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4877706,
+      "name": "Jayden Higgins"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450093,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3150744,
+      "name": "Chase McLaughlin",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762300415803,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 11122,
+      "name": "Matt Prater",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 10,
+     "date": 1762333450065,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 2,
+     "add": {
+      "id": 4040761,
+      "name": "Devin Singletary",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4695404,
+      "name": "Isaiah Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159582,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 11122,
+      "name": "Matt Prater"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159532,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16008,
+      "name": "Lions D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159582,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4887558,
+      "name": "Emanuel Wilson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1763024106986,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4887558,
+      "name": "Emanuel Wilson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4874509,
+      "name": "DJ Giddens"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159580,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3054212,
+      "name": "Jonnu Smith",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 11122,
+      "name": "Matt Prater"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159580,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040761,
+      "name": "Devin Singletary"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159533,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159583,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 11122,
+      "name": "Matt Prater"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159583,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4887558,
+      "name": "Emanuel Wilson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159581,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4695404,
+      "name": "Isaiah Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159579,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 2,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3912547,
+      "name": "Sam Darnold"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159581,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16001,
+      "name": "Falcons D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16008,
+      "name": "Lions D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762919779287,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3054212,
+      "name": "Jonnu Smith",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 11122,
+      "name": "Matt Prater"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159583,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3916148,
+      "name": "Tony Pollard",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4695404,
+      "name": "Isaiah Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159582,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4695404,
+      "name": "Isaiah Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159532,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 11,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159580,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 2,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4695404,
+      "name": "Isaiah Davis"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762919793826,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 11122,
+      "name": "Matt Prater"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762919807035,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3123076,
+      "name": "David Njoku",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 11122,
+      "name": "Matt Prater"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159531,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 23,
+     "add": {
+      "id": 4430871,
+      "name": "Sean Tucker",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3917914,
+      "name": "Olamide Zaccheaus"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 11,
+     "date": 1762938159584,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3916148,
+      "name": "Tony Pollard",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4887558,
+      "name": "Emanuel Wilson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899143,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 2991662,
+      "name": "Mack Hollins",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763515096650,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4368003,
+      "name": "Andrei Iosivas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4597703,
+      "name": "Tory Horton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763508686213,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4040655,
+      "name": "Darnell Mooney",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899143,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4877706,
+      "name": "Jayden Higgins",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4597703,
+      "name": "Tory Horton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763628066798,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": -16001,
+      "name": "Falcons D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3050478,
+      "name": "Jake Elliott"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899141,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899137,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 19,
+     "bid": 64,
+     "add": {
+      "id": 2578570,
+      "name": "Jacoby Brissett",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 8439,
+      "name": "Aaron Rodgers"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763515050763,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 2991662,
+      "name": "Mack Hollins",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763508703647,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4368003,
+      "name": "Andrei Iosivas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899140,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4040655,
+      "name": "Darnell Mooney",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899140,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 4,
+     "add": {
+      "id": 4695404,
+      "name": "Isaiah Davis",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3128720,
+      "name": "Nick Chubb"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763507300109,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4362478,
+      "name": "Emari Demercado"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763513428355,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4695404,
+      "name": "Isaiah Davis",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 11252,
+      "name": "Joe Flacco"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899141,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4368003,
+      "name": "Andrei Iosivas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763515140591,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4877706,
+      "name": "Jayden Higgins",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4597703,
+      "name": "Tory Horton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899139,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 15,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899142,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4597703,
+      "name": "Tory Horton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763508734907,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763508723097,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4877706,
+      "name": "Jayden Higgins",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899138,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 23,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763470979290,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 11252,
+      "name": "Joe Flacco"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899139,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 7,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899142,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4697745,
+      "name": "Tyler Loop",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763515126350,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4685278,
+      "name": "Luther Burden III",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4597703,
+      "name": "Tory Horton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899141,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4368003,
+      "name": "Andrei Iosivas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4597703,
+      "name": "Tory Horton"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899139,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 7,
+     "add": {
+      "id": 4430034,
+      "name": "Xavier Legette",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4382466,
+      "name": "Jalen Nailor"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 12,
+     "date": 1763544899142,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4877706,
+      "name": "Jayden Higgins",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3054212,
+      "name": "Jonnu Smith"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371845,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 4,
+     "add": {
+      "id": 4431268,
+      "name": "Chimere Dike",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4433970,
+      "name": "J.J. McCarthy"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371846,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 2,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4697745,
+      "name": "Tyler Loop"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371847,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16009,
+      "name": "Packers D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371843,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 25,
+     "add": {
+      "id": -16014,
+      "name": "Rams D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4430034,
+      "name": "Xavier Legette"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371844,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 9,
+     "add": {
+      "id": -16014,
+      "name": "Rams D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16009,
+      "name": "Packers D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371848,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4596334,
+      "name": "Keaton Mitchell",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4697745,
+      "name": "Tyler Loop"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764123731826,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4596334,
+      "name": "Keaton Mitchell",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4362081,
+      "name": "Cameron Dicker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371847,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 15835,
+      "name": "Zach Ertz",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4240657,
+      "name": "Michael Carter"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764144371845,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 3,
+     "add": {
+      "id": 2468609,
+      "name": "Taysom Hill",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4575131,
+      "name": "Jacory Croskey-Merritt"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 13,
+     "date": 1764123746768,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4362081,
+      "name": "Cameron Dicker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951310,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4597500,
+      "name": "Adonai Mitchell",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4368003,
+      "name": "Andrei Iosivas"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764731123771,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16018,
+      "name": "Saints D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3929645,
+      "name": "Juwan Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764725894601,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4597500,
+      "name": "Adonai Mitchell",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4368003,
+      "name": "Andrei Iosivas"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951314,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 2576980,
+      "name": "Marcus Mariota",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764836979843,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 6,
+     "add": {
+      "id": 4362081,
+      "name": "Cameron Dicker",
+      "position": "K"
+     },
+     "drop": {
+      "id": 3123052,
+      "name": "Michael Badgley"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764731299521,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16002,
+      "name": "Bills D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3929645,
+      "name": "Juwan Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951313,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 14163,
+      "name": "Tyrod Taylor",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951310,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 6,
+     "add": {
+      "id": 4597500,
+      "name": "Adonai Mitchell",
+      "position": "WR"
+     },
+     "drop": {
+      "id": -16033,
+      "name": "Ravens D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951309,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 17,
+     "add": {
+      "id": 4360234,
+      "name": "Evan McPherson",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4567104,
+      "name": "Will Reichard"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951311,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 5123663,
+      "name": "Isaac TeSlaa",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4368003,
+      "name": "Andrei Iosivas"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951313,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16002,
+      "name": "Bills D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3929645,
+      "name": "Juwan Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951313,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 3116389,
+      "name": "Samaje Perine",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951314,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 2985659,
+      "name": "Wil Lutz",
+      "position": "K"
+     },
+     "drop": {
+      "id": 4362081,
+      "name": "Cameron Dicker"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764725838929,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 5123663,
+      "name": "Isaac TeSlaa",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4368003,
+      "name": "Andrei Iosivas"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951308,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 30,
+     "add": {
+      "id": 3116389,
+      "name": "Samaje Perine",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4685278,
+      "name": "Luther Burden III"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951312,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": 4430539,
+      "name": "Brenton Strange",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4723086,
+      "name": "Colston Loveland"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951311,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": -16018,
+      "name": "Saints D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3929645,
+      "name": "Juwan Johnson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951312,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 2,
+     "add": {
+      "id": 3912547,
+      "name": "Sam Darnold",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951313,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4360689,
+      "name": "Tyler Shough",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 14,
+     "date": 1764749951309,
+     "type": "WAIVER",
+     "status": "FAILED_AUCTIONBUDGETEXCEEDED",
+     "won": false,
+     "team_id": 6,
+     "bid": 30,
+     "add": {
+      "id": -16010,
+      "name": "Titans D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16021,
+      "name": "Eagles D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765479468117,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16005,
+      "name": "Browns D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137157,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4682745,
+      "name": "Jaylen Wright",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3912547,
+      "name": "Sam Darnold"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137130,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 6,
+     "add": {
+      "id": -16023,
+      "name": "Steelers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16003,
+      "name": "Bears D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765441116225,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 3128720,
+      "name": "Nick Chubb",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4887558,
+      "name": "Emanuel Wilson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765441116224,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": -16003,
+      "name": "Bears D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137128,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 18,
+     "add": {
+      "id": 4682745,
+      "name": "Jaylen Wright",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3128720,
+      "name": "Nick Chubb"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765528350843,
+     "type": "WAIVER",
+     "status": "FAILED_ROSTERLOCK",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4887558,
+      "name": "Emanuel Wilson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040655,
+      "name": "Darnell Mooney"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765321191523,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": 4242557,
+      "name": "Colby Parkinson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3117256,
+      "name": "Dalton Schultz"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765494502487,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4887558,
+      "name": "Emanuel Wilson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4040655,
+      "name": "Darnell Mooney"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137156,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3912547,
+      "name": "Sam Darnold"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137130,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 5,
+     "add": {
+      "id": 4242557,
+      "name": "Colby Parkinson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3915416,
+      "name": "DJ Moore"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765374769368,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": -16003,
+      "name": "Bears D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16005,
+      "name": "Browns D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137129,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 6,
+     "add": {
+      "id": 4682745,
+      "name": "Jaylen Wright",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3915416,
+      "name": "DJ Moore"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137131,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16003,
+      "name": "Bears D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137130,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 6,
+     "add": {
+      "id": -16023,
+      "name": "Steelers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16015,
+      "name": "Dolphins D/ST"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137129,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 6,
+     "add": {
+      "id": 2971573,
+      "name": "Ka'imi Fairbairn",
+      "position": "K"
+     },
+     "drop": {
+      "id": 2985659,
+      "name": "Wil Lutz"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 15,
+     "date": 1765356137131,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4361050,
+      "name": "Isaiah Likely",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3912547,
+      "name": "Sam Darnold"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953880,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 16,
+     "add": {
+      "id": 4569682,
+      "name": "Audric Estime",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953881,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4569682,
+      "name": "Audric Estime",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430968,
+      "name": "Kimani Vidal"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953878,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 40,
+     "add": {
+      "id": 4240657,
+      "name": "Michael Carter",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 3116164,
+      "name": "Mike Gesicki"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953880,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 5,
+     "add": {
+      "id": 4429939,
+      "name": "Jawhar Jordan",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953879,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 31,
+     "add": {
+      "id": 4240657,
+      "name": "Michael Carter",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr."
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953881,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4429939,
+      "name": "Jawhar Jordan",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4430968,
+      "name": "Kimani Vidal"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 16,
+     "date": 1765958953880,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 8,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4682745,
+      "name": "Jaylen Wright"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766567319701,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 14,
+     "add": {
+      "id": 2468609,
+      "name": "Taysom Hill",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429939,
+      "name": "Jawhar Jordan"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766567319702,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4034949,
+      "name": "Eddy Pineiro",
+      "position": "K"
+     },
+     "drop": {
+      "id": 2971573,
+      "name": "Ka'imi Fairbairn"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766567319702,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4683062,
+      "name": "Xavier Worthy"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766492067530,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": 2468609,
+      "name": "Taysom Hill",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4242557,
+      "name": "Colby Parkinson"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766567319701,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766507925729,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": 2468609,
+      "name": "Taysom Hill",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4595342,
+      "name": "Oronde Gadsden"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766567319702,
+     "type": "WAIVER",
+     "status": "FAILED_AUCTIONBUDGETEXCEEDED",
+     "won": false,
+     "team_id": 1,
+     "bid": 1,
+     "add": {
+      "id": -16019,
+      "name": "Giants D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766519885442,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16019,
+      "name": "Giants D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4429939,
+      "name": "Jawhar Jordan"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766567319703,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 4686361,
+      "name": "Cam Little",
+      "position": "K"
+     },
+     "drop": {
+      "id": 2971573,
+      "name": "Ka'imi Fairbairn"
+     }
+    },
+    {
+     "season": 2025,
+     "week": 17,
+     "date": 1766549708375,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 5081397,
+      "name": "Dylan Sampson",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429939,
+      "name": "Jawhar Jordan"
+     }
+    }
+   ]
+  },
+  "inspire11": {
+   "platform": "espn",
+   "faab": false,
+   "budget": 100,
+   "currentWeek": 3,
+   "teams": {
+    "1": {
+     "team_id": 1,
+     "team_name": "Mike D",
+     "manager": "Michael Dendinger",
+     "faab_spent": 0,
+     "waiver_rank": 8,
+     "acquisitions": 1
+    },
+    "2": {
+     "team_id": 2,
+     "team_name": "Dayton's Daring Team",
+     "manager": "Dayton Paul",
+     "faab_spent": 0,
+     "waiver_rank": 9,
+     "acquisitions": 0
+    },
+    "3": {
+     "team_id": 3,
+     "team_name": "Kevin's Top-Notch Team",
+     "manager": "Kevin Zugschwert",
+     "faab_spent": 0,
+     "waiver_rank": 2,
+     "acquisitions": 3
+    },
+    "4": {
+     "team_id": 4,
+     "team_name": "Keith's Team",
+     "manager": "Keith Quiring",
+     "faab_spent": 0,
+     "waiver_rank": 6,
+     "acquisitions": 1
+    },
+    "5": {
+     "team_id": 5,
+     "team_name": "Go Pack Go",
+     "manager": "Krenar Hazari",
+     "faab_spent": 0,
+     "waiver_rank": 10,
+     "acquisitions": 0
+    },
+    "6": {
+     "team_id": 6,
+     "team_name": "Team Hansen",
+     "manager": "Nick Hansen",
+     "faab_spent": 0,
+     "waiver_rank": 4,
+     "acquisitions": 3
+    },
+    "7": {
+     "team_id": 7,
+     "team_name": "Bruno's Best Team",
+     "manager": "Bruno Prentice",
+     "faab_spent": 0,
+     "waiver_rank": 5,
+     "acquisitions": 0
+    },
+    "8": {
+     "team_id": 8,
+     "team_name": "Fantasy Baseball Team",
+     "manager": "Eric Mathis",
+     "faab_spent": 0,
+     "waiver_rank": 3,
+     "acquisitions": 1
+    },
+    "9": {
+     "team_id": 9,
+     "team_name": "Jordan's Scary Team",
+     "manager": "Jordan Miller",
+     "faab_spent": 0,
+     "waiver_rank": 7,
+     "acquisitions": 1
+    },
+    "10": {
+     "team_id": 10,
+     "team_name": "1st and 11",
+     "manager": "sean mullins",
+     "faab_spent": 0,
+     "waiver_rank": 12,
+     "acquisitions": 5
+    },
+    "11": {
+     "team_id": 11,
+     "team_name": "34=GOAT (Bonnet\u2019s Team)",
+     "manager": "Jason Bonnet",
+     "faab_spent": 0,
+     "waiver_rank": 11,
+     "acquisitions": 3
+    },
+    "12": {
+     "team_id": 12,
+     "team_name": "Nate's Nifty Team",
+     "manager": "Nate Stephenson",
+     "faab_spent": 0,
+     "waiver_rank": 1,
+     "acquisitions": 3
+    }
+   },
+   "priorBudget": null,
+   "claims": [
+    {
+     "season": 2026,
+     "week": 1,
+     "date": 1788419068174,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 9,
+     "bid": 0,
+     "add": {
+      "id": 3117256,
+      "name": "Dalton Schultz",
+      "position": "TE"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4696044,
+      "name": "Kaelon Black",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4678008,
+      "name": "Jonathon Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326298,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 3,
+     "bid": 0,
+     "add": {
+      "id": 4040761,
+      "name": "Devin Singletary",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326296,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": 4569559,
+      "name": "Devaughn Vele",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4570037,
+      "name": "Terrance Ferguson"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 3,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16014,
+      "name": "Rams D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326296,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 12,
+     "bid": 0,
+     "add": {
+      "id": 4696044,
+      "name": "Kaelon Black",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429013,
+      "name": "Tank Bigsby"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4869645,
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4686658,
+      "name": "Mike Washington Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 8,
+     "bid": 0,
+     "add": {
+      "id": 3149687,
+      "name": "Chris Brooks",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4569559,
+      "name": "Devaughn Vele",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4710714,
+      "name": "De'Zhaun Stribling"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789513756944,
+     "type": "WAIVER",
+     "status": "CANCELED",
+     "won": false,
+     "team_id": 12,
+     "bid": 0,
+     "add": {
+      "id": 4696044,
+      "name": "Kaelon Black",
+      "position": "RB"
+     },
+     "drop": {
+      "id": -16016,
+      "name": "Vikings D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 9,
+     "bid": 0,
+     "add": {
+      "id": 4869645,
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 15818,
+      "name": "Keenan Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326298,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 12,
+     "bid": 0,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16016,
+      "name": "Vikings D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 2,
+     "date": 1789543326297,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 3,
+     "bid": 0,
+     "add": {
+      "id": 4696044,
+      "name": "Kaelon Black",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 5081397,
+      "name": "Dylan Sampson"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127663829,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429086,
+      "name": "Michael Mayer"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429086,
+      "name": "Michael Mayer"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650229,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4678008,
+      "name": "Jonathon Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650229,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3917792,
+      "name": "Daniel Jones"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127570773,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3917792,
+      "name": "Daniel Jones"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4570037,
+      "name": "Terrance Ferguson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429086,
+      "name": "Michael Mayer"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127609432,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4570037,
+      "name": "Terrance Ferguson",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4429086,
+      "name": "Michael Mayer"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790114192916,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4432773,
+      "name": "Brian Thomas Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790114208258,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    }
+   ]
+  }
+ }
+}
