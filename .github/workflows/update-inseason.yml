@@ -69,6 +69,21 @@ jobs:
           set -o pipefail
           python espn_inseason_pull.py "$YEAR" 2>&1 | tee -a inseason_run.log
 
+      # FAAB assistant inputs. Both continue-on-error: they only feed bid
+      # suggestions, so a failure here must never cost the core refresh --
+      # the cockpit just shows waiver targets without bid numbers that week.
+      - name: Pull ESPN waiver/FAAB history (claims won + lost, budgets)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python espn_waiver_history.py "$YEAR" 2>&1 | tee -a inseason_run.log
+
+      - name: Pull Sleeper trending adds (cross-league demand signal)
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python sleeper_trending.py 2>&1 | tee -a inseason_run.log
+
       # continue-on-error until Yahoo auth is confirmed working in CI. A Yahoo
       # failure must not cost us the Zimmer refresh -- two of three leagues is
       # a usable cockpit, zero is not. Flip this to false once a run succeeds.
@@ -163,7 +178,7 @@ jobs:
           # Actions' default `sh` doesn't have shopt/nullglob at all, which is
           # its own way to silently not do what this looks like it does.
           shopt -s nullglob
-          for pattern in inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json; do
+          for pattern in inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json waiver_history_*.json sleeper_trending.json; do
             git add $pattern
           done
           git diff --staged --quiet && { echo "Nothing changed -- nothing to commit."; exit 0; }
