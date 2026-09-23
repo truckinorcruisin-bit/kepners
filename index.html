@@ -808,6 +808,59 @@
   .mgr-comingsoon{font-size:10px;color:var(--dim);line-height:1.6;padding:10px 12px;
     border:1px dashed var(--line-2);background:var(--panel);}
 
+  /* FAAB assistant */
+  .mgr-faab-row{cursor:pointer;}
+  .mgr-faab-row.open{background:rgba(0,217,255,.04);}
+  .mgr-faab-chip{flex:0 0 auto;font-size:9px;font-weight:700;padding:2px 6px;border-radius:8px;
+    background:rgba(0,217,255,.12);color:var(--cyan);white-space:nowrap;}
+  .mgr-faab-status{font-size:10px;color:var(--dim);margin:0 0 6px;}
+  .mgr-faab-status b{color:var(--amber);}
+  .mgr-faab-detail{margin-top:8px;padding:10px;border:1px solid var(--line);background:var(--bg);cursor:default;}
+  .mgr-faab-bids{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin-bottom:8px;}
+  .mgr-faab-bids > div{border:1px solid var(--line);padding:6px;text-align:center;}
+  .mgr-faab-bids .lbl{display:block;font-size:8px;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;}
+  .mgr-faab-bids b{display:block;font-size:17px;color:var(--amber);margin:2px 0;}
+  .mgr-faab-bids .sub{display:block;font-size:8.5px;color:var(--dim);}
+  .mgr-faab-basis{font-size:9.5px;color:var(--dim);line-height:1.5;margin-bottom:3px;}
+  .mgr-faab-warn{font-size:9.5px;color:var(--amber);background:rgba(255,183,3,.08);padding:5px 7px;margin-bottom:6px;line-height:1.4;}
+  .mgr-faab-scroll{overflow-x:auto;}
+  .mgr-faab-tbl{width:100%;border-collapse:collapse;font-size:10px;font-variant-numeric:tabular-nums;}
+  .mgr-faab-tbl th{font-weight:400;color:var(--dim);font-size:8.5px;text-align:left;padding:3px 5px;white-space:nowrap;}
+  .mgr-faab-tbl td{padding:4px 5px;border-top:1px solid var(--line);white-space:nowrap;}
+  .mgr-faab-tbl td.tier-strong{color:var(--green);font-weight:700;}
+  .mgr-faab-tbl tr.is-me td{color:var(--amber);font-weight:700;}
+  .mgr-faab-tbl .dim, .mgr-faab-comp .dim{color:var(--dim);}
+  .mgr-faab-comp{font-size:10px;line-height:1.5;padding:2px 0;}
+
+  /* trade targets */
+  .mgr-trade-pins{display:flex;gap:8px;margin:4px 0 10px;flex-wrap:wrap;}
+  .mgr-trade-pins label{flex:1 1 150px;display:flex;flex-direction:column;gap:3px;min-width:0;}
+  .mgr-trade-pins label span{font-size:8.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;}
+  .mgr-trade-pins select{background:var(--panel);border:1px solid var(--line-2);color:var(--txt);
+    font-family:inherit;font-size:13px;padding:8px 6px;width:100%;min-width:0;}
+  .mgr-trade-card{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--cyan);
+    padding:10px 12px;margin-bottom:8px;}
+  .mgr-trade-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
+  .mgr-trade-team{font-size:12px;font-weight:700;color:var(--amber);}
+  .mgr-trade-mgr{font-size:9px;color:var(--dim);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+  .mgr-trade-chips{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0 8px;}
+  .mgr-trade-chip{font-size:9px;font-weight:700;padding:2px 7px;border-radius:9px;}
+  .mgr-trade-chip.ok{background:rgba(61,220,132,.12);color:var(--green);}
+  .mgr-trade-chip.warn{background:rgba(255,183,3,.15);color:var(--amber);}
+  .mgr-trade-sides{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  .mgr-trade-side-lbl{font-size:8.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:3px;}
+  .mgr-trade-p{font-size:11px;margin-bottom:4px;line-height:1.3;}
+  .mgr-trade-p .nm{font-weight:700;}
+  .mgr-trade-p .meta{display:block;font-size:9px;color:var(--dim);}
+  .mgr-trade-grid{width:100%;border-collapse:collapse;margin-top:8px;font-size:10.5px;font-variant-numeric:tabular-nums;}
+  .mgr-trade-grid th{font-weight:400;color:var(--dim);font-size:9px;text-align:right;padding:2px 4px;}
+  .mgr-trade-grid tr th:first-child{text-align:left;}
+  .mgr-trade-grid td{text-align:right;padding:2px 4px;font-weight:700;border-top:1px solid var(--line);}
+  .mgr-trade-grid td.tier-strong{color:var(--green);}
+  .mgr-trade-grid td.tier-weak{color:var(--red);}
+  .mgr-trade-grid td.tier-mid{color:var(--txt);}
+  .mgr-trade-note{font-size:9px;color:var(--dim);margin-top:6px;line-height:1.5;}
+
   /* cross-league player ownership search */
   .mgr-psearch{position:relative;margin-bottom:14px;}
   .mgr-psearch input{width:100%;background:var(--panel);border:1px solid var(--line-2);color:var(--txt);
@@ -941,6 +994,10 @@ let DATA=null, ZHIST=null, ZDRAFTS=null, ZGRADES=null, BIDCAL=null, ROPT=null, K
 // preseason/draft artifact. See build_inseason.py's module docstring for why
 // these are kept apart rather than merged into one file.
 let INSEASON=null;
+// FAAB assistant inputs (optional -- waiver targets still render without them):
+// waiver_history_<year>.json from espn_waiver_history.py, sleeper_trending.json
+// from sleeper_trending.py.
+let WAIVERS=null, TRENDING=null;
 // activeView is the NEW top-level nav (Manager/Draft/Players). activeMode
 // stays exactly what it was -- the Draft view's OWN internal sub-nav
 // (draft/prep/history/replay) -- and is only consulted while
@@ -1150,6 +1207,14 @@ async function boot(){
     const rIS = await fetch(`inseason_${SEASON_YEAR}.json?t=${Date.now()}`);
     if(rIS.ok) INSEASON = await rIS.json();
   }catch(e){ /* Manager view will show its own empty state */ }
+  try{
+    const rW = await fetch(`waiver_history_${SEASON_YEAR}.json?t=${Date.now()}`);
+    if(rW.ok) WAIVERS = await rW.json();
+  }catch(e){ /* bids just don't render */ }
+  try{
+    const rT = await fetch(`sleeper_trending.json?t=${Date.now()}`);
+    if(rT.ok) TRENDING = await rT.json();
+  }catch(e){ /* heat signal is optional */ }
 
   computeSeanOverallRanks();
   renderLeagueTabs();
@@ -1760,6 +1825,596 @@ function renderManagerView(){
   mgrRenderPlayerSearchResults(mgrPlayerQuery);
 }
 
+// ---- FAAB assistant ----
+// Recommends a WINNING bid for each waiver target, in this league, this week.
+//
+// Price is driven by COMPETITION, which is the one thing cross-league data
+// agrees on: across 285 synced leagues (FF Beacon, 2023-26) the median
+// winning bid was ~0% of budget with no rival, 5% with one, 10.5% with two,
+// 20% with three or more. So the model's real job is estimating how many
+// rivals will bid -- and this league's own data answers that better than any
+// article can:
+//   1. WHO NEEDS HIM: every rival whose starting lineup he'd improve, using
+//      the same slot-eligibility rule as the waiver engine
+//   2. WHO ACTUALLY BIDS: each manager's historical share of weeks with a
+//      claim (won or lost), shrunk toward 50% when history is thin
+//   3. HEAT: Sleeper's 48h trending-adds rank, as extra "stash" bidders that
+//      roster need alone misses
+// Then the league's own contested auctions recalibrate the curve (a league
+// that habitually overpays gets higher numbers), and any likely rival with
+// real history gets a direct "what he usually bids" check.
+const FAAB_CURVE = [[1,0],[2,5],[3,10.5],[4,20]];   // bidders -> median winning % of budget
+const FAAB_AGGR_MULT = 1.6;       // "aggressive" bid, for players you can't afford to lose
+const FAAB_DEFAULT_ACTIVITY = 0.5;
+const FAAB_ACTIVITY_PRIOR_WKS = 2; // pseudo-weeks at 50% -- shrinks thin early-season history
+const FAAB_CALIB_K = 8;           // contested auctions before league data carries half the weight
+const FAAB_MIN_RIVAL_GAIN = 0.3;  // pts/wk a rival must gain to count as needing him
+const FAAB_FULL_NEED = 2.0;      // pts/wk gain at which a rival is fully motivated
+const FAAB_HEAT = [[10,1.0],[30,0.6],[75,0.3]];      // Sleeper rank cutoff -> extra expected bidders
+let mgrFaabOpen = new Set();      // "leagueKey|playerName" of expanded waiver rows
+const mgrFaabMemo = {};
+
+// Past 4 bidders FF Beacon only publishes a single "4 or more" median (20%),
+// which lumps a 4-team fight in with an 8-team frenzy -- so above 4 this
+// EXTRAPOLATES at +FAAB_PER_EXTRA_BIDDER points per extra expected bidder, up
+// to FAAB_CURVE_CAP. Deliberately gentler than Beacon's own observation that
+// the median roughly doubles per added rival, which is too steep this far out.
+const FAAB_PER_EXTRA_BIDDER = 5, FAAB_CURVE_CAP = 45;
+function faabCurvePct(bidders){
+  if(bidders <= 1) return 0;
+  if(bidders >= 4) return Math.min(FAAB_CURVE_CAP, 20 + FAAB_PER_EXTRA_BIDDER*(bidders-4));
+  for(let i=1;i<FAAB_CURVE.length;i++){
+    const [b0,p0]=FAAB_CURVE[i-1], [b1,p1]=FAAB_CURVE[i];
+    if(bidders <= b1) return p0 + (p1-p0)*(bidders-b0)/(b1-b0);
+  }
+  return 20;   // unreachable: every bidders value is handled above
+}
+function faabNorm(s){
+  return String(s||'').toLowerCase().replace(/[.'’]/g,'').replace(/\b(jr|sr|ii|iii|iv|v)\b/g,'')
+    .replace(/[^a-z0-9/ ]/g,' ').replace(/\s+/g,' ').trim();
+}
+function faabMedian(a){ if(!a.length) return null; const s=a.slice().sort((x,y)=>x-y), m=s.length>>1; return s.length%2 ? s[m] : (s[m-1]+s[m])/2; }
+function faabQuantile(a,q){ if(!a.length) return null; const s=a.slice().sort((x,y)=>x-y); return s[Math.min(s.length-1, Math.floor(q*(s.length-1)+0.5))]; }
+
+// League-wide FAAB state: budgets, per-manager tendencies, past auctions,
+// and the league's pricing relative to the cross-league curve. Memoized per
+// data generation, since every waiver row in the league reuses it.
+function mgrFaabLeague(key){
+  const W = WAIVERS && WAIVERS.leagues && WAIVERS.leagues[key];
+  const lg = INSEASON && INSEASON.leagues && INSEASON.leagues[key];
+  if(!W || !lg) return null;
+  const memoKey = key+'|'+(WAIVERS.generated||'');
+  if(mgrFaabMemo[memoKey]) return mgrFaabMemo[memoKey];
+
+  const budget = W.budget || 0;
+  const season = WAIVERS.year;
+  const weeksCur = Math.max(1, (W.currentWeek || lg.currentWeek || 1) - 1);  // completed waiver weeks
+  const claims = (W.claims||[]).filter(c=>c.team_id!=null);
+  const pctOf = (c)=>{
+    const b = c.season===season ? budget : (W.priorBudget || budget);
+    return b ? 100*(c.bid||0)/b : 0;
+  };
+
+  const teams = {};
+  Object.values(W.teams||{}).forEach(t=>{
+    teams[t.team_id] = {team_id:t.team_id, team_name:t.team_name, manager:t.manager,
+      remaining: Math.max(0, budget - (t.faab_spent||0)), spent:t.faab_spent||0, waiverRank:t.waiver_rank,
+      weeksCur:new Set(), weeksPrior:new Set(), bids:[], claims:0, won:0, maxBid:0};
+  });
+  claims.forEach(c=>{
+    const t = teams[c.team_id]; if(!t) return;
+    (c.season===season ? t.weeksCur : t.weeksPrior).add(c.week);
+    t.bids.push(pctOf(c)); t.claims++; if(c.won) t.won++;
+    t.maxBid = Math.max(t.maxBid, pctOf(c));
+  });
+  const hasPrior = claims.some(c=>c.season!==season);
+  Object.values(teams).forEach(t=>{
+    // Prior season counts half (managers change habits, and leagues change
+    // managers), shrunk toward 50% by FAAB_ACTIVITY_PRIOR_WKS pseudo-weeks.
+    const active = t.weeksCur.size + (hasPrior ? 0.5*t.weeksPrior.size : 0);
+    const weeks  = weeksCur + (hasPrior ? 0.5*17 : 0);
+    t.activity = (active + FAAB_DEFAULT_ACTIVITY*FAAB_ACTIVITY_PRIOR_WKS) / (weeks + FAAB_ACTIVITY_PRIOR_WKS);
+    t.medianPct = faabMedian(t.bids); t.p75Pct = faabQuantile(t.bids, 0.75);
+  });
+
+  // Auctions = every claim on the same player in the same waiver run.
+  const byAuction = new Map();
+  claims.forEach(c=>{
+    const k = [c.season, c.week, c.add && c.add.id].join('|');
+    if(!byAuction.has(k)) byAuction.set(k, []);
+    byAuction.get(k).push(c);
+  });
+  const auctions = [];
+  byAuction.forEach(list=>{
+    const sorted = list.slice().sort((a,b)=>(b.bid||0)-(a.bid||0));
+    const winner = list.find(c=>c.won) || null;
+    const bidders = new Set(list.map(c=>c.team_id)).size;
+    const losing = sorted.filter(c=>c!==winner);
+    auctions.push({season:list[0].season, week:list[0].week, player:list[0].add, bidders,
+      winner, winPct: winner ? pctOf(winner) : null, winBid: winner ? winner.bid : null,
+      secondBid: losing.length ? losing[0].bid : null});
+  });
+  auctions.sort((a,b)=>(b.season-a.season)||(b.week-a.week));
+
+  // League pricing vs the curve, from contested auctions only (an
+  // uncontested claim says nothing about competition). Median of ratios,
+  // shrunk toward 1.0 until there's real sample.
+  const ratios = auctions.filter(a=>a.bidders>=2 && a.winPct!=null)
+    .map(a=>a.winPct / faabCurvePct(Math.min(a.bidders,4))).filter(isFinite);
+  const n = ratios.length;
+  const raw = n ? faabMedian(ratios) : 1;
+  const infl = Math.min(2.5, Math.max(0.4, 1 + (raw-1) * n/(n+FAAB_CALIB_K)));
+  const minBid = claims.some(c=>c.won && (c.bid||0)===0) ? 0 : 1;
+  const rems = Object.values(teams).map(t=>t.remaining);
+
+  return mgrFaabMemo[memoKey] = {
+    faab: !!W.faab, budget, teams, auctions, contested:n, rawRatio:raw, infl, minBid,
+    medianRemaining: faabMedian(rems), hasHistory: claims.length>0,
+  };
+}
+
+// Same eligibility rule as mgrWaiverTargets: dedicated slot of his position,
+// or any FLEX if he's RB/WR/TE; gain is over that team's weakest eligible
+// starter (an empty slot counts as 0).
+function mgrFaGainForTeam(fa, team){
+  if(fa.effective_per_week==null) return null;
+  const elig = (team.startingLineup||[]).filter(s=>
+    s.slot.startsWith('FLEX') ? MGR_FLEX_ELIGIBLE.includes(fa.position)
+                              : s.slot.replace(/\d+$/,'')===fa.position);
+  if(!elig.length) return null;
+  const worst = Math.min(...elig.map(s=>s.perWeek==null ? 0 : s.perWeek));
+  return fa.effective_per_week - worst;
+}
+
+function mgrFaabTrend(name){
+  if(!TRENDING || !TRENDING.players) return null;
+  const n = faabNorm(name);
+  return TRENDING.players.find(p=>faabNorm(p.name)===n) || null;
+}
+
+function mgrFaabBid(key, fa, myGain){
+  const L = mgrFaabLeague(key);
+  if(!L || !L.faab || !L.budget) return L ? {noFaab: !L.faab, L} : null;
+  const lg = INSEASON.leagues[key], me = mgrMyTeam(lg);
+  const myRem = (L.teams[me.team_id]||{}).remaining ?? L.budget;
+  const floor = Math.max(1, L.minBid);
+
+  const rivals = [];
+  (lg.teams||[]).forEach(t=>{
+    if(t.is_me) return;
+    const gain = mgrFaGainForTeam(fa, t);
+    if(gain==null || gain < FAAB_MIN_RIVAL_GAIN) return;
+    const st = L.teams[t.team_id] || {activity:FAAB_DEFAULT_ACTIVITY, remaining:L.budget, claims:0};
+    // Bid odds = their bidding habit x how much he'd actually help them.
+    // Need saturates at +FAAB_FULL_NEED/wk: a +0.5/wk marginal upgrade draws
+    // roughly half the interest of a real lineup fix, not the same interest.
+    const broke = st.remaining < floor;
+    const need = Math.min(1, gain / FAAB_FULL_NEED);
+    const p = broke ? 0 : Math.min(0.95, Math.max(0.03, st.activity * (0.3 + 0.7*need)));
+    const typical = st.claims>=3 && st.p75Pct!=null ? Math.min(st.remaining, L.budget*st.p75Pct/100) : null;
+    rivals.push({team:t, st, gain, p, broke, typical});
+  });
+  rivals.sort((a,b)=>b.p-a.p);
+
+  const trend = mgrFaabTrend(fa.name);
+  const heat = trend ? (FAAB_HEAT.find(([r])=>trend.rank<=r)||[0,0])[1] : 0;
+  const expected = rivals.reduce((s,r)=>s+r.p, 0) + heat;
+  const bidders = 1 + expected;
+  const curvePct = faabCurvePct(bidders);
+  const curveBid = L.budget * curvePct/100 * L.infl;
+
+  // Direct check against the likeliest rivals with real bidding history:
+  // beat what they usually pay (their 75th-percentile bid), capped by what
+  // they have left. Averaged with the curve rather than replacing it --
+  // three past bids is a habit, not a law.
+  const likely = rivals.filter(r=>r.p>=0.4 && r.typical!=null);
+  const rivalBeat = likely.length ? Math.max(...likely.map(r=>r.typical)) + 1 : null;
+  let rec = rivalBeat!=null ? 0.5*curveBid + 0.5*rivalBeat : curveBid;
+  rec = Math.round(rec);
+  if(expected >= 0.5) rec = Math.max(rec, floor);
+  rec = Math.max(rec, L.minBid);
+  let aggr = Math.max(rec + 1, Math.round(rec * FAAB_AGGR_MULT));
+  rec = Math.min(rec, myRem); aggr = Math.min(aggr, myRem);
+
+  // Value sanity: the market price can exceed what the pickup is worth to
+  // YOU. Flag, don't block -- only you know your season's context.
+  const pricey = myGain!=null && rec >= 0.15*L.budget && myGain < 1.5;
+
+  return {L, myGain, rec, aggr, myRem, expected, bidders, curvePct, curveBid, rivalBeat, rivals,
+          trend, heat, pricey,
+          comps: L.auctions.filter(a=>a.player && a.player.position===fa.position && a.winner).slice(0,5)};
+}
+
+function mgrFaabChipHtml(b){
+  if(!b) return '';
+  if(b.noFaab) return '';
+  return `<span class="mgr-faab-chip" title="Recommended winning bid">BID $${b.rec}</span>`;
+}
+
+function mgrFaabDetailHtml(b, fa){
+  if(!b) return `<div class="mgr-faab-detail"><div class="mgr-bench-note">No FAAB data for this league yet --
+    run Update In-Season Data to pull waiver history and budgets.</div></div>`;
+  if(b.noFaab) return `<div class="mgr-faab-detail"><div class="mgr-bench-note">This league uses rolling
+    waiver priority, not FAAB -- no bid needed.</div></div>`;
+  const L = b.L, pct = v => L.budget ? Math.round(100*v/L.budget) : 0;
+  const basis = [
+    `~${b.expected.toFixed(1)} rival bidder${Math.abs(b.expected-1)<0.05?'':'s'} expected`,
+    `${b.curvePct.toFixed(1)}% market median for ${b.bidders.toFixed(1)} bidders${b.bidders>4?' (extrapolated past the 4-bidder bucket)':''}`,
+    L.contested ? `× ${L.infl.toFixed(2)} for this league's pricing (${L.contested} contested auction${L.contested>1?'s':''})`
+                : `no contested auctions here yet, so cross-league pricing as-is`,
+    b.rivalBeat!=null ? `blended with beating the top likely rival's usual bid ($${Math.round(b.rivalBeat-1)})` : null,
+  ].filter(Boolean);
+  const heat = b.trend
+    ? `Sleeper: #${b.trend.rank} most-added, ${Number(b.trend.adds).toLocaleString()} adds in ${TRENDING.lookbackHours||48}h${b.heat?` (+${b.heat} expected stash bidder${b.heat>1?'s':''})`:''}`
+    : 'Not on Sleeper\'s trending-adds list.';
+  const rivalRows = b.rivals.length ? b.rivals.slice(0,6).map(r=>`<tr>
+      <td>${escapeHtml(r.team.team_name||r.team.manager||'Team')}</td>
+      <td class="tier-strong">+${r.gain.toFixed(1)}</td>
+      <td>$${Math.round(r.st.remaining)}</td>
+      <td>${r.broke ? '<span class="dim">broke</span>' : Math.round(r.p*100)+'%'}</td>
+      <td>${r.st.claims ? `${r.st.claims} claims · med ${Math.round(r.st.medianPct||0)}% / max ${Math.round(r.st.maxBid)}%` : '<span class="dim">no history</span>'}</td>
+    </tr>`).join('')
+    : '';
+  const comps = b.comps.map(a=>{
+    const w = L.teams[a.winner.team_id];
+    return `<div class="mgr-faab-comp">${escapeHtml(a.player.name)} <span class="dim">${a.season!==WAIVERS.year?a.season+' ':''}wk ${a.week}</span>
+      -- $${a.winBid} (${Math.round(a.winPct)}%) to ${escapeHtml(w?w.team_name:'?')}, ${a.bidders} bidder${a.bidders>1?'s':''}${a.secondBid!=null?`, next-best $${a.secondBid}`:''}</div>`;
+  }).join('');
+  return `<div class="mgr-faab-detail">
+    <div class="mgr-faab-bids">
+      <div><span class="lbl">Recommended</span><b>$${b.rec}</b><span class="sub">${pct(b.rec)}% of budget</span></div>
+      <div><span class="lbl">Aggressive</span><b>$${b.aggr}</b><span class="sub">if you can't lose him</span></div>
+      <div><span class="lbl">Your FAAB</span><b>$${Math.round(b.myRem)}</b><span class="sub">of $${L.budget}</span></div>
+    </div>
+    ${b.pricey?`<div class="mgr-faab-warn">Market price is high for a +${(b.myGain||0).toFixed(1)}/wk upgrade to your lineup -- worth it only if the position is a real hole for you.</div>`:''}
+    <div class="mgr-faab-basis">${basis.join(' · ')}</div>
+    <div class="mgr-faab-basis">${heat}</div>
+    <div class="mgr-trade-side-lbl" style="margin-top:8px">Rivals who'd start him</div>
+    ${rivalRows ? `<div class="mgr-faab-scroll"><table class="mgr-faab-tbl">
+      <tr><th>Team</th><th>Gain</th><th>Left</th><th>Bid odds</th><th>History</th></tr>${rivalRows}</table></div>`
+      : `<div class="mgr-bench-note">No rival's lineup gets better with him -- expect little competition beyond stash bids.</div>`}
+    <div class="mgr-trade-side-lbl" style="margin-top:8px">Recent ${escapeHtml(fa.position)} auctions in this league</div>
+    ${comps || `<div class="mgr-bench-note">None on record yet.</div>`}
+  </div>`;
+}
+
+// Per-manager tendencies table for the league detail page.
+function mgrFaabTendenciesHtml(key){
+  const L = mgrFaabLeague(key);
+  if(!L) return `<div class="mgr-empty">No waiver history pulled yet -- run Update In-Season Data.</div>`;
+  if(!L.faab) return `<div class="mgr-empty">This league uses rolling waivers, not FAAB.</div>`;
+  const me = mgrMyTeam(INSEASON.leagues[key]);
+  const rows = Object.values(L.teams).sort((a,b)=>b.remaining-a.remaining).map(t=>`<tr class="${me&&t.team_id===me.team_id?'is-me':''}">
+      <td>${escapeHtml(t.team_name||'')}</td><td>$${Math.round(t.remaining)}</td>
+      <td>${t.claims}</td><td>${t.claims?Math.round(100*t.won/t.claims)+'%':'--'}</td>
+      <td>${t.medianPct!=null?Math.round(t.medianPct)+'%':'--'}</td><td>${t.claims?Math.round(t.maxBid)+'%':'--'}</td>
+      <td>${Math.round(t.activity*100)}%</td></tr>`).join('');
+  const calib = L.contested
+    ? `This league pays <b>${L.rawRatio.toFixed(2)}×</b> the cross-league median on contested players (${L.contested} auctions; applied as ${L.infl.toFixed(2)}× after shrinkage).`
+    : `No contested auctions on record yet -- bids use cross-league pricing until some land.`;
+  return `<div class="mgr-bench-note">$${L.budget} budget · median team has $${Math.round(L.medianRemaining||0)} left. ${calib}
+      Bid % are of the full budget; <b>Active</b> is the share of waiver weeks a manager put in any claim (won or lost).</div>
+    <div class="mgr-faab-scroll"><table class="mgr-faab-tbl">
+      <tr><th>Team</th><th>Left</th><th>Claims</th><th>Won</th><th>Med bid</th><th>Max bid</th><th>Active</th></tr>${rows}</table></div>`;
+}
+
+// ---- trade engine ----
+// Every suggestion is judged by STARTING-LINEUP impact on BOTH sides, using
+// the same greedy optimal-lineup logic build_inseason.py uses (ported below),
+// so "improves your lineup" means exactly what the rest of the cockpit means.
+//
+// Design (Sean's spec):
+//   - packages up to 2-for-2, any player on my roster is offerable
+//   - a player can be pinned on either side ("what can I get for X",
+//     "what would it take to land Y")
+//   - a trade is only suggested if it ALSO helps the other team on at least
+//     one horizon: rest of season, this week, or the next 3 weeks. That
+//     horizon becomes the pitch ("helps them this week +6.1" = bye/injury
+//     cover they need right now).
+// K/DEF are excluded -- nobody trades for a kicker, and DEF is a streaming
+// position the waiver engine already covers.
+const TRADE_EXCLUDE_POS = ['K','DEF'];
+const TRADE_POOL_N = 10;          // top-N (by ROS) per team considered for packages
+const TRADE_NEXT_WEEKS = 3;       // "next few weeks" horizon length
+const TRADE_MIN_MY_ROS = 0.5;     // pts/wk my lineup must gain (unpinned suggestions)
+const TRADE_HELP = {ros:0.3, week:1.5, next:3.0};  // "helps them" thresholds per horizon
+// A short-term horizon only counts as "helping them" if the ROS cost to them
+// stays above this floor. Without it, +2.5 this week for -11.5/wk the rest
+// of the season technically "helps on one horizon" -- and nobody says yes.
+const TRADE_SHORT_TERM_ROS_FLOOR = -1.5;
+const TRADE_SIZE_PENALTY = 0.4;   // ranking penalty per extra player, favors simpler deals
+const TRADE_MAX_RESULTS = 8, TRADE_MAX_PER_TEAM = 2;
+
+let mgrTradePins = {};            // leagueKey -> {give: tradeKey|'', get: tradeKey|''}
+let mgrTradeCache = {};           // cacheKey -> results
+
+function tradeKey(p){ return p.player_id!=null ? 'id:'+p.player_id : 'n:'+p.name; }
+function tradeable(p){ return p && !TRADE_EXCLUDE_POS.includes(p.position) && p.effective_per_week!=null; }
+
+// Per-player value for a given week. Week 0 of the horizon (the current
+// week) uses ESPN's own weekly projection when the pull carried one; later
+// weeks, and any player without one, use the ROS per-week rate. A player on
+// bye that week is worth 0. OUT (which includes IR -- see INJURY_MAP in
+// build_inseason.py) is 0 for the current week only; beyond that, the ROS
+// rate's own injury discount stands, since return dates aren't in the data.
+function tradeWeekValue(p, week, curWeek){
+  const ros = p.effective_per_week;
+  if(ros==null && p.week_projection==null) return null;
+  if(p.bye_week!=null && p.bye_week===week) return 0;
+  if(week===curWeek){
+    if(p.week_projection!=null) return p.week_projection;
+    if(p.injury_status==='OUT') return 0;
+  }
+  return ros==null ? 0 : ros;
+}
+
+// Greedy optimal lineup total -- a straight port of optimal_lineup() in
+// build_inseason.py: dedicated slots take the best remaining player at that
+// position, then FLEX takes the best remaining RB/WR/TE. Exact (not an
+// approximation) for these leagues' slot hierarchy, per that function's docs.
+function tradeLineupValue(entries, slots){
+  const pool = entries.filter(e=>e.v!=null).sort((a,b)=>b.v-a.v);
+  const need = {}; let flex = 0;
+  for(const s of slots){
+    if(s==='BEN' || s==='IR') continue;
+    if(s==='FLEX'){ flex++; continue; }
+    need[s] = (need[s]||0) + 1;
+  }
+  let total = 0; const left = [];
+  for(const e of pool){
+    if(need[e.pos] > 0){ need[e.pos]--; total += e.v; } else left.push(e);
+  }
+  for(const e of left){
+    if(flex <= 0) break;
+    if(MGR_FLEX_ELIGIBLE.includes(e.pos)){ flex--; total += e.v; }
+  }
+  return total;
+}
+
+// All three horizons for one roster: ROS pts/wk, this week's pts, and total
+// pts over the next TRADE_NEXT_WEEKS weeks (lineup re-optimized each week,
+// so a bye in week 2 correctly forces a different starter that week).
+function tradeRosterValue(roster, slots, curWeek){
+  const ros = tradeLineupValue(roster.map(p=>({pos:p.position, v:p.effective_per_week})), slots);
+  let next = 0, week = 0;
+  for(let i=0; i<TRADE_NEXT_WEEKS; i++){
+    const w = curWeek + i;
+    const v = tradeLineupValue(roster.map(p=>({pos:p.position, v:tradeWeekValue(p, w, curWeek)})), slots);
+    if(i===0) week = v;
+    next += v;
+  }
+  return {ros, week, next};
+}
+
+// A team taking on more players than it sends out has to cut someone to
+// stay at roster size. Cut the lowest-ROS non-K/DEF player (never their only
+// kicker/defense), and surface who, since "you'd have to drop X" is part of
+// judging whether a deal is realistic.
+function tradeApplyRoster(roster, outKeys, incoming){
+  const next = roster.filter(p=>!outKeys.has(tradeKey(p))).concat(incoming);
+  let dropped = null;
+  if(next.length > roster.length){
+    const cand = next.filter(p=>!TRADE_EXCLUDE_POS.includes(p.position) && !incoming.includes(p));
+    if(cand.length){
+      dropped = cand.reduce((lo,p)=>((p.effective_per_week??-1) < (lo.effective_per_week??-1) ? p : lo));
+      return {roster: next.filter(p=>p!==dropped), dropped};
+    }
+  }
+  return {roster: next, dropped};
+}
+
+function tradeCombos(pool, pinned){
+  const out = [];
+  if(pinned){
+    out.push([pinned]);
+    pool.forEach(p=>{ if(p!==pinned) out.push([pinned, p]); });
+    return out;
+  }
+  for(let i=0;i<pool.length;i++){
+    out.push([pool[i]]);
+    for(let j=i+1;j<pool.length;j++) out.push([pool[i], pool[j]]);
+  }
+  return out;
+}
+
+function tradePool(roster, pinned){
+  const pool = roster.filter(tradeable)
+    .sort((a,b)=>b.effective_per_week-a.effective_per_week).slice(0, TRADE_POOL_N);
+  if(pinned && !pool.includes(pinned)) pool.push(pinned);
+  return pool;
+}
+
+function mgrTradeTargets(lg, me, pins){
+  const slots = lg.rosterSlots || [];
+  const curWeek = lg.currentWeek || INSEASON.currentWeek || 1;
+  if(!slots.length) return {results:[], evaluated:0};
+
+  const pinGive = pins.give ? (me.roster||[]).find(p=>tradeKey(p)===pins.give) : null;
+  let pinGet = null, pinGetTeam = null;
+  if(pins.get){
+    for(const t of lg.teams||[]){
+      if(t.is_me) continue;
+      const hit = (t.roster||[]).find(p=>tradeKey(p)===pins.get);
+      if(hit){ pinGet = hit; pinGetTeam = t; break; }
+    }
+  }
+  const pinned = !!(pinGive || pinGet);
+
+  const myBase = tradeRosterValue(me.roster||[], slots, curWeek);
+  const myCombos = tradeCombos(tradePool(me.roster||[], pinGive), pinGive);
+  const cands = [];
+  let evaluated = 0;
+
+  (lg.teams||[]).forEach(opp=>{
+    if(opp.is_me) return;
+    if(pinGetTeam && opp !== pinGetTeam) return;
+    const oppBase = tradeRosterValue(opp.roster||[], slots, curWeek);
+    const oppCombos = tradeCombos(tradePool(opp.roster||[], pinGet), pinGet);
+
+    for(const give of myCombos){
+      const giveKeys = new Set(give.map(tradeKey));
+      for(const get of oppCombos){
+        evaluated++;
+        const getKeys = new Set(get.map(tradeKey));
+        const mine = tradeApplyRoster(me.roster||[], giveKeys, get);
+        // Cheap ROS-only check first: most combos fail here, and it skips
+        // the three per-week lineup solves for everything that does.
+        const myRos = tradeLineupValue(mine.roster.map(p=>({pos:p.position, v:p.effective_per_week})), slots) - myBase.ros;
+        if(!pinned && myRos < TRADE_MIN_MY_ROS) continue;
+        const theirs = tradeApplyRoster(opp.roster||[], getKeys, give);
+        const oppRos = tradeLineupValue(theirs.roster.map(p=>({pos:p.position, v:p.effective_per_week})), slots) - oppBase.ros;
+        // At or below the floor it can't qualify on ANY horizon (short-term
+        // pitches require ROS above it, and ROS help requires +0.3), so skip
+        // the six per-week lineup solves outright.
+        if(oppRos <= TRADE_SHORT_TERM_ROS_FLOOR) continue;
+        // Short horizons are always computed, never inferred from ROS: they
+        // genuinely diverge around byes and injuries, which is the whole
+        // point of offering them as a reason the other side says yes.
+        const myAfter = tradeRosterValue(mine.roster, slots, curWeek);
+        const oppAfter = tradeRosterValue(theirs.roster, slots, curWeek);
+        const d = {
+          me:   {ros: myRos,  week: myAfter.week - myBase.week,   next: myAfter.next - myBase.next},
+          them: {ros: oppRos, week: oppAfter.week - oppBase.week, next: oppAfter.next - oppBase.next},
+        };
+        const helps = [];
+        if(d.them.ros  >= TRADE_HELP.ros)  helps.push({h:'ros',  v:d.them.ros});
+        const shortOk = d.them.ros > TRADE_SHORT_TERM_ROS_FLOOR;
+        if(shortOk && d.them.week >= TRADE_HELP.week) helps.push({h:'week', v:d.them.week});
+        if(shortOk && d.them.next >= TRADE_HELP.next) helps.push({h:'next', v:d.them.next});
+        if(!helps.length) continue;
+        const score = d.me.ros - TRADE_SIZE_PENALTY * (give.length + get.length - 2);
+        cands.push({
+          opp, give, get, d, helps, score,
+          lopsided: d.them.ros <= -0.05,   // they're trading future for now
+          myDrop: mine.dropped, theirDrop: theirs.dropped,
+        });
+      }
+    }
+  });
+
+  // Diverse picks, not 8 variants of one deal: at most TRADE_MAX_PER_TEAM
+  // per partner, and never two suggestions targeting the same player of
+  // theirs. The same player of MINE can appear for different partners --
+  // "Bijan could fetch X from one team or Y from another" is useful.
+  cands.sort((a,b)=>b.score-a.score);
+  const results = [], perTeam = new Map(), usedGets = new Set();
+  for(const c of cands){
+    if(results.length >= TRADE_MAX_RESULTS) break;
+    const n = perTeam.get(c.opp.team_id) || 0;
+    if(n >= TRADE_MAX_PER_TEAM) continue;
+    if(!pinGet && c.get.some(p=>usedGets.has(tradeKey(p)))) continue;
+    results.push(c);
+    perTeam.set(c.opp.team_id, n+1);
+    c.get.forEach(p=>usedGets.add(tradeKey(p)));
+  }
+  return {results, evaluated, pinned};
+}
+
+// ---- trade UI ----
+const TRADE_HELP_LABEL = {ros:'rest of season', week:'this week', next:`next ${TRADE_NEXT_WEEKS} wks`};
+function tradeFmt(v){ const r = Math.round(v*10)/10; return (r>0?'+':'') + r.toFixed(1); }
+function tradeCls(v){ return v>=0.05 ? 'tier-strong' : (v<=-0.05 ? 'tier-weak' : 'tier-mid'); }
+
+function tradePlayerHtml(p, curWeek){
+  const bits = [p.position, p.effective_per_week!=null ? `${p.effective_per_week}/wk` : 'no proj'];
+  if(p.bye_week===curWeek) bits.push('BYE this wk');
+  const inj = p.injury_status ? `<span class="mgr-str-injury">${p.injury_status}</span>` : '';
+  return `<div class="mgr-trade-p"><span class="nm">${escapeHtml(p.name)}</span>${inj}
+    <span class="meta">${bits.join(' · ')}</span></div>`;
+}
+
+function tradeCardHtml(c, curWeek){
+  // Lead with the horizon that helps them MOST relative to its own bar --
+  // that's the strongest single sentence to open a trade offer with.
+  const best = c.helps.slice().sort((a,b)=>(b.v/TRADE_HELP[b.h])-(a.v/TRADE_HELP[a.h]))[0];
+  const unit = best.h==='ros' ? '/wk' : ' pts';
+  const chips = [`<span class="mgr-trade-chip ok">Helps them ${TRADE_HELP_LABEL[best.h]} ${tradeFmt(best.v)}${unit}</span>`];
+  if(c.lopsided) chips.push(`<span class="mgr-trade-chip warn">Future-for-now for them · ${tradeFmt(c.d.them.ros)}/wk ROS</span>`);
+  const notes = [];
+  if(c.theirDrop) notes.push(`They'd need to drop ${escapeHtml(c.theirDrop.name)}.`);
+  if(c.myDrop) notes.push(`You'd need to drop ${escapeHtml(c.myDrop.name)}.`);
+  if(c.give.length > c.get.length) notes.push(`Frees a roster spot for you -- pair with a waiver add.`);
+  const cell = (v, unit) => `<td class="${tradeCls(v)}">${tradeFmt(v)}${unit}</td>`;
+  return `<div class="mgr-trade-card">
+    <div class="mgr-trade-head">
+      <span class="mgr-trade-team">${escapeHtml(c.opp.team_name || c.opp.manager || 'Team')}</span>
+      ${c.opp.manager && c.opp.team_name ? `<span class="mgr-trade-mgr">${escapeHtml(c.opp.manager)}</span>` : ''}
+    </div>
+    <div class="mgr-trade-chips">${chips.join('')}</div>
+    <div class="mgr-trade-sides">
+      <div><div class="mgr-trade-side-lbl">You give</div>${c.give.map(p=>tradePlayerHtml(p, curWeek)).join('')}</div>
+      <div><div class="mgr-trade-side-lbl">You get</div>${c.get.map(p=>tradePlayerHtml(p, curWeek)).join('')}</div>
+    </div>
+    <table class="mgr-trade-grid">
+      <tr><th></th><th>ROS</th><th>Wk ${curWeek}</th><th>Wks ${curWeek}–${curWeek+TRADE_NEXT_WEEKS-1}</th></tr>
+      <tr><th>You</th>${cell(c.d.me.ros,'/wk')}${cell(c.d.me.week,'')}${cell(c.d.me.next,'')}</tr>
+      <tr><th>Them</th>${cell(c.d.them.ros,'/wk')}${cell(c.d.them.week,'')}${cell(c.d.them.next,'')}</tr>
+    </table>
+    ${notes.length ? `<div class="mgr-trade-note">${notes.join(' ')}</div>` : ''}
+  </div>`;
+}
+
+function tradeControlsHtml(lg, me, pins){
+  const byRos = (a,b)=>(b.effective_per_week||0)-(a.effective_per_week||0);
+  const opt = (p, sel) => `<option value="${escapeHtml(tradeKey(p))}"${sel===tradeKey(p)?' selected':''}>${escapeHtml(p.name)} (${p.position})</option>`;
+  const mine = (me.roster||[]).filter(tradeable).sort(byRos).map(p=>opt(p, pins.give)).join('');
+  const theirs = (lg.teams||[]).filter(t=>!t.is_me).map(t=>{
+    const ps = (t.roster||[]).filter(tradeable).sort(byRos);
+    return ps.length ? `<optgroup label="${escapeHtml(t.team_name||t.manager||'Team')}">${ps.map(p=>opt(p, pins.get)).join('')}</optgroup>` : '';
+  }).join('');
+  return `<div class="mgr-trade-pins">
+    <label><span>Trade away</span><select id="mgrTradeGive"><option value="">Any of my players</option>${mine}</select></label>
+    <label><span>Trade for</span><select id="mgrTradeGet"><option value="">Anyone in the league</option>${theirs}</select></label>
+  </div>`;
+}
+
+// Paints ONLY the results container, and defers the search one tick so the
+// rest of the league page renders instantly -- the full 2-for-2 search is
+// tens of thousands of lineup solves, fast but not free on a phone.
+function mgrPaintTradeResults(key){
+  const box = document.getElementById('mgrTradeResults');
+  if(!box) return;
+  const lg = INSEASON.leagues[key];
+  const me = mgrMyTeam(lg);
+  const pins = mgrTradePins[key] || {give:'', get:''};
+  const cacheKey = [key, INSEASON.generated, pins.give, pins.get].join('|');
+  const curWeek = lg.currentWeek || INSEASON.currentWeek || 1;
+  const noWeekly = !(lg.teams||[]).some(t=>(t.roster||[]).some(p=>p.week_projection!=null));
+  const weeklyNote = noWeekly
+    ? `<div class="mgr-bench-note">Week ${curWeek} figures are using each player's ROS rate (bye-aware) --
+        ESPN's own weekly projections fill in after the next In-Season Data run.</div>` : '';
+
+  const paint = (res)=>{
+    if(!res.results.length){
+      const pinName = [pins.give, pins.get].filter(Boolean).length
+        ? 'No package with that player helps both sides on any horizon. Try clearing a pin.'
+        : `No trade improves your lineup by ${TRADE_MIN_MY_ROS}+ pts/wk while also helping the other team on any horizon.`;
+      box.innerHTML = weeklyNote + `<div class="mgr-empty">${pinName}</div>`;
+      return;
+    }
+    box.innerHTML = weeklyNote + res.results.map(c=>tradeCardHtml(c, curWeek)).join('');
+  };
+  if(mgrTradeCache[cacheKey]){ paint(mgrTradeCache[cacheKey]); return; }
+  box.innerHTML = `<div class="mgr-empty">Scanning every 1- and 2-player package in the league...</div>`;
+  setTimeout(()=>{
+    if(!document.getElementById('mgrTradeResults')) return;   // navigated away
+    const res = mgrTradeTargets(lg, me, pins);
+    mgrTradeCache[cacheKey] = res;
+    paint(res);
+  }, 0);
+}
+
+function mgrBindTradeControls(key){
+  const onPin = (side)=>(e)=>{
+    mgrTradePins[key] = Object.assign({give:'', get:''}, mgrTradePins[key], {[side]: e.target.value});
+    mgrPaintTradeResults(key);
+  };
+  const g = document.getElementById('mgrTradeGive'), t = document.getElementById('mgrTradeGet');
+  if(g) g.onchange = onPin('give');
+  if(t) t.onchange = onPin('get');
+  mgrPaintTradeResults(key);
+}
+
 function renderManagerLeagueDetail(el, key){
   const lg = INSEASON.leagues[key];
   const me = mgrMyTeam(lg);
@@ -1924,7 +2579,17 @@ function renderManagerLeagueDetail(el, key){
     <div class="mgr-section-lbl">Waiver Targets</div>
     <div class="mgr-bench-note">Free agents that would <b>genuinely start</b> on your team right now --
       each one is scored against the specific starter he'd bump, not against raw value.
-      The right-hand number is the weekly gain from making that exact swap.</div>
+      The right-hand number is the weekly gain from making that exact swap.
+      ${WAIVERS && WAIVERS.leagues && WAIVERS.leagues[key] && WAIVERS.leagues[key].faab
+        ? ' <b>Tap a player</b> for his recommended winning bid and who you\'re bidding against.' : ''}</div>
+    ${(()=>{
+      const L = mgrFaabLeague(key);
+      if(!L) return '';
+      if(!L.faab) return `<div class="mgr-faab-status">Rolling waivers (no FAAB) · you're #${(L.teams[me.team_id]||{}).waiverRank ?? '?'} in priority</div>`;
+      const mine = L.teams[me.team_id] || {};
+      return `<div class="mgr-faab-status">FAAB: <b>$${Math.round(mine.remaining ?? L.budget)}</b> of $${L.budget} left
+        · league median $${Math.round(L.medianRemaining||0)} left</div>`;
+    })()}
     ${(()=>{
       const targets = mgrWaiverTargets(lg, me);
       if(!targets.length) return '<div class="mgr-empty">No free agent beats a current starter right now.</div>';
@@ -1935,11 +2600,15 @@ function renderManagerLeagueDetail(el, key){
         const pctOf = v => span>0 ? Math.min(100, Math.max(0, ((v - sp.min)/span)*100)) : 50;
         const faPct = sp ? pctOf(fa.effective_per_week) : 50;
         const dropPct = (sp && t.dropValue!=null) ? pctOf(t.dropValue) : null;
-        return `<div class="mgr-str-row">
+        const bid = mgrFaabBid(key, fa, t.gain);
+        const openKey = key+'|'+fa.name;
+        const isOpen = mgrFaabOpen.has(openKey);
+        return `<div class="mgr-str-row mgr-faab-row${isOpen?' open':''}" data-faab="${escapeHtml(openKey)}">
           <div class="mgr-str-head">
             <span class="mgr-str-slot">${fa.position}</span>
             <span class="mgr-str-name">${fa.name}${
               fa.injury_status?` <span class="mgr-str-injury">${fa.injury_status}</span>`:''}</span>
+            ${mgrFaabChipHtml(bid)}
             <span class="mgr-str-val tier-strong">${fa.effective_per_week.toFixed(1)}</span>
             <span class="mgr-str-rank">+${t.gain.toFixed(1)}</span>
           </div>
@@ -1954,15 +2623,36 @@ function renderManagerLeagueDetail(el, key){
           </div>`:''}
           <div class="mgr-str-flat">would start over ${t.dropPlayer?`${t.dropPlayer} at ${t.dropSlot}`:`an empty ${t.dropSlot} slot`}
             (+${t.gain.toFixed(1)}/wk)${fa.percent_owned!=null?` · ${Math.round(fa.percent_owned)}% rostered league-wide`:''}</div>
+          <div class="mgr-faab-wrap"${isOpen?'':' hidden'}>${mgrFaabDetailHtml(bid, fa)}</div>
         </div>`;
       }).join('');
     })()}
 
+    <div class="mgr-section-lbl">FAAB tendencies</div>
+    ${mgrFaabTendenciesHtml(key)}
+
     <div class="mgr-section-lbl">Trade Targets</div>
-    <div class="mgr-comingsoon">Coming next: buy/sell suggestions matched against other teams'
-      surplus and need, valued by starting-lineup impact on both sides.</div>
+    <div class="mgr-bench-note">Packages up to <b>2-for-2</b> that improve your starting lineup and
+      <b>also help the other team</b> on at least one horizon -- rest of season, this week, or the
+      next ${TRADE_NEXT_WEEKS} weeks. The green chip is the pitch. Pin a player on either side to
+      ask "what can I get for him" or "what would it take to land him."</div>
+    ${tradeControlsHtml(lg, me, mgrTradePins[key] || {give:'', get:''})}
+    <div id="mgrTradeResults"></div>
   `;
   document.getElementById('mgrBackBtn').onclick = ()=>{ mgrDetailLeague=null; render(); };
+  // Toggle in place (no re-render): keeps scroll position and doesn't
+  // restart the trade scan. The open set survives a real re-render.
+  el.querySelectorAll('.mgr-faab-row[data-faab]').forEach(row=>{
+    row.onclick = (e)=>{
+      if(e.target.closest('.mgr-faab-detail')) return;   // taps inside the panel don't collapse it
+      const k = row.dataset.faab, wrap = row.querySelector('.mgr-faab-wrap');
+      const open = !mgrFaabOpen.has(k);
+      open ? mgrFaabOpen.add(k) : mgrFaabOpen.delete(k);
+      row.classList.toggle('open', open);
+      if(wrap) wrap.hidden = !open;
+    };
+  });
+  mgrBindTradeControls(key);
 }
 
 function ordinal(n){

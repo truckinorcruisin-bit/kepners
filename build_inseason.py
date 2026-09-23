@@ -37,7 +37,7 @@ import sys
 import json
 from datetime import datetime, timezone
 
-from convert_bigboard import normalize_name
+from convert_bigboard import normalize_name, bye_week_for_team
 
 YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2026
 OUT_FILE = f"inseason_{YEAR}.json"
@@ -185,6 +185,10 @@ def enrich(player, ros_index):
     row = dict(player)
     row["position"] = pos
     row["injury_status"] = norm_injury(player.get("injury_status"))
+    # Bye from the authoritative TEAM_BYE_2026 map (same source the draft
+    # boards use), not ESPN's per-player field -- lets the trade engine zero
+    # out a player in his bye week for the "this week"/"next 3 weeks" views.
+    row["bye_week"] = bye_week_for_team(player.get("pro_team"))
 
     match = ros_index.get(join_key(player.get("name"), pos))
     if match:

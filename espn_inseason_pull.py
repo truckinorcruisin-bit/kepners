@@ -115,8 +115,27 @@ def get_credentials(cfg):
     return int(league_id), s2, swid
 
 
-def player_row(p):
+def week_projection(p, week):
+    """ESPN's own projected fantasy points for this player in `week`.
+
+    espn_api stores per-scoring-period stats on Player.stats keyed by week,
+    with the projection under 'projected_points' (confirmed against the
+    espn_api 0.46 source, football/player.py). Returns None when ESPN didn't
+    send a projection for that week -- the trade engine then falls back to
+    the ROS per-week rate rather than treating a missing number as zero.
+    """
+    if not week:
+        return None
+    wk = (getattr(p, "stats", None) or {}).get(week) or {}
+    val = wk.get("projected_points")
+    return round(val, 2) if isinstance(val, (int, float)) else None
+
+
+def player_row(p, week=None):
     return {
+        # This week's ESPN projection -- powers the trade engine's "this
+        # week" and "next 3 weeks" horizons (bye/injury-aware, see index.html).
+        "week_projection": week_projection(p, week),
         "player_id": getattr(p, "playerId", None),
         "name": p.name,
         "position": getattr(p, "position", None),
@@ -213,7 +232,7 @@ def pull_one_league(cfg):
             "points_for": round(t.points_for, 2),
             "points_against": round(t.points_against, 2),
             "standing": t.standing,
-            "roster": [player_row(p) for p in (t.roster or [])],
+            "roster": [player_row(p, current_week) for p in (t.roster or [])],
         })
 
     print(f"    fetching free agents...")
@@ -226,7 +245,7 @@ def pull_one_league(cfg):
         print(f"    ::warning::{cfg['key']}: free-agent fetch failed ({e}). "
               f"Continuing with rosters only.")
         fas = []
-    free_agents = [player_row(p) for p in fas]
+    free_agents = [player_row(p, current_week) for p in fas]
 
     # Cross-check against this SAME league's own rosters. ESPN's
     # free_agents() endpoint and its roster endpoint are two independent
