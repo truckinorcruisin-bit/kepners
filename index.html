@@ -834,7 +834,7 @@
 
   /* trade targets */
   .mgr-trade-pins{display:flex;gap:8px;margin:4px 0 10px;flex-wrap:wrap;}
-  .mgr-trade-pins label{flex:1 1 150px;display:flex;flex-direction:column;gap:3px;min-width:0;}
+  .mgr-trade-pins label{flex:1 1 140px;display:flex;flex-direction:column;gap:3px;min-width:0;}
   .mgr-trade-pins label span{font-size:8.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;}
   .mgr-trade-pins select{background:var(--panel);border:1px solid var(--line-2);color:var(--txt);
     font-family:inherit;font-size:13px;padding:8px 6px;width:100%;min-width:0;}
@@ -1889,7 +1889,12 @@ function mgrFaabLeague(key){
   const budget = W.budget || 0;
   const season = WAIVERS.year;
   const weeksCur = Math.max(1, (W.currentWeek || lg.currentWeek || 1) - 1);  // completed waiver weeks
-  const claims = (W.claims||[]).filter(c=>c.team_id!=null);
+  // PENDING = this week's unprocessed claims, CANCELED = withdrawn by the
+  // manager: neither is a completed bid, and counting them inflated both
+  // bidder counts and activity (70 pending + 25 canceled in Zimmer's first
+  // real pull). Every FAILED_* status IS a real bid that lost or bounced --
+  // FAILED_INVALIDPLAYERSOURCE is the "someone else got him first" case.
+  const claims = (W.claims||[]).filter(c=>c.team_id!=null && c.status!=='PENDING' && c.status!=='CANCELED');
   const pctOf = (c)=>{
     const b = c.season===season ? budget : (W.priorBudget || budget);
     return b ? 100*(c.bid||0)/b : 0;
@@ -2217,12 +2222,20 @@ function tradeCombos(pool, pinned){
   return out;
 }
 
-function tradePool(roster, pinned){
-  const pool = roster.filter(tradeable)
-    .sort((a,b)=>b.effective_per_week-a.effective_per_week).slice(0, TRADE_POOL_N);
+function tradePool(roster, pinned, wantPos){
+  const ranked = roster.filter(tradeable).sort((a,b)=>b.effective_per_week-a.effective_per_week);
+  const pool = ranked.slice(0, TRADE_POOL_N);
+  // Position search: make sure every tradeable player AT that position is a
+  // candidate, not just the ones who happen to be in the overall top-N --
+  // their WR4 is exactly who "Rashee for another WR" might land.
+  if(wantPos) ranked.filter(p=>p.position===wantPos && !pool.includes(p)).forEach(p=>pool.push(p));
   if(pinned && !pool.includes(pinned)) pool.push(pinned);
   return pool;
 }
+
+// Deal-size filter: '' = any, else "<you give>-<you get>", e.g. '2-1'.
+const TRADE_SHAPES = [['','Any size'],['1-1','1-for-1'],['2-1','2-for-1 (you give 2)'],['1-2','1-for-2 (you get 2)'],['2-2','2-for-2']];
+const TRADE_POSITIONS = ['QB','RB','WR','TE'];
 
 function mgrTradeTargets(lg, me, pins){
   const slots = lg.rosterSlots || [];
@@ -2231,17 +2244,25 @@ function mgrTradeTargets(lg, me, pins){
 
   const pinGive = pins.give ? (me.roster||[]).find(p=>tradeKey(p)===pins.give) : null;
   let pinGet = null, pinGetTeam = null;
-  if(pins.get){
+  if(pins.get && !pins.get.startsWith('pos:')){
     for(const t of lg.teams||[]){
       if(t.is_me) continue;
       const hit = (t.roster||[]).find(p=>tradeKey(p)===pins.get);
       if(hit){ pinGet = hit; pinGetTeam = t; break; }
     }
   }
-  const pinned = !!(pinGive || pinGet);
+  // "Trade for" is either a specific player or a whole position ("pos:WR").
+  const wantPos = (pins.get||'').startsWith('pos:') ? pins.get.slice(4) : null;
+  const [giveN, getN] = pins.shape ? pins.shape.split('-').map(Number) : [null, null];
+  const sizeOk = (combo, n) => n==null || combo.length===n;
+  // Any explicit ask (a player on either side, or a position) shows the best
+  // matches even below the usual +0.5/wk bar -- you asked a specific
+  // question, so an honest "best available, and here's the cost" beats an
+  // empty list. Deal size alone is a filter, not a question, so it doesn't.
+  const pinned = !!(pinGive || pinGet || wantPos);
 
   const myBase = tradeRosterValue(me.roster||[], slots, curWeek);
-  const myCombos = tradeCombos(tradePool(me.roster||[], pinGive), pinGive);
+  const myCombos = tradeCombos(tradePool(me.roster||[], pinGive), pinGive).filter(c=>sizeOk(c, giveN));
   const cands = [];
   let evaluated = 0;
 
@@ -2249,7 +2270,8 @@ function mgrTradeTargets(lg, me, pins){
     if(opp.is_me) return;
     if(pinGetTeam && opp !== pinGetTeam) return;
     const oppBase = tradeRosterValue(opp.roster||[], slots, curWeek);
-    const oppCombos = tradeCombos(tradePool(opp.roster||[], pinGet), pinGet);
+    const oppCombos = tradeCombos(tradePool(opp.roster||[], pinGet, wantPos), pinGet)
+      .filter(c=>sizeOk(c, getN) && (!wantPos || c.some(p=>p.position===wantPos)));
 
     for(const give of myCombos){
       const giveKeys = new Set(give.map(tradeKey));
@@ -2362,9 +2384,13 @@ function tradeControlsHtml(lg, me, pins){
     const ps = (t.roster||[]).filter(tradeable).sort(byRos);
     return ps.length ? `<optgroup label="${escapeHtml(t.team_name||t.manager||'Team')}">${ps.map(p=>opt(p, pins.get)).join('')}</optgroup>` : '';
   }).join('');
+  const posOpts = TRADE_POSITIONS.map(pos=>`<option value="pos:${pos}"${pins.get==='pos:'+pos?' selected':''}>Any ${pos}</option>`).join('');
+  const shapeOpts = TRADE_SHAPES.map(([v,l])=>`<option value="${v}"${(pins.shape||'')===v?' selected':''}>${l}</option>`).join('');
   return `<div class="mgr-trade-pins">
     <label><span>Trade away</span><select id="mgrTradeGive"><option value="">Any of my players</option>${mine}</select></label>
-    <label><span>Trade for</span><select id="mgrTradeGet"><option value="">Anyone in the league</option>${theirs}</select></label>
+    <label><span>Trade for</span><select id="mgrTradeGet"><option value="">Anyone in the league</option>
+      <optgroup label="By position">${posOpts}</optgroup>${theirs}</select></label>
+    <label><span>Deal size</span><select id="mgrTradeShape">${shapeOpts}</select></label>
   </div>`;
 }
 
@@ -2376,8 +2402,8 @@ function mgrPaintTradeResults(key){
   if(!box) return;
   const lg = INSEASON.leagues[key];
   const me = mgrMyTeam(lg);
-  const pins = mgrTradePins[key] || {give:'', get:''};
-  const cacheKey = [key, INSEASON.generated, pins.give, pins.get].join('|');
+  const pins = mgrTradePins[key] || {give:'', get:'', shape:''};
+  const cacheKey = [key, INSEASON.generated, pins.give, pins.get, pins.shape||''].join('|');
   const curWeek = lg.currentWeek || INSEASON.currentWeek || 1;
   const noWeekly = !(lg.teams||[]).some(t=>(t.roster||[]).some(p=>p.week_projection!=null));
   const weeklyNote = noWeekly
@@ -2386,8 +2412,12 @@ function mgrPaintTradeResults(key){
 
   const paint = (res)=>{
     if(!res.results.length){
+      const shapeLbl = (TRADE_SHAPES.find(([v])=>v===(pins.shape||''))||[])[1];
       const pinName = [pins.give, pins.get].filter(Boolean).length
-        ? 'No package with that player helps both sides on any horizon. Try clearing a pin.'
+        ? `No ${pins.shape ? shapeLbl+' ' : ''}package matching those picks helps the other team on any horizon.
+           Try a different deal size or clearing a pick.`
+        : pins.shape
+        ? `No ${shapeLbl} trade improves your lineup by ${TRADE_MIN_MY_ROS}+ pts/wk while also helping the other team.`
         : `No trade improves your lineup by ${TRADE_MIN_MY_ROS}+ pts/wk while also helping the other team on any horizon.`;
       box.innerHTML = weeklyNote + `<div class="mgr-empty">${pinName}</div>`;
       return;
@@ -2406,12 +2436,14 @@ function mgrPaintTradeResults(key){
 
 function mgrBindTradeControls(key){
   const onPin = (side)=>(e)=>{
-    mgrTradePins[key] = Object.assign({give:'', get:''}, mgrTradePins[key], {[side]: e.target.value});
+    mgrTradePins[key] = Object.assign({give:'', get:'', shape:''}, mgrTradePins[key], {[side]: e.target.value});
     mgrPaintTradeResults(key);
   };
-  const g = document.getElementById('mgrTradeGive'), t = document.getElementById('mgrTradeGet');
+  const g = document.getElementById('mgrTradeGive'), t = document.getElementById('mgrTradeGet'),
+        z = document.getElementById('mgrTradeShape');
   if(g) g.onchange = onPin('give');
   if(t) t.onchange = onPin('get');
+  if(z) z.onchange = onPin('shape');
   mgrPaintTradeResults(key);
 }
 
@@ -2634,9 +2666,10 @@ function renderManagerLeagueDetail(el, key){
     <div class="mgr-section-lbl">Trade Targets</div>
     <div class="mgr-bench-note">Packages up to <b>2-for-2</b> that improve your starting lineup and
       <b>also help the other team</b> on at least one horizon -- rest of season, this week, or the
-      next ${TRADE_NEXT_WEEKS} weeks. The green chip is the pitch. Pin a player on either side to
-      ask "what can I get for him" or "what would it take to land him."</div>
-    ${tradeControlsHtml(lg, me, mgrTradePins[key] || {give:'', get:''})}
+      next ${TRADE_NEXT_WEEKS} weeks. The green chip is the pitch. Pick a player on either side, or a
+      position you want back, to ask a specific question -- e.g. Trade away <i>Rashee Rice</i>, Trade for
+      <i>Any WR</i>, Deal size <i>1-for-1</i>.</div>
+    ${tradeControlsHtml(lg, me, mgrTradePins[key] || {give:'', get:'', shape:''})}
     <div id="mgrTradeResults"></div>
   `;
   document.getElementById('mgrBackBtn').onclick = ()=>{ mgrDetailLeague=null; render(); };
