@@ -1,12 +1,12 @@
 {
  "year": 2026,
- "generated": "2026-09-23T13:16:59.055973+00:00",
+ "generated": "2026-09-29T18:24:57.372699+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
    "faab": true,
    "budget": 100,
-   "currentWeek": 3,
+   "currentWeek": 4,
    "teams": {
     "1": {
      "team_id": 1,
@@ -14,7 +14,7 @@
      "manager": "Zach Zimmer",
      "faab_spent": 1,
      "waiver_rank": 12,
-     "acquisitions": 4
+     "acquisitions": 6
     },
     "5": {
      "team_id": 5,
@@ -22,15 +22,15 @@
      "manager": "Jim Young",
      "faab_spent": 13,
      "waiver_rank": 8,
-     "acquisitions": 3
+     "acquisitions": 4
     },
     "6": {
      "team_id": 6,
      "team_name": "Ben Jarvis Green Ellis LLP",
      "manager": "Matthew Letten",
-     "faab_spent": 30,
-     "waiver_rank": 9,
-     "acquisitions": 4
+     "faab_spent": 32,
+     "waiver_rank": 11,
+     "acquisitions": 5
     },
     "7": {
      "team_id": 7,
@@ -46,7 +46,7 @@
      "manager": "Andrew Piotrowski",
      "faab_spent": 11,
      "waiver_rank": 6,
-     "acquisitions": 4
+     "acquisitions": 5
     },
     "11": {
      "team_id": 11,
@@ -54,7 +54,7 @@
      "manager": "Dan Beringer",
      "faab_spent": 4,
      "waiver_rank": 7,
-     "acquisitions": 3
+     "acquisitions": 4
     },
     "14": {
      "team_id": 14,
@@ -77,15 +77,15 @@
      "team_name": "TEXAS CHUPACABRAS",
      "manager": "Pablo De Luna",
      "faab_spent": 9,
-     "waiver_rank": 11,
-     "acquisitions": 3
+     "waiver_rank": 10,
+     "acquisitions": 4
     },
     "18": {
      "team_id": 18,
      "team_name": "Elements of  Intrigue",
      "manager": "sean mullins",
      "faab_spent": 17,
-     "waiver_rank": 10,
+     "waiver_rank": 9,
      "acquisitions": 4
     },
     "19": {
@@ -94,7 +94,7 @@
      "manager": "Matt McKenna",
      "faab_spent": 0,
      "waiver_rank": 5,
-     "acquisitions": 2
+     "acquisitions": 4
     },
     "20": {
      "team_id": 20,
@@ -102,7 +102,7 @@
      "manager": "Sean Wilkinson",
      "faab_spent": 0,
      "waiver_rank": 3,
-     "acquisitions": 0
+     "acquisitions": 1
     }
    },
    "priorBudget": 100,
@@ -431,25 +431,6 @@
     {
      "season": 2026,
      "week": 3,
-     "date": 1790114276071,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 5,
-     "add": {
-      "id": 4595342,
-      "name": "Oronde Gadsden",
-      "position": "TE"
-     },
-     "drop": {
-      "id": 3149687,
-      "name": "Chris Brooks"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
      "date": 1790147143195,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -502,6 +483,25 @@
      "drop": {
       "id": 4242512,
       "name": "Malik Willis"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790407073372,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3916433,
+      "name": "Jakobi Meyers",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4240631,
+      "name": "DeeJay Dallas"
      }
     },
     {
@@ -583,25 +583,6 @@
     {
      "season": 2026,
      "week": 3,
-     "date": 1790147143197,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 1,
-     "bid": 3,
-     "add": {
-      "id": 3046779,
-      "name": "Jared Goff",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 4362249,
-      "name": "Jayden Reed"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
      "date": 1790127351423,
      "type": "WAIVER",
      "status": "PENDING",
@@ -616,6 +597,117 @@
      "drop": {
       "id": 4685247,
       "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127402276,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4432577,
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4685247,
+      "name": "Braelon Allen"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 5,
+     "bid": 2,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3052587,
+      "name": "Baker Mayfield"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16009,
+      "name": "Packers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790233786506,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 2,
+     "add": {
+      "id": -16034,
+      "name": "Texans D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790114276071,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4595342,
+      "name": "Oronde Gadsden",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3149687,
+      "name": "Chris Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790147143197,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 1,
+     "bid": 3,
+     "add": {
+      "id": 3046779,
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4362249,
+      "name": "Jayden Reed"
      }
     },
     {
@@ -678,25 +770,6 @@
     {
      "season": 2026,
      "week": 3,
-     "date": 1790127402276,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 3,
-     "add": {
-      "id": 4432577,
-      "name": "C.J. Stroud",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 4685247,
-      "name": "Braelon Allen"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
      "date": 1790147143196,
      "type": "WAIVER",
      "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -735,25 +808,6 @@
     {
      "season": 2026,
      "week": 3,
-     "date": 1790147143197,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 5,
-     "bid": 2,
-     "add": {
-      "id": 3917315,
-      "name": "Kyler Murray",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 3052587,
-      "name": "Baker Mayfield"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
      "date": 1790147143198,
      "type": "WAIVER",
      "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -763,25 +817,6 @@
      "add": {
       "id": -16016,
       "name": "Vikings D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16027,
-      "name": "Buccaneers D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
-     "date": 1790147143197,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 1,
-     "bid": 0,
-     "add": {
-      "id": -16009,
-      "name": "Packers D/ST",
       "position": "D/ST"
      },
      "drop": {
@@ -7832,14 +7867,14 @@
    "platform": "espn",
    "faab": false,
    "budget": 100,
-   "currentWeek": 3,
+   "currentWeek": 4,
    "teams": {
     "1": {
      "team_id": 1,
      "team_name": "Mike D",
      "manager": "Michael Dendinger",
      "faab_spent": 0,
-     "waiver_rank": 8,
+     "waiver_rank": 10,
      "acquisitions": 1
     },
     "2": {
@@ -7847,7 +7882,7 @@
      "team_name": "Dayton's Daring Team",
      "manager": "Dayton Paul",
      "faab_spent": 0,
-     "waiver_rank": 9,
+     "waiver_rank": 12,
      "acquisitions": 0
     },
     "3": {
@@ -7856,22 +7891,22 @@
      "manager": "Kevin Zugschwert",
      "faab_spent": 0,
      "waiver_rank": 2,
-     "acquisitions": 3
+     "acquisitions": 4
     },
     "4": {
      "team_id": 4,
      "team_name": "Keith's Team",
      "manager": "Keith Quiring",
      "faab_spent": 0,
-     "waiver_rank": 6,
-     "acquisitions": 1
+     "waiver_rank": 9,
+     "acquisitions": 2
     },
     "5": {
      "team_id": 5,
      "team_name": "Go Pack Go",
      "manager": "Krenar Hazari",
      "faab_spent": 0,
-     "waiver_rank": 10,
+     "waiver_rank": 8,
      "acquisitions": 0
     },
     "6": {
@@ -7879,16 +7914,16 @@
      "team_name": "Team Hansen",
      "manager": "Nick Hansen",
      "faab_spent": 0,
-     "waiver_rank": 4,
-     "acquisitions": 3
+     "waiver_rank": 5,
+     "acquisitions": 4
     },
     "7": {
      "team_id": 7,
      "team_name": "Bruno's Best Team",
      "manager": "Bruno Prentice",
      "faab_spent": 0,
-     "waiver_rank": 5,
-     "acquisitions": 0
+     "waiver_rank": 6,
+     "acquisitions": 1
     },
     "8": {
      "team_id": 8,
@@ -7903,23 +7938,23 @@
      "team_name": "Jordan's Scary Team",
      "manager": "Jordan Miller",
      "faab_spent": 0,
-     "waiver_rank": 7,
-     "acquisitions": 1
+     "waiver_rank": 11,
+     "acquisitions": 3
     },
     "10": {
      "team_id": 10,
      "team_name": "1st and 11",
      "manager": "sean mullins",
      "faab_spent": 0,
-     "waiver_rank": 12,
-     "acquisitions": 5
+     "waiver_rank": 7,
+     "acquisitions": 7
     },
     "11": {
      "team_id": 11,
      "team_name": "34=GOAT (Bonnet\u2019s Team)",
      "manager": "Jason Bonnet",
      "faab_spent": 0,
-     "waiver_rank": 11,
+     "waiver_rank": 1,
      "acquisitions": 3
     },
     "12": {
@@ -7927,7 +7962,7 @@
      "team_name": "Nate's Nifty Team",
      "manager": "Nate Stephenson",
      "faab_spent": 0,
-     "waiver_rank": 1,
+     "waiver_rank": 4,
      "acquisitions": 3
     }
    },
@@ -8215,82 +8250,6 @@
     {
      "season": 2026,
      "week": 3,
-     "date": 1790148650229,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 11,
-     "bid": 0,
-     "add": {
-      "id": 4685720,
-      "name": "Bryce Young",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 4678008,
-      "name": "Jonathon Brooks"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
-     "date": 1790148650230,
-     "type": "WAIVER",
-     "status": "FAILED_PLAYERALREADYDROPPED",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": -16008,
-      "name": "Lions D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16007,
-      "name": "Broncos D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
-     "date": 1790148650229,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": 4685720,
-      "name": "Bryce Young",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 3917792,
-      "name": "Daniel Jones"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
-     "date": 1790127570773,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": 4685720,
-      "name": "Bryce Young",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 3917792,
-      "name": "Daniel Jones"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
      "date": 1790148650230,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -8329,6 +8288,63 @@
     {
      "season": 2026,
      "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16016,
+      "name": "Vikings D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650230,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16008,
+      "name": "Lions D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16007,
+      "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790127570773,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3917792,
+      "name": "Daniel Jones"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
      "date": 1790114192916,
      "type": "WAIVER",
      "status": "PENDING",
@@ -8343,6 +8359,25 @@
      "drop": {
       "id": -16007,
       "name": "Broncos D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
+     "date": 1790148650229,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3917792,
+      "name": "Daniel Jones"
      }
     },
     {
@@ -8367,6 +8402,25 @@
     {
      "season": 2026,
      "week": 3,
+     "date": 1790148650229,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4678008,
+      "name": "Jonathon Brooks"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 3,
      "date": 1790114208258,
      "type": "WAIVER",
      "status": "PENDING",
@@ -8376,25 +8430,6 @@
      "add": {
       "id": -16008,
       "name": "Lions D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16007,
-      "name": "Broncos D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 3,
-     "date": 1790148650230,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": -16016,
-      "name": "Vikings D/ST",
       "position": "D/ST"
      },
      "drop": {
