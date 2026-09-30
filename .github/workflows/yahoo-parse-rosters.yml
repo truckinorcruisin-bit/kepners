@@ -1,0 +1,38 @@
+name: Parse Yahoo Rosters (from phone-pushed HTML)
+
+# Triggers automatically whenever new/updated HTML lands in yahoo_roster_raw/,
+# which is where the iPhone Shortcut pushes each team's roster page. No cookie,
+# no network fetch here -- just parsing files that are already in the repo.
+
+on:
+  push:
+    paths:
+      - 'yahoo_roster_raw/**'
+  workflow_dispatch: {}  # lets you also trigger it manually from the Actions tab
+
+jobs:
+  parse-rosters:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install beautifulsoup4 --break-system-packages
+
+      - name: Parse committed roster HTML
+        run: |
+          python yahoo_parse_local.py --html-dir yahoo_roster_raw --out kepners_live_rosters.json
+
+      - name: Commit parsed JSON back to repo
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add kepners_live_rosters.json
+          git diff --staged --quiet || git commit -m "Update kepners_live_rosters.json [automated]"
+          git push
