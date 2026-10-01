@@ -10,6 +10,16 @@ on:
       - 'yahoo_roster_raw/**'
   workflow_dispatch: {}  # lets you also trigger it manually from the Actions tab
 
+# The Shortcut pushes one commit per team, so a 12-team run fires 12 pushes.
+# Only the newest run matters (its checkout already contains every earlier file),
+# so cancel any in-flight run instead of letting 12 of them race each other.
+concurrency:
+  group: yahoo-parse-rosters
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
 jobs:
   parse-rosters:
     runs-on: ubuntu-latest
@@ -23,16 +33,24 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install beautifulsoup4 --break-system-packages
+        run: pip install beautifulsoup4
 
       - name: Parse committed roster HTML
         run: |
-          python yahoo_parse_local.py --html-dir yahoo_roster_raw --out kepners_live_rosters.json
+          python yahoo_parse_local.py --html-dir yahoo_roster_raw --out kepners_live_rosters.json 2>&1 | tee parse.log
+          exit ${PIPESTATUS[0]}
 
       - name: Commit parsed JSON back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add kepners_live_rosters.json
-          git diff --staged --quiet || git commit -m "Update kepners_live_rosters.json [automated]"
-          git push
+          git diff --staged --quiet && { echo "No changes to commit."; exit 0; }
+          git commit -m "Update kepners_live_rosters.json [automated]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase origin main && git push && exit 0
+            echo "Push attempt $i rejected; retrying..."
+            sleep $((i * 3))
+          done
+          echo "Push failed after 5 attempts" >&2
+          exit 1
