@@ -808,6 +808,20 @@
   .mgr-comingsoon{font-size:10px;color:var(--dim);line-height:1.6;padding:10px 12px;
     border:1px dashed var(--line-2);background:var(--panel);}
 
+  /* power rankings over time */
+  .mgr-ph-chart{width:100%;height:auto;display:block;margin:4px 0 8px;}
+  .mgr-ph-chart text{font-family:'IBM Plex Mono',monospace;}
+  .mgr-ph-lbl{cursor:pointer;}
+  .mgr-ph-sum{font-size:10.5px;margin:0 0 8px;color:var(--dim);}
+  .mgr-ph-sum b{color:var(--amber);}
+  .mgr-ph-row{cursor:pointer;}
+  .mgr-ph-row.is-focus{background:rgba(0,217,255,.07);}
+  .mgr-ph-row.is-me.is-focus{background:rgba(255,183,3,.1);}
+  .mgr-ph-chg{flex:0 0 38px;text-align:right;font-size:9.5px;font-variant-numeric:tabular-nums;color:var(--dim);}
+  .mgr-ph-chg.up{color:var(--green);}
+  .mgr-ph-chg.down{color:var(--red);}
+  .mgr-ph-dv{flex:0 0 40px;text-align:right;font-size:9px;color:var(--dim);font-variant-numeric:tabular-nums;}
+
   /* FAAB assistant */
   .mgr-faab-row{cursor:pointer;}
   .mgr-faab-row.open{background:rgba(0,217,255,.04);}
@@ -1005,6 +1019,9 @@ let INSEASON=null;
 // waiver_history_<year>.json from espn_waiver_history.py, sleeper_trending.json
 // from sleeper_trending.py.
 let WAIVERS=null, TRENDING=null;
+// Weekly power-ranking snapshots (power_history.py, written by build_inseason.py).
+// One entry per league per NFL week -- see that file for why it's never daily.
+let POWER_HIST=null;
 // activeView is the NEW top-level nav (Manager/Draft/Players). activeMode
 // stays exactly what it was -- the Draft view's OWN internal sub-nav
 // (draft/prep/history/replay) -- and is only consulted while
@@ -1222,6 +1239,10 @@ async function boot(){
     const rT = await fetch(`sleeper_trending.json?t=${Date.now()}`);
     if(rT.ok) TRENDING = await rT.json();
   }catch(e){ /* heat signal is optional */ }
+  try{
+    const rP = await fetch(`power_rankings_history.json?t=${Date.now()}`);
+    if(rP.ok) POWER_HIST = await rP.json();
+  }catch(e){ /* the history chart shows its own empty state */ }
 
   computeSeanOverallRanks();
   renderLeagueTabs();
@@ -1478,6 +1499,156 @@ function mgrRankBoard(rows, key, fmt){
       <span class="mgr-rank-val tier-${tier}">${fmt(r[key])}</span>
     </div>`;
   }).join('');
+}
+
+// ---- power rankings over time ----
+// Reads power_rankings_history.json: ONE snapshot per league per NFL week
+// (build_inseason.py -> power_history.py; a same-week re-run replaces the
+// entry, so it can never become a daily series). Ranks and values are the same
+// ones the two boards above show -- power_history.py is a port of
+// mgrLeagueRankings, verified identical -- so a point on this chart is exactly
+// what that board read when the week was captured.
+let mgrPowerMetric = 'starter';     // 'starter' | 'bench'
+const mgrPowerFocus = {};           // league key -> team_id whose line is highlighted
+
+function mgrPowerWeeks(key){
+  const L = POWER_HIST && POWER_HIST.leagues && POWER_HIST.leagues[key];
+  if(!L || !L.weeks) return [];
+  return Object.keys(L.weeks).map(Number).filter(n=>!isNaN(n)).sort((a,b)=>a-b)
+    .map(w=>({week:w, snap:L.weeks[String(w)]}));
+}
+
+function mgrRenderPowerHistory(key, me){
+  const box = document.getElementById('mgrPowerHist');
+  if(!box) return;
+  const weeks = mgrPowerWeeks(key);
+  if(!weeks.length){
+    box.innerHTML = `<div class="mgr-empty">No weekly history recorded for this league yet.<br>
+      It starts the next time the In-Season Data workflow or a roster scrape runs,
+      and adds one point per NFL week after that.</div>`;
+    return;
+  }
+
+  const bench = mgrPowerMetric==='bench';
+  const rk = bench ? 'benchRank' : 'starterRank';
+  const vk = bench ? 'bench' : 'surplus';
+  const fmt = v => bench ? v.toFixed(1) : (v>0?'+':'')+v.toFixed(1);
+  const meId = String(me.team_id);
+  const focus = mgrPowerFocus[key] || meId;
+  const last = weeks[weeks.length-1], prev = weeks.length>1 ? weeks[weeks.length-2] : null;
+  const N = Math.max(...weeks.map(w=>w.snap.of||0), 2);
+  const ids = [...new Set(weeks.flatMap(w=>Object.keys(w.snap.teams||{})))];
+
+  // ---- geometry (viewBox units; the SVG scales to the container) ----
+  const W=360, L=20, R=108, T=14, B=24, H=T+B+Math.max(N-1,1)*24;
+  const pw=W-L-R, ph=H-T-B;
+  const X = i => weeks.length>1 ? L + i*pw/(weeks.length-1) : L+pw;
+  const Y = r => T + (r-1)*ph/Math.max(N-1,1);
+
+  const pathFor = tid=>{
+    let d='', pen=false;
+    weeks.forEach((w,i)=>{
+      const t = (w.snap.teams||{})[tid];
+      if(!t){ pen=false; return; }
+      d += `${pen?'L':'M'}${X(i).toFixed(1)},${Y(t[rk]).toFixed(1)} `;
+      pen = true;
+    });
+    return d.trim();
+  };
+  const dotsFor = (tid, r, color)=>weeks.map((w,i)=>{
+    const t = (w.snap.teams||{})[tid];
+    return t ? `<circle cx="${X(i).toFixed(1)}" cy="${Y(t[rk]).toFixed(1)}" r="${r}" style="fill:${color}"/>` : '';
+  }).join('');
+
+  const lineSvg = (tid, kind)=>{
+    const color = kind==='focus' ? (tid===meId ? 'var(--amber)' : 'var(--cyan)')
+                : kind==='me' ? 'var(--amber)' : 'var(--dim)';
+    const wdt = kind==='focus' ? 3 : (kind==='me' ? 2 : 1.4);
+    const op = kind==='other' ? .38 : 1;
+    const d = pathFor(tid);
+    const line = weeks.length>1 && d.includes('L')
+      ? `<path d="${d}" fill="none" style="stroke:${color};stroke-width:${wdt};opacity:${op}" stroke-linejoin="round" stroke-linecap="round"/>` : '';
+    return line + `<g style="opacity:${op}">${dotsFor(tid, kind==='focus'?4:2.5, color)}</g>`;
+  };
+
+  let svg = `<svg class="mgr-ph-chart" viewBox="0 0 ${W} ${H}" role="img"
+      aria-label="${bench?'Bench depth':'Starters'} power rank by week">`;
+  for(let r=1;r<=N;r++){
+    svg += `<line x1="${L}" x2="${L+pw}" y1="${Y(r)}" y2="${Y(r)}" style="stroke:var(--line)" stroke-width="1"/>
+      <text x="${L-7}" y="${Y(r)+3}" text-anchor="end" font-size="8" style="fill:var(--dim)">${r}</text>`;
+  }
+  const step = weeks.length>10 ? 2 : 1;
+  weeks.forEach((w,i)=>{
+    if(i%step && i!==weeks.length-1) return;
+    svg += `<text x="${X(i)}" y="${H-7}" text-anchor="middle" font-size="8.5" style="fill:var(--dim)">W${w.week}</text>`;
+  });
+  ids.filter(t=>t!==focus && t!==meId).forEach(t=>{ svg += lineSvg(t,'other'); });
+  if(meId!==focus && ids.includes(meId)) svg += lineSvg(meId,'me');
+  if(ids.includes(focus)) svg += lineSvg(focus,'focus');
+  // End-of-line labels at the latest week's position -- ranks are unique per
+  // week, so labels are one slot apart and can never collide.
+  Object.keys(last.snap.teams||{}).forEach(tid=>{
+    const t = last.snap.teams[tid];
+    const isF = tid===focus, isM = tid===meId;
+    const color = isF ? (isM?'var(--amber)':'var(--cyan)') : (isM?'var(--amber)':'var(--dim)');
+    const nm = String(t.name||('Team '+tid));
+    svg += `<g class="mgr-ph-lbl" data-tid="${escapeHtml(tid)}">
+      <text x="${X(weeks.length-1)+9}" y="${Y(t[rk])+3}" font-size="8.5" style="fill:${color};${isF||isM?'font-weight:700':''}">${
+        escapeHtml(nm.length>15 ? nm.slice(0,14)+'…' : nm)}</text></g>`;
+  });
+  svg += '</svg>';
+
+  // ---- summary + table ----
+  const mine = (last.snap.teams||{})[meId];
+  let sum = '';
+  if(mine){
+    const pm = prev && (prev.snap.teams||{})[meId];
+    const d = pm ? pm[rk]-mine[rk] : null;
+    sum = `You're <b>#${mine[rk]}</b> of ${last.snap.of} in ${bench?'bench depth':'starters'} as of Week ${last.week}`
+      + (d==null ? '' : d>0 ? `, up ${d} since Week ${prev.week}` : d<0 ? `, down ${-d} since Week ${prev.week}` : `, unchanged since Week ${prev.week}`) + '.';
+  }
+  const rows = Object.keys(last.snap.teams||{}).map(tid=>({tid, t:last.snap.teams[tid],
+      p: prev ? (prev.snap.teams||{})[tid] : null}))
+    .sort((a,b)=>a.t[rk]-b.t[rk]);
+  const tbl = rows.map(({tid,t,p})=>{
+    let chg='<span class="mgr-ph-chg">–</span>', dv='<span class="mgr-ph-dv"></span>';
+    if(p){
+      const d = p[rk]-t[rk];
+      chg = d>0 ? `<span class="mgr-ph-chg up">▲${d}</span>` : d<0 ? `<span class="mgr-ph-chg down">▼${-d}</span>` : `<span class="mgr-ph-chg">–</span>`;
+      const dd = Math.round((t[vk]-p[vk])*10)/10;
+      dv = `<span class="mgr-ph-dv">${dd>0?'+':''}${dd.toFixed(1)}</span>`;
+    }
+    const isM = tid===meId;
+    return `<div class="mgr-rank-row mgr-ph-row${isM?' is-me':''}${tid===focus?' is-focus':''}" data-tid="${escapeHtml(tid)}">
+      <span class="mgr-rank-n">${t[rk]}</span>
+      <span class="mgr-rank-name">${escapeHtml(t.name||('Team '+tid))}</span>
+      ${chg}${dv}
+      <span class="mgr-rank-val tier-${isM?'me':'mid'}">${fmt(t[vk])}</span>
+    </div>`;
+  }).join('');
+
+  const first = weeks[0].week;
+  const note = weeks.length===1
+    ? `First snapshot is <b>Week ${first}</b>. Each NFL week adds one point, so the lines draw in as the season goes.`
+    : `Weeks ${first}–${last.week}. One snapshot per NFL week; the last refresh of each week is the one kept.`;
+
+  box.innerHTML = `
+    <div class="pt-toggle">
+      <button data-pm="starter" class="${bench?'':'on'}">Starters</button>
+      <button data-pm="bench" class="${bench?'on':''}">Bench depth</button>
+    </div>
+    <div class="mgr-ph-sum">${sum}</div>
+    ${svg}
+    <div class="mgr-bench-note">${note} Rank 1 is strongest. Tap a team (here or in the table) to
+      highlight its line. The table shows change vs. the prior week.</div>
+    ${tbl}`;
+
+  box.querySelectorAll('button[data-pm]').forEach(b=>{
+    b.onclick = ()=>{ mgrPowerMetric = b.dataset.pm==='bench' ? 'bench' : 'starter'; mgrRenderPowerHistory(key, me); };
+  });
+  box.querySelectorAll('[data-tid]').forEach(n=>{
+    n.onclick = ()=>{ mgrPowerFocus[key] = n.dataset.tid; mgrRenderPowerHistory(key, me); };
+  });
 }
 
 // ---- waiver engine ----
@@ -2732,6 +2903,9 @@ function renderManagerLeagueDetail(el, key){
       </div>
     </div>
 
+    <div class="mgr-section-lbl">Power rankings over time</div>
+    <div id="mgrPowerHist"></div>
+
     <div class="mgr-section-lbl">Waiver Targets</div>
     <div class="mgr-bench-note">Free agents that would <b>genuinely start</b> on your team right now --
       each one is scored against the specific starter he'd bump, not against raw value.
@@ -2778,6 +2952,7 @@ function renderManagerLeagueDetail(el, key){
   `;
   document.getElementById('mgrBackBtn').onclick = ()=>{ mgrDetailLeague=null; render(); };
   mgrBindFaabRows(el);   // recommended-list rows from the initial render above
+  mgrRenderPowerHistory(key, me);
 
   const moreBtn = document.getElementById('mgrWaiverMore');
   if(moreBtn) moreBtn.onclick = ()=>{

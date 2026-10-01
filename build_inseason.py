@@ -636,6 +636,14 @@ def main():
         json.dump(out, f, indent=2)
     print(f"Wrote {OUT_FILE}: {len(leagues)} league(s), week {current_week}.")
 
+    # Weekly power-ranking snapshot (one entry per league per NFL week; a re-run
+    # in the same week replaces it). Wrapped so history can never fail the build.
+    try:
+        from power_history import update_history
+        update_history(out)
+    except Exception as e:
+        print(f"  ::warning::power history snapshot failed ({e}) -- build itself is fine.")
+
 
 if __name__ == "__main__":
     main()
