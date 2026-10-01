@@ -1,18 +1,21 @@
 name: Parse Yahoo Rosters (from phone-pushed HTML)
 
-# Triggers automatically whenever new/updated HTML lands in yahoo_roster_raw/,
-# which is where the iPhone Shortcut pushes each team's roster page. No cookie,
-# no network fetch here -- just parsing files that are already in the repo.
+# Triggers whenever new/updated HTML lands under yahoo_roster_raw/, which is where
+# the iPhone Shortcut pushes each team's roster page:
+#     yahoo_roster_raw/kepners/team_<id>.html
+#     yahoo_roster_raw/miami/team_<id>.html
+# One folder per league; each is parsed into <league>_live_rosters.json.
+# No cookie, no network fetch here -- just parsing files already in the repo.
 
 on:
   push:
     paths:
       - 'yahoo_roster_raw/**'
-  workflow_dispatch: {}  # lets you also trigger it manually from the Actions tab
+  workflow_dispatch: {}  # also runnable by hand from the Actions tab
 
-# The Shortcut pushes one commit per team, so a 12-team run fires 12 pushes.
+# The Shortcut pushes one commit per team, so a full run fires a dozen pushes.
 # Only the newest run matters (its checkout already contains every earlier file),
-# so cancel any in-flight run instead of letting 12 of them race each other.
+# so cancel any in-flight run instead of letting them race each other.
 concurrency:
   group: yahoo-parse-rosters
   cancel-in-progress: true
@@ -23,6 +26,8 @@ permissions:
 jobs:
   parse-rosters:
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -35,33 +40,89 @@ jobs:
       - name: Install dependencies
         run: pip install beautifulsoup4
 
-      - name: Parse committed roster HTML
+      # ONE-TIME, IDEMPOTENT. Before per-league folders existed the Shortcut wrote
+      # yahoo_roster_raw/team_<id>.html -- those are all Kepners. git mv keeps their
+      # history. If the Shortcut already wrote the new path, the stale flat copy is
+      # simply deleted. A no-op once nothing flat remains.
+      - name: Migrate legacy flat files into yahoo_roster_raw/kepners/
+        shell: bash
         run: |
-          python yahoo_parse_local.py --html-dir yahoo_roster_raw --out kepners_live_rosters.json 2>&1 | tee parse.log
-          exit ${PIPESTATUS[0]}
+          shopt -s nullglob
+          flat=(yahoo_roster_raw/team_*.html)
+          if [ ${#flat[@]} -eq 0 ]; then echo "No legacy flat files."; exit 0; fi
+          mkdir -p yahoo_roster_raw/kepners
+          for f in "${flat[@]}"; do
+            dest="yahoo_roster_raw/kepners/$(basename "$f")"
+            if [ -e "$dest" ]; then git rm -q "$f"; else git mv "$f" "$dest"; fi
+          done
+          echo "Migrated ${#flat[@]} legacy file(s) into yahoo_roster_raw/kepners/"
 
-      # Rebuild the Manager Cockpit data so Kepners shows the new rosters right
-      # away, instead of waiting for Tuesday's In-Season run. Pure transformation
-      # of files already in the repo (ESPN projections + these rosters), so no
-      # secrets needed. continue-on-error: a build problem must never stop the
-      # parsed rosters themselves from being committed.
-      - name: Rebuild in-season cockpit data (adds Kepners)
+      # Each league parses to a TEMP file and replaces the real one only if at least
+      # one team parsed. A bad scrape (expired cookie, wrong URL) therefore can't wipe
+      # the last good rosters, and one league failing can't block the other. The run
+      # still goes red at the end so a failure isn't missed.
+      - name: Parse committed roster HTML (per league)
+        shell: bash
+        run: |
+          shopt -s nullglob
+          seen=0; ok=0; failed=""
+          for lg in kepners miami; do
+            dir="yahoo_roster_raw/$lg"
+            files=("$dir"/team_*.html)
+            if [ ${#files[@]} -eq 0 ]; then echo "[$lg] no files -- skipping"; continue; fi
+            seen=$((seen+1))
+            echo "===== $lg (${#files[@]} files) ====="
+            # When the newest file was committed = when the phone actually scraped it.
+            stamp=$(gh api "repos/$GITHUB_REPOSITORY/commits?path=$dir&per_page=1" \
+                      --jq '.[0].commit.committer.date' 2>/dev/null || true)
+            args=(--html-dir "$dir" --out "$lg.tmp.json")
+            [ -n "$stamp" ] && args+=(--fetched-at "$stamp")
+            python yahoo_parse_local.py "${args[@]}" 2>&1 | tee -a parse.log
+            rc=${PIPESTATUS[0]}
+            if [ $rc -eq 0 ]; then
+              mv "$lg.tmp.json" "${lg}_live_rosters.json"; ok=$((ok+1))
+            else
+              echo "::warning::[$lg] no usable teams parsed -- keeping the last good ${lg}_live_rosters.json"
+              rm -f "$lg.tmp.json"; failed="$failed $lg"
+            fi
+          done
+          if [ $seen -eq 0 ]; then echo "::error::No roster HTML found under yahoo_roster_raw/<league>/"; exit 1; fi
+          [ -n "$failed" ] && echo "PARSE_FAILED=$failed" >> "$GITHUB_ENV"
+          [ $ok -gt 0 ] || exit 1
+          exit 0
+
+      # Rebuild the Manager Cockpit data so the new rosters show up right away
+      # instead of waiting for Tuesday's In-Season run. Pure transformation of files
+      # already in the repo, so no secrets. continue-on-error: a build problem must
+      # never stop the parsed rosters themselves from being committed.
+      - name: Rebuild in-season cockpit data
         continue-on-error: true
         run: |
           python build_inseason.py 2026 2>&1 | tee -a parse.log
           exit ${PIPESTATUS[0]}
 
       - name: Commit parsed JSON back to repo
+        shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add kepners_live_rosters.json inseason_2026.json power_rankings_history.json
+          # `git add` aborts if ANY listed path is missing, so only add what exists.
+          for f in kepners_live_rosters.json miami_live_rosters.json inseason_2026.json power_rankings_history.json; do
+            [ -f "$f" ] && git add "$f"
+          done
+          git add -A yahoo_roster_raw   # stages the one-time migration moves
           git diff --staged --quiet && { echo "No changes to commit."; exit 0; }
-          git commit -m "Update Kepners live rosters + in-season data [automated]"
+          git commit -m "Update live rosters + in-season data [automated]"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push && exit 0
             echo "Push attempt $i rejected; retrying..."
             sleep $((i * 3))
           done
           echo "Push failed after 5 attempts" >&2
+          exit 1
+
+      - name: Flag leagues that failed to parse
+        if: env.PARSE_FAILED != ''
+        run: |
+          echo "::error::Roster HTML for:${PARSE_FAILED} had no usable teams (expired Yahoo cookie, or the Shortcut fetched the wrong URL). Their last good data was kept. See 'Parse committed roster HTML' above."
           exit 1
