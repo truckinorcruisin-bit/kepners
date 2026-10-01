@@ -458,10 +458,8 @@ LIVE_LEAGUES = {
     "kepners": {"label": "Kepners", "file": "kepners_live_rosters.json",
                 "team_id": "12", "team_name": "The Pickups",
                 "aliases": "kepners_team_aliases.json"},
-    # TODO(Sean): set team_id to your team number in Miami (the number in
-    # https://football.fantasysports.yahoo.com/f1/391024/<team_id>/team).
     "miami":   {"label": "Miami", "file": "miami_live_rosters.json",
-                "team_id": None, "team_name": "Hanna Lees Revenge",
+                "team_id": "4", "team_name": "Hanna Lees Revenge",
                 "aliases": "miami_team_aliases.json"},
 }
 
