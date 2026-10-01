@@ -3,7 +3,7 @@
   "inspire11": {
    "weeks": {
     "4": {
-     "capturedAt": "2026-10-01T16:14:54.790115+00:00",
+     "capturedAt": "2026-10-01T16:15:15.972719+00:00",
      "of": 12,
      "teams": {
       "1": {
@@ -109,7 +109,7 @@
   "kepners": {
    "weeks": {
     "4": {
-     "capturedAt": "2026-10-01T16:14:54.790115+00:00",
+     "capturedAt": "2026-10-01T16:15:15.972719+00:00",
      "of": 12,
      "teams": {
       "1": {
@@ -215,16 +215,32 @@
   "miami": {
    "weeks": {
     "4": {
-     "capturedAt": "2026-10-01T16:14:54.790115+00:00",
-     "of": 1,
+     "capturedAt": "2026-10-01T16:15:15.972719+00:00",
+     "of": 3,
      "teams": {
       "1": {
        "bench": 19.2,
-       "benchRank": 1,
+       "benchRank": 3,
        "isMe": false,
        "name": "MakeMyTeamGreatAgain",
+       "starterRank": 3,
+       "surplus": -0.6
+      },
+      "2": {
+       "bench": 22.4,
+       "benchRank": 1,
+       "isMe": false,
+       "name": "Monkey Business",
        "starterRank": 1,
-       "surplus": 0.0
+       "surplus": 4.4
+      },
+      "3": {
+       "bench": 19.3,
+       "benchRank": 2,
+       "isMe": false,
+       "name": "Fogle\u2019s Moguls",
+       "starterRank": 2,
+       "surplus": 2.2
       }
      }
     }
@@ -233,7 +249,7 @@
   "zimmer": {
    "weeks": {
     "4": {
-     "capturedAt": "2026-10-01T16:14:54.790115+00:00",
+     "capturedAt": "2026-10-01T16:15:15.972719+00:00",
      "of": 12,
      "teams": {
       "1": {
@@ -337,6 +353,6 @@
    }
   }
  },
- "updated": "2026-10-01T16:14:54.790115+00:00",
+ "updated": "2026-10-01T16:15:15.972719+00:00",
  "version": 1
 }

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T16:14:50Z",
+  "fetched_at": "2026-10-01T16:15:00Z",
   "teams": {
     "1": {
       "team_name": "MakeMyTeamGreatAgain",
@@ -158,6 +158,308 @@
           "roster_slot": "DEF",
           "is_keeper": false,
           "bye_week": "10"
+        }
+      ]
+    },
+    "2": {
+      "team_name": "Monkey Business",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "32671",
+          "name": "Joe Burrow",
+          "position": "QB",
+          "nfl_team": "Cin",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "40059",
+          "name": "Jahmyr Gibbs",
+          "position": "RB",
+          "nfl_team": "Det",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "41791",
+          "name": "Ashton Jeanty",
+          "position": "RB",
+          "nfl_team": "LV",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "32703",
+          "name": "Tee Higgins",
+          "position": "WR",
+          "nfl_team": "Cin",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "30994",
+          "name": "DJ Moore",
+          "position": "WR",
+          "nfl_team": "Buf",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "41877",
+          "name": "Harold Fannin Jr.",
+          "position": "TE",
+          "nfl_team": "Cle",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33966",
+          "name": "Chris Olave",
+          "position": "WR",
+          "nfl_team": "NO",
+          "roster_slot": "W/R/T",
+          "is_keeper": true,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40234",
+          "name": "Parker Washington",
+          "position": "WR",
+          "nfl_team": "Jax",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "33477",
+          "name": "Nico Collins",
+          "position": "WR",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40993",
+          "name": "Bucky Irving",
+          "position": "RB",
+          "nfl_team": "TB",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "30197",
+          "name": "Chris Godwin Jr.",
+          "position": "WR",
+          "nfl_team": "TB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40042",
+          "name": "Jordan Addison",
+          "position": "WR",
+          "nfl_team": "Min",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "31010",
+          "name": "Courtland Sutton",
+          "position": "WR",
+          "nfl_team": "Den",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "30295",
+          "name": "Aaron Jones Sr.",
+          "position": "RB",
+          "nfl_team": "Min",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "100007",
+          "name": "Broncos",
+          "position": "DEF",
+          "nfl_team": "Den",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "100014",
+          "name": "Rams",
+          "position": "DEF",
+          "nfl_team": "LAR",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        }
+      ]
+    },
+    "3": {
+      "team_name": "Fogle\u2019s Moguls",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "30123",
+          "name": "Patrick Mahomes",
+          "position": "QB",
+          "nfl_team": "KC",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40055",
+          "name": "Bijan Robinson",
+          "position": "RB",
+          "nfl_team": "Atl",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40196",
+          "name": "Chase Brown",
+          "position": "RB",
+          "nfl_team": "Cin",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "33963",
+          "name": "Drake London",
+          "position": "WR",
+          "nfl_team": "Atl",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "32692",
+          "name": "Justin Jefferson",
+          "position": "WR",
+          "nfl_team": "Min",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "40878",
+          "name": "Brock Bowers",
+          "position": "TE",
+          "nfl_team": "LV",
+          "roster_slot": "TE",
+          "is_keeper": true,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41793",
+          "name": "Tetairoa McMillan",
+          "position": "WR",
+          "nfl_team": "Car",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "33514",
+          "name": "Chuba Hubbard",
+          "position": "RB",
+          "nfl_team": "Car",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40121",
+          "name": "Michael Wilson",
+          "position": "WR",
+          "nfl_team": "Ari",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "41804",
+          "name": "Emeka Egbuka",
+          "position": "WR",
+          "nfl_team": "TB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "33100",
+          "name": "Rico Dowdle",
+          "position": "RB",
+          "nfl_team": "Pit",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "31856",
+          "name": "Josh Jacobs",
+          "position": "RB",
+          "nfl_team": "GB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "42646",
+          "name": "KC Concepcion Jr.",
+          "position": "WR",
+          "nfl_team": "Cle",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40896",
+          "name": "Jayden Daniels",
+          "position": "QB",
+          "nfl_team": "Was",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "100016",
+          "name": "Vikings",
+          "position": "DEF",
+          "nfl_team": "Min",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "100023",
+          "name": "Steelers",
+          "position": "DEF",
+          "nfl_team": "Pit",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "9"
         }
       ]
     }
