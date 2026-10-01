@@ -1,0 +1,166 @@
+{
+  "fetched_at": "2026-10-01T16:14:50Z",
+  "teams": {
+    "1": {
+      "team_name": "MakeMyTeamGreatAgain",
+      "player_count": 17,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "34218",
+          "name": "Brock Purdy",
+          "position": "QB",
+          "nfl_team": "SF",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "32711",
+          "name": "Jonathan Taylor",
+          "position": "RB",
+          "nfl_team": "Ind",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "29279",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "nfl_team": "Bal",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41808",
+          "name": "Matthew Golden",
+          "position": "WR",
+          "nfl_team": "GB",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40039",
+          "name": "Zay Flowers",
+          "position": "WR",
+          "nfl_team": "Bal",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41799",
+          "name": "Tyler Warren",
+          "position": "TE",
+          "nfl_team": "Ind",
+          "roster_slot": "TE",
+          "is_keeper": true,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "42010",
+          "name": "Jacory Croskey-Merritt",
+          "position": "RB",
+          "nfl_team": "Was",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "41821",
+          "name": "Quinshon Judkins",
+          "position": "RB",
+          "nfl_team": "Cle",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "41823",
+          "name": "TreVeyon Henderson",
+          "position": "RB",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "28534",
+          "name": "Stefon Diggs",
+          "position": "WR",
+          "nfl_team": "Was",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "42661",
+          "name": "Denzel Boston",
+          "position": "WR",
+          "nfl_team": "Cle",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "32725",
+          "name": "J.K. Dobbins",
+          "position": "RB",
+          "nfl_team": "Den",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "42712",
+          "name": "Kaelon Black",
+          "position": "RB",
+          "nfl_team": "SF",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "31883",
+          "name": "A.J. Brown",
+          "position": "WR",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "42638",
+          "name": "Kenyon Sadiq",
+          "position": "TE",
+          "nfl_team": "NYJ",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "40118",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "nfl_team": "Mia",
+          "roster_slot": "IR",
+          "is_keeper": true,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "100003",
+          "name": "Bears",
+          "position": "DEF",
+          "nfl_team": "Chi",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "10"
+        }
+      ]
+    }
+  },
+  "problems": {}
+}
