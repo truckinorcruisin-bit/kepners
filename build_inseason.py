@@ -6,9 +6,9 @@ reads, inseason_<year>.json.
 
 INPUTS (all optional -- a missing one degrades that league, not the run):
     yahoo_inseason_<year>.json   rosters/FA for Kepners + Miami (Yahoo API -- blocked)
-    kepners_live_rosters.json    Kepners rosters scraped by the iPhone Shortcut and
-                                 parsed by yahoo_parse_local.py. Used for Kepners
-                                 whenever the Yahoo API pull above has no Kepners.
+    <league>_live_rosters.json   rosters scraped by the iPhone Shortcut and parsed by
+                                 yahoo_parse_local.py (see LIVE_LEAGUES). Used for a
+                                 Yahoo league whenever the API pull above lacks it.
     espn_inseason_<year>.json    rosters/FA for Zimmer
     player_ros_<year>.json       rest-of-season projections for everybody
     bigboard.json                roster shapes (already merged from the Excel
@@ -89,8 +89,9 @@ def canonical_pos(pos):
         return "DEF"
     if p in ("K", "K-", "PK"):
         return "K"
-    if "/" in p:                      # Yahoo multi-eligibility, e.g. "WR/TE"
-        p = p.split("/")[0].strip()
+    for sep in ("/", ","):            # Yahoo multi-eligibility, e.g. "WR/TE" or "WR,RB"
+        if sep in p:
+            p = p.split(sep)[0].strip()
     return p
 
 
@@ -445,14 +446,34 @@ def build_league(key, raw, roster_slots, ros_index):
 #                      from the Zimmer/Inspire11 pulls. Valid because every
 #                      league here uses the same standard scoring.
 # A real Yahoo API pull, if one ever lands, takes precedence over all of this.
-KEPNERS_LIVE_FILE = "kepners_live_rosters.json"
+#
+# One entry per scraped league. Each Shortcut run pushes
+# yahoo_roster_raw/<key>/team_<id>.html; the Parse workflow turns that folder
+# into <key>_live_rosters.json; this reads it.
+#   team_id    Sean's team number in that league (the number in his roster URL,
+#              .../f1/<league_id>/<team_id>/team). PRIMARY match.
+#   team_name  fallback match only, in case Yahoo renumbers teams.
+#   aliases    optional {Yahoo team label -> manager} file; absent is fine.
+LIVE_LEAGUES = {
+    "kepners": {"label": "Kepners", "file": "kepners_live_rosters.json",
+                "team_id": "12", "team_name": "The Pickups",
+                "aliases": "kepners_team_aliases.json"},
+    # TODO(Sean): set team_id to your team number in Miami (the number in
+    # https://football.fantasysports.yahoo.com/f1/391024/<team_id>/team).
+    "miami":   {"label": "Miami", "file": "miami_live_rosters.json",
+                "team_id": None, "team_name": "Hanna Lees Revenge",
+                "aliases": "miami_team_aliases.json"},
+}
 
-# Sean's Yahoo team. team_id is the primary match; the name is only a fallback
-# in case Yahoo renumbers teams between seasons.
-MY_YAHOO_TEAMS = {"kepners": {"team_id": "12", "team_name": "The Pickups"}}
-
-# Yahoo's bench code is BN; ESPN's (which the UI checks) is BE.
-YAHOO_SLOT_MAP = {"BN": "BE"}
+# Yahoo slot codes -> the vocabulary the UI/optimizer use. BN is Yahoo's bench
+# (ESPN's, which the UI checks, is BE). Miami has two FLEX slots, which Yahoo
+# labels W/R/T in the roster table -- listed under every spelling it is known
+# to use so a variant can't silently turn a starter into a "bench" player.
+YAHOO_SLOT_MAP = {
+    "BN": "BE",
+    "W/R/T": "FLEX", "W/R": "FLEX", "R/W/T": "FLEX", "WR/RB/TE": "FLEX",
+    "W/T": "FLEX", "FLEX": "FLEX", "UTIL": "FLEX",
+}
 
 DERIVED_FA_LIMIT = 200          # mirrors FA_LIMIT in the platform pulls
 STALE_ROSTER_DAYS = 8           # older than a week = the phone hasn't run
@@ -489,10 +510,10 @@ def weekly_projection_index(espn_doc):
     return idx
 
 
-def kepners_raw_from_live(live, ros_doc, ros_index, espn_doc, aliases):
+def live_raw_from_rosters(key, cfg, live, ros_doc, ros_index, espn_doc, aliases):
     """Reshape kepners_live_rosters.json into the same raw league shape
     yahoo_inseason_pull.py emits, so build_league() treats it identically."""
-    mine = MY_YAHOO_TEAMS["kepners"]
+    mine = {"team_id": cfg.get("team_id"), "team_name": cfg.get("team_name")}
     week_idx = weekly_projection_index(espn_doc)
 
     def tid_sort(kv):
@@ -522,17 +543,19 @@ def kepners_raw_from_live(live, ros_doc, ros_index, espn_doc, aliases):
             "team_id": str(tid),
             "team_name": t.get("team_name"),
             "manager": manager_for(t.get("team_name"), aliases),
-            "is_me": str(tid) == mine["team_id"],
+            "is_me": mine["team_id"] is not None and str(tid) == str(mine["team_id"]),
             "roster": roster,
         })
 
     if teams and not any(t["is_me"] for t in teams):
         for t in teams:
-            if t["team_name"] == mine["team_name"]:
+            if mine["team_name"] and t["team_name"] == mine["team_name"]:
                 t["is_me"] = True
         if not any(t["is_me"] for t in teams):
-            print(f"  ::warning::kepners: couldn't find my team (id {mine['team_id']} / "
-                  f"'{mine['team_name']}') in {KEPNERS_LIVE_FILE}.")
+            print(f"  ::warning::{key}: couldn't find my team (id {mine['team_id']} / "
+                  f"'{mine['team_name']}') in {cfg['file']}. Set team_id for '{key}' in "
+                  f"LIVE_LEAGUES. Teams seen: "
+                  f"{', '.join(str(t['team_id'])+'='+str(t['team_name']) for t in teams)}")
 
     free_agents = []
     for key, p in ros_index.items():
@@ -592,28 +615,30 @@ def main():
             leagues[key] = build_league(
                 key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index)
 
-    # Kepners via the phone bridge, unless a real Yahoo API pull covered it.
-    live = load_json(KEPNERS_LIVE_FILE, "Kepners live rosters (phone bridge)")
-    if "kepners" not in leagues and live and live.get("teams"):
+    # Yahoo leagues via the phone bridge, each unless a real Yahoo API pull
+    # already covered it.
+    for key, cfg in LIVE_LEAGUES.items():
+        live = load_json(cfg["file"], f"{cfg['label']} live rosters (phone bridge)")
+        if key in leagues or not live or not live.get("teams"):
+            continue
         if not ros_index:
-            print("  ::warning::kepners: no ROS projections -- skipping, every "
-                  "player would be unvalued.")
-        else:
-            aliases = load_json("kepners_team_aliases.json", "Kepners aliases") or {}
-            raw = kepners_raw_from_live(live, ros, ros_index, espn, aliases)
-            lg = build_league("kepners", raw,
-                              roster_slots_for("kepners", raw, bigboard, rules), ros_index)
-            lg["rosterSource"] = "yahoo-phone-html"
-            lg["rostersFetchedAt"] = live.get("fetched_at")
-            lg["freeAgentSource"] = "derived: ESPN projection pool minus Kepners rosters"
-            leagues["kepners"] = lg
-            age = roster_age_days(live.get("fetched_at"))
-            if age is not None and age > STALE_ROSTER_DAYS:
-                print(f"  ::warning::kepners: rosters are {age:.0f} days old -- run the "
-                      f"YahooScraper Shortcut to refresh them.")
-            if live.get("problems"):
-                print(f"  ::warning::kepners: {len(live['problems'])} team(s) failed to "
-                      f"parse last scrape: {', '.join(sorted(live['problems']))}")
+            print(f"  ::warning::{key}: no ROS projections -- skipping, every "
+                  f"player would be unvalued.")
+            continue
+        aliases = load_json(cfg["aliases"], f"{cfg['label']} aliases") or {}
+        raw = live_raw_from_rosters(key, cfg, live, ros, ros_index, espn, aliases)
+        lg = build_league(key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index)
+        lg["rosterSource"] = "yahoo-phone-html"
+        lg["rostersFetchedAt"] = live.get("fetched_at")
+        lg["freeAgentSource"] = f"derived: ESPN projection pool minus {cfg['label']} rosters"
+        leagues[key] = lg
+        age = roster_age_days(live.get("fetched_at"))
+        if age is not None and age > STALE_ROSTER_DAYS:
+            print(f"  ::warning::{key}: rosters are {age:.0f} days old -- run the "
+                  f"YahooScraper Shortcut to refresh them.")
+        if live.get("problems"):
+            print(f"  ::warning::{key}: {len(live['problems'])} team(s) failed to "
+                  f"parse last scrape: {', '.join(sorted(live['problems']))}")
 
     if not leagues:
         raise SystemExit(

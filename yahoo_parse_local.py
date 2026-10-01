@@ -165,6 +165,9 @@ def main():
     ap.add_argument("--html-dir", required=True, help="Directory containing team_<id>.html files")
     ap.add_argument("--out", required=True, help="Output JSON path")
     ap.add_argument("--strict", action="store_true", help="Exit 1 if ANY team has a problem")
+    ap.add_argument("--fetched-at", help="ISO timestamp of when the HTML was scraped (the commit time of "
+                    "the newest file). Defaults to now. Pass it when several leagues share one workflow so "
+                    "re-parsing league A doesn't make league B's old data look freshly scraped.")
     args = ap.parse_args()
 
     html_dir = Path(args.html_dir)
@@ -172,7 +175,7 @@ def main():
         print(f"ERROR: {html_dir} is not a directory (nothing pushed yet?)", file=sys.stderr)
         sys.exit(1)
 
-    result = {"fetched_at": datetime.now(timezone.utc).isoformat(), "teams": {}, "problems": {}}
+    result = {"fetched_at": args.fetched_at or datetime.now(timezone.utc).isoformat(), "teams": {}, "problems": {}}
 
     html_files = sorted(html_dir.glob("team_*.html"), key=lambda p: int(TEAM_ID_RE.search(p.name).group(1))
                         if TEAM_ID_RE.search(p.name) else 10**6)
