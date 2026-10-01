@@ -40,13 +40,24 @@ jobs:
           python yahoo_parse_local.py --html-dir yahoo_roster_raw --out kepners_live_rosters.json 2>&1 | tee parse.log
           exit ${PIPESTATUS[0]}
 
+      # Rebuild the Manager Cockpit data so Kepners shows the new rosters right
+      # away, instead of waiting for Tuesday's In-Season run. Pure transformation
+      # of files already in the repo (ESPN projections + these rosters), so no
+      # secrets needed. continue-on-error: a build problem must never stop the
+      # parsed rosters themselves from being committed.
+      - name: Rebuild in-season cockpit data (adds Kepners)
+        continue-on-error: true
+        run: |
+          python build_inseason.py 2026 2>&1 | tee -a parse.log
+          exit ${PIPESTATUS[0]}
+
       - name: Commit parsed JSON back to repo
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add kepners_live_rosters.json
+          git add kepners_live_rosters.json inseason_2026.json
           git diff --staged --quiet && { echo "No changes to commit."; exit 0; }
-          git commit -m "Update kepners_live_rosters.json [automated]"
+          git commit -m "Update Kepners live rosters + in-season data [automated]"
           for i in 1 2 3 4 5; do
             git pull --rebase origin main && git push && exit 0
             echo "Push attempt $i rejected; retrying..."
