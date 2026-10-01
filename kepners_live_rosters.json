@@ -1,4 +1,1854 @@
 {
-  "fetched_at": "2026-09-30T02:35:05.057059+00:00",
-  "teams": {}
+  "fetched_at": "2026-10-01T01:47:51.044426+00:00",
+  "teams": {
+    "1": {
+      "team_name": "Football Guy's Guy",
+      "player_count": 16,
+      "keeper_count": 1,
+      "players": [
+        {
+          "player_id": "31002",
+          "name": "Lamar Jackson",
+          "position": "QB",
+          "nfl_team": "Bal",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "30972",
+          "name": "Saquon Barkley",
+          "position": "RB",
+          "nfl_team": "Phi",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "33514",
+          "name": "Chuba Hubbard",
+          "position": "RB",
+          "nfl_team": "Car",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "33963",
+          "name": "Drake London",
+          "position": "WR",
+          "nfl_team": "Atl",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33394",
+          "name": "Jaylen Waddle",
+          "position": "WR",
+          "nfl_team": "Den",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40234",
+          "name": "Parker Washington",
+          "position": "WR",
+          "nfl_team": "Jax",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40048",
+          "name": "Dalton Kincaid",
+          "position": "TE",
+          "nfl_team": "Buf",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "34447",
+          "name": "Jaylen Warren",
+          "position": "RB",
+          "nfl_team": "Pit",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "40121",
+          "name": "Michael Wilson",
+          "position": "WR",
+          "nfl_team": "Ari",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "32231",
+          "name": "Jakobi Meyers",
+          "position": "WR",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "41902",
+          "name": "Woody Marks",
+          "position": "RB",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "33412",
+          "name": "Najee Harris",
+          "position": "RB",
+          "nfl_team": "NYG",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "42697",
+          "name": "Caleb Douglas",
+          "position": "WR",
+          "nfl_team": "Mia",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "30180",
+          "name": "Alvin Kamara",
+          "position": "RB",
+          "nfl_team": "NO",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "28188",
+          "name": "Chris Boswell",
+          "position": "K",
+          "nfl_team": "Pit",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "100003",
+          "name": "Bears",
+          "position": "DEF",
+          "nfl_team": "Chi",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "10"
+        }
+      ]
+    },
+    "2": {
+      "team_name": "BrowneyeVibeSesh",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "30125",
+          "name": "Deshaun Watson",
+          "position": "QB",
+          "nfl_team": "Cle",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "30121",
+          "name": "Christian McCaffrey",
+          "position": "RB",
+          "nfl_team": "SF",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40962",
+          "name": "Blake Corum",
+          "position": "RB",
+          "nfl_team": "LAR",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33989",
+          "name": "Christian Watson",
+          "position": "WR",
+          "nfl_team": "GB",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "42626",
+          "name": "Carnell Tate",
+          "position": "WR",
+          "nfl_team": "Ten",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "40908",
+          "name": "Ladd McConkey",
+          "position": "WR",
+          "nfl_team": "LAC",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40878",
+          "name": "Brock Bowers",
+          "position": "TE",
+          "nfl_team": "LV",
+          "roster_slot": "TE",
+          "is_keeper": true,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "34085",
+          "name": "Jake Ferguson",
+          "position": "TE",
+          "nfl_team": "Dal",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "30231",
+          "name": "Mack Hollins",
+          "position": "WR",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40900",
+          "name": "Caleb Williams",
+          "position": "QB",
+          "nfl_team": "Chi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "34320",
+          "name": "Jordan Mason",
+          "position": "RB",
+          "nfl_team": "Min",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "31883",
+          "name": "A.J. Brown",
+          "position": "WR",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40095",
+          "name": "Tank Bigsby",
+          "position": "RB",
+          "nfl_team": "Phi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "30973",
+          "name": "Sam Darnold",
+          "position": "QB",
+          "nfl_team": "Sea",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40819",
+          "name": "Brandon Aubrey",
+          "position": "K",
+          "nfl_team": "Dal",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "100018",
+          "name": "Saints",
+          "position": "DEF",
+          "nfl_team": "NO",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "8"
+        }
+      ]
+    },
+    "3": {
+      "team_name": "Burrito",
+      "player_count": 17,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "9265",
+          "name": "Matthew Stafford",
+          "position": "QB",
+          "nfl_team": "LAR",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33996",
+          "name": "Kenneth Walker III",
+          "position": "RB",
+          "nfl_team": "KC",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40641",
+          "name": "Keaton Mitchell",
+          "position": "RB",
+          "nfl_team": "LAC",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "32687",
+          "name": "CeeDee Lamb",
+          "position": "WR",
+          "nfl_team": "Dal",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "40901",
+          "name": "Rome Odunze",
+          "position": "WR",
+          "nfl_team": "Chi",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "28534",
+          "name": "Stefon Diggs",
+          "position": "WR",
+          "nfl_team": "Was",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "41799",
+          "name": "Tyler Warren",
+          "position": "TE",
+          "nfl_team": "Ind",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "34095",
+          "name": "Isaiah Likely",
+          "position": "TE",
+          "nfl_team": "NYG",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40881",
+          "name": "Drake Maye",
+          "position": "QB",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "30994",
+          "name": "DJ Moore",
+          "position": "WR",
+          "nfl_team": "Buf",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "41058",
+          "name": "Malik Washington",
+          "position": "WR",
+          "nfl_team": "Mia",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "33538",
+          "name": "Kenny Gainwell",
+          "position": "RB",
+          "nfl_team": "TB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "34147",
+          "name": "Jalen Nailor",
+          "position": "WR",
+          "nfl_team": "LV",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41010",
+          "name": "Jaylen Wright",
+          "position": "RB",
+          "nfl_team": "Mia",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "40118",
+          "name": "De'Von Achane",
+          "position": "RB",
+          "nfl_team": "Mia",
+          "roster_slot": "IR",
+          "is_keeper": true,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "30346",
+          "name": "Harrison Butker",
+          "position": "K",
+          "nfl_team": "KC",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "100025",
+          "name": "49ers",
+          "position": "DEF",
+          "nfl_team": "SF",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "8"
+        }
+      ]
+    },
+    "4": {
+      "team_name": "Dad\u2019s To The Bone",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "30977",
+          "name": "Josh Allen",
+          "position": "QB",
+          "nfl_team": "Buf",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "34019",
+          "name": "James Cook III",
+          "position": "RB",
+          "nfl_team": "Buf",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40196",
+          "name": "Chase Brown",
+          "position": "RB",
+          "nfl_team": "Cin",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "27581",
+          "name": "Davante Adams",
+          "position": "WR",
+          "nfl_team": "LAR",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40039",
+          "name": "Zay Flowers",
+          "position": "WR",
+          "nfl_team": "Bal",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "40042",
+          "name": "Jordan Addison",
+          "position": "WR",
+          "nfl_team": "Min",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "41877",
+          "name": "Harold Fannin Jr.",
+          "position": "TE",
+          "nfl_team": "Cle",
+          "roster_slot": "TE",
+          "is_keeper": true,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "31056",
+          "name": "Mark Andrews",
+          "position": "TE",
+          "nfl_team": "Bal",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "34088",
+          "name": "Romeo Doubs",
+          "position": "WR",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "30197",
+          "name": "Chris Godwin Jr.",
+          "position": "WR",
+          "nfl_team": "TB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "31856",
+          "name": "Josh Jacobs",
+          "position": "RB",
+          "nfl_team": "GB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "42025",
+          "name": "Kyle Monangai",
+          "position": "RB",
+          "nfl_team": "Chi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "30971",
+          "name": "Baker Mayfield",
+          "position": "QB",
+          "nfl_team": "TB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "29631",
+          "name": "Kalif Raymond",
+          "position": "WR",
+          "nfl_team": "Chi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "28378",
+          "name": "Jason Myers",
+          "position": "K",
+          "nfl_team": "Sea",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "100016",
+          "name": "Vikings",
+          "position": "DEF",
+          "nfl_team": "Min",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "6"
+        }
+      ]
+    },
+    "5": {
+      "team_name": "Denim Like A DeJean",
+      "player_count": 16,
+      "keeper_count": 1,
+      "players": [
+        {
+          "player_id": "40875",
+          "name": "Bo Nix",
+          "position": "QB",
+          "nfl_team": "Den",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "29279",
+          "name": "Derrick Henry",
+          "position": "RB",
+          "nfl_team": "Bal",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "31905",
+          "name": "David Montgomery",
+          "position": "RB",
+          "nfl_team": "Hou",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "34007",
+          "name": "George Pickens",
+          "position": "WR",
+          "nfl_team": "Dal",
+          "roster_slot": "WR",
+          "is_keeper": true,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "32703",
+          "name": "Tee Higgins",
+          "position": "WR",
+          "nfl_team": "Cin",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "31896",
+          "name": "DK Metcalf",
+          "position": "WR",
+          "nfl_team": "Pit",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "40064",
+          "name": "Sam LaPorta",
+          "position": "TE",
+          "nfl_team": "Det",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "40877",
+          "name": "Xavier Worthy",
+          "position": "WR",
+          "nfl_team": "KC",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40896",
+          "name": "Jayden Daniels",
+          "position": "QB",
+          "nfl_team": "Was",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "42010",
+          "name": "Jacory Croskey-Merritt",
+          "position": "RB",
+          "nfl_team": "Was",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "29269",
+          "name": "Hunter Henry",
+          "position": "TE",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "29399",
+          "name": "Tyreek Hill",
+          "position": "WR",
+          "nfl_team": "Mia",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "41969",
+          "name": "Ollie Gordon II",
+          "position": "RB",
+          "nfl_team": "Mia",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "41312",
+          "name": "Harrison Mevis",
+          "position": "K",
+          "nfl_team": "LAR",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "100014",
+          "name": "Rams",
+          "position": "DEF",
+          "nfl_team": "LAR",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "100033",
+          "name": "Ravens",
+          "position": "DEF",
+          "nfl_team": "Bal",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        }
+      ]
+    },
+    "6": {
+      "team_name": "Matty Dawg Pound",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "32723",
+          "name": "Jalen Hurts",
+          "position": "QB",
+          "nfl_team": "Phi",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "32711",
+          "name": "Jonathan Taylor",
+          "position": "RB",
+          "nfl_team": "Ind",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41845",
+          "name": "RJ Harvey",
+          "position": "RB",
+          "nfl_team": "Den",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "33398",
+          "name": "DeVonta Smith",
+          "position": "WR",
+          "nfl_team": "Phi",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "27535",
+          "name": "Mike Evans",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "42646",
+          "name": "KC Concepcion Jr.",
+          "position": "WR",
+          "nfl_team": "Cle",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "34010",
+          "name": "Trey McBride",
+          "position": "TE",
+          "nfl_team": "Ari",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "33100",
+          "name": "Rico Dowdle",
+          "position": "RB",
+          "nfl_team": "Pit",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "33477",
+          "name": "Nico Collins",
+          "position": "WR",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40231",
+          "name": "Chris Rodriguez Jr.",
+          "position": "RB",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40119",
+          "name": "Tyjae Spears",
+          "position": "RB",
+          "nfl_team": "Ten",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "34659",
+          "name": "Rashid Shaheed",
+          "position": "WR",
+          "nfl_team": "Sea",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "32685",
+          "name": "Jerry Jeudy",
+          "position": "WR",
+          "nfl_team": "Cle",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40707",
+          "name": "Emanuel Wilson",
+          "position": "RB",
+          "nfl_team": "Sea",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "29792",
+          "name": "Ka'imi Fairbairn",
+          "position": "K",
+          "nfl_team": "Hou",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "100007",
+          "name": "Broncos",
+          "position": "DEF",
+          "nfl_team": "Den",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "10"
+        }
+      ]
+    },
+    "7": {
+      "team_name": "Orson Welles",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "30123",
+          "name": "Patrick Mahomes",
+          "position": "QB",
+          "nfl_team": "KC",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "41791",
+          "name": "Ashton Jeanty",
+          "position": "RB",
+          "nfl_team": "LV",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "31960",
+          "name": "Tony Pollard",
+          "position": "RB",
+          "nfl_team": "Ten",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "41804",
+          "name": "Emeka Egbuka",
+          "position": "WR",
+          "nfl_team": "TB",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40084",
+          "name": "Rashee Rice",
+          "position": "WR",
+          "nfl_team": "KC",
+          "roster_slot": "WR",
+          "is_keeper": true,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "26699",
+          "name": "Keenan Allen",
+          "position": "WR",
+          "nfl_team": "Ind",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "26686",
+          "name": "Travis Kelce",
+          "position": "TE",
+          "nfl_team": "KC",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40168",
+          "name": "Puka Nacua",
+          "position": "WR",
+          "nfl_team": "LAR",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33508",
+          "name": "Rhamondre Stevenson",
+          "position": "RB",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33113",
+          "name": "Juwan Johnson",
+          "position": "TE",
+          "nfl_team": "NO",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "33413",
+          "name": "Travis Etienne Jr.",
+          "position": "RB",
+          "nfl_team": "NO",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40051",
+          "name": "Quentin Johnston",
+          "position": "WR",
+          "nfl_team": "LAC",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "34054",
+          "name": "Brian Robinson",
+          "position": "RB",
+          "nfl_team": "Atl",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "42712",
+          "name": "Kaelon Black",
+          "position": "RB",
+          "nfl_team": "SF",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41988",
+          "name": "Tyler Loop",
+          "position": "K",
+          "nfl_team": "Bal",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "100034",
+          "name": "Texans",
+          "position": "DEF",
+          "nfl_team": "Hou",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "8"
+        }
+      ]
+    },
+    "8": {
+      "team_name": "Phony Grossi",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "29235",
+          "name": "Jared Goff",
+          "position": "QB",
+          "nfl_team": "Det",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "40059",
+          "name": "Jahmyr Gibbs",
+          "position": "RB",
+          "nfl_team": "Det",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "41922",
+          "name": "Cam Skattebo",
+          "position": "RB",
+          "nfl_team": "NYG",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41793",
+          "name": "Tetairoa McMillan",
+          "position": "WR",
+          "nfl_team": "Car",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "33967",
+          "name": "Jameson Williams",
+          "position": "WR",
+          "nfl_team": "Det",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "42661",
+          "name": "Denzel Boston",
+          "position": "WR",
+          "nfl_team": "Cle",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "28592",
+          "name": "Darren Waller",
+          "position": "TE",
+          "nfl_team": "Car",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "41831",
+          "name": "Terrance Ferguson",
+          "position": "TE",
+          "nfl_team": "LAR",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "31019",
+          "name": "Dallas Goedert",
+          "position": "TE",
+          "nfl_team": "Phi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "31868",
+          "name": "Deebo Samuel Sr.",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "32676",
+          "name": "Justin Herbert",
+          "position": "QB",
+          "nfl_team": "LAC",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40893",
+          "name": "Marvin Harrison Jr.",
+          "position": "WR",
+          "nfl_team": "Ari",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "41900",
+          "name": "Bhayshul Tuten",
+          "position": "RB",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "42630",
+          "name": "Jordyn Tyson",
+          "position": "WR",
+          "nfl_team": "NO",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "31482",
+          "name": "Eddy Pineiro",
+          "position": "K",
+          "nfl_team": "SF",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "100004",
+          "name": "Bengals",
+          "position": "DEF",
+          "nfl_team": "Cin",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "6"
+        }
+      ]
+    },
+    "9": {
+      "team_name": "Ranus The Hiddeer",
+      "player_count": 17,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "34218",
+          "name": "Brock Purdy",
+          "position": "QB",
+          "nfl_team": "SF",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "32705",
+          "name": "D'Andre Swift",
+          "position": "RB",
+          "nfl_team": "Chi",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "41821",
+          "name": "Quinshon Judkins",
+          "position": "RB",
+          "nfl_team": "Cle",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40041",
+          "name": "Jaxon Smith-Njigba",
+          "position": "WR",
+          "nfl_team": "Sea",
+          "roster_slot": "WR",
+          "is_keeper": true,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33500",
+          "name": "Amon-Ra St. Brown",
+          "position": "WR",
+          "nfl_team": "Det",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "31010",
+          "name": "Courtland Sutton",
+          "position": "WR",
+          "nfl_team": "Den",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40102",
+          "name": "Tucker Kraft",
+          "position": "TE",
+          "nfl_team": "GB",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40915",
+          "name": "Adonai Mitchell",
+          "position": "WR",
+          "nfl_team": "NYJ",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "29369",
+          "name": "Dak Prescott",
+          "position": "QB",
+          "nfl_team": "Dal",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "40883",
+          "name": "Brian Thomas Jr.",
+          "position": "WR",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "34047",
+          "name": "Rachaad White",
+          "position": "RB",
+          "nfl_team": "Was",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "34107",
+          "name": "Tyler Allgeier",
+          "position": "RB",
+          "nfl_team": "Ari",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "40981",
+          "name": "Braelon Allen",
+          "position": "RB",
+          "nfl_team": "NYJ",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "40971",
+          "name": "MarShawn Lloyd",
+          "position": "RB",
+          "nfl_team": "GB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40075",
+          "name": "Zach Charbonnet",
+          "position": "RB",
+          "nfl_team": "Sea",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "41093",
+          "name": "Will Reichard",
+          "position": "K",
+          "nfl_team": "Min",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "100002",
+          "name": "Bills",
+          "position": "DEF",
+          "nfl_team": "Buf",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "7"
+        }
+      ]
+    },
+    "10": {
+      "team_name": "Shaq List",
+      "player_count": 16,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "41825",
+          "name": "Tyler Shough",
+          "position": "QB",
+          "nfl_team": "NO",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "34120",
+          "name": "Kyren Williams",
+          "position": "RB",
+          "nfl_team": "LAR",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33991",
+          "name": "Breece Hall",
+          "position": "RB",
+          "nfl_team": "NYJ",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "33393",
+          "name": "Ja'Marr Chase",
+          "position": "WR",
+          "nfl_team": "Cin",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "31908",
+          "name": "Terry McLaurin",
+          "position": "WR",
+          "nfl_team": "Was",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40126",
+          "name": "Josh Downs",
+          "position": "WR",
+          "nfl_team": "Ind",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "33392",
+          "name": "Kyle Pitts Sr.",
+          "position": "TE",
+          "nfl_team": "Atl",
+          "roster_slot": "TE",
+          "is_keeper": true,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "34008",
+          "name": "Alec Pierce",
+          "position": "WR",
+          "nfl_team": "Ind",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "33389",
+          "name": "Trevor Lawrence",
+          "position": "QB",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "41823",
+          "name": "TreVeyon Henderson",
+          "position": "RB",
+          "nfl_team": "NE",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "41808",
+          "name": "Matthew Golden",
+          "position": "WR",
+          "nfl_team": "GB",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "41293",
+          "name": "Jalen Coker",
+          "position": "WR",
+          "nfl_team": "Car",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "42796",
+          "name": "Emmett Johnson",
+          "position": "RB",
+          "nfl_team": "KC",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "31107",
+          "name": "Dalton Schultz",
+          "position": "TE",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "34344",
+          "name": "Cameron Dicker",
+          "position": "K",
+          "nfl_team": "LAC",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "100009",
+          "name": "Packers",
+          "position": "DEF",
+          "nfl_team": "GB",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "11"
+        }
+      ]
+    },
+    "11": {
+      "team_name": "The Herdsmen",
+      "player_count": 17,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "32696",
+          "name": "Jordan Love",
+          "position": "QB",
+          "nfl_team": "GB",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "33423",
+          "name": "Javonte Williams",
+          "position": "RB",
+          "nfl_team": "Dal",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "42625",
+          "name": "Jeremiyah Love",
+          "position": "RB",
+          "nfl_team": "Ari",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "32692",
+          "name": "Justin Jefferson",
+          "position": "WR",
+          "nfl_team": "Min",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "33965",
+          "name": "Garrett Wilson",
+          "position": "WR",
+          "nfl_team": "NYJ",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41097",
+          "name": "Devaughn Vele",
+          "position": "WR",
+          "nfl_team": "NO",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41795",
+          "name": "Colston Loveland",
+          "position": "TE",
+          "nfl_team": "Chi",
+          "roster_slot": "TE",
+          "is_keeper": true,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40201",
+          "name": "Dontayvion Wicks",
+          "position": "WR",
+          "nfl_team": "Phi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "41807",
+          "name": "Omarion Hampton",
+          "position": "RB",
+          "nfl_team": "LAC",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "30295",
+          "name": "Aaron Jones Sr.",
+          "position": "RB",
+          "nfl_team": "Min",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "42730",
+          "name": "Jonah Coleman",
+          "position": "RB",
+          "nfl_team": "Den",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40030",
+          "name": "C.J. Stroud",
+          "position": "QB",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "31833",
+          "name": "Kyler Murray",
+          "position": "QB",
+          "nfl_team": "Min",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "42655",
+          "name": "De'Zhaun Stribling",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "33537",
+          "name": "Evan McPherson",
+          "position": "K",
+          "nfl_team": "Cin",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "100023",
+          "name": "Steelers",
+          "position": "DEF",
+          "nfl_team": "Pit",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "100012",
+          "name": "Chiefs",
+          "position": "DEF",
+          "nfl_team": "KC",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "5"
+        }
+      ]
+    },
+    "12": {
+      "team_name": "The Pickups",
+      "player_count": 17,
+      "keeper_count": 2,
+      "players": [
+        {
+          "player_id": "40029",
+          "name": "Bryce Young",
+          "position": "QB",
+          "nfl_team": "Car",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40055",
+          "name": "Bijan Robinson",
+          "position": "RB",
+          "nfl_team": "Atl",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40993",
+          "name": "Bucky Irving",
+          "position": "RB",
+          "nfl_team": "TB",
+          "roster_slot": "RB",
+          "is_keeper": true,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "40899",
+          "name": "Malik Nabers",
+          "position": "WR",
+          "nfl_team": "NYG",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "33966",
+          "name": "Chris Olave",
+          "position": "WR",
+          "nfl_team": "NO",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41824",
+          "name": "Luther Burden III",
+          "position": "WR",
+          "nfl_team": "Chi",
+          "roster_slot": "WR",
+          "is_keeper": true,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "30259",
+          "name": "George Kittle",
+          "position": "TE",
+          "nfl_team": "SF",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40114",
+          "name": "Tre Tucker",
+          "position": "WR",
+          "nfl_team": "LV",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "33415",
+          "name": "Rashod Bateman",
+          "position": "WR",
+          "nfl_team": "Bal",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "32671",
+          "name": "Joe Burrow",
+          "position": "QB",
+          "nfl_team": "Cin",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "42654",
+          "name": "Jadarian Price",
+          "position": "RB",
+          "nfl_team": "Sea",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "32725",
+          "name": "J.K. Dobbins",
+          "position": "RB",
+          "nfl_team": "Den",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "32704",
+          "name": "Michael Pittman Jr.",
+          "position": "WR",
+          "nfl_team": "Pit",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "42642",
+          "name": "Makai Lemon",
+          "position": "WR",
+          "nfl_team": "Phi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "42702",
+          "name": "Ja'Kobi Lane",
+          "position": "WR",
+          "nfl_team": "Bal",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "41499",
+          "name": "Spencer Shrader",
+          "position": "K",
+          "nfl_team": "Ind",
+          "roster_slot": "K",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "100026",
+          "name": "Seahawks",
+          "position": "DEF",
+          "nfl_team": "Sea",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "11"
+        }
+      ]
+    }
+  },
+  "problems": {}
 }
