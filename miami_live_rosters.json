@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-01T16:16:04Z",
+  "fetched_at": "2026-10-01T16:18:25Z",
   "teams": {
     "1": {
       "team_name": "MakeMyTeamGreatAgain",
@@ -460,6 +460,166 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "9"
+        }
+      ]
+    },
+    "4": {
+      "team_name": "Hannah Lee's Revenge",
+      "player_count": 17,
+      "keeper_count": 1,
+      "players": [
+        {
+          "player_id": "30977",
+          "name": "Josh Allen",
+          "position": "QB",
+          "nfl_team": "Buf",
+          "roster_slot": "QB",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "33996",
+          "name": "Kenneth Walker III",
+          "position": "RB",
+          "nfl_team": "KC",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "40981",
+          "name": "Braelon Allen",
+          "position": "RB",
+          "nfl_team": "NYJ",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "40084",
+          "name": "Rashee Rice",
+          "position": "WR",
+          "nfl_team": "KC",
+          "roster_slot": "WR",
+          "is_keeper": true,
+          "bye_week": "5"
+        },
+        {
+          "player_id": "33989",
+          "name": "Christian Watson",
+          "position": "WR",
+          "nfl_team": "GB",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "40048",
+          "name": "Dalton Kincaid",
+          "position": "TE",
+          "nfl_team": "Buf",
+          "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "30121",
+          "name": "Christian McCaffrey",
+          "position": "RB",
+          "nfl_team": "SF",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "33965",
+          "name": "Garrett Wilson",
+          "position": "WR",
+          "nfl_team": "NYJ",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "33991",
+          "name": "Breece Hall",
+          "position": "RB",
+          "nfl_team": "NYJ",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "40901",
+          "name": "Rome Odunze",
+          "position": "WR",
+          "nfl_team": "Chi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "42626",
+          "name": "Carnell Tate",
+          "position": "WR",
+          "nfl_team": "Ten",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
+          "player_id": "42655",
+          "name": "De'Zhaun Stribling",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41902",
+          "name": "Woody Marks",
+          "position": "RB",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "40201",
+          "name": "Dontayvion Wicks",
+          "position": "WR",
+          "nfl_team": "Phi",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "32231",
+          "name": "Jakobi Meyers",
+          "position": "WR",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "34320",
+          "name": "Jordan Mason",
+          "position": "RB",
+          "nfl_team": "Min",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "100034",
+          "name": "Texans",
+          "position": "DEF",
+          "nfl_team": "Hou",
+          "roster_slot": "DEF",
+          "is_keeper": false,
+          "bye_week": "8"
         }
       ]
     },
