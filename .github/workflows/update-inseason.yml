@@ -178,7 +178,7 @@ jobs:
           # Actions' default `sh` doesn't have shopt/nullglob at all, which is
           # its own way to silently not do what this looks like it does.
           shopt -s nullglob
-          for pattern in inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json waiver_history_*.json sleeper_trending.json; do
+          for pattern in inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json waiver_history_*.json sleeper_trending.json power_rankings_history.json; do
             git add $pattern
           done
           git diff --staged --quiet && { echo "Nothing changed -- nothing to commit."; exit 0; }
