@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-05T17:20:33.659232+00:00",
+  "generated": "2026-10-05T17:20:56.933128+00:00",
   "currentWeek": 4,
   "weeksRemaining": 14,
   "leagues": {
@@ -24120,25 +24120,6 @@
               "effective_per_week": 7.62
             },
             {
-              "player_id": "33967",
-              "name": "Jameson Williams",
-              "position": "WR",
-              "pro_team": "Det",
-              "lineup_slot": "WR",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": 92.15,
-              "is_keeper": false,
-              "week_projection": 7.1,
-              "bye_week": 6,
-              "ros_points": 82.5,
-              "ros_per_week": 5.89,
-              "trend": -3.93,
-              "season_points_actual": 12.7,
-              "ros_matched": true,
-              "effective_per_week": 5.89
-            },
-            {
               "player_id": "42661",
               "name": "Denzel Boston",
               "position": "WR",
@@ -24158,6 +24139,25 @@
               "effective_per_week": 5.74
             },
             {
+              "player_id": "31868",
+              "name": "Deebo Samuel Sr.",
+              "position": "WR",
+              "pro_team": "SF",
+              "lineup_slot": "WR",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 84.7,
+              "is_keeper": false,
+              "week_projection": 7.34,
+              "bye_week": 8,
+              "ros_points": 87.45,
+              "ros_per_week": 6.25,
+              "trend": 6.16,
+              "season_points_actual": 30.9,
+              "ros_matched": true,
+              "effective_per_week": 6.25
+            },
+            {
               "player_id": "28592",
               "name": "Darren Waller",
               "position": "TE",
@@ -24175,6 +24175,25 @@
               "season_points_actual": 23.2,
               "ros_matched": true,
               "effective_per_week": 3.08
+            },
+            {
+              "player_id": "33967",
+              "name": "Jameson Williams",
+              "position": "WR",
+              "pro_team": "Det",
+              "lineup_slot": "BE",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 92.15,
+              "is_keeper": false,
+              "week_projection": 7.1,
+              "bye_week": 6,
+              "ros_points": 82.5,
+              "ros_per_week": 5.89,
+              "trend": -3.93,
+              "season_points_actual": 12.7,
+              "ros_matched": true,
+              "effective_per_week": 5.89
             },
             {
               "player_id": "41831",
@@ -24213,25 +24232,6 @@
               "season_points_actual": 20.1,
               "ros_matched": true,
               "effective_per_week": 4.6
-            },
-            {
-              "player_id": "31868",
-              "name": "Deebo Samuel Sr.",
-              "position": "WR",
-              "pro_team": "SF",
-              "lineup_slot": "BE",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": 84.7,
-              "is_keeper": false,
-              "week_projection": 7.34,
-              "bye_week": 8,
-              "ros_points": 87.45,
-              "ros_per_week": 6.25,
-              "trend": 6.16,
-              "season_points_actual": 30.9,
-              "ros_matched": true,
-              "effective_per_week": 6.25
             },
             {
               "player_id": "32676",
@@ -24569,23 +24569,23 @@
               "effective_per_week": 9.76
             },
             {
-              "player_id": "41821",
-              "name": "Quinshon Judkins",
+              "player_id": "40981",
+              "name": "Braelon Allen",
               "position": "RB",
-              "pro_team": "Cle",
+              "pro_team": "NYJ",
               "lineup_slot": "RB",
               "injury_status": null,
               "injured": false,
-              "percent_owned": 95.06,
+              "percent_owned": 14.26,
               "is_keeper": false,
-              "week_projection": 10.35,
-              "bye_week": 11,
-              "ros_points": 122.38,
-              "ros_per_week": 8.74,
-              "trend": -6.25,
-              "season_points_actual": 17.7,
+              "week_projection": 11.04,
+              "bye_week": 13,
+              "ros_points": 64.4,
+              "ros_per_week": 4.6,
+              "trend": 0.12,
+              "season_points_actual": 13.2,
               "ros_matched": true,
-              "effective_per_week": 8.74
+              "effective_per_week": 4.6
             },
             {
               "player_id": "40041",
@@ -24664,6 +24664,25 @@
               "effective_per_week": 4.33
             },
             {
+              "player_id": "41821",
+              "name": "Quinshon Judkins",
+              "position": "RB",
+              "pro_team": "Cle",
+              "lineup_slot": "BE",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 95.06,
+              "is_keeper": false,
+              "week_projection": 10.35,
+              "bye_week": 11,
+              "ros_points": 122.38,
+              "ros_per_week": 8.74,
+              "trend": -6.25,
+              "season_points_actual": 17.7,
+              "ros_matched": true,
+              "effective_per_week": 8.74
+            },
+            {
               "player_id": "40915",
               "name": "Adonai Mitchell",
               "position": "WR",
@@ -24740,44 +24759,6 @@
               "effective_per_week": 4.7
             },
             {
-              "player_id": "34107",
-              "name": "Tyler Allgeier",
-              "position": "RB",
-              "pro_team": "Ari",
-              "lineup_slot": "BE",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": 32.71,
-              "is_keeper": false,
-              "week_projection": 5.96,
-              "bye_week": 14,
-              "ros_points": 64.64,
-              "ros_per_week": 4.62,
-              "trend": 0.84,
-              "season_points_actual": 9.8,
-              "ros_matched": true,
-              "effective_per_week": 4.62
-            },
-            {
-              "player_id": "40981",
-              "name": "Braelon Allen",
-              "position": "RB",
-              "pro_team": "NYJ",
-              "lineup_slot": "BE",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": 14.26,
-              "is_keeper": false,
-              "week_projection": 11.04,
-              "bye_week": 13,
-              "ros_points": 64.4,
-              "ros_per_week": 4.6,
-              "trend": 0.12,
-              "season_points_actual": 13.2,
-              "ros_matched": true,
-              "effective_per_week": 4.6
-            },
-            {
               "player_id": "40971",
               "name": "MarShawn Lloyd",
               "position": "RB",
@@ -24795,6 +24776,25 @@
               "season_points_actual": 12.1,
               "ros_matched": true,
               "effective_per_week": 1.41
+            },
+            {
+              "player_id": "42744",
+              "name": "Mike Washington Jr.",
+              "position": "RB",
+              "pro_team": "LV",
+              "lineup_slot": "BE",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 22.08,
+              "is_keeper": false,
+              "week_projection": 2.95,
+              "bye_week": 13,
+              "ros_points": 34.18,
+              "ros_per_week": 2.44,
+              "trend": -2.29,
+              "season_points_actual": 16.2,
+              "ros_matched": true,
+              "effective_per_week": 2.44
             },
             {
               "player_id": "40075",
@@ -26910,6 +26910,24 @@
           "effective_per_week": 4.91
         },
         {
+          "player_id": 4373626,
+          "name": "Tyler Allgeier",
+          "position": "RB",
+          "pro_team": "ARI",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 32.71,
+          "week_projection": 5.96,
+          "bye_week": 14,
+          "ros_points": 64.64,
+          "ros_per_week": 4.62,
+          "trend": 0.84,
+          "season_points_actual": 9.8,
+          "ros_matched": true,
+          "effective_per_week": 4.62
+        },
+        {
           "player_id": -16024,
           "name": "Chargers D/ST",
           "position": "DEF",
@@ -27862,24 +27880,6 @@
           "season_points_actual": 10.8,
           "ros_matched": true,
           "effective_per_week": 2.48
-        },
-        {
-          "player_id": 4686658,
-          "name": "Mike Washington Jr.",
-          "position": "RB",
-          "pro_team": "LV",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 22.08,
-          "week_projection": 2.95,
-          "bye_week": 13,
-          "ros_points": 34.18,
-          "ros_per_week": 2.44,
-          "trend": -2.29,
-          "season_points_actual": 16.2,
-          "ros_matched": true,
-          "effective_per_week": 2.44
         },
         {
           "player_id": 4596472,
@@ -30133,7 +30133,7 @@
         }
       ],
       "rosterSource": "yahoo-phone-html",
-      "rostersFetchedAt": "2026-10-05T17:20:25Z",
+      "rostersFetchedAt": "2026-10-05T17:20:48Z",
       "freeAgentSource": "derived: ESPN projection pool minus Kepners rosters"
     },
     "miami": {

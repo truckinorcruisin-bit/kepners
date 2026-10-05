@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-05T17:20:25Z",
+  "fetched_at": "2026-10-05T17:20:48Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
@@ -1127,15 +1127,6 @@
           "bye_week": "5"
         },
         {
-          "player_id": "33967",
-          "name": "Jameson Williams",
-          "position": "WR",
-          "nfl_team": "Det",
-          "roster_slot": "WR",
-          "is_keeper": false,
-          "bye_week": "6"
-        },
-        {
           "player_id": "42661",
           "name": "Denzel Boston",
           "position": "WR",
@@ -1145,6 +1136,15 @@
           "bye_week": "11"
         },
         {
+          "player_id": "31868",
+          "name": "Deebo Samuel Sr.",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
           "player_id": "28592",
           "name": "Darren Waller",
           "position": "TE",
@@ -1152,6 +1152,15 @@
           "roster_slot": "TE",
           "is_keeper": false,
           "bye_week": "5"
+        },
+        {
+          "player_id": "33967",
+          "name": "Jameson Williams",
+          "position": "WR",
+          "nfl_team": "Det",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
         },
         {
           "player_id": "41831",
@@ -1170,15 +1179,6 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "10"
-        },
-        {
-          "player_id": "31868",
-          "name": "Deebo Samuel Sr.",
-          "position": "WR",
-          "nfl_team": "SF",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "8"
         },
         {
           "player_id": "32676",
@@ -1260,13 +1260,13 @@
           "bye_week": "10"
         },
         {
-          "player_id": "41821",
-          "name": "Quinshon Judkins",
+          "player_id": "40981",
+          "name": "Braelon Allen",
           "position": "RB",
-          "nfl_team": "Cle",
+          "nfl_team": "NYJ",
           "roster_slot": "RB",
           "is_keeper": false,
-          "bye_week": "11"
+          "bye_week": "13"
         },
         {
           "player_id": "40041",
@@ -1301,6 +1301,15 @@
           "position": "TE",
           "nfl_team": "GB",
           "roster_slot": "TE",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "41821",
+          "name": "Quinshon Judkins",
+          "position": "RB",
+          "nfl_team": "Cle",
+          "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "11"
         },
@@ -1341,24 +1350,6 @@
           "bye_week": "7"
         },
         {
-          "player_id": "34107",
-          "name": "Tyler Allgeier",
-          "position": "RB",
-          "nfl_team": "Ari",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "14"
-        },
-        {
-          "player_id": "40981",
-          "name": "Braelon Allen",
-          "position": "RB",
-          "nfl_team": "NYJ",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "13"
-        },
-        {
           "player_id": "40971",
           "name": "MarShawn Lloyd",
           "position": "RB",
@@ -1366,6 +1357,15 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "11"
+        },
+        {
+          "player_id": "42744",
+          "name": "Mike Washington Jr.",
+          "position": "RB",
+          "nfl_team": "LV",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
         },
         {
           "player_id": "40075",
