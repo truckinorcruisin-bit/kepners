@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-05T17:20:48Z",
+  "fetched_at": "2026-10-05T17:21:01Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
@@ -1420,13 +1420,13 @@
           "bye_week": "11"
         },
         {
-          "player_id": "33991",
-          "name": "Breece Hall",
+          "player_id": "41823",
+          "name": "TreVeyon Henderson",
           "position": "RB",
-          "nfl_team": "NYJ",
+          "nfl_team": "NE",
           "roster_slot": "RB",
           "is_keeper": false,
-          "bye_week": "13"
+          "bye_week": "11"
         },
         {
           "player_id": "33393",
@@ -1465,6 +1465,15 @@
           "bye_week": "11"
         },
         {
+          "player_id": "33991",
+          "name": "Breece Hall",
+          "position": "RB",
+          "nfl_team": "NYJ",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
           "player_id": "34008",
           "name": "Alec Pierce",
           "position": "WR",
@@ -1481,15 +1490,6 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "7"
-        },
-        {
-          "player_id": "41823",
-          "name": "TreVeyon Henderson",
-          "position": "RB",
-          "nfl_team": "NE",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "11"
         },
         {
           "player_id": "41808",
@@ -1562,15 +1562,6 @@
           "bye_week": "11"
         },
         {
-          "player_id": "33423",
-          "name": "Javonte Williams",
-          "position": "RB",
-          "nfl_team": "Dal",
-          "roster_slot": "RB",
-          "is_keeper": true,
-          "bye_week": "14"
-        },
-        {
           "player_id": "42625",
           "name": "Jeremiyah Love",
           "position": "RB",
@@ -1580,11 +1571,11 @@
           "bye_week": "14"
         },
         {
-          "player_id": "32692",
-          "name": "Justin Jefferson",
-          "position": "WR",
+          "player_id": "30295",
+          "name": "Aaron Jones Sr.",
+          "position": "RB",
           "nfl_team": "Min",
-          "roster_slot": "WR",
+          "roster_slot": "RB",
           "is_keeper": false,
           "bye_week": "6"
         },
@@ -1607,6 +1598,15 @@
           "bye_week": "8"
         },
         {
+          "player_id": "40201",
+          "name": "Dontayvion Wicks",
+          "position": "WR",
+          "nfl_team": "Phi",
+          "roster_slot": "WR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
           "player_id": "41795",
           "name": "Colston Loveland",
           "position": "TE",
@@ -1616,13 +1616,22 @@
           "bye_week": "10"
         },
         {
-          "player_id": "40201",
-          "name": "Dontayvion Wicks",
+          "player_id": "33423",
+          "name": "Javonte Williams",
+          "position": "RB",
+          "nfl_team": "Dal",
+          "roster_slot": "BN",
+          "is_keeper": true,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "32692",
+          "name": "Justin Jefferson",
           "position": "WR",
-          "nfl_team": "Phi",
+          "nfl_team": "Min",
           "roster_slot": "BN",
           "is_keeper": false,
-          "bye_week": "10"
+          "bye_week": "6"
         },
         {
           "player_id": "41807",
@@ -1632,15 +1641,6 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "7"
-        },
-        {
-          "player_id": "30295",
-          "name": "Aaron Jones Sr.",
-          "position": "RB",
-          "nfl_team": "Min",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "6"
         },
         {
           "player_id": "42730",
