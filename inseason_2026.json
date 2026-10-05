@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-01T16:18:41.820496+00:00",
+  "generated": "2026-10-05T17:19:17.694063+00:00",
   "currentWeek": 4,
   "weeksRemaining": 14,
   "leagues": {
@@ -20597,6 +20597,25 @@
               "effective_per_week": 16.67
             },
             {
+              "player_id": "34447",
+              "name": "Jaylen Warren",
+              "position": "RB",
+              "pro_team": "Pit",
+              "lineup_slot": "RB",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 89.01,
+              "is_keeper": false,
+              "week_projection": 10.93,
+              "bye_week": 9,
+              "ros_points": 125.7,
+              "ros_per_week": 8.98,
+              "trend": -4.65,
+              "season_points_actual": 30.6,
+              "ros_matched": true,
+              "effective_per_week": 8.98
+            },
+            {
               "player_id": "30972",
               "name": "Saquon Barkley",
               "position": "RB",
@@ -20614,25 +20633,6 @@
               "season_points_actual": 18.0,
               "ros_matched": true,
               "effective_per_week": 10.99
-            },
-            {
-              "player_id": "33514",
-              "name": "Chuba Hubbard",
-              "position": "RB",
-              "pro_team": "Car",
-              "lineup_slot": "RB",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": 91.9,
-              "is_keeper": true,
-              "week_projection": 13.34,
-              "bye_week": 5,
-              "ros_points": 136.99,
-              "ros_per_week": 9.78,
-              "trend": 10.94,
-              "season_points_actual": 44.1,
-              "ros_matched": true,
-              "effective_per_week": 9.78
             },
             {
               "player_id": "33963",
@@ -20711,23 +20711,23 @@
               "effective_per_week": 5.49
             },
             {
-              "player_id": "34447",
-              "name": "Jaylen Warren",
+              "player_id": "33514",
+              "name": "Chuba Hubbard",
               "position": "RB",
-              "pro_team": "Pit",
+              "pro_team": "Car",
               "lineup_slot": "BE",
               "injury_status": null,
               "injured": false,
-              "percent_owned": 89.01,
-              "is_keeper": false,
-              "week_projection": 10.93,
-              "bye_week": 9,
-              "ros_points": 125.7,
-              "ros_per_week": 8.98,
-              "trend": -4.65,
-              "season_points_actual": 30.6,
+              "percent_owned": 91.9,
+              "is_keeper": true,
+              "week_projection": 13.34,
+              "bye_week": 5,
+              "ros_points": 136.99,
+              "ros_per_week": 9.78,
+              "trend": 10.94,
+              "season_points_actual": 44.1,
               "ros_matched": true,
-              "effective_per_week": 8.98
+              "effective_per_week": 9.78
             },
             {
               "player_id": "40121",
@@ -20806,25 +20806,6 @@
               "effective_per_week": 3.98
             },
             {
-              "player_id": "42697",
-              "name": "Caleb Douglas",
-              "position": "WR",
-              "pro_team": "Mia",
-              "lineup_slot": "BE",
-              "injury_status": "QUESTIONABLE",
-              "injured": false,
-              "percent_owned": 24.01,
-              "is_keeper": false,
-              "week_projection": 4.76,
-              "bye_week": 6,
-              "ros_points": 61.22,
-              "ros_per_week": 4.37,
-              "trend": 4.58,
-              "season_points_actual": 11.3,
-              "ros_matched": true,
-              "effective_per_week": 4.24
-            },
-            {
               "player_id": "30180",
               "name": "Alvin Kamara",
               "position": "RB",
@@ -20842,6 +20823,44 @@
               "season_points_actual": 6.3,
               "ros_matched": true,
               "effective_per_week": 4.7
+            },
+            {
+              "player_id": "33415",
+              "name": "Rashod Bateman",
+              "position": "WR",
+              "pro_team": "Bal",
+              "lineup_slot": "BE",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 34.24,
+              "is_keeper": false,
+              "week_projection": 5.51,
+              "bye_week": 13,
+              "ros_points": 61.66,
+              "ros_per_week": 4.4,
+              "trend": -5.01,
+              "season_points_actual": 18.5,
+              "ros_matched": true,
+              "effective_per_week": 4.4
+            },
+            {
+              "player_id": "42697",
+              "name": "Caleb Douglas",
+              "position": "WR",
+              "pro_team": "Mia",
+              "lineup_slot": "IR",
+              "injury_status": "QUESTIONABLE",
+              "injured": false,
+              "percent_owned": 24.01,
+              "is_keeper": false,
+              "week_projection": 4.76,
+              "bye_week": 6,
+              "ros_points": 61.22,
+              "ros_per_week": 4.37,
+              "trend": 4.58,
+              "season_points_actual": 11.3,
+              "ros_matched": true,
+              "effective_per_week": 4.24
             },
             {
               "player_id": "28188",
@@ -30095,7 +30114,7 @@
         }
       ],
       "rosterSource": "yahoo-phone-html",
-      "rostersFetchedAt": "2026-10-01T16:13:54Z",
+      "rostersFetchedAt": "2026-10-05T17:19:02Z",
       "freeAgentSource": "derived: ESPN projection pool minus Kepners rosters"
     },
     "miami": {

@@ -1,9 +1,9 @@
 {
-  "fetched_at": "2026-10-01T16:13:54Z",
+  "fetched_at": "2026-10-05T17:19:02Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
-      "player_count": 16,
+      "player_count": 17,
       "keeper_count": 1,
       "players": [
         {
@@ -16,6 +16,15 @@
           "bye_week": "13"
         },
         {
+          "player_id": "34447",
+          "name": "Jaylen Warren",
+          "position": "RB",
+          "nfl_team": "Pit",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "9"
+        },
+        {
           "player_id": "30972",
           "name": "Saquon Barkley",
           "position": "RB",
@@ -23,15 +32,6 @@
           "roster_slot": "RB",
           "is_keeper": false,
           "bye_week": "10"
-        },
-        {
-          "player_id": "33514",
-          "name": "Chuba Hubbard",
-          "position": "RB",
-          "nfl_team": "Car",
-          "roster_slot": "RB",
-          "is_keeper": true,
-          "bye_week": "5"
         },
         {
           "player_id": "33963",
@@ -70,13 +70,13 @@
           "bye_week": "7"
         },
         {
-          "player_id": "34447",
-          "name": "Jaylen Warren",
+          "player_id": "33514",
+          "name": "Chuba Hubbard",
           "position": "RB",
-          "nfl_team": "Pit",
+          "nfl_team": "Car",
           "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "9"
+          "is_keeper": true,
+          "bye_week": "5"
         },
         {
           "player_id": "40121",
@@ -115,15 +115,6 @@
           "bye_week": "8"
         },
         {
-          "player_id": "42697",
-          "name": "Caleb Douglas",
-          "position": "WR",
-          "nfl_team": "Mia",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "6"
-        },
-        {
           "player_id": "30180",
           "name": "Alvin Kamara",
           "position": "RB",
@@ -131,6 +122,24 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "8"
+        },
+        {
+          "player_id": "33415",
+          "name": "Rashod Bateman",
+          "position": "WR",
+          "nfl_team": "Bal",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "13"
+        },
+        {
+          "player_id": "42697",
+          "name": "Caleb Douglas",
+          "position": "WR",
+          "nfl_team": "Mia",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "6"
         },
         {
           "player_id": "28188",
