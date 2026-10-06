@@ -40,89 +40,110 @@ jobs:
       - name: Install dependencies
         run: pip install beautifulsoup4
 
-      # ONE-TIME, IDEMPOTENT. Before per-league folders existed the Shortcut wrote
-      # yahoo_roster_raw/team_<id>.html -- those are all Kepners. git mv keeps their
-      # history. If the Shortcut already wrote the new path, the stale flat copy is
-      # simply deleted. A no-op once nothing flat remains.
-      - name: Migrate legacy flat files into yahoo_roster_raw/kepners/
+      # Everything that produces or publishes data lives in ONE step on purpose.
+      #
+      # Why: inseason_2026.json, <league>_live_rosters.json and
+      # power_rankings_history.json are regenerated WHOLE on every run (and
+      # Update In-Season Data rewrites two of them too), so when two runs overlap,
+      # git cannot merge them -- `git pull --rebase` just stops on a conflict, and
+      # every later retry fails with "unmerged files". So we never merge. Each
+      # attempt starts from the latest main, regenerates from it, commits, and
+      # pushes; if main moved in the meantime the push is rejected and the next
+      # attempt simply regenerates on top of the new main. Regenerating (rather
+      # than keeping "our" copy) also preserves anything the other run added, such
+      # as another week's power-rankings snapshot.
+      - name: Parse, rebuild cockpit data, and publish
         shell: bash
         run: |
           shopt -s nullglob
-          flat=(yahoo_roster_raw/team_*.html)
-          if [ ${#flat[@]} -eq 0 ]; then echo "No legacy flat files."; exit 0; fi
-          mkdir -p yahoo_roster_raw/kepners
-          for f in "${flat[@]}"; do
-            dest="yahoo_roster_raw/kepners/$(basename "$f")"
-            if [ -e "$dest" ]; then git rm -q "$f"; else git mv "$f" "$dest"; fi
-          done
-          echo "Migrated ${#flat[@]} legacy file(s) into yahoo_roster_raw/kepners/"
-
-      # Each league parses to a TEMP file and replaces the real one only if at least
-      # one team parsed. A bad scrape (expired cookie, wrong URL) therefore can't wipe
-      # the last good rosters, and one league failing can't block the other. The run
-      # still goes red at the end so a failure isn't missed.
-      - name: Parse committed roster HTML (per league)
-        shell: bash
-        run: |
-          shopt -s nullglob
-          seen=0; ok=0; failed=""
-          for lg in kepners miami; do
-            dir="yahoo_roster_raw/$lg"
-            files=("$dir"/team_*.html)
-            if [ ${#files[@]} -eq 0 ]; then echo "[$lg] no files -- skipping"; continue; fi
-            seen=$((seen+1))
-            echo "===== $lg (${#files[@]} files) ====="
-            # When the newest file was committed = when the phone actually scraped it.
-            stamp=$(gh api "repos/$GITHUB_REPOSITORY/commits?path=$dir&per_page=1" \
-                      --jq '.[0].commit.committer.date' 2>/dev/null || true)
-            args=(--html-dir "$dir" --out "$lg.tmp.json")
-            [ -n "$stamp" ] && args+=(--fetched-at "$stamp")
-            python yahoo_parse_local.py "${args[@]}" 2>&1 | tee -a parse.log
-            rc=${PIPESTATUS[0]}
-            if [ $rc -eq 0 ]; then
-              mv "$lg.tmp.json" "${lg}_live_rosters.json"; ok=$((ok+1))
-            else
-              echo "::warning::[$lg] no usable teams parsed -- keeping the last good ${lg}_live_rosters.json"
-              rm -f "$lg.tmp.json"; failed="$failed $lg"
-            fi
-          done
-          if [ $seen -eq 0 ]; then echo "::error::No roster HTML found under yahoo_roster_raw/<league>/"; exit 1; fi
-          [ -n "$failed" ] && echo "PARSE_FAILED=$failed" >> "$GITHUB_ENV"
-          [ $ok -gt 0 ] || exit 1
-          exit 0
-
-      # Rebuild the Manager Cockpit data so the new rosters show up right away
-      # instead of waiting for Tuesday's In-Season run. Pure transformation of files
-      # already in the repo, so no secrets. continue-on-error: a build problem must
-      # never stop the parsed rosters themselves from being committed.
-      - name: Rebuild in-season cockpit data
-        continue-on-error: true
-        run: |
-          python build_inseason.py 2026 2>&1 | tee -a parse.log
-          exit ${PIPESTATUS[0]}
-
-      - name: Commit parsed JSON back to repo
-        shell: bash
-        run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # `git add` aborts if ANY listed path is missing, so only add what exists.
-          for f in kepners_live_rosters.json miami_live_rosters.json inseason_2026.json power_rankings_history.json; do
-            [ -f "$f" ] && git add "$f"
-          done
-          git add -A yahoo_roster_raw   # stages the one-time migration moves
-          git diff --staged --quiet && { echo "No changes to commit."; exit 0; }
-          git commit -m "Update live rosters + in-season data [automated]"
+          LEAGUES="kepners miami"
+          FAILED=""
+
+          # Records leagues that produced nothing for the final "flag" step, then exits.
+          finish() {
+            [ -n "$FAILED" ] && echo "PARSE_FAILED=$FAILED" >> "$GITHUB_ENV"
+            exit "$1"
+          }
+
+          # ONE-TIME, IDEMPOTENT. Before per-league folders existed the Shortcut wrote
+          # yahoo_roster_raw/team_<id>.html -- all Kepners. If the Shortcut already wrote
+          # the new path, the stale flat copy is simply deleted. No-op once nothing is flat.
+          migrate() {
+            local flat=(yahoo_roster_raw/team_*.html) f dest
+            [ ${#flat[@]} -eq 0 ] && return 0
+            mkdir -p yahoo_roster_raw/kepners
+            for f in "${flat[@]}"; do
+              dest="yahoo_roster_raw/kepners/$(basename "$f")"
+              if [ -e "$dest" ]; then git rm -q "$f"; else git mv "$f" "$dest"; fi
+            done
+            echo "Migrated ${#flat[@]} legacy file(s) into yahoo_roster_raw/kepners/"
+          }
+
+          # Each league parses to a TEMP file that replaces the real one only if at least
+          # one team parsed, so a bad scrape (expired cookie, wrong URL) can't wipe the
+          # last good rosters and one league failing can't block the other.
+          # Returns 0 if at least one league parsed, 1 if none did.
+          parse_all() {
+            local seen=0 ok=0 lg dir files stamp
+            FAILED=""
+            for lg in $LEAGUES; do
+              dir="yahoo_roster_raw/$lg"
+              files=("$dir"/team_*.html)
+              if [ ${#files[@]} -eq 0 ]; then echo "[$lg] no files -- skipping"; continue; fi
+              seen=$((seen+1))
+              echo "===== $lg (${#files[@]} files) ====="
+              # Commit time of the newest file = when the phone actually scraped it.
+              stamp=$(gh api "repos/$GITHUB_REPOSITORY/commits?path=$dir&per_page=1" \
+                        --jq '.[0].commit.committer.date' 2>/dev/null || true)
+              local args=(--html-dir "$dir" --out "$lg.tmp.json")
+              [ -n "$stamp" ] && args+=(--fetched-at "$stamp")
+              # `if` keeps `-e -o pipefail` from aborting the whole step when ONE league fails.
+              if python yahoo_parse_local.py "${args[@]}" 2>&1 | tee -a parse.log; then
+                mv "$lg.tmp.json" "${lg}_live_rosters.json"; ok=$((ok+1))
+              else
+                echo "::warning::[$lg] no usable teams parsed -- keeping the last good ${lg}_live_rosters.json"
+                rm -f "$lg.tmp.json"; FAILED="$FAILED $lg"
+              fi
+            done
+            if [ $seen -eq 0 ]; then echo "::error::No roster HTML found under yahoo_roster_raw/<league>/"; return 1; fi
+            [ $ok -gt 0 ]
+          }
+
           for i in 1 2 3 4 5; do
-            git pull --rebase origin main && git push && exit 0
-            echo "Push attempt $i rejected; retrying..."
+            # Always work from the newest main; never merge.
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            migrate
+
+            if ! parse_all; then
+              echo "::error::Nothing parsed (expired Yahoo cookie, or the Shortcut fetched the wrong URL). Last good data kept; nothing committed."
+              finish 1
+            fi
+
+            # A cockpit-rebuild problem must never stop the parsed rosters being published.
+            if ! python build_inseason.py 2026 2>&1 | tee -a parse.log; then
+              echo "::warning::In-season rebuild failed -- publishing the parsed rosters anyway."
+            fi
+
+            # `git add` aborts if ANY listed path is missing, so only add what exists.
+            for f in kepners_live_rosters.json miami_live_rosters.json inseason_2026.json power_rankings_history.json; do
+              [ -f "$f" ] && git add "$f"
+            done
+            git add -A yahoo_roster_raw   # stages the one-time migration moves
+            if git diff --staged --quiet; then echo "No changes to commit."; finish 0; fi
+            git commit -q -m "Update live rosters + in-season data [automated]"
+
+            if git push -q origin HEAD:main; then echo "Pushed (attempt $i)."; finish 0; fi
+            echo "Push attempt $i rejected: main moved while this run worked. Rebuilding on the new main..."
             sleep $((i * 3))
           done
-          echo "Push failed after 5 attempts" >&2
-          exit 1
+          echo "::error::Push failed after 5 attempts." >&2
+          finish 1
 
       - name: Flag leagues that failed to parse
         if: env.PARSE_FAILED != ''
         run: |
-          echo "::error::Roster HTML for:${PARSE_FAILED} had no usable teams (expired Yahoo cookie, or the Shortcut fetched the wrong URL). Their last good data was kept. See 'Parse committed roster HTML' above."
+          echo "::error::Roster HTML for:${PARSE_FAILED} had no usable teams (expired Yahoo cookie, or the Shortcut fetched the wrong URL). Their last good data was kept. See 'Parse, rebuild cockpit data, and publish' above."
           exit 1
