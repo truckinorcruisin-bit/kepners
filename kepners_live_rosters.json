@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-05T17:21:01Z",
+  "fetched_at": "2026-10-05T17:21:13Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
@@ -1713,13 +1713,13 @@
       "keeper_count": 2,
       "players": [
         {
-          "player_id": "40029",
-          "name": "Bryce Young",
+          "player_id": "32671",
+          "name": "Joe Burrow",
           "position": "QB",
-          "nfl_team": "Car",
+          "nfl_team": "Cin",
           "roster_slot": "QB",
           "is_keeper": false,
-          "bye_week": "5"
+          "bye_week": "6"
         },
         {
           "player_id": "40055",
@@ -1776,6 +1776,15 @@
           "bye_week": "8"
         },
         {
+          "player_id": "40029",
+          "name": "Bryce Young",
+          "position": "QB",
+          "nfl_team": "Car",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "5"
+        },
+        {
           "player_id": "40114",
           "name": "Tre Tucker",
           "position": "WR",
@@ -1783,33 +1792,6 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "13"
-        },
-        {
-          "player_id": "33415",
-          "name": "Rashod Bateman",
-          "position": "WR",
-          "nfl_team": "Bal",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "13"
-        },
-        {
-          "player_id": "32671",
-          "name": "Joe Burrow",
-          "position": "QB",
-          "nfl_team": "Cin",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "6"
-        },
-        {
-          "player_id": "42654",
-          "name": "Jadarian Price",
-          "position": "RB",
-          "nfl_team": "Sea",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "11"
         },
         {
           "player_id": "32725",
@@ -1839,13 +1821,31 @@
           "bye_week": "10"
         },
         {
-          "player_id": "42702",
-          "name": "Ja'Kobi Lane",
-          "position": "WR",
-          "nfl_team": "Bal",
+          "player_id": "40108",
+          "name": "Kendre Miller",
+          "position": "RB",
+          "nfl_team": "NO",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41344",
+          "name": "George Holani",
+          "position": "RB",
+          "nfl_team": "Sea",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
+          "player_id": "42654",
+          "name": "Jadarian Price",
+          "position": "RB",
+          "nfl_team": "Sea",
           "roster_slot": "IR",
           "is_keeper": false,
-          "bye_week": "13"
+          "bye_week": "11"
         },
         {
           "player_id": "41499",
