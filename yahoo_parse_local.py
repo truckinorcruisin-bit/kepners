@@ -32,6 +32,7 @@ makes any problem a failure.
 """
 
 import argparse
+import gzip
 import json
 import re
 import sys
@@ -53,7 +54,7 @@ LOGIN_FORM_MARKERS = (
 LOGIN_TITLE_RE = re.compile(r"^\s*(sign in|log in|yahoo\s*\|\s*login)", re.I)
 
 ROSTER_WRAP_IDS = ("statTable0-wrap", "statTable1-wrap", "statTable2-wrap")
-TEAM_ID_RE = re.compile(r"team_(\d+)\.html$")
+TEAM_ID_RE = re.compile(r"team_(\d+)\.html(?:\.gz)?$")
 
 # Statuses
 ROSTER, LOGIN_WALL, WRONG_PAGE, UNKNOWN = "roster", "login_wall", "wrong_page", "unknown"
@@ -160,9 +161,31 @@ def parse_roster_html(html):
     return ROSTER, detail, parse_team_name(soup), players
 
 
+def pick_files(html_dir):
+    """team_<id>.html and team_<id>.html.gz, one file per team. The Safari Shortcut now sends
+    gzip (about 9x smaller); older plain .html copies may still exist, so when a team has both,
+    the .gz wins (it is the newer scrape)."""
+    chosen = {}
+    for p in list(html_dir.glob("team_*.html")) + list(html_dir.glob("team_*.html.gz")):
+        m = TEAM_ID_RE.search(p.name)
+        if not m:
+            continue
+        tid = int(m.group(1))
+        if tid not in chosen or p.name.endswith(".gz"):
+            chosen[tid] = p
+    return [chosen[k] for k in sorted(chosen)]
+
+
+def read_html(path):
+    data = path.read_bytes()
+    if path.name.endswith(".gz"):
+        data = gzip.decompress(data)
+    return data.decode("utf-8", errors="replace")
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--html-dir", required=True, help="Directory containing team_<id>.html files")
+    ap.add_argument("--html-dir", required=True, help="Directory containing team_<id>.html or team_<id>.html.gz files")
     ap.add_argument("--out", required=True, help="Output JSON path")
     ap.add_argument("--strict", action="store_true", help="Exit 1 if ANY team has a problem")
     ap.add_argument("--fetched-at", help="ISO timestamp of when the HTML was scraped (the commit time of "
@@ -177,10 +200,9 @@ def main():
 
     result = {"fetched_at": args.fetched_at or datetime.now(timezone.utc).isoformat(), "teams": {}, "problems": {}}
 
-    html_files = sorted(html_dir.glob("team_*.html"), key=lambda p: int(TEAM_ID_RE.search(p.name).group(1))
-                        if TEAM_ID_RE.search(p.name) else 10**6)
+    html_files = pick_files(html_dir)
     if not html_files:
-        print(f"WARNING: no team_*.html files found in {html_dir}", file=sys.stderr)
+        print(f"WARNING: no team_*.html[.gz] files found in {html_dir}", file=sys.stderr)
 
     for html_file in html_files:
         m = TEAM_ID_RE.search(html_file.name)
@@ -189,7 +211,12 @@ def main():
             continue
         team_id = m.group(1)
 
-        html = html_file.read_text(encoding="utf-8", errors="replace")
+        try:
+            html = read_html(html_file)
+        except Exception as e:   # corrupt/truncated .gz
+            print(f"  UNREADABLE {html_file.name}: {e}", file=sys.stderr)
+            result["problems"][team_id] = {"status": UNKNOWN, "detail": f"file could not be read: {e}"}
+            continue
         status, detail, team_name, players = parse_roster_html(html)
 
         if status != ROSTER:
