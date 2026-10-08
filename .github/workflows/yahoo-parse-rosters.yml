@@ -2,8 +2,8 @@ name: Parse Yahoo Rosters (from phone-pushed HTML)
 
 # Triggers whenever new/updated HTML lands under yahoo_roster_raw/, which is where
 # the iPhone Shortcut pushes each team's roster page:
-#     yahoo_roster_raw/kepners/team_<id>.html
-#     yahoo_roster_raw/miami/team_<id>.html
+#     yahoo_roster_raw/kepners/team_<id>.html.gz   (gzip; older runs left plain team_<id>.html)
+#     yahoo_roster_raw/miami/team_<id>.html.gz
 # One folder per league; each is parsed into <league>_live_rosters.json.
 # No cookie, no network fetch here -- just parsing files already in the repo.
 
@@ -81,6 +81,17 @@ jobs:
             echo "Migrated ${#flat[@]} legacy file(s) into yahoo_roster_raw/kepners/"
           }
 
+          # The Shortcut now sends gzip (team_<id>.html.gz). When a team has both, the plain
+          # .html is the older copy: delete it so only the current scrape is kept.
+          tidy() {
+            local gz plain n=0
+            for gz in yahoo_roster_raw/*/team_*.html.gz; do
+              plain="${gz%.gz}"
+              if [ -e "$plain" ]; then git rm -q "$plain"; n=$((n+1)); fi
+            done
+            [ $n -eq 0 ] || echo "Removed $n plain .html copy(ies) superseded by .html.gz"
+          }
+
           # Each league parses to a TEMP file that replaces the real one only if at least
           # one team parsed, so a bad scrape (expired cookie, wrong URL) can't wipe the
           # last good rosters and one league failing can't block the other.
@@ -90,7 +101,7 @@ jobs:
             FAILED=""
             for lg in $LEAGUES; do
               dir="yahoo_roster_raw/$lg"
-              files=("$dir"/team_*.html)
+              files=("$dir"/team_*.html "$dir"/team_*.html.gz)
               if [ ${#files[@]} -eq 0 ]; then echo "[$lg] no files -- skipping"; continue; fi
               seen=$((seen+1))
               echo "===== $lg (${#files[@]} files) ====="
@@ -107,7 +118,7 @@ jobs:
                 rm -f "$lg.tmp.json"; FAILED="$FAILED $lg"
               fi
             done
-            if [ $seen -eq 0 ]; then echo "::error::No roster HTML found under yahoo_roster_raw/<league>/"; return 1; fi
+            if [ $seen -eq 0 ]; then echo "::error::No roster files found under yahoo_roster_raw/<league>/"; return 1; fi
             [ $ok -gt 0 ]
           }
 
@@ -116,6 +127,7 @@ jobs:
             git fetch -q origin main
             git reset -q --hard origin/main
             migrate
+            tidy
 
             if ! parse_all; then
               echo "::error::Nothing parsed (expired Yahoo cookie, or the Shortcut fetched the wrong URL). Last good data kept; nothing committed."
