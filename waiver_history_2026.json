@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-07T11:03:07.654041+00:00",
+ "generated": "2026-10-08T00:52:21.834908+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
@@ -46,7 +46,7 @@
      "manager": "Andrew Piotrowski",
      "faab_spent": 11,
      "waiver_rank": 4,
-     "acquisitions": 6
+     "acquisitions": 8
     },
     "11": {
      "team_id": 11,
@@ -54,7 +54,7 @@
      "manager": "Dan Beringer",
      "faab_spent": 9,
      "waiver_rank": 8,
-     "acquisitions": 7
+     "acquisitions": 10
     },
     "14": {
      "team_id": 14,
@@ -1378,44 +1378,6 @@
     {
      "season": 2026,
      "week": 5,
-     "date": 1791340917938,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 0,
-     "add": {
-      "id": 4682648,
-      "name": "Malachi Fields",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4429835,
-      "name": "George Holani"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791358083103,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 18,
-     "bid": 3,
-     "add": {
-      "id": 4384852,
-      "name": "Dohnte Meyers",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4869961,
-      "name": "Chris Bell"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
      "date": 1791340733856,
      "type": "WAIVER",
      "status": "PENDING",
@@ -1449,25 +1411,6 @@
      "drop": {
       "id": 4429835,
       "name": "George Holani"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791358083101,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 18,
-     "bid": 4,
-     "add": {
-      "id": 4635008,
-      "name": "Keon Coleman",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4869961,
-      "name": "Chris Bell"
      }
     },
     {
@@ -1536,6 +1479,139 @@
      "add": {
       "id": 4431492,
       "name": "Roman Wilson",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4869961,
+      "name": "Chris Bell"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791340799105,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 4384852,
+      "name": "Dohnte Meyers",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4869961,
+      "name": "Chris Bell"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791358083113,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 3116164,
+      "name": "Mike Gesicki",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 2576925,
+      "name": "Darren Waller"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791340747105,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4430539,
+      "name": "Brenton Strange",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 2576925,
+      "name": "Darren Waller"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791358083113,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4682648,
+      "name": "Malachi Fields",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429835,
+      "name": "George Holani"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791340917938,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4682648,
+      "name": "Malachi Fields",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4429835,
+      "name": "George Holani"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791358083103,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 4384852,
+      "name": "Dohnte Meyers",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4869961,
+      "name": "Chris Bell"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791358083101,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 18,
+     "bid": 4,
+     "add": {
+      "id": 4635008,
+      "name": "Keon Coleman",
       "position": "WR"
      },
      "drop": {
@@ -1679,44 +1755,6 @@
     {
      "season": 2026,
      "week": 5,
-     "date": 1791340799105,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 1,
-     "add": {
-      "id": 4384852,
-      "name": "Dohnte Meyers",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4869961,
-      "name": "Chris Bell"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791358083113,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 18,
-     "bid": 0,
-     "add": {
-      "id": 3116164,
-      "name": "Mike Gesicki",
-      "position": "TE"
-     },
-     "drop": {
-      "id": 2576925,
-      "name": "Darren Waller"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
      "date": 1791358083087,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -1845,44 +1883,6 @@
      "drop": {
       "id": 2977187,
       "name": "Cooper Kupp"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791340747105,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 0,
-     "add": {
-      "id": 4430539,
-      "name": "Brenton Strange",
-      "position": "TE"
-     },
-     "drop": {
-      "id": 2576925,
-      "name": "Darren Waller"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791358083113,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 18,
-     "bid": 0,
-     "add": {
-      "id": 4682648,
-      "name": "Malachi Fields",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4429835,
-      "name": "George Holani"
      }
     },
     {
@@ -8830,7 +8830,7 @@
      "manager": "Dayton Paul",
      "faab_spent": 0,
      "waiver_rank": 7,
-     "acquisitions": 1
+     "acquisitions": 3
     },
     "3": {
      "team_id": 3,
@@ -8846,7 +8846,7 @@
      "manager": "Keith Quiring",
      "faab_spent": 0,
      "waiver_rank": 11,
-     "acquisitions": 3
+     "acquisitions": 4
     },
     "5": {
      "team_id": 5,
@@ -8894,7 +8894,7 @@
      "manager": "sean mullins",
      "faab_spent": 0,
      "waiver_rank": 10,
-     "acquisitions": 12
+     "acquisitions": 13
     },
     "11": {
      "team_id": 11,
@@ -9822,25 +9822,6 @@
     {
      "season": 2026,
      "week": 5,
-     "date": 1791356727591,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 9,
-     "bid": 0,
-     "add": {
-      "id": -16030,
-      "name": "Jaguars D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16002,
-      "name": "Bills D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
      "date": 1791356727590,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -9874,6 +9855,63 @@
      "drop": {
       "id": 4432773,
       "name": "Brian Thomas Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791356727591,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 3,
+     "bid": 0,
+     "add": {
+      "id": 4431545,
+      "name": "Will Shipley",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4362619,
+      "name": "Chris Rodriguez Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791341110475,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4431545,
+      "name": "Will Shipley",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4429835,
+      "name": "George Holani"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791356727591,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 9,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16002,
+      "name": "Bills D/ST"
      }
     },
     {
@@ -9931,44 +9969,6 @@
      "drop": {
       "id": -16033,
       "name": "Ravens D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791356727591,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 3,
-     "bid": 0,
-     "add": {
-      "id": 4431545,
-      "name": "Will Shipley",
-      "position": "RB"
-     },
-     "drop": {
-      "id": 4362619,
-      "name": "Chris Rodriguez Jr."
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791341110475,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": 4431545,
-      "name": "Will Shipley",
-      "position": "RB"
-     },
-     "drop": {
-      "id": 4429835,
-      "name": "George Holani"
      }
     }
    ]
