@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-08T01:44:53.060238+00:00",
+  "generated": "2026-10-08T02:05:16.385784+00:00",
   "currentWeek": 5,
   "weeksRemaining": 13,
   "leagues": {
@@ -22084,7 +22084,7 @@
             },
             {
               "player_id": "100025",
-              "name": "49ers",
+              "name": "San Francisco",
               "position": "DEF",
               "pro_team": "SF",
               "lineup_slot": "DEF",
@@ -22218,7 +22218,7 @@
             {
               "slot": "DEF",
               "position": "DEF",
-              "player": "49ers",
+              "player": "San Francisco",
               "perWeek": 6.19,
               "rank": 5,
               "of": 12,
@@ -22273,7 +22273,7 @@
             },
             {
               "slot": "DEF",
-              "player": "49ers",
+              "player": "San Francisco",
               "perWeek": 6.19
             }
           ],
@@ -22571,7 +22571,7 @@
             },
             {
               "player_id": "100016",
-              "name": "Vikings",
+              "name": "Minnesota",
               "position": "DEF",
               "pro_team": "Min",
               "lineup_slot": "DEF",
@@ -22705,7 +22705,7 @@
             {
               "slot": "DEF",
               "position": "DEF",
-              "player": "Vikings",
+              "player": "Minnesota",
               "perWeek": 7.04,
               "rank": 1,
               "of": 12,
@@ -22760,7 +22760,7 @@
             },
             {
               "slot": "DEF",
-              "player": "Vikings",
+              "player": "Minnesota",
               "perWeek": 7.04
             }
           ],
@@ -30342,7 +30342,7 @@
         }
       ],
       "rosterSource": "yahoo-phone-html",
-      "rostersFetchedAt": "2026-10-08T00:49:06Z",
+      "rostersFetchedAt": "2026-10-08T02:05:07Z",
       "freeAgentSource": "derived: ESPN projection pool minus Kepners rosters"
     },
     "miami": {
