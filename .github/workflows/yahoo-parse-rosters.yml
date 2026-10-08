@@ -5,12 +5,16 @@ name: Parse Yahoo Rosters (from phone-pushed HTML)
 #     yahoo_roster_raw/kepners/team_<id>.html.gz   (gzip; older runs left plain team_<id>.html)
 #     yahoo_roster_raw/miami/team_<id>.html.gz
 # One folder per league; each is parsed into <league>_live_rosters.json.
+# The Shortcut also saves each league's Transactions pages under
+#     yahoo_transactions_raw/<league>/all_<offset>.html.gz  (and faab_<offset>.html.gz)
+# which are parsed into yahoo_waiver_history_<year>.json (FAAB bid history for the cockpit).
 # No cookie, no network fetch here -- just parsing files already in the repo.
 
 on:
   push:
     paths:
       - 'yahoo_roster_raw/**'
+      - 'yahoo_transactions_raw/**'
   workflow_dispatch: {}  # also runnable by hand from the Actions tab
 
 # The Shortcut pushes one commit per team, so a full run fires a dozen pushes.
@@ -134,13 +138,19 @@ jobs:
               finish 1
             fi
 
+            # FAAB bid history from the saved Transactions pages. Best-effort: a problem here must never
+            # stop the parsed rosters being published, and a league with no pages keeps its earlier history.
+            if ! python yahoo_transactions_parse.py --year 2026 2>&1 | tee -a parse.log; then
+              echo "::warning::Transactions (bid history) parse failed -- publishing the rosters anyway."
+            fi
+
             # A cockpit-rebuild problem must never stop the parsed rosters being published.
             if ! python build_inseason.py 2026 2>&1 | tee -a parse.log; then
               echo "::warning::In-season rebuild failed -- publishing the parsed rosters anyway."
             fi
 
             # `git add` aborts if ANY listed path is missing, so only add what exists.
-            for f in kepners_live_rosters.json miami_live_rosters.json inseason_2026.json power_rankings_history.json; do
+            for f in kepners_live_rosters.json miami_live_rosters.json inseason_2026.json power_rankings_history.json yahoo_waiver_history_2026.json; do
               [ -f "$f" ] && git add "$f"
             done
             git add -A yahoo_roster_raw   # stages the one-time migration moves
