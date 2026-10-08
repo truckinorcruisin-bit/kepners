@@ -87,8 +87,15 @@ jobs:
       # continue-on-error until Yahoo auth is confirmed working in CI. A Yahoo
       # failure must not cost us the Zimmer refresh -- two of three leagues is
       # a usable cockpit, zero is not. Flip this to false once a run succeeds.
+      # Kepners and Miami now arrive through the phone bridge (the Safari Shortcut ->
+      # Parse Yahoo Rosters workflow -> <league>_live_rosters.json), and build_inseason.py
+      # reads those. This API pull is only attempted when a YAHOO_REFRESH_TOKEN secret exists,
+      # so while the Yahoo API is unavailable it is SKIPPED instead of failing every run.
+      # If the API is ever approved and the secret is set, this step resumes by itself, and
+      # API data then takes precedence over the phone bridge for the leagues it covers.
       - name: Pull Yahoo league state (Kepners + Miami)
         id: pull_yahoo
+        if: env.YAHOO_REFRESH_TOKEN != ''
         continue-on-error: true
         run: |
           set -o pipefail
@@ -162,35 +169,49 @@ jobs:
           print("Sanity check passed.")
           PY
 
+      # Why this step never merges: inseason_<year>.json and power_rankings_history.json are
+      # regenerated WHOLE, and the Parse Yahoo Rosters workflow rewrites the same two files every
+      # time a Shortcut run lands. Two whole-file rewrites cannot be merged, so `git pull --rebase`
+      # just stops on a conflict (and every retry then fails with "unmerged files").
+      # Instead, on a rejected push we start again from the newest main, put THIS run's freshly
+      # pulled ESPN/Sleeper/Yahoo data back on top, and rebuild the derived files from that. The
+      # rebuild also picks up the newest Kepners/Miami rosters and keeps any weekly power-rankings
+      # snapshot another run added.
       - name: Commit updated files
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          # BUG FIXED (second live run): `git add a.json b.json` aborts with
-          # exit 128 the instant ANY listed pattern matches zero files -- and
-          # it aborts before staging the patterns that DID match, so one
-          # missing file type (Yahoo down that week) killed the commit for
-          # every league, including ones that pulled fine. shopt -s nullglob
-          # makes an unmatched glob expand to nothing instead of surviving as
-          # a literal string, so each pattern is only passed to `git add` when
-          # something real backs it. Also needs `shell: bash` above --
-          # Actions' default `sh` doesn't have shopt/nullglob at all, which is
-          # its own way to silently not do what this looks like it does.
+          # An unmatched glob must expand to nothing, or `git add` aborts on the literal pattern.
           shopt -s nullglob
-          for pattern in inseason_*.json player_ros_*.json espn_inseason_*.json yahoo_inseason_*.json waiver_history_*.json sleeper_trending.json power_rankings_history.json; do
-            git add $pattern
-          done
+          RAW="player_ros_*.json espn_inseason_*.json waiver_history_*.json sleeper_trending.json yahoo_inseason_*.json"
+          ALL="inseason_*.json $RAW power_rankings_history.json"
+
+          # Keep a copy of what this run pulled; it is the part that cannot be regenerated cheaply.
+          mkdir -p "$RUNNER_TEMP/raw"
+          for p in $RAW; do cp "$p" "$RUNNER_TEMP/raw/"; done
+
+          stage() { local p; for p in $ALL; do git add "$p"; done; }
+
+          stage
           git diff --staged --quiet && { echo "Nothing changed -- nothing to commit."; exit 0; }
-          git commit -m "Update in-season data (week refresh) for ${YEAR}"
+          git commit -q -m "Update in-season data (week refresh) for ${YEAR}"
+
           for i in 1 2 3 4 5; do
-            if git push; then
-              exit 0
+            if git push -q origin HEAD:main; then echo "Pushed (attempt $i)."; exit 0; fi
+            echo "Push rejected: main moved while this run worked. Rebuilding on the newest main (attempt $i/5)..."
+            sleep $((i * 3))
+            git fetch -q origin main
+            git reset -q --hard origin/main
+            cp "$RUNNER_TEMP"/raw/* . 2>/dev/null || true
+            if ! python build_inseason.py "$YEAR" 2>&1 | tee -a inseason_run.log; then
+              echo "::warning::Rebuild after rebase failed -- publishing the raw data only."
             fi
-            echo "Push rejected (likely another workflow pushed to main first) -- rebasing and retrying ($i/5)..."
-            git pull --rebase origin main
+            stage
+            if git diff --staged --quiet; then echo "Nothing changed after rebase -- nothing to commit."; exit 0; fi
+            git commit -q -m "Update in-season data (week refresh) for ${YEAR}"
           done
-          echo "::error::git push failed after 5 retries. Check for a genuine merge conflict."
+          echo "::error::git push failed after 5 attempts."
           exit 1
 
       - name: Upload run log
