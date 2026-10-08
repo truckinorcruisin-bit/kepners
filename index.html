@@ -1235,6 +1235,17 @@ async function boot(){
     const rW = await fetch(`waiver_history_${SEASON_YEAR}.json?t=${Date.now()}`);
     if(rW.ok) WAIVERS = await rW.json();
   }catch(e){ /* bids just don't render */ }
+  // Yahoo leagues' bid history: parsed from the Yahoo Transactions page (winning bids only), in the
+  // same shape as the ESPN file, so the FAAB assistant reads both the same way.
+  try{
+    const rY = await fetch(`yahoo_waiver_history_${SEASON_YEAR}.json?t=${Date.now()}`);
+    if(rY.ok){
+      const Y = await rY.json();
+      if(!WAIVERS) WAIVERS = {year:Y.year, generated:Y.generated||'', leagues:{}};
+      WAIVERS.leagues = Object.assign({}, WAIVERS.leagues||{}, Y.leagues||{});
+      WAIVERS.generated = (WAIVERS.generated||'') + '|' + (Y.generated||'');
+    }
+  }catch(e){ /* Yahoo bid history is optional */ }
   try{
     const rT = await fetch(`sleeper_trending.json?t=${Date.now()}`);
     if(rT.ok) TRENDING = await rT.json();
