@@ -1,0 +1,54 @@
+name: FantasyPros API Probe (one-time)
+
+# Calls a handful of FantasyPros endpoints with your API key and writes fantasypros_probe.json:
+# status codes, the shape of each response, and the server's own error text when a parameter is
+# wrong. It is reconnaissance, so the real pull script can be written against what the API
+# actually returns. It saves NO full rankings, projections or player lists (a few sample rows
+# per request at most). Delete fantasypros_probe.json after it has been used.
+#
+# Needs the repo secret FANTASYPROS_API_KEY (Settings -> Secrets and variables -> Actions).
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: fantasypros-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Probe the FantasyPros API
+        env:
+          FANTASYPROS_API_KEY: ${{ secrets.FANTASYPROS_API_KEY }}
+        run: python fantasypros_probe.py
+
+      # Runs even when the probe reports a problem, so the report that explains it gets saved.
+      - name: Commit the probe report
+        if: always() && hashFiles('fantasypros_probe.json') != ''
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add fantasypros_probe.json
+          git diff --staged --quiet && { echo "No change to the report."; exit 0; }
+          git commit -q -m "FantasyPros API probe report [automated]"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && { echo "Pushed (attempt $i)."; exit 0; }
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "::error::Could not push the probe report after 5 attempts."
+          exit 1
