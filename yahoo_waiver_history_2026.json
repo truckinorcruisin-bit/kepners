@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-08T02:08:50.634179+00:00",
+ "generated": "2026-10-12T16:45:48.072866+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -1089,19 +1089,183 @@
      "team_id": 9,
      "type": "FREEAGENT",
      "week": 5
+    },
+    {
+     "add": {
+      "id": "34104",
+      "name": "Khalil Shakir",
+      "position": "WR"
+     },
+     "date": 1791451200000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 10,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "41062",
+      "name": "Cam Little",
+      "position": "K"
+     },
+     "date": 1791479400000,
+     "drop": {
+      "id": "30346",
+      "name": "Harrison Butker"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 3,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "41002",
+      "name": "Will Shipley",
+      "position": "RB"
+     },
+     "date": 1791479760000,
+     "drop": {
+      "id": "34147",
+      "name": "Jalen Nailor"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 3,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "7200",
+      "name": "Aaron Rodgers",
+      "position": "QB"
+     },
+     "date": 1791485760000,
+     "drop": {
+      "id": "33415",
+      "name": "Rashod Bateman"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 1,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "31012",
+      "name": "Mike Gesicki",
+      "position": "TE"
+     },
+     "date": 1791499920000,
+     "drop": {
+      "id": "41831",
+      "name": "Terrance Ferguson"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 8,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "40162",
+      "name": "Roschon Johnson",
+      "position": "RB"
+     },
+     "date": 1791501300000,
+     "drop": {
+      "id": "41881",
+      "name": "Kaleb Johnson"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 12,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "40952",
+      "name": "Roman Wilson",
+      "position": "WR"
+     },
+     "date": 1791584340000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 1,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "41840",
+      "name": "Tre' Harris",
+      "position": "WR"
+     },
+     "date": 1791727440000,
+     "drop": {
+      "id": "100033",
+      "name": "Ravens"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 5,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "33998",
+      "name": "Wan'Dale Robinson",
+      "position": "WR"
+     },
+     "date": 1791732360000,
+     "drop": {
+      "id": "40051",
+      "name": "Quentin Johnston"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 7,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "100001",
+      "name": "Falcons",
+      "position": "DEF"
+     },
+     "date": 1791733440000,
+     "drop": {
+      "id": "100018",
+      "name": "Saints"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 2,
+     "type": "FREEAGENT",
+     "week": 5
     }
    ],
-   "newest": "2026-10-07T05:23:00-04:00",
+   "newest": "2026-10-11T11:44:00-04:00",
    "oldest": "2026-09-08T19:39:00-04:00",
    "pages": 3,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 61,
-   "rows_unparsed": 0,
+   "rows_seen": 71,
+   "rows_unparsed": 2,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
     "1": {
-     "acquisitions": 4,
+     "acquisitions": 6,
      "faab_spent": 0,
      "manager": null,
      "team_id": 1,
@@ -1109,7 +1273,7 @@
      "waiver_rank": null
     },
     "10": {
-     "acquisitions": 3,
+     "acquisitions": 4,
      "faab_spent": 0,
      "manager": null,
      "team_id": 10,
@@ -1125,7 +1289,7 @@
      "waiver_rank": null
     },
     "12": {
-     "acquisitions": 10,
+     "acquisitions": 11,
      "faab_spent": 20,
      "manager": null,
      "team_id": 12,
@@ -1133,7 +1297,7 @@
      "waiver_rank": null
     },
     "2": {
-     "acquisitions": 7,
+     "acquisitions": 8,
      "faab_spent": 0,
      "manager": null,
      "team_id": 2,
@@ -1141,7 +1305,7 @@
      "waiver_rank": null
     },
     "3": {
-     "acquisitions": 4,
+     "acquisitions": 6,
      "faab_spent": 16,
      "manager": null,
      "team_id": 3,
@@ -1157,7 +1321,7 @@
      "waiver_rank": null
     },
     "5": {
-     "acquisitions": 4,
+     "acquisitions": 5,
      "faab_spent": 15,
      "manager": null,
      "team_id": 5,
@@ -1173,7 +1337,7 @@
      "waiver_rank": null
     },
     "7": {
-     "acquisitions": 3,
+     "acquisitions": 4,
      "faab_spent": 21,
      "manager": null,
      "team_id": 7,
@@ -1181,7 +1345,7 @@
      "waiver_rank": null
     },
     "8": {
-     "acquisitions": 2,
+     "acquisitions": 3,
      "faab_spent": 0,
      "manager": null,
      "team_id": 8,
@@ -1599,7 +1763,7 @@
    ],
    "complete_history": true,
    "faab": true,
-   "faab_pages_seen": 0,
+   "faab_pages_seen": 1,
    "free_agent_adds": [
     {
      "add": {
@@ -2004,19 +2168,115 @@
      "team_id": 7,
      "type": "FREEAGENT",
      "week": 5
+    },
+    {
+     "add": {
+      "id": "33113",
+      "name": "Juwan Johnson",
+      "position": "TE"
+     },
+     "date": 1791425520000,
+     "drop": {
+      "id": "42655",
+      "name": "De'Zhaun Stribling"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 4,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "29369",
+      "name": "Dak Prescott",
+      "position": "QB"
+     },
+     "date": 1791463680000,
+     "drop": {
+      "id": "28534",
+      "name": "Stefon Diggs"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 1,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "40893",
+      "name": "Marvin Harrison Jr.",
+      "position": "WR"
+     },
+     "date": 1791641760000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 1,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "100003",
+      "name": "Bears",
+      "position": "DEF"
+     },
+     "date": 1791727080000,
+     "drop": {
+      "id": "40114",
+      "name": "Tre Tucker"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 5,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "29325",
+      "name": "Jacoby Brissett",
+      "position": "QB"
+     },
+     "date": 1791729780000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 3,
+     "type": "FREEAGENT",
+     "week": 5
+    },
+    {
+     "add": {
+      "id": "100001",
+      "name": "Falcons",
+      "position": "DEF"
+     },
+     "date": 1791748080000,
+     "drop": {
+      "id": "100033",
+      "name": "Ravens"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 8,
+     "type": "FREEAGENT",
+     "week": 5
     }
    ],
-   "newest": "2026-10-07T06:55:00-04:00",
+   "newest": "2026-10-11T15:48:00-04:00",
    "oldest": "2026-09-02T21:40:00-04:00",
    "pages": 3,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 51,
+   "rows_seen": 58,
    "rows_unparsed": 0,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
     "1": {
-     "acquisitions": 7,
+     "acquisitions": 9,
      "faab_spent": 25,
      "manager": null,
      "team_id": 1,
@@ -2032,7 +2292,7 @@
      "waiver_rank": null
     },
     "3": {
-     "acquisitions": 10,
+     "acquisitions": 11,
      "faab_spent": 24,
      "manager": null,
      "team_id": 3,
@@ -2040,7 +2300,7 @@
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 8,
+     "acquisitions": 9,
      "faab_spent": 24,
      "manager": null,
      "team_id": 4,
@@ -2048,7 +2308,7 @@
      "waiver_rank": null
     },
     "5": {
-     "acquisitions": 8,
+     "acquisitions": 9,
      "faab_spent": 0,
      "manager": null,
      "team_id": 5,
@@ -2072,7 +2332,7 @@
      "waiver_rank": null
     },
     "8": {
-     "acquisitions": 3,
+     "acquisitions": 4,
      "faab_spent": 11,
      "manager": null,
      "team_id": 8,
