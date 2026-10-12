@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-12T16:45:48.165078+00:00",
+  "generated": "2026-10-12T16:46:08.716183+00:00",
   "currentWeek": 5,
   "weeksRemaining": 13,
   "leagues": {
@@ -26524,23 +26524,23 @@
               "effective_per_week": 3.25
             },
             {
-              "player_id": "41881",
-              "name": "Kaleb Johnson",
+              "player_id": "40162",
+              "name": "Roschon Johnson",
               "position": "RB",
-              "pro_team": "GB",
+              "pro_team": "Chi",
               "lineup_slot": "BE",
               "injury_status": null,
               "injured": false,
-              "percent_owned": 5.01,
+              "percent_owned": 0.25,
               "is_keeper": false,
-              "week_projection": 6.29,
-              "bye_week": 11,
-              "ros_points": 12.41,
-              "ros_per_week": 0.95,
+              "week_projection": null,
+              "bye_week": 10,
+              "ros_points": 0.0,
+              "ros_per_week": null,
               "trend": null,
-              "season_points_actual": 7.0,
+              "season_points_actual": 2.3,
               "ros_matched": true,
-              "effective_per_week": 0.95
+              "effective_per_week": null
             },
             {
               "player_id": "42654",
@@ -29101,6 +29101,24 @@
           "effective_per_week": 0.97
         },
         {
+          "player_id": 4819231,
+          "name": "Kaleb Johnson",
+          "position": "RB",
+          "pro_team": "GB",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": 5.01,
+          "week_projection": 6.29,
+          "bye_week": 11,
+          "ros_points": 12.41,
+          "ros_per_week": 0.95,
+          "trend": null,
+          "season_points_actual": 7.0,
+          "ros_matched": true,
+          "effective_per_week": 0.95
+        },
+        {
           "player_id": 4361516,
           "name": "Daniel Bellinger",
           "position": "TE",
@@ -30343,24 +30361,6 @@
           "effective_per_week": 0.23
         },
         {
-          "player_id": 2998565,
-          "name": "Mo Alie-Cox",
-          "position": "TE",
-          "pro_team": "IND",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": 0.05,
-          "week_projection": null,
-          "bye_week": 13,
-          "ros_points": 3.04,
-          "ros_per_week": 0.23,
-          "trend": null,
-          "season_points_actual": 1.6,
-          "ros_matched": true,
-          "effective_per_week": 0.23
-        },
-        {
           "player_id": 4698597,
           "name": "Barion Brown",
           "position": "WR",
@@ -30380,7 +30380,7 @@
         }
       ],
       "rosterSource": "yahoo-phone-html",
-      "rostersFetchedAt": "2026-10-12T16:45:44Z",
+      "rostersFetchedAt": "2026-10-12T16:45:49Z",
       "freeAgentSource": "derived: ESPN projection pool minus Kepners rosters"
     },
     "miami": {
