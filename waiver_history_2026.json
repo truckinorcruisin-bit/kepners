@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-13T12:23:27.902643+00:00",
+ "generated": "2026-10-13T19:41:47.751160+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
@@ -10064,6 +10064,82 @@
      "drop": {
       "id": 4241463,
       "name": "Jerry Jeudy"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791894364529,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 14880,
+      "name": "Kirk Cousins",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4431545,
+      "name": "Will Shipley"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791894378593,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 2969939,
+      "name": "Jameis Winston",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4431545,
+      "name": "Will Shipley"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791894534827,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4685261,
+      "name": "Germie Bernard",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4710714,
+      "name": "De'Zhaun Stribling"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791894465180,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4241474,
+      "name": "Brian Robinson Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4426386,
+      "name": "Roschon Johnson"
      }
     }
    ]
