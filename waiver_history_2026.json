@@ -1,19 +1,19 @@
 {
  "year": 2026,
- "generated": "2026-10-08T01:44:51.119294+00:00",
+ "generated": "2026-10-13T12:23:27.902643+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
    "faab": true,
    "budget": 100,
-   "currentWeek": 5,
+   "currentWeek": 6,
    "teams": {
     "1": {
      "team_id": 1,
      "team_name": "EVIL EMPIRE",
      "manager": "Zach Zimmer",
      "faab_spent": 14,
-     "waiver_rank": 11,
+     "waiver_rank": 10,
      "acquisitions": 12
     },
     "5": {
@@ -21,7 +21,7 @@
      "team_name": "Letter of the Day is \"TD\"",
      "manager": "Jim Young",
      "faab_spent": 18,
-     "waiver_rank": 7,
+     "waiver_rank": 6,
      "acquisitions": 6
     },
     "6": {
@@ -53,7 +53,7 @@
      "team_name": "Bake N' Shake",
      "manager": "Dan Beringer",
      "faab_spent": 9,
-     "waiver_rank": 8,
+     "waiver_rank": 7,
      "acquisitions": 10
     },
     "14": {
@@ -70,30 +70,30 @@
      "manager": "Michael Violi",
      "faab_spent": 0,
      "waiver_rank": 2,
-     "acquisitions": 1
+     "acquisitions": 2
     },
     "16": {
      "team_id": 16,
      "team_name": "TEXAS CHUPACABRAS",
      "manager": "Pablo De Luna",
      "faab_spent": 29,
-     "waiver_rank": 10,
+     "waiver_rank": 9,
      "acquisitions": 6
     },
     "18": {
      "team_id": 18,
      "team_name": "Elements of  Intrigue",
      "manager": "sean mullins",
-     "faab_spent": 21,
-     "waiver_rank": 12,
-     "acquisitions": 12
+     "faab_spent": 23,
+     "waiver_rank": 11,
+     "acquisitions": 14
     },
     "19": {
      "team_id": 19,
      "team_name": "Maryland Menace",
      "manager": "Matt McKenna",
      "faab_spent": 2,
-     "waiver_rank": 9,
+     "waiver_rank": 8,
      "acquisitions": 6
     },
     "20": {
@@ -101,8 +101,8 @@
      "team_name": "Dangerous  Nights Crew",
      "manager": "Sean Wilkinson",
      "faab_spent": 6,
-     "waiver_rank": 6,
-     "acquisitions": 2
+     "waiver_rank": 12,
+     "acquisitions": 3
     }
    },
    "priorBudget": 100,
@@ -1527,6 +1527,25 @@
     {
      "season": 2026,
      "week": 5,
+     "date": 1791429334335,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4432577,
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3917315,
+      "name": "Kyler Murray"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
      "date": 1791340747105,
      "type": "WAIVER",
      "status": "PENDING",
@@ -1617,6 +1636,25 @@
      "drop": {
       "id": 4869961,
       "name": "Chris Bell"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791530879857,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 20,
+     "bid": 0,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4682745,
+      "name": "Jaylen Wright"
      }
     },
     {
@@ -1850,6 +1888,44 @@
     {
      "season": 2026,
      "week": 5,
+     "date": 1791358083095,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 8,
+     "add": {
+      "id": 4635008,
+      "name": "Keon Coleman",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 2977187,
+      "name": "Cooper Kupp"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791444540714,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": 4432577,
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 3917315,
+      "name": "Kyler Murray"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
      "date": 1791358083104,
      "type": "WAIVER",
      "status": "FAILED_PLAYERALREADYDROPPED",
@@ -1868,21 +1944,21 @@
     },
     {
      "season": 2026,
-     "week": 5,
-     "date": 1791358083095,
+     "week": 6,
+     "date": 1791892325186,
      "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "status": "PENDING",
      "won": false,
-     "team_id": 11,
-     "bid": 8,
+     "team_id": 18,
+     "bid": 2,
      "add": {
-      "id": 4635008,
-      "name": "Keon Coleman",
-      "position": "WR"
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
      },
      "drop": {
-      "id": 2977187,
-      "name": "Cooper Kupp"
+      "id": 3116164,
+      "name": "Mike Gesicki"
      }
     },
     {
@@ -8814,22 +8890,22 @@
    "platform": "espn",
    "faab": false,
    "budget": 100,
-   "currentWeek": 5,
+   "currentWeek": 6,
    "teams": {
     "1": {
      "team_id": 1,
      "team_name": "Mike D",
      "manager": "Michael Dendinger",
      "faab_spent": 0,
-     "waiver_rank": 5,
-     "acquisitions": 1
+     "waiver_rank": 9,
+     "acquisitions": 2
     },
     "2": {
      "team_id": 2,
      "team_name": "Dayton's Daring Team",
      "manager": "Dayton Paul",
      "faab_spent": 0,
-     "waiver_rank": 7,
+     "waiver_rank": 11,
      "acquisitions": 3
     },
     "3": {
@@ -8837,7 +8913,7 @@
      "team_name": "Kevin's Top-Notch Team",
      "manager": "Kevin Zugschwert",
      "faab_spent": 0,
-     "waiver_rank": 9,
+     "waiver_rank": 3,
      "acquisitions": 6
     },
     "4": {
@@ -8845,15 +8921,15 @@
      "team_name": "Keith's Team",
      "manager": "Keith Quiring",
      "faab_spent": 0,
-     "waiver_rank": 11,
-     "acquisitions": 4
+     "waiver_rank": 8,
+     "acquisitions": 5
     },
     "5": {
      "team_id": 5,
      "team_name": "Go Pack Go",
      "manager": "Krenar Hazari",
      "faab_spent": 0,
-     "waiver_rank": 6,
+     "waiver_rank": 10,
      "acquisitions": 0
     },
     "6": {
@@ -8861,15 +8937,15 @@
      "team_name": "Team Hansen",
      "manager": "Nick Hansen",
      "faab_spent": 0,
-     "waiver_rank": 3,
-     "acquisitions": 5
+     "waiver_rank": 6,
+     "acquisitions": 6
     },
     "7": {
      "team_id": 7,
      "team_name": "Bruno's Best Team",
      "manager": "Bruno Prentice",
      "faab_spent": 0,
-     "waiver_rank": 4,
+     "waiver_rank": 7,
      "acquisitions": 1
     },
     "8": {
@@ -8877,7 +8953,7 @@
      "team_name": "Fantasy Baseball Team",
      "manager": "Eric Mathis",
      "faab_spent": 0,
-     "waiver_rank": 1,
+     "waiver_rank": 2,
      "acquisitions": 1
     },
     "9": {
@@ -8893,23 +8969,23 @@
      "team_name": "1st and 11",
      "manager": "sean mullins",
      "faab_spent": 0,
-     "waiver_rank": 10,
-     "acquisitions": 13
+     "waiver_rank": 4,
+     "acquisitions": 14
     },
     "11": {
      "team_id": 11,
      "team_name": "34=GOAT (Bonnet\u2019s Team)",
      "manager": "Jason Bonnet",
      "faab_spent": 0,
-     "waiver_rank": 8,
-     "acquisitions": 6
+     "waiver_rank": 1,
+     "acquisitions": 8
     },
     "12": {
      "team_id": 12,
      "team_name": "Nate's Nifty Team",
      "manager": "Nate Stephenson",
      "faab_spent": 0,
-     "waiver_rank": 2,
+     "waiver_rank": 5,
      "acquisitions": 6
     }
    },
@@ -9784,6 +9860,82 @@
     {
      "season": 2026,
      "week": 5,
+     "date": 1791356727590,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 3,
+     "bid": 0,
+     "add": {
+      "id": -16007,
+      "name": "Broncos D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4432773,
+      "name": "Brian Thomas Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791529760257,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 0,
+     "add": {
+      "id": -16003,
+      "name": "Bears D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16019,
+      "name": "Giants D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791356727591,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 4,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4241463,
+      "name": "Jerry Jeudy"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
+     "date": 1791356727591,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": -16030,
+      "name": "Jaguars D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16033,
+      "name": "Ravens D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 5,
      "date": 1791356727591,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -9836,25 +9988,6 @@
      "drop": {
       "id": 4429835,
       "name": "George Holani"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791356727590,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 3,
-     "bid": 0,
-     "add": {
-      "id": -16007,
-      "name": "Broncos D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": 4432773,
-      "name": "Brian Thomas Jr."
      }
     },
     {
@@ -9924,25 +10057,6 @@
      "team_id": 4,
      "bid": 0,
      "add": {
-      "id": -16030,
-      "name": "Jaguars D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": 4241463,
-      "name": "Jerry Jeudy"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791356727591,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 4,
-     "bid": 0,
-     "add": {
       "id": 4431545,
       "name": "Will Shipley",
       "position": "RB"
@@ -9950,25 +10064,6 @@
      "drop": {
       "id": 4241463,
       "name": "Jerry Jeudy"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 5,
-     "date": 1791356727591,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 11,
-     "bid": 0,
-     "add": {
-      "id": -16030,
-      "name": "Jaguars D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16033,
-      "name": "Ravens D/ST"
      }
     }
    ]
