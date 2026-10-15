@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-12T16:46:08.621792+00:00",
+ "generated": "2026-10-15T02:02:33.816829+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -523,6 +523,126 @@
      "team_id": 12,
      "type": "WAIVER",
      "week": 5,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "40108",
+      "name": "Kendre Miller",
+      "position": "RB"
+     },
+     "bid": 2,
+     "date": 1791964440000,
+     "drop": {
+      "id": "29631",
+      "name": "Kalif Raymond"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "30346",
+      "name": "Harrison Butker",
+      "position": "K"
+     },
+     "bid": 3,
+     "date": 1791964440000,
+     "drop": {
+      "id": "33537",
+      "name": "Evan McPherson"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 11,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "42669",
+      "name": "Germie Bernard",
+      "position": "WR"
+     },
+     "bid": 5,
+     "date": 1791964440000,
+     "drop": {
+      "id": "42744",
+      "name": "Mike Washington Jr."
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 9,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100012",
+      "name": "Chiefs",
+      "position": "DEF"
+     },
+     "bid": 5,
+     "date": 1791964440000,
+     "drop": {
+      "id": "100004",
+      "name": "Bengals"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 8,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "25812",
+      "name": "Kirk Cousins",
+      "position": "QB"
+     },
+     "bid": 5,
+     "date": 1791964440000,
+     "drop": {
+      "id": "32676",
+      "name": "Justin Herbert"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 8,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100017",
+      "name": "Patriots",
+      "position": "DEF"
+     },
+     "bid": 6,
+     "date": 1791964440000,
+     "drop": {
+      "id": "100003",
+      "name": "Bears"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 1,
+     "type": "WAIVER",
+     "week": 6,
      "won": true
     }
    ],
@@ -1253,20 +1373,105 @@
      "team_id": 2,
      "type": "FREEAGENT",
      "week": 5
+    },
+    {
+     "add": {
+      "id": "100033",
+      "name": "Ravens",
+      "position": "DEF"
+     },
+     "date": 1791965880000,
+     "drop": {
+      "id": "100006",
+      "name": "Cowboys"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 9,
+     "type": "FREEAGENT",
+     "week": 6
+    },
+    {
+     "add": {
+      "id": "31977",
+      "name": "Matt Gay",
+      "position": "K"
+     },
+     "date": 1791965880000,
+     "drop": {
+      "id": "41093",
+      "name": "Will Reichard"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 9,
+     "type": "FREEAGENT",
+     "week": 6
+    },
+    {
+     "add": {
+      "id": "100011",
+      "name": "Colts",
+      "position": "DEF"
+     },
+     "date": 1791969840000,
+     "drop": {
+      "id": "30971",
+      "name": "Baker Mayfield"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 4,
+     "type": "FREEAGENT",
+     "week": 6
+    },
+    {
+     "add": {
+      "id": "41087",
+      "name": "Ryan Flournoy",
+      "position": "WR"
+     },
+     "date": 1791969900000,
+     "drop": {
+      "id": "42616",
+      "name": "Dohnte Meyers"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 12,
+     "type": "FREEAGENT",
+     "week": 6
+    },
+    {
+     "add": {
+      "id": "33443",
+      "name": "Pat Freiermuth",
+      "position": "TE"
+     },
+     "date": 1791988920000,
+     "drop": {
+      "id": "7200",
+      "name": "Aaron Rodgers"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 1,
+     "type": "FREEAGENT",
+     "week": 6
     }
    ],
-   "newest": "2026-10-11T11:44:00-04:00",
+   "newest": "2026-10-14T10:42:00-04:00",
    "oldest": "2026-09-08T19:39:00-04:00",
-   "pages": 3,
+   "pages": 4,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 71,
+   "rows_seen": 83,
    "rows_unparsed": 2,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
     "1": {
-     "acquisitions": 6,
-     "faab_spent": 0,
+     "acquisitions": 8,
+     "faab_spent": 6,
      "manager": null,
      "team_id": 1,
      "team_name": "Football Guy's Guy",
@@ -1281,15 +1486,15 @@
      "waiver_rank": null
     },
     "11": {
-     "acquisitions": 9,
-     "faab_spent": 20,
+     "acquisitions": 10,
+     "faab_spent": 23,
      "manager": null,
      "team_id": 11,
      "team_name": "The Herdsmen",
      "waiver_rank": null
     },
     "12": {
-     "acquisitions": 11,
+     "acquisitions": 12,
      "faab_spent": 20,
      "manager": null,
      "team_id": 12,
@@ -1313,8 +1518,8 @@
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 2,
-     "faab_spent": 9,
+     "acquisitions": 4,
+     "faab_spent": 11,
      "manager": null,
      "team_id": 4,
      "team_name": "Dad\u2019s To The Bone",
@@ -1345,16 +1550,16 @@
      "waiver_rank": null
     },
     "8": {
-     "acquisitions": 3,
-     "faab_spent": 0,
+     "acquisitions": 5,
+     "faab_spent": 10,
      "manager": null,
      "team_id": 8,
      "team_name": "Phony Grossi",
      "waiver_rank": null
     },
     "9": {
-     "acquisitions": 11,
-     "faab_spent": 11,
+     "acquisitions": 14,
+     "faab_spent": 16,
      "manager": null,
      "team_id": 9,
      "team_name": "Ranus The Hiddeer",
