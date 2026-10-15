@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-15T02:02:33.816829+00:00",
+ "generated": "2026-10-15T02:04:01.202730+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -1964,6 +1964,66 @@
      "type": "WAIVER",
      "week": 5,
      "won": true
+    },
+    {
+     "add": {
+      "id": "40881",
+      "name": "Drake Maye",
+      "position": "QB"
+     },
+     "bid": 2,
+     "date": 1791960960000,
+     "drop": {
+      "id": "32231",
+      "name": "Jakobi Meyers"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "32696",
+      "name": "Jordan Love",
+      "position": "QB"
+     },
+     "bid": 3,
+     "date": 1791960960000,
+     "drop": {
+      "id": "33113",
+      "name": "Juwan Johnson"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "41902",
+      "name": "Woody Marks",
+      "position": "RB"
+     },
+     "bid": 7,
+     "date": 1791960960000,
+     "drop": {
+      "id": "41845",
+      "name": "RJ Harvey"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 7,
+     "type": "WAIVER",
+     "week": 6,
+     "won": true
     }
    ],
    "complete_history": true,
@@ -2469,14 +2529,65 @@
      "team_id": 8,
      "type": "FREEAGENT",
      "week": 5
+    },
+    {
+     "add": {
+      "id": "100017",
+      "name": "Patriots",
+      "position": "DEF"
+     },
+     "date": 1791966060000,
+     "drop": {
+      "id": "100004",
+      "name": "Bengals"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 7,
+     "type": "FREEAGENT",
+     "week": 6
+    },
+    {
+     "add": {
+      "id": "40971",
+      "name": "MarShawn Lloyd",
+      "position": "RB"
+     },
+     "date": 1791979320000,
+     "drop": {
+      "id": "33100",
+      "name": "Rico Dowdle"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 3,
+     "type": "FREEAGENT",
+     "week": 6
+    },
+    {
+     "add": {
+      "id": "34063",
+      "name": "Dameon Pierce",
+      "position": "RB"
+     },
+     "date": 1791982500000,
+     "drop": {
+      "id": "29235",
+      "name": "Jared Goff"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 6,
+     "type": "FREEAGENT",
+     "week": 6
     }
    ],
-   "newest": "2026-10-11T15:48:00-04:00",
+   "newest": "2026-10-14T08:55:00-04:00",
    "oldest": "2026-09-02T21:40:00-04:00",
    "pages": 3,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 58,
+   "rows_seen": 65,
    "rows_unparsed": 0,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
@@ -2497,7 +2608,7 @@
      "waiver_rank": null
     },
     "3": {
-     "acquisitions": 11,
+     "acquisitions": 12,
      "faab_spent": 24,
      "manager": null,
      "team_id": 3,
@@ -2505,8 +2616,8 @@
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 9,
-     "faab_spent": 24,
+     "acquisitions": 11,
+     "faab_spent": 29,
      "manager": null,
      "team_id": 4,
      "team_name": "Hannah Lee's Revenge",
@@ -2521,7 +2632,7 @@
      "waiver_rank": null
     },
     "6": {
-     "acquisitions": 1,
+     "acquisitions": 2,
      "faab_spent": 0,
      "manager": null,
      "team_id": 6,
@@ -2529,8 +2640,8 @@
      "waiver_rank": null
     },
     "7": {
-     "acquisitions": 8,
-     "faab_spent": 5,
+     "acquisitions": 10,
+     "faab_spent": 12,
      "manager": null,
      "team_id": 7,
      "team_name": "Michael Scott's Team",
