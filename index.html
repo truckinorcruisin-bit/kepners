@@ -859,6 +859,17 @@
   .mgr-trade-pins label span{font-size:8.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;}
   .mgr-trade-pins select{background:var(--panel);border:1px solid var(--line-2);color:var(--txt);
     font-family:inherit;font-size:13px;padding:8px 6px;width:100%;min-width:0;}
+  .mgr-trade-target{margin:2px 0 10px;}
+  .mgr-trade-target-lbl{font-size:8.5px;color:var(--dim);text-transform:uppercase;letter-spacing:0.06em;}
+  .mgr-tsr{display:block;width:100%;text-align:left;background:var(--panel);border:1px solid var(--line);
+    border-left:2px solid var(--cyan);color:var(--txt);font-family:inherit;padding:8px 10px;margin-bottom:4px;cursor:pointer;}
+  .mgr-tsr:active,.mgr-tsr:hover{border-color:var(--cyan);}
+  .mgr-tsr .nm{font-size:12px;font-weight:700;display:block;}
+  .mgr-tsr .meta{display:block;font-size:9px;color:var(--dim);margin-top:1px;}
+  .mgr-trade-pick{display:inline-flex;align-items:center;gap:8px;font-size:11px;color:var(--dim);
+    background:rgba(0,217,255,.08);border:1px solid var(--line-2);padding:4px 4px 4px 10px;}
+  .mgr-trade-pick b{color:var(--cyan);}
+  .mgr-trade-pick button{background:none;border:0;color:var(--dim);font-size:13px;padding:2px 8px;cursor:pointer;}
   .mgr-trade-card{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--cyan);
     padding:10px 12px;margin-bottom:8px;}
   .mgr-trade-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;}
@@ -2438,6 +2449,37 @@ const TRADE_MAX_RESULTS = 8, TRADE_MAX_PER_TEAM = 2;
 
 let mgrTradePins = {};            // leagueKey -> {give: tradeKey|'', get: tradeKey|''}
 let mgrTradeCache = {};           // cacheKey -> results
+let mgrTradeSearchQuery = '';     // the "type a player you want" box (session only)
+
+// ---- position tiers ----
+// "WR1" = the league's top-N wide receivers by rest-of-season value, where N is the number of teams
+// (12 in Kepners, 8 in Miami); WR2 = the next N; and so on. Ranked across every rostered player AND the
+// free-agent pool, so a stud sitting on waivers can't make a roster's WR look better than he is.
+const TRADE_TIER_COUNTS = {QB:2, RB:3, WR:3, TE:2};   // how many tiers to offer per position
+const mgrTierCache = new WeakMap();
+function mgrPositionTiers(lg){
+  let c = mgrTierCache.get(lg);
+  if(c) return c;
+  const n = Math.max(1, (lg.teams||[]).length);
+  const pool = [];
+  (lg.teams||[]).forEach(t=>(t.roster||[]).forEach(p=>{ if(tradeable(p)) pool.push(p); }));
+  (lg.freeAgents||[]).forEach(p=>{ if(tradeable(p)) pool.push(p); });
+  const byPos = {};
+  pool.forEach(p=>{ (byPos[p.position] = byPos[p.position] || []).push(p); });
+  const rank = new Map();      // tradeKey -> {pos, rank, tier}
+  Object.keys(byPos).forEach(pos=>{
+    byPos[pos].sort((a,b)=>b.effective_per_week - a.effective_per_week)
+      .forEach((p,i)=>{ if(!rank.has(tradeKey(p))) rank.set(tradeKey(p), {pos, rank:i+1, tier:Math.floor(i/n)+1}); });
+  });
+  c = {n, rank};
+  mgrTierCache.set(lg, c);
+  return c;
+}
+// "WR7 (WR1)": 7th-best WR in the league, which sits in the WR1 tier.
+function tradeTierTag(tiers, p){
+  const r = tiers && tiers.rank.get(tradeKey(p));
+  return r ? `${r.pos}${r.rank} (${r.pos}${r.tier})` : '';
+}
 
 function tradeKey(p){ return p.player_id!=null ? 'id:'+p.player_id : 'n:'+p.name; }
 function tradeable(p){ return p && !TRADE_EXCLUDE_POS.includes(p.position) && p.effective_per_week!=null; }
@@ -2550,15 +2592,20 @@ function mgrTradeTargets(lg, me, pins){
 
   const pinGive = pins.give ? (me.roster||[]).find(p=>tradeKey(p)===pins.give) : null;
   let pinGet = null, pinGetTeam = null;
-  if(pins.get && !pins.get.startsWith('pos:')){
+  if(pins.get && !pins.get.startsWith('pos:') && !pins.get.startsWith('tier:')){
     for(const t of lg.teams||[]){
       if(t.is_me) continue;
       const hit = (t.roster||[]).find(p=>tradeKey(p)===pins.get);
       if(hit){ pinGet = hit; pinGetTeam = t; break; }
     }
   }
-  // "Trade for" is either a specific player or a whole position ("pos:WR").
-  const wantPos = (pins.get||'').startsWith('pos:') ? pins.get.slice(4) : null;
+  // "Trade for" is a specific player, a whole position ("pos:WR"), or a position tier ("tier:WR:1").
+  const gs = pins.get || '';
+  const tierPin = gs.startsWith('tier:') ? gs.split(':') : null;          // ['tier','WR','1']
+  const wantPos = gs.startsWith('pos:') ? gs.slice(4) : (tierPin ? tierPin[1] : null);
+  const wantTier = tierPin ? Number(tierPin[2]) : null;
+  const tiers = mgrPositionTiers(lg);
+  const inTier = p => !wantTier || ((tiers.rank.get(tradeKey(p))||{}).tier === wantTier);
   const [giveN, getN] = pins.shape ? pins.shape.split('-').map(Number) : [null, null];
   const sizeOk = (combo, n) => n==null || combo.length===n;
   // Any explicit ask (a player on either side, or a position) shows the best
@@ -2577,7 +2624,7 @@ function mgrTradeTargets(lg, me, pins){
     if(pinGetTeam && opp !== pinGetTeam) return;
     const oppBase = tradeRosterValue(opp.roster||[], slots, curWeek);
     const oppCombos = tradeCombos(tradePool(opp.roster||[], pinGet, wantPos), pinGet)
-      .filter(c=>sizeOk(c, getN) && (!wantPos || c.some(p=>p.position===wantPos)));
+      .filter(c=>sizeOk(c, getN) && (!wantPos || c.some(p=>p.position===wantPos && inTier(p))));
 
     for(const give of myCombos){
       const giveKeys = new Set(give.map(tradeKey));
@@ -2643,15 +2690,17 @@ const TRADE_HELP_LABEL = {ros:'rest of season', week:'this week', next:`next ${T
 function tradeFmt(v){ const r = Math.round(v*10)/10; return (r>0?'+':'') + r.toFixed(1); }
 function tradeCls(v){ return v>=0.05 ? 'tier-strong' : (v<=-0.05 ? 'tier-weak' : 'tier-mid'); }
 
-function tradePlayerHtml(p, curWeek){
+function tradePlayerHtml(p, curWeek, tiers){
   const bits = [p.position, p.effective_per_week!=null ? `${p.effective_per_week}/wk` : 'no proj'];
+  const tag = tradeTierTag(tiers, p);
+  if(tag) bits.push(tag);
   if(p.bye_week===curWeek) bits.push('BYE this wk');
   const inj = p.injury_status ? `<span class="mgr-str-injury">${p.injury_status}</span>` : '';
   return `<div class="mgr-trade-p"><span class="nm">${escapeHtml(p.name)}</span>${inj}
     <span class="meta">${bits.join(' · ')}</span></div>`;
 }
 
-function tradeCardHtml(c, curWeek){
+function tradeCardHtml(c, curWeek, tiers){
   // Lead with the horizon that helps them MOST relative to its own bar --
   // that's the strongest single sentence to open a trade offer with.
   const best = c.helps.slice().sort((a,b)=>(b.v/TRADE_HELP[b.h])-(a.v/TRADE_HELP[a.h]))[0];
@@ -2670,8 +2719,8 @@ function tradeCardHtml(c, curWeek){
     </div>
     <div class="mgr-trade-chips">${chips.join('')}</div>
     <div class="mgr-trade-sides">
-      <div><div class="mgr-trade-side-lbl">You give</div>${c.give.map(p=>tradePlayerHtml(p, curWeek)).join('')}</div>
-      <div><div class="mgr-trade-side-lbl">You get</div>${c.get.map(p=>tradePlayerHtml(p, curWeek)).join('')}</div>
+      <div><div class="mgr-trade-side-lbl">You give</div>${c.give.map(p=>tradePlayerHtml(p, curWeek, tiers)).join('')}</div>
+      <div><div class="mgr-trade-side-lbl">You get</div>${c.get.map(p=>tradePlayerHtml(p, curWeek, tiers)).join('')}</div>
     </div>
     <table class="mgr-trade-grid">
       <tr><th></th><th>ROS</th><th>Wk ${curWeek}</th><th>Wks ${curWeek}–${curWeek+TRADE_NEXT_WEEKS-1}</th></tr>
@@ -2682,22 +2731,80 @@ function tradeCardHtml(c, curWeek){
   </div>`;
 }
 
+// What the current "Trade for" pick means, in words (also used for the chip).
+function tradeGetLabel(lg, pins){
+  const g = pins.get || '';
+  if(!g) return '';
+  if(g.startsWith('pos:')) return `Any ${g.slice(4)}`;
+  if(g.startsWith('tier:')){
+    const [, pos, t] = g.split(':'), n = mgrPositionTiers(lg).n, k = Number(t);
+    return `${pos}${t} \u2014 the league's ${pos} ${(k-1)*n+1}\u2013${k*n}`;
+  }
+  for(const t of lg.teams||[]){
+    if(t.is_me) continue;
+    const hit = (t.roster||[]).find(p=>tradeKey(p)===g);
+    if(hit) return `${hit.name} (${hit.position}, ${t.team_name||t.manager||'team'})`;
+  }
+  return '';
+}
+
 function tradeControlsHtml(lg, me, pins){
   const byRos = (a,b)=>(b.effective_per_week||0)-(a.effective_per_week||0);
   const opt = (p, sel) => `<option value="${escapeHtml(tradeKey(p))}"${sel===tradeKey(p)?' selected':''}>${escapeHtml(p.name)} (${p.position})</option>`;
   const mine = (me.roster||[]).filter(tradeable).sort(byRos).map(p=>opt(p, pins.give)).join('');
-  const theirs = (lg.teams||[]).filter(t=>!t.is_me).map(t=>{
-    const ps = (t.roster||[]).filter(tradeable).sort(byRos);
-    return ps.length ? `<optgroup label="${escapeHtml(t.team_name||t.manager||'Team')}">${ps.map(p=>opt(p, pins.get)).join('')}</optgroup>` : '';
-  }).join('');
-  const posOpts = TRADE_POSITIONS.map(pos=>`<option value="pos:${pos}"${pins.get==='pos:'+pos?' selected':''}>Any ${pos}</option>`).join('');
   const shapeOpts = TRADE_SHAPES.map(([v,l])=>`<option value="${v}"${(pins.shape||'')===v?' selected':''}>${l}</option>`).join('');
+  const n = mgrPositionTiers(lg).n;
+  const posOpts = TRADE_POSITIONS.map(pos=>`<option value="pos:${pos}"${pins.get==='pos:'+pos?' selected':''}>Any ${pos}</option>`).join('');
+  const tierGroups = TRADE_POSITIONS.map(pos=>{
+    const cnt = TRADE_TIER_COUNTS[pos] || 2;
+    const opts = Array.from({length:cnt}, (_,k)=>{
+      const v = `tier:${pos}:${k+1}`;
+      return `<option value="${v}"${pins.get===v?' selected':''}>${pos}${k+1} \u00b7 ${pos} ${k*n+1}\u2013${(k+1)*n}</option>`;
+    }).join('');
+    return `<optgroup label="${pos} tiers">${opts}</optgroup>`;
+  }).join('');
+  const label = tradeGetLabel(lg, pins);
   return `<div class="mgr-trade-pins">
     <label><span>Trade away</span><select id="mgrTradeGive"><option value="">Any of my players</option>${mine}</select></label>
-    <label><span>Trade for</span><select id="mgrTradeGet"><option value="">Anyone in the league</option>
-      <optgroup label="By position">${posOpts}</optgroup>${theirs}</select></label>
     <label><span>Deal size</span><select id="mgrTradeShape">${shapeOpts}</select></label>
+  </div>
+  <div class="mgr-trade-target">
+    <div class="mgr-trade-target-lbl">Trade for</div>
+    <div class="mgr-faab-search">
+      <input id="mgrTradeGetSearch" placeholder="Type a player you want (any team)..." autocomplete="off"
+        value="${escapeHtml(mgrTradeSearchQuery)}">
+    </div>
+    <div id="mgrTradeGetResults"></div>
+    <div class="mgr-trade-pins">
+      <label><span>...or a position tier</span><select id="mgrTradeTier">
+        <option value="">Anyone in the league</option>
+        <optgroup label="Whole position">${posOpts}</optgroup>${tierGroups}
+      </select></label>
+    </div>
+    <div id="mgrTradeGetChip">${label ? tradeChipHtml(label) : ''}</div>
   </div>`;
+}
+function tradeChipHtml(label){
+  return `<span class="mgr-trade-pick">Trading for: <b>${escapeHtml(label)}</b>
+    <button type="button" id="mgrTradeGetClear" aria-label="Clear">\u2715</button></span>`;
+}
+
+// Players on OTHER teams matching what was typed, best first. Names are compared without punctuation or
+// suffixes, so "pittman" and "Michael Pittman Jr." both find him.
+function mgrTradeSearchMatches(lg, q){
+  const norm = t => String(t||'').toLowerCase().replace(/\b(jr|sr|ii|iii|iv|v)\b\.?/g,'').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim();
+  const nq = norm(q);
+  if(nq.length < 2) return [];
+  const tiers = mgrPositionTiers(lg), out = [];
+  (lg.teams||[]).forEach(t=>{
+    if(t.is_me) return;
+    (t.roster||[]).forEach(p=>{
+      if(!tradeable(p)) return;
+      if(norm(p.name).includes(nq)) out.push({p, t, tag: tradeTierTag(tiers, p)});
+    });
+  });
+  out.sort((a,b)=>b.p.effective_per_week - a.p.effective_per_week);
+  return out.slice(0, 8);
 }
 
 // Paints ONLY the results container, and defers the search one tick so the
@@ -2721,14 +2828,15 @@ function mgrPaintTradeResults(key){
       const shapeLbl = (TRADE_SHAPES.find(([v])=>v===(pins.shape||''))||[])[1];
       const pinName = [pins.give, pins.get].filter(Boolean).length
         ? `No ${pins.shape ? shapeLbl+' ' : ''}package matching those picks helps the other team on any horizon.
-           Try a different deal size or clearing a pick.`
+           Try a different deal size, a lower tier, or clearing a pick.`
         : pins.shape
         ? `No ${shapeLbl} trade improves your lineup by ${TRADE_MIN_MY_ROS}+ pts/wk while also helping the other team.`
         : `No trade improves your lineup by ${TRADE_MIN_MY_ROS}+ pts/wk while also helping the other team on any horizon.`;
       box.innerHTML = weeklyNote + `<div class="mgr-empty">${pinName}</div>`;
       return;
     }
-    box.innerHTML = weeklyNote + res.results.map(c=>tradeCardHtml(c, curWeek)).join('');
+    const tiers = mgrPositionTiers(lg);
+    box.innerHTML = weeklyNote + res.results.map(c=>tradeCardHtml(c, curWeek, tiers)).join('');
   };
   if(mgrTradeCache[cacheKey]){ paint(mgrTradeCache[cacheKey]); return; }
   box.innerHTML = `<div class="mgr-empty">Scanning every 1- and 2-player package in the league...</div>`;
@@ -2741,15 +2849,60 @@ function mgrPaintTradeResults(key){
 }
 
 function mgrBindTradeControls(key){
-  const onPin = (side)=>(e)=>{
-    mgrTradePins[key] = Object.assign({give:'', get:'', shape:''}, mgrTradePins[key], {[side]: e.target.value});
-    mgrPaintTradeResults(key);
+  const lg = INSEASON.leagues[key];
+  const pinsOf = ()=>Object.assign({give:'', get:'', shape:''}, mgrTradePins[key]);
+  const setPin = (side, val)=>{ mgrTradePins[key] = Object.assign(pinsOf(), {[side]: val}); };
+  const g = document.getElementById('mgrTradeGive'), z = document.getElementById('mgrTradeShape'),
+        tier = document.getElementById('mgrTradeTier'), box = document.getElementById('mgrTradeGetSearch'),
+        results = document.getElementById('mgrTradeGetResults'), chip = document.getElementById('mgrTradeGetChip');
+
+  // Redraws just the chip + the tier dropdown to match the current "Trade for" pick (never the whole page,
+  // so the search box keeps focus while typing).
+  const syncGet = ()=>{
+    const pins = pinsOf(), label = tradeGetLabel(lg, pins);
+    if(chip){
+      chip.innerHTML = label ? tradeChipHtml(label) : '';
+      const x = document.getElementById('mgrTradeGetClear');
+      if(x) x.onclick = ()=>{
+        setPin('get', ''); mgrTradeSearchQuery = ''; if(box) box.value = '';
+        paintMatches(); syncGet(); mgrPaintTradeResults(key);
+      };
+    }
+    if(tier){
+      const v = pins.get || '';
+      tier.value = (v.startsWith('pos:') || v.startsWith('tier:')) ? v : '';
+    }
   };
-  const g = document.getElementById('mgrTradeGive'), t = document.getElementById('mgrTradeGet'),
-        z = document.getElementById('mgrTradeShape');
-  if(g) g.onchange = onPin('give');
-  if(t) t.onchange = onPin('get');
-  if(z) z.onchange = onPin('shape');
+  const paintMatches = ()=>{
+    if(!results) return;
+    const q = mgrTradeSearchQuery.trim();
+    if(q.length < 2){ results.innerHTML = ''; return; }
+    const hits = mgrTradeSearchMatches(lg, q);
+    if(!hits.length){ results.innerHTML = `<div class="mgr-empty">No tradeable player matching "${escapeHtml(q)}" on another team.</div>`; return; }
+    results.innerHTML = hits.map(({p, t, tag})=>`<button type="button" class="mgr-tsr" data-k="${escapeHtml(tradeKey(p))}">
+      <span class="nm">${escapeHtml(p.name)}</span>
+      <span class="meta">${p.position} \u00b7 ${p.effective_per_week}/wk${tag?` \u00b7 ${tag}`:''} \u00b7 ${escapeHtml(t.team_name||t.manager||'team')}</span>
+    </button>`).join('');
+    results.querySelectorAll('.mgr-tsr').forEach(b=>{
+      b.onclick = ()=>{
+        setPin('get', b.dataset.k);
+        mgrTradeSearchQuery = ''; if(box) box.value = '';
+        results.innerHTML = '';
+        syncGet(); mgrPaintTradeResults(key);
+      };
+    });
+  };
+
+  if(g) g.onchange = e=>{ setPin('give', e.target.value); mgrPaintTradeResults(key); };
+  if(z) z.onchange = e=>{ setPin('shape', e.target.value); mgrPaintTradeResults(key); };
+  if(tier) tier.onchange = e=>{
+    setPin('get', e.target.value);
+    mgrTradeSearchQuery = ''; if(box) box.value = ''; if(results) results.innerHTML = '';
+    syncGet(); mgrPaintTradeResults(key);
+  };
+  if(box) box.oninput = e=>{ mgrTradeSearchQuery = e.target.value; paintMatches(); };
+  syncGet();
+  paintMatches();
   mgrPaintTradeResults(key);
 }
 
@@ -2888,35 +3041,6 @@ function renderManagerLeagueDetail(el, key){
     <div class="mgr-card-sub">${me.team_name||''} · ${rec}${standing}
       ${me.rosPerWeekTotal!=null?` · ${me.rosPerWeekTotal} proj pts/wk`:''}</div>
 
-    <div class="mgr-section-lbl">Starting lineup vs. the rest of the league (rest of season)</div>
-    <div class="mgr-bench-note">Bar spans the league's actual min-to-max at each slot; the dot is you,
-      the faint tick is the league median. Numbers are projected points per week.</div>
-    ${strengthRows || '<div class="mgr-empty">No roster shape configured for this league yet.</div>'}
-
-    <div class="mgr-section-lbl">Bench depth</div>
-    <div class="mgr-bench-note">Bar spans every ${''}player at that position rostered anywhere in the league.
-      The bright tick is the <b>startable bar</b> — the league-median ${(()=>{const b=mgrStartableBar(lg,'RB');return b?b.label:'last starting slot';})()}
-      a flex-eligible bench player has to beat to be worth starting. The right-hand number is
-      how far above or below that bar he is, per week.</div>
-    ${benchRows || '<div class="mgr-empty">No bench players with projections.</div>'}
-
-    <div class="mgr-section-lbl">League power rankings</div>
-    <div class="mgr-boards">
-      <div>
-        <div class="mgr-bench-note"><b>Starters</b> — points per week above a median lineup,
-          summed across every starting slot. 0.0 is a perfectly average team.</div>
-        ${mgrRankBoard(rankRows, 'surplus', v=>(v>0?'+':'')+v.toFixed(1))}
-      </div>
-      <div>
-        <div class="mgr-bench-note"><b>Bench depth</b> — combined pts/wk of the top 3 flex-eligible
-          bench players. Only 3, so holding long-shot stashes isn't counted against you.</div>
-        ${mgrRankBoard(rankRows, 'benchSum', v=>v.toFixed(1))}
-      </div>
-    </div>
-
-    <div class="mgr-section-lbl">Power rankings over time</div>
-    <div id="mgrPowerHist"></div>
-
     <div class="mgr-section-lbl">Waiver Targets</div>
     <div class="mgr-bench-note">Free agents that would <b>genuinely start</b> on your team right now --
       each one is scored against the specific starter he'd bump, not against raw value.
@@ -2952,12 +3076,42 @@ function renderManagerLeagueDetail(el, key){
     <div class="mgr-section-lbl">FAAB tendencies</div>
     ${mgrFaabTendenciesHtml(key)}
 
+    <div class="mgr-section-lbl">Starting lineup vs. the rest of the league (rest of season)</div>
+    <div class="mgr-bench-note">Bar spans the league's actual min-to-max at each slot; the dot is you,
+      the faint tick is the league median. Numbers are projected points per week.</div>
+    ${strengthRows || '<div class="mgr-empty">No roster shape configured for this league yet.</div>'}
+
+    <div class="mgr-section-lbl">Bench depth</div>
+    <div class="mgr-bench-note">Bar spans every ${''}player at that position rostered anywhere in the league.
+      The bright tick is the <b>startable bar</b> — the league-median ${(()=>{const b=mgrStartableBar(lg,'RB');return b?b.label:'last starting slot';})()}
+      a flex-eligible bench player has to beat to be worth starting. The right-hand number is
+      how far above or below that bar he is, per week.</div>
+    ${benchRows || '<div class="mgr-empty">No bench players with projections.</div>'}
+
+    <div class="mgr-section-lbl">League power rankings</div>
+    <div class="mgr-boards">
+      <div>
+        <div class="mgr-bench-note"><b>Starters</b> — points per week above a median lineup,
+          summed across every starting slot. 0.0 is a perfectly average team.</div>
+        ${mgrRankBoard(rankRows, 'surplus', v=>(v>0?'+':'')+v.toFixed(1))}
+      </div>
+      <div>
+        <div class="mgr-bench-note"><b>Bench depth</b> — combined pts/wk of the top 3 flex-eligible
+          bench players. Only 3, so holding long-shot stashes isn't counted against you.</div>
+        ${mgrRankBoard(rankRows, 'benchSum', v=>v.toFixed(1))}
+      </div>
+    </div>
+
+    <div class="mgr-section-lbl">Power rankings over time</div>
+    <div id="mgrPowerHist"></div>
+
     <div class="mgr-section-lbl">Trade Targets</div>
     <div class="mgr-bench-note">Packages up to <b>2-for-2</b> that improve your starting lineup and
       <b>also help the other team</b> on at least one horizon -- rest of season, this week, or the
-      next ${TRADE_NEXT_WEEKS} weeks. The green chip is the pitch. Pick a player on either side, or a
-      position you want back, to ask a specific question -- e.g. Trade away <i>Rashee Rice</i>, Trade for
-      <i>Any WR</i>, Deal size <i>1-for-1</i>.</div>
+      next ${TRADE_NEXT_WEEKS} weeks. The green chip is the pitch. Ask a specific question: pick who you'd
+      give, then <b>type the player you want</b>, or choose a <b>position tier</b> -- <i>WR1</i> is the
+      league's top ${mgrPositionTiers(lg).n} WRs, <i>WR2</i> the next ${mgrPositionTiers(lg).n}, and so on.
+      Each player shows his rank, e.g. <i>WR7 (WR1)</i>.</div>
     ${tradeControlsHtml(lg, me, mgrTradePins[key] || {give:'', get:'', shape:''})}
     <div id="mgrTradeResults"></div>
   `;
