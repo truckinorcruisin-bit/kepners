@@ -748,6 +748,25 @@
   .mgr-str-name{flex:1 1 auto;min-width:0;overflow:hidden;text-overflow:ellipsis;
     white-space:nowrap;font-size:11.5px;}
   .mgr-str-injury{color:var(--red);font-size:9px;margin-left:5px;}
+  .mgr-ir-ret{color:var(--amber);font-weight:600;}
+  /* home: good players returning from IR */
+  .mgr-ir{margin:10px 0 12px;}
+  .mgr-ir-note{font-size:9.5px;color:var(--dim);margin:2px 0 6px;line-height:1.35;}
+  .mgr-ir-row{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--line-2);padding:8px 10px;margin-bottom:6px;}
+  .mgr-ir-row.has-open{border-left-color:var(--green);}
+  .mgr-ir-top{display:flex;align-items:baseline;gap:8px;}
+  .mgr-ir-name{font-size:12.5px;font-weight:700;}
+  .mgr-ir-meta{font-size:9.5px;color:var(--dim);flex:1;}
+  .mgr-ir-when{font-size:11px;font-weight:700;color:var(--amber);white-space:nowrap;}
+  .mgr-ir-sub{font-size:9.5px;color:var(--dim);margin:2px 0 6px;}
+  .mgr-ir-pills{display:flex;flex-wrap:wrap;gap:5px;}
+  .mgr-ir-pill{font-family:inherit;font-size:9.5px;padding:3px 8px;border-radius:10px;border:1px solid var(--line-2);
+    background:transparent;color:var(--dim);cursor:pointer;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .mgr-ir-pill b{color:var(--txt);font-weight:700;}
+  .mgr-ir-pill.available{background:rgba(61,220,132,.14);border-color:var(--green);color:var(--green);}
+  .mgr-ir-pill.available b{color:var(--green);}
+  .mgr-ir-pill.mine{background:rgba(255,183,3,.14);border-color:var(--amber);color:var(--amber);}
+  .mgr-ir-pill.mine b{color:var(--amber);}
   .mgr-str-val{flex:0 0 auto;font-size:11px;font-variant-numeric:tabular-nums;font-weight:700;}
   .mgr-str-val.tier-strong{color:var(--green);}
   .mgr-str-val.tier-mid{color:var(--txt);}
@@ -1807,8 +1826,7 @@ function mgrWaiverRowHtml(key, lg, t){
   return `<div class="mgr-str-row mgr-faab-row${isOpen?' open':''}" data-faab="${escapeHtml(openKey)}">
     <div class="mgr-str-head">
       <span class="mgr-str-slot">${fa.position}</span>
-      <span class="mgr-str-name">${fa.name}${
-        fa.injury_status?` <span class="mgr-str-injury">${fa.injury_status}</span>`:''}</span>
+      <span class="mgr-str-name">${fa.name}${mgrInjuryBadgeHtml(fa)}</span>
       ${mgrFaabChipHtml(bid)}
       <span class="mgr-str-val tier-strong">${fa.effective_per_week.toFixed(1)}</span>
       ${t.gain!=null?`<span class="mgr-str-rank">+${t.gain.toFixed(1)}</span>`:''}
@@ -1866,6 +1884,87 @@ function mgrRenderWaiverSearch(key){
 
 function mgrMyTeam(leagueData){
   return (leagueData.teams||[]).find(t=>t.is_me);
+}
+
+// ---- injury badge with the expected RETURN date ----
+// "IR · back Oct 26 (Wk 8)". The date is shown only where it means something: players on IR or ruled OUT.
+// (A Questionable player's "return date" is just his next game, which is noise.) Overdue dates are said as such.
+const MGR_MON = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+function mgrDateParts(iso){
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(iso||'');
+  return m ? {y:+m[1], mo:+m[2], d:+m[3]} : null;
+}
+function mgrDaysUntil(iso){
+  const p = mgrDateParts(iso); if(!p) return null;
+  const t = new Date(), today = new Date(t.getFullYear(), t.getMonth(), t.getDate());
+  return Math.round((new Date(p.y, p.mo-1, p.d) - today) / 86400000);
+}
+function mgrFmtDate(iso){
+  const p = mgrDateParts(iso); return p ? `${MGR_MON[p.mo-1]} ${p.d}` : '';
+}
+function mgrReturnText(p){
+  if(!p || !p.return_date) return '';
+  const isIr = !!(p.ir || p.lineup_slot==='IR');
+  if(!(isIr || p.injury_status==='OUT')) return '';
+  if(p.return_beyond_season) return 'out for the season';
+  const when = mgrFmtDate(p.return_date), days = mgrDaysUntil(p.return_date);
+  if(days!=null && days < 0) return `was due back ${when}`;
+  return `back ${when}${p.return_week?` (Wk ${p.return_week})`:''}`;
+}
+function mgrInjuryBadgeHtml(p, fallbackStatus){
+  const status = (p && p.injury_status) || fallbackStatus || '';
+  const isIr = !!(p && (p.ir || p.lineup_slot==='IR'));
+  const label = isIr ? 'IR' : status;
+  if(!label) return '';
+  const ret = mgrReturnText(p);
+  return ` <span class="mgr-str-injury">${escapeHtml(label)}${ret?` <span class="mgr-ir-ret">· ${escapeHtml(ret)}</span>`:''}</span>`;
+}
+
+// ---- home page: good players returning from IR ----
+// "Good" = drafted early (see GOOD_DRAFT_ROUND in build_inseason.py) in any league with draft data. For each one:
+// when he's due back and, league by league, whether you hold him, a rival does, or he's sitting on waivers.
+function mgrIrReturnsHtml(){
+  const ir = INSEASON && INSEASON.irReturns;
+  if(!ir) return '';                                   // the builder hasn't produced it yet: show nothing
+  const leagueKeys = Object.keys(INSEASON.leagues||{});
+  const short = k => (MGR_LEAGUE_NAMES[k]||k).split(' ')[0];
+  const rows = (ir.players||[]).map(p=>Object.assign({}, p, {days: mgrDaysUntil(p.return_date)}))
+    .filter(p=>p.days==null || p.days <= ir.windowDays);
+  const weeks = Math.round((ir.windowDays||28)/7);
+  const open = rows.filter(p=>Object.values(p.leagues||{}).some(v=>v.state==='available')).length;
+  const rel = d => d==null ? '' : d < 0 ? 'overdue' : d===0 ? 'today' : d===1 ? 'tomorrow' : d < 14 ? `in ${d} days` : `in ${Math.round(d/7)} weeks`;
+  const body = rows.length ? rows.map(p=>{
+    const draftTxt = Object.keys(p.drafts||{}).sort((a,b)=>p.drafts[a].round-p.drafts[b].round)
+      .map(k=>`R${p.drafts[k].round} ${short(k)}`).join(' · ');
+    const order = {available:0, mine:1, rostered:2};
+    const pills = leagueKeys.filter(k=>p.leagues&&p.leagues[k])
+      .sort((a,b)=>order[p.leagues[a].state]-order[p.leagues[b].state])
+      .map(k=>{
+        const v = p.leagues[k];
+        const txt = v.state==='available' ? 'AVAILABLE'
+          : v.state==='mine' ? `YOURS${v.slot==='IR'?' (IR slot)':''}`
+          : (v.team||'rostered');
+        return `<button type="button" class="mgr-ir-pill ${v.state}" data-lg="${escapeHtml(k)}"><b>${escapeHtml(short(k))}</b> ${escapeHtml(txt)}</button>`;
+      }).join('');
+    const anyOpen = Object.values(p.leagues||{}).some(v=>v.state==='available');
+    return `<div class="mgr-ir-row${anyOpen?' has-open':''}">
+      <div class="mgr-ir-top">
+        <span class="mgr-ir-name">${escapeHtml(p.name)}</span>
+        <span class="mgr-ir-meta">${escapeHtml(p.pos)}${p.pro_team?` · ${escapeHtml(p.pro_team)}`:''}</span>
+        <span class="mgr-ir-when">${p.return_beyond_season ? 'season' : escapeHtml(mgrFmtDate(p.return_date))}${p.return_week?` · Wk ${p.return_week}`:''}</span>
+      </div>
+      <div class="mgr-ir-sub">${escapeHtml(rel(p.days))}${rel(p.days)?' · ':''}drafted ${escapeHtml(draftTxt)}</div>
+      <div class="mgr-ir-pills">${pills}</div>
+    </div>`;
+  }).join('') : `<div class="mgr-empty">No early-round player is on IR with a return date in the next ${weeks} weeks.</div>`;
+  const miss = (ir.leaguesWithoutDraftData||[]).map(short);
+  const note = ir.note ? `<div class="mgr-ir-note">${escapeHtml(ir.note)}.</div>`
+    : (miss.length ? `<div class="mgr-ir-note">No draft results on file for ${escapeHtml(miss.join(', '))}, so a player drafted early only there won't appear.</div>` : '');
+  return `<div class="mgr-ir">
+    <div class="mgr-actions-lbl">Returning from IR${rows.length?` · ${rows.length} good player${rows.length===1?'':'s'}${open?`, ${open} with an open spot`:''}`:''}</div>
+    <div class="mgr-ir-note">Drafted in the first ${ir.goodRound} rounds of any league, back within ${weeks} weeks. Green = he's on waivers there.</div>
+    ${body}${note}
+  </div>`;
 }
 
 // Every actionable weak slot across every league, plus any STARTER (a player
@@ -2101,9 +2200,9 @@ function renderManagerView(){
     </div>
     <div id="mgrPlayerSearchResults"></div>`;
 
-  el.innerHTML = `${searchHtml}${actionsHtml}<div class="mgr-stack">${cards}</div>`;
+  el.innerHTML = `${searchHtml}${actionsHtml}${mgrIrReturnsHtml()}<div class="mgr-stack">${cards}</div>`;
 
-  el.querySelectorAll('.mgr-action-row[data-lg], .mgr-card[data-lg]').forEach(node=>{
+  el.querySelectorAll('.mgr-action-row[data-lg], .mgr-card[data-lg], .mgr-ir-pill[data-lg]').forEach(node=>{
     node.onclick = ()=>{ mgrDetailLeague = node.dataset.lg; render(); };
   });
 
@@ -2695,7 +2794,7 @@ function tradePlayerHtml(p, curWeek, tiers){
   const tag = tradeTierTag(tiers, p);
   if(tag) bits.push(tag);
   if(p.bye_week===curWeek) bits.push('BYE this wk');
-  const inj = p.injury_status ? `<span class="mgr-str-injury">${p.injury_status}</span>` : '';
+  const inj = mgrInjuryBadgeHtml(p);
   return `<div class="mgr-trade-p"><span class="nm">${escapeHtml(p.name)}</span>${inj}
     <span class="meta">${bits.join(' · ')}</span></div>`;
 }
@@ -2977,8 +3076,7 @@ function renderManagerLeagueDetail(el, key){
     return `<div class="mgr-str-row ${actionable?'':'mgr-strength-notactionable'}">
       <div class="mgr-str-head">
         <span class="mgr-str-slot">${row.slot}</span>
-        <span class="mgr-str-name">${row.player||'(empty)'}${
-          injury?` <span class="mgr-str-injury">${injury}</span>`:''}</span>
+        <span class="mgr-str-name">${row.player||'(empty)'}${mgrInjuryBadgeHtml(rp||{}, injury)}</span>
         <span class="mgr-str-val tier-${tier}">${mine!=null?mine.toFixed(1):'—'}</span>
         <span class="mgr-str-rank">${actionable?`${row.rank}/${row.of}`:'—'}</span>
       </div>
@@ -3009,8 +3107,7 @@ function renderManagerLeagueDetail(el, key){
     return `<div class="mgr-str-row">
       <div class="mgr-str-head">
         <span class="mgr-str-slot">${p.position}</span>
-        <span class="mgr-str-name">${p.name}${
-          p.injury_status?` <span class="mgr-str-injury">${p.injury_status}</span>`:''}</span>
+        <span class="mgr-str-name">${p.name}${mgrInjuryBadgeHtml(p)}</span>
         <span class="mgr-str-val tier-${tier}">${mine.toFixed(1)}</span>
         <span class="mgr-str-rank">${diff!=null?(diff>0?'+':'')+diff.toFixed(1):'—'}</span>
       </div>

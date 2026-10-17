@@ -38,7 +38,7 @@ also what makes it testable without live API credentials.
 import os
 import sys
 import json
-from datetime import datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 
 from convert_bigboard import normalize_name, bye_week_for_team
 
@@ -65,6 +65,72 @@ INJURY_MAP = {
 # this week, not the rest of the season, so the haircut is deliberately mild --
 # it should reorder close calls, not write a star off over one missed game.
 INJURY_DISCOUNT = {"QUESTIONABLE": 0.97, "DOUBTFUL": 0.90, "OUT": 0.75}
+
+# ---- Returning from IR (home-page view) and return dates on roster rows ----
+# espn_injury_pull.py saves ESPN's raw injury status and expected-return date per injured player. Raw status matters:
+# INJURY_MAP above folds IR into OUT, so after normalising, an IR player is indistinguishable from a one-week OUT.
+IR_RAW = {"INJURY_RESERVE", "IR"}
+GOOD_DRAFT_ROUND = 6        # "good" = drafted in this round or earlier in ANY league we have draft data for
+IR_WINDOW_DAYS = 28         # "returning soon": expected back within this many days (overdue counts too)
+NFL_REG_WEEKS = 18
+IR_POSITIONS = ("QB", "RB", "WR", "TE")     # nobody is stashing a kicker
+
+
+def week1_tuesday(year):
+    """Tuesday after Labor Day = the start of NFL week 1's waiver week (Thursday kickoff follows). Matches the
+    Tuesday->Monday weeks yahoo_transactions_parse.py uses, so the whole project agrees on what 'Week N' is."""
+    d = date(year, 9, 1)
+    while d.weekday() != 0:          # first Monday of September
+        d += timedelta(days=1)
+    return d + timedelta(days=1)
+
+
+def nfl_week_for(d, year):
+    """NFL week a calendar date falls in (Tue->Mon). None once it is past the regular season."""
+    wk = (d - week1_tuesday(year)).days // 7 + 1
+    return max(1, wk) if wk <= NFL_REG_WEEKS else None
+
+
+class InjuryIndex:
+    """ESPN's injured players, looked up by ESPN id (ESPN leagues) or by normalised name (every league)."""
+
+    def __init__(self, doc):
+        self.by_id, self.by_key, self.records = {}, {}, []
+        for r in (doc or {}).get("injuries") or []:
+            self.records.append(r)
+            if r.get("id") is not None:
+                self.by_id[r["id"]] = r
+            k = join_key(r.get("name"), r.get("pos"))
+            if k and (k not in self.by_key or r.get("status") in IR_RAW):   # an IR entry wins a name clash
+                self.by_key[k] = r
+
+    def lookup(self, player, use_id):
+        pos = canonical_pos(player.get("position"))
+        if use_id and player.get("player_id") in self.by_id:
+            return self.by_id[player["player_id"]]
+        return self.by_key.get(join_key(player.get("name"), pos))
+
+
+def attach_return(row, inj, use_id, year):
+    """Sparse by design: only injured players with something to say get these keys."""
+    rec = inj.lookup(row, use_id) if inj else None
+    if not rec or not rec.get("status"):
+        return
+    ret = rec.get("ret")
+    if rec["status"] in IR_RAW:
+        row["ir"] = True
+    if not ret:
+        return
+    try:
+        d = date.fromisoformat(ret)
+    except ValueError:
+        return
+    row["return_date"] = ret
+    wk = nfl_week_for(d, year)
+    if wk is None:
+        row["return_beyond_season"] = True        # ESPN's estimate lands after week 18: effectively season-ending
+    else:
+        row["return_week"] = wk
 
 
 def load_json(path, label):
@@ -183,7 +249,7 @@ def build_ros_index(ros_doc):
     return index
 
 
-def enrich(player, ros_index):
+def enrich(player, ros_index, inj=None, use_id=False):
     """Attach projection + normalized status to one roster/FA row."""
     pos = canonical_pos(player.get("position"))
     row = dict(player)
@@ -212,6 +278,8 @@ def enrich(player, ros_index):
         row["ros_per_week"] = None
         row["trend"] = None
         row["ros_matched"] = False
+
+    attach_return(row, inj, use_id, YEAR)
 
     # Effective value = what this player is worth to a lineup right now.
     base = row.get("ros_per_week")
@@ -357,19 +425,21 @@ def roster_slots_for(key, raw, bigboard, rules):
     return list((rules.get(key, {}) or {}).get("rosterSlots") or [])
 
 
-def build_league(key, raw, roster_slots, ros_index):
+def build_league(key, raw, roster_slots, ros_index, inj=None):
     if not roster_slots:
         print(f"  ::warning::{key}: no rosterSlots found in bigboard.json or "
               f"league_rules.json -- positional strength will be empty for this "
               f"league. Run Update Big Board Data first.")
 
+    # ESPN ids only mean something inside ESPN leagues; Yahoo leagues match injuries by name.
+    use_id = raw.get("platform") == "espn"
     teams = []
     for t in raw.get("teams", []):
         team = dict(t)
-        team["roster"] = [enrich(p, ros_index) for p in t.get("roster", [])]
+        team["roster"] = [enrich(p, ros_index, inj, use_id) for p in t.get("roster", [])]
         teams.append(team)
 
-    free_agents = [enrich(p, ros_index) for p in raw.get("free_agents", [])]
+    free_agents = [enrich(p, ros_index, inj, use_id) for p in raw.get("free_agents", [])]
     # Unprojected free agents are noise -- the deep tail nobody expects to
     # play. Dropped so the waiver engine doesn't have to re-filter.
     #
@@ -592,6 +662,91 @@ def roster_age_days(fetched_at):
         return None
 
 
+# ---------------------------------------------------------------------------
+# "Returning from IR": good players back soon, and where each one is rostered vs available
+# ---------------------------------------------------------------------------
+def load_draft_indexes():
+    """-> ({league: {join_key: {round, overall, keeper}}}, [leagues with draft data], [leagues without]).
+    Yahoo leagues come from the parsed draft-results files; ESPN leagues from espn_drafts_<year>.json."""
+    idx = {}
+    for key in ("kepners", "miami"):
+        doc = load_json(f"{key}_draft_history.json", f"{key} draft history")
+        picks = (((doc or {}).get("seasons") or {}).get(str(YEAR)) or {}).get("picks") or []
+        for pk in picks:
+            k = join_key(pk.get("player"), pk.get("position"))
+            if k and pk.get("round"):
+                idx.setdefault(key, {})[k] = {"round": pk["round"], "overall": pk.get("overall_pick"),
+                                             "keeper": bool(pk.get("is_keeper"))}
+    espn = load_json(f"espn_drafts_{YEAR}.json", "ESPN league drafts")
+    for key, d in ((espn or {}).get("leagues") or {}).items():
+        for pk in d.get("picks") or []:
+            k = join_key(pk.get("name"), pk.get("pos"))
+            if k and pk.get("round"):
+                idx.setdefault(key, {})[k] = {"round": pk["round"], "overall": pk.get("overall"),
+                                             "keeper": bool(pk.get("keeper"))}
+    return idx
+
+
+def build_ir_returns(leagues, inj, ros_index, today=None):
+    today = today or datetime.now(timezone.utc).date()
+    drafts = load_draft_indexes()
+    have = sorted(k for k in leagues if k in drafts)
+    missing = sorted(k for k in leagues if k not in drafts)
+    out = {"windowDays": IR_WINDOW_DAYS, "goodRound": GOOD_DRAFT_ROUND, "asOf": today.isoformat(),
+           "draftLeagues": have, "leaguesWithoutDraftData": missing, "players": []}
+    if not inj or not inj.records:
+        out["note"] = "no injury data (espn_injuries_<year>.json missing)"
+        return out
+    if not have:
+        out["note"] = "no draft data for any league, so 'good' can't be judged"
+        return out
+
+    # who holds whom, per league
+    holders = {}
+    for key, lg in leagues.items():
+        m = {}
+        for t in lg.get("teams", []):
+            for p in t.get("roster", []):
+                m[join_key(p.get("name"), p.get("position"))] = (t, p)
+        holders[key] = m
+
+    rows = []
+    for rec in inj.records:
+        if rec.get("status") not in IR_RAW or rec.get("pos") not in IR_POSITIONS or not rec.get("ret"):
+            continue
+        try:
+            ret = date.fromisoformat(rec["ret"])
+        except ValueError:
+            continue
+        days = (ret - today).days
+        if days > IR_WINDOW_DAYS:
+            continue
+        k = join_key(rec.get("name"), rec.get("pos"))
+        picks = {lk: drafts[lk][k] for lk in have if k in drafts[lk]}
+        if not picks:
+            continue                                   # undrafted everywhere we can see: not a "good" player
+        best = min(v["round"] for v in picks.values())
+        if best > GOOD_DRAFT_ROUND:
+            continue
+        where, pro_team = {}, (ros_index.get(k) or {}).get("pro_team")
+        for lk in leagues:
+            hit = holders.get(lk, {}).get(k)
+            if not hit:
+                where[lk] = {"state": "available"}
+                continue
+            team, prow = hit
+            pro_team = pro_team or prow.get("pro_team")
+            where[lk] = {"state": "mine" if team.get("is_me") else "rostered", "team": team.get("team_name"),
+                         "slot": prow.get("lineup_slot")}
+        wk = nfl_week_for(ret, YEAR)
+        rows.append({"name": rec["name"], "pos": rec["pos"], "pro_team": pro_team, "return_date": rec["ret"],
+                     "return_week": wk, "return_beyond_season": wk is None, "days_away": days,
+                     "best_round": best, "drafts": picks, "leagues": where})
+    rows.sort(key=lambda r: (r["return_date"], r["best_round"], r["name"]))
+    out["players"] = rows
+    return out
+
+
 def main():
     print(f"Building inseason_{YEAR}.json...")
     yahoo = load_json(f"yahoo_inseason_{YEAR}.json", "Yahoo state")
@@ -606,12 +761,17 @@ def main():
               "ESPN ROS Projections step first.")
     ros_index = build_ros_index(ros)
     print(f"Projection index: {len(ros_index)} unique names.")
+    inj_doc = load_json(f"espn_injuries_{YEAR}.json", "ESPN injury return dates")
+    inj = InjuryIndex(inj_doc) if inj_doc else None
+    if inj:
+        print(f"Injury index: {len(inj.records)} injured players "
+              f"({sum(1 for r in inj.records if r.get('status') in IR_RAW)} on IR).")
 
     leagues = {}
     for doc in (yahoo, espn):
         for key, raw in ((doc or {}).get("leagues") or {}).items():
             leagues[key] = build_league(
-                key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index)
+                key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index, inj)
 
     # Yahoo leagues via the phone bridge, each unless a real Yahoo API pull
     # already covered it.
@@ -625,7 +785,7 @@ def main():
             continue
         aliases = load_json(cfg["aliases"], f"{cfg['label']} aliases") or {}
         raw = live_raw_from_rosters(key, cfg, live, ros, ros_index, espn, aliases)
-        lg = build_league(key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index)
+        lg = build_league(key, raw, roster_slots_for(key, raw, bigboard, rules), ros_index, inj)
         lg["rosterSource"] = "yahoo-phone-html"
         lg["rostersFetchedAt"] = live.get("fetched_at")
         lg["freeAgentSource"] = f"derived: ESPN projection pool minus {cfg['label']} rosters"
@@ -655,6 +815,15 @@ def main():
         "weeksRemaining": (ros or {}).get("weeks_remaining"),
         "leagues": leagues,
     }
+    # The home-page "Returning from IR" list. Wrapped: a problem here must never cost the rest of the build.
+    try:
+        out["irReturns"] = build_ir_returns(leagues, inj, ros_index)
+        ir = out["irReturns"]
+        print(f"IR returns: {len(ir['players'])} good player(s) back within {IR_WINDOW_DAYS} days"
+              + (f" ({ir['note']})" if ir.get("note") else "")
+              + (f"; no draft data for: {', '.join(ir['leaguesWithoutDraftData'])}" if ir["leaguesWithoutDraftData"] else ""))
+    except Exception as e:
+        print(f"  ::warning::IR returns list failed ({e}) -- build itself is fine.")
     with open(OUT_FILE, "w") as f:
         json.dump(out, f, indent=2)
     print(f"Wrote {OUT_FILE}: {len(leagues)} league(s), week {current_week}.")
