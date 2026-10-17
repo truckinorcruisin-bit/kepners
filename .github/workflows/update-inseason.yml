@@ -73,6 +73,16 @@ jobs:
       # FAAB assistant inputs. Both continue-on-error: they only feed bid
       # suggestions, so a failure here must never cost the core refresh --
       # the cockpit just shows waiver targets without bid numbers that week.
+      # Injured players' EXPECTED RETURN dates (the kona_playercard view; the projection pull's kona_player_info view
+      # doesn't carry them) plus each ESPN league's completed draft, for the home page's "Returning from IR" list.
+      # Drafts are fetched once and kept. continue-on-error: this must never cost the ESPN refresh.
+      - name: Pull ESPN injury return dates + league drafts
+        if: env.ESPN_S2 != ''
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python espn_injury_pull.py 2>&1 | tee -a inseason_run.log
+
       - name: Pull ESPN waiver/FAAB history (claims won + lost, budgets)
         continue-on-error: true
         run: |
@@ -196,7 +206,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # An unmatched glob must expand to nothing, or `git add` aborts on the literal pattern.
           shopt -s nullglob
-          RAW="player_ros_*.json espn_inseason_*.json waiver_history_*.json sleeper_trending.json yahoo_inseason_*.json fantasypros_ros_*.json"
+          RAW="player_ros_*.json espn_inseason_*.json espn_injuries_*.json espn_drafts_*.json waiver_history_*.json sleeper_trending.json yahoo_inseason_*.json fantasypros_ros_*.json"
           ALL="inseason_*.json $RAW power_rankings_history.json"
 
           # Keep a copy of what this run pulled; it is the part that cannot be regenerated cheaply.
