@@ -70,7 +70,7 @@ INJURY_DISCOUNT = {"QUESTIONABLE": 0.97, "DOUBTFUL": 0.90, "OUT": 0.75}
 # espn_injury_pull.py saves ESPN's raw injury status and expected-return date per injured player. Raw status matters:
 # INJURY_MAP above folds IR into OUT, so after normalising, an IR player is indistinguishable from a one-week OUT.
 IR_RAW = {"INJURY_RESERVE", "IR"}
-GOOD_DRAFT_ROUND = 6        # "good" = drafted in this round or earlier in ANY league we have draft data for
+EARLY_ROUND = 6             # not a cutoff: drafted in this round or earlier is highlighted as an "early pick"
 IR_WINDOW_DAYS = 28         # "returning soon": expected back within this many days (overdue counts too)
 NFL_REG_WEEKS = 18
 IR_POSITIONS = ("QB", "RB", "WR", "TE")     # nobody is stashing a kicker
@@ -692,7 +692,7 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
     drafts = load_draft_indexes()
     have = sorted(k for k in leagues if k in drafts)
     missing = sorted(k for k in leagues if k not in drafts)
-    out = {"windowDays": IR_WINDOW_DAYS, "goodRound": GOOD_DRAFT_ROUND, "asOf": today.isoformat(),
+    out = {"windowDays": IR_WINDOW_DAYS, "earlyRound": EARLY_ROUND, "asOf": today.isoformat(),
            "draftLeagues": have, "leaguesWithoutDraftData": missing, "players": []}
     if not inj or not inj.records:
         out["note"] = "no injury data (espn_injuries_<year>.json missing)"
@@ -725,9 +725,7 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
         picks = {lk: drafts[lk][k] for lk in have if k in drafts[lk]}
         if not picks:
             continue                                   # undrafted everywhere we can see: not a "good" player
-        best = min(v["round"] for v in picks.values())
-        if best > GOOD_DRAFT_ROUND:
-            continue
+        best = min(v["round"] for v in picks.values())      # anyone drafted, in any round, qualifies
         where, pro_team = {}, (ros_index.get(k) or {}).get("pro_team")
         for lk in leagues:
             hit = holders.get(lk, {}).get(k)
@@ -741,8 +739,8 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
         wk = nfl_week_for(ret, YEAR)
         rows.append({"name": rec["name"], "pos": rec["pos"], "pro_team": pro_team, "return_date": rec["ret"],
                      "return_week": wk, "return_beyond_season": wk is None, "days_away": days,
-                     "best_round": best, "drafts": picks, "leagues": where})
-    rows.sort(key=lambda r: (r["return_date"], r["best_round"], r["name"]))
+                     "best_round": best, "early": best <= EARLY_ROUND, "drafts": picks, "leagues": where})
+    rows.sort(key=lambda r: (r["return_date"], r["best_round"], r["name"]))   # soonest back first; earlier picks first on a tie
     out["players"] = rows
     return out
 
