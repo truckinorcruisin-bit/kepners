@@ -1,0 +1,56 @@
+name: ESPN Injury Return-Date Probe (one-time)
+
+# Finds out where ESPN publishes an injured player's EXPECTED RETURN: in the fantasy API this project
+# already uses, in ESPN's public injury feeds, or both. Writes espn_injury_probe.json (field NAMES, counts,
+# and a few example rows of public injury data). No cookies or league data are saved. Delete that file after
+# it has been used.
+#
+# Uses the existing repo secrets ESPN_LEAGUE_ID, ESPN_S2 and ESPN_SWID (only for the fantasy-API part; the
+# public feeds need no login).
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: espn-injury-probe
+  cancel-in-progress: false
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Probe ESPN's injury data
+        env:
+          YEAR: '2026'
+          ESPN_LEAGUE_ID: ${{ secrets.ESPN_LEAGUE_ID }}
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          ESPN_SWID: ${{ secrets.ESPN_SWID }}
+        run: python espn_injury_probe.py
+
+      - name: Commit the probe report
+        if: always() && hashFiles('espn_injury_probe.json') != ''
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add espn_injury_probe.json
+          git diff --staged --quiet && { echo "No change to the report."; exit 0; }
+          git commit -q -m "ESPN injury return-date probe report [automated]"
+          for i in 1 2 3 4 5; do
+            git pull -q --rebase origin main && git push -q origin HEAD:main && { echo "Pushed (attempt $i)."; exit 0; }
+            git rebase --abort 2>/dev/null || true
+            sleep $((i * 3))
+          done
+          echo "::error::Could not push the probe report after 5 attempts."
+          exit 1
