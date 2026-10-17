@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-17T03:05:49.410436+00:00",
+  "generated": "2026-10-17T03:15:22.348324+00:00",
   "currentWeek": 6,
   "weeksRemaining": 12,
   "leagues": {
@@ -38777,7 +38777,7 @@
   },
   "irReturns": {
     "windowDays": 28,
-    "goodRound": 6,
+    "earlyRound": 6,
     "asOf": "2026-10-17",
     "draftLeagues": [
       "inspire11",
@@ -38797,6 +38797,7 @@
         "return_beyond_season": false,
         "days_away": 1,
         "best_round": 2,
+        "early": true,
         "drafts": {
           "inspire11": {
             "round": 2,
@@ -38838,6 +38839,257 @@
         }
       },
       {
+        "name": "Alec Pierce",
+        "pos": "WR",
+        "pro_team": "IND",
+        "return_date": "2026-10-25",
+        "return_week": 7,
+        "return_beyond_season": false,
+        "days_away": 8,
+        "best_round": 7,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 8,
+            "overall": 92,
+            "keeper": false
+          },
+          "miami": {
+            "round": 11,
+            "overall": 87,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 7,
+            "overall": 77,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "available"
+          },
+          "inspire11": {
+            "state": "rostered",
+            "team": "Team Hansen",
+            "slot": "IR"
+          },
+          "kepners": {
+            "state": "rostered",
+            "team": "Shaq List",
+            "slot": "IR"
+          },
+          "miami": {
+            "state": "available"
+          }
+        }
+      },
+      {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "pro_team": "MIN",
+        "return_date": "2026-10-25",
+        "return_week": 7,
+        "return_beyond_season": false,
+        "days_away": 8,
+        "best_round": 9,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 11,
+            "overall": 121,
+            "keeper": false
+          },
+          "miami": {
+            "round": 12,
+            "overall": 92,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 9,
+            "overall": 99,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "rostered",
+            "team": "The Fe-Brees Brothers",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "rostered",
+            "team": "Keith's Team",
+            "slot": "BE"
+          },
+          "kepners": {
+            "state": "rostered",
+            "team": "BrowneyeVibeSesh",
+            "slot": "BE"
+          },
+          "miami": {
+            "state": "mine",
+            "team": "Hannah Lee's Revenge",
+            "slot": "IR"
+          }
+        }
+      },
+      {
+        "name": "Jonah Coleman",
+        "pos": "RB",
+        "pro_team": "DEN",
+        "return_date": "2026-10-25",
+        "return_week": 7,
+        "return_beyond_season": false,
+        "days_away": 8,
+        "best_round": 11,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 13,
+            "overall": 156,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 11,
+            "overall": 132,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "rostered",
+            "team": "Maryland Menace",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "mine",
+            "team": "1st and 11",
+            "slot": "IR"
+          },
+          "kepners": {
+            "state": "rostered",
+            "team": "The Herdsmen",
+            "slot": "IR"
+          },
+          "miami": {
+            "state": "available"
+          }
+        }
+      },
+      {
+        "name": "Tank Dell",
+        "pos": "WR",
+        "pro_team": "HOU",
+        "return_date": "2026-10-25",
+        "return_week": 7,
+        "return_beyond_season": false,
+        "days_away": 8,
+        "best_round": 12,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 12,
+            "overall": 144,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "available"
+          },
+          "inspire11": {
+            "state": "rostered",
+            "team": "Keith's Team",
+            "slot": "IR"
+          },
+          "kepners": {
+            "state": "available"
+          },
+          "miami": {
+            "state": "available"
+          }
+        }
+      },
+      {
+        "name": "Dylan Sampson",
+        "pos": "RB",
+        "pro_team": "CLE",
+        "return_date": "2026-10-25",
+        "return_week": 7,
+        "return_beyond_season": false,
+        "days_away": 8,
+        "best_round": 13,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 15,
+            "overall": 178,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 13,
+            "overall": 152,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "rostered",
+            "team": "TEXAS CHUPACABRAS",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "available"
+          },
+          "kepners": {
+            "state": "available"
+          },
+          "miami": {
+            "state": "available"
+          }
+        }
+      },
+      {
+        "name": "Terrance Ferguson",
+        "pos": "TE",
+        "pro_team": "LAR",
+        "return_date": "2026-11-01",
+        "return_week": 8,
+        "return_beyond_season": false,
+        "days_away": 15,
+        "best_round": 12,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 16,
+            "overall": 188,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 12,
+            "overall": 134,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "rostered",
+            "team": "D'Quan's Friend",
+            "slot": "BE"
+          },
+          "inspire11": {
+            "state": "available"
+          },
+          "kepners": {
+            "state": "available"
+          },
+          "miami": {
+            "state": "available"
+          }
+        }
+      },
+      {
         "name": "Jadarian Price",
         "pos": "RB",
         "pro_team": "SEA",
@@ -38846,6 +39098,7 @@
         "return_beyond_season": false,
         "days_away": 16,
         "best_round": 4,
+        "early": true,
         "drafts": {
           "inspire11": {
             "round": 5,
@@ -38895,6 +39148,7 @@
         "return_beyond_season": false,
         "days_away": 22,
         "best_round": 3,
+        "early": true,
         "drafts": {
           "inspire11": {
             "round": 4,
@@ -38932,6 +39186,132 @@
             "state": "rostered",
             "team": "Michael Scott's Team",
             "slot": "IR"
+          }
+        }
+      },
+      {
+        "name": "Jonathon Brooks",
+        "pos": "RB",
+        "pro_team": "CAR",
+        "return_date": "2026-11-08",
+        "return_week": 9,
+        "return_beyond_season": false,
+        "days_away": 22,
+        "best_round": 8,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 8,
+            "overall": 86,
+            "keeper": false
+          },
+          "miami": {
+            "round": 10,
+            "overall": 74,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 8,
+            "overall": 85,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "rostered",
+            "team": "Ben Jarvis Green Ellis LLP",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "available"
+          },
+          "kepners": {
+            "state": "available"
+          },
+          "miami": {
+            "state": "available"
+          }
+        }
+      },
+      {
+        "name": "Jordyn Tyson",
+        "pos": "WR",
+        "pro_team": "NO",
+        "return_date": "2026-11-08",
+        "return_week": 9,
+        "return_beyond_season": false,
+        "days_away": 22,
+        "best_round": 12,
+        "early": false,
+        "drafts": {
+          "miami": {
+            "round": 12,
+            "overall": 90,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 12,
+            "overall": 140,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "mine",
+            "team": "Elements of  Intrigue",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "available"
+          },
+          "kepners": {
+            "state": "rostered",
+            "team": "Phony Grossi",
+            "slot": "BE"
+          },
+          "miami": {
+            "state": "rostered",
+            "team": "Ya Boi",
+            "slot": "BE"
+          }
+        }
+      },
+      {
+        "name": "Tank Bigsby",
+        "pos": "RB",
+        "pro_team": "PHI",
+        "return_date": "2026-11-08",
+        "return_week": 9,
+        "return_beyond_season": false,
+        "days_away": 22,
+        "best_round": 12,
+        "early": false,
+        "drafts": {
+          "inspire11": {
+            "round": 14,
+            "overall": 160,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 12,
+            "overall": 143,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "zimmer": {
+            "state": "available"
+          },
+          "inspire11": {
+            "state": "available"
+          },
+          "kepners": {
+            "state": "rostered",
+            "team": "BrowneyeVibeSesh",
+            "slot": "BE"
+          },
+          "miami": {
+            "state": "available"
           }
         }
       }
