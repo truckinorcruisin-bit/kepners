@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-15T02:07:21.054505+00:00",
+ "generated": "2026-10-17T03:05:42.657968+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
@@ -54,7 +54,7 @@
      "manager": "Dan Beringer",
      "faab_spent": 9,
      "waiver_rank": 6,
-     "acquisitions": 10
+     "acquisitions": 12
     },
     "14": {
      "team_id": 14,
@@ -78,7 +78,7 @@
      "manager": "Pablo De Luna",
      "faab_spent": 36,
      "waiver_rank": 8,
-     "acquisitions": 7
+     "acquisitions": 8
     },
     "18": {
      "team_id": 18,
@@ -86,7 +86,7 @@
      "manager": "sean mullins",
      "faab_spent": 28,
      "waiver_rank": 12,
-     "acquisitions": 16
+     "acquisitions": 17
     },
     "19": {
      "team_id": 19,
@@ -1964,44 +1964,6 @@
     {
      "season": 2026,
      "week": 6,
-     "date": 1791930814877,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 5,
-     "add": {
-      "id": 4685261,
-      "name": "Germie Bernard",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4431492,
-      "name": "Roman Wilson"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
-     "date": 1791930913291,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 18,
-     "bid": 1,
-     "add": {
-      "id": 5083754,
-      "name": "Ryan Flournoy",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4426386,
-      "name": "Roschon Johnson"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
      "date": 1791930859859,
      "type": "WAIVER",
      "status": "PENDING",
@@ -2040,25 +2002,6 @@
     {
      "season": 2026,
      "week": 6,
-     "date": 1791963857333,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 6,
-     "bid": 3,
-     "add": {
-      "id": 4361411,
-      "name": "Pat Freiermuth",
-      "position": "TE"
-     },
-     "drop": {
-      "id": 3117256,
-      "name": "Dalton Schultz"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
      "date": 1791963857332,
      "type": "WAIVER",
      "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -2073,25 +2016,6 @@
      "drop": {
       "id": 4432773,
       "name": "Brian Thomas Jr."
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
-     "date": 1791963857333,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 18,
-     "bid": 2,
-     "add": {
-      "id": -16027,
-      "name": "Buccaneers D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": 3116164,
-      "name": "Mike Gesicki"
      }
     },
     {
@@ -2137,25 +2061,6 @@
      "week": 6,
      "date": 1791963857333,
      "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 18,
-     "bid": 3,
-     "add": {
-      "id": 5083754,
-      "name": "Ryan Flournoy",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4431492,
-      "name": "Roman Wilson"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
-     "date": 1791963857333,
-     "type": "WAIVER",
      "status": "FAILED_INVALIDPLAYERSOURCE",
      "won": false,
      "team_id": 18,
@@ -2192,47 +2097,9 @@
     {
      "season": 2026,
      "week": 6,
-     "date": 1791963857331,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 16,
-     "bid": 7,
-     "add": {
-      "id": 4427095,
-      "name": "DeMario Douglas",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4384852,
-      "name": "Dohnte Meyers"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
      "date": 1791963857334,
      "type": "WAIVER",
      "status": "FAILED_PLAYERALREADYDROPPED",
-     "won": false,
-     "team_id": 18,
-     "bid": 0,
-     "add": {
-      "id": -16020,
-      "name": "Jets D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": 3116164,
-      "name": "Mike Gesicki"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
-     "date": 1791930796372,
-     "type": "WAIVER",
-     "status": "PENDING",
      "won": false,
      "team_id": 18,
      "bid": 0,
@@ -2287,25 +2154,6 @@
     {
      "season": 2026,
      "week": 6,
-     "date": 1791963857332,
-     "type": "WAIVER",
-     "status": "FAILED_PLAYERALREADYDROPPED",
-     "won": false,
-     "team_id": 19,
-     "bid": 5,
-     "add": {
-      "id": 2969939,
-      "name": "Jameis Winston",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 4038441,
-      "name": "Justice Hill"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 6,
      "date": 1791963857331,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -2320,6 +2168,158 @@
      "drop": {
       "id": 3116165,
       "name": "Chris Godwin Jr."
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791930814877,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 5,
+     "add": {
+      "id": 4685261,
+      "name": "Germie Bernard",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4431492,
+      "name": "Roman Wilson"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791930913291,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 1,
+     "add": {
+      "id": 5083754,
+      "name": "Ryan Flournoy",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4426386,
+      "name": "Roschon Johnson"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791963857333,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 6,
+     "bid": 3,
+     "add": {
+      "id": 4361411,
+      "name": "Pat Freiermuth",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 3117256,
+      "name": "Dalton Schultz"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791963857333,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 2,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3116164,
+      "name": "Mike Gesicki"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791963857333,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 3,
+     "add": {
+      "id": 5083754,
+      "name": "Ryan Flournoy",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4431492,
+      "name": "Roman Wilson"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791963857331,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 16,
+     "bid": 7,
+     "add": {
+      "id": 4427095,
+      "name": "DeMario Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4384852,
+      "name": "Dohnte Meyers"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791930796372,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": -16020,
+      "name": "Jets D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 3116164,
+      "name": "Mike Gesicki"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1791963857332,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 19,
+     "bid": 5,
+     "add": {
+      "id": 2969939,
+      "name": "Jameis Winston",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4038441,
+      "name": "Justice Hill"
      }
     },
     {
@@ -9266,8 +9266,8 @@
      "team_name": "Dayton's Daring Team",
      "manager": "Dayton Paul",
      "faab_spent": 0,
-     "waiver_rank": 11,
-     "acquisitions": 4
+     "waiver_rank": 12,
+     "acquisitions": 5
     },
     "3": {
      "team_id": 3,
@@ -9275,7 +9275,7 @@
      "manager": "Kevin Zugschwert",
      "faab_spent": 0,
      "waiver_rank": 10,
-     "acquisitions": 7
+     "acquisitions": 8
     },
     "4": {
      "team_id": 4,
@@ -9299,7 +9299,7 @@
      "manager": "Nick Hansen",
      "faab_spent": 0,
      "waiver_rank": 3,
-     "acquisitions": 6
+     "acquisitions": 7
     },
     "7": {
      "team_id": 7,
@@ -9315,7 +9315,7 @@
      "manager": "Eric Mathis",
      "faab_spent": 0,
      "waiver_rank": 1,
-     "acquisitions": 1
+     "acquisitions": 2
     },
     "9": {
      "team_id": 9,
@@ -9330,8 +9330,8 @@
      "team_name": "1st and 11",
      "manager": "sean mullins",
      "faab_spent": 0,
-     "waiver_rank": 12,
-     "acquisitions": 18
+     "waiver_rank": 11,
+     "acquisitions": 19
     },
     "11": {
      "team_id": 11,
@@ -9339,7 +9339,7 @@
      "manager": "Jason Bonnet",
      "faab_spent": 0,
      "waiver_rank": 9,
-     "acquisitions": 10
+     "acquisitions": 12
     },
     "12": {
      "team_id": 12,
@@ -9347,7 +9347,7 @@
      "manager": "Nate Stephenson",
      "faab_spent": 0,
      "waiver_rank": 2,
-     "acquisitions": 6
+     "acquisitions": 7
     }
    },
    "priorBudget": null,
@@ -10748,6 +10748,25 @@
      "drop": {
       "id": 5083315,
       "name": "Kenyon Sadiq"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 6,
+     "date": 1792050281458,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 2,
+     "bid": 0,
+     "add": {
+      "id": 4685720,
+      "name": "Bryce Young",
+      "position": "QB"
+     },
+     "drop": {
+      "id": -16004,
+      "name": "Bengals D/ST"
      }
     },
     {
