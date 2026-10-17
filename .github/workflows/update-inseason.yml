@@ -44,6 +44,7 @@ jobs:
       YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
       YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
       GH_SECRETS_PAT: ${{ secrets.GH_SECRETS_PAT }}
+      FANTASYPROS_API_KEY: ${{ secrets.FANTASYPROS_API_KEY }}
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -83,6 +84,17 @@ jobs:
         run: |
           set -o pipefail
           python sleeper_trending.py 2>&1 | tee -a inseason_run.log
+
+      # FantasyPros rest-of-season expert consensus rankings (standard scoring). Only attempted when the
+      # FANTASYPROS_API_KEY secret exists, and continue-on-error: a FantasyPros problem must never cost the
+      # ESPN refresh. The script refuses anything that isn't genuinely ROS data, and never lets a partial
+      # (free-key, 10-per-position) pull overwrite a complete file. See fantasypros_pull.py.
+      - name: Pull FantasyPros ROS expert rankings
+        if: env.FANTASYPROS_API_KEY != ''
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python fantasypros_pull.py 2>&1 | tee -a inseason_run.log
 
       # continue-on-error until Yahoo auth is confirmed working in CI. A Yahoo
       # failure must not cost us the Zimmer refresh -- two of three leagues is
@@ -184,7 +196,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           # An unmatched glob must expand to nothing, or `git add` aborts on the literal pattern.
           shopt -s nullglob
-          RAW="player_ros_*.json espn_inseason_*.json waiver_history_*.json sleeper_trending.json yahoo_inseason_*.json"
+          RAW="player_ros_*.json espn_inseason_*.json waiver_history_*.json sleeper_trending.json yahoo_inseason_*.json fantasypros_ros_*.json"
           ALL="inseason_*.json $RAW power_rankings_history.json"
 
           # Keep a copy of what this run pulled; it is the part that cannot be regenerated cheaply.
