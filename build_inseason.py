@@ -723,9 +723,6 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
             continue
         k = join_key(rec.get("name"), rec.get("pos"))
         picks = {lk: drafts[lk][k] for lk in have if k in drafts[lk]}
-        if not picks:
-            continue                                   # undrafted everywhere we can see: not a "good" player
-        best = min(v["round"] for v in picks.values())      # anyone drafted, in any round, qualifies
         where, pro_team = {}, (ros_index.get(k) or {}).get("pro_team")
         for lk in leagues:
             hit = holders.get(lk, {}).get(k)
@@ -736,11 +733,19 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
             pro_team = pro_team or prow.get("pro_team")
             where[lk] = {"state": "mine" if team.get("is_me") else "rostered", "team": team.get("team_name"),
                          "slot": prow.get("lineup_slot")}
+        # Qualifies if he was drafted in any league we have draft data for, OR somebody currently holds him
+        # (a pickup: e.g. a rookie stashed after the draft). Unowned, undrafted IR players are noise.
+        owned = any(v["state"] != "available" for v in where.values())
+        if not picks and not owned:
+            continue
+        best = min((v["round"] for v in picks.values()), default=None)
         wk = nfl_week_for(ret, YEAR)
         rows.append({"name": rec["name"], "pos": rec["pos"], "pro_team": pro_team, "return_date": rec["ret"],
                      "return_week": wk, "return_beyond_season": wk is None, "days_away": days,
-                     "best_round": best, "early": best <= EARLY_ROUND, "drafts": picks, "leagues": where})
-    rows.sort(key=lambda r: (r["return_date"], r["best_round"], r["name"]))   # soonest back first; earlier picks first on a tie
+                     "best_round": best, "early": best is not None and best <= EARLY_ROUND,
+                     "pickup": not picks, "drafts": picks, "leagues": where})
+    # soonest back first; on a tie, earlier picks first, then pickups
+    rows.sort(key=lambda r: (r["return_date"], r["best_round"] if r["best_round"] is not None else 99, r["name"]))
     out["players"] = rows
     return out
 

@@ -1946,30 +1946,31 @@ function mgrIrReturnsHtml(){
       .map(k=>{
         const v = p.leagues[k];
         const txt = v.state==='available' ? 'AVAILABLE'
-          : v.state==='mine' ? `YOURS${v.slot==='IR'?' (IR slot)':''}`
+          : v.state==='mine' ? `YOURS${v.slot==='IR'?' (IR slot)':v.slot==='BE'?' (bench)':''}`
           : (v.team||'rostered');
         return `<button type="button" class="mgr-ir-pill ${v.state}" data-lg="${escapeHtml(k)}"><b>${escapeHtml(short(k))}</b> ${escapeHtml(txt)}</button>`;
       }).join('');
     const anyOpen = Object.values(p.leagues||{}).some(v=>v.state==='available');
-    const early = p.early!=null ? p.early : p.best_round <= earlyRound;
+    const pickup = p.best_round==null;              // on a roster but not in any draft we have: added after the draft
+    const early = !pickup && (p.early!=null ? p.early : p.best_round <= earlyRound);
     return `<div class="mgr-ir-row${anyOpen?' has-open':''}">
       <div class="mgr-ir-top">
         <span class="mgr-ir-name">${escapeHtml(p.name)}</span>
-        <span class="mgr-ir-rd${early?' early':''}" title="best draft round across your leagues">R${p.best_round}</span>
+        <span class="mgr-ir-rd${early?' early':''}" title="${pickup?'added after the draft (not in any draft on file)':'best draft round across your leagues'}">${pickup?'ADD':'R'+p.best_round}</span>
         <span class="mgr-ir-meta">${escapeHtml(p.pos)}${p.pro_team?` · ${escapeHtml(p.pro_team)}`:''}</span>
         <span class="mgr-ir-when">${p.return_beyond_season ? 'season' : escapeHtml(mgrFmtDate(p.return_date))}${p.return_week?` · Wk ${p.return_week}`:''}</span>
       </div>
-      <div class="mgr-ir-sub">${escapeHtml(rel(p.days))}${rel(p.days)?' · ':''}drafted ${escapeHtml(draftTxt)}</div>
+      <div class="mgr-ir-sub">${escapeHtml(rel(p.days))}${rel(p.days)?' · ':''}${pickup?'picked up, not in any draft on file':'drafted '+escapeHtml(draftTxt)}</div>
       <div class="mgr-ir-pills">${pills}</div>
     </div>`;
-  }).join('') : `<div class="mgr-empty">No drafted player is on IR with a return date in the next ${weeks} weeks.</div>`;
+  }).join('') : `<div class="mgr-empty">No drafted or rostered player is on IR with a return date in the next ${weeks} weeks.</div>`;
   const miss = (ir.leaguesWithoutDraftData||[]).map(short);
   const note = ir.note ? `<div class="mgr-ir-note">${escapeHtml(ir.note)}.</div>`
     : (miss.length ? `<div class="mgr-ir-note">No draft results on file for ${escapeHtml(miss.join(', '))}, so a player drafted early only there won't appear.</div>` : '');
   return `<div class="mgr-ir">
-    <div class="mgr-actions-lbl">Returning from IR${rows.length?` · ${rows.length} drafted player${rows.length===1?'':'s'}${open?`, ${open} with an open spot`:''}`:''}</div>
-    <div class="mgr-ir-note">Anyone drafted in any of your leagues who's due back within ${weeks} weeks. Green = he's on waivers there.
-      An amber round tag means he went in the first ${earlyRound} rounds.</div>
+    <div class="mgr-actions-lbl">Returning from IR${rows.length?` · ${rows.length} player${rows.length===1?'':'s'}${open?`, ${open} with an open spot`:''}`:''}</div>
+    <div class="mgr-ir-note">Anyone drafted in your leagues, or on a roster in one, who's due back within ${weeks} weeks.
+      Green = he's on waivers there. Amber tag = drafted in the first ${earlyRound} rounds; ADD = picked up after the draft.</div>
     ${body}${note}
   </div>`;
 }
