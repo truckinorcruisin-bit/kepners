@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-20T13:55:34.707930+00:00",
+ "generated": "2026-10-20T17:42:30.265371+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 996,
  "injuries": [
@@ -288,14 +288,14 @@
    "id": 4608686,
    "name": "Kyle Monangai",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-22"
   },
   {
    "id": 4239934,
    "name": "AJ Dillon",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -309,7 +309,7 @@
    "id": 4597500,
    "name": "Adonai Mitchell",
    "pos": "WR",
-   "status": "OUT",
+   "status": "DOUBTFUL",
    "ret": "2026-10-25"
   },
   {
@@ -323,14 +323,14 @@
    "id": 4061956,
    "name": "Ashton Dulin",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
    "id": 3052587,
    "name": "Baker Mayfield",
    "pos": "QB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -344,14 +344,14 @@
    "id": 4035656,
    "name": "Ben Skowronek",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
    "id": 4427366,
    "name": "Breece Hall",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -400,7 +400,7 @@
    "id": 4035538,
    "name": "David Montgomery",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -449,7 +449,7 @@
    "id": 4870808,
    "name": "Jeremiyah Love",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -495,17 +495,10 @@
    "ret": "2026-10-25"
   },
   {
-   "id": 4430431,
-   "name": "Kurtis Rourke",
-   "pos": "QB",
-   "status": "OUT",
-   "ret": "2026-10-25"
-  },
-  {
    "id": 3916387,
    "name": "Lamar Jackson",
    "pos": "QB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -526,28 +519,28 @@
    "id": 4432260,
    "name": "Matt Hibner",
    "pos": "TE",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
    "id": 16737,
    "name": "Mike Evans",
    "pos": "WR",
-   "status": "DOUBTFUL",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
    "id": 4685702,
    "name": "Quinshon Judkins",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
    "id": 4428331,
    "name": "Rashee Rice",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -568,7 +561,7 @@
    "id": 4430871,
    "name": "Sean Tucker",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -589,7 +582,7 @@
    "id": 4429148,
    "name": "Theo Johnson",
    "pos": "TE",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -610,7 +603,7 @@
    "id": 4431459,
    "name": "Tyler Warren",
    "pos": "TE",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-25"
   },
   {
@@ -659,7 +652,7 @@
    "id": 3929630,
    "name": "Saquon Barkley",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-10-26"
   },
   {
@@ -687,7 +680,7 @@
    "id": 3915416,
    "name": "DJ Moore",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -715,7 +708,7 @@
    "id": 2576980,
    "name": "Marcus Mariota",
    "pos": "QB",
-   "status": "OUT",
+   "status": "DOUBTFUL",
    "ret": "2026-11-01"
   },
   {
@@ -729,14 +722,14 @@
    "id": 3121422,
    "name": "Terry McLaurin",
    "pos": "WR",
-   "status": "OUT",
+   "status": "DOUBTFUL",
    "ret": "2026-11-01"
   },
   {
    "id": 4686612,
    "name": "Tre' Harris",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
