@@ -1,14 +1,14 @@
 {
-  "fetched_at": "2026-10-15T02:02:16Z",
+  "fetched_at": "2026-10-20T03:16:57Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
-      "player_count": 16,
+      "player_count": 17,
       "keeper_count": 1,
       "players": [
         {
-          "player_id": "31002",
-          "name": "Lamar Jackson",
+          "player_id": "32993",
+          "name": "Tyler Huntley",
           "position": "QB",
           "nfl_team": "Bal",
           "roster_slot": "QB",
@@ -61,22 +61,22 @@
           "bye_week": "7"
         },
         {
-          "player_id": "40048",
-          "name": "Dalton Kincaid",
-          "position": "TE",
-          "nfl_team": "Buf",
-          "roster_slot": "TE",
-          "is_keeper": false,
-          "bye_week": "7"
-        },
-        {
           "player_id": "33443",
           "name": "Pat Freiermuth",
           "position": "TE",
           "nfl_team": "Pit",
-          "roster_slot": "BN",
+          "roster_slot": "TE",
           "is_keeper": false,
           "bye_week": "9"
+        },
+        {
+          "player_id": "40048",
+          "name": "Dalton Kincaid",
+          "position": "TE",
+          "nfl_team": "Buf",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
         },
         {
           "player_id": "30972",
@@ -131,6 +131,15 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "8"
+        },
+        {
+          "player_id": "31002",
+          "name": "Lamar Jackson",
+          "position": "QB",
+          "nfl_team": "Bal",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "13"
         },
         {
           "player_id": "28188",
@@ -293,13 +302,13 @@
           "bye_week": "14"
         },
         {
-          "player_id": "100001",
-          "name": "Falcons",
+          "player_id": "100029",
+          "name": "Panthers",
           "position": "DEF",
-          "nfl_team": "Atl",
+          "nfl_team": "Car",
           "roster_slot": "DEF",
           "is_keeper": false,
-          "bye_week": "11"
+          "bye_week": "5"
         }
       ]
     },
