@@ -1,12 +1,12 @@
 {
  "year": 2026,
- "generated": "2026-10-17T03:15:16.559241+00:00",
+ "generated": "2026-10-20T13:55:38.770998+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
    "faab": true,
    "budget": 100,
-   "currentWeek": 6,
+   "currentWeek": 7,
    "teams": {
     "1": {
      "team_id": 1,
@@ -14,7 +14,7 @@
      "manager": "Zach Zimmer",
      "faab_spent": 21,
      "waiver_rank": 9,
-     "acquisitions": 13
+     "acquisitions": 15
     },
     "5": {
      "team_id": 5,
@@ -46,7 +46,7 @@
      "manager": "Andrew Piotrowski",
      "faab_spent": 11,
      "waiver_rank": 4,
-     "acquisitions": 8
+     "acquisitions": 9
     },
     "11": {
      "team_id": 11,
@@ -102,7 +102,7 @@
      "manager": "Sean Wilkinson",
      "faab_spent": 6,
      "waiver_rank": 7,
-     "acquisitions": 3
+     "acquisitions": 4
     }
    },
    "priorBudget": 100,
@@ -9251,14 +9251,14 @@
    "platform": "espn",
    "faab": false,
    "budget": 100,
-   "currentWeek": 6,
+   "currentWeek": 7,
    "teams": {
     "1": {
      "team_id": 1,
      "team_name": "Mike D",
      "manager": "Michael Dendinger",
      "faab_spent": 0,
-     "waiver_rank": 6,
+     "waiver_rank": 9,
      "acquisitions": 2
     },
     "2": {
@@ -9266,7 +9266,7 @@
      "team_name": "Dayton's Daring Team",
      "manager": "Dayton Paul",
      "faab_spent": 0,
-     "waiver_rank": 12,
+     "waiver_rank": 11,
      "acquisitions": 5
     },
     "3": {
@@ -9274,15 +9274,15 @@
      "team_name": "Kevin's Top-Notch Team",
      "manager": "Kevin Zugschwert",
      "faab_spent": 0,
-     "waiver_rank": 10,
-     "acquisitions": 8
+     "waiver_rank": 6,
+     "acquisitions": 10
     },
     "4": {
      "team_id": 4,
      "team_name": "Keith's Team",
      "manager": "Keith Quiring",
      "faab_spent": 0,
-     "waiver_rank": 5,
+     "waiver_rank": 8,
      "acquisitions": 6
     },
     "5": {
@@ -9290,7 +9290,7 @@
      "team_name": "Go Pack Go",
      "manager": "Krenar Hazari",
      "faab_spent": 0,
-     "waiver_rank": 7,
+     "waiver_rank": 10,
      "acquisitions": 0
     },
     "6": {
@@ -9298,7 +9298,7 @@
      "team_name": "Team Hansen",
      "manager": "Nick Hansen",
      "faab_spent": 0,
-     "waiver_rank": 3,
+     "waiver_rank": 5,
      "acquisitions": 7
     },
     "7": {
@@ -9314,7 +9314,7 @@
      "team_name": "Fantasy Baseball Team",
      "manager": "Eric Mathis",
      "faab_spent": 0,
-     "waiver_rank": 1,
+     "waiver_rank": 2,
      "acquisitions": 2
     },
     "9": {
@@ -9322,15 +9322,15 @@
      "team_name": "Jordan's Scary Team",
      "manager": "Jordan Miller",
      "faab_spent": 0,
-     "waiver_rank": 8,
-     "acquisitions": 7
+     "waiver_rank": 12,
+     "acquisitions": 8
     },
     "10": {
      "team_id": 10,
      "team_name": "1st and 11",
      "manager": "sean mullins",
      "faab_spent": 0,
-     "waiver_rank": 11,
+     "waiver_rank": 3,
      "acquisitions": 19
     },
     "11": {
@@ -9338,7 +9338,7 @@
      "team_name": "34=GOAT (Bonnet\u2019s Team)",
      "manager": "Jason Bonnet",
      "faab_spent": 0,
-     "waiver_rank": 9,
+     "waiver_rank": 1,
      "acquisitions": 12
     },
     "12": {
@@ -9346,7 +9346,7 @@
      "team_name": "Nate's Nifty Team",
      "manager": "Nate Stephenson",
      "faab_spent": 0,
-     "waiver_rank": 2,
+     "waiver_rank": 7,
      "acquisitions": 7
     }
    },
