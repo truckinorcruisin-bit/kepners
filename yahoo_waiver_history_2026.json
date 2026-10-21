@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T12:53:35.662831+00:00",
+ "generated": "2026-10-21T13:00:47.388664+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -1778,7 +1778,7 @@
     {
      "add": {
       "id": "100012",
-      "name": "Chiefs",
+      "name": "Kansas City",
       "position": "DEF"
      },
      "bid": 0,
@@ -1798,14 +1798,14 @@
     {
      "add": {
       "id": "100025",
-      "name": "49ers",
+      "name": "San Francisco",
       "position": "DEF"
      },
      "bid": 0,
      "date": 1789542540000,
      "drop": {
       "id": "100030",
-      "name": "Jaguars"
+      "name": "Jacksonville"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1825,7 +1825,7 @@
      "date": 1789542540000,
      "drop": {
       "id": "100013",
-      "name": "Raiders"
+      "name": "Las Vegas"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1858,14 +1858,14 @@
     {
      "add": {
       "id": "100004",
-      "name": "Bengals",
+      "name": "Cincinnati",
       "position": "DEF"
      },
      "bid": 2,
      "date": 1790147700000,
      "drop": {
       "id": "100024",
-      "name": "Chargers"
+      "name": "Los Angeles"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2228,6 +2228,86 @@
      "type": "WAIVER",
      "week": 6,
      "won": true
+    },
+    {
+     "add": {
+      "id": "42652",
+      "name": "Omar Cooper Jr.",
+      "position": "WR"
+     },
+     "bid": 0,
+     "date": 1792566120000,
+     "drop": {
+      "id": "29369",
+      "name": "Dak Prescott"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 1,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100005",
+      "name": "Cleveland",
+      "position": "DEF"
+     },
+     "bid": 4,
+     "date": 1792566120000,
+     "drop": {
+      "id": "100033",
+      "name": "Baltimore"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 1,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "33392",
+      "name": "Kyle Pitts Sr.",
+      "position": "TE"
+     },
+     "bid": 5,
+     "date": 1792566120000,
+     "drop": {
+      "id": "40048",
+      "name": "Dalton Kincaid"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "42669",
+      "name": "Germie Bernard",
+      "position": "WR"
+     },
+     "bid": 11,
+     "date": 1792566120000,
+     "drop": {
+      "id": "40877",
+      "name": "Xavier Worthy"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
     }
    ],
    "complete_history": true,
@@ -2237,7 +2317,7 @@
     {
      "add": {
       "id": "100013",
-      "name": "Raiders",
+      "name": "Las Vegas",
       "position": "DEF"
      },
      "date": 1788399600000,
@@ -2299,7 +2379,7 @@
     {
      "add": {
       "id": "100027",
-      "name": "Buccaneers",
+      "name": "Tampa Bay",
       "position": "DEF"
      },
      "date": 1789290840000,
@@ -2361,13 +2441,13 @@
     {
      "add": {
       "id": "100033",
-      "name": "Ravens",
+      "name": "Baltimore",
       "position": "DEF"
      },
      "date": 1789739700000,
      "drop": {
       "id": "100016",
-      "name": "Vikings"
+      "name": "Minnesota"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2689,7 +2769,7 @@
     {
      "add": {
       "id": "100003",
-      "name": "Bears",
+      "name": "Chicago",
       "position": "DEF"
      },
      "date": 1791727080000,
@@ -2720,13 +2800,13 @@
     {
      "add": {
       "id": "100001",
-      "name": "Falcons",
+      "name": "Atlanta",
       "position": "DEF"
      },
      "date": 1791748080000,
      "drop": {
       "id": "100033",
-      "name": "Ravens"
+      "name": "Baltimore"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2737,13 +2817,13 @@
     {
      "add": {
       "id": "100017",
-      "name": "Patriots",
+      "name": "New England",
       "position": "DEF"
      },
      "date": 1791966060000,
      "drop": {
       "id": "100004",
-      "name": "Bengals"
+      "name": "Cincinnati"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2788,13 +2868,13 @@
     {
      "add": {
       "id": "100033",
-      "name": "Ravens",
+      "name": "Baltimore",
       "position": "DEF"
      },
      "date": 1792070700000,
      "drop": {
       "id": "100020",
-      "name": "Jets"
+      "name": "New York"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2818,20 +2898,54 @@
      "team_id": 2,
      "type": "FREEAGENT",
      "week": 6
+    },
+    {
+     "add": {
+      "id": "29235",
+      "name": "Jared Goff",
+      "position": "QB"
+     },
+     "date": 1792570920000,
+     "drop": {
+      "id": "9265",
+      "name": "Matthew Stafford"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 7,
+     "type": "FREEAGENT",
+     "week": 7
+    },
+    {
+     "add": {
+      "id": "100020",
+      "name": "New York",
+      "position": "DEF"
+     },
+     "date": 1792570980000,
+     "drop": {
+      "id": "100017",
+      "name": "New England"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 7,
+     "type": "FREEAGENT",
+     "week": 7
     }
    ],
-   "newest": "2026-10-19T10:59:00-04:00",
+   "newest": "2026-10-21T04:23:00-04:00",
    "oldest": "2026-09-02T21:40:00-04:00",
    "pages": 3,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 68,
+   "rows_seen": 74,
    "rows_unparsed": 0,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
     "1": {
-     "acquisitions": 10,
-     "faab_spent": 25,
+     "acquisitions": 12,
+     "faab_spent": 29,
      "manager": null,
      "team_id": 1,
      "team_name": "MakeMyTeamGreatAgain",
@@ -2854,8 +2968,8 @@
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 11,
-     "faab_spent": 29,
+     "acquisitions": 13,
+     "faab_spent": 45,
      "manager": null,
      "team_id": 4,
      "team_name": "Hannah Lee's Revenge",
@@ -2878,7 +2992,7 @@
      "waiver_rank": null
     },
     "7": {
-     "acquisitions": 10,
+     "acquisitions": 12,
      "faab_spent": 12,
      "manager": null,
      "team_id": 7,
