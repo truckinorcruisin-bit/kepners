@@ -749,6 +749,8 @@
     white-space:nowrap;font-size:11.5px;}
   .mgr-str-injury{color:var(--red);font-size:9px;margin-left:5px;}
   .mgr-ir-ret{color:var(--amber);font-weight:600;}
+  .mgr-keep{font-size:9px;color:var(--cyan);margin-left:5px;white-space:nowrap;font-weight:400;}
+  .mgr-keep.no{color:var(--dim);}
   /* home: good players returning from IR */
   .mgr-ir{margin:16px 0 12px;}
   .mgr-ir-note{font-size:9.5px;color:var(--dim);margin:2px 0 6px;line-height:1.35;}
@@ -911,6 +913,50 @@
   .mgr-trade-grid td{text-align:right;padding:2px 4px;font-weight:700;border-top:1px solid var(--line);}
   .mgr-trade-grid td.tier-strong{color:var(--green);}
   .mgr-trade-grid td.tier-weak{color:var(--red);}
+  /* trade builder */
+  .mgr-tb-entry{display:flex;flex-direction:column;gap:2px;width:100%;text-align:left;background:var(--panel);border:1px solid var(--line);
+    border-left:2px solid var(--cyan);color:var(--txt);font-family:inherit;padding:9px 12px;margin:10px 0 6px;cursor:pointer;}
+  .mgr-tb-entry b{font-size:12px;} .mgr-tb-entry span{font-size:9.5px;color:var(--dim);}
+  .mgr-tb-link{background:none;border:1px solid var(--line-2);color:var(--cyan);font-family:inherit;font-size:10px;padding:4px 10px;margin:0 0 8px;cursor:pointer;}
+  .mgr-tb-clear{background:none;border:1px solid var(--line-2);color:var(--dim);font-family:inherit;font-size:10px;padding:4px 10px;margin:6px 0 2px;cursor:pointer;}
+  .tb-sides{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:6px;}
+  @media (max-width:560px){ .tb-sides{grid-template-columns:1fr;} }
+  .tb-side-lbl{font-size:8.5px;color:var(--dim);text-transform:uppercase;letter-spacing:.06em;margin:4px 0;}
+  .tb-list{display:flex;flex-direction:column;gap:3px;max-height:330px;overflow-y:auto;}
+  .tb-pl{display:flex;gap:8px;align-items:flex-start;width:100%;text-align:left;background:var(--panel);border:1px solid var(--line);
+    color:var(--txt);font-family:inherit;padding:6px 8px;cursor:pointer;}
+  .tb-pl.on{border-color:var(--cyan);background:rgba(0,217,255,.08);}
+  .tb-check{flex:0 0 14px;height:14px;border:1px solid var(--line-2);font-size:10px;line-height:14px;text-align:center;color:var(--cyan);}
+  .tb-pl.on .tb-check{border-color:var(--cyan);}
+  .tb-pl-main{flex:1;min-width:0;}
+  .tb-pl-nm{font-size:11.5px;font-weight:700;}
+  .tb-pl-meta{display:block;font-size:9px;color:var(--dim);margin-top:1px;}
+  .tb-grid td .tb-sub{display:block;font-size:8.5px;color:var(--dim);font-weight:400;}
+  .tb-note{font-size:9.5px;color:var(--dim);margin:4px 0 8px;line-height:1.35;}
+  .tb-verdict{font-size:11px;margin:2px 0 4px;}
+  .tb-pcard{background:var(--panel);border:1px solid var(--line);border-left:2px solid var(--line-2);padding:7px 9px;margin-bottom:5px;}
+  .tb-pcard.out{border-left-color:var(--red);} .tb-pcard.in{border-left-color:var(--green);}
+  .tb-pcard.mydrop,.tb-pcard.theirdrop{border-left-color:var(--amber);}
+  .tb-pcard-top .tb-pl-meta{display:inline;margin-left:6px;}
+  .tb-dir{font-size:8px;font-weight:700;letter-spacing:.06em;color:var(--dim);margin-right:6px;}
+  .tb-pcard-nums{font-size:9.5px;margin-top:3px;font-variant-numeric:tabular-nums;}
+  .tb-pcard-role{font-size:9.5px;color:var(--dim);margin-top:2px;}
+  .tb-hz{margin:4px 0;}
+  .tb-ltable{margin:6px 0 12px;}
+  .tb-ltitle{font-size:10px;font-weight:700;margin-bottom:3px;}
+  .tb-lrow{display:grid;grid-template-columns:40px minmax(0,1fr) 10px minmax(0,1fr) 38px 52px;gap:4px;align-items:baseline;
+    font-size:10px;padding:3px 0;border-bottom:1px solid var(--line);font-variant-numeric:tabular-nums;}
+  .tb-lrow.same{opacity:.55;}
+  .tb-slot{color:var(--dim);font-weight:700;font-size:9px;}
+  .tb-cell{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+  .tb-arrow{color:var(--dim);}
+  .tb-v{color:var(--dim);font-size:9px;}
+  .tb-empty{color:var(--dim);font-style:italic;}
+  .tb-d{text-align:right;font-weight:700;}
+  .tb-d.tier-strong{color:var(--green);} .tb-d.tier-weak{color:var(--red);}
+  .tb-rk{font-size:9px;color:var(--dim);text-align:right;}
+  .tb-rk.up{color:var(--green);} .tb-rk.dn{color:var(--red);}
+  .tb-total{font-weight:700;border-bottom:0;}
   .mgr-trade-grid td.tier-mid{color:var(--txt);}
   .mgr-trade-note{font-size:9px;color:var(--dim);margin-top:6px;line-height:1.5;}
 
@@ -1828,7 +1874,7 @@ function mgrWaiverRowHtml(key, lg, t){
   return `<div class="mgr-str-row mgr-faab-row${isOpen?' open':''}" data-faab="${escapeHtml(openKey)}">
     <div class="mgr-str-head">
       <span class="mgr-str-slot">${fa.position}</span>
-      <span class="mgr-str-name">${fa.name}${mgrInjuryBadgeHtml(fa)}</span>
+      <span class="mgr-str-name">${fa.name}${mgrInjuryBadgeHtml(fa)}${mgrKeeperTagHtml(key, fa)}</span>
       ${mgrFaabChipHtml(bid)}
       <span class="mgr-str-val tier-strong">${fa.effective_per_week.toFixed(1)}</span>
       ${t.gain!=null?`<span class="mgr-str-rank">+${t.gain.toFixed(1)}</span>`:''}
@@ -1920,6 +1966,44 @@ function mgrInjuryBadgeHtml(p, fallbackStatus){
   if(!label) return '';
   const ret = mgrReturnText(p);
   return ` <span class="mgr-str-injury">${escapeHtml(label)}${ret?` <span class="mgr-ir-ret">· ${escapeHtml(ret)}</span>`:''}</span>`;
+}
+
+// ---- keeper eligibility (Kepners, Miami): this season's draft round -> next season's keeper cost ----
+// The builder (attach_keeper_info in build_inseason.py) puts draft_round / undrafted on every player row of those
+// leagues and publishes the league's rule (league_rules.json): cost = drafted round - N (never earlier than R1);
+// Miami can also keep one undrafted player at R13. Nothing is shown for a league whose draft isn't on file.
+function mgrNormName(n){   // mirrors normalize_name() in convert_bigboard.py
+  return String(n||'').toLowerCase().replace(/[.'\-]/g,'').replace(/\b(jr|sr|ii|iii|iv|v)\.?\b/gi,'').replace(/\s+/g,' ').trim();
+}
+function mgrKeeperInfo(lgKey, p){
+  const lg = INSEASON && INSEASON.leagues && INSEASON.leagues[lgKey];
+  const rule = lg && lg.keeperRule;
+  if(!rule || !lg.draftOnFile || !p) return null;
+  let round = p.draft_round, kept = !!p.draft_kept;
+  if(round==null && !p.undrafted){
+    // not a row from this league (e.g. the search found him elsewhere): look him up by name. A miss says nothing --
+    // only the builder, which saw this league's rows, gets to call a player undrafted.
+    const hit = (lg.draftIndex||{})[mgrNormName(p.name)];
+    if(!hit) return null;
+    round = hit[0]; kept = !!hit[1];
+  }
+  if(round!=null){
+    const cost = Math.max(1, round - rule.advance);
+    return {round, kept, cost, eligible:true, text:`R${round}${kept?' (kept)':''} \u2192 keep R${cost}`};
+  }
+  if(rule.udfa_round) return {round:null, udfa:true, cost:rule.udfa_round, eligible:true, text:`Undrafted \u2192 UDFA keep R${rule.udfa_round}`};
+  return {round:null, eligible:false, text:'Undrafted \u2192 not keepable'};
+}
+function mgrKeeperRuleText(lgKey){
+  const lg = INSEASON.leagues[lgKey], r = lg && lg.keeperRule;
+  if(!r) return '';
+  return `${MGR_LEAGUE_NAMES[lgKey]||lgKey} keepers: next season's cost = round drafted in ${r.draft_season} minus ${r.advance} (R1 at the earliest). `
+    + (r.udfa_round ? `One undrafted player can be kept at R${r.udfa_round}.` : `Undrafted players can't be kept.`);
+}
+function mgrKeeperTagHtml(lgKey, p){
+  const k = mgrKeeperInfo(lgKey, p);
+  if(!k) return '';
+  return ` <span class="mgr-keep${k.eligible?'':' no'}" title="${escapeHtml(mgrKeeperRuleText(lgKey))}">${escapeHtml(k.text)}</span>`;
 }
 
 // ---- home page: drafted players returning from IR (supplemental, so it sits below the league cards) ----
@@ -2076,6 +2160,7 @@ function mgrPlayerOwnership(playerName){
           teamName: t.team_name, manager: t.manager,
           position: hit.position, perWeek: hit.effective_per_week,
           lineupSlot: hit.lineup_slot, injury: hit.injury_status,
+          keeperHtml: mgrKeeperTagHtml(key, hit),
         };
       }
     }
@@ -2084,10 +2169,10 @@ function mgrPlayerOwnership(playerName){
       return {
         key, label, status:'available',
         position: fa.position, perWeek: fa.effective_per_week,
-        percentOwned: fa.percent_owned,
+        percentOwned: fa.percent_owned, keeperHtml: mgrKeeperTagHtml(key, fa),
       };
     }
-    return {key, label, status:'unknown'};
+    return {key, label, status:'unknown', keeperHtml: mgrKeeperTagHtml(key, {name: playerName})};
   });
 }
 
@@ -2111,7 +2196,7 @@ function mgrPownRowHtml(row){
   const injuryHtml = row.injury ? `<span class="mgr-pown-injury">${row.injury}</span>` : '';
   return `<div class="mgr-pown-row mgr-pown-${row.status}">
     <span class="mgr-pown-lg">${(row.label||row.key).split(' ')[0]}</span>
-    <span class="mgr-pown-status ${row.status}">${statusHtml}${injuryHtml}</span>
+    <span class="mgr-pown-status ${row.status}">${statusHtml}${injuryHtml}${row.keeperHtml||''}</span>
     <span class="mgr-pown-val">${valBits.join(' · ')}</span>
   </div>`;
 }
@@ -2152,6 +2237,10 @@ function renderManagerView(){
     return;
   }
 
+  if(mgrTBOpen){                       // trade builder: its own page, over home or a league page
+    renderTradeBuilder(el);
+    return;
+  }
   if(mgrDetailLeague && INSEASON.leagues[mgrDetailLeague]){
     renderManagerLeagueDetail(el, mgrDetailLeague);
     return;
@@ -2208,7 +2297,10 @@ function renderManagerView(){
     </div>
     <div id="mgrPlayerSearchResults"></div>`;
 
-  el.innerHTML = `${searchHtml}${actionsHtml}<div class="mgr-stack">${cards}</div>${mgrIrReturnsHtml()}`;
+  const tbEntry = `<button type="button" class="mgr-tb-entry" id="mgrOpenTB"><b>Trade builder</b>
+      <span>Build a specific trade and see its full impact ›</span></button>`;
+  el.innerHTML = `${searchHtml}${actionsHtml}${tbEntry}<div class="mgr-stack">${cards}</div>${mgrIrReturnsHtml()}`;
+  document.getElementById('mgrOpenTB').onclick = ()=>{ mgrTBOpen = true; render(); };
 
   el.querySelectorAll('.mgr-action-row[data-lg], .mgr-card[data-lg], .mgr-ir-pill[data-lg]').forEach(node=>{
     node.onclick = ()=>{ mgrDetailLeague = node.dataset.lg; render(); };
@@ -2797,17 +2889,17 @@ const TRADE_HELP_LABEL = {ros:'rest of season', week:'this week', next:`next ${T
 function tradeFmt(v){ const r = Math.round(v*10)/10; return (r>0?'+':'') + r.toFixed(1); }
 function tradeCls(v){ return v>=0.05 ? 'tier-strong' : (v<=-0.05 ? 'tier-weak' : 'tier-mid'); }
 
-function tradePlayerHtml(p, curWeek, tiers){
+function tradePlayerHtml(p, curWeek, tiers, lgKey){
   const bits = [p.position, p.effective_per_week!=null ? `${p.effective_per_week}/wk` : 'no proj'];
   const tag = tradeTierTag(tiers, p);
   if(tag) bits.push(tag);
   if(p.bye_week===curWeek) bits.push('BYE this wk');
   const inj = mgrInjuryBadgeHtml(p);
-  return `<div class="mgr-trade-p"><span class="nm">${escapeHtml(p.name)}</span>${inj}
+  return `<div class="mgr-trade-p"><span class="nm">${escapeHtml(p.name)}</span>${inj}${lgKey ? mgrKeeperTagHtml(lgKey, p) : ''}
     <span class="meta">${bits.join(' · ')}</span></div>`;
 }
 
-function tradeCardHtml(c, curWeek, tiers){
+function tradeCardHtml(c, curWeek, tiers, lgKey){
   // Lead with the horizon that helps them MOST relative to its own bar --
   // that's the strongest single sentence to open a trade offer with.
   const best = c.helps.slice().sort((a,b)=>(b.v/TRADE_HELP[b.h])-(a.v/TRADE_HELP[a.h]))[0];
@@ -2826,8 +2918,8 @@ function tradeCardHtml(c, curWeek, tiers){
     </div>
     <div class="mgr-trade-chips">${chips.join('')}</div>
     <div class="mgr-trade-sides">
-      <div><div class="mgr-trade-side-lbl">You give</div>${c.give.map(p=>tradePlayerHtml(p, curWeek, tiers)).join('')}</div>
-      <div><div class="mgr-trade-side-lbl">You get</div>${c.get.map(p=>tradePlayerHtml(p, curWeek, tiers)).join('')}</div>
+      <div><div class="mgr-trade-side-lbl">You give</div>${c.give.map(p=>tradePlayerHtml(p, curWeek, tiers, lgKey)).join('')}</div>
+      <div><div class="mgr-trade-side-lbl">You get</div>${c.get.map(p=>tradePlayerHtml(p, curWeek, tiers, lgKey)).join('')}</div>
     </div>
     <table class="mgr-trade-grid">
       <tr><th></th><th>ROS</th><th>Wk ${curWeek}</th><th>Wks ${curWeek}–${curWeek+TRADE_NEXT_WEEKS-1}</th></tr>
@@ -2943,7 +3035,7 @@ function mgrPaintTradeResults(key){
       return;
     }
     const tiers = mgrPositionTiers(lg);
-    box.innerHTML = weeklyNote + res.results.map(c=>tradeCardHtml(c, curWeek, tiers)).join('');
+    box.innerHTML = weeklyNote + res.results.map(c=>tradeCardHtml(c, curWeek, tiers, key)).join('');
   };
   if(mgrTradeCache[cacheKey]){ paint(mgrTradeCache[cacheKey]); return; }
   box.innerHTML = `<div class="mgr-empty">Scanning every 1- and 2-player package in the league...</div>`;
@@ -2987,7 +3079,7 @@ function mgrBindTradeControls(key){
     const hits = mgrTradeSearchMatches(lg, q);
     if(!hits.length){ results.innerHTML = `<div class="mgr-empty">No tradeable player matching "${escapeHtml(q)}" on another team.</div>`; return; }
     results.innerHTML = hits.map(({p, t, tag})=>`<button type="button" class="mgr-tsr" data-k="${escapeHtml(tradeKey(p))}">
-      <span class="nm">${escapeHtml(p.name)}</span>
+      <span class="nm">${escapeHtml(p.name)}${mgrKeeperTagHtml(key, p)}</span>
       <span class="meta">${p.position} \u00b7 ${p.effective_per_week}/wk${tag?` \u00b7 ${tag}`:''} \u00b7 ${escapeHtml(t.team_name||t.manager||'team')}</span>
     </button>`).join('');
     results.querySelectorAll('.mgr-tsr').forEach(b=>{
@@ -3011,6 +3103,269 @@ function mgrBindTradeControls(key){
   syncGet();
   paintMatches();
   mgrPaintTradeResults(key);
+}
+
+// ===================== Trade builder: build ONE specific trade, see its full impact =====================
+// Net new and separate from the Trade Targets suggestions (which stay exactly as they were). The SUMMARY uses the
+// same functions the suggestions do -- tradeRosterValue, tradeApplyRoster, tradeWeekValue -- so a trade built here
+// shows the very same numbers as the identical suggestion card. The DETAIL adds who starts in every slot, per horizon,
+// before and after, plus each player's own numbers.
+let mgrTBOpen = false;
+const mgrTB = {lg:'', give:[], team:'', get:[], hz:'ros'};
+const TB_POS_ORDER = {QB:0, RB:1, WR:2, TE:3, K:4, DEF:5};
+
+// Same greedy as tradeLineupValue() (dedicated slots take the best remaining player at that position, then FLEX takes
+// the best remaining RB/WR/TE), but it also reports WHO fills each slot. Totals are identical by construction.
+function tbLineupDetail(roster, slots, valueOf){
+  const pool = roster.map(p=>({p, pos:p.position, v:valueOf(p)})).filter(e=>e.v!=null).sort((a,b)=>b.v-a.v);
+  const need = {}; let flex = 0;
+  for(const s of slots){
+    if(s==='BEN' || s==='IR') continue;
+    if(s==='FLEX'){ flex++; continue; }
+    need[s] = (need[s]||0) + 1;
+  }
+  const byPos = {}, left = [], flexed = [];
+  let total = 0;
+  for(const e of pool){
+    if(need[e.pos] > 0){ need[e.pos]--; total += e.v; (byPos[e.pos] = byPos[e.pos] || []).push(e); } else left.push(e);
+  }
+  for(const e of left){
+    if(flex <= 0) break;
+    if(MGR_FLEX_ELIGIBLE.includes(e.pos)){ flex--; total += e.v; flexed.push(e); }
+  }
+  // one row per starting slot, in the league's own slot order; repeated slots are numbered (RB1, RB2, FLEX1...).
+  // A slot no projected player can fill shows the rostered player who'd actually sit there with "no proj"
+  // (kickers: ESPN publishes no K projections). Display only -- v stays null, so no total changes.
+  const unvalued = {};
+  roster.forEach(p=>{ if(valueOf(p)==null) (unvalued[p.position] = unvalued[p.position] || []).push(p); });
+  const counts = {}; slots.forEach(s=>{ if(s!=='BEN' && s!=='IR') counts[s] = (counts[s]||0) + 1; });
+  const seen = {}, rows = [], slotOf = new Map();
+  for(const s of slots){
+    if(s==='BEN' || s==='IR') continue;
+    const i = seen[s] = (seen[s] === undefined ? 0 : seen[s] + 1);
+    let e = s==='FLEX' ? (flexed[i] || null) : ((byPos[s] || [])[i] || null);
+    if(!e && s!=='FLEX' && (unvalued[s] || []).length) e = {p: unvalued[s].shift(), pos: s, v: null, display: true};
+    const label = counts[s] > 1 ? `${s}${i+1}` : s;
+    rows.push({label, slot:s, e});
+    if(e) slotOf.set(tradeKey(e.p), label);
+  }
+  return {total, rows, slotOf};
+}
+
+function tbHorizons(curWeek){
+  const h = [{id:'ros', label:'Rest of season', short:'ROS', unit:'/wk', valueOf: p=>p.effective_per_week}];
+  for(let i=0; i<TRADE_NEXT_WEEKS; i++){
+    const w = curWeek + i;
+    h.push({id:'w'+i, week:w, label:`Week ${w}`, short:`Wk ${w}`, unit:' pts', valueOf: p=>tradeWeekValue(p, w, curWeek)});
+  }
+  return h;
+}
+
+// Evaluate the trade as built. Everything in the summary comes from the suggestion engine's own functions.
+function tbEvaluate(lg, me, opp, giveKeys, getKeys){
+  const slots = lg.rosterSlots || [];
+  const curWeek = lg.currentWeek || INSEASON.currentWeek || 1;
+  const give = (me.roster||[]).filter(p=>giveKeys.has(tradeKey(p)));
+  const get = (opp.roster||[]).filter(p=>getKeys.has(tradeKey(p)));
+  const mine = tradeApplyRoster(me.roster||[], giveKeys, get);
+  const theirs = tradeApplyRoster(opp.roster||[], getKeys, give);
+  const myB = tradeRosterValue(me.roster||[], slots, curWeek), myA = tradeRosterValue(mine.roster, slots, curWeek);
+  const opB = tradeRosterValue(opp.roster||[], slots, curWeek), opA = tradeRosterValue(theirs.roster, slots, curWeek);
+  const d = {
+    me:   {ros: myA.ros - myB.ros, week: myA.week - myB.week, next: myA.next - myB.next},
+    them: {ros: opA.ros - opB.ros, week: opA.week - opB.week, next: opA.next - opB.next},
+  };
+  return {slots, curWeek, give, get, mine, theirs, before:{me:myB, them:opB}, after:{me:myA, them:opA}, d};
+}
+
+// League rank of every starting slot (ROS), with the two trading teams' rosters swapped in for "after".
+function tbSlotRanks(lg, slots, overrides){
+  const vf = p=>p.effective_per_week;
+  const vals = (lg.teams||[]).map(t=>{
+    const roster = overrides && overrides.has(t.team_id) ? overrides.get(t.team_id) : (t.roster||[]);
+    return {id:t.team_id, rows: tbLineupDetail(roster, slots, vf).rows.map(r=>(r.e && r.e.v!=null) ? r.e.v : null)};
+  });
+  return id=>{
+    const mineRow = (vals.find(x=>x.id===id) || {rows:[]}).rows;
+    // no projection in that slot (e.g. K) -> no rank, rather than a meaningless "#1" shared by everyone
+    return mineRow.map((v,j)=> v==null ? null : 1 + vals.filter(x=>x.id!==id && x.rows[j]!=null && x.rows[j] > v + 1e-9).length);
+  };
+}
+
+function tbPlayerBtn(p, side, sel, tiers, curWeek, lgKey){
+  const bits = [p.position, p.effective_per_week!=null ? `${p.effective_per_week}/wk` : 'no proj'];
+  const tag = tradeTierTag(tiers, p); if(tag) bits.push(tag);
+  if(p.bye_week!=null) bits.push(p.bye_week===curWeek ? 'BYE this wk' : `bye ${p.bye_week}`);
+  return `<button type="button" class="tb-pl${sel?' on':''}" data-side="${side}" data-k="${escapeHtml(tradeKey(p))}" aria-pressed="${sel}">
+    <span class="tb-check">${sel?'\u2713':''}</span>
+    <span class="tb-pl-main"><span class="tb-pl-nm">${escapeHtml(p.name)}</span>${mgrInjuryBadgeHtml(p)}${mgrKeeperTagHtml(lgKey, p)}
+      <span class="tb-pl-meta">${escapeHtml(bits.join(' \u00b7 '))}</span></span>
+  </button>`;
+}
+
+function tbRosterList(roster, side, chosen, tiers, curWeek, lgKey){
+  const sorted = (roster||[]).slice().sort((a,b)=>
+    ((TB_POS_ORDER[a.position] ?? 9) - (TB_POS_ORDER[b.position] ?? 9)) || ((b.effective_per_week||0) - (a.effective_per_week||0)));
+  return `<div class="tb-list">${sorted.map(p=>tbPlayerBtn(p, side, chosen.has(tradeKey(p)), tiers, curWeek, lgKey)).join('')}</div>`;
+}
+
+function tbSummaryHtml(ev){
+  const w = ev.curWeek, n = TRADE_NEXT_WEEKS;
+  const cell = (dv, before, after, unit, perWk) => `<td class="${tradeCls(dv)}">${tradeFmt(dv)}${unit}
+      ${perWk ? `<span class="tb-sub">${tradeFmt(dv/n)}/wk</span>` : ''}
+      <span class="tb-sub">${before.toFixed(1)} \u2192 ${after.toFixed(1)}</span></td>`;
+  const row = (who, k) => `<tr><th>${who}</th>
+      ${cell(ev.d[k].ros,  ev.before[k].ros,  ev.after[k].ros,  '/wk', false)}
+      ${cell(ev.d[k].week, ev.before[k].week, ev.after[k].week, '', false)}
+      ${cell(ev.d[k].next, ev.before[k].next, ev.after[k].next, '', true)}</tr>`;
+  return `<table class="mgr-trade-grid tb-grid">
+      <tr><th></th><th>ROS</th><th>Wk ${w}</th><th>Wks ${w}\u2013${w+n-1}</th></tr>
+      ${row('You','me')}${row('Them','them')}
+    </table>
+    <div class="tb-note">Change in your starting lineup's projected points: ROS per week, this week, and the next ${n} weeks
+      combined (per-week average underneath). Before \u2192 after is the whole lineup. Same math as the Trade Targets cards.</div>`;
+}
+
+function tbVerdict(ev){
+  const me = ev.d.me, th = ev.d.them;
+  const pos = v=>v>=0.05, neg = v=>v<=-0.05;
+  const say = (d, who) => {
+    const up = ['ros','week','next'].filter(h=>pos(d[h])), dn = ['ros','week','next'].filter(h=>neg(d[h]));
+    const name = {ros:'rest of season', week:'this week', next:`next ${TRADE_NEXT_WEEKS} weeks`};
+    if(!up.length && !dn.length) return `${who}: about even`;
+    if(!dn.length) return `${who}: better on every horizon`;
+    if(!up.length) return `${who}: worse on every horizon`;
+    return `${who}: better ${up.map(h=>name[h]).join(', ')}; worse ${dn.map(h=>name[h]).join(', ')}`;
+  };
+  return `<div class="tb-verdict">${escapeHtml(say(me,'You'))}. ${escapeHtml(say(th,'Them'))}.</div>`;
+}
+
+function tbPlayersHtml(ev, lg, opp){
+  const tiers = mgrPositionTiers(lg), H = tbHorizons(ev.curWeek), ros = H[0].valueOf;
+  const myB = tbLineupDetail(mgrMyTeam(lg).roster||[], ev.slots, ros).slotOf, myA = tbLineupDetail(ev.mine.roster, ev.slots, ros).slotOf;
+  const opB = tbLineupDetail(opp.roster||[], ev.slots, ros).slotOf, opA = tbLineupDetail(ev.theirs.roster, ev.slots, ros).slotOf;
+  const role = (m, k) => m.has(k) ? `starts (${m.get(k)})` : 'bench';
+  const card = (p, dir) => {
+    const k = tradeKey(p);
+    const weeks = H.slice(1).map(h=>{ const v = h.valueOf(p); return `${h.short} ${v==null?'\u2013':(p.bye_week===h.week?'bye':v.toFixed(1))}`; }).join(' \u00b7 ');
+    let path;
+    if(dir==='out')      path = `You: ${role(myB,k)} \u2192 them: ${role(opA,k)}`;
+    else if(dir==='in')  path = `Them: ${role(opB,k)} \u2192 you: ${role(myA,k)}`;
+    else                 path = dir==='mydrop' ? 'You would drop him to make room' : 'They would drop him to make room';
+    const tag = tradeTierTag(tiers, p);
+    return `<div class="tb-pcard ${dir}">
+      <div class="tb-pcard-top"><span class="tb-dir">${dir==='out'?'YOU GIVE':dir==='in'?'YOU GET':'DROPPED'}</span>
+        <span class="tb-pl-nm">${escapeHtml(p.name)}</span>${mgrInjuryBadgeHtml(p)}${mgrKeeperTagHtml(mgrTB.lg, p)}
+        <span class="tb-pl-meta">${escapeHtml(p.position)}${p.pro_team?' \u00b7 '+escapeHtml(p.pro_team):''}${tag?' \u00b7 '+escapeHtml(tag):''}</span></div>
+      <div class="tb-pcard-nums"><b>ROS ${p.effective_per_week!=null?p.effective_per_week+'/wk':'no proj'}</b> \u00b7 ${escapeHtml(weeks)}${p.bye_week!=null?` \u00b7 bye wk ${p.bye_week}`:''}</div>
+      <div class="tb-pcard-role">${escapeHtml(path)}</div>
+    </div>`;
+  };
+  const out = ev.give.map(p=>card(p,'out')).concat(ev.get.map(p=>card(p,'in')));
+  if(ev.mine.dropped) out.push(card(ev.mine.dropped, 'mydrop'));
+  if(ev.theirs.dropped) out.push(card(ev.theirs.dropped, 'theirdrop'));
+  return out.join('');
+}
+
+function tbLineupTableHtml(title, before, after, ranks, showRanks, unit){
+  const nm = e => !e ? '<span class="tb-empty">(empty)</span>'
+    : `${escapeHtml(e.p.name)} <span class="tb-v">${e.v==null ? 'no proj' : e.v.toFixed(1)}</span>`;
+  const val = e => (e && e.v!=null) ? e.v : 0;
+  const rows = before.rows.map((r,j)=>{
+    const a = after.rows[j], bv = val(r.e), av = val(a && a.e), dv = av - bv;
+    const same = r.e && a && a.e && tradeKey(r.e.p)===tradeKey(a.e.p);
+    const rb = showRanks ? ranks.before[j] : null, ra = showRanks ? ranks.after[j] : null;
+    const rk = !showRanks ? '' : (rb==null || ra==null) ? '<span class="tb-rk"></span>'
+      : `<span class="tb-rk${ra<rb?' up':ra>rb?' dn':''}">#${rb}\u2192#${ra}</span>`;
+    return `<div class="tb-lrow${same && Math.abs(dv)<0.05 ? ' same' : ''}">
+      <span class="tb-slot">${escapeHtml(r.label)}</span>
+      <span class="tb-cell">${nm(r.e)}</span><span class="tb-arrow">\u2192</span><span class="tb-cell">${nm(a && a.e)}</span>
+      <span class="tb-d ${tradeCls(dv)}">${Math.abs(dv)<0.05 ? '\u2013' : tradeFmt(dv)}</span>${rk}
+    </div>`;
+  }).join('');
+  const dt = after.total - before.total;
+  return `<div class="tb-ltable"><div class="tb-ltitle">${escapeHtml(title)}</div>${rows}
+    <div class="tb-lrow tb-total"><span class="tb-slot">Total</span><span class="tb-cell">${before.total.toFixed(1)}</span>
+      <span class="tb-arrow">\u2192</span><span class="tb-cell">${after.total.toFixed(1)}</span>
+      <span class="tb-d ${tradeCls(dt)}">${tradeFmt(dt)}${unit}</span>${showRanks?'<span class="tb-rk"></span>':''}</div></div>`;
+}
+
+function tbPositionsHtml(ev, lg, me, opp){
+  const H = tbHorizons(ev.curWeek), h = H.find(x=>x.id===mgrTB.hz) || H[0];
+  const tabs = H.map(x=>`<button type="button" class="${x.id===h.id?'on':''}" data-hz="${x.id}">${escapeHtml(x.short)}</button>`).join('');
+  const myB = tbLineupDetail(me.roster||[], ev.slots, h.valueOf), myA = tbLineupDetail(ev.mine.roster, ev.slots, h.valueOf);
+  const opB = tbLineupDetail(opp.roster||[], ev.slots, h.valueOf), opA = tbLineupDetail(ev.theirs.roster, ev.slots, h.valueOf);
+  let rk = null;
+  const showRanks = h.id==='ros';
+  if(showRanks){
+    const before = tbSlotRanks(lg, ev.slots, null);
+    const after = tbSlotRanks(lg, ev.slots, new Map([[me.team_id, ev.mine.roster], [opp.team_id, ev.theirs.roster]]));
+    rk = {me:{before:before(me.team_id), after:after(me.team_id)}, them:{before:before(opp.team_id), after:after(opp.team_id)}};
+  }
+  const n = (lg.teams||[]).length;
+  return `<div class="pt-toggle tb-hz">${tabs}</div>
+    <div class="tb-note">${escapeHtml(h.label)}: who starts in each slot before \u2192 after${showRanks?`, and that slot's rank among the league's ${n} teams (#1 = best)`:''}.
+      ${h.id==='ros'?'Values are projected points per week.':'Values are projected points that week (byes count as 0).'}</div>
+    ${tbLineupTableHtml('Your lineup', myB, myA, rk && rk.me, showRanks, h.unit)}
+    ${tbLineupTableHtml(`${opp.team_name || 'Their'} lineup`, opB, opA, rk && rk.them, showRanks, h.unit)}`;
+}
+
+function renderTradeBuilder(el){
+  const keys = Object.keys(INSEASON.leagues||{});
+  if(!mgrTB.lg || !INSEASON.leagues[mgrTB.lg]) mgrTB.lg = (mgrDetailLeague && INSEASON.leagues[mgrDetailLeague]) ? mgrDetailLeague : keys[0];
+  const lg = INSEASON.leagues[mgrTB.lg], me = mgrMyTeam(lg);
+  const curWeek = lg.currentWeek || INSEASON.currentWeek || 1, tiers = mgrPositionTiers(lg);
+  const opps = (lg.teams||[]).filter(t=>!t.is_me);
+  const opp = opps.find(t=>String(t.team_id)===String(mgrTB.team)) || null;
+  // drop any selection that no longer exists (league data refreshed, team changed)
+  mgrTB.give = me ? mgrTB.give.filter(k=>(me.roster||[]).some(p=>tradeKey(p)===k)) : [];
+  mgrTB.get = opp ? mgrTB.get.filter(k=>(opp.roster||[]).some(p=>tradeKey(p)===k)) : [];
+  const giveSet = new Set(mgrTB.give), getSet = new Set(mgrTB.get);
+  const lgOpts = keys.map(k=>`<option value="${escapeHtml(k)}"${k===mgrTB.lg?' selected':''}>${escapeHtml(MGR_LEAGUE_NAMES[k]||k)}</option>`).join('');
+  const teamOpts = `<option value="">Pick a team\u2026</option>` + opps.map(t=>`<option value="${escapeHtml(String(t.team_id))}"${opp&&t===opp?' selected':''}>${escapeHtml(t.team_name||t.manager||'Team')}</option>`).join('');
+
+  let results;
+  if(!me) results = `<div class="mgr-empty">Couldn't find your team in this league.</div>`;
+  else if(!opp) results = `<div class="mgr-empty">Pick the team you're trading with, then choose players on both sides.</div>`;
+  else if(!giveSet.size && !getSet.size) results = `<div class="mgr-empty">Tap players on either side to build the trade.</div>`;
+  else {
+    const ev = tbEvaluate(lg, me, opp, giveSet, getSet);
+    results = `<div class="mgr-section-lbl">Summary</div>${tbVerdict(ev)}${tbSummaryHtml(ev)}
+      <div class="mgr-section-lbl">Players in the deal</div>${tbPlayersHtml(ev, lg, opp)}
+      <div class="mgr-section-lbl">By position</div><div id="tbPositions">${tbPositionsHtml(ev, lg, me, opp)}</div>`;
+  }
+
+  el.innerHTML = `
+    <div class="mgr-detail-head">
+      <button class="mgr-back" id="mgrBackBtn">\u2039 Back</button>
+      <span class="mgr-detail-title">Trade builder</span>
+    </div>
+    <div class="mgr-card-sub">Build a specific trade and see exactly what it does to both lineups.</div>
+    <div class="mgr-trade-pins">
+      <label><span>League</span><select id="tbLeague">${lgOpts}</select></label>
+      <label><span>Trade with</span><select id="tbTeam">${teamOpts}</select></label>
+    </div>
+    <div class="tb-sides">
+      <div><div class="tb-side-lbl">You give${giveSet.size?` \u00b7 ${giveSet.size}`:''}</div>${me ? tbRosterList(me.roster, 'give', giveSet, tiers, curWeek, mgrTB.lg) : ''}</div>
+      <div><div class="tb-side-lbl">You get${getSet.size?` \u00b7 ${getSet.size}`:''}</div>${opp ? tbRosterList(opp.roster, 'get', getSet, tiers, curWeek, mgrTB.lg) : '<div class="mgr-empty">Pick a team first.</div>'}</div>
+    </div>
+    ${(giveSet.size||getSet.size) ? `<button type="button" class="mgr-tb-clear" id="tbClear">Clear trade</button>` : ''}
+    <div id="tbResults">${results}</div>`;
+
+  document.getElementById('mgrBackBtn').onclick = ()=>{ mgrTBOpen = false; render(); };
+  document.getElementById('tbLeague').onchange = e=>{ mgrTB.lg = e.target.value; mgrTB.team=''; mgrTB.give=[]; mgrTB.get=[]; renderTradeBuilder(el); };
+  document.getElementById('tbTeam').onchange = e=>{ mgrTB.team = e.target.value; mgrTB.get=[]; renderTradeBuilder(el); };
+  const clr = document.getElementById('tbClear'); if(clr) clr.onclick = ()=>{ mgrTB.give=[]; mgrTB.get=[]; renderTradeBuilder(el); };
+  el.querySelectorAll('.tb-pl').forEach(b=>{
+    b.onclick = ()=>{
+      const list = b.dataset.side==='give' ? mgrTB.give : mgrTB.get, k = b.dataset.k, i = list.indexOf(k);
+      if(i>=0) list.splice(i,1); else list.push(k);
+      renderTradeBuilder(el);
+    };
+  });
+  el.querySelectorAll('.tb-hz button').forEach(b=>{
+    b.onclick = ()=>{ mgrTB.hz = b.dataset.hz; renderTradeBuilder(el); };
+  });
 }
 
 function renderManagerLeagueDetail(el, key){
@@ -3084,7 +3439,7 @@ function renderManagerLeagueDetail(el, key){
     return `<div class="mgr-str-row ${actionable?'':'mgr-strength-notactionable'}">
       <div class="mgr-str-head">
         <span class="mgr-str-slot">${row.slot}</span>
-        <span class="mgr-str-name">${row.player||'(empty)'}${mgrInjuryBadgeHtml(rp||{}, injury)}</span>
+        <span class="mgr-str-name">${row.player||'(empty)'}${mgrInjuryBadgeHtml(rp||{}, injury)}${rp ? mgrKeeperTagHtml(key, rp) : ''}</span>
         <span class="mgr-str-val tier-${tier}">${mine!=null?mine.toFixed(1):'—'}</span>
         <span class="mgr-str-rank">${actionable?`${row.rank}/${row.of}`:'—'}</span>
       </div>
@@ -3115,7 +3470,7 @@ function renderManagerLeagueDetail(el, key){
     return `<div class="mgr-str-row">
       <div class="mgr-str-head">
         <span class="mgr-str-slot">${p.position}</span>
-        <span class="mgr-str-name">${p.name}${mgrInjuryBadgeHtml(p)}</span>
+        <span class="mgr-str-name">${p.name}${mgrInjuryBadgeHtml(p)}${mgrKeeperTagHtml(key, p)}</span>
         <span class="mgr-str-val tier-${tier}">${mine.toFixed(1)}</span>
         <span class="mgr-str-rank">${diff!=null?(diff>0?'+':'')+diff.toFixed(1):'—'}</span>
       </div>
@@ -3211,6 +3566,7 @@ function renderManagerLeagueDetail(el, key){
     <div id="mgrPowerHist"></div>
 
     <div class="mgr-section-lbl">Trade Targets</div>
+    <button type="button" class="mgr-tb-link" id="mgrOpenTBLeague">Build a specific trade in the trade builder ›</button>
     <div class="mgr-bench-note">Packages up to <b>2-for-2</b> that improve your starting lineup and
       <b>also help the other team</b> on at least one horizon -- rest of season, this week, or the
       next ${TRADE_NEXT_WEEKS} weeks. The green chip is the pitch. Ask a specific question: pick who you'd
@@ -3223,6 +3579,11 @@ function renderManagerLeagueDetail(el, key){
   document.getElementById('mgrBackBtn').onclick = ()=>{ mgrDetailLeague=null; render(); };
   mgrBindFaabRows(el);   // recommended-list rows from the initial render above
   mgrRenderPowerHistory(key, me);
+  const tbLink = document.getElementById('mgrOpenTBLeague');
+  if(tbLink) tbLink.onclick = ()=>{
+    if(mgrTB.lg !== key){ mgrTB.lg = key; mgrTB.team = ''; mgrTB.give = []; mgrTB.get = []; }
+    mgrTBOpen = true; render();
+  };
 
   const moreBtn = document.getElementById('mgrWaiverMore');
   if(moreBtn) moreBtn.onclick = ()=>{

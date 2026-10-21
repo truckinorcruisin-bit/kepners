@@ -676,20 +676,22 @@ def load_draft_indexes():
             k = join_key(pk.get("player"), pk.get("position"))
             if k and pk.get("round"):
                 idx.setdefault(key, {})[k] = {"round": pk["round"], "overall": pk.get("overall_pick"),
-                                             "keeper": bool(pk.get("is_keeper"))}
+                                             "keeper": bool(pk.get("is_keeper")),
+                                             "name": pk.get("player"), "pos": pk.get("position")}
     espn = load_json(f"espn_drafts_{YEAR}.json", "ESPN league drafts")
     for key, d in ((espn or {}).get("leagues") or {}).items():
         for pk in d.get("picks") or []:
             k = join_key(pk.get("name"), pk.get("pos"))
             if k and pk.get("round"):
                 idx.setdefault(key, {})[k] = {"round": pk["round"], "overall": pk.get("overall"),
-                                             "keeper": bool(pk.get("keeper"))}
+                                             "keeper": bool(pk.get("keeper")),
+                                             "name": pk.get("name"), "pos": pk.get("pos")}
     return idx
 
 
-def build_ir_returns(leagues, inj, ros_index, today=None):
+def build_ir_returns(leagues, inj, ros_index, today=None, drafts=None):
     today = today or datetime.now(timezone.utc).date()
-    drafts = load_draft_indexes()
+    drafts = drafts if drafts is not None else load_draft_indexes()
     have = sorted(k for k in leagues if k in drafts)
     missing = sorted(k for k in leagues if k not in drafts)
     out = {"windowDays": IR_WINDOW_DAYS, "earlyRound": EARLY_ROUND, "asOf": today.isoformat(),
@@ -722,7 +724,7 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
         if days > IR_WINDOW_DAYS:
             continue
         k = join_key(rec.get("name"), rec.get("pos"))
-        picks = {lk: drafts[lk][k] for lk in have if k in drafts[lk]}
+        picks = {lk: {f: drafts[lk][k].get(f) for f in ("round", "overall", "keeper")} for lk in have if k in drafts[lk]}
         where, pro_team = {}, (ros_index.get(k) or {}).get("pro_team")
         for lk in leagues:
             hit = holders.get(lk, {}).get(k)
@@ -748,6 +750,77 @@ def build_ir_returns(leagues, inj, ros_index, today=None):
     rows.sort(key=lambda r: (r["return_date"], r["best_round"] if r["best_round"] is not None else 99, r["name"]))
     out["players"] = rows
     return out
+
+
+# ---------------------------------------------------------------------------
+# Keeper eligibility (Kepners, Miami): every player row gets the round he went in THIS season's draft, which is
+# what next season's keeper cost is based on. The cost itself is computed on the page from the rule published
+# here (league_rules.json), so the formula lives in one place.
+# ---------------------------------------------------------------------------
+KEEPER_LEAGUES = ("kepners", "miami")
+
+
+def keeper_rule_for(key, rules):
+    k = ((rules or {}).get(key) or {}).get("keepers") or {}
+    if not k.get("cost_rounds_advance"):
+        return None
+    udfa = k.get("udfa_rule") or {}
+    allowed = bool(udfa.get("allowed"))
+    return {"advance": k["cost_rounds_advance"], "count": k.get("count"),
+            "udfa_round": udfa.get("cost_round") if allowed else None,
+            "udfa_max": udfa.get("max_udfa_keepers") if allowed else 0,
+            "draft_season": YEAR}
+
+
+def attach_keeper_info(leagues, rules, drafts):
+    for key in KEEPER_LEAGUES:
+        lg = leagues.get(key)
+        if not lg:
+            continue
+        idx = drafts.get(key)
+        lg["keeperRule"] = keeper_rule_for(key, rules)
+        lg["draftOnFile"] = bool(idx)
+        if not idx:
+            print(f"  keeper info: no {YEAR} draft results on file for {key} -- draft rounds not shown there")
+            continue
+        # compact name -> [round, kept] lookup, for players a page knows by name only (e.g. the player search)
+        lg["draftIndex"] = {k: [v["round"], 1 if v.get("keeper") else 0] for k, v in idx.items()}
+        rows = [p for t in lg.get("teams", []) for p in t.get("roster", [])] + list(lg.get("freeAgents", []))
+        # Yahoo roster pages abbreviate some long names ("J. Croskey-Merritt"); the draft has the full name. Only a name
+        # whose first part IS a lone initial gets this fallback, and only when exactly one drafted player at that position
+        # shares the initial + surname -- "Brian Robinson Jr." must never be matched to "Bijan Robinson".
+        by_initial = {}
+        for v in idx.values():
+            toks = normalize_name(v.get("name")).split(" ")
+            if len(toks) >= 2 and toks[0]:
+                by_initial.setdefault((canonical_pos(v.get("pos")), toks[0][0], " ".join(toks[1:])), []).append(v)
+
+        def lookup(p):
+            d = idx.get(join_key(p.get("name"), p.get("position")))
+            if d:
+                return d
+            toks = normalize_name(p.get("name")).split(" ")
+            if len(toks) >= 2 and len(toks[0]) == 1:
+                cands = by_initial.get((canonical_pos(p.get("position")), toks[0], " ".join(toks[1:]))) or []
+                if len(cands) == 1:
+                    return cands[0]
+            return None
+
+        hit = 0
+        for p in rows:
+            d = lookup(p)
+            if d:
+                hit += 1
+                p["draft_round"] = d["round"]
+                if d.get("overall"):
+                    p["draft_overall"] = d["overall"]
+                if d.get("keeper"):
+                    p["draft_kept"] = True
+            else:
+                p["undrafted"] = True
+        rostered = sum(len(t.get("roster", [])) for t in lg.get("teams", []))
+        print(f"  keeper info: {key}: {hit} of {len(rows)} players matched to the {YEAR} draft "
+              f"({len(idx)} picks; {rostered} rostered players)")
 
 
 def main():
@@ -818,9 +891,15 @@ def main():
         "weeksRemaining": (ros or {}).get("weeks_remaining"),
         "leagues": leagues,
     }
+    drafts = load_draft_indexes()
+    # Draft rounds for keeper eligibility. Wrapped like the IR list: never allowed to cost the rest of the build.
+    try:
+        attach_keeper_info(leagues, rules, drafts)
+    except Exception as e:
+        print(f"  ::warning::keeper info failed ({e}) -- build itself is fine.")
     # The home-page "Returning from IR" list. Wrapped: a problem here must never cost the rest of the build.
     try:
-        out["irReturns"] = build_ir_returns(leagues, inj, ros_index)
+        out["irReturns"] = build_ir_returns(leagues, inj, ros_index, drafts=drafts)
         ir = out["irReturns"]
         print(f"IR returns: {len(ir['players'])} good player(s) back within {IR_WINDOW_DAYS} days"
               + (f" ({ir['note']})" if ir.get("note") else "")
