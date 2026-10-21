@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-20T03:18:13.230021+00:00",
+ "generated": "2026-10-21T12:51:24.538037+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -167,135 +167,15 @@
     },
     {
      "add": {
-      "id": "31107",
-      "name": "Dalton Schultz",
-      "position": "TE"
-     },
-     "bid": 0,
-     "date": 1790150940000,
-     "drop": {
-      "id": "42642",
-      "name": "Makai Lemon"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "status": "EXECUTED",
-     "team_id": 10,
-     "type": "WAIVER",
-     "week": 3,
-     "won": true
-    },
-    {
-     "add": {
-      "id": "33537",
-      "name": "Evan McPherson",
-      "position": "K"
-     },
-     "bid": 1,
-     "date": 1790150940000,
-     "drop": {
-      "id": "28227",
-      "name": "Cairo Santos"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "status": "EXECUTED",
-     "team_id": 11,
-     "type": "WAIVER",
-     "week": 3,
-     "won": true
-    },
-    {
-     "add": {
-      "id": "100029",
-      "name": "Panthers",
-      "position": "DEF"
-     },
-     "bid": 2,
-     "date": 1790150940000,
-     "drop": {
-      "id": "100027",
-      "name": "Buccaneers"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "status": "EXECUTED",
-     "team_id": 9,
-     "type": "WAIVER",
-     "week": 3,
-     "won": true
-    },
-    {
-     "add": {
-      "id": "40029",
-      "name": "Bryce Young",
-      "position": "QB"
-     },
-     "bid": 4,
-     "date": 1790150940000,
-     "drop": {
-      "id": "42744",
-      "name": "Mike Washington Jr."
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "status": "EXECUTED",
-     "team_id": 12,
-     "type": "WAIVER",
-     "week": 3,
-     "won": true
-    },
-    {
-     "add": {
-      "id": "33415",
-      "name": "Rashod Bateman",
-      "position": "WR"
-     },
-     "bid": 5,
-     "date": 1790150940000,
-     "drop": {
-      "id": "41860",
-      "name": "Pat Bryant"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "status": "EXECUTED",
-     "team_id": 12,
-     "type": "WAIVER",
-     "week": 3,
-     "won": true
-    },
-    {
-     "add": {
-      "id": "31874",
-      "name": "Drew Lock",
-      "position": "QB"
-     },
-     "bid": 5,
-     "date": 1790150940000,
-     "drop": {
-      "id": "41087",
-      "name": "Ryan Flournoy"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "status": "EXECUTED",
-     "team_id": 5,
-     "type": "WAIVER",
-     "week": 3,
-     "won": true
-    },
-    {
-     "add": {
       "id": "100002",
-      "name": "Bills",
+      "name": "Buffalo",
       "position": "DEF"
      },
      "bid": 0,
      "date": 1790754840000,
      "drop": {
       "id": "100021",
-      "name": "Eagles"
+      "name": "Philadelphia"
      },
      "season": 2026,
      "source": "yahoo",
@@ -468,14 +348,14 @@
     {
      "add": {
       "id": "100030",
-      "name": "Jaguars",
+      "name": "Jacksonville",
       "position": "DEF"
      },
      "bid": 2,
      "date": 1791359700000,
      "drop": {
       "id": "100012",
-      "name": "Chiefs"
+      "name": "Kansas City"
      },
      "season": 2026,
      "source": "yahoo",
@@ -663,6 +543,163 @@
      "team_id": 12,
      "type": "WAIVER",
      "week": 6,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "31482",
+      "name": "Eddy Pineiro",
+      "position": "K"
+     },
+     "bid": 0,
+     "date": 1792569180000,
+     "drop": {
+      "id": "41840",
+      "name": "Tre' Harris"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 5,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "30197",
+      "name": "Chris Godwin Jr.",
+      "position": "WR"
+     },
+     "bid": 2,
+     "date": 1792569180000,
+     "drop": {
+      "id": "40915",
+      "name": "Adonai Mitchell"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 9,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100020",
+      "name": "Jets",
+      "position": "DEF"
+     },
+     "bid": 2,
+     "date": 1792569180000,
+     "drop": {
+      "id": "100033",
+      "name": "Ravens"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 9,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100005",
+      "name": "Browns",
+      "position": "DEF"
+     },
+     "bid": 6,
+     "date": 1792569180000,
+     "drop": {
+      "id": "25812",
+      "name": "Kirk Cousins"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 8,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "41093",
+      "name": "Will Reichard",
+      "position": "K"
+     },
+     "bid": 15,
+     "date": 1792569180000,
+     "drop": {
+      "id": "8432",
+      "name": "Nick Folk"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 8,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "41048",
+      "name": "Tyrone Tracy Jr.",
+      "position": "RB"
+     },
+     "bid": 16,
+     "date": 1792569180000,
+     "drop": {
+      "id": "41002",
+      "name": "Will Shipley"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 3,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "42652",
+      "name": "Omar Cooper Jr.",
+      "position": "WR"
+     },
+     "bid": 20,
+     "date": 1792569180000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 7,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "40222",
+      "name": "DeMario Douglas",
+      "position": "WR"
+     },
+     "bid": 30,
+     "date": 1792569180000,
+     "drop": {
+      "id": "100011",
+      "name": "Colts"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 7,
      "won": true
     }
    ],
@@ -881,74 +918,6 @@
     },
     {
      "add": {
-      "id": "40707",
-      "name": "Emanuel Wilson",
-      "position": "RB"
-     },
-     "date": 1790156880000,
-     "drop": {
-      "id": "99001",
-      "name": "Travis Hunter"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "team_id": 6,
-     "type": "FREEAGENT",
-     "week": 3
-    },
-    {
-     "add": {
-      "id": "40030",
-      "name": "C.J. Stroud",
-      "position": "QB"
-     },
-     "date": 1790168700000,
-     "drop": {
-      "id": "40063",
-      "name": "Jayden Reed"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "team_id": 11,
-     "type": "FREEAGENT",
-     "week": 3
-    },
-    {
-     "add": {
-      "id": "30973",
-      "name": "Sam Darnold",
-      "position": "QB"
-     },
-     "date": 1790171820000,
-     "drop": {
-      "id": "33998",
-      "name": "Wan'Dale Robinson"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "team_id": 2,
-     "type": "FREEAGENT",
-     "week": 3
-    },
-    {
-     "add": {
-      "id": "30125",
-      "name": "Deshaun Watson",
-      "position": "QB"
-     },
-     "date": 1790171880000,
-     "drop": {
-      "id": "34042",
-      "name": "Malik Willis"
-     },
-     "season": 2026,
-     "source": "yahoo",
-     "team_id": 2,
-     "type": "FREEAGENT",
-     "week": 3
-    },
-    {
-     "add": {
       "id": "31833",
       "name": "Kyler Murray",
       "position": "QB"
@@ -984,13 +953,13 @@
     {
      "add": {
       "id": "100004",
-      "name": "Bengals",
+      "name": "Cincinnati",
       "position": "DEF"
      },
      "date": 1790217480000,
      "drop": {
       "id": "100021",
-      "name": "Eagles"
+      "name": "Philadelphia"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1018,13 +987,13 @@
     {
      "add": {
       "id": "100021",
-      "name": "Eagles",
+      "name": "Philadelphia",
       "position": "DEF"
      },
      "date": 1790457180000,
      "drop": {
       "id": "100029",
-      "name": "Panthers"
+      "name": "Carolina"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1035,13 +1004,13 @@
     {
      "add": {
       "id": "100018",
-      "name": "Saints",
+      "name": "New Orleans",
       "position": "DEF"
      },
      "date": 1790520360000,
      "drop": {
       "id": "100003",
-      "name": "Bears"
+      "name": "Chicago"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1086,13 +1055,13 @@
     {
      "add": {
       "id": "100003",
-      "name": "Bears",
+      "name": "Chicago",
       "position": "DEF"
      },
      "date": 1790779440000,
      "drop": {
       "id": "100017",
-      "name": "Patriots"
+      "name": "New England"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1659,9 +1628,43 @@
      "team_id": 7,
      "type": "FREEAGENT",
      "week": 6
+    },
+    {
+     "add": {
+      "id": "29344",
+      "name": "Tyler Higbee",
+      "position": "TE"
+     },
+     "date": 1792569600000,
+     "drop": {
+      "id": "31056",
+      "name": "Mark Andrews"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 4,
+     "type": "FREEAGENT",
+     "week": 7
+    },
+    {
+     "add": {
+      "id": "33537",
+      "name": "Evan McPherson",
+      "position": "K"
+     },
+     "date": 1792570800000,
+     "drop": {
+      "id": "28227",
+      "name": "Cairo Santos"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 9,
+     "type": "FREEAGENT",
+     "week": 7
     }
    ],
-   "newest": "2026-10-18T12:07:00-04:00",
+   "newest": "2026-10-21T04:20:00-04:00",
    "oldest": "2026-09-08T19:39:00-04:00",
    "pages": 4,
    "platform": "yahoo",
@@ -1679,7 +1682,7 @@
      "waiver_rank": null
     },
     "10": {
-     "acquisitions": 4,
+     "acquisitions": 3,
      "faab_spent": 0,
      "manager": null,
      "team_id": 10,
@@ -1687,23 +1690,23 @@
      "waiver_rank": null
     },
     "11": {
-     "acquisitions": 12,
-     "faab_spent": 23,
+     "acquisitions": 10,
+     "faab_spent": 22,
      "manager": null,
      "team_id": 11,
      "team_name": "The Herdsmen",
      "waiver_rank": null
     },
     "12": {
-     "acquisitions": 13,
-     "faab_spent": 20,
+     "acquisitions": 11,
+     "faab_spent": 11,
      "manager": null,
      "team_id": 12,
      "team_name": "The Pickups",
      "waiver_rank": null
     },
     "2": {
-     "acquisitions": 9,
+     "acquisitions": 7,
      "faab_spent": 0,
      "manager": null,
      "team_id": 2,
@@ -1711,16 +1714,16 @@
      "waiver_rank": null
     },
     "3": {
-     "acquisitions": 6,
-     "faab_spent": 16,
+     "acquisitions": 7,
+     "faab_spent": 32,
      "manager": null,
      "team_id": 3,
      "team_name": "Burrito",
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 5,
-     "faab_spent": 11,
+     "acquisitions": 8,
+     "faab_spent": 61,
      "manager": null,
      "team_id": 4,
      "team_name": "Dad\u2019s To The Bone",
@@ -1728,14 +1731,14 @@
     },
     "5": {
      "acquisitions": 6,
-     "faab_spent": 15,
+     "faab_spent": 10,
      "manager": null,
      "team_id": 5,
      "team_name": "Denim Like A DeJean",
      "waiver_rank": null
     },
     "6": {
-     "acquisitions": 2,
+     "acquisitions": 1,
      "faab_spent": 0,
      "manager": null,
      "team_id": 6,
@@ -1751,16 +1754,16 @@
      "waiver_rank": null
     },
     "8": {
-     "acquisitions": 7,
-     "faab_spent": 10,
+     "acquisitions": 9,
+     "faab_spent": 31,
      "manager": null,
      "team_id": 8,
      "team_name": "Phony Grossi",
      "waiver_rank": null
     },
     "9": {
-     "acquisitions": 15,
-     "faab_spent": 16,
+     "acquisitions": 17,
+     "faab_spent": 18,
      "manager": null,
      "team_id": 9,
      "team_name": "Ranus The Hiddeer",
