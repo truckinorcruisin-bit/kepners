@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-20T17:42:30.265371+00:00",
+ "generated": "2026-10-21T13:26:17.551119+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 996,
  "injuries": [
@@ -36,13 +36,6 @@
    "id": 4036211,
    "name": "DJ Turner",
    "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-09-13"
-  },
-  {
-   "id": 4241555,
-   "name": "Elijah Mitchell",
-   "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-09-13"
   },
@@ -621,13 +614,6 @@
    "ret": "2026-10-25"
   },
   {
-   "id": 4714365,
-   "name": "Carson Steele",
-   "pos": "RB",
-   "status": "QUESTIONABLE",
-   "ret": "2026-10-26"
-  },
-  {
    "id": 4431574,
    "name": "Eli Stowers",
    "pos": "TE",
@@ -716,13 +702,6 @@
    "name": "Terrance Ferguson",
    "pos": "TE",
    "status": "INJURY_RESERVE",
-   "ret": "2026-11-01"
-  },
-  {
-   "id": 3121422,
-   "name": "Terry McLaurin",
-   "pos": "WR",
-   "status": "DOUBTFUL",
    "ret": "2026-11-01"
   },
   {
@@ -911,8 +890,15 @@
    "id": 16800,
    "name": "Davante Adams",
    "pos": "WR",
-   "status": "OUT",
+   "status": "INJURY_RESERVE",
    "ret": "2026-11-25"
+  },
+  {
+   "id": 4714365,
+   "name": "Carson Steele",
+   "pos": "RB",
+   "status": "OUT",
+   "ret": "2026-11-26"
   },
   {
    "id": 4361432,
@@ -1206,6 +1192,13 @@
    "name": "Tanner Hudson",
    "pos": "TE",
    "status": "INJURY_RESERVE",
+   "ret": "2027-02-15"
+  },
+  {
+   "id": 3121422,
+   "name": "Terry McLaurin",
+   "pos": "WR",
+   "status": "OUT",
    "ret": "2027-02-15"
   },
   {
