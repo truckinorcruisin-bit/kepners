@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-21T12:52:34Z",
+  "fetched_at": "2026-10-21T12:53:09Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
@@ -1625,13 +1625,13 @@
           "bye_week": "11"
         },
         {
-          "player_id": "41097",
-          "name": "Devaughn Vele",
+          "player_id": "32692",
+          "name": "Justin Jefferson",
           "position": "WR",
-          "nfl_team": "NO",
+          "nfl_team": "Min",
           "roster_slot": "WR",
           "is_keeper": false,
-          "bye_week": "8"
+          "bye_week": "6"
         },
         {
           "player_id": "41795",
@@ -1641,6 +1641,15 @@
           "roster_slot": "TE",
           "is_keeper": true,
           "bye_week": "10"
+        },
+        {
+          "player_id": "41097",
+          "name": "Devaughn Vele",
+          "position": "WR",
+          "nfl_team": "NO",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
         },
         {
           "player_id": "41807",
@@ -1659,15 +1668,6 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "14"
-        },
-        {
-          "player_id": "32692",
-          "name": "Justin Jefferson",
-          "position": "WR",
-          "nfl_team": "Min",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "6"
         },
         {
           "player_id": "40201",
@@ -1740,13 +1740,13 @@
       "keeper_count": 2,
       "players": [
         {
-          "player_id": "40029",
-          "name": "Bryce Young",
+          "player_id": "32671",
+          "name": "Joe Burrow",
           "position": "QB",
-          "nfl_team": "Car",
+          "nfl_team": "Cin",
           "roster_slot": "QB",
           "is_keeper": false,
-          "bye_week": "5"
+          "bye_week": "6"
         },
         {
           "player_id": "40055",
@@ -1803,13 +1803,13 @@
           "bye_week": "8"
         },
         {
-          "player_id": "32671",
-          "name": "Joe Burrow",
+          "player_id": "40029",
+          "name": "Bryce Young",
           "position": "QB",
-          "nfl_team": "Cin",
+          "nfl_team": "Car",
           "roster_slot": "BN",
           "is_keeper": false,
-          "bye_week": "6"
+          "bye_week": "5"
         },
         {
           "player_id": "40114",

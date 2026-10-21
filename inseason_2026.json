@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-21T12:52:47.709935+00:00",
+  "generated": "2026-10-21T12:53:21.525607+00:00",
   "currentWeek": 7,
   "weeksRemaining": 11,
   "leagues": {
@@ -26492,23 +26492,23 @@
               "effective_per_week": 7.19
             },
             {
-              "player_id": "41097",
-              "name": "Devaughn Vele",
+              "player_id": "32692",
+              "name": "Justin Jefferson",
               "position": "WR",
-              "pro_team": "NO",
+              "pro_team": "Min",
               "lineup_slot": "WR",
               "injury_status": null,
               "injured": false,
-              "percent_owned": 69.04,
+              "percent_owned": 99.74,
               "is_keeper": false,
-              "week_projection": 6.15,
-              "bye_week": 8,
-              "ros_points": 36.93,
-              "ros_per_week": 3.36,
+              "week_projection": 12.24,
+              "bye_week": 6,
+              "ros_points": 91.24,
+              "ros_per_week": 8.29,
               "trend": null,
-              "season_points_actual": 41.4,
+              "season_points_actual": 44.7,
               "ros_matched": true,
-              "effective_per_week": 3.36
+              "effective_per_week": 8.29
             },
             {
               "player_id": "41795",
@@ -26528,6 +26528,25 @@
               "season_points_actual": 23.5,
               "ros_matched": true,
               "effective_per_week": 4.81
+            },
+            {
+              "player_id": "41097",
+              "name": "Devaughn Vele",
+              "position": "WR",
+              "pro_team": "NO",
+              "lineup_slot": "BE",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": 69.04,
+              "is_keeper": false,
+              "week_projection": 6.15,
+              "bye_week": 8,
+              "ros_points": 36.93,
+              "ros_per_week": 3.36,
+              "trend": null,
+              "season_points_actual": 41.4,
+              "ros_matched": true,
+              "effective_per_week": 3.36
             },
             {
               "player_id": "41807",
@@ -26568,25 +26587,6 @@
               "return_date": "2026-10-25",
               "return_week": 7,
               "effective_per_week": 6.19
-            },
-            {
-              "player_id": "32692",
-              "name": "Justin Jefferson",
-              "position": "WR",
-              "pro_team": "Min",
-              "lineup_slot": "BE",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": 99.74,
-              "is_keeper": false,
-              "week_projection": 12.24,
-              "bye_week": 6,
-              "ros_points": 91.24,
-              "ros_per_week": 8.29,
-              "trend": null,
-              "season_points_actual": 44.7,
-              "ros_matched": true,
-              "effective_per_week": 8.29
             },
             {
               "player_id": "40201",
@@ -26908,23 +26908,23 @@
           "is_me": true,
           "roster": [
             {
-              "player_id": "40029",
-              "name": "Bryce Young",
+              "player_id": "32671",
+              "name": "Joe Burrow",
               "position": "QB",
-              "pro_team": "Car",
+              "pro_team": "Cin",
               "lineup_slot": "QB",
               "injury_status": null,
               "injured": false,
-              "percent_owned": 85.7,
+              "percent_owned": 97.49,
               "is_keeper": false,
-              "week_projection": 17.66,
-              "bye_week": 5,
-              "ros_points": 143.77,
-              "ros_per_week": 13.07,
+              "week_projection": 19.44,
+              "bye_week": 6,
+              "ros_points": 156.89,
+              "ros_per_week": 14.26,
               "trend": null,
-              "season_points_actual": 110.46,
+              "season_points_actual": 101.24,
               "ros_matched": true,
-              "effective_per_week": 13.07
+              "effective_per_week": 14.26
             },
             {
               "player_id": "40055",
@@ -27041,23 +27041,23 @@
               "effective_per_week": 6.64
             },
             {
-              "player_id": "32671",
-              "name": "Joe Burrow",
+              "player_id": "40029",
+              "name": "Bryce Young",
               "position": "QB",
-              "pro_team": "Cin",
+              "pro_team": "Car",
               "lineup_slot": "BE",
               "injury_status": null,
               "injured": false,
-              "percent_owned": 97.49,
+              "percent_owned": 85.7,
               "is_keeper": false,
-              "week_projection": 19.44,
-              "bye_week": 6,
-              "ros_points": 156.89,
-              "ros_per_week": 14.26,
+              "week_projection": 17.66,
+              "bye_week": 5,
+              "ros_points": 143.77,
+              "ros_per_week": 13.07,
               "trend": null,
-              "season_points_actual": 101.24,
+              "season_points_actual": 110.46,
               "ros_matched": true,
-              "effective_per_week": 14.26
+              "effective_per_week": 13.07
             },
             {
               "player_id": "40114",
@@ -31051,7 +31051,7 @@
         }
       ],
       "rosterSource": "yahoo-phone-html",
-      "rostersFetchedAt": "2026-10-21T12:52:34Z",
+      "rostersFetchedAt": "2026-10-21T12:53:09Z",
       "freeAgentSource": "derived: ESPN projection pool minus Kepners rosters"
     },
     "miami": {
