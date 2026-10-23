@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-21T13:26:22.486562+00:00",
+ "generated": "2026-10-23T21:17:29.232191+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
@@ -46,7 +46,7 @@
      "manager": "Andrew Piotrowski",
      "faab_spent": 11,
      "waiver_rank": 4,
-     "acquisitions": 9
+     "acquisitions": 10
     },
     "11": {
      "team_id": 11,
@@ -54,7 +54,7 @@
      "manager": "Dan Beringer",
      "faab_spent": 25,
      "waiver_rank": 9,
-     "acquisitions": 14
+     "acquisitions": 16
     },
     "14": {
      "team_id": 14,
@@ -102,7 +102,7 @@
      "manager": "Sean Wilkinson",
      "faab_spent": 6,
      "waiver_rank": 5,
-     "acquisitions": 4
+     "acquisitions": 5
     }
    },
    "priorBudget": 100,
@@ -2325,6 +2325,117 @@
     {
      "season": 2026,
      "week": 7,
+     "date": 1792566312449,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 7,
+     "add": {
+      "id": 4686658,
+      "name": "Mike Washington Jr.",
+      "position": "RB"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792566312455,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 18,
+     "bid": 0,
+     "add": {
+      "id": 4567156,
+      "name": "Treylon Burks",
+      "position": "WR"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792566312455,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": 3917315,
+      "name": "Kyler Murray",
+      "position": "QB"
+     },
+     "drop": {
+      "id": 4596334,
+      "name": "Keaton Mitchell"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792566312450,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 18,
+     "bid": 7,
+     "add": {
+      "id": 4723820,
+      "name": "Omar Cooper Jr.",
+      "position": "WR"
+     },
+     "drop": {
+      "id": -16027,
+      "name": "Buccaneers D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792566312456,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 16,
+     "bid": 0,
+     "add": {
+      "id": 3116164,
+      "name": "Mike Gesicki",
+      "position": "TE"
+     },
+     "drop": {
+      "id": 4371733,
+      "name": "Kenny Gainwell"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792566312454,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 11,
+     "bid": 2,
+     "add": {
+      "id": -16020,
+      "name": "Jets D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16019,
+      "name": "Giants D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
      "date": 1792566312450,
      "type": "WAIVER",
      "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -2359,22 +2470,6 @@
       "id": 4819231,
       "name": "Kaleb Johnson"
      }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792566312449,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 1,
-     "bid": 7,
-     "add": {
-      "id": 4686658,
-      "name": "Mike Washington Jr.",
-      "position": "RB"
-     },
-     "drop": null
     },
     {
      "season": 2026,
@@ -2428,25 +2523,6 @@
      "drop": {
       "id": 4430539,
       "name": "Brenton Strange"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792566312455,
-     "type": "WAIVER",
-     "status": "FAILED_PLAYERALREADYDROPPED",
-     "won": false,
-     "team_id": 18,
-     "bid": 0,
-     "add": {
-      "id": 4567156,
-      "name": "Treylon Burks",
-      "position": "WR"
-     },
-     "drop": {
-      "id": -16027,
-      "name": "Buccaneers D/ST"
      }
     },
     {
@@ -2565,25 +2641,6 @@
      "week": 7,
      "date": 1792566312455,
      "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 1,
-     "bid": 0,
-     "add": {
-      "id": 3917315,
-      "name": "Kyler Murray",
-      "position": "QB"
-     },
-     "drop": {
-      "id": 4596334,
-      "name": "Keaton Mitchell"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792566312455,
-     "type": "WAIVER",
      "status": "FAILED_ROSTERLIMIT",
      "won": false,
      "team_id": 1,
@@ -2594,25 +2651,6 @@
       "position": "WR"
      },
      "drop": null
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792566312450,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 18,
-     "bid": 7,
-     "add": {
-      "id": 4723820,
-      "name": "Omar Cooper Jr.",
-      "position": "WR"
-     },
-     "drop": {
-      "id": -16027,
-      "name": "Buccaneers D/ST"
-     }
     },
     {
      "season": 2026,
@@ -2652,25 +2690,6 @@
     {
      "season": 2026,
      "week": 7,
-     "date": 1792566312456,
-     "type": "WAIVER",
-     "status": "FAILED_PLAYERALREADYDROPPED",
-     "won": false,
-     "team_id": 16,
-     "bid": 0,
-     "add": {
-      "id": 3116164,
-      "name": "Mike Gesicki",
-      "position": "TE"
-     },
-     "drop": {
-      "id": 4371733,
-      "name": "Kenny Gainwell"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
      "date": 1792545243513,
      "type": "WAIVER",
      "status": "PENDING",
@@ -2702,25 +2721,6 @@
       "position": "D/ST"
      },
      "drop": null
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792566312454,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 11,
-     "bid": 2,
-     "add": {
-      "id": -16020,
-      "name": "Jets D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16019,
-      "name": "Giants D/ST"
-     }
     },
     {
      "season": 2025,
@@ -9658,7 +9658,7 @@
      "team_name": "Mike D",
      "manager": "Michael Dendinger",
      "faab_spent": 0,
-     "waiver_rank": 9,
+     "waiver_rank": 8,
      "acquisitions": 3
     },
     "2": {
@@ -9666,7 +9666,7 @@
      "team_name": "Dayton's Daring Team",
      "manager": "Dayton Paul",
      "faab_spent": 0,
-     "waiver_rank": 6,
+     "waiver_rank": 5,
      "acquisitions": 5
     },
     "3": {
@@ -9674,7 +9674,7 @@
      "team_name": "Kevin's Top-Notch Team",
      "manager": "Kevin Zugschwert",
      "faab_spent": 0,
-     "waiver_rank": 7,
+     "waiver_rank": 6,
      "acquisitions": 11
     },
     "4": {
@@ -9682,7 +9682,7 @@
      "team_name": "Keith's Team",
      "manager": "Keith Quiring",
      "faab_spent": 0,
-     "waiver_rank": 8,
+     "waiver_rank": 7,
      "acquisitions": 7
     },
     "5": {
@@ -9690,8 +9690,8 @@
      "team_name": "Go Pack Go",
      "manager": "Krenar Hazari",
      "faab_spent": 0,
-     "waiver_rank": 5,
-     "acquisitions": 0
+     "waiver_rank": 12,
+     "acquisitions": 3
     },
     "6": {
      "team_id": 6,
@@ -9699,7 +9699,7 @@
      "manager": "Nick Hansen",
      "faab_spent": 0,
      "waiver_rank": 3,
-     "acquisitions": 7
+     "acquisitions": 8
     },
     "7": {
      "team_id": 7,
@@ -9722,15 +9722,15 @@
      "team_name": "Jordan's Scary Team",
      "manager": "Jordan Miller",
      "faab_spent": 0,
-     "waiver_rank": 10,
-     "acquisitions": 9
+     "waiver_rank": 9,
+     "acquisitions": 11
     },
     "10": {
      "team_id": 10,
      "team_name": "1st and 11",
      "manager": "sean mullins",
      "faab_spent": 0,
-     "waiver_rank": 12,
+     "waiver_rank": 11,
      "acquisitions": 21
     },
     "11": {
@@ -9738,8 +9738,8 @@
      "team_name": "34=GOAT (Bonnet\u2019s Team)",
      "manager": "Jason Bonnet",
      "faab_spent": 0,
-     "waiver_rank": 11,
-     "acquisitions": 14
+     "waiver_rank": 10,
+     "acquisitions": 15
     },
     "12": {
      "team_id": 12,
@@ -9747,7 +9747,7 @@
      "manager": "Nate Stephenson",
      "faab_spent": 0,
      "waiver_rank": 4,
-     "acquisitions": 7
+     "acquisitions": 9
     }
    },
    "priorBudget": null,
@@ -11376,6 +11376,25 @@
      "drop": {
       "id": 4249087,
       "name": "Matt Gay"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792653747585,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4241457,
+      "name": "Najee Harris"
      }
     },
     {
