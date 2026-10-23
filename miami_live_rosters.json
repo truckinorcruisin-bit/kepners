@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-21T13:01:09Z",
+  "fetched_at": "2026-10-23T21:15:51Z",
   "teams": {
     "1": {
       "team_name": "MakeMyTeamGreatAgain",
@@ -52,12 +52,12 @@
           "bye_week": "11"
         },
         {
-          "player_id": "41799",
-          "name": "Tyler Warren",
+          "player_id": "42638",
+          "name": "Kenyon Sadiq",
           "position": "TE",
-          "nfl_team": "Ind",
+          "nfl_team": "NYJ",
           "roster_slot": "TE",
-          "is_keeper": true,
+          "is_keeper": false,
           "bye_week": "13"
         },
         {
@@ -79,12 +79,12 @@
           "bye_week": "10"
         },
         {
-          "player_id": "42638",
-          "name": "Kenyon Sadiq",
+          "player_id": "41799",
+          "name": "Tyler Warren",
           "position": "TE",
-          "nfl_team": "NYJ",
+          "nfl_team": "Ind",
           "roster_slot": "BN",
-          "is_keeper": false,
+          "is_keeper": true,
           "bye_week": "13"
         },
         {

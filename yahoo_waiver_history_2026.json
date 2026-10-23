@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-21T13:01:38.692455+00:00",
+ "generated": "2026-10-23T21:15:55.883565+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -1778,7 +1778,7 @@
     {
      "add": {
       "id": "100012",
-      "name": "Kansas City",
+      "name": "Chiefs",
       "position": "DEF"
      },
      "bid": 0,
@@ -1798,14 +1798,14 @@
     {
      "add": {
       "id": "100025",
-      "name": "San Francisco",
+      "name": "49ers",
       "position": "DEF"
      },
      "bid": 0,
      "date": 1789542540000,
      "drop": {
       "id": "100030",
-      "name": "Jacksonville"
+      "name": "Jaguars"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1825,7 +1825,7 @@
      "date": 1789542540000,
      "drop": {
       "id": "100013",
-      "name": "Las Vegas"
+      "name": "Raiders"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1858,14 +1858,14 @@
     {
      "add": {
       "id": "100004",
-      "name": "Cincinnati",
+      "name": "Bengals",
       "position": "DEF"
      },
      "bid": 2,
      "date": 1790147700000,
      "drop": {
       "id": "100024",
-      "name": "Los Angeles"
+      "name": "Chargers"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2252,14 +2252,14 @@
     {
      "add": {
       "id": "100005",
-      "name": "Cleveland",
+      "name": "Browns",
       "position": "DEF"
      },
      "bid": 4,
      "date": 1792566120000,
      "drop": {
       "id": "100033",
-      "name": "Baltimore"
+      "name": "Ravens"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2379,7 +2379,7 @@
     {
      "add": {
       "id": "100027",
-      "name": "Tampa Bay",
+      "name": "Buccaneers",
       "position": "DEF"
      },
      "date": 1789290840000,
@@ -2441,13 +2441,13 @@
     {
      "add": {
       "id": "100033",
-      "name": "Baltimore",
+      "name": "Ravens",
       "position": "DEF"
      },
      "date": 1789739700000,
      "drop": {
       "id": "100016",
-      "name": "Minnesota"
+      "name": "Vikings"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2769,7 +2769,7 @@
     {
      "add": {
       "id": "100003",
-      "name": "Chicago",
+      "name": "Bears",
       "position": "DEF"
      },
      "date": 1791727080000,
@@ -2800,13 +2800,13 @@
     {
      "add": {
       "id": "100001",
-      "name": "Atlanta",
+      "name": "Falcons",
       "position": "DEF"
      },
      "date": 1791748080000,
      "drop": {
       "id": "100033",
-      "name": "Baltimore"
+      "name": "Ravens"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2817,13 +2817,13 @@
     {
      "add": {
       "id": "100017",
-      "name": "New England",
+      "name": "Patriots",
       "position": "DEF"
      },
      "date": 1791966060000,
      "drop": {
       "id": "100004",
-      "name": "Cincinnati"
+      "name": "Bengals"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2868,13 +2868,13 @@
     {
      "add": {
       "id": "100033",
-      "name": "Baltimore",
+      "name": "Ravens",
       "position": "DEF"
      },
      "date": 1792070700000,
      "drop": {
       "id": "100020",
-      "name": "New York"
+      "name": "Jets"
      },
      "season": 2026,
      "source": "yahoo",
@@ -2919,28 +2919,93 @@
     {
      "add": {
       "id": "100020",
-      "name": "New York",
+      "name": "Jets",
       "position": "DEF"
      },
      "date": 1792570980000,
      "drop": {
       "id": "100017",
-      "name": "New England"
+      "name": "Patriots"
      },
      "season": 2026,
      "source": "yahoo",
      "team_id": 7,
      "type": "FREEAGENT",
      "week": 7
+    },
+    {
+     "add": {
+      "id": "40883",
+      "name": "Brian Thomas Jr.",
+      "position": "WR"
+     },
+     "date": 1792692000000,
+     "drop": {
+      "id": "40971",
+      "name": "MarShawn Lloyd"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 3,
+     "type": "FREEAGENT",
+     "week": 7
+    },
+    {
+     "add": {
+      "id": "34107",
+      "name": "Tyler Allgeier",
+      "position": "RB"
+     },
+     "date": 1792707660000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 8,
+     "type": "FREEAGENT",
+     "week": 7
+    },
+    {
+     "add": {
+      "id": "40222",
+      "name": "DeMario Douglas",
+      "position": "WR"
+     },
+     "date": 1792708020000,
+     "drop": {
+      "id": "31908",
+      "name": "Terry McLaurin"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 5,
+     "type": "FREEAGENT",
+     "week": 7
+    },
+    {
+     "add": {
+      "id": "100010",
+      "name": "Titans",
+      "position": "DEF"
+     },
+     "date": 1792717740000,
+     "drop": {
+      "id": "100001",
+      "name": "Falcons"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 8,
+     "type": "FREEAGENT",
+     "week": 7
     }
    ],
-   "newest": "2026-10-21T04:23:00-04:00",
+   "newest": "2026-10-22T21:09:00-04:00",
    "oldest": "2026-09-02T21:40:00-04:00",
-   "pages": 3,
+   "pages": 4,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 74,
-   "rows_unparsed": 0,
+   "rows_seen": 78,
+   "rows_unparsed": 2,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
     "1": {
@@ -2960,7 +3025,7 @@
      "waiver_rank": null
     },
     "3": {
-     "acquisitions": 12,
+     "acquisitions": 13,
      "faab_spent": 24,
      "manager": null,
      "team_id": 3,
@@ -2976,7 +3041,7 @@
      "waiver_rank": null
     },
     "5": {
-     "acquisitions": 9,
+     "acquisitions": 10,
      "faab_spent": 0,
      "manager": null,
      "team_id": 5,
@@ -3000,7 +3065,7 @@
      "waiver_rank": null
     },
     "8": {
-     "acquisitions": 4,
+     "acquisitions": 6,
      "faab_spent": 11,
      "manager": null,
      "team_id": 8,
