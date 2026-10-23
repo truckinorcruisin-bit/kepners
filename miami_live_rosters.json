@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-23T21:16:10Z",
+  "fetched_at": "2026-10-23T21:16:29Z",
   "teams": {
     "1": {
       "team_name": "MakeMyTeamGreatAgain",
@@ -949,13 +949,13 @@
           "bye_week": "14"
         },
         {
-          "player_id": "40962",
-          "name": "Blake Corum",
+          "player_id": "41902",
+          "name": "Woody Marks",
           "position": "RB",
-          "nfl_team": "LAR",
+          "nfl_team": "Hou",
           "roster_slot": "RB",
           "is_keeper": false,
-          "bye_week": "11"
+          "bye_week": "8"
         },
         {
           "player_id": "40041",
@@ -985,6 +985,15 @@
           "bye_week": "11"
         },
         {
+          "player_id": "40962",
+          "name": "Blake Corum",
+          "position": "RB",
+          "nfl_team": "LAR",
+          "roster_slot": "W/R/T",
+          "is_keeper": false,
+          "bye_week": "11"
+        },
+        {
           "player_id": "41824",
           "name": "Luther Burden III",
           "position": "WR",
@@ -992,15 +1001,6 @@
           "roster_slot": "W/R/T",
           "is_keeper": false,
           "bye_week": "10"
-        },
-        {
-          "player_id": "41902",
-          "name": "Woody Marks",
-          "position": "RB",
-          "nfl_team": "Hou",
-          "roster_slot": "W/R/T",
-          "is_keeper": false,
-          "bye_week": "8"
         },
         {
           "player_id": "42625",
@@ -1087,7 +1087,7 @@
     },
     "8": {
       "team_name": "Ryan's Pierced Pigskin Posse",
-      "player_count": 15,
+      "player_count": 16,
       "keeper_count": 0,
       "players": [
         {
@@ -1100,15 +1100,6 @@
           "bye_week": "13"
         },
         {
-          "player_id": "41900",
-          "name": "Bhayshul Tuten",
-          "position": "RB",
-          "nfl_team": "Jax",
-          "roster_slot": "RB",
-          "is_keeper": false,
-          "bye_week": "7"
-        },
-        {
           "player_id": "33508",
           "name": "Rhamondre Stevenson",
           "position": "RB",
@@ -1116,6 +1107,15 @@
           "roster_slot": "RB",
           "is_keeper": false,
           "bye_week": "11"
+        },
+        {
+          "player_id": "34107",
+          "name": "Tyler Allgeier",
+          "position": "RB",
+          "nfl_team": "Ari",
+          "roster_slot": "RB",
+          "is_keeper": false,
+          "bye_week": "14"
         },
         {
           "player_id": "32687",
@@ -1154,58 +1154,13 @@
           "bye_week": "9"
         },
         {
-          "player_id": "27535",
-          "name": "Mike Evans",
-          "position": "WR",
-          "nfl_team": "SF",
-          "roster_slot": "W/R/T",
-          "is_keeper": false,
-          "bye_week": "8"
-        },
-        {
-          "player_id": "40064",
-          "name": "Sam LaPorta",
-          "position": "TE",
-          "nfl_team": "Det",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "6"
-        },
-        {
-          "player_id": "42025",
-          "name": "Kyle Monangai",
-          "position": "RB",
-          "nfl_team": "Chi",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "10"
-        },
-        {
-          "player_id": "34007",
-          "name": "George Pickens",
-          "position": "WR",
-          "nfl_team": "Dal",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "14"
-        },
-        {
           "player_id": "33398",
           "name": "DeVonta Smith",
           "position": "WR",
           "nfl_team": "Phi",
-          "roster_slot": "BN",
+          "roster_slot": "W/R/T",
           "is_keeper": false,
           "bye_week": "10"
-        },
-        {
-          "player_id": "31868",
-          "name": "Deebo Samuel Sr.",
-          "position": "WR",
-          "nfl_team": "SF",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "8"
         },
         {
           "player_id": "30180",
@@ -1217,13 +1172,67 @@
           "bye_week": "8"
         },
         {
-          "player_id": "100001",
-          "name": "Falcons",
+          "player_id": "27535",
+          "name": "Mike Evans",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "41900",
+          "name": "Bhayshul Tuten",
+          "position": "RB",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
+        },
+        {
+          "player_id": "40064",
+          "name": "Sam LaPorta",
+          "position": "TE",
+          "nfl_team": "Det",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "6"
+        },
+        {
+          "player_id": "34007",
+          "name": "George Pickens",
+          "position": "WR",
+          "nfl_team": "Dal",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "14"
+        },
+        {
+          "player_id": "31868",
+          "name": "Deebo Samuel Sr.",
+          "position": "WR",
+          "nfl_team": "SF",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
+        },
+        {
+          "player_id": "42025",
+          "name": "Kyle Monangai",
+          "position": "RB",
+          "nfl_team": "Chi",
+          "roster_slot": "IR",
+          "is_keeper": false,
+          "bye_week": "10"
+        },
+        {
+          "player_id": "100010",
+          "name": "Titans",
           "position": "DEF",
-          "nfl_team": "Atl",
+          "nfl_team": "Ten",
           "roster_slot": "DEF",
           "is_keeper": false,
-          "bye_week": "11"
+          "bye_week": "9"
         }
       ]
     }
