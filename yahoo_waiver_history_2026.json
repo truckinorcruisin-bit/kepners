@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T15:33:43.271826+00:00",
+ "generated": "2026-10-26T15:36:28.172337+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -2652,7 +2652,7 @@
     {
      "add": {
       "id": "100013",
-      "name": "Las Vegas",
+      "name": "Raiders",
       "position": "DEF"
      },
      "date": 1788399600000,
@@ -3332,14 +3332,45 @@
      "team_id": 8,
      "type": "FREEAGENT",
      "week": 7
+    },
+    {
+     "add": {
+      "id": "40030",
+      "name": "C.J. Stroud",
+      "position": "QB"
+     },
+     "date": 1792873440000,
+     "drop": {
+      "id": "31868",
+      "name": "Deebo Samuel Sr."
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 8,
+     "type": "FREEAGENT",
+     "week": 7
+    },
+    {
+     "add": {
+      "id": "9265",
+      "name": "Matthew Stafford",
+      "position": "QB"
+     },
+     "date": 1792886880000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "team_id": 3,
+     "type": "FREEAGENT",
+     "week": 7
     }
    ],
-   "newest": "2026-10-22T21:09:00-04:00",
+   "newest": "2026-10-24T20:08:00-04:00",
    "oldest": "2026-09-02T21:40:00-04:00",
    "pages": 4,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 78,
+   "rows_seen": 80,
    "rows_unparsed": 2,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
@@ -3360,7 +3391,7 @@
      "waiver_rank": null
     },
     "3": {
-     "acquisitions": 13,
+     "acquisitions": 14,
      "faab_spent": 24,
      "manager": null,
      "team_id": 3,
@@ -3400,7 +3431,7 @@
      "waiver_rank": null
     },
     "8": {
-     "acquisitions": 6,
+     "acquisitions": 7,
      "faab_spent": 11,
      "manager": null,
      "team_id": 8,
