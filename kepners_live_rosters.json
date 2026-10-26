@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-10-21T12:53:09Z",
+  "fetched_at": "2026-10-26T15:32:18Z",
   "teams": {
     "1": {
       "team_name": "Football Guy's Guy",
@@ -7,13 +7,13 @@
       "keeper_count": 1,
       "players": [
         {
-          "player_id": "32993",
-          "name": "Tyler Huntley",
+          "player_id": "31833",
+          "name": "Kyler Murray",
           "position": "QB",
-          "nfl_team": "Bal",
+          "nfl_team": "Min",
           "roster_slot": "QB",
           "is_keeper": false,
-          "bye_week": "13"
+          "bye_week": "6"
         },
         {
           "player_id": "34447",
@@ -52,13 +52,13 @@
           "bye_week": "14"
         },
         {
-          "player_id": "40234",
-          "name": "Parker Washington",
+          "player_id": "33394",
+          "name": "Jaylen Waddle",
           "position": "WR",
-          "nfl_team": "Jax",
+          "nfl_team": "Den",
           "roster_slot": "WR",
           "is_keeper": false,
-          "bye_week": "7"
+          "bye_week": "10"
         },
         {
           "player_id": "33443",
@@ -68,6 +68,15 @@
           "roster_slot": "TE",
           "is_keeper": false,
           "bye_week": "9"
+        },
+        {
+          "player_id": "40234",
+          "name": "Parker Washington",
+          "position": "WR",
+          "nfl_team": "Jax",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "7"
         },
         {
           "player_id": "40048",
@@ -97,15 +106,6 @@
           "bye_week": "8"
         },
         {
-          "player_id": "33394",
-          "name": "Jaylen Waddle",
-          "position": "WR",
-          "nfl_team": "Den",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "10"
-        },
-        {
           "player_id": "32231",
           "name": "Jakobi Meyers",
           "position": "WR",
@@ -124,13 +124,13 @@
           "bye_week": "8"
         },
         {
-          "player_id": "33412",
-          "name": "Najee Harris",
-          "position": "RB",
-          "nfl_team": "NYG",
+          "player_id": "32993",
+          "name": "Tyler Huntley",
+          "position": "QB",
+          "nfl_team": "Bal",
           "roster_slot": "BN",
           "is_keeper": false,
-          "bye_week": "8"
+          "bye_week": "13"
         },
         {
           "player_id": "31002",
@@ -151,13 +151,13 @@
           "bye_week": "9"
         },
         {
-          "player_id": "100017",
-          "name": "Patriots",
+          "player_id": "100010",
+          "name": "Titans",
           "position": "DEF",
-          "nfl_team": "NE",
+          "nfl_team": "Ten",
           "roster_slot": "DEF",
           "is_keeper": false,
-          "bye_week": "11"
+          "bye_week": "9"
         }
       ]
     },
@@ -212,13 +212,13 @@
           "bye_week": "9"
         },
         {
-          "player_id": "40224",
-          "name": "Kayshon Boutte",
+          "player_id": "31883",
+          "name": "A.J. Brown",
           "position": "WR",
-          "nfl_team": "Hou",
+          "nfl_team": "NE",
           "roster_slot": "WR",
           "is_keeper": false,
-          "bye_week": "8"
+          "bye_week": "11"
         },
         {
           "player_id": "40878",
@@ -228,6 +228,15 @@
           "roster_slot": "TE",
           "is_keeper": true,
           "bye_week": "13"
+        },
+        {
+          "player_id": "40224",
+          "name": "Kayshon Boutte",
+          "position": "WR",
+          "nfl_team": "Hou",
+          "roster_slot": "BN",
+          "is_keeper": false,
+          "bye_week": "8"
         },
         {
           "player_id": "30973",
@@ -273,15 +282,6 @@
           "roster_slot": "BN",
           "is_keeper": false,
           "bye_week": "6"
-        },
-        {
-          "player_id": "31883",
-          "name": "A.J. Brown",
-          "position": "WR",
-          "nfl_team": "NE",
-          "roster_slot": "BN",
-          "is_keeper": false,
-          "bye_week": "11"
         },
         {
           "player_id": "40095",
