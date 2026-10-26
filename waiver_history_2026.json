@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-10-23T21:17:29.232191+00:00",
+ "generated": "2026-10-26T16:05:35.390391+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
@@ -70,7 +70,7 @@
      "manager": "Michael Violi",
      "faab_spent": 0,
      "waiver_rank": 2,
-     "acquisitions": 2
+     "acquisitions": 3
     },
     "16": {
      "team_id": 16,
@@ -86,7 +86,7 @@
      "manager": "sean mullins",
      "faab_spent": 35,
      "waiver_rank": 7,
-     "acquisitions": 18
+     "acquisitions": 19
     },
     "19": {
      "team_id": 19,
@@ -94,7 +94,7 @@
      "manager": "Matt McKenna",
      "faab_spent": 10,
      "waiver_rank": 10,
-     "acquisitions": 8
+     "acquisitions": 10
     },
     "20": {
      "team_id": 20,
@@ -9667,7 +9667,7 @@
      "manager": "Dayton Paul",
      "faab_spent": 0,
      "waiver_rank": 5,
-     "acquisitions": 5
+     "acquisitions": 6
     },
     "3": {
      "team_id": 3,
@@ -9683,7 +9683,7 @@
      "manager": "Keith Quiring",
      "faab_spent": 0,
      "waiver_rank": 7,
-     "acquisitions": 7
+     "acquisitions": 8
     },
     "5": {
      "team_id": 5,
@@ -9699,7 +9699,7 @@
      "manager": "Nick Hansen",
      "faab_spent": 0,
      "waiver_rank": 3,
-     "acquisitions": 8
+     "acquisitions": 9
     },
     "7": {
      "team_id": 7,
@@ -9739,7 +9739,7 @@
      "manager": "Jason Bonnet",
      "faab_spent": 0,
      "waiver_rank": 10,
-     "acquisitions": 15
+     "acquisitions": 16
     },
     "12": {
      "team_id": 12,
@@ -9747,7 +9747,7 @@
      "manager": "Nate Stephenson",
      "faab_spent": 0,
      "waiver_rank": 4,
-     "acquisitions": 9
+     "acquisitions": 10
     }
    },
    "priorBudget": null,
@@ -11248,10 +11248,10 @@
     {
      "season": 2026,
      "week": 7,
-     "date": 1792545616080,
+     "date": 1792569735868,
      "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
+     "status": "EXECUTED",
+     "won": true,
      "team_id": 10,
      "bid": 0,
      "add": {
@@ -11267,10 +11267,121 @@
     {
      "season": 2026,
      "week": 7,
+     "date": 1792545546566,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 4427095,
+      "name": "DeMario Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 4702555,
+      "name": "Jonah Coleman"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
      "date": 1792569735868,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 3,
+     "bid": 0,
+     "add": {
+      "id": 4360516,
+      "name": "Tyrone Tracy Jr.",
+      "position": "RB"
+     },
+     "drop": {
+      "id": 4249087,
+      "name": "Matt Gay"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792653747585,
      "type": "WAIVER",
      "status": "EXECUTED",
      "won": true,
+     "team_id": 5,
+     "bid": 0,
+     "add": {
+      "id": -16012,
+      "name": "Chiefs D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": 4241457,
+      "name": "Najee Harris"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792569735867,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 1,
+     "bid": 0,
+     "add": {
+      "id": -16010,
+      "name": "Titans D/ST",
+      "position": "D/ST"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792569735869,
+     "type": "WAIVER",
+     "status": "FAILED_PLAYERALREADYDROPPED",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 5083754,
+      "name": "Ryan Flournoy",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 3121422,
+      "name": "Terry McLaurin"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792569735869,
+     "type": "WAIVER",
+     "status": "FAILED_INVALIDPLAYERSOURCE",
+     "won": false,
+     "team_id": 4,
+     "bid": 0,
+     "add": {
+      "id": 4427095,
+      "name": "DeMario Douglas",
+      "position": "WR"
+     },
+     "drop": {
+      "id": 2578570,
+      "name": "Jacoby Brissett"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 7,
+     "date": 1792545616080,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
      "team_id": 10,
      "bid": 0,
      "add": {
@@ -11324,25 +11435,6 @@
     {
      "season": 2026,
      "week": 7,
-     "date": 1792545546566,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": 4427095,
-      "name": "DeMario Douglas",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 4702555,
-      "name": "Jonah Coleman"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
      "date": 1792569735868,
      "type": "WAIVER",
      "status": "EXECUTED",
@@ -11357,44 +11449,6 @@
      "drop": {
       "id": 5082424,
       "name": "Dominic Zvada"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792569735868,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 3,
-     "bid": 0,
-     "add": {
-      "id": 4360516,
-      "name": "Tyrone Tracy Jr.",
-      "position": "RB"
-     },
-     "drop": {
-      "id": 4249087,
-      "name": "Matt Gay"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792653747585,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 5,
-     "bid": 0,
-     "add": {
-      "id": -16012,
-      "name": "Chiefs D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": 4241457,
-      "name": "Najee Harris"
      }
     },
     {
@@ -11415,22 +11469,6 @@
       "id": -16027,
       "name": "Buccaneers D/ST"
      }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792569735867,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 1,
-     "bid": 0,
-     "add": {
-      "id": -16010,
-      "name": "Titans D/ST",
-      "position": "D/ST"
-     },
-     "drop": null
     },
     {
      "season": 2026,
@@ -11489,25 +11527,6 @@
     {
      "season": 2026,
      "week": 7,
-     "date": 1792569735869,
-     "type": "WAIVER",
-     "status": "FAILED_PLAYERALREADYDROPPED",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": 5083754,
-      "name": "Ryan Flournoy",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 3121422,
-      "name": "Terry McLaurin"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
      "date": 1792545636305,
      "type": "WAIVER",
      "status": "PENDING",
@@ -11541,25 +11560,6 @@
      "drop": {
       "id": -16027,
       "name": "Buccaneers D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 7,
-     "date": 1792569735869,
-     "type": "WAIVER",
-     "status": "FAILED_INVALIDPLAYERSOURCE",
-     "won": false,
-     "team_id": 4,
-     "bid": 0,
-     "add": {
-      "id": 4427095,
-      "name": "DeMario Douglas",
-      "position": "WR"
-     },
-     "drop": {
-      "id": 2578570,
-      "name": "Jacoby Brissett"
      }
     },
     {
