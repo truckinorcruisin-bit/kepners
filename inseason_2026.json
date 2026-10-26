@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-23T21:17:41.218462+00:00",
+  "generated": "2026-10-26T15:32:02.066826+00:00",
   "currentWeek": 7,
   "weeksRemaining": 11,
   "leagues": {
@@ -39275,7 +39275,7 @@
   "irReturns": {
     "windowDays": 28,
     "earlyRound": 6,
-    "asOf": "2026-10-23",
+    "asOf": "2026-10-26",
     "draftLeagues": [
       "inspire11",
       "miami",
@@ -39292,7 +39292,7 @@
         "return_date": "2026-10-25",
         "return_week": 7,
         "return_beyond_season": false,
-        "days_away": 2,
+        "days_away": -1,
         "best_round": 9,
         "early": false,
         "pickup": false,
@@ -39343,7 +39343,7 @@
         "return_date": "2026-10-25",
         "return_week": 7,
         "return_beyond_season": false,
-        "days_away": 2,
+        "days_away": -1,
         "best_round": 11,
         "early": false,
         "pickup": false,
@@ -39387,7 +39387,7 @@
         "return_date": "2026-10-25",
         "return_week": 7,
         "return_beyond_season": false,
-        "days_away": 2,
+        "days_away": -1,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39424,7 +39424,7 @@
         "return_date": "2026-10-25",
         "return_week": 7,
         "return_beyond_season": false,
-        "days_away": 2,
+        "days_away": -1,
         "best_round": 13,
         "early": false,
         "pickup": false,
@@ -39464,7 +39464,7 @@
         "return_date": "2026-11-01",
         "return_week": 8,
         "return_beyond_season": false,
-        "days_away": 9,
+        "days_away": 6,
         "best_round": 7,
         "early": false,
         "pickup": false,
@@ -39511,7 +39511,7 @@
         "return_date": "2026-11-02",
         "return_week": 8,
         "return_beyond_season": false,
-        "days_away": 10,
+        "days_away": 7,
         "best_round": 4,
         "early": true,
         "pickup": false,
@@ -39562,7 +39562,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": 3,
         "early": true,
         "pickup": false,
@@ -39613,7 +39613,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": 8,
         "early": false,
         "pickup": false,
@@ -39658,7 +39658,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39702,7 +39702,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39742,7 +39742,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39782,7 +39782,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": null,
         "early": false,
         "pickup": true,
@@ -39811,7 +39811,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 16,
+        "days_away": 13,
         "best_round": null,
         "early": false,
         "pickup": true,
@@ -39840,7 +39840,7 @@
         "return_date": "2026-11-15",
         "return_week": 10,
         "return_beyond_season": false,
-        "days_away": 23,
+        "days_away": 20,
         "best_round": 6,
         "early": true,
         "pickup": false,
@@ -39876,6 +39876,142 @@
           "inspire11": {
             "state": "rostered",
             "team": "Keith's Team",
+            "slot": "IR"
+          }
+        }
+      },
+      {
+        "name": "De'Zhaun Stribling",
+        "pos": "WR",
+        "pro_team": "SF",
+        "return_date": "2026-11-22",
+        "return_week": 11,
+        "return_beyond_season": false,
+        "days_away": 27,
+        "best_round": 9,
+        "early": false,
+        "pickup": false,
+        "drafts": {
+          "inspire11": {
+            "round": 12,
+            "overall": 134,
+            "keeper": false
+          },
+          "miami": {
+            "round": 11,
+            "overall": 85,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 9,
+            "overall": 100,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "kepners": {
+            "state": "available"
+          },
+          "miami": {
+            "state": "available"
+          },
+          "zimmer": {
+            "state": "rostered",
+            "team": "Dangerous  Nights Crew",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "available"
+          }
+        }
+      },
+      {
+        "name": "Jalen McMillan",
+        "pos": "WR",
+        "pro_team": "TB",
+        "return_date": "2026-11-22",
+        "return_week": 11,
+        "return_beyond_season": false,
+        "days_away": 27,
+        "best_round": 11,
+        "early": false,
+        "pickup": false,
+        "drafts": {
+          "inspire11": {
+            "round": 13,
+            "overall": 151,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 11,
+            "overall": 126,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "kepners": {
+            "state": "available"
+          },
+          "miami": {
+            "state": "available"
+          },
+          "zimmer": {
+            "state": "available"
+          },
+          "inspire11": {
+            "state": "rostered",
+            "team": "Fantasy Baseball Team",
+            "slot": "BE"
+          }
+        }
+      },
+      {
+        "name": "Jacory Croskey-Merritt",
+        "pos": "RB",
+        "pro_team": "WSH",
+        "return_date": "2026-11-23",
+        "return_week": 11,
+        "return_beyond_season": false,
+        "days_away": 28,
+        "best_round": 8,
+        "early": false,
+        "pickup": false,
+        "drafts": {
+          "inspire11": {
+            "round": 9,
+            "overall": 107,
+            "keeper": false
+          },
+          "miami": {
+            "round": 11,
+            "overall": 83,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 8,
+            "overall": 95,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "kepners": {
+            "state": "rostered",
+            "team": "Denim Like A DeJean",
+            "slot": "IR"
+          },
+          "miami": {
+            "state": "rostered",
+            "team": "MakeMyTeamGreatAgain",
+            "slot": "IR"
+          },
+          "zimmer": {
+            "state": "rostered",
+            "team": "EVIL EMPIRE",
+            "slot": "IR"
+          },
+          "inspire11": {
+            "state": "rostered",
+            "team": "34=GOAT (Bonnet\u2019s Team)",
             "slot": "IR"
           }
         }
