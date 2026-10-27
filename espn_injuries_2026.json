@@ -1,8 +1,8 @@
 {
  "year": 2026,
- "generated": "2026-10-27T11:41:40.486872+00:00",
+ "generated": "2026-10-27T18:30:28.577679+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
- "pool_size": 996,
+ "pool_size": 997,
  "injuries": [
   {
    "id": 4036211,
@@ -201,13 +201,6 @@
    "ret": "2026-10-25"
   },
   {
-   "id": 3929630,
-   "name": "Saquon Barkley",
-   "pos": "RB",
-   "status": "QUESTIONABLE",
-   "ret": "2026-10-26"
-  },
-  {
    "id": 4695883,
    "name": "Jalen Coker",
    "pos": "WR",
@@ -220,13 +213,6 @@
    "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-10-29"
-  },
-  {
-   "id": 4047365,
-   "name": "Josh Jacobs",
-   "pos": "RB",
-   "status": "DAY_TO_DAY",
-   "ret": "2026-10-30"
   },
   {
    "id": 3042519,
@@ -260,7 +246,7 @@
    "id": 4429684,
    "name": "Anthony Gould",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -288,14 +274,14 @@
    "id": 4035656,
    "name": "Ben Skowronek",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 4427366,
    "name": "Breece Hall",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -309,14 +295,14 @@
    "id": 4241474,
    "name": "Brian Robinson Jr.",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 3926231,
    "name": "Britain Covey",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -337,14 +323,14 @@
    "id": 3925357,
    "name": "Calvin Ridley",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 4430841,
    "name": "Carson Beck",
    "pos": "QB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -362,16 +348,16 @@
    "ret": "2026-11-01"
   },
   {
-   "id": 4879250,
-   "name": "Cole Payton",
-   "pos": "QB",
-   "status": "OUT",
-   "ret": "2026-11-01"
-  },
-  {
    "id": 3915416,
    "name": "DJ Moore",
    "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-01"
+  },
+  {
+   "id": 4360238,
+   "name": "Dameon Pierce",
+   "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
@@ -386,7 +372,7 @@
    "id": 4241478,
    "name": "DeVonta Smith",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -400,21 +386,14 @@
    "id": 4428850,
    "name": "Dontayvion Wicks",
    "pos": "WR",
-   "status": "OUT",
-   "ret": "2026-11-01"
-  },
-  {
-   "id": 4362478,
-   "name": "Emari Demercado",
-   "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 4567750,
    "name": "Emeka Egbuka",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -470,7 +449,7 @@
    "id": 4870808,
    "name": "Jeremiyah Love",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -491,14 +470,14 @@
    "id": 3676833,
    "name": "KaVontae Turpin",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 4035537,
    "name": "Kene Nwangwu",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -512,7 +491,7 @@
    "id": 3916387,
    "name": "Lamar Jackson",
    "pos": "QB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -526,14 +505,14 @@
    "id": 3917914,
    "name": "Olamide Zaccheaus",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 4428331,
    "name": "Rashee Rice",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -548,6 +527,13 @@
    "name": "Ronnie Rivers",
    "pos": "RB",
    "status": "INJURY_RESERVE",
+   "ret": "2026-11-01"
+  },
+  {
+   "id": 3929630,
+   "name": "Saquon Barkley",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -575,14 +561,14 @@
    "id": 4428557,
    "name": "Tyjae Spears",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
    "id": 4431459,
    "name": "Tyler Warren",
    "pos": "TE",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -596,7 +582,7 @@
    "id": 3924327,
    "name": "Drew Lock",
    "pos": "QB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-02"
   },
   {
@@ -610,7 +596,7 @@
    "id": 4608686,
    "name": "Kyle Monangai",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-02"
   },
   {
@@ -631,7 +617,7 @@
    "id": 4426385,
    "name": "Zach Charbonnet",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-02"
   },
   {
@@ -680,14 +666,14 @@
    "id": 4035538,
    "name": "David Montgomery",
    "pos": "RB",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
    "id": 3126486,
    "name": "Deebo Samuel Sr.",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
@@ -750,7 +736,7 @@
    "id": 16737,
    "name": "Mike Evans",
    "pos": "WR",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
@@ -785,7 +771,7 @@
    "id": 4429148,
    "name": "Theo Johnson",
    "pos": "TE",
-   "status": "OUT",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
@@ -793,13 +779,6 @@
    "name": "Travis Etienne Jr.",
    "pos": "RB",
    "status": "INJURY_RESERVE",
-   "ret": "2026-11-08"
-  },
-  {
-   "id": 4360516,
-   "name": "Tyrone Tracy Jr.",
-   "pos": "RB",
-   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
@@ -933,6 +912,13 @@
    "name": "Isiah Pacheco",
    "pos": "RB",
    "status": "INJURY_RESERVE",
+   "ret": "2026-12-06"
+  },
+  {
+   "id": 4360516,
+   "name": "Tyrone Tracy Jr.",
+   "pos": "RB",
+   "status": "OUT",
    "ret": "2026-12-06"
   },
   {

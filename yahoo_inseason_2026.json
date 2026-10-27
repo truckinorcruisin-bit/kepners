@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-27T11:41:54.996196+00:00",
+  "generated": "2026-10-27T18:30:43.336255+00:00",
   "leagues": {
     "kepners": {
       "platform": "yahoo",
@@ -71,34 +71,12 @@
               "percent_owned": null
             },
             {
-              "player_id": "33394",
-              "player_key": "470.p.33394",
-              "name": "Jaylen Waddle",
-              "position": "WR",
-              "pro_team": "Den",
-              "lineup_slot": "WR",
-              "injury_status": "Q",
-              "injured": true,
-              "percent_owned": null
-            },
-            {
-              "player_id": "33443",
-              "player_key": "470.p.33443",
-              "name": "Pat Freiermuth",
-              "position": "TE",
-              "pro_team": "Pit",
-              "lineup_slot": "TE",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": null
-            },
-            {
               "player_id": "40234",
               "player_key": "470.p.40234",
               "name": "Parker Washington",
               "position": "WR",
               "pro_team": "Jax",
-              "lineup_slot": "BN",
+              "lineup_slot": "WR",
               "injury_status": null,
               "injured": false,
               "percent_owned": null
@@ -109,9 +87,20 @@
               "name": "Dalton Kincaid",
               "position": "TE",
               "pro_team": "Buf",
-              "lineup_slot": "BN",
+              "lineup_slot": "TE",
               "injury_status": null,
               "injured": false,
+              "percent_owned": null
+            },
+            {
+              "player_id": "33394",
+              "player_key": "470.p.33394",
+              "name": "Jaylen Waddle",
+              "position": "WR",
+              "pro_team": "Den",
+              "lineup_slot": "BN",
+              "injury_status": "Q",
+              "injured": true,
               "percent_owned": null
             },
             {
@@ -175,8 +164,8 @@
               "name": "Lamar Jackson",
               "position": "QB",
               "pro_team": "Bal",
-              "lineup_slot": "IR",
-              "injury_status": "O",
+              "lineup_slot": "BN",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -525,7 +514,7 @@
               "position": "TE",
               "pro_team": "Ind",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -558,7 +547,7 @@
               "position": "RB",
               "pro_team": "NYG",
               "lineup_slot": "BN",
-              "injury_status": "Q",
+              "injury_status": "O",
               "injured": true,
               "percent_owned": null
             },
@@ -760,7 +749,7 @@
               "position": "RB",
               "pro_team": "Chi",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -951,7 +940,7 @@
               "position": "RB",
               "pro_team": "Hou",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1048,17 +1037,6 @@
               "percent_owned": null
             },
             {
-              "player_id": "33477",
-              "player_key": "470.p.33477",
-              "name": "Nico Collins",
-              "position": "WR",
-              "pro_team": "Hou",
-              "lineup_slot": "WR",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": null
-            },
-            {
               "player_id": "42646",
               "player_key": "470.p.42646",
               "name": "KC Concepcion Jr.",
@@ -1070,11 +1048,22 @@
               "percent_owned": null
             },
             {
-              "player_id": "41885",
-              "player_key": "470.p.41885",
-              "name": "Jaylin Noel",
+              "player_id": "33398",
+              "player_key": "470.p.33398",
+              "name": "DeVonta Smith",
               "position": "WR",
-              "pro_team": "Hou",
+              "pro_team": "Phi",
+              "lineup_slot": "WR",
+              "injury_status": "Q",
+              "injured": true,
+              "percent_owned": null
+            },
+            {
+              "player_id": "34659",
+              "player_key": "470.p.34659",
+              "name": "Rashid Shaheed",
+              "position": "WR",
+              "pro_team": "Sea",
               "lineup_slot": "WR",
               "injury_status": "Q",
               "injured": true,
@@ -1092,14 +1081,25 @@
               "percent_owned": null
             },
             {
-              "player_id": "33398",
-              "player_key": "470.p.33398",
-              "name": "DeVonta Smith",
+              "player_id": "41885",
+              "player_key": "470.p.41885",
+              "name": "Jaylin Noel",
               "position": "WR",
-              "pro_team": "Phi",
+              "pro_team": "Hou",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
+              "percent_owned": null
+            },
+            {
+              "player_id": "33477",
+              "player_key": "470.p.33477",
+              "name": "Nico Collins",
+              "position": "WR",
+              "pro_team": "Hou",
+              "lineup_slot": "BN",
+              "injury_status": null,
+              "injured": false,
               "percent_owned": null
             },
             {
@@ -1109,7 +1109,7 @@
               "position": "WR",
               "pro_team": "SF",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1152,17 +1152,6 @@
               "name": "Tyjae Spears",
               "position": "RB",
               "pro_team": "Ten",
-              "lineup_slot": "BN",
-              "injury_status": "O",
-              "injured": true,
-              "percent_owned": null
-            },
-            {
-              "player_id": "34659",
-              "player_key": "470.p.34659",
-              "name": "Rashid Shaheed",
-              "position": "WR",
-              "pro_team": "Sea",
               "lineup_slot": "BN",
               "injury_status": "Q",
               "injured": true,
@@ -1300,7 +1289,7 @@
               "position": "WR",
               "pro_team": "KC",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1333,7 +1322,7 @@
               "position": "WR",
               "pro_team": "TB",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1344,7 +1333,7 @@
               "position": "RB",
               "pro_team": "Atl",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1430,22 +1419,22 @@
               "percent_owned": null
             },
             {
-              "player_id": "41922",
-              "player_key": "470.p.41922",
-              "name": "Cam Skattebo",
-              "position": "RB",
-              "pro_team": "NYG",
-              "lineup_slot": "RB",
-              "injury_status": "Q",
-              "injured": true,
-              "percent_owned": null
-            },
-            {
               "player_id": "40059",
               "player_key": "470.p.40059",
               "name": "Jahmyr Gibbs",
               "position": "RB",
               "pro_team": "Det",
+              "lineup_slot": "RB",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": null
+            },
+            {
+              "player_id": "41900",
+              "player_key": "470.p.41900",
+              "name": "Bhayshul Tuten",
+              "position": "RB",
+              "pro_team": "Jax",
               "lineup_slot": "RB",
               "injury_status": null,
               "injured": false,
@@ -1496,14 +1485,14 @@
               "percent_owned": null
             },
             {
-              "player_id": "41900",
-              "player_key": "470.p.41900",
-              "name": "Bhayshul Tuten",
+              "player_id": "41922",
+              "player_key": "470.p.41922",
+              "name": "Cam Skattebo",
               "position": "RB",
-              "pro_team": "Jax",
+              "pro_team": "NYG",
               "lineup_slot": "BN",
-              "injury_status": null,
-              "injured": false,
+              "injury_status": "Q",
+              "injured": true,
               "percent_owned": null
             },
             {
@@ -1535,7 +1524,7 @@
               "position": "WR",
               "pro_team": "SF",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1573,22 +1562,22 @@
               "percent_owned": null
             },
             {
-              "player_id": "100005",
-              "player_key": "470.p.100005",
-              "name": "Browns",
+              "player_id": "100012",
+              "player_key": "470.p.100012",
+              "name": "Chiefs",
               "position": "DEF",
-              "pro_team": "Cle",
+              "pro_team": "KC",
               "lineup_slot": "DEF",
               "injury_status": null,
               "injured": false,
               "percent_owned": null
             },
             {
-              "player_id": "100012",
-              "player_key": "470.p.100012",
-              "name": "Chiefs",
+              "player_id": "100005",
+              "player_key": "470.p.100005",
+              "name": "Browns",
               "position": "DEF",
-              "pro_team": "KC",
+              "pro_team": "Cle",
               "lineup_slot": "BN",
               "injury_status": null,
               "injured": false,
@@ -1770,7 +1759,7 @@
               "position": "RB",
               "pro_team": "Sea",
               "lineup_slot": "IR",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -1928,7 +1917,7 @@
               "position": "RB",
               "pro_team": "NYJ",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -2036,14 +2025,14 @@
               "percent_owned": null
             },
             {
-              "player_id": "40162",
-              "player_key": "470.p.40162",
-              "name": "Roschon Johnson",
+              "player_id": "42625",
+              "player_key": "470.p.42625",
+              "name": "Jeremiyah Love",
               "position": "RB",
-              "pro_team": "Chi",
+              "pro_team": "Ari",
               "lineup_slot": "RB",
-              "injury_status": null,
-              "injured": false,
+              "injury_status": "Q",
+              "injured": true,
               "percent_owned": null
             },
             {
@@ -2091,6 +2080,17 @@
               "percent_owned": null
             },
             {
+              "player_id": "40162",
+              "player_key": "470.p.40162",
+              "name": "Roschon Johnson",
+              "position": "RB",
+              "pro_team": "Chi",
+              "lineup_slot": "BN",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": null
+            },
+            {
               "player_id": "41097",
               "player_key": "470.p.41097",
               "name": "Devaughn Vele",
@@ -2110,17 +2110,6 @@
               "lineup_slot": "BN",
               "injury_status": null,
               "injured": false,
-              "percent_owned": null
-            },
-            {
-              "player_id": "42625",
-              "player_key": "470.p.42625",
-              "name": "Jeremiyah Love",
-              "position": "RB",
-              "pro_team": "Ari",
-              "lineup_slot": "BN",
-              "injury_status": "O",
-              "injured": true,
               "percent_owned": null
             },
             {
@@ -2721,6 +2710,17 @@
           "percent_owned": null
         },
         {
+          "player_id": "33443",
+          "player_key": "470.p.33443",
+          "name": "Pat Freiermuth",
+          "position": "TE",
+          "pro_team": "Pit",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
+          "percent_owned": null
+        },
+        {
           "player_id": "100001",
           "player_key": "470.p.100001",
           "name": "Falcons",
@@ -2859,7 +2859,7 @@
           "position": "WR",
           "pro_team": "Phi",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -2870,7 +2870,7 @@
           "position": "QB",
           "pro_team": "Sea",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -3387,8 +3387,8 @@
           "position": "RB",
           "pro_team": "Phi",
           "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
+          "injury_status": "Q",
+          "injured": true,
           "percent_owned": null
         },
         {
@@ -3981,7 +3981,7 @@
           "position": "TE",
           "pro_team": "NYG",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -4234,7 +4234,7 @@
           "position": "WR",
           "pro_team": "Pit",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -4278,7 +4278,7 @@
           "position": "WR",
           "pro_team": "Dal",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -4322,7 +4322,7 @@
           "position": "WR",
           "pro_team": "Ten",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -4589,17 +4589,6 @@
           "injury_status": null,
           "injured": false,
           "percent_owned": null
-        },
-        {
-          "player_id": "34084",
-          "player_key": "470.p.34084",
-          "name": "Charlie Kolar",
-          "position": "TE",
-          "pro_team": "LAC",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": null
         }
       ]
     },
@@ -4722,7 +4711,7 @@
               "position": "TE",
               "pro_team": "Ind",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -4852,22 +4841,22 @@
               "percent_owned": null
             },
             {
-              "player_id": "33477",
-              "player_key": "470.p.33477",
-              "name": "Nico Collins",
+              "player_id": "32703",
+              "player_key": "470.p.32703",
+              "name": "Tee Higgins",
               "position": "WR",
-              "pro_team": "Hou",
+              "pro_team": "Cin",
               "lineup_slot": "WR",
               "injury_status": null,
               "injured": false,
               "percent_owned": null
             },
             {
-              "player_id": "32703",
-              "player_key": "470.p.32703",
-              "name": "Tee Higgins",
+              "player_id": "40234",
+              "player_key": "470.p.40234",
+              "name": "Parker Washington",
               "position": "WR",
-              "pro_team": "Cin",
+              "pro_team": "Jax",
               "lineup_slot": "WR",
               "injury_status": null,
               "injured": false,
@@ -4885,17 +4874,6 @@
               "percent_owned": null
             },
             {
-              "player_id": "33966",
-              "player_key": "470.p.33966",
-              "name": "Chris Olave",
-              "position": "WR",
-              "pro_team": "NO",
-              "lineup_slot": "W/R/T",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": null
-            },
-            {
               "player_id": "40059",
               "player_key": "470.p.40059",
               "name": "Jahmyr Gibbs",
@@ -4907,33 +4885,44 @@
               "percent_owned": null
             },
             {
-              "player_id": "25812",
-              "player_key": "470.p.25812",
-              "name": "Kirk Cousins",
-              "position": "QB",
-              "pro_team": "LV",
+              "player_id": "30994",
+              "player_key": "470.p.30994",
+              "name": "DJ Moore",
+              "position": "WR",
+              "pro_team": "Buf",
+              "lineup_slot": "W/R/T",
+              "injury_status": "Q",
+              "injured": true,
+              "percent_owned": null
+            },
+            {
+              "player_id": "33966",
+              "player_key": "470.p.33966",
+              "name": "Chris Olave",
+              "position": "WR",
+              "pro_team": "NO",
               "lineup_slot": "BN",
               "injury_status": null,
               "injured": false,
               "percent_owned": null
             },
             {
-              "player_id": "30994",
-              "player_key": "470.p.30994",
-              "name": "DJ Moore",
+              "player_id": "33477",
+              "player_key": "470.p.33477",
+              "name": "Nico Collins",
               "position": "WR",
-              "pro_team": "Buf",
+              "pro_team": "Hou",
               "lineup_slot": "BN",
-              "injury_status": "Q",
-              "injured": true,
+              "injury_status": null,
+              "injured": false,
               "percent_owned": null
             },
             {
-              "player_id": "40234",
-              "player_key": "470.p.40234",
-              "name": "Parker Washington",
-              "position": "WR",
-              "pro_team": "Jax",
+              "player_id": "25812",
+              "player_key": "470.p.25812",
+              "name": "Kirk Cousins",
+              "position": "QB",
+              "pro_team": "LV",
               "lineup_slot": "BN",
               "injury_status": null,
               "injured": false,
@@ -4973,22 +4962,22 @@
               "percent_owned": null
             },
             {
-              "player_id": "100007",
-              "player_key": "470.p.100007",
-              "name": "Broncos",
+              "player_id": "100014",
+              "player_key": "470.p.100014",
+              "name": "Rams",
               "position": "DEF",
-              "pro_team": "Den",
+              "pro_team": "LAR",
               "lineup_slot": "DEF",
               "injury_status": null,
               "injured": false,
               "percent_owned": null
             },
             {
-              "player_id": "100014",
-              "player_key": "470.p.100014",
-              "name": "Rams",
+              "player_id": "100007",
+              "player_key": "470.p.100007",
+              "name": "Broncos",
               "position": "DEF",
-              "pro_team": "LAR",
+              "pro_team": "Den",
               "lineup_slot": "BN",
               "injury_status": null,
               "injured": false,
@@ -5148,7 +5137,7 @@
               "position": "RB",
               "pro_team": "Atl",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -5170,7 +5159,7 @@
               "position": "WR",
               "pro_team": "TB",
               "lineup_slot": "IR",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -5328,7 +5317,7 @@
               "position": "RB",
               "pro_team": "NYJ",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -5383,7 +5372,7 @@
               "position": "WR",
               "pro_team": "KC",
               "lineup_slot": "IR",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -5754,8 +5743,8 @@
               "position": "RB",
               "pro_team": "Phi",
               "lineup_slot": "BN",
-              "injury_status": null,
-              "injured": false,
+              "injury_status": "Q",
+              "injured": true,
               "percent_owned": null
             },
             {
@@ -5901,7 +5890,7 @@
               "position": "RB",
               "pro_team": "Ari",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -5934,7 +5923,7 @@
               "position": "RB",
               "pro_team": "Hou",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -5998,14 +5987,14 @@
           "is_me": false,
           "roster": [
             {
-              "player_id": "40030",
-              "player_key": "470.p.40030",
-              "name": "C.J. Stroud",
+              "player_id": "31002",
+              "player_key": "470.p.31002",
+              "name": "Lamar Jackson",
               "position": "QB",
-              "pro_team": "Hou",
+              "pro_team": "Bal",
               "lineup_slot": "QB",
-              "injury_status": null,
-              "injured": false,
+              "injury_status": "Q",
+              "injured": true,
               "percent_owned": null
             },
             {
@@ -6020,11 +6009,11 @@
               "percent_owned": null
             },
             {
-              "player_id": "34107",
-              "player_key": "470.p.34107",
-              "name": "Tyler Allgeier",
+              "player_id": "41900",
+              "player_key": "470.p.41900",
+              "name": "Bhayshul Tuten",
               "position": "RB",
-              "pro_team": "Ari",
+              "pro_team": "Jax",
               "lineup_slot": "RB",
               "injury_status": null,
               "injured": false,
@@ -6053,11 +6042,11 @@
               "percent_owned": null
             },
             {
-              "player_id": "30259",
-              "player_key": "470.p.30259",
-              "name": "George Kittle",
+              "player_id": "40064",
+              "player_key": "470.p.40064",
+              "name": "Sam LaPorta",
               "position": "TE",
-              "pro_team": "SF",
+              "pro_team": "Det",
               "lineup_slot": "TE",
               "injury_status": null,
               "injured": false,
@@ -6086,24 +6075,46 @@
               "percent_owned": null
             },
             {
+              "player_id": "34107",
+              "player_key": "470.p.34107",
+              "name": "Tyler Allgeier",
+              "position": "RB",
+              "pro_team": "Ari",
+              "lineup_slot": "BN",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": null
+            },
+            {
+              "player_id": "30259",
+              "player_key": "470.p.30259",
+              "name": "George Kittle",
+              "position": "TE",
+              "pro_team": "SF",
+              "lineup_slot": "BN",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": null
+            },
+            {
+              "player_id": "40030",
+              "player_key": "470.p.40030",
+              "name": "C.J. Stroud",
+              "position": "QB",
+              "pro_team": "Hou",
+              "lineup_slot": "BN",
+              "injury_status": null,
+              "injured": false,
+              "percent_owned": null
+            },
+            {
               "player_id": "33398",
               "player_key": "470.p.33398",
               "name": "DeVonta Smith",
               "position": "WR",
               "pro_team": "Phi",
               "lineup_slot": "BN",
-              "injury_status": "O",
-              "injured": true,
-              "percent_owned": null
-            },
-            {
-              "player_id": "31002",
-              "player_key": "470.p.31002",
-              "name": "Lamar Jackson",
-              "position": "QB",
-              "pro_team": "Bal",
-              "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -6125,30 +6136,8 @@
               "position": "WR",
               "pro_team": "SF",
               "lineup_slot": "BN",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
-              "percent_owned": null
-            },
-            {
-              "player_id": "41900",
-              "player_key": "470.p.41900",
-              "name": "Bhayshul Tuten",
-              "position": "RB",
-              "pro_team": "Jax",
-              "lineup_slot": "BN",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": null
-            },
-            {
-              "player_id": "40064",
-              "player_key": "470.p.40064",
-              "name": "Sam LaPorta",
-              "position": "TE",
-              "pro_team": "Det",
-              "lineup_slot": "BN",
-              "injury_status": null,
-              "injured": false,
               "percent_owned": null
             },
             {
@@ -6158,7 +6147,7 @@
               "position": "RB",
               "pro_team": "Chi",
               "lineup_slot": "IR",
-              "injury_status": "O",
+              "injury_status": "Q",
               "injured": true,
               "percent_owned": null
             },
@@ -6553,7 +6542,7 @@
           "position": "WR",
           "pro_team": "SF",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -6817,7 +6806,7 @@
           "position": "WR",
           "pro_team": "Phi",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -6828,7 +6817,7 @@
           "position": "QB",
           "pro_team": "Sea",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -7114,7 +7103,7 @@
           "position": "RB",
           "pro_team": "NYG",
           "lineup_slot": null,
-          "injury_status": "Q",
+          "injury_status": "O",
           "injured": true,
           "percent_owned": null
         },
@@ -8016,7 +8005,7 @@
           "position": "RB",
           "pro_team": "Ten",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -8126,7 +8115,7 @@
           "position": "TE",
           "pro_team": "NYG",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
@@ -8302,7 +8291,7 @@
           "position": "WR",
           "pro_team": "Dal",
           "lineup_slot": null,
-          "injury_status": "O",
+          "injury_status": "Q",
           "injured": true,
           "percent_owned": null
         },
