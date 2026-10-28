@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-10-27T18:30:45.566646+00:00",
+  "generated": "2026-10-28T11:18:34.398200+00:00",
   "currentWeek": 8,
   "weeksRemaining": 10,
   "leagues": {
@@ -39270,7 +39270,7 @@
   "irReturns": {
     "windowDays": 28,
     "earlyRound": 6,
-    "asOf": "2026-10-27",
+    "asOf": "2026-10-28",
     "draftLeagues": [
       "inspire11",
       "miami",
@@ -39287,7 +39287,7 @@
         "return_date": "2026-11-01",
         "return_week": 8,
         "return_beyond_season": false,
-        "days_away": 5,
+        "days_away": 4,
         "best_round": null,
         "early": false,
         "pickup": true,
@@ -39316,7 +39316,7 @@
         "return_date": "2026-11-02",
         "return_week": 8,
         "return_beyond_season": false,
-        "days_away": 6,
+        "days_away": 5,
         "best_round": 4,
         "early": true,
         "pickup": false,
@@ -39367,7 +39367,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": 3,
         "early": true,
         "pickup": false,
@@ -39418,7 +39418,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": 7,
         "early": false,
         "pickup": false,
@@ -39465,7 +39465,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": 8,
         "early": false,
         "pickup": false,
@@ -39510,7 +39510,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39554,7 +39554,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39594,7 +39594,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": 12,
         "early": false,
         "pickup": false,
@@ -39634,7 +39634,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": null,
         "early": false,
         "pickup": true,
@@ -39663,7 +39663,7 @@
         "return_date": "2026-11-08",
         "return_week": 9,
         "return_beyond_season": false,
-        "days_away": 12,
+        "days_away": 11,
         "best_round": null,
         "early": false,
         "pickup": true,
@@ -39692,7 +39692,7 @@
         "return_date": "2026-11-15",
         "return_week": 10,
         "return_beyond_season": false,
-        "days_away": 19,
+        "days_away": 18,
         "best_round": 6,
         "early": true,
         "pickup": false,
@@ -39739,7 +39739,7 @@
         "return_date": "2026-11-22",
         "return_week": 11,
         "return_beyond_season": false,
-        "days_away": 26,
+        "days_away": 25,
         "best_round": 9,
         "early": false,
         "pickup": false,
@@ -39784,7 +39784,7 @@
         "return_date": "2026-11-22",
         "return_week": 11,
         "return_beyond_season": false,
-        "days_away": 26,
+        "days_away": 25,
         "best_round": 11,
         "early": false,
         "pickup": false,
@@ -39824,7 +39824,7 @@
         "return_date": "2026-11-23",
         "return_week": 11,
         "return_beyond_season": false,
-        "days_away": 27,
+        "days_away": 26,
         "best_round": 8,
         "early": false,
         "pickup": false,
@@ -39864,6 +39864,57 @@
           "inspire11": {
             "state": "rostered",
             "team": "34=GOAT (Bonnet\u2019s Team)",
+            "slot": "IR"
+          }
+        }
+      },
+      {
+        "name": "Davante Adams",
+        "pos": "WR",
+        "pro_team": "LAR",
+        "return_date": "2026-11-25",
+        "return_week": 12,
+        "return_beyond_season": false,
+        "days_away": 28,
+        "best_round": 3,
+        "early": true,
+        "pickup": false,
+        "drafts": {
+          "inspire11": {
+            "round": 3,
+            "overall": 27,
+            "keeper": false
+          },
+          "miami": {
+            "round": 8,
+            "overall": 58,
+            "keeper": false
+          },
+          "zimmer": {
+            "round": 3,
+            "overall": 34,
+            "keeper": false
+          }
+        },
+        "leagues": {
+          "kepners": {
+            "state": "rostered",
+            "team": "Dad\u2019s To The Bone",
+            "slot": "BN"
+          },
+          "miami": {
+            "state": "rostered",
+            "team": "Ya Boi",
+            "slot": "BN"
+          },
+          "zimmer": {
+            "state": "rostered",
+            "team": "DA BEARS FORCE ONE",
+            "slot": "BE"
+          },
+          "inspire11": {
+            "state": "rostered",
+            "team": "Mike D",
             "slot": "IR"
           }
         }

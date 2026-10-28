@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T15:37:31.315858+00:00",
+ "generated": "2026-10-28T11:18:34.296698+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -468,14 +468,14 @@
     {
      "add": {
       "id": "100030",
-      "name": "Jaguars",
+      "name": "Jacksonville",
       "position": "DEF"
      },
      "bid": 2,
      "date": 1791359700000,
      "drop": {
       "id": "100012",
-      "name": "Chiefs"
+      "name": "Kansas City"
      },
      "season": 2026,
      "source": "yahoo",
@@ -628,14 +628,14 @@
     {
      "add": {
       "id": "100017",
-      "name": "Patriots",
+      "name": "New England",
       "position": "DEF"
      },
      "bid": 6,
      "date": 1791964440000,
      "drop": {
       "id": "100003",
-      "name": "Bears"
+      "name": "Chicago"
      },
      "season": 2026,
      "source": "yahoo",
@@ -821,9 +821,106 @@
      "type": "WAIVER",
      "week": 7,
      "won": true
+    },
+    {
+     "add": {
+      "id": "34063",
+      "name": "Dameon Pierce",
+      "position": "RB"
+     },
+     "bid": 0,
+     "date": 1793174040000,
+     "drop": {
+      "id": "40108",
+      "name": "Kendre Miller"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100017",
+      "name": "Patriots",
+      "position": "DEF"
+     },
+     "bid": 3,
+     "date": 1793174040000,
+     "drop": {
+      "id": "100020",
+      "name": "Jets"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 9,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "40078",
+      "name": "Brenton Strange",
+      "position": "TE"
+     },
+     "bid": 4,
+     "date": 1793174040000,
+     "drop": {
+      "id": "42744",
+      "name": "Mike Washington Jr."
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 12,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "42697",
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "bid": 4,
+     "date": 1793174040000,
+     "drop": null,
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "42859",
+      "name": "Seth McGowan",
+      "position": "RB"
+     },
+     "bid": 5,
+     "date": 1793174040000,
+     "drop": {
+      "id": "34107",
+      "name": "Tyler Allgeier"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 12,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
     }
    ],
-   "complete_history": true,
+   "complete_history": false,
    "faab": true,
    "faab_pages_seen": 1,
    "free_agent_adds": [
@@ -1373,13 +1470,13 @@
     {
      "add": {
       "id": "100006",
-      "name": "Cowboys",
+      "name": "Dallas",
       "position": "DEF"
      },
      "date": 1791364980000,
      "drop": {
       "id": "100002",
-      "name": "Bills"
+      "name": "Buffalo"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1509,7 +1606,7 @@
      "date": 1791727440000,
      "drop": {
       "id": "100033",
-      "name": "Ravens"
+      "name": "Baltimore"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1537,13 +1634,13 @@
     {
      "add": {
       "id": "100001",
-      "name": "Falcons",
+      "name": "Atlanta",
       "position": "DEF"
      },
      "date": 1791733440000,
      "drop": {
       "id": "100018",
-      "name": "Saints"
+      "name": "New Orleans"
      },
      "season": 2026,
      "source": "yahoo",
@@ -1999,12 +2096,12 @@
      "week": 7
     }
    ],
-   "newest": "2026-10-25T11:41:00-04:00",
+   "newest": "2026-10-28T03:54:00-04:00",
    "oldest": "2026-09-08T19:39:00-04:00",
    "pages": 5,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 116,
+   "rows_seen": 124,
    "rows_unparsed": 2,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
@@ -2033,8 +2130,8 @@
      "waiver_rank": null
     },
     "12": {
-     "acquisitions": 13,
-     "faab_spent": 20,
+     "acquisitions": 15,
+     "faab_spent": 29,
      "manager": null,
      "team_id": 12,
      "team_name": "The Pickups",
@@ -2057,8 +2154,8 @@
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 8,
-     "faab_spent": 61,
+     "acquisitions": 10,
+     "faab_spent": 65,
      "manager": null,
      "team_id": 4,
      "team_name": "Dad\u2019s To The Bone",
@@ -2097,8 +2194,8 @@
      "waiver_rank": null
     },
     "9": {
-     "acquisitions": 18,
-     "faab_spent": 20,
+     "acquisitions": 19,
+     "faab_spent": 23,
      "manager": null,
      "team_id": 9,
      "team_name": "Ranus The Hiddeer",
