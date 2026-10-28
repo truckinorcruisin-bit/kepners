@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T11:18:50.278404+00:00",
+ "generated": "2026-10-28T11:22:25.878605+00:00",
  "leagues": {
   "kepners": {
    "budget": 100,
@@ -2740,6 +2740,126 @@
      "type": "WAIVER",
      "week": 7,
      "won": true
+    },
+    {
+     "add": {
+      "id": "42697",
+      "name": "Caleb Douglas",
+      "position": "WR"
+     },
+     "bid": 0,
+     "date": 1793171220000,
+     "drop": {
+      "id": "41097",
+      "name": "Devaughn Vele"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 5,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "40114",
+      "name": "Tre Tucker",
+      "position": "WR"
+     },
+     "bid": 3,
+     "date": 1793171220000,
+     "drop": {
+      "id": "40901",
+      "name": "Rome Odunze"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100004",
+      "name": "Bengals",
+      "position": "DEF"
+     },
+     "bid": 4,
+     "date": 1793171220000,
+     "drop": {
+      "id": "100034",
+      "name": "Texans"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 4,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "100030",
+      "name": "Jaguars",
+      "position": "DEF"
+     },
+     "bid": 5,
+     "date": 1793171220000,
+     "drop": {
+      "id": "100020",
+      "name": "Jets"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 7,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "29369",
+      "name": "Dak Prescott",
+      "position": "QB"
+     },
+     "bid": 8,
+     "date": 1793171220000,
+     "drop": {
+      "id": "42654",
+      "name": "Jadarian Price"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 5,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
+    },
+    {
+     "add": {
+      "id": "40075",
+      "name": "Zach Charbonnet",
+      "position": "RB"
+     },
+     "bid": 31,
+     "date": 1793171220000,
+     "drop": {
+      "id": "32725",
+      "name": "J.K. Dobbins"
+     },
+     "season": 2026,
+     "source": "yahoo",
+     "status": "EXECUTED",
+     "team_id": 1,
+     "type": "WAIVER",
+     "week": 8,
+     "won": true
     }
    ],
    "complete_history": true,
@@ -3462,18 +3582,18 @@
      "week": 7
     }
    ],
-   "newest": "2026-10-24T20:08:00-04:00",
+   "newest": "2026-10-28T03:07:00-04:00",
    "oldest": "2026-09-02T21:40:00-04:00",
    "pages": 4,
    "platform": "yahoo",
    "priorBudget": 100,
-   "rows_seen": 80,
+   "rows_seen": 88,
    "rows_unparsed": 2,
    "source": "yahoo transactions page (winning bids only)",
    "teams": {
     "1": {
-     "acquisitions": 12,
-     "faab_spent": 29,
+     "acquisitions": 13,
+     "faab_spent": 60,
      "manager": null,
      "team_id": 1,
      "team_name": "MakeMyTeamGreatAgain",
@@ -3496,16 +3616,16 @@
      "waiver_rank": null
     },
     "4": {
-     "acquisitions": 13,
-     "faab_spent": 45,
+     "acquisitions": 15,
+     "faab_spent": 52,
      "manager": null,
      "team_id": 4,
      "team_name": "Hannah Lee's Revenge",
      "waiver_rank": null
     },
     "5": {
-     "acquisitions": 10,
-     "faab_spent": 0,
+     "acquisitions": 12,
+     "faab_spent": 8,
      "manager": null,
      "team_id": 5,
      "team_name": "Ya Boi",
@@ -3520,8 +3640,8 @@
      "waiver_rank": null
     },
     "7": {
-     "acquisitions": 12,
-     "faab_spent": 12,
+     "acquisitions": 13,
+     "faab_spent": 17,
      "manager": null,
      "team_id": 7,
      "team_name": "Michael Scott's Team",
