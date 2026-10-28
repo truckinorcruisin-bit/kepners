@@ -1,30 +1,9 @@
 {
  "year": 2026,
- "generated": "2026-10-27T18:30:28.577679+00:00",
+ "generated": "2026-10-28T11:37:00.628622+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 997,
  "injuries": [
-  {
-   "id": 4036211,
-   "name": "DJ Turner",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-09-13"
-  },
-  {
-   "id": 4039358,
-   "name": "Patrick Taylor Jr.",
-   "pos": "RB",
-   "status": "QUESTIONABLE",
-   "ret": "2026-09-13"
-  },
-  {
-   "id": 3127306,
-   "name": "Dante Pettis",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-10-11"
-  },
   {
    "id": 3886809,
    "name": "Andre Baccellia",
@@ -110,13 +89,6 @@
    "ret": "2026-10-18"
   },
   {
-   "id": 3061612,
-   "name": "Jamal Agnew",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-10-18"
-  },
-  {
    "id": 3116385,
    "name": "Joe Mixon",
    "pos": "RB",
@@ -194,20 +166,6 @@
    "ret": "2026-10-18"
   },
   {
-   "id": 3116406,
-   "name": "Tyreek Hill",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-10-25"
-  },
-  {
-   "id": 4695883,
-   "name": "Jalen Coker",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-10-29"
-  },
-  {
    "id": 4701936,
    "name": "Matthew Golden",
    "pos": "WR",
@@ -261,13 +219,6 @@
    "name": "Beaux Collins",
    "pos": "WR",
    "status": "INJURY_RESERVE",
-   "ret": "2026-11-01"
-  },
-  {
-   "id": 4373030,
-   "name": "Ben Sims",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
   {
@@ -376,13 +327,6 @@
    "ret": "2026-11-01"
   },
   {
-   "id": 4432775,
-   "name": "Dont'e Thornton Jr.",
-   "pos": "WR",
-   "status": "INJURY_RESERVE",
-   "ret": "2026-11-01"
-  },
-  {
    "id": 4428850,
    "name": "Dontayvion Wicks",
    "pos": "WR",
@@ -393,13 +337,6 @@
    "id": 4567750,
    "name": "Emeka Egbuka",
    "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-01"
-  },
-  {
-   "id": 4427834,
-   "name": "Erick All Jr.",
-   "pos": "TE",
    "status": "QUESTIONABLE",
    "ret": "2026-11-01"
   },
@@ -649,6 +586,13 @@
    "ret": "2026-11-08"
   },
   {
+   "id": 4714365,
+   "name": "Carson Steele",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-08"
+  },
+  {
    "id": 3149687,
    "name": "Chris Brooks",
    "pos": "RB",
@@ -659,6 +603,20 @@
    "id": 3117251,
    "name": "Christian McCaffrey",
    "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-08"
+  },
+  {
+   "id": 4036211,
+   "name": "DJ Turner",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-08"
+  },
+  {
+   "id": 3127306,
+   "name": "Dante Pettis",
+   "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
@@ -695,6 +653,13 @@
    "name": "Isaac Guerendo",
    "pos": "RB",
    "status": "OUT",
+   "ret": "2026-11-08"
+  },
+  {
+   "id": 3061612,
+   "name": "Jamal Agnew",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
@@ -747,6 +712,13 @@
    "ret": "2026-11-08"
   },
   {
+   "id": 4039358,
+   "name": "Patrick Taylor Jr.",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-08"
+  },
+  {
    "id": 4039505,
    "name": "Reggie Gilliam",
    "pos": "RB",
@@ -779,6 +751,13 @@
    "name": "Travis Etienne Jr.",
    "pos": "RB",
    "status": "INJURY_RESERVE",
+   "ret": "2026-11-08"
+  },
+  {
+   "id": 3116406,
+   "name": "Tyreek Hill",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-08"
   },
   {
@@ -880,13 +859,6 @@
    "ret": "2026-11-25"
   },
   {
-   "id": 4714365,
-   "name": "Carson Steele",
-   "pos": "RB",
-   "status": "INJURY_RESERVE",
-   "ret": "2026-11-26"
-  },
-  {
    "id": 4362748,
    "name": "Tyler Badie",
    "pos": "RB",
@@ -918,7 +890,7 @@
    "id": 4360516,
    "name": "Tyrone Tracy Jr.",
    "pos": "RB",
-   "status": "OUT",
+   "status": "INJURY_RESERVE",
    "ret": "2026-12-06"
   },
   {
@@ -1048,6 +1020,13 @@
    "ret": "2027-02-15"
   },
   {
+   "id": 4427834,
+   "name": "Erick All Jr.",
+   "pos": "TE",
+   "status": "INJURY_RESERVE",
+   "ret": "2027-02-15"
+  },
+  {
    "id": 4426335,
    "name": "Graham Mertz",
    "pos": "QB",
@@ -1086,7 +1065,7 @@
    "id": 4692835,
    "name": "Jalen Brooks",
    "pos": "WR",
-   "status": "OUT",
+   "status": "INJURY_RESERVE",
    "ret": "2027-02-15"
   },
   {
