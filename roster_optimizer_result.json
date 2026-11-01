@@ -1,53 +1,35 @@
 {
-  "generated": "2026-09-21T14:28:19.832423+00:00",
+  "generated": "2026-11-01T16:36:34.922923+00:00",
   "budget": 200,
   "skill_budget": 198,
   "kdef_reserve": 2,
   "roster": [
     {
       "slot": "QB",
-      "id": "kyler-murray",
-      "name": "Kyler Murray",
+      "id": "joe-burrow",
+      "name": "Joe Burrow",
       "pos": "QB",
-      "team": "MIN",
-      "cost": 1,
-      "war": 24.4
+      "team": "CIN",
+      "cost": 9,
+      "war": 56.5
     },
     {
       "slot": "RB",
-      "id": "chuba-hubbard",
-      "name": "Chuba Hubbard",
+      "id": "bucky-irving",
+      "name": "Bucky Irving",
       "pos": "RB",
-      "team": "CAR",
+      "team": "TB",
+      "cost": 11,
+      "war": 55.2
+    },
+    {
+      "slot": "RB",
+      "id": "tony-pollard",
+      "name": "Tony Pollard",
+      "pos": "RB",
+      "team": "TEN",
       "cost": 3,
-      "war": 25.4
-    },
-    {
-      "slot": "RB",
-      "id": "derrick-henry",
-      "name": "Derrick Henry",
-      "pos": "RB",
-      "team": "BAL",
-      "cost": 39,
-      "war": 106.2
-    },
-    {
-      "slot": "WR",
-      "id": "christian-watson",
-      "name": "Christian Watson",
-      "pos": "WR",
-      "team": "GB",
-      "cost": 5,
-      "war": 39.4
-    },
-    {
-      "slot": "WR",
-      "id": "jalen-coker",
-      "name": "Jalen Coker",
-      "pos": "WR",
-      "team": "CAR",
-      "cost": 2,
-      "war": 15.1
+      "war": 37.5
     },
     {
       "slot": "WR",
@@ -55,44 +37,80 @@
       "name": "Parker Washington",
       "pos": "WR",
       "team": "JAX",
-      "cost": 5,
-      "war": 38.1
+      "cost": 9,
+      "war": 61.7
+    },
+    {
+      "slot": "WR",
+      "id": "jalen-coker",
+      "name": "Jalen Coker",
+      "pos": "WR",
+      "team": "CAR",
+      "cost": 3,
+      "war": 34.4
+    },
+    {
+      "slot": "WR",
+      "id": "d-j-moore",
+      "name": "D.J. Moore",
+      "pos": "WR",
+      "team": "BUF",
+      "cost": 6,
+      "war": 28.3
     },
     {
       "slot": "TE",
-      "id": "sam-laporta",
-      "name": "Sam LaPorta",
+      "id": "george-kittle",
+      "name": "George Kittle",
       "pos": "TE",
-      "team": "DET",
-      "cost": 4,
-      "war": 25.5
+      "team": "SF",
+      "cost": 9,
+      "war": 39.3
     },
     {
       "slot": "FLEX",
-      "id": "cam-skattebo",
-      "name": "Cam Skattebo",
+      "id": "zach-charbonnet",
+      "name": "Zach Charbonnet",
       "pos": "RB",
-      "team": "NYG",
-      "cost": 14,
-      "war": 47.9
+      "team": "SEA",
+      "cost": 1,
+      "war": 34.0
     },
     {
       "slot": "BEN",
-      "id": "bucky-irving",
-      "name": "Bucky Irving",
+      "id": "kenneth-walker",
+      "name": "Kenneth Walker",
       "pos": "RB",
-      "team": "TB",
-      "cost": 11,
-      "war": 59.8
+      "team": "KC",
+      "cost": 50,
+      "war": 117.9
     },
     {
       "slot": "BEN",
-      "id": "jaxson-dart",
-      "name": "Jaxson Dart",
+      "id": "trevor-lawrence",
+      "name": "Trevor Lawrence",
       "pos": "QB",
-      "team": "NYG",
+      "team": "JAX",
       "cost": 5,
-      "war": 36.4
+      "war": 53.7
+    },
+    {
+      "slot": "BEN",
+      "id": "jared-goff",
+      "name": "Jared Goff",
+      "pos": "QB",
+      "team": "DET",
+      "cost": 3,
+      "war": 31.5
+    },
+    {
+      "slot": "BEN",
+      "id": "jayden-daniels",
+      "name": "Jayden Daniels",
+      "pos": "QB",
+      "team": "WAS",
+      "cost": 8,
+      "war": 64.7
     },
     {
       "slot": "BEN",
@@ -100,38 +118,20 @@
       "name": "Jahmyr Gibbs",
       "pos": "RB",
       "team": "DET",
-      "cost": 63,
-      "war": 187.9
+      "cost": 71,
+      "war": 147.3
     },
     {
       "slot": "BEN",
-      "id": "isaiah-likely",
-      "name": "Isaiah Likely",
-      "pos": "TE",
-      "team": "NYG",
-      "cost": 4,
-      "war": 28.9
-    },
-    {
-      "slot": "BEN",
-      "id": "george-kittle",
-      "name": "George Kittle",
-      "pos": "TE",
-      "team": "SF",
-      "cost": 4,
-      "war": 35.8
-    },
-    {
-      "slot": "BEN",
-      "id": "de-von-achane",
-      "name": "De'Von Achane",
+      "id": "chuba-hubbard",
+      "name": "Chuba Hubbard",
       "pos": "RB",
-      "team": "MIA",
-      "cost": 38,
-      "war": 101.0
+      "team": "CAR",
+      "cost": 10,
+      "war": 55.8
     }
   ],
-  "total_war": 771.8,
+  "total_war": 817.8,
   "total_cost": 198,
   "budget_remaining": 0,
   "assumptions": [
