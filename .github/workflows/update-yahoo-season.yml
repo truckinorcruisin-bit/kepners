@@ -1,0 +1,85 @@
+name: Update Yahoo Season Detail (Matchups + Lineups + Trades)
+
+# Pulls what the roster/standings pull doesn't: weekly matchup scores, remaining schedule, each
+# team's starters-vs-bench points, trades, playoff settings -- plus derived luck / lineup-efficiency
+# numbers. Output: yahoo_season_<year>.json. Read-only against Yahoo.
+#
+# Tuesday 14:00 UTC, an hour AFTER Update In-Season Data (13:00), so the two never refresh the Yahoo
+# token at the same moment (Yahoo can rotate the refresh token on any refresh; two overlapping runs
+# would leave one holding a dead token). Completed weeks are cached in the output file, so a weekly run
+# only fetches the newest week. Run manually with FORCE=1 to refetch everything.
+on:
+  schedule:
+    - cron: '0 14 * * 2'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year'
+        required: false
+        default: '2026'
+      force:
+        description: 'Refetch every week instead of using the cache (1 = yes)'
+        required: false
+        default: '0'
+
+concurrency:
+  group: yahoo-api
+  cancel-in-progress: false
+
+jobs:
+  pull-season:
+    runs-on: ubuntu-latest
+    env:
+      YEAR: ${{ github.event.inputs.year || '2026' }}
+      FORCE: ${{ github.event.inputs.force || '0' }}
+      YAHOO_CLIENT_ID: ${{ secrets.YAHOO_CLIENT_ID }}
+      YAHOO_CLIENT_SECRET: ${{ secrets.YAHOO_CLIENT_SECRET }}
+      YAHOO_REFRESH_TOKEN: ${{ secrets.YAHOO_REFRESH_TOKEN }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Pull Yahoo season detail
+        id: pull_yahoo
+        run: |
+          set -o pipefail
+          python yahoo_season_pull.py "$YEAR" 2>&1 | tee season_run.log
+
+      # Same rotated-token handling as the in-season workflow.
+      - name: Persist rotated Yahoo refresh token
+        if: always() && steps.pull_yahoo.outputs.refresh_token != ''
+        env:
+          GH_TOKEN: ${{ secrets.GH_SECRETS_PAT }}
+        run: |
+          echo -n "${{ steps.pull_yahoo.outputs.refresh_token }}" | gh secret set YAHOO_REFRESH_TOKEN --repo "${{ github.repository }}"
+
+      - name: Commit updated file
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "yahoo_season_${YEAR}.json"
+          git diff --staged --quiet && { echo "Nothing changed."; exit 0; }
+          git commit -q -m "Update Yahoo season detail for ${YEAR}"
+          for i in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then echo "Pushed (attempt $i)."; exit 0; fi
+            echo "Push rejected -- rebasing and retrying ($i/5)..."
+            git pull -q --rebase origin main
+          done
+          echo "::error::git push failed after 5 attempts."
+          exit 1
+
+      - name: Upload run log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: yahoo-season-run-log
+          path: season_run.log
+          if-no-files-found: ignore
