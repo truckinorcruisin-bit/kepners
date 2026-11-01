@@ -382,6 +382,41 @@ def derive_schedule(teams, weeks, avg_pf):
     return sched
 
 
+
+# ---------------------------------------------------------------------------
+# Draft results (fetched once, then cached -- a finished draft never changes)
+# ---------------------------------------------------------------------------
+def pull_draft(lk, prior_draft):
+    if prior_draft and len(prior_draft) >= 50:
+        print(f"  draft: {len(prior_draft)} picks (cached)")
+        return prior_draft
+    data = get(f"league/{lk}/draftresults")
+    if not data:
+        return prior_draft or []
+    picks = []
+    for entry in numbered(find_key(data, "draft_results")):
+        dr = entry.get("draft_result") if isinstance(entry, dict) else None
+        if dr:
+            picks.append({"round": _int(dr.get("round")), "pick": _int(dr.get("pick")),
+                          "team_id": team_id_of(dr.get("team_key")), "player_key": dr.get("player_key")})
+    keys = [p["player_key"] for p in picks if p.get("player_key")]
+    info = {}
+    for i in range(0, len(keys), PAGE):
+        chunk = keys[i:i + PAGE]
+        pdata = get(f"league/{lk}/players;player_keys={','.join(chunk)}")
+        for pl in numbered(find_key(pdata, "players")) if pdata else []:
+            p = flatten(pl.get("player", pl))
+            nm = p.get("name") or {}
+            info[p.get("player_key")] = {
+                "player": nm.get("full") if isinstance(nm, dict) else nm,
+                "pos": (p.get("display_position") or "").upper(),
+                "pro_team": p.get("editorial_team_abbr"),
+            }
+    for p in picks:
+        p.update(info.get(p["player_key"], {}))
+    print(f"  draft: {len(picks)} picks pulled, {len(info)} players named")
+    return picks
+
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -447,6 +482,13 @@ def pull_league(key, meta, prior):
         teams[tid]["remaining_schedule"] = schedule[tid]
         teams[tid]["remaining_opp_avg_pf"] = round(sum(opps) / len(opps), 2) if opps else None
 
+    print(f"[{key}] draft...")
+    try:
+        draft = pull_draft(lk, prior.get("draft"))
+    except Exception as e:                                      # noqa: BLE001
+        print(f"  ::warning::draft pull failed ({e!r}); continuing without it.")
+        draft = prior.get("draft") or []
+
     print(f"[{key}] trades...")
     trades = pull_trades(lk)
     print(f"  {len(trades)} trades")
@@ -461,6 +503,7 @@ def pull_league(key, meta, prior):
         "weeks": weeks,
         "lineups": lineups,
         "trades": trades,
+        "draft": draft,
     }
 
 
