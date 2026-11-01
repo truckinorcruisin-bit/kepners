@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated_from": "2026-11-01T17:12:24.364746+00:00",
+ "generated_from": "2026-11-01T17:28:34.031664+00:00",
  "leagues": {
   "kepners": {
    "league_name": "Kepners Keepers",
@@ -3144,7 +3144,1183 @@
      "points_started_for_old_team": 0,
      "starts_for_old_team": 0
     }
-   ]
+   ],
+   "mvp_detail": [
+    {
+     "team_id": "1",
+     "team": "Football Guy's Guy",
+     "player": "Parker Washington",
+     "pos": "WR",
+     "starts": 6,
+     "points": 65.9,
+     "ppg": 10.98,
+     "positional_avg_per_start": 8.61,
+     "above_avg_total": 14.26,
+     "above_avg_per_start": 2.38,
+     "pct_above_avg": 27.62,
+     "share_of_team_points": 10.94
+    },
+    {
+     "team_id": "2",
+     "team": "BrowneyeVibeSesh",
+     "player": "Christian Watson",
+     "pos": "WR",
+     "starts": 7,
+     "points": 95.5,
+     "ppg": 13.64,
+     "positional_avg_per_start": 8.61,
+     "above_avg_total": 35.25,
+     "above_avg_per_start": 5.04,
+     "pct_above_avg": 58.52,
+     "share_of_team_points": 15.28
+    },
+    {
+     "team_id": "3",
+     "team": "Burrito",
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "starts": 6,
+     "points": 129.7,
+     "ppg": 21.62,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 55.74,
+     "above_avg_per_start": 9.29,
+     "pct_above_avg": 75.37,
+     "share_of_team_points": 22.15
+    },
+    {
+     "team_id": "4",
+     "team": "Dad\u2019s To The Bone",
+     "player": "Josh Allen",
+     "pos": "QB",
+     "starts": 6,
+     "points": 160.26,
+     "ppg": 26.71,
+     "positional_avg_per_start": 18.97,
+     "above_avg_total": 46.46,
+     "above_avg_per_start": 7.74,
+     "pct_above_avg": 40.83,
+     "share_of_team_points": 22.35
+    },
+    {
+     "team_id": "5",
+     "team": "Denim Like A DeJean",
+     "player": "Derrick Henry",
+     "pos": "RB",
+     "starts": 7,
+     "points": 112.7,
+     "ppg": 16.1,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 26.42,
+     "above_avg_per_start": 3.77,
+     "pct_above_avg": 30.62,
+     "share_of_team_points": 17.5
+    },
+    {
+     "team_id": "6",
+     "team": "Matty Dawg Pound",
+     "player": "Jonathan Taylor",
+     "pos": "RB",
+     "starts": 7,
+     "points": 120.5,
+     "ppg": 17.21,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 34.22,
+     "above_avg_per_start": 4.89,
+     "pct_above_avg": 39.66,
+     "share_of_team_points": 17.68
+    },
+    {
+     "team_id": "7",
+     "team": "Orson Welles",
+     "player": "Tony Pollard",
+     "pos": "RB",
+     "starts": 3,
+     "points": 54.1,
+     "ppg": 18.03,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 17.12,
+     "above_avg_per_start": 5.71,
+     "pct_above_avg": 46.3,
+     "share_of_team_points": 9.47
+    },
+    {
+     "team_id": "8",
+     "team": "Phony Grossi",
+     "player": "Jahmyr Gibbs",
+     "pos": "RB",
+     "starts": 6,
+     "points": 139.0,
+     "ppg": 23.17,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 65.04,
+     "above_avg_per_start": 10.84,
+     "pct_above_avg": 87.95,
+     "share_of_team_points": 21.3
+    },
+    {
+     "team_id": "9",
+     "team": "Ranus The Hiddeer",
+     "player": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "starts": 7,
+     "points": 138.16,
+     "ppg": 19.74,
+     "positional_avg_per_start": 8.61,
+     "above_avg_total": 77.91,
+     "above_avg_per_start": 11.13,
+     "pct_above_avg": 129.33,
+     "share_of_team_points": 19.57
+    },
+    {
+     "team_id": "10",
+     "team": "Shaq List",
+     "player": "Kyren Williams",
+     "pos": "RB",
+     "starts": 7,
+     "points": 105.1,
+     "ppg": 15.01,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 18.82,
+     "above_avg_per_start": 2.69,
+     "pct_above_avg": 21.81,
+     "share_of_team_points": 18.74
+    },
+    {
+     "team_id": "11",
+     "team": "The Herdsmen",
+     "player": "Steelers",
+     "pos": "DEF",
+     "starts": 4,
+     "points": 42.0,
+     "ppg": 10.5,
+     "positional_avg_per_start": 6.17,
+     "above_avg_total": 17.33,
+     "above_avg_per_start": 4.33,
+     "pct_above_avg": 70.27,
+     "share_of_team_points": 7.1
+    },
+    {
+     "team_id": "12",
+     "team": "The Pickups",
+     "player": "Bijan Robinson",
+     "pos": "RB",
+     "starts": 7,
+     "points": 120.7,
+     "ppg": 17.24,
+     "positional_avg_per_start": 12.33,
+     "above_avg_total": 34.42,
+     "above_avg_per_start": 4.92,
+     "pct_above_avg": 39.89,
+     "share_of_team_points": 15.67
+    }
+   ],
+   "keepers": [
+    {
+     "team_id": "1",
+     "team": "Football Guy's Guy",
+     "keepers": [
+      {
+       "player": "Chuba Hubbard",
+       "pos": "RB",
+       "cost_round": 7,
+       "adp_round": 8,
+       "season_points": 111.0,
+       "starts": 4,
+       "above_avg_per_start": -0.45,
+       "ros_per_week": 8.69,
+       "ros_pos_rank": "9 of 61"
+      }
+     ]
+    },
+    {
+     "team_id": "2",
+     "team": "BrowneyeVibeSesh",
+     "keepers": [
+      {
+       "player": "Blake Corum",
+       "pos": "RB",
+       "cost_round": 13,
+       "adp_round": 8,
+       "season_points": 59.5,
+       "starts": 6,
+       "above_avg_per_start": -3.31,
+       "ros_per_week": 5.36,
+       "ros_pos_rank": "29 of 61"
+      },
+      {
+       "player": "Brock Bowers",
+       "pos": "TE",
+       "cost_round": 6,
+       "adp_round": 2,
+       "season_points": 61.5,
+       "starts": 4,
+       "above_avg_per_start": 3.92,
+       "ros_per_week": 5.53,
+       "ros_pos_rank": "2 of 19"
+      }
+     ]
+    },
+    {
+     "team_id": "3",
+     "team": "Burrito",
+     "keepers": [
+      {
+       "player": "Drake Maye",
+       "pos": "QB",
+       "cost_round": 12,
+       "adp_round": 5,
+       "season_points": 138.46,
+       "starts": 3,
+       "above_avg_per_start": -5.89,
+       "ros_per_week": 12.98,
+       "ros_pos_rank": "5 of 22"
+      },
+      {
+       "player": "De'Von Achane",
+       "pos": "RB",
+       "cost_round": 6,
+       "adp_round": 2,
+       "season_points": 17.6,
+       "starts": 3,
+       "above_avg_per_start": -6.46,
+       "ros_per_week": 0.0,
+       "ros_pos_rank": "58 of 61"
+      }
+     ]
+    },
+    {
+     "team_id": "4",
+     "team": "Dad\u2019s To The Bone",
+     "keepers": [
+      {
+       "player": "Harold Fannin Jr.",
+       "pos": "TE",
+       "cost_round": 12,
+       "adp_round": null,
+       "season_points": 41.7,
+       "starts": 3,
+       "above_avg_per_start": -3.72,
+       "ros_per_week": 3.31,
+       "ros_pos_rank": "14 of 19"
+      },
+      {
+       "player": "Chase Brown",
+       "pos": "RB",
+       "cost_round": 5,
+       "adp_round": 2,
+       "season_points": 46.8,
+       "starts": 6,
+       "above_avg_per_start": -4.53,
+       "ros_per_week": 7.25,
+       "ros_pos_rank": "17 of 61"
+      }
+     ]
+    },
+    {
+     "team_id": "5",
+     "team": "Denim Like A DeJean",
+     "keepers": [
+      {
+       "player": "George Pickens",
+       "pos": "WR",
+       "cost_round": 2,
+       "adp_round": 3,
+       "season_points": 60.5,
+       "starts": 7,
+       "above_avg_per_start": 0.04,
+       "ros_per_week": 4.99,
+       "ros_pos_rank": "27 of 68"
+      }
+     ]
+    },
+    {
+     "team_id": "6",
+     "team": "Matty Dawg Pound",
+     "keepers": [
+      {
+       "player": "Nico Collins",
+       "pos": "WR",
+       "cost_round": 5,
+       "adp_round": 2,
+       "season_points": 52.1,
+       "starts": 5,
+       "above_avg_per_start": 1.81,
+       "ros_per_week": 5.49,
+       "ros_pos_rank": "19 of 68"
+      },
+      {
+       "player": "Rico Dowdle",
+       "pos": "RB",
+       "cost_round": 13,
+       "adp_round": 7,
+       "season_points": 20.0,
+       "starts": 2,
+       "above_avg_per_start": -9.08,
+       "ros_per_week": 3.96,
+       "ros_pos_rank": "38 of 61"
+      }
+     ]
+    },
+    {
+     "team_id": "7",
+     "team": "Orson Welles",
+     "keepers": [
+      {
+       "player": "Rashee Rice",
+       "pos": "WR",
+       "cost_round": 4,
+       "adp_round": 3,
+       "season_points": 25.0,
+       "starts": 4,
+       "above_avg_per_start": -2.36,
+       "ros_per_week": 5.14,
+       "ros_pos_rank": "24 of 68"
+      },
+      {
+       "player": "Travis Etienne Jr.",
+       "pos": "RB",
+       "cost_round": null,
+       "adp_round": null,
+       "season_points": 19.9,
+       "starts": 1,
+       "above_avg_per_start": -4.53,
+       "ros_per_week": 4.55,
+       "ros_pos_rank": "34 of 61"
+      }
+     ]
+    },
+    {
+     "team_id": "8",
+     "team": "Phony Grossi",
+     "keepers": [
+      {
+       "player": "Cam Skattebo",
+       "pos": "RB",
+       "cost_round": 6,
+       "adp_round": 4,
+       "season_points": 59.4,
+       "starts": 7,
+       "above_avg_per_start": -3.84,
+       "ros_per_week": 5.68,
+       "ros_pos_rank": "24 of 61"
+      }
+     ]
+    },
+    {
+     "team_id": "9",
+     "team": "Ranus The Hiddeer",
+     "keepers": [
+      {
+       "player": "Dak Prescott",
+       "pos": "QB",
+       "cost_round": 9,
+       "adp_round": 7,
+       "season_points": 128.14,
+       "starts": 3,
+       "above_avg_per_start": -0.03,
+       "ros_per_week": 10.29,
+       "ros_pos_rank": "13 of 22"
+      },
+      {
+       "player": "Jaxon Smith-Njigba",
+       "pos": "WR",
+       "cost_round": 1,
+       "adp_round": 1,
+       "season_points": 138.16,
+       "starts": 7,
+       "above_avg_per_start": 11.13,
+       "ros_per_week": 8.24,
+       "ros_pos_rank": "3 of 68"
+      }
+     ]
+    },
+    {
+     "team_id": "10",
+     "team": "Shaq List",
+     "keepers": [
+      {
+       "player": "Kyle Pitts Sr.",
+       "pos": "TE",
+       "cost_round": 12,
+       "adp_round": null,
+       "season_points": 43.1,
+       "starts": 7,
+       "above_avg_per_start": -0.89,
+       "ros_per_week": 3.89,
+       "ros_pos_rank": "8 of 19"
+      },
+      {
+       "player": "Alec Pierce",
+       "pos": "WR",
+       "cost_round": 13,
+       "adp_round": 8,
+       "season_points": 7.2,
+       "starts": 1,
+       "above_avg_per_start": -7.51,
+       "ros_per_week": 2.18,
+       "ros_pos_rank": "58 of 68"
+      }
+     ]
+    },
+    {
+     "team_id": "11",
+     "team": "The Herdsmen",
+     "keepers": [
+      {
+       "player": "Javonte Williams",
+       "pos": "RB",
+       "cost_round": 6,
+       "adp_round": 3,
+       "season_points": 111.5,
+       "starts": 6,
+       "above_avg_per_start": 1.87,
+       "ros_per_week": 8.82,
+       "ros_pos_rank": "7 of 61"
+      },
+      {
+       "player": "Colston Loveland",
+       "pos": "TE",
+       "cost_round": 9,
+       "adp_round": 4,
+       "season_points": 36.4,
+       "starts": 7,
+       "above_avg_per_start": -1.85,
+       "ros_per_week": 4.72,
+       "ros_pos_rank": "6 of 19"
+      }
+     ]
+    },
+    {
+     "team_id": "12",
+     "team": "The Pickups",
+     "keepers": [
+      {
+       "player": "Bucky Irving",
+       "pos": "RB",
+       "cost_round": 8,
+       "adp_round": 5,
+       "season_points": 91.6,
+       "starts": 7,
+       "above_avg_per_start": 0.76,
+       "ros_per_week": 8.63,
+       "ros_pos_rank": "10 of 61"
+      },
+      {
+       "player": "Luther Burden III",
+       "pos": "WR",
+       "cost_round": 11,
+       "adp_round": null,
+       "season_points": 62.0,
+       "starts": 6,
+       "above_avg_per_start": -0.41,
+       "ros_per_week": 5.46,
+       "ros_pos_rank": "20 of 68"
+      }
+     ]
+    }
+   ],
+   "trade_ideas": [
+    {
+     "team_id": "1",
+     "team": "Football Guy's Guy",
+     "trade": {
+      "give": [
+       "Brenton Strange"
+      ],
+      "get": [
+       "Michael Wilson"
+      ],
+      "give_pos": [
+       "TE"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.0,
+      "their_gain_per_week": 0.43,
+      "kind": "pickups-neutral"
+     }
+    },
+    {
+     "team_id": "2",
+     "team": "BrowneyeVibeSesh",
+     "trade": {
+      "give": [
+       "Luther Burden III",
+       "Bryce Young"
+      ],
+      "get": [
+       "Caleb Williams",
+       "Christian Watson"
+      ],
+      "give_pos": [
+       "WR",
+       "QB"
+      ],
+      "get_pos": [
+       "QB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.33,
+      "their_gain_per_week": 0.18,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "3",
+     "team": "Burrito",
+     "trade": {
+      "give": [
+       "Luther Burden III",
+       "J.K. Dobbins"
+      ],
+      "get": [
+       "Kenny Gainwell",
+       "DJ Moore"
+      ],
+      "give_pos": [
+       "WR",
+       "RB"
+      ],
+      "get_pos": [
+       "RB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.15,
+      "their_gain_per_week": 0.24,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "4",
+     "team": "Dad\u2019s To The Bone",
+     "trade": {
+      "give": [
+       "George Kittle",
+       "Chris Olave"
+      ],
+      "get": [
+       "Josh Jacobs",
+       "Zay Flowers"
+      ],
+      "give_pos": [
+       "TE",
+       "WR"
+      ],
+      "get_pos": [
+       "RB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.13,
+      "their_gain_per_week": 0.37,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "5",
+     "team": "Denim Like A DeJean",
+     "trade": null
+    },
+    {
+     "team_id": "6",
+     "team": "Matty Dawg Pound",
+     "trade": {
+      "give": [
+       "Luther Burden III",
+       "Bryce Young"
+      ],
+      "get": [
+       "Deshaun Watson",
+       "Mike Evans"
+      ],
+      "give_pos": [
+       "WR",
+       "QB"
+      ],
+      "get_pos": [
+       "QB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.13,
+      "their_gain_per_week": 1.91,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "7",
+     "team": "Orson Welles",
+     "trade": {
+      "give": [
+       "Bryce Young"
+      ],
+      "get": [
+       "Patrick Mahomes"
+      ],
+      "give_pos": [
+       "QB"
+      ],
+      "get_pos": [
+       "QB"
+      ],
+      "my_gain_per_week": 0.0,
+      "their_gain_per_week": 0.66,
+      "kind": "pickups-neutral"
+     }
+    },
+    {
+     "team_id": "8",
+     "team": "Phony Grossi",
+     "trade": {
+      "give": [
+       "Brenton Strange",
+       "Chris Olave"
+      ],
+      "get": [
+       "Denzel Boston",
+       "Dallas Goedert"
+      ],
+      "give_pos": [
+       "TE",
+       "WR"
+      ],
+      "get_pos": [
+       "WR",
+       "TE"
+      ],
+      "my_gain_per_week": 0.11,
+      "their_gain_per_week": 0.77,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "9",
+     "team": "Ranus The Hiddeer",
+     "trade": {
+      "give": [
+       "Bryce Young"
+      ],
+      "get": [
+       "Dak Prescott"
+      ],
+      "give_pos": [
+       "QB"
+      ],
+      "get_pos": [
+       "QB"
+      ],
+      "my_gain_per_week": 0.0,
+      "their_gain_per_week": 0.2,
+      "kind": "pickups-neutral"
+     }
+    },
+    {
+     "team_id": "10",
+     "team": "Shaq List",
+     "trade": {
+      "give": [
+       "Luther Burden III",
+       "Malik Nabers"
+      ],
+      "get": [
+       "Tyler Shough",
+       "Ja'Marr Chase"
+      ],
+      "give_pos": [
+       "WR",
+       "WR"
+      ],
+      "get_pos": [
+       "QB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.66,
+      "their_gain_per_week": 0.76,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "11",
+     "team": "The Herdsmen",
+     "trade": {
+      "give": [
+       "Bucky Irving",
+       "Bryce Young"
+      ],
+      "get": [
+       "Jordan Love",
+       "Javonte Williams"
+      ],
+      "give_pos": [
+       "RB",
+       "QB"
+      ],
+      "get_pos": [
+       "QB",
+       "RB"
+      ],
+      "my_gain_per_week": 0.19,
+      "their_gain_per_week": 1.0,
+      "kind": "win-win"
+     }
+    }
+   ],
+   "draft_value": [
+    {
+     "team_id": "1",
+     "team": "Football Guy's Guy",
+     "biggest_bust": {
+      "player": "Saquon Barkley",
+      "pos": "RB",
+      "round": 1,
+      "pick": 9,
+      "points": 32.1,
+      "peer_avg_points": 108.08,
+      "vs_peers": -75.98
+     },
+     "biggest_steal": {
+      "player": "Jaylen Warren",
+      "pos": "RB",
+      "round": 6,
+      "pick": 64,
+      "points": 95.5,
+      "peer_avg_points": 58.12,
+      "vs_peers": 37.38
+     }
+    },
+    {
+     "team_id": "2",
+     "team": "BrowneyeVibeSesh",
+     "biggest_bust": {
+      "player": "Kyler Murray",
+      "pos": "QB",
+      "round": 12,
+      "pick": 140,
+      "points": 53.68,
+      "peer_avg_points": 117.41,
+      "vs_peers": -63.73
+     },
+     "biggest_steal": {
+      "player": "Christian Watson",
+      "pos": "WR",
+      "round": 4,
+      "pick": 44,
+      "points": 104.8,
+      "peer_avg_points": 44.5,
+      "vs_peers": 60.3
+     }
+    },
+    {
+     "team_id": "3",
+     "team": "Burrito",
+     "biggest_bust": {
+      "player": "DJ Moore",
+      "pos": "WR",
+      "round": 3,
+      "pick": 34,
+      "points": 24.3,
+      "peer_avg_points": 64.25,
+      "vs_peers": -39.95
+     },
+     "biggest_steal": {
+      "player": "Matthew Stafford",
+      "pos": "QB",
+      "round": 9,
+      "pick": 106,
+      "points": 123.36,
+      "peer_avg_points": 74.43,
+      "vs_peers": 48.93
+     }
+    },
+    {
+     "team_id": "4",
+     "team": "Dad\u2019s To The Bone",
+     "biggest_bust": {
+      "player": "Baker Mayfield",
+      "pos": "QB",
+      "round": 14,
+      "pick": 163,
+      "points": 41.76,
+      "peer_avg_points": 120.45,
+      "vs_peers": -78.69
+     },
+     "biggest_steal": {
+      "player": "Zay Flowers",
+      "pos": "WR",
+      "round": 3,
+      "pick": 30,
+      "points": 82.2,
+      "peer_avg_points": 49.3,
+      "vs_peers": 32.9
+     }
+    },
+    {
+     "team_id": "5",
+     "team": "Denim Like A DeJean",
+     "biggest_bust": {
+      "player": "Bo Nix",
+      "pos": "QB",
+      "round": 10,
+      "pick": 114,
+      "points": 95.84,
+      "peer_avg_points": 123.15,
+      "vs_peers": -27.31
+     },
+     "biggest_steal": {
+      "player": "Alvin Kamara",
+      "pos": "RB",
+      "round": 13,
+      "pick": 151,
+      "points": 43.8,
+      "peer_avg_points": 18.0,
+      "vs_peers": 25.8
+     }
+    },
+    {
+     "team_id": "6",
+     "team": "Matty Dawg Pound",
+     "biggest_bust": {
+      "player": "KC Concepcion Jr.",
+      "pos": "WR",
+      "round": 7,
+      "pick": 76,
+      "points": 0.0,
+      "peer_avg_points": 27.11,
+      "vs_peers": -27.11
+     },
+     "biggest_steal": {
+      "player": "Jonathan Taylor",
+      "pos": "RB",
+      "round": 1,
+      "pick": 4,
+      "points": 120.5,
+      "peer_avg_points": 99.54,
+      "vs_peers": 20.96
+     }
+    },
+    {
+     "team_id": "7",
+     "team": "Orson Welles",
+     "biggest_bust": {
+      "player": "Colbie Young",
+      "pos": "WR",
+      "round": 15,
+      "pick": 176,
+      "points": 0.9,
+      "peer_avg_points": 22.93,
+      "vs_peers": -22.03
+     },
+     "biggest_steal": {
+      "player": "Brian Robinson Jr.",
+      "pos": "RB",
+      "round": 14,
+      "pick": 161,
+      "points": 48.1,
+      "peer_avg_points": 16.93,
+      "vs_peers": 31.18
+     }
+    },
+    {
+     "team_id": "8",
+     "team": "Phony Grossi",
+     "biggest_bust": {
+      "player": "Jordyn Tyson",
+      "pos": "WR",
+      "round": 11,
+      "pick": 121,
+      "points": 0.0,
+      "peer_avg_points": 38.38,
+      "vs_peers": -38.38
+     },
+     "biggest_steal": {
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "round": 1,
+      "pick": 1,
+      "points": 139.0,
+      "peer_avg_points": 97.22,
+      "vs_peers": 41.78
+     }
+    },
+    {
+     "team_id": "9",
+     "team": "Ranus The Hiddeer",
+     "biggest_bust": {
+      "player": "Zach Charbonnet",
+      "pos": "RB",
+      "round": 13,
+      "pick": 156,
+      "points": 0.0,
+      "peer_avg_points": 28.95,
+      "vs_peers": -28.95
+     },
+     "biggest_steal": {
+      "player": "D'Andre Swift",
+      "pos": "RB",
+      "round": 3,
+      "pick": 36,
+      "points": 100.8,
+      "peer_avg_points": 35.1,
+      "vs_peers": 65.7
+     }
+    },
+    {
+     "team_id": "10",
+     "team": "Shaq List",
+     "biggest_bust": {
+      "player": "Breece Hall",
+      "pos": "RB",
+      "round": 3,
+      "pick": 27,
+      "points": 32.5,
+      "peer_avg_points": 78.94,
+      "vs_peers": -46.44
+     },
+     "biggest_steal": {
+      "player": "Matthew Golden",
+      "pos": "WR",
+      "round": 9,
+      "pick": 99,
+      "points": 88.5,
+      "peer_avg_points": 33.26,
+      "vs_peers": 55.24
+     }
+    },
+    {
+     "team_id": "11",
+     "team": "The Herdsmen",
+     "biggest_bust": {
+      "player": "Jaxson Dart",
+      "pos": "QB",
+      "round": 7,
+      "pick": 83,
+      "points": 27.4,
+      "peer_avg_points": 97.37,
+      "vs_peers": -69.97
+     },
+     "biggest_steal": {
+      "player": "Jordan Love",
+      "pos": "QB",
+      "round": 14,
+      "pick": 158,
+      "points": 148.84,
+      "peer_avg_points": 88.2,
+      "vs_peers": 60.64
+     }
+    },
+    {
+     "team_id": "12",
+     "team": "The Pickups",
+     "biggest_bust": {
+      "player": "Jadarian Price",
+      "pos": "RB",
+      "round": 4,
+      "pick": 47,
+      "points": 10.0,
+      "peer_avg_points": 58.74,
+      "vs_peers": -48.74
+     },
+     "biggest_steal": {
+      "player": "Tre Tucker",
+      "pos": "WR",
+      "round": 12,
+      "pick": 143,
+      "points": 70.8,
+      "peer_avg_points": 18.05,
+      "vs_peers": 52.75
+     }
+    }
+   ],
+   "faab": {
+    "budget_assumed": true,
+    "complete_history": false,
+    "only_executed_claims_visible": true,
+    "by_team": [
+     {
+      "team_id": "12",
+      "team": "The Pickups",
+      "waiver_bids_won": 10,
+      "faab_spent": 29,
+      "faab_budget": 100,
+      "free_agent_adds": 5,
+      "big_bids": []
+     },
+     {
+      "team_id": "9",
+      "team": "Ranus The Hiddeer",
+      "waiver_bids_won": 9,
+      "faab_spent": 23,
+      "faab_budget": 100,
+      "free_agent_adds": 10,
+      "big_bids": []
+     },
+     {
+      "team_id": "4",
+      "team": "Dad\u2019s To The Bone",
+      "waiver_bids_won": 6,
+      "faab_spent": 65,
+      "faab_budget": 100,
+      "free_agent_adds": 4,
+      "big_bids": [
+       {
+        "player": "DeMario Douglas",
+        "pos": "WR",
+        "bid": 30,
+        "week": 7,
+        "starts": 1,
+        "points": 2.3,
+        "above_pos_avg": -6.31,
+        "points_per_dollar": 0.08
+       },
+       {
+        "player": "Omar Cooper Jr.",
+        "pos": "WR",
+        "bid": 20,
+        "week": 7,
+        "starts": 1,
+        "points": 17.5,
+        "above_pos_avg": 8.89,
+        "points_per_dollar": 0.88
+       }
+      ]
+     },
+     {
+      "team_id": "11",
+      "team": "The Herdsmen",
+      "waiver_bids_won": 6,
+      "faab_spent": 23,
+      "faab_budget": 100,
+      "free_agent_adds": 7,
+      "big_bids": []
+     },
+     {
+      "team_id": "5",
+      "team": "Denim Like A DeJean",
+      "waiver_bids_won": 4,
+      "faab_spent": 15,
+      "faab_budget": 100,
+      "free_agent_adds": 3,
+      "big_bids": [
+       {
+        "player": "Ollie Gordon II",
+        "pos": "RB",
+        "bid": 10,
+        "week": 4,
+        "starts": 1,
+        "points": 16.3,
+        "above_pos_avg": 3.97,
+        "points_per_dollar": 1.63
+       }
+      ]
+     },
+     {
+      "team_id": "8",
+      "team": "Phony Grossi",
+      "waiver_bids_won": 4,
+      "faab_spent": 31,
+      "faab_budget": 100,
+      "free_agent_adds": 6,
+      "big_bids": [
+       {
+        "player": "Will Reichard",
+        "pos": "K",
+        "bid": 15,
+        "week": 7,
+        "starts": 1,
+        "points": 13.0,
+        "above_pos_avg": 3.89,
+        "points_per_dollar": 0.87
+       }
+      ]
+     },
+     {
+      "team_id": "3",
+      "team": "Burrito",
+      "waiver_bids_won": 2,
+      "faab_spent": 32,
+      "faab_budget": 100,
+      "free_agent_adds": 6,
+      "big_bids": [
+       {
+        "player": "49ers",
+        "pos": "DEF",
+        "bid": 16,
+        "week": 2,
+        "starts": 6,
+        "points": 34.0,
+        "above_pos_avg": -3.0,
+        "points_per_dollar": 2.12
+       },
+       {
+        "player": "Tyrone Tracy Jr.",
+        "pos": "RB",
+        "bid": 16,
+        "week": 7,
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       }
+      ]
+     },
+     {
+      "team_id": "7",
+      "team": "Orson Welles",
+      "waiver_bids_won": 2,
+      "faab_spent": 21,
+      "faab_budget": 100,
+      "free_agent_adds": 4,
+      "big_bids": [
+       {
+        "player": "Kaelon Black",
+        "pos": "RB",
+        "bid": 21,
+        "week": 2,
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       }
+      ]
+     },
+     {
+      "team_id": "10",
+      "team": "Shaq List",
+      "waiver_bids_won": 2,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 3,
+      "big_bids": []
+     },
+     {
+      "team_id": "1",
+      "team": "Football Guy's Guy",
+      "waiver_bids_won": 1,
+      "faab_spent": 6,
+      "faab_budget": 100,
+      "free_agent_adds": 11,
+      "big_bids": []
+     },
+     {
+      "team_id": "2",
+      "team": "BrowneyeVibeSesh",
+      "waiver_bids_won": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 9,
+      "big_bids": []
+     },
+     {
+      "team_id": "6",
+      "team": "Matty Dawg Pound",
+      "waiver_bids_won": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 3,
+      "big_bids": []
+     }
+    ]
+   }
   },
   "miami": {
    "league_name": "Miami Domers",
@@ -5587,7 +6763,740 @@
      "points_started_for_old_team": 0,
      "starts_for_old_team": 0
     }
-   ]
+   ],
+   "mvp_detail": [
+    {
+     "team_id": "1",
+     "team": "MakeMyTeamGreatAgain",
+     "player": "Jonathan Taylor",
+     "pos": "RB",
+     "starts": 7,
+     "points": 122.5,
+     "ppg": 17.5,
+     "positional_avg_per_start": 13.1,
+     "above_avg_total": 30.8,
+     "above_avg_per_start": 4.4,
+     "pct_above_avg": 33.58,
+     "share_of_team_points": 17.67
+    },
+    {
+     "team_id": "2",
+     "team": "Monkey Business",
+     "player": "Jahmyr Gibbs",
+     "pos": "RB",
+     "starts": 6,
+     "points": 141.0,
+     "ppg": 23.5,
+     "positional_avg_per_start": 13.1,
+     "above_avg_total": 62.4,
+     "above_avg_per_start": 10.4,
+     "pct_above_avg": 79.38,
+     "share_of_team_points": 18.17
+    },
+    {
+     "team_id": "3",
+     "team": "Fogle\u2019s Moguls",
+     "player": "Bijan Robinson",
+     "pos": "RB",
+     "starts": 7,
+     "points": 120.7,
+     "ppg": 17.24,
+     "positional_avg_per_start": 13.1,
+     "above_avg_total": 29.0,
+     "above_avg_per_start": 4.14,
+     "pct_above_avg": 31.62,
+     "share_of_team_points": 16.31
+    },
+    {
+     "team_id": "4",
+     "team": "Hannah Lee's Revenge",
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "starts": 6,
+     "points": 129.7,
+     "ppg": 21.62,
+     "positional_avg_per_start": 13.1,
+     "above_avg_total": 51.1,
+     "above_avg_per_start": 8.52,
+     "pct_above_avg": 65.01,
+     "share_of_team_points": 15.79
+    },
+    {
+     "team_id": "5",
+     "team": "Ya Boi",
+     "player": "James Cook III",
+     "pos": "RB",
+     "starts": 6,
+     "points": 105.6,
+     "ppg": 17.6,
+     "positional_avg_per_start": 13.1,
+     "above_avg_total": 27.0,
+     "above_avg_per_start": 4.5,
+     "pct_above_avg": 34.35,
+     "share_of_team_points": 15.93
+    },
+    {
+     "team_id": "6",
+     "team": "Kevin Jack's Team",
+     "player": "Tony Pollard",
+     "pos": "RB",
+     "starts": 1,
+     "points": 33.5,
+     "ppg": 33.5,
+     "positional_avg_per_start": 13.1,
+     "above_avg_total": 20.4,
+     "above_avg_per_start": 20.4,
+     "pct_above_avg": 155.71,
+     "share_of_team_points": 4.48
+    },
+    {
+     "team_id": "7",
+     "team": "Michael Scott's Team",
+     "player": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "starts": 7,
+     "points": 138.16,
+     "ppg": 19.74,
+     "positional_avg_per_start": 9.99,
+     "above_avg_total": 68.23,
+     "above_avg_per_start": 9.75,
+     "pct_above_avg": 97.58,
+     "share_of_team_points": 19.12
+    },
+    {
+     "team_id": "8",
+     "team": "Ryan's Pierced Pigskin Posse",
+     "player": "CeeDee Lamb",
+     "pos": "WR",
+     "starts": 7,
+     "points": 102.5,
+     "ppg": 14.64,
+     "positional_avg_per_start": 9.99,
+     "above_avg_total": 32.57,
+     "above_avg_per_start": 4.65,
+     "pct_above_avg": 46.58,
+     "share_of_team_points": 14.33
+    }
+   ],
+   "keepers": [
+    {
+     "team_id": "1",
+     "team": "MakeMyTeamGreatAgain",
+     "keepers": [
+      {
+       "player": "Tyler Warren",
+       "pos": "TE",
+       "cost_round": null,
+       "adp_round": 5,
+       "season_points": 39.9,
+       "starts": 5,
+       "above_avg_per_start": 0.88,
+       "ros_per_week": 3.67,
+       "ros_pos_rank": "10 of 12"
+      }
+     ]
+    },
+    {
+     "team_id": "2",
+     "team": "Monkey Business",
+     "keepers": [
+      {
+       "player": "Bucky Irving",
+       "pos": "RB",
+       "cost_round": null,
+       "adp_round": 5,
+       "season_points": 91.6,
+       "starts": 3,
+       "above_avg_per_start": 6.03,
+       "ros_per_week": 8.63,
+       "ros_pos_rank": "10 of 46"
+      },
+      {
+       "player": "Chris Olave",
+       "pos": "WR",
+       "cost_round": null,
+       "adp_round": 3,
+       "season_points": 75.6,
+       "starts": 7,
+       "above_avg_per_start": 0.81,
+       "ros_per_week": 5.1,
+       "ros_pos_rank": "25 of 47"
+      }
+     ]
+    },
+    {
+     "team_id": "3",
+     "team": "Fogle\u2019s Moguls",
+     "keepers": [
+      {
+       "player": "Brock Bowers",
+       "pos": "TE",
+       "cost_round": null,
+       "adp_round": 2,
+       "season_points": 61.5,
+       "starts": 5,
+       "above_avg_per_start": 5.4,
+       "ros_per_week": 5.53,
+       "ros_pos_rank": "2 of 12"
+      },
+      {
+       "player": "Chase Brown",
+       "pos": "RB",
+       "cost_round": null,
+       "adp_round": 2,
+       "season_points": 46.8,
+       "starts": 6,
+       "above_avg_per_start": -5.13,
+       "ros_per_week": 7.25,
+       "ros_pos_rank": "17 of 46"
+      }
+     ]
+    },
+    {
+     "team_id": "4",
+     "team": "Hannah Lee's Revenge",
+     "keepers": [
+      {
+       "player": "Rashee Rice",
+       "pos": "WR",
+       "cost_round": null,
+       "adp_round": 3,
+       "season_points": 25.0,
+       "starts": 4,
+       "above_avg_per_start": -3.74,
+       "ros_per_week": 5.14,
+       "ros_pos_rank": "23 of 47"
+      }
+     ]
+    },
+    {
+     "team_id": "5",
+     "team": "Ya Boi",
+     "keepers": []
+    },
+    {
+     "team_id": "6",
+     "team": "Kevin Jack's Team",
+     "keepers": []
+    },
+    {
+     "team_id": "7",
+     "team": "Michael Scott's Team",
+     "keepers": [
+      {
+       "player": "Javonte Williams",
+       "pos": "RB",
+       "cost_round": null,
+       "adp_round": 3,
+       "season_points": 111.5,
+       "starts": 7,
+       "above_avg_per_start": 2.83,
+       "ros_per_week": 8.82,
+       "ros_pos_rank": "7 of 46"
+      },
+      {
+       "player": "Travis Etienne Jr.",
+       "pos": "RB",
+       "cost_round": null,
+       "adp_round": null,
+       "season_points": 19.9,
+       "starts": 1,
+       "above_avg_per_start": -5.3,
+       "ros_per_week": 4.55,
+       "ros_pos_rank": "34 of 46"
+      }
+     ]
+    },
+    {
+     "team_id": "8",
+     "team": "Ryan's Pierced Pigskin Posse",
+     "keepers": []
+    }
+   ],
+   "trade_ideas": [
+    {
+     "team_id": "1",
+     "team": "MakeMyTeamGreatAgain",
+     "trade": {
+      "give": [
+       "Josh Allen"
+      ],
+      "get": [
+       "Zay Flowers"
+      ],
+      "give_pos": [
+       "QB"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.26,
+      "their_gain_per_week": 2.52,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "2",
+     "team": "Monkey Business",
+     "trade": {
+      "give": [
+       "Braelon Allen",
+       "Christian Watson"
+      ],
+      "get": [
+       "DJ Moore",
+       "Nico Collins"
+      ],
+      "give_pos": [
+       "RB",
+       "WR"
+      ],
+      "get_pos": [
+       "WR",
+       "WR"
+      ],
+      "my_gain_per_week": 0.17,
+      "their_gain_per_week": 0.18,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "3",
+     "team": "Fogle\u2019s Moguls",
+     "trade": {
+      "give": [
+       "Braelon Allen",
+       "Ollie Gordon II"
+      ],
+      "get": [
+       "Justin Jefferson",
+       "Josh Jacobs"
+      ],
+      "give_pos": [
+       "RB",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "RB"
+      ],
+      "my_gain_per_week": 0.15,
+      "their_gain_per_week": 1.4,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "5",
+     "team": "Ya Boi",
+     "trade": {
+      "give": [
+       "Jordan Mason",
+       "Drake Maye"
+      ],
+      "get": [
+       "Tyler Shough",
+       "Travis Kelce"
+      ],
+      "give_pos": [
+       "RB",
+       "QB"
+      ],
+      "get_pos": [
+       "QB",
+       "TE"
+      ],
+      "my_gain_per_week": 0.12,
+      "their_gain_per_week": 3.97,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "6",
+     "team": "Kevin Jack's Team",
+     "trade": {
+      "give": [
+       "Josh Allen",
+       "Rashee Rice"
+      ],
+      "get": [
+       "Jalen Coker",
+       "Colston Loveland"
+      ],
+      "give_pos": [
+       "QB",
+       "WR"
+      ],
+      "get_pos": [
+       "WR",
+       "TE"
+      ],
+      "my_gain_per_week": 0.13,
+      "their_gain_per_week": 2.86,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "7",
+     "team": "Michael Scott's Team",
+     "trade": {
+      "give": [
+       "Braelon Allen",
+       "Ollie Gordon II"
+      ],
+      "get": [
+       "Saquon Barkley",
+       "Jaxon Smith-Njigba"
+      ],
+      "give_pos": [
+       "RB",
+       "RB"
+      ],
+      "get_pos": [
+       "RB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.1,
+      "their_gain_per_week": 0.18,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": "8",
+     "team": "Ryan's Pierced Pigskin Posse",
+     "trade": {
+      "give": [
+       "Josh Allen",
+       "Christian McCaffrey"
+      ],
+      "get": [
+       "Puka Nacua",
+       "George Kittle"
+      ],
+      "give_pos": [
+       "QB",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "TE"
+      ],
+      "my_gain_per_week": 0.19,
+      "their_gain_per_week": 2.46,
+      "kind": "win-win"
+     }
+    }
+   ],
+   "draft_value": [
+    {
+     "team_id": "1",
+     "team": "MakeMyTeamGreatAgain",
+     "biggest_bust": {
+      "player": "A.J. Brown",
+      "pos": "WR",
+      "round": 3,
+      "pick": 19,
+      "points": 10.1,
+      "peer_avg_points": 74.49,
+      "vs_peers": -64.39
+     },
+     "biggest_steal": {
+      "player": "Matthew Golden",
+      "pos": "WR",
+      "round": 14,
+      "pick": 110,
+      "points": 88.5,
+      "peer_avg_points": 31.93,
+      "vs_peers": 56.57
+     }
+    },
+    {
+     "team_id": "2",
+     "team": "Monkey Business",
+     "biggest_bust": {
+      "player": "DJ Moore",
+      "pos": "WR",
+      "round": 6,
+      "pick": 48,
+      "points": 24.3,
+      "peer_avg_points": 51.79,
+      "vs_peers": -27.49
+     },
+     "biggest_steal": {
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "round": 1,
+      "pick": 1,
+      "points": 139.0,
+      "peer_avg_points": 95.01,
+      "vs_peers": 43.99
+     }
+    },
+    {
+     "team_id": "3",
+     "team": "Fogle\u2019s Moguls",
+     "biggest_bust": {
+      "player": "Rico Dowdle",
+      "pos": "RB",
+      "round": 11,
+      "pick": 82,
+      "points": 20.0,
+      "peer_avg_points": 56.82,
+      "vs_peers": -36.82
+     },
+     "biggest_steal": {
+      "player": "Chuba Hubbard",
+      "pos": "RB",
+      "round": 10,
+      "pick": 79,
+      "points": 111.0,
+      "peer_avg_points": 51.53,
+      "vs_peers": 59.47
+     }
+    },
+    {
+     "team_id": "4",
+     "team": "Hannah Lee's Revenge",
+     "biggest_bust": {
+      "player": "Breece Hall",
+      "pos": "RB",
+      "round": 3,
+      "pick": 21,
+      "points": 32.5,
+      "peer_avg_points": 79.6,
+      "vs_peers": -47.1
+     },
+     "biggest_steal": {
+      "player": "Christian Watson",
+      "pos": "WR",
+      "round": 8,
+      "pick": 60,
+      "points": 104.8,
+      "peer_avg_points": 44.58,
+      "vs_peers": 60.22
+     }
+    },
+    {
+     "team_id": "5",
+     "team": "Ya Boi",
+     "biggest_bust": {
+      "player": "Jaxson Dart",
+      "pos": "QB",
+      "round": 13,
+      "pick": 103,
+      "points": 27.4,
+      "peer_avg_points": 81.42,
+      "vs_peers": -54.02
+     },
+     "biggest_steal": {
+      "player": "Davante Adams",
+      "pos": "WR",
+      "round": 8,
+      "pick": 58,
+      "points": 72.0,
+      "peer_avg_points": 47.86,
+      "vs_peers": 24.14
+     }
+    },
+    {
+     "team_id": "6",
+     "team": "Kevin Jack's Team",
+     "biggest_bust": {
+      "player": "Omarion Hampton",
+      "pos": "RB",
+      "round": 2,
+      "pick": 13,
+      "points": 48.5,
+      "peer_avg_points": 91.8,
+      "vs_peers": -43.3
+     },
+     "biggest_steal": {
+      "player": "Jaylen Warren",
+      "pos": "RB",
+      "round": 8,
+      "pick": 61,
+      "points": 95.5,
+      "peer_avg_points": 40.24,
+      "vs_peers": 55.26
+     }
+    },
+    {
+     "team_id": "7",
+     "team": "Michael Scott's Team",
+     "biggest_bust": {
+      "player": "Saquon Barkley",
+      "pos": "RB",
+      "round": 2,
+      "pick": 9,
+      "points": 32.1,
+      "peer_avg_points": 100.94,
+      "vs_peers": -68.84
+     },
+     "biggest_steal": {
+      "player": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "round": 1,
+      "pick": 8,
+      "points": 138.16,
+      "peer_avg_points": 62.49,
+      "vs_peers": 75.67
+     }
+    },
+    {
+     "team_id": "8",
+     "team": "Ryan's Pierced Pigskin Posse",
+     "biggest_bust": {
+      "player": "Lamar Jackson",
+      "pos": "QB",
+      "round": 5,
+      "pick": 38,
+      "points": 79.08,
+      "peer_avg_points": 142.95,
+      "vs_peers": -63.87
+     },
+     "biggest_steal": {
+      "player": "Dak Prescott",
+      "pos": "QB",
+      "round": 14,
+      "pick": 107,
+      "points": 128.14,
+      "peer_avg_points": 64.43,
+      "vs_peers": 63.71
+     }
+    }
+   ],
+   "faab": {
+    "budget_assumed": true,
+    "complete_history": true,
+    "only_executed_claims_visible": true,
+    "by_team": [
+     {
+      "team_id": "4",
+      "team": "Hannah Lee's Revenge",
+      "waiver_bids_won": 11,
+      "faab_spent": 52,
+      "faab_budget": 100,
+      "free_agent_adds": 4,
+      "big_bids": [
+       {
+        "player": "Germie Bernard",
+        "pos": "WR",
+        "bid": 11,
+        "week": 7,
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       }
+      ]
+     },
+     {
+      "team_id": "1",
+      "team": "MakeMyTeamGreatAgain",
+      "waiver_bids_won": 7,
+      "faab_spent": 60,
+      "faab_budget": 100,
+      "free_agent_adds": 6,
+      "big_bids": [
+       {
+        "player": "Zach Charbonnet",
+        "pos": "RB",
+        "bid": 31,
+        "week": 8,
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       },
+       {
+        "player": "Kenyon Sadiq",
+        "pos": "TE",
+        "bid": 13,
+        "week": 4,
+        "starts": 2,
+        "points": 1.8,
+        "above_pos_avg": -12.4,
+        "points_per_dollar": 0.14
+       }
+      ]
+     },
+     {
+      "team_id": "7",
+      "team": "Michael Scott's Team",
+      "waiver_bids_won": 6,
+      "faab_spent": 17,
+      "faab_budget": 100,
+      "free_agent_adds": 7,
+      "big_bids": []
+     },
+     {
+      "team_id": "3",
+      "team": "Fogle\u2019s Moguls",
+      "waiver_bids_won": 5,
+      "faab_spent": 24,
+      "faab_budget": 100,
+      "free_agent_adds": 9,
+      "big_bids": [
+       {
+        "player": "Patrick Mahomes",
+        "pos": "QB",
+        "bid": 10,
+        "week": 3,
+        "starts": 3,
+        "points": 45.42,
+        "above_pos_avg": -12.98,
+        "points_per_dollar": 4.54
+       }
+      ]
+     },
+     {
+      "team_id": "5",
+      "team": "Ya Boi",
+      "waiver_bids_won": 3,
+      "faab_spent": 8,
+      "faab_budget": 100,
+      "free_agent_adds": 9,
+      "big_bids": []
+     },
+     {
+      "team_id": "8",
+      "team": "Ryan's Pierced Pigskin Posse",
+      "waiver_bids_won": 1,
+      "faab_spent": 11,
+      "faab_budget": 100,
+      "free_agent_adds": 6,
+      "big_bids": [
+       {
+        "player": "Alvin Kamara",
+        "pos": "RB",
+        "bid": 11,
+        "week": 4,
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       }
+      ]
+     },
+     {
+      "team_id": "2",
+      "team": "Monkey Business",
+      "waiver_bids_won": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 1,
+      "big_bids": []
+     },
+     {
+      "team_id": "6",
+      "team": "Kevin Jack's Team",
+      "waiver_bids_won": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 2,
+      "big_bids": []
+     }
+    ]
+   }
   }
  }
 }
