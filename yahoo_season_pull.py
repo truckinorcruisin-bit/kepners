@@ -464,12 +464,58 @@ def pull_league(key, meta, prior):
     }
 
 
+# Last-resort league keys (2026 NFL game key 470). Only used if both auto-discovery and
+# yahoo_inseason_<year>.json come up empty. Update when the game key changes next season.
+KNOWN_LEAGUES = {"kepners": "470.l.102398", "miami": "470.l.391024"}
+
+
+def discover():
+    """League lookup that survives find_leagues() coming back empty.
+
+    1) normal discovery via the logged-in user's games/leagues;
+    2) if that is empty, dump the raw response (so the cause is visible in the log) and use league
+       keys already recorded in yahoo_inseason_<year>.json, then KNOWN_LEAGUES;
+    each key is verified with a direct league call, which also surfaces auth/scope errors."""
+    try:
+        found = find_leagues()
+    except Exception as e:                                      # noqa: BLE001
+        print(f"::warning::league discovery raised {e!r}")
+        found = {}
+    if found:
+        return found
+    print("::warning::league discovery returned nothing; raw response follows, then falling back to known keys.")
+    try:
+        raw = api_get(f"users;use_login=1/games;game_codes=nfl;seasons={YEAR}/leagues")
+        print(json.dumps(raw)[:2000])
+    except Exception as e:                                      # noqa: BLE001
+        print(f"  discovery call itself failed: {e!r}")
+    keys = {}
+    try:
+        with open(f"yahoo_inseason_{YEAR}.json") as f:
+            for k, lg in (json.load(f).get("leagues") or {}).items():
+                if lg.get("league_key"):
+                    keys[k] = lg["league_key"]
+    except Exception:                                           # noqa: BLE001
+        pass
+    for k, lk in KNOWN_LEAGUES.items():
+        keys.setdefault(k, lk)
+    for k, lk in keys.items():
+        data = get(f"league/{lk}")
+        if not data:
+            continue
+        meta = flatten(data["fantasy_content"]["league"][0])
+        found[k] = {"league_key": lk, "name": meta.get("name"), "current_week": meta.get("current_week")}
+        print(f"  fallback: {k} -> {lk} ({meta.get('name')})")
+    return found
+
+
 def main():
     if not os.environ.get("YAHOO_REFRESH_TOKEN") and not os.path.exists("yahoo_token.json"):
         raise SystemExit("No Yahoo credentials (YAHOO_REFRESH_TOKEN secret missing).")
-    leagues = find_leagues()
+    leagues = discover()
     if not leagues:
-        raise SystemExit(f"No matching {YEAR} Yahoo leagues found.")
+        raise SystemExit(f"No Yahoo leagues found for {YEAR}, even by direct league key. "
+                         f"See the ::error:: lines above for Yahoo's reason.")
     prior = load_prior()
     out_leagues = {}
     for key, meta in leagues.items():
