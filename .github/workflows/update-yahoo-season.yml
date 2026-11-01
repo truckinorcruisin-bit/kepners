@@ -2,7 +2,8 @@ name: Update Yahoo Season Detail (Matchups + Lineups + Trades)
 
 # Pulls what the roster/standings pull doesn't: weekly matchup scores, remaining schedule, each
 # team's starters-vs-bench points, trades, playoff settings -- plus derived luck / lineup-efficiency
-# numbers. Output: yahoo_season_<year>.json. Read-only against Yahoo.
+# numbers (yahoo_season_<year>.json), then derives advanced analytics from it (yahoo_advanced_<year>.json).
+# Read-only against Yahoo.
 #
 # Tuesday 14:00 UTC, an hour AFTER Update In-Season Data (13:00), so the two never refresh the Yahoo
 # token at the same moment (Yahoo can rotate the refresh token on any refresh; two overlapping runs
@@ -61,13 +62,22 @@ jobs:
         run: |
           echo -n "${{ steps.pull_yahoo.outputs.refresh_token }}" | gh secret set YAHOO_REFRESH_TOKEN --repo "${{ github.repository }}"
 
-      - name: Commit updated file
+      # Pure offline derivation from files already in the repo (no Yahoo calls). Its own step with
+      # continue-on-error so an analysis bug can never cost the season-detail commit above it.
+      - name: Derive advanced analytics
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python yahoo_advanced_analysis.py "$YEAR" 2>&1 | tee -a season_run.log
+
+      - name: Commit updated files
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add "yahoo_season_${YEAR}.json"
+          [ -f "yahoo_advanced_${YEAR}.json" ] && git add "yahoo_advanced_${YEAR}.json"
           git diff --staged --quiet && { echo "Nothing changed."; exit 0; }
-          git commit -q -m "Update Yahoo season detail for ${YEAR}"
+          git commit -q -m "Update Yahoo season detail + advanced analytics for ${YEAR}"
           for i in 1 2 3 4 5; do
             if git push -q origin HEAD:main; then echo "Pushed (attempt $i)."; exit 0; fi
             echo "Push rejected -- rebasing and retrying ($i/5)..."
