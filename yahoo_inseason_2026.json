@@ -1,6 +1,6 @@
 {
   "year": 2026,
-  "generated": "2026-11-03T13:32:41.907180+00:00",
+  "generated": "2026-11-03T19:55:44.214888+00:00",
   "leagues": {
     "kepners": {
       "platform": "yahoo",
@@ -115,17 +115,6 @@
               "percent_owned": null
             },
             {
-              "player_id": "31002",
-              "player_key": "470.p.31002",
-              "name": "Lamar Jackson",
-              "position": "QB",
-              "pro_team": "Bal",
-              "lineup_slot": "BN",
-              "injury_status": "O",
-              "injured": true,
-              "percent_owned": null
-            },
-            {
               "player_id": "30180",
               "player_key": "470.p.30180",
               "name": "Alvin Kamara",
@@ -167,6 +156,17 @@
               "lineup_slot": "BN",
               "injury_status": null,
               "injured": false,
+              "percent_owned": null
+            },
+            {
+              "player_id": "31002",
+              "player_key": "470.p.31002",
+              "name": "Lamar Jackson",
+              "position": "QB",
+              "pro_team": "Bal",
+              "lineup_slot": "IR",
+              "injury_status": "O",
+              "injured": true,
               "percent_owned": null
             },
             {
@@ -1377,7 +1377,7 @@
               "position": "K",
               "pro_team": "Bal",
               "lineup_slot": "K",
-              "injury_status": "Q",
+              "injury_status": "D",
               "injured": true,
               "percent_owned": null
             },
@@ -2075,7 +2075,7 @@
               "position": "RB",
               "pro_team": "Ari",
               "lineup_slot": "BN",
-              "injury_status": "Q",
+              "injury_status": "O",
               "injured": true,
               "percent_owned": null
             },
@@ -2650,7 +2650,7 @@
           "position": "QB",
           "pro_team": "Bal",
           "lineup_slot": null,
-          "injury_status": "Q",
+          "injury_status": "D",
           "injured": true,
           "percent_owned": null
         },
@@ -5234,17 +5234,6 @@
               "percent_owned": null
             },
             {
-              "player_id": "33392",
-              "player_key": "470.p.33392",
-              "name": "Kyle Pitts Sr.",
-              "position": "TE",
-              "pro_team": "Atl",
-              "lineup_slot": "TE",
-              "injury_status": null,
-              "injured": false,
-              "percent_owned": null
-            },
-            {
               "player_id": "33965",
               "player_key": "470.p.33965",
               "name": "Garrett Wilson",
@@ -5349,7 +5338,7 @@
               "name": "Breece Hall",
               "position": "RB",
               "pro_team": "NYJ",
-              "lineup_slot": "IR",
+              "lineup_slot": "BN",
               "injury_status": "Q",
               "injured": true,
               "percent_owned": null
@@ -5846,7 +5835,7 @@
               "position": "RB",
               "pro_team": "Ari",
               "lineup_slot": "W/R/T",
-              "injury_status": "Q",
+              "injury_status": "O",
               "injured": true,
               "percent_owned": null
             },
@@ -6410,7 +6399,7 @@
           "position": "QB",
           "pro_team": "Bal",
           "lineup_slot": null,
-          "injury_status": "Q",
+          "injury_status": "D",
           "injured": true,
           "percent_owned": null
         },
@@ -6676,6 +6665,17 @@
           "lineup_slot": null,
           "injury_status": "IR",
           "injured": true,
+          "percent_owned": null
+        },
+        {
+          "player_id": "33392",
+          "player_key": "470.p.33392",
+          "name": "Kyle Pitts Sr.",
+          "position": "TE",
+          "pro_team": "Atl",
+          "lineup_slot": null,
+          "injury_status": null,
+          "injured": false,
           "percent_owned": null
         },
         {
@@ -8334,17 +8334,6 @@
           "name": "Drew Sample",
           "position": "TE",
           "pro_team": "Cin",
-          "lineup_slot": null,
-          "injury_status": null,
-          "injured": false,
-          "percent_owned": null
-        },
-        {
-          "player_id": "34057",
-          "player_key": "470.p.34057",
-          "name": "Jeremy Ruckert",
-          "position": "TE",
-          "pro_team": "NYJ",
           "lineup_slot": null,
           "injury_status": null,
           "injured": false,

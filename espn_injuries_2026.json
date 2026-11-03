@@ -1,16 +1,9 @@
 {
  "year": 2026,
- "generated": "2026-11-03T13:32:23.692693+00:00",
+ "generated": "2026-11-03T19:55:26.599359+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 997,
  "injuries": [
-  {
-   "id": 4040980,
-   "name": "Irv Smith Jr.",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-01"
-  },
   {
    "id": 4685526,
    "name": "Adam Randall",
@@ -57,7 +50,7 @@
    "id": 4035671,
    "name": "Tyler Huntley",
    "pos": "QB",
-   "status": "QUESTIONABLE",
+   "status": "DOUBTFUL",
    "ret": "2026-11-05"
   },
   {
@@ -425,13 +418,6 @@
    "ret": "2026-11-08"
   },
   {
-   "id": 4870808,
-   "name": "Jeremiyah Love",
-   "pos": "RB",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-08"
-  },
-  {
    "id": 3127586,
    "name": "Jeremy McNichols",
    "pos": "RB",
@@ -733,6 +719,13 @@
    "ret": "2026-11-15"
   },
   {
+   "id": 4040980,
+   "name": "Irv Smith Jr.",
+   "pos": "TE",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-15"
+  },
+  {
    "id": 4374033,
    "name": "Jermar Jefferson",
    "pos": "RB",
@@ -884,6 +877,13 @@
    "name": "De'Zhaun Stribling",
    "pos": "WR",
    "status": "INJURY_RESERVE",
+   "ret": "2026-12-06"
+  },
+  {
+   "id": 4870808,
+   "name": "Jeremiyah Love",
+   "pos": "RB",
+   "status": "OUT",
    "ret": "2026-12-06"
   },
   {
