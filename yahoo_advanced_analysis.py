@@ -26,9 +26,16 @@ from itertools import combinations
 from collections import defaultdict
 
 YEAR = int(sys.argv[1]) if len(sys.argv) > 1 else 2026
-SEASON_FILE = f"yahoo_season_{YEAR}.json"
-WAIVER_FILE = f"yahoo_waiver_history_{YEAR}.json"
-OUT_FILE = f"yahoo_advanced_{YEAR}.json"
+# usage: python yahoo_advanced_analysis.py [year] [yahoo|espn]
+PLATFORM = sys.argv[2].lower() if len(sys.argv) > 2 else "yahoo"
+if PLATFORM == "espn":
+    SEASON_FILE = f"espn_season_{YEAR}.json"
+    WAIVER_FILE = f"waiver_history_{YEAR}.json"          # ESPN claims, won AND lost, 2025 + 2026 mixed
+    OUT_FILE = f"espn_advanced_{YEAR}.json"
+else:
+    SEASON_FILE = f"yahoo_season_{YEAR}.json"
+    WAIVER_FILE = f"yahoo_waiver_history_{YEAR}.json"
+    OUT_FILE = f"yahoo_advanced_{YEAR}.json"
 INSEASON_FILE = f"inseason_{YEAR}.json"
 ESPN_STATS_FILE = f"espn_season_stats_{YEAR}.json"
 BIGBOARD_FILE = "bigboard.json"
@@ -69,6 +76,9 @@ def load(path):
 
 # ---------------------------------------------------------------------------
 def analyze_league(key, lg, waiver):
+    if waiver and waiver.get("claims"):
+        # ESPN's history file mixes the prior season's cached claims in; keep this season only.
+        waiver = dict(waiver, claims=[c for c in waiver["claims"] if c.get("season") in (None, YEAR)])
     teams = lg["teams"]
     lineups = lg["lineups"]
     name = {tid: t["name"] for tid, t in teams.items()}
@@ -298,10 +308,13 @@ def analyze_league(key, lg, waiver):
     if waiver:
         adds = [c for c in (waiver.get("claims") or []) if c.get("won") and c.get("add")]
         adds += waiver.get("free_agent_adds") or []
+        lost = [c for c in (waiver.get("claims") or [])
+                if c.get("status") == "FAILED_INVALIDPLAYERSOURCE" and c.get("add")]
         out["faab"] = {"budget_assumed": waiver.get("budget_assumed"),
                        "complete_history": waiver.get("complete_history"),
-                       "only_executed_claims_visible": True,
-                       "by_team": faab_activity(adds, teams, name, starts, pos_avg, waiver.get("budget"))}
+                       "only_executed_claims_visible": PLATFORM != "espn",
+                       "by_team": faab_activity(adds, teams, name, starts, pos_avg,
+                                                waiver.get("budget"), lost)}
     return out
 
 
@@ -407,10 +420,18 @@ def keeper_report(key, teams, starts, pos_avg, inseason, espn):
     return out
 
 
-def faab_activity(adds, teams, name, starts, pos_avg, budget):
+def faab_activity(adds, teams, name, starts, pos_avg, budget, lost=()):
     """Per-team claim/add activity. Yahoo only exposes EXECUTED claims, so 'bids' here are
     winning bids; losing bids are invisible to the API."""
-    per = {tid: {"won": 0, "faab": 0, "free_adds": 0, "big": []} for tid in teams}
+    per = {tid: {"won": 0, "faab": 0, "free_adds": 0, "lost": 0, "big": []} for tid in teams}
+    for a in lost:                                   # ESPN only: claims that lost to another team's bid
+        tid = str(a.get("team_id"))
+        if tid in per:
+            per[tid]["lost"] += 1
+            if (a.get("bid") or 0) >= 10:
+                nm = (a.get("add") or {}).get("name")
+                per[tid]["big"].append({"player": nm, "pos": (a.get("add") or {}).get("position"),
+                                        "bid": a.get("bid"), "week": a.get("week"), "result": "lost"})
     startrows = defaultdict(list)
     for s in starts:
         startrows[(s["tid"], norm(s["name"]))].append(s)
@@ -429,11 +450,12 @@ def faab_activity(adds, teams, name, starts, pos_avg, budget):
             got = [s for s in startrows.get((tid, norm(nm)), []) if s["week"] >= (a.get("week") or 0)]
             above = sum((s["pts"] or 0) - (pos_avg.get(s["pos"]) or 0) for s in got)
             per[tid]["big"].append({"player": nm, "pos": (a.get("add") or {}).get("position"), "bid": bid,
-                                    "week": a.get("week"), "starts": len(got),
+                                    "week": a.get("week"), "result": "won", "starts": len(got),
                                     "points": r2(sum(s["pts"] or 0 for s in got)),
                                     "above_pos_avg": r2(above),
                                     "points_per_dollar": r2(sum(s["pts"] or 0 for s in got) / bid) if bid else None})
-    return [{"team_id": tid, "team": name[tid], "waiver_bids_won": v["won"], "faab_spent": v["faab"],
+    return [{"team_id": tid, "team": name[tid], "waiver_bids_won": v["won"], "waiver_bids_lost": v["lost"],
+             "waiver_bids_placed": v["won"] + v["lost"], "faab_spent": v["faab"],
              "faab_budget": budget, "free_agent_adds": v["free_adds"],
              "big_bids": sorted(v["big"], key=lambda b: -b["bid"])}
             for tid, v in sorted(per.items(), key=lambda kv: -kv[1]["won"])]
