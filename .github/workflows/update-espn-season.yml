@@ -1,0 +1,77 @@
+name: Update ESPN Season Detail (Zimmer + Inspire11 Matchups, Lineups, Trades)
+
+# ESPN counterpart of "Update Yahoo Season Detail". Pulls every completed week's box scores
+# (matchups, each team's starters vs bench with ESPN's per-player projections), the remaining
+# schedule and accepted trades, then derives luck / lineup-efficiency / MVP / bust analytics.
+# Output: espn_season_<year>.json and espn_advanced_<year>.json. Read-only against ESPN.
+#
+# Tuesday 15:00 UTC, after the 13:00 UTC in-season refresh and after overnight waivers settle.
+on:
+  schedule:
+    - cron: '0 15 * * 2'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year'
+        required: false
+        default: '2026'
+
+jobs:
+  pull-season:
+    runs-on: ubuntu-latest
+    env:
+      YEAR: ${{ github.event.inputs.year || '2026' }}
+      ESPN_LEAGUE_ID: ${{ secrets.ESPN_LEAGUE_ID }}
+      ESPN_S2: ${{ secrets.ESPN_S2 }}
+      ESPN_SWID: ${{ secrets.ESPN_SWID }}
+      ESPN_MY_TEAM: ${{ secrets.ESPN_MY_TEAM }}
+      ESPN_LEAGUE_ID_INSPIRE11: ${{ secrets.ESPN_LEAGUE_ID_INSPIRE11 }}
+      ESPN_MY_TEAM_ID_INSPIRE11: ${{ secrets.ESPN_MY_TEAM_ID_INSPIRE11 }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install espn_api requests
+
+      - name: Pull ESPN season detail
+        run: |
+          set -o pipefail
+          python espn_season_pull.py "$YEAR" 2>&1 | tee espn_season_run.log
+
+      # Offline derivation from files already in the repo. continue-on-error so an analysis
+      # bug can never cost the season-detail commit.
+      - name: Derive advanced analytics
+        continue-on-error: true
+        run: |
+          set -o pipefail
+          python yahoo_advanced_analysis.py "$YEAR" espn 2>&1 | tee -a espn_season_run.log
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add "espn_season_${YEAR}.json"
+          [ -f "espn_advanced_${YEAR}.json" ] && git add "espn_advanced_${YEAR}.json"
+          git diff --staged --quiet && { echo "Nothing changed."; exit 0; }
+          git commit -q -m "Update ESPN season detail + advanced analytics for ${YEAR}"
+          for i in 1 2 3 4 5; do
+            if git push -q origin HEAD:main; then echo "Pushed (attempt $i)."; exit 0; fi
+            echo "Push rejected -- rebasing and retrying ($i/5)..."
+            git pull -q --rebase origin main
+          done
+          echo "::error::git push failed after 5 attempts."
+          exit 1
+
+      - name: Upload run log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: espn-season-run-log
+          path: espn_season_run.log
+          if-no-files-found: ignore
