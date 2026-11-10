@@ -1,0 +1,8373 @@
+{
+ "year": 2026,
+ "generated_from": "2026-11-10T21:04:39.893993+00:00",
+ "leagues": {
+  "zimmer": {
+   "league_name": "Player Hater Ball",
+   "weeks_analyzed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "positions": {
+    "QB": {
+     "league_avg_per_week": 19.01,
+     "teams": [
+      {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "rank": 1,
+       "avg_per_week": 24.21,
+       "vs_league": 5.2,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "rank": 2,
+       "avg_per_week": 24.18,
+       "vs_league": 5.17,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "rank": 3,
+       "avg_per_week": 20.21,
+       "vs_league": 1.2,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "rank": 4,
+       "avg_per_week": 19.39,
+       "vs_league": 0.38,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "rank": 5,
+       "avg_per_week": 18.6,
+       "vs_league": -0.41,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "rank": 6,
+       "avg_per_week": 18.07,
+       "vs_league": -0.94,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "rank": 7,
+       "avg_per_week": 17.88,
+       "vs_league": -1.13,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "rank": 8,
+       "avg_per_week": 17.81,
+       "vs_league": -1.2,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "rank": 9,
+       "avg_per_week": 17.8,
+       "vs_league": -1.21,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "rank": 10,
+       "avg_per_week": 17.48,
+       "vs_league": -1.53,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "rank": 11,
+       "avg_per_week": 17.07,
+       "vs_league": -1.94,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "rank": 12,
+       "avg_per_week": 15.4,
+       "vs_league": -3.61,
+       "weeks_leading": 1
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 37.26
+       },
+       "worst": {
+        "team": "Bake N' Shake",
+        "pts": 9.82
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "TEXAS CHUPACABRAS",
+        "pts": 40.82
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 0.8
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Spokane Beers",
+        "pts": 24.14
+       },
+       "worst": {
+        "team": "Bake N' Shake",
+        "pts": 3.76
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 23.72
+       },
+       "worst": {
+        "team": "Elements of  Intrigue",
+        "pts": 11.48
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Bake N' Shake",
+        "pts": 39.46
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 7.92
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 27.34
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 4.48
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 28.88
+       },
+       "worst": {
+        "team": "Dangerous  Nights Crew",
+        "pts": 6.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 39.48
+       },
+       "worst": {
+        "team": "D'Quan's Friend",
+        "pts": 8.28
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 36.18
+       },
+       "worst": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 5.3
+       }
+      }
+     ]
+    },
+    "RB": {
+     "league_avg_per_week": 32.1,
+     "teams": [
+      {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "rank": 1,
+       "avg_per_week": 49.69,
+       "vs_league": 17.59,
+       "weeks_leading": 4
+      },
+      {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "rank": 2,
+       "avg_per_week": 42.08,
+       "vs_league": 9.98,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "rank": 3,
+       "avg_per_week": 37.89,
+       "vs_league": 5.79,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "rank": 4,
+       "avg_per_week": 36.73,
+       "vs_league": 4.64,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "rank": 5,
+       "avg_per_week": 35.95,
+       "vs_league": 3.86,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "rank": 6,
+       "avg_per_week": 34.98,
+       "vs_league": 2.88,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "rank": 7,
+       "avg_per_week": 31.47,
+       "vs_league": -0.63,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "rank": 8,
+       "avg_per_week": 26.77,
+       "vs_league": -5.33,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "rank": 9,
+       "avg_per_week": 26.57,
+       "vs_league": -5.53,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "rank": 10,
+       "avg_per_week": 26.12,
+       "vs_league": -5.97,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "rank": 11,
+       "avg_per_week": 19.72,
+       "vs_league": -12.37,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "rank": 12,
+       "avg_per_week": 17.18,
+       "vs_league": -14.92,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Elements of  Intrigue",
+        "pts": 72.7
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 9.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Elements of  Intrigue",
+        "pts": 38.1
+       },
+       "worst": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 9.3
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 52.9
+       },
+       "worst": {
+        "team": "D'Quan's Friend",
+        "pts": 7.0
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 73.8
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 17.5
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 54.1
+       },
+       "worst": {
+        "team": "Bake N' Shake",
+        "pts": 5.5
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Elements of  Intrigue",
+        "pts": 61.1
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 8.8
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Elements of  Intrigue",
+        "pts": 69.6
+       },
+       "worst": {
+        "team": "Maryland Menace",
+        "pts": 8.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 55.2
+       },
+       "worst": {
+        "team": "DA BEARS FORCE ONE",
+        "pts": 10.1
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 63.8
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 0.0
+       }
+      }
+     ]
+    },
+    "WR": {
+     "league_avg_per_week": 25.52,
+     "teams": [
+      {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "rank": 1,
+       "avg_per_week": 38.67,
+       "vs_league": 13.15,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "rank": 2,
+       "avg_per_week": 38.39,
+       "vs_league": 12.87,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "rank": 3,
+       "avg_per_week": 36.5,
+       "vs_league": 10.98,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "rank": 4,
+       "avg_per_week": 30.42,
+       "vs_league": 4.9,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "rank": 5,
+       "avg_per_week": 26.42,
+       "vs_league": 0.9,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "rank": 6,
+       "avg_per_week": 25.3,
+       "vs_league": -0.22,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "rank": 7,
+       "avg_per_week": 22.21,
+       "vs_league": -3.31,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "rank": 8,
+       "avg_per_week": 21.41,
+       "vs_league": -4.11,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "rank": 9,
+       "avg_per_week": 21.11,
+       "vs_league": -4.41,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "rank": 10,
+       "avg_per_week": 18.82,
+       "vs_league": -6.7,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "rank": 11,
+       "avg_per_week": 16.86,
+       "vs_league": -8.66,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "rank": 12,
+       "avg_per_week": 10.11,
+       "vs_league": -15.41,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "D'Quan's Friend",
+        "pts": 53.2
+       },
+       "worst": {
+        "team": "Elements of  Intrigue",
+        "pts": 10.7
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "DA BEARS FORCE ONE",
+        "pts": 57.7
+       },
+       "worst": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 6.2
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Bake N' Shake",
+        "pts": 55.06
+       },
+       "worst": {
+        "team": "Elements of  Intrigue",
+        "pts": 9.7
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Spokane Beers",
+        "pts": 60.7
+       },
+       "worst": {
+        "team": "Elements of  Intrigue",
+        "pts": 6.4
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Bake N' Shake",
+        "pts": 51.3
+       },
+       "worst": {
+        "team": "D'Quan's Friend",
+        "pts": 7.5
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Bake N' Shake",
+        "pts": 34.7
+       },
+       "worst": {
+        "team": "Elements of  Intrigue",
+        "pts": 11.9
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 47.8
+       },
+       "worst": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 4.4
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 61.5
+       },
+       "worst": {
+        "team": "D'Quan's Friend",
+        "pts": 5.8
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Spokane Beers",
+        "pts": 42.5
+       },
+       "worst": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 5.8
+       }
+      }
+     ]
+    },
+    "TE": {
+     "league_avg_per_week": 7.78,
+     "teams": [
+      {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "rank": 1,
+       "avg_per_week": 12.06,
+       "vs_league": 4.27,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "rank": 2,
+       "avg_per_week": 11.47,
+       "vs_league": 3.68,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "rank": 3,
+       "avg_per_week": 11.34,
+       "vs_league": 3.56,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "rank": 4,
+       "avg_per_week": 9.56,
+       "vs_league": 1.77,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "rank": 5,
+       "avg_per_week": 7.98,
+       "vs_league": 0.2,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "rank": 6,
+       "avg_per_week": 7.49,
+       "vs_league": -0.29,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "rank": 7,
+       "avg_per_week": 6.94,
+       "vs_league": -0.84,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "rank": 8,
+       "avg_per_week": 6.84,
+       "vs_league": -0.94,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "rank": 9,
+       "avg_per_week": 5.42,
+       "vs_league": -2.36,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "rank": 10,
+       "avg_per_week": 5.41,
+       "vs_league": -2.37,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "rank": 11,
+       "avg_per_week": 5.28,
+       "vs_league": -2.5,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "rank": 12,
+       "avg_per_week": 3.6,
+       "vs_league": -4.18,
+       "weeks_leading": 1
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 19.8
+       },
+       "worst": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "D'Quan's Friend",
+        "pts": 30.3
+       },
+       "worst": {
+        "team": "Bake N' Shake",
+        "pts": 0.3
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "D'Quan's Friend",
+        "pts": 26.5
+       },
+       "worst": {
+        "team": "Elements of  Intrigue",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 14.6
+       },
+       "worst": {
+        "team": "TEXAS CHUPACABRAS",
+        "pts": 0.7
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 21.4
+       },
+       "worst": {
+        "team": "DA BEARS FORCE ONE",
+        "pts": 0.4
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 19.1
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": 0.4
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Dangerous  Nights Crew",
+        "pts": 17.1
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 1.2
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 21.2
+       },
+       "worst": {
+        "team": "D'Quan's Friend",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 15.3
+       },
+       "worst": {
+        "team": "Maryland Menace",
+        "pts": 0.9
+       }
+      }
+     ]
+    },
+    "K": {
+     "league_avg_per_week": 0.0,
+     "teams": [
+      {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "rank": 1,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 9
+      },
+      {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "rank": 2,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "rank": 3,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "rank": 4,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "rank": 5,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "rank": 6,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "rank": 7,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "rank": 8,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "rank": 9,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "rank": 10,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "rank": 11,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "rank": 12,
+       "avg_per_week": 0.0,
+       "vs_league": 0.0,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 0.0
+       }
+      }
+     ]
+    },
+    "DEF": {
+     "league_avg_per_week": 6.0,
+     "teams": [
+      {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "rank": 1,
+       "avg_per_week": 10.89,
+       "vs_league": 4.89,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "rank": 2,
+       "avg_per_week": 8.78,
+       "vs_league": 2.78,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "rank": 3,
+       "avg_per_week": 8.56,
+       "vs_league": 2.56,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "rank": 4,
+       "avg_per_week": 8.56,
+       "vs_league": 2.56,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "rank": 5,
+       "avg_per_week": 6.78,
+       "vs_league": 0.78,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "rank": 6,
+       "avg_per_week": 6.22,
+       "vs_league": 0.22,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "rank": 7,
+       "avg_per_week": 5.33,
+       "vs_league": -0.67,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "rank": 8,
+       "avg_per_week": 5.22,
+       "vs_league": -0.78,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "rank": 9,
+       "avg_per_week": 4.78,
+       "vs_league": -1.22,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "rank": 10,
+       "avg_per_week": 2.56,
+       "vs_league": -3.44,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "rank": 11,
+       "avg_per_week": 2.22,
+       "vs_league": -3.78,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "rank": 12,
+       "avg_per_week": 2.11,
+       "vs_league": -3.89,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "D'Quan's Friend",
+        "pts": 20.0
+       },
+       "worst": {
+        "team": "TEXAS CHUPACABRAS",
+        "pts": -6.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Maryland Menace",
+        "pts": 22.0
+       },
+       "worst": {
+        "team": "The Fe-Brees Brothers",
+        "pts": -2.0
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Elements of  Intrigue",
+        "pts": 20.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": -6.0
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Letter of the Day is \"TD\"",
+        "pts": 12.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 16.0
+       },
+       "worst": {
+        "team": "Bake N' Shake",
+        "pts": -2.0
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "The Fe-Brees Brothers",
+        "pts": 16.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": -2.0
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Elements of  Intrigue",
+        "pts": 12.0
+       },
+       "worst": {
+        "team": "EVIL EMPIRE",
+        "pts": -8.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Ben Jarvis Green Ellis LLP",
+        "pts": 22.0
+       },
+       "worst": {
+        "team": "The Fe-Brees Brothers",
+        "pts": -3.0
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "D'Quan's Friend",
+        "pts": 16.0
+       },
+       "worst": {
+        "team": "Spokane Beers",
+        "pts": -2.0
+       }
+      }
+     ]
+    }
+   },
+   "projections": [
+    {
+     "team_id": "19",
+     "team": "Maryland Menace",
+     "games": 9,
+     "avg_diff": 17.06,
+     "stdev": 13.69,
+     "weeks_over": 8,
+     "weeks_under": 1,
+     "best_week": {
+      "week": 8,
+      "actual": 143.78,
+      "projected": 106.46,
+      "diff": 37.32
+     },
+     "worst_week": {
+      "week": 5,
+      "actual": 83.8,
+      "projected": 88.16,
+      "diff": -4.36
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 111.66,
+       "projected": 84.06,
+       "diff": 27.6
+      },
+      {
+       "week": 2,
+       "actual": 121.38,
+       "projected": 93.2,
+       "diff": 28.18
+      },
+      {
+       "week": 3,
+       "actual": 103.38,
+       "projected": 95.65,
+       "diff": 7.73
+      },
+      {
+       "week": 4,
+       "actual": 114.22,
+       "projected": 101.87,
+       "diff": 12.35
+      },
+      {
+       "week": 5,
+       "actual": 83.8,
+       "projected": 88.16,
+       "diff": -4.36
+      },
+      {
+       "week": 6,
+       "actual": 107.02,
+       "projected": 102.34,
+       "diff": 4.68
+      },
+      {
+       "week": 7,
+       "actual": 94.48,
+       "projected": 86.79,
+       "diff": 7.69
+      },
+      {
+       "week": 8,
+       "actual": 143.78,
+       "projected": 106.46,
+       "diff": 37.32
+      },
+      {
+       "week": 9,
+       "actual": 144.94,
+       "projected": 112.63,
+       "diff": 32.31
+      }
+     ]
+    },
+    {
+     "team_id": "5",
+     "team": "Letter of the Day is \"TD\"",
+     "games": 9,
+     "avg_diff": 1.52,
+     "stdev": 18.18,
+     "weeks_over": 4,
+     "weeks_under": 5,
+     "best_week": {
+      "week": 5,
+      "actual": 136.44,
+      "projected": 106.76,
+      "diff": 29.68
+     },
+     "worst_week": {
+      "week": 6,
+      "actual": 62.42,
+      "projected": 92.16,
+      "diff": -29.74
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 125.8,
+       "projected": 100.9,
+       "diff": 24.9
+      },
+      {
+       "week": 2,
+       "actual": 103.26,
+       "projected": 103.81,
+       "diff": -0.55
+      },
+      {
+       "week": 3,
+       "actual": 97.84,
+       "projected": 100.31,
+       "diff": -2.47
+      },
+      {
+       "week": 4,
+       "actual": 118.8,
+       "projected": 105.8,
+       "diff": 13.0
+      },
+      {
+       "week": 5,
+       "actual": 136.44,
+       "projected": 106.76,
+       "diff": 29.68
+      },
+      {
+       "week": 6,
+       "actual": 62.42,
+       "projected": 92.16,
+       "diff": -29.74
+      },
+      {
+       "week": 7,
+       "actual": 85.68,
+       "projected": 98.63,
+       "diff": -12.95
+      },
+      {
+       "week": 8,
+       "actual": 102.4,
+       "projected": 95.73,
+       "diff": 6.67
+      },
+      {
+       "week": 9,
+       "actual": 89.1,
+       "projected": 103.99,
+       "diff": -14.89
+      }
+     ]
+    },
+    {
+     "team_id": "7",
+     "team": "D'Quan's Friend",
+     "games": 9,
+     "avg_diff": -0.46,
+     "stdev": 13.56,
+     "weeks_over": 4,
+     "weeks_under": 5,
+     "best_week": {
+      "week": 1,
+      "actual": 109.56,
+      "projected": 90.5,
+      "diff": 19.06
+     },
+     "worst_week": {
+      "week": 8,
+      "actual": 56.68,
+      "projected": 78.5,
+      "diff": -21.82
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 109.56,
+       "projected": 90.5,
+       "diff": 19.06
+      },
+      {
+       "week": 2,
+       "actual": 99.7,
+       "projected": 90.05,
+       "diff": 9.65
+      },
+      {
+       "week": 3,
+       "actual": 78.84,
+       "projected": 90.32,
+       "diff": -11.48
+      },
+      {
+       "week": 4,
+       "actual": 102.28,
+       "projected": 91.38,
+       "diff": 10.9
+      },
+      {
+       "week": 5,
+       "actual": 71.82,
+       "projected": 87.05,
+       "diff": -15.23
+      },
+      {
+       "week": 6,
+       "actual": 86.38,
+       "projected": 88.32,
+       "diff": -1.94
+      },
+      {
+       "week": 7,
+       "actual": 107.1,
+       "projected": 93.39,
+       "diff": 13.71
+      },
+      {
+       "week": 8,
+       "actual": 56.68,
+       "projected": 78.5,
+       "diff": -21.82
+      },
+      {
+       "week": 9,
+       "actual": 64.42,
+       "projected": 71.45,
+       "diff": -7.03
+      }
+     ]
+    },
+    {
+     "team_id": "11",
+     "team": "Bake N' Shake",
+     "games": 9,
+     "avg_diff": -0.71,
+     "stdev": 12.83,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 4,
+      "actual": 120.36,
+      "projected": 91.52,
+      "diff": 28.84
+     },
+     "worst_week": {
+      "week": 8,
+      "actual": 80.66,
+      "projected": 94.54,
+      "diff": -13.88
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 90.72,
+       "projected": 96.2,
+       "diff": -5.48
+      },
+      {
+       "week": 2,
+       "actual": 95.62,
+       "projected": 95.87,
+       "diff": -0.25
+      },
+      {
+       "week": 3,
+       "actual": 83.52,
+       "projected": 95.64,
+       "diff": -12.12
+      },
+      {
+       "week": 4,
+       "actual": 120.36,
+       "projected": 91.52,
+       "diff": 28.84
+      },
+      {
+       "week": 5,
+       "actual": 96.16,
+       "projected": 84.58,
+       "diff": 11.58
+      },
+      {
+       "week": 6,
+       "actual": 91.0,
+       "projected": 89.6,
+       "diff": 1.4
+      },
+      {
+       "week": 7,
+       "actual": 87.04,
+       "projected": 92.72,
+       "diff": -5.68
+      },
+      {
+       "week": 8,
+       "actual": 80.66,
+       "projected": 94.54,
+       "diff": -13.88
+      },
+      {
+       "week": 9,
+       "actual": 91.46,
+       "projected": 102.23,
+       "diff": -10.77
+      }
+     ]
+    },
+    {
+     "team_id": "1",
+     "team": "EVIL EMPIRE",
+     "games": 9,
+     "avg_diff": -2.13,
+     "stdev": 32.51,
+     "weeks_over": 5,
+     "weeks_under": 4,
+     "best_week": {
+      "week": 5,
+      "actual": 150.38,
+      "projected": 104.64,
+      "diff": 45.74
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 56.58,
+      "projected": 103.32,
+      "diff": -46.74
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 122.86,
+       "projected": 96.32,
+       "diff": 26.54
+      },
+      {
+       "week": 2,
+       "actual": 56.58,
+       "projected": 103.32,
+       "diff": -46.74
+      },
+      {
+       "week": 3,
+       "actual": 98.28,
+       "projected": 94.3,
+       "diff": 3.98
+      },
+      {
+       "week": 4,
+       "actual": 116.78,
+       "projected": 97.52,
+       "diff": 19.26
+      },
+      {
+       "week": 5,
+       "actual": 150.38,
+       "projected": 104.64,
+       "diff": 45.74
+      },
+      {
+       "week": 6,
+       "actual": 70.24,
+       "projected": 113.92,
+       "diff": -43.68
+      },
+      {
+       "week": 7,
+       "actual": 69.16,
+       "projected": 107.78,
+       "diff": -38.62
+      },
+      {
+       "week": 8,
+       "actual": 86.12,
+       "projected": 97.37,
+       "diff": -11.25
+      },
+      {
+       "week": 9,
+       "actual": 123.88,
+       "projected": 98.24,
+       "diff": 25.64
+      }
+     ]
+    },
+    {
+     "team_id": "16",
+     "team": "TEXAS CHUPACABRAS",
+     "games": 9,
+     "avg_diff": -3.94,
+     "stdev": 22.16,
+     "weeks_over": 5,
+     "weeks_under": 4,
+     "best_week": {
+      "week": 1,
+      "actual": 114.66,
+      "projected": 95.37,
+      "diff": 19.29
+     },
+     "worst_week": {
+      "week": 9,
+      "actual": 42.44,
+      "projected": 84.27,
+      "diff": -41.83
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 114.66,
+       "projected": 95.37,
+       "diff": 19.29
+      },
+      {
+       "week": 2,
+       "actual": 109.62,
+       "projected": 96.88,
+       "diff": 12.74
+      },
+      {
+       "week": 3,
+       "actual": 73.56,
+       "projected": 101.13,
+       "diff": -27.57
+      },
+      {
+       "week": 4,
+       "actual": 81.72,
+       "projected": 99.43,
+       "diff": -17.71
+      },
+      {
+       "week": 5,
+       "actual": 105.8,
+       "projected": 94.37,
+       "diff": 11.43
+      },
+      {
+       "week": 6,
+       "actual": 74.9,
+       "projected": 98.62,
+       "diff": -23.72
+      },
+      {
+       "week": 7,
+       "actual": 103.92,
+       "projected": 88.71,
+       "diff": 15.21
+      },
+      {
+       "week": 8,
+       "actual": 115.36,
+       "projected": 98.7,
+       "diff": 16.66
+      },
+      {
+       "week": 9,
+       "actual": 42.44,
+       "projected": 84.27,
+       "diff": -41.83
+      }
+     ]
+    },
+    {
+     "team_id": "18",
+     "team": "Elements of  Intrigue",
+     "games": 9,
+     "avg_diff": -6.46,
+     "stdev": 21.43,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 1,
+      "actual": 123.76,
+      "projected": 93.38,
+      "diff": 30.38
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 67.44,
+      "projected": 100.79,
+      "diff": -33.35
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 123.76,
+       "projected": 93.38,
+       "diff": 30.38
+      },
+      {
+       "week": 2,
+       "actual": 67.44,
+       "projected": 100.79,
+       "diff": -33.35
+      },
+      {
+       "week": 3,
+       "actual": 73.92,
+       "projected": 94.9,
+       "diff": -20.98
+      },
+      {
+       "week": 4,
+       "actual": 86.98,
+       "projected": 98.94,
+       "diff": -11.96
+      },
+      {
+       "week": 5,
+       "actual": 93.66,
+       "projected": 98.11,
+       "diff": -4.45
+      },
+      {
+       "week": 6,
+       "actual": 107.1,
+       "projected": 94.98,
+       "diff": 12.12
+      },
+      {
+       "week": 7,
+       "actual": 114.42,
+       "projected": 95.26,
+       "diff": 19.16
+      },
+      {
+       "week": 8,
+       "actual": 84.18,
+       "projected": 99.98,
+       "diff": -15.8
+      },
+      {
+       "week": 9,
+       "actual": 68.06,
+       "projected": 101.31,
+       "diff": -33.25
+      }
+     ]
+    },
+    {
+     "team_id": "10",
+     "team": "The Fe-Brees Brothers",
+     "games": 9,
+     "avg_diff": -6.67,
+     "stdev": 16.88,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 6,
+      "actual": 119.44,
+      "projected": 94.87,
+      "diff": 24.57
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 31.66,
+      "projected": 68.52,
+      "diff": -36.86
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 86.7,
+       "projected": 91.55,
+       "diff": -4.85
+      },
+      {
+       "week": 2,
+       "actual": 31.66,
+       "projected": 68.52,
+       "diff": -36.86
+      },
+      {
+       "week": 3,
+       "actual": 91.58,
+       "projected": 82.9,
+       "diff": 8.68
+      },
+      {
+       "week": 4,
+       "actual": 85.18,
+       "projected": 91.25,
+       "diff": -6.07
+      },
+      {
+       "week": 5,
+       "actual": 86.84,
+       "projected": 97.38,
+       "diff": -10.54
+      },
+      {
+       "week": 6,
+       "actual": 119.44,
+       "projected": 94.87,
+       "diff": 24.57
+      },
+      {
+       "week": 7,
+       "actual": 75.98,
+       "projected": 100.36,
+       "diff": -24.38
+      },
+      {
+       "week": 8,
+       "actual": 106.8,
+       "projected": 104.83,
+       "diff": 1.97
+      },
+      {
+       "week": 9,
+       "actual": 99.18,
+       "projected": 111.7,
+       "diff": -12.52
+      }
+     ]
+    },
+    {
+     "team_id": "20",
+     "team": "Dangerous  Nights Crew",
+     "games": 9,
+     "avg_diff": -6.71,
+     "stdev": 12.69,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 5,
+      "actual": 107.56,
+      "projected": 96.8,
+      "diff": 10.76
+     },
+     "worst_week": {
+      "week": 4,
+      "actual": 70.5,
+      "projected": 100.48,
+      "diff": -29.98
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 89.76,
+       "projected": 92.31,
+       "diff": -2.55
+      },
+      {
+       "week": 2,
+       "actual": 98.78,
+       "projected": 99.94,
+       "diff": -1.16
+      },
+      {
+       "week": 3,
+       "actual": 101.34,
+       "projected": 103.79,
+       "diff": -2.45
+      },
+      {
+       "week": 4,
+       "actual": 70.5,
+       "projected": 100.48,
+       "diff": -29.98
+      },
+      {
+       "week": 5,
+       "actual": 107.56,
+       "projected": 96.8,
+       "diff": 10.76
+      },
+      {
+       "week": 6,
+       "actual": 73.88,
+       "projected": 98.19,
+       "diff": -24.31
+      },
+      {
+       "week": 7,
+       "actual": 80.3,
+       "projected": 95.35,
+       "diff": -15.05
+      },
+      {
+       "week": 8,
+       "actual": 85.54,
+       "projected": 83.31,
+       "diff": 2.23
+      },
+      {
+       "week": 9,
+       "actual": 101.28,
+       "projected": 99.15,
+       "diff": 2.13
+      }
+     ]
+    },
+    {
+     "team_id": "14",
+     "team": "Spokane Beers",
+     "games": 9,
+     "avg_diff": -6.95,
+     "stdev": 20.09,
+     "weeks_over": 2,
+     "weeks_under": 7,
+     "best_week": {
+      "week": 5,
+      "actual": 121.42,
+      "projected": 80.94,
+      "diff": 40.48
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 61.1,
+      "projected": 89.95,
+      "diff": -28.85
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 66.0,
+       "projected": 93.19,
+       "diff": -27.19
+      },
+      {
+       "week": 2,
+       "actual": 61.1,
+       "projected": 89.95,
+       "diff": -28.85
+      },
+      {
+       "week": 3,
+       "actual": 89.74,
+       "projected": 90.25,
+       "diff": -0.51
+      },
+      {
+       "week": 4,
+       "actual": 100.86,
+       "projected": 93.66,
+       "diff": 7.2
+      },
+      {
+       "week": 5,
+       "actual": 121.42,
+       "projected": 80.94,
+       "diff": 40.48
+      },
+      {
+       "week": 6,
+       "actual": 57.98,
+       "projected": 79.09,
+       "diff": -21.11
+      },
+      {
+       "week": 7,
+       "actual": 78.58,
+       "projected": 90.0,
+       "diff": -11.42
+      },
+      {
+       "week": 8,
+       "actual": 74.28,
+       "projected": 86.49,
+       "diff": -12.21
+      },
+      {
+       "week": 9,
+       "actual": 60.58,
+       "projected": 69.51,
+       "diff": -8.93
+      }
+     ]
+    },
+    {
+     "team_id": "15",
+     "team": "DA BEARS FORCE ONE",
+     "games": 9,
+     "avg_diff": -9.22,
+     "stdev": 14.25,
+     "weeks_over": 1,
+     "weeks_under": 8,
+     "best_week": {
+      "week": 2,
+      "actual": 110.46,
+      "projected": 90.3,
+      "diff": 20.16
+     },
+     "worst_week": {
+      "week": 5,
+      "actual": 67.0,
+      "projected": 100.6,
+      "diff": -33.6
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 92.72,
+       "projected": 93.83,
+       "diff": -1.11
+      },
+      {
+       "week": 2,
+       "actual": 110.46,
+       "projected": 90.3,
+       "diff": 20.16
+      },
+      {
+       "week": 3,
+       "actual": 87.52,
+       "projected": 96.75,
+       "diff": -9.23
+      },
+      {
+       "week": 4,
+       "actual": 89.04,
+       "projected": 105.86,
+       "diff": -16.82
+      },
+      {
+       "week": 5,
+       "actual": 67.0,
+       "projected": 100.6,
+       "diff": -33.6
+      },
+      {
+       "week": 6,
+       "actual": 67.66,
+       "projected": 71.69,
+       "diff": -4.03
+      },
+      {
+       "week": 7,
+       "actual": 58.72,
+       "projected": 73.9,
+       "diff": -15.18
+      },
+      {
+       "week": 8,
+       "actual": 56.4,
+       "projected": 77.31,
+       "diff": -20.91
+      },
+      {
+       "week": 9,
+       "actual": 71.3,
+       "projected": 73.6,
+       "diff": -2.3
+      }
+     ]
+    },
+    {
+     "team_id": "6",
+     "team": "Ben Jarvis Green Ellis LLP",
+     "games": 9,
+     "avg_diff": -13.0,
+     "stdev": 17.84,
+     "weeks_over": 1,
+     "weeks_under": 8,
+     "best_week": {
+      "week": 5,
+      "actual": 89.24,
+      "projected": 80.74,
+      "diff": 8.5
+     },
+     "worst_week": {
+      "week": 9,
+      "actual": 52.5,
+      "projected": 103.0,
+      "diff": -50.5
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 89.66,
+       "projected": 90.56,
+       "diff": -0.9
+      },
+      {
+       "week": 2,
+       "actual": 59.52,
+       "projected": 91.69,
+       "diff": -32.17
+      },
+      {
+       "week": 3,
+       "actual": 67.36,
+       "projected": 91.19,
+       "diff": -23.83
+      },
+      {
+       "week": 4,
+       "actual": 65.58,
+       "projected": 76.92,
+       "diff": -11.34
+      },
+      {
+       "week": 5,
+       "actual": 89.24,
+       "projected": 80.74,
+       "diff": 8.5
+      },
+      {
+       "week": 6,
+       "actual": 67.2,
+       "projected": 68.01,
+       "diff": -0.81
+      },
+      {
+       "week": 7,
+       "actual": 89.12,
+       "projected": 89.8,
+       "diff": -0.68
+      },
+      {
+       "week": 8,
+       "actual": 84.44,
+       "projected": 89.69,
+       "diff": -5.25
+      },
+      {
+       "week": 9,
+       "actual": 52.5,
+       "projected": 103.0,
+       "diff": -50.5
+      }
+     ]
+    }
+   ],
+   "decisions": {
+    "by_team": [
+     {
+      "team_id": "20",
+      "team": "Dangerous  Nights Crew",
+      "weeks": 9,
+      "total_points_left": 133.1,
+      "avg_per_week": 14.79,
+      "weeks_15_plus_left": 4,
+      "efficiency": 0.859,
+      "avoidable_losses": [
+       {
+        "week": 1,
+        "scored": 89.76,
+        "opp": 92.72,
+        "optimal": 105.86,
+        "opp_team": "DA BEARS FORCE ONE"
+       },
+       {
+        "week": 2,
+        "scored": 98.78,
+        "opp": 103.26,
+        "optimal": 124.78,
+        "opp_team": "Letter of the Day is \"TD\""
+       },
+       {
+        "week": 4,
+        "scored": 70.5,
+        "opp": 85.18,
+        "optimal": 103.0,
+        "opp_team": "The Fe-Brees Brothers"
+       }
+      ]
+     },
+     {
+      "team_id": "18",
+      "team": "Elements of  Intrigue",
+      "weeks": 9,
+      "total_points_left": 121.98,
+      "avg_per_week": 13.55,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.87,
+      "avoidable_losses": [
+       {
+        "week": 9,
+        "scored": 68.06,
+        "opp": 89.1,
+        "optimal": 113.76,
+        "opp_team": "Letter of the Day is \"TD\""
+       }
+      ]
+     },
+     {
+      "team_id": "15",
+      "team": "DA BEARS FORCE ONE",
+      "weeks": 9,
+      "total_points_left": 121.2,
+      "avg_per_week": 13.47,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.853,
+      "avoidable_losses": [
+       {
+        "week": 3,
+        "scored": 87.52,
+        "opp": 98.28,
+        "optimal": 99.7,
+        "opp_team": "EVIL EMPIRE"
+       },
+       {
+        "week": 7,
+        "scored": 58.72,
+        "opp": 75.98,
+        "optimal": 81.22,
+        "opp_team": "The Fe-Brees Brothers"
+       }
+      ]
+     },
+     {
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
+      "weeks": 9,
+      "total_points_left": 104.5,
+      "avg_per_week": 11.61,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.887,
+      "avoidable_losses": [
+       {
+        "week": 1,
+        "scored": 114.66,
+        "opp": 122.86,
+        "optimal": 127.46,
+        "opp_team": "EVIL EMPIRE"
+       },
+       {
+        "week": 2,
+        "scored": 109.62,
+        "opp": 110.46,
+        "optimal": 116.32,
+        "opp_team": "DA BEARS FORCE ONE"
+       },
+       {
+        "week": 4,
+        "scored": 81.72,
+        "opp": 100.86,
+        "optimal": 103.02,
+        "opp_team": "Spokane Beers"
+       }
+      ]
+     },
+     {
+      "team_id": "14",
+      "team": "Spokane Beers",
+      "weeks": 9,
+      "total_points_left": 101.62,
+      "avg_per_week": 11.29,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.875,
+      "avoidable_losses": [
+       {
+        "week": 1,
+        "scored": 66.0,
+        "opp": 90.72,
+        "optimal": 95.5,
+        "opp_team": "Bake N' Shake"
+       },
+       {
+        "week": 3,
+        "scored": 89.74,
+        "opp": 101.34,
+        "optimal": 104.54,
+        "opp_team": "Dangerous  Nights Crew"
+       },
+       {
+        "week": 6,
+        "scored": 57.98,
+        "opp": 67.66,
+        "optimal": 69.68,
+        "opp_team": "DA BEARS FORCE ONE"
+       }
+      ]
+     },
+     {
+      "team_id": "5",
+      "team": "Letter of the Day is \"TD\"",
+      "weeks": 9,
+      "total_points_left": 99.32,
+      "avg_per_week": 11.04,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.903,
+      "avoidable_losses": [
+       {
+        "week": 6,
+        "scored": 62.42,
+        "opp": 67.2,
+        "optimal": 75.22,
+        "opp_team": "Ben Jarvis Green Ellis LLP"
+       },
+       {
+        "week": 8,
+        "scored": 102.4,
+        "opp": 106.8,
+        "optimal": 109.1,
+        "opp_team": "The Fe-Brees Brothers"
+       }
+      ]
+     },
+     {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "weeks": 9,
+      "total_points_left": 90.72,
+      "avg_per_week": 10.08,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.908,
+      "avoidable_losses": [
+       {
+        "week": 2,
+        "scored": 56.58,
+        "opp": 59.52,
+        "optimal": 71.0,
+        "opp_team": "Ben Jarvis Green Ellis LLP"
+       }
+      ]
+     },
+     {
+      "team_id": "10",
+      "team": "The Fe-Brees Brothers",
+      "weeks": 9,
+      "total_points_left": 85.4,
+      "avg_per_week": 9.49,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.902,
+      "avoidable_losses": []
+     },
+     {
+      "team_id": "11",
+      "team": "Bake N' Shake",
+      "weeks": 9,
+      "total_points_left": 84.64,
+      "avg_per_week": 9.4,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.908,
+      "avoidable_losses": []
+     },
+     {
+      "team_id": "6",
+      "team": "Ben Jarvis Green Ellis LLP",
+      "weeks": 9,
+      "total_points_left": 78.6,
+      "avg_per_week": 8.73,
+      "weeks_15_plus_left": 1,
+      "efficiency": 0.894,
+      "avoidable_losses": [
+       {
+        "week": 5,
+        "scored": 89.24,
+        "opp": 96.16,
+        "optimal": 99.44,
+        "opp_team": "Bake N' Shake"
+       }
+      ]
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "weeks": 9,
+      "total_points_left": 78.24,
+      "avg_per_week": 8.69,
+      "weeks_15_plus_left": 1,
+      "efficiency": 0.929,
+      "avoidable_losses": [
+       {
+        "week": 4,
+        "scored": 114.22,
+        "opp": 120.36,
+        "optimal": 124.02,
+        "opp_team": "Bake N' Shake"
+       }
+      ]
+     },
+     {
+      "team_id": "7",
+      "team": "D'Quan's Friend",
+      "weeks": 9,
+      "total_points_left": 70.2,
+      "avg_per_week": 7.8,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.917,
+      "avoidable_losses": [
+       {
+        "week": 3,
+        "scored": 78.84,
+        "opp": 91.58,
+        "optimal": 100.08,
+        "opp_team": "The Fe-Brees Brothers"
+       }
+      ]
+     }
+    ],
+    "costliest_calls": [
+     {
+      "team": "Spokane Beers",
+      "week": 1,
+      "bench": "Jalen Coker",
+      "bench_pts": 25.8,
+      "starter": "Ja'Marr Chase",
+      "starter_pts": 1.2,
+      "gain": 24.6
+     },
+     {
+      "team": "DA BEARS FORCE ONE",
+      "week": 4,
+      "bench": "Kyle Monangai",
+      "bench_pts": 27.0,
+      "starter": "Jeremiyah Love",
+      "starter_pts": 5.5,
+      "gain": 21.5
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "week": 9,
+      "bench": "C.J. Stroud",
+      "bench_pts": 35.36,
+      "starter": "Jayden Daniels",
+      "starter_pts": 14.56,
+      "gain": 20.8
+     },
+     {
+      "team": "DA BEARS FORCE ONE",
+      "week": 7,
+      "bench": "Cam Skattebo",
+      "bench_pts": 18.1,
+      "starter": "Rashid Shaheed",
+      "starter_pts": 0.1,
+      "gain": 18.0
+     },
+     {
+      "team": "The Fe-Brees Brothers",
+      "week": 2,
+      "bench": "Tre Tucker",
+      "bench_pts": 17.9,
+      "starter": "Marvin Harrison Jr.",
+      "starter_pts": 0.0,
+      "gain": 17.9
+     },
+     {
+      "team": "EVIL EMPIRE",
+      "week": 8,
+      "bench": "Emmett Johnson",
+      "bench_pts": 20.3,
+      "starter": "Germie Bernard",
+      "starter_pts": 3.0,
+      "gain": 17.3
+     },
+     {
+      "team": "Dangerous  Nights Crew",
+      "week": 4,
+      "bench": "Romeo Doubs",
+      "bench_pts": 17.8,
+      "starter": "Travis Kelce",
+      "starter_pts": 1.5,
+      "gain": 16.3
+     },
+     {
+      "team": "Bake N' Shake",
+      "week": 2,
+      "bench": "Bryce Young",
+      "bench_pts": 24.08,
+      "starter": "Drake Maye",
+      "starter_pts": 8.02,
+      "gain": 16.06
+     },
+     {
+      "team": "Spokane Beers",
+      "week": 3,
+      "bench": "Kenyon Sadiq",
+      "bench_pts": 16.5,
+      "starter": "Tetairoa McMillan",
+      "starter_pts": 1.7,
+      "gain": 14.8
+     },
+     {
+      "team": "D'Quan's Friend",
+      "week": 9,
+      "bench": "Brock Purdy",
+      "bench_pts": 25.28,
+      "starter": "Matthew Stafford",
+      "starter_pts": 11.22,
+      "gain": 14.06
+     },
+     {
+      "team": "D'Quan's Friend",
+      "week": 2,
+      "bench": "Brock Purdy",
+      "bench_pts": 28.48,
+      "starter": "Lamar Jackson",
+      "starter_pts": 14.8,
+      "gain": 13.68
+     },
+     {
+      "team": "Dangerous  Nights Crew",
+      "week": 2,
+      "bench": "Travis Kelce",
+      "bench_pts": 16.1,
+      "starter": "DK Metcalf",
+      "starter_pts": 2.7,
+      "gain": 13.4
+     },
+     {
+      "team": "Spokane Beers",
+      "week": 2,
+      "bench": "Bo Nix",
+      "bench_pts": 14.12,
+      "starter": "Jaxson Dart",
+      "starter_pts": 0.8,
+      "gain": 13.32
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "week": 5,
+      "bench": "Blake Corum",
+      "bench_pts": 13.2,
+      "starter": "Roman Wilson",
+      "starter_pts": 0.0,
+      "gain": 13.2
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "week": 7,
+      "bench": "Omar Cooper Jr.",
+      "bench_pts": 17.5,
+      "starter": "Courtland Sutton",
+      "starter_pts": 4.5,
+      "gain": 13.0
+     }
+    ]
+   },
+   "players": {
+    "positional_average_per_start": {
+     "QB": 19.01,
+     "RB": 11.18,
+     "WR": 8.64,
+     "TE": 6.83,
+     "DEF": 6.0
+    },
+    "team_mvps": [
+     {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "mvp": {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "player": "Christian Watson",
+       "pos": "WR",
+       "starts": 9,
+       "points": 127.9,
+       "above_pos_avg": 50.15,
+       "ppg": 14.21
+      },
+      "weakest_link": {
+       "team_id": "1",
+       "team": "EVIL EMPIRE",
+       "player": "Justin Herbert",
+       "pos": "QB",
+       "starts": 2,
+       "points": 21.14,
+       "above_pos_avg": -16.88,
+       "ppg": 10.57
+      }
+     },
+     {
+      "team_id": "5",
+      "team": "Letter of the Day is \"TD\"",
+      "mvp": {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "player": "Jahmyr Gibbs",
+       "pos": "RB",
+       "starts": 8,
+       "points": 175.2,
+       "above_pos_avg": 85.75,
+       "ppg": 21.9
+      },
+      "weakest_link": {
+       "team_id": "5",
+       "team": "Letter of the Day is \"TD\"",
+       "player": "Jadarian Price",
+       "pos": "RB",
+       "starts": 4,
+       "points": 17.8,
+       "above_pos_avg": -26.93,
+       "ppg": 4.45
+      }
+     },
+     {
+      "team_id": "6",
+      "team": "Ben Jarvis Green Ellis LLP",
+      "mvp": {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "player": "Jaguars D/ST",
+       "pos": "DEF",
+       "starts": 2,
+       "points": 35.0,
+       "above_pos_avg": 23.0,
+       "ppg": 17.5
+      },
+      "weakest_link": {
+       "team_id": "6",
+       "team": "Ben Jarvis Green Ellis LLP",
+       "player": "Kaelon Black",
+       "pos": "RB",
+       "starts": 6,
+       "points": 26.1,
+       "above_pos_avg": -40.99,
+       "ppg": 4.35
+      }
+     },
+     {
+      "team_id": "7",
+      "team": "D'Quan's Friend",
+      "mvp": {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "player": "CeeDee Lamb",
+       "pos": "WR",
+       "starts": 9,
+       "points": 131.8,
+       "above_pos_avg": 54.05,
+       "ppg": 14.64
+      },
+      "weakest_link": {
+       "team_id": "7",
+       "team": "D'Quan's Friend",
+       "player": "J.K. Dobbins",
+       "pos": "RB",
+       "starts": 9,
+       "points": 53.5,
+       "above_pos_avg": -47.13,
+       "ppg": 5.94
+      }
+     },
+     {
+      "team_id": "10",
+      "team": "The Fe-Brees Brothers",
+      "mvp": {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "player": "Brock Bowers",
+       "pos": "TE",
+       "starts": 7,
+       "points": 98.0,
+       "above_pos_avg": 50.17,
+       "ppg": 14.0
+      },
+      "weakest_link": {
+       "team_id": "10",
+       "team": "The Fe-Brees Brothers",
+       "player": "Chase Brown",
+       "pos": "RB",
+       "starts": 8,
+       "points": 62.4,
+       "above_pos_avg": -27.05,
+       "ppg": 7.8
+      }
+     },
+     {
+      "team_id": "11",
+      "team": "Bake N' Shake",
+      "mvp": {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "player": "Jaxon Smith-Njigba",
+       "pos": "WR",
+       "starts": 9,
+       "points": 161.06,
+       "above_pos_avg": 83.31,
+       "ppg": 17.9
+      },
+      "weakest_link": {
+       "team_id": "11",
+       "team": "Bake N' Shake",
+       "player": "Omarion Hampton",
+       "pos": "RB",
+       "starts": 7,
+       "points": 54.5,
+       "above_pos_avg": -23.77,
+       "ppg": 7.79
+      }
+     },
+     {
+      "team_id": "14",
+      "team": "Spokane Beers",
+      "mvp": {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "player": "Ja'Marr Chase",
+       "pos": "WR",
+       "starts": 9,
+       "points": 106.7,
+       "above_pos_avg": 28.95,
+       "ppg": 11.86
+      },
+      "weakest_link": {
+       "team_id": "14",
+       "team": "Spokane Beers",
+       "player": "MarShawn Lloyd",
+       "pos": "RB",
+       "starts": 8,
+       "points": 38.8,
+       "above_pos_avg": -50.65,
+       "ppg": 4.85
+      }
+     },
+     {
+      "team_id": "15",
+      "team": "DA BEARS FORCE ONE",
+      "mvp": {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "player": "Amon-Ra St. Brown",
+       "pos": "WR",
+       "starts": 8,
+       "points": 96.6,
+       "above_pos_avg": 27.49,
+       "ppg": 12.07
+      },
+      "weakest_link": {
+       "team_id": "15",
+       "team": "DA BEARS FORCE ONE",
+       "player": "Cam Skattebo",
+       "pos": "RB",
+       "starts": 6,
+       "points": 41.3,
+       "above_pos_avg": -25.79,
+       "ppg": 6.88
+      }
+     },
+     {
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
+      "mvp": {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "player": "Josh Allen",
+       "pos": "QB",
+       "starts": 8,
+       "points": 199.68,
+       "above_pos_avg": 47.6,
+       "ppg": 24.96
+      },
+      "weakest_link": {
+       "team_id": "16",
+       "team": "TEXAS CHUPACABRAS",
+       "player": "Jaylen Waddle",
+       "pos": "WR",
+       "starts": 7,
+       "points": 37.9,
+       "above_pos_avg": -22.58,
+       "ppg": 5.41
+      }
+     },
+     {
+      "team_id": "18",
+      "team": "Elements of  Intrigue",
+      "mvp": {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "player": "Javonte Williams",
+       "pos": "RB",
+       "starts": 9,
+       "points": 135.6,
+       "above_pos_avg": 34.97,
+       "ppg": 15.07
+      },
+      "weakest_link": {
+       "team_id": "18",
+       "team": "Elements of  Intrigue",
+       "player": "Courtland Sutton",
+       "pos": "WR",
+       "starts": 5,
+       "points": 17.8,
+       "above_pos_avg": -25.4,
+       "ppg": 3.56
+      }
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "mvp": {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "player": "Kenneth Walker III",
+       "pos": "RB",
+       "starts": 8,
+       "points": 170.4,
+       "above_pos_avg": 80.95,
+       "ppg": 21.3
+      },
+      "weakest_link": {
+       "team_id": "19",
+       "team": "Maryland Menace",
+       "player": "TreVeyon Henderson",
+       "pos": "RB",
+       "starts": 3,
+       "points": 9.0,
+       "above_pos_avg": -24.54,
+       "ppg": 3.0
+      }
+     },
+     {
+      "team_id": "20",
+      "team": "Dangerous  Nights Crew",
+      "mvp": {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "player": "Christian McCaffrey",
+       "pos": "RB",
+       "starts": 8,
+       "points": 130.7,
+       "above_pos_avg": 41.25,
+       "ppg": 16.34
+      },
+      "weakest_link": {
+       "team_id": "20",
+       "team": "Dangerous  Nights Crew",
+       "player": "DK Metcalf",
+       "pos": "WR",
+       "starts": 6,
+       "points": 24.3,
+       "above_pos_avg": -27.54,
+       "ppg": 4.05
+      }
+     }
+    ],
+    "league_top": [
+     {
+      "team_id": "5",
+      "team": "Letter of the Day is \"TD\"",
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "starts": 8,
+      "points": 175.2,
+      "above_pos_avg": 85.75,
+      "ppg": 21.9
+     },
+     {
+      "team_id": "11",
+      "team": "Bake N' Shake",
+      "player": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "starts": 9,
+      "points": 161.06,
+      "above_pos_avg": 83.31,
+      "ppg": 17.9
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "starts": 8,
+      "points": 170.4,
+      "above_pos_avg": 80.95,
+      "ppg": 21.3
+     },
+     {
+      "team_id": "7",
+      "team": "D'Quan's Friend",
+      "player": "CeeDee Lamb",
+      "pos": "WR",
+      "starts": 9,
+      "points": 131.8,
+      "above_pos_avg": 54.05,
+      "ppg": 14.64
+     },
+     {
+      "team_id": "10",
+      "team": "The Fe-Brees Brothers",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "starts": 7,
+      "points": 98.0,
+      "above_pos_avg": 50.17,
+      "ppg": 14.0
+     },
+     {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "player": "Christian Watson",
+      "pos": "WR",
+      "starts": 9,
+      "points": 127.9,
+      "above_pos_avg": 50.15,
+      "ppg": 14.21
+     },
+     {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "player": "Bijan Robinson",
+      "pos": "RB",
+      "starts": 9,
+      "points": 149.0,
+      "above_pos_avg": 48.37,
+      "ppg": 16.56
+     },
+     {
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
+      "player": "Josh Allen",
+      "pos": "QB",
+      "starts": 8,
+      "points": 199.68,
+      "above_pos_avg": 47.6,
+      "ppg": 24.96
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "player": "Joe Burrow",
+      "pos": "QB",
+      "starts": 8,
+      "points": 199.14,
+      "above_pos_avg": 47.06,
+      "ppg": 24.89
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "player": "James Cook III",
+      "pos": "RB",
+      "starts": 8,
+      "points": 136.4,
+      "above_pos_avg": 46.95,
+      "ppg": 17.05
+     },
+     {
+      "team_id": "10",
+      "team": "The Fe-Brees Brothers",
+      "player": "Puka Nacua",
+      "pos": "WR",
+      "starts": 7,
+      "points": 103.6,
+      "above_pos_avg": 43.12,
+      "ppg": 14.8
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "player": "Tee Higgins",
+      "pos": "WR",
+      "starts": 8,
+      "points": 111.8,
+      "above_pos_avg": 42.69,
+      "ppg": 13.97
+     },
+     {
+      "team_id": "20",
+      "team": "Dangerous  Nights Crew",
+      "player": "Christian McCaffrey",
+      "pos": "RB",
+      "starts": 8,
+      "points": 130.7,
+      "above_pos_avg": 41.25,
+      "ppg": 16.34
+     },
+     {
+      "team_id": "20",
+      "team": "Dangerous  Nights Crew",
+      "player": "Bucky Irving",
+      "pos": "RB",
+      "starts": 9,
+      "points": 137.1,
+      "above_pos_avg": 36.47,
+      "ppg": 15.23
+     },
+     {
+      "team_id": "18",
+      "team": "Elements of  Intrigue",
+      "player": "Javonte Williams",
+      "pos": "RB",
+      "starts": 9,
+      "points": 135.6,
+      "above_pos_avg": 34.97,
+      "ppg": 15.07
+     }
+    ]
+   },
+   "consistency": [
+    {
+     "team_id": "19",
+     "team": "Maryland Menace",
+     "avg": 113.85,
+     "stdev": 19.32,
+     "high": 144.94,
+     "low": 83.8,
+     "above_median_weeks": "8-1"
+    },
+    {
+     "team_id": "5",
+     "team": "Letter of the Day is \"TD\"",
+     "avg": 102.42,
+     "stdev": 21.22,
+     "high": 136.44,
+     "low": 62.42,
+     "above_median_weeks": "7-2"
+    },
+    {
+     "team_id": "1",
+     "team": "EVIL EMPIRE",
+     "avg": 99.36,
+     "stdev": 29.49,
+     "high": 150.38,
+     "low": 56.58,
+     "above_median_weeks": "6-3"
+    },
+    {
+     "team_id": "11",
+     "team": "Bake N' Shake",
+     "avg": 92.95,
+     "stdev": 10.83,
+     "high": 120.36,
+     "low": 80.66,
+     "above_median_weeks": "5-4"
+    },
+    {
+     "team_id": "16",
+     "team": "TEXAS CHUPACABRAS",
+     "avg": 91.33,
+     "stdev": 23.32,
+     "high": 115.36,
+     "low": 42.44,
+     "above_median_weeks": "6-3"
+    },
+    {
+     "team_id": "18",
+     "team": "Elements of  Intrigue",
+     "avg": 91.06,
+     "stdev": 19.22,
+     "high": 123.76,
+     "low": 67.44,
+     "above_median_weeks": "3-6"
+    },
+    {
+     "team_id": "20",
+     "team": "Dangerous  Nights Crew",
+     "avg": 89.88,
+     "stdev": 12.45,
+     "high": 107.56,
+     "low": 70.5,
+     "above_median_weeks": "5-4"
+    },
+    {
+     "team_id": "10",
+     "team": "The Fe-Brees Brothers",
+     "avg": 87.04,
+     "stdev": 23.1,
+     "high": 119.44,
+     "low": 31.66,
+     "above_median_weeks": "4-5"
+    },
+    {
+     "team_id": "7",
+     "team": "D'Quan's Friend",
+     "avg": 86.31,
+     "stdev": 18.35,
+     "high": 109.56,
+     "low": 56.68,
+     "above_median_weeks": "5-4"
+    },
+    {
+     "team_id": "14",
+     "team": "Spokane Beers",
+     "avg": 78.95,
+     "stdev": 20.24,
+     "high": 121.42,
+     "low": 57.98,
+     "above_median_weeks": "3-6"
+    },
+    {
+     "team_id": "15",
+     "team": "DA BEARS FORCE ONE",
+     "avg": 77.87,
+     "stdev": 16.98,
+     "high": 110.46,
+     "low": 56.4,
+     "above_median_weeks": "1-8"
+    },
+    {
+     "team_id": "6",
+     "team": "Ben Jarvis Green Ellis LLP",
+     "avg": 73.85,
+     "stdev": 13.53,
+     "high": 89.66,
+     "low": 52.5,
+     "above_median_weeks": "1-8"
+    }
+   ],
+   "pickups": {
+    "complete_history": null,
+    "by_team": [
+     {
+      "team_id": "6",
+      "team": "Ben Jarvis Green Ellis LLP",
+      "adds": 8,
+      "points_from_adds": 234.54,
+      "faab_spent": 64.0,
+      "points_per_faab_dollar": 3.66
+     },
+     {
+      "team_id": "18",
+      "team": "Elements of  Intrigue",
+      "adds": 16,
+      "points_from_adds": 168.12,
+      "faab_spent": 54.0,
+      "points_per_faab_dollar": 3.11
+     },
+     {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "adds": 15,
+      "points_from_adds": 156.26,
+      "faab_spent": 38.0,
+      "points_per_faab_dollar": 4.11
+     },
+     {
+      "team_id": "5",
+      "team": "Letter of the Day is \"TD\"",
+      "adds": 4,
+      "points_from_adds": 57.9,
+      "faab_spent": 37.0,
+      "points_per_faab_dollar": 1.56
+     },
+     {
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
+      "adds": 6,
+      "points_from_adds": 57.72,
+      "faab_spent": 36.0,
+      "points_per_faab_dollar": 1.6
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "adds": 5,
+      "points_from_adds": 46.42,
+      "faab_spent": 17.0,
+      "points_per_faab_dollar": 2.73
+     },
+     {
+      "team_id": "10",
+      "team": "The Fe-Brees Brothers",
+      "adds": 3,
+      "points_from_adds": 42.8,
+      "faab_spent": 11.0,
+      "points_per_faab_dollar": 3.89
+     },
+     {
+      "team_id": "11",
+      "team": "Bake N' Shake",
+      "adds": 8,
+      "points_from_adds": 22.7,
+      "faab_spent": 29.0,
+      "points_per_faab_dollar": 0.78
+     },
+     {
+      "team_id": "20",
+      "team": "Dangerous  Nights Crew",
+      "adds": 3,
+      "points_from_adds": 18.26,
+      "faab_spent": 6.0,
+      "points_per_faab_dollar": 3.04
+     },
+     {
+      "team_id": "14",
+      "team": "Spokane Beers",
+      "adds": 1,
+      "points_from_adds": 0.0,
+      "faab_spent": 1.0,
+      "points_per_faab_dollar": 0.0
+     }
+    ],
+    "top_pickups": [
+     {
+      "team": "EVIL EMPIRE",
+      "player": "Jordan Love",
+      "week": 2,
+      "bid": 1,
+      "type": "WAIVER",
+      "starts": 5,
+      "points": 113.38
+     },
+     {
+      "team": "Ben Jarvis Green Ellis LLP",
+      "player": "Jared Goff",
+      "week": 3,
+      "bid": 23,
+      "type": "WAIVER",
+      "starts": 6,
+      "points": 101.14
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "player": "Vikings D/ST",
+      "week": 3,
+      "bid": 5,
+      "type": "WAIVER",
+      "starts": 6,
+      "points": 67.0
+     },
+     {
+      "team": "Ben Jarvis Green Ellis LLP",
+      "player": "Ollie Gordon II",
+      "week": 4,
+      "bid": 16,
+      "type": "WAIVER",
+      "starts": 5,
+      "points": 60.4
+     },
+     {
+      "team": "Letter of the Day is \"TD\"",
+      "player": "Emanuel Wilson",
+      "week": 3,
+      "bid": 13,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 57.9
+     },
+     {
+      "team": "The Fe-Brees Brothers",
+      "player": "Chiefs D/ST",
+      "week": 2,
+      "bid": 2,
+      "type": "WAIVER",
+      "starts": 7,
+      "points": 40.0
+     },
+     {
+      "team": "Ben Jarvis Green Ellis LLP",
+      "player": "Jaguars D/ST",
+      "week": 8,
+      "bid": 3,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 35.0
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "player": "Ryan Flournoy",
+      "week": 6,
+      "bid": 3,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 32.4
+     },
+     {
+      "team": "Ben Jarvis Green Ellis LLP",
+      "player": "Texans D/ST",
+      "week": 3,
+      "bid": 2,
+      "type": "WAIVER",
+      "starts": 5,
+      "points": 28.0
+     },
+     {
+      "team": "TEXAS CHUPACABRAS",
+      "player": "DeMario Douglas",
+      "week": 6,
+      "bid": 7,
+      "type": "WAIVER",
+      "starts": 3,
+      "points": 26.1
+     },
+     {
+      "team": "EVIL EMPIRE",
+      "player": "Jacoby Brissett",
+      "week": 5,
+      "bid": 3,
+      "type": "WAIVER",
+      "starts": 1,
+      "points": 24.28
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "player": "Kyler Murray",
+      "week": 3,
+      "bid": 7,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 21.9
+     }
+    ],
+    "top_drop_regrets": [
+     {
+      "team": "Elements of  Intrigue",
+      "dropped": "Braelon Allen",
+      "week": 3,
+      "points_for_others": 72.8,
+      "starts_elsewhere": 6
+     },
+     {
+      "team": "Bake N' Shake",
+      "dropped": "Chiefs D/ST",
+      "week": 1,
+      "points_for_others": 40.0,
+      "starts_elsewhere": 7
+     },
+     {
+      "team": "TEXAS CHUPACABRAS",
+      "dropped": "Texans D/ST",
+      "week": 3,
+      "points_for_others": 40.0,
+      "starts_elsewhere": 6
+     },
+     {
+      "team": "Maryland Menace",
+      "dropped": "C.J. Stroud",
+      "week": 4,
+      "points_for_others": 39.6,
+      "starts_elsewhere": 2
+     },
+     {
+      "team": "Bake N' Shake",
+      "dropped": "Jaguars D/ST",
+      "week": 2,
+      "points_for_others": 38.0,
+      "starts_elsewhere": 4
+     },
+     {
+      "team": "Elements of  Intrigue",
+      "dropped": "Kyler Murray",
+      "week": 5,
+      "points_for_others": 18.26,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "EVIL EMPIRE",
+      "dropped": "C.J. Stroud",
+      "week": 5,
+      "points_for_others": 16.52,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "Ben Jarvis Green Ellis LLP",
+      "dropped": "Rams D/ST",
+      "week": 4,
+      "points_for_others": 16.0,
+      "starts_elsewhere": 2
+     },
+     {
+      "team": "EVIL EMPIRE",
+      "dropped": "Bills D/ST",
+      "week": 5,
+      "points_for_others": 16.0,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "Ben Jarvis Green Ellis LLP",
+      "dropped": "Brenton Strange",
+      "week": 3,
+      "points_for_others": 12.1,
+      "starts_elsewhere": 3
+     }
+    ]
+   },
+   "trades": [
+    {
+     "date": "2026-10-03T02:14:12.944000+00:00",
+     "player": "Braelon Allen",
+     "from": "Maryland Menace",
+     "to": "D'Quan's Friend",
+     "points_started_for_new_team": 72.8,
+     "starts_for_new_team": 6,
+     "points_started_for_old_team": 0,
+     "starts_for_old_team": 0
+    },
+    {
+     "date": "2026-10-03T02:14:12.944000+00:00",
+     "player": "RJ Harvey",
+     "from": "Maryland Menace",
+     "to": "D'Quan's Friend",
+     "points_started_for_new_team": 33.6,
+     "starts_for_new_team": 4,
+     "points_started_for_old_team": 0,
+     "starts_for_old_team": 0
+    },
+    {
+     "date": "2026-10-03T02:14:12.944000+00:00",
+     "player": "DJ Moore",
+     "from": "D'Quan's Friend",
+     "to": "Maryland Menace",
+     "points_started_for_new_team": 14.3,
+     "starts_for_new_team": 2,
+     "points_started_for_old_team": 22.6,
+     "starts_for_old_team": 3
+    }
+   ],
+   "mvp_detail": [
+    {
+     "team_id": "1",
+     "team": "EVIL EMPIRE",
+     "player": "Christian Watson",
+     "pos": "WR",
+     "starts": 9,
+     "points": 127.9,
+     "ppg": 14.21,
+     "positional_avg_per_start": 8.64,
+     "above_avg_total": 50.15,
+     "above_avg_per_start": 5.57,
+     "pct_above_avg": 64.49,
+     "share_of_team_points": 14.3
+    },
+    {
+     "team_id": "5",
+     "team": "Letter of the Day is \"TD\"",
+     "player": "Jahmyr Gibbs",
+     "pos": "RB",
+     "starts": 8,
+     "points": 175.2,
+     "ppg": 21.9,
+     "positional_avg_per_start": 11.18,
+     "above_avg_total": 85.75,
+     "above_avg_per_start": 10.72,
+     "pct_above_avg": 95.86,
+     "share_of_team_points": 19.01
+    },
+    {
+     "team_id": "6",
+     "team": "Ben Jarvis Green Ellis LLP",
+     "player": "Jaguars D/ST",
+     "pos": "DEF",
+     "starts": 2,
+     "points": 35.0,
+     "ppg": 17.5,
+     "positional_avg_per_start": 6.0,
+     "above_avg_total": 23.0,
+     "above_avg_per_start": 11.5,
+     "pct_above_avg": 191.67,
+     "share_of_team_points": 5.27
+    },
+    {
+     "team_id": "7",
+     "team": "D'Quan's Friend",
+     "player": "CeeDee Lamb",
+     "pos": "WR",
+     "starts": 9,
+     "points": 131.8,
+     "ppg": 14.64,
+     "positional_avg_per_start": 8.64,
+     "above_avg_total": 54.05,
+     "above_avg_per_start": 6.01,
+     "pct_above_avg": 69.51,
+     "share_of_team_points": 16.97
+    },
+    {
+     "team_id": "10",
+     "team": "The Fe-Brees Brothers",
+     "player": "Brock Bowers",
+     "pos": "TE",
+     "starts": 7,
+     "points": 98.0,
+     "ppg": 14.0,
+     "positional_avg_per_start": 6.83,
+     "above_avg_total": 50.17,
+     "above_avg_per_start": 7.17,
+     "pct_above_avg": 104.88,
+     "share_of_team_points": 12.51
+    },
+    {
+     "team_id": "11",
+     "team": "Bake N' Shake",
+     "player": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "starts": 9,
+     "points": 161.06,
+     "ppg": 17.9,
+     "positional_avg_per_start": 8.64,
+     "above_avg_total": 83.31,
+     "above_avg_per_start": 9.26,
+     "pct_above_avg": 107.14,
+     "share_of_team_points": 19.25
+    },
+    {
+     "team_id": "14",
+     "team": "Spokane Beers",
+     "player": "Ja'Marr Chase",
+     "pos": "WR",
+     "starts": 9,
+     "points": 106.7,
+     "ppg": 11.86,
+     "positional_avg_per_start": 8.64,
+     "above_avg_total": 28.95,
+     "above_avg_per_start": 3.22,
+     "pct_above_avg": 37.23,
+     "share_of_team_points": 15.02
+    },
+    {
+     "team_id": "15",
+     "team": "DA BEARS FORCE ONE",
+     "player": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "starts": 8,
+     "points": 96.6,
+     "ppg": 12.07,
+     "positional_avg_per_start": 8.64,
+     "above_avg_total": 27.49,
+     "above_avg_per_start": 3.44,
+     "pct_above_avg": 39.77,
+     "share_of_team_points": 13.78
+    },
+    {
+     "team_id": "16",
+     "team": "TEXAS CHUPACABRAS",
+     "player": "Josh Allen",
+     "pos": "QB",
+     "starts": 8,
+     "points": 199.68,
+     "ppg": 24.96,
+     "positional_avg_per_start": 19.01,
+     "above_avg_total": 47.6,
+     "above_avg_per_start": 5.95,
+     "pct_above_avg": 31.3,
+     "share_of_team_points": 24.29
+    },
+    {
+     "team_id": "18",
+     "team": "Elements of  Intrigue",
+     "player": "Javonte Williams",
+     "pos": "RB",
+     "starts": 9,
+     "points": 135.6,
+     "ppg": 15.07,
+     "positional_avg_per_start": 11.18,
+     "above_avg_total": 34.97,
+     "above_avg_per_start": 3.89,
+     "pct_above_avg": 34.75,
+     "share_of_team_points": 16.55
+    },
+    {
+     "team_id": "19",
+     "team": "Maryland Menace",
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "starts": 8,
+     "points": 170.4,
+     "ppg": 21.3,
+     "positional_avg_per_start": 11.18,
+     "above_avg_total": 80.95,
+     "above_avg_per_start": 10.12,
+     "pct_above_avg": 90.49,
+     "share_of_team_points": 16.63
+    },
+    {
+     "team_id": "20",
+     "team": "Dangerous  Nights Crew",
+     "player": "Christian McCaffrey",
+     "pos": "RB",
+     "starts": 8,
+     "points": 130.7,
+     "ppg": 16.34,
+     "positional_avg_per_start": 11.18,
+     "above_avg_total": 41.25,
+     "above_avg_per_start": 5.16,
+     "pct_above_avg": 46.11,
+     "share_of_team_points": 16.16
+    }
+   ],
+   "keepers": null,
+   "trade_ideas": [
+    {
+     "team_id": 1,
+     "team": "EVIL EMPIRE",
+     "trade": {
+      "give": [
+       "C.J. Stroud"
+      ],
+      "get": [
+       "Germie Bernard"
+      ],
+      "give_pos": [
+       "QB"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.32,
+      "their_gain_per_week": 1.3,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 5,
+     "team": "Letter of the Day is \"TD\"",
+     "trade": {
+      "give": [
+       "Jayden Daniels",
+       "Brenton Strange"
+      ],
+      "get": [
+       "Sam LaPorta",
+       "Dak Prescott"
+      ],
+      "give_pos": [
+       "QB",
+       "TE"
+      ],
+      "get_pos": [
+       "TE",
+       "QB"
+      ],
+      "my_gain_per_week": 0.15,
+      "their_gain_per_week": 1.93,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 6,
+     "team": "Ben Jarvis Green Ellis LLP",
+     "trade": {
+      "give": [
+       "C.J. Stroud"
+      ],
+      "get": [
+       "Adonai Mitchell"
+      ],
+      "give_pos": [
+       "QB"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.49,
+      "their_gain_per_week": 1.1,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 7,
+     "team": "D'Quan's Friend",
+     "trade": {
+      "give": [
+       "D'Andre Swift",
+       "KC Concepcion"
+      ],
+      "get": [
+       "CeeDee Lamb",
+       "De'Von Achane"
+      ],
+      "give_pos": [
+       "RB",
+       "WR"
+      ],
+      "get_pos": [
+       "WR",
+       "RB"
+      ],
+      "my_gain_per_week": 0.38,
+      "their_gain_per_week": 2.0,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 10,
+     "team": "The Fe-Brees Brothers",
+     "trade": null
+    },
+    {
+     "team_id": 11,
+     "team": "Bake N' Shake",
+     "trade": null
+    },
+    {
+     "team_id": 14,
+     "team": "Spokane Beers",
+     "trade": {
+      "give": [
+       "Jonathan Taylor",
+       "Jayden Daniels"
+      ],
+      "get": [
+       "Drake London",
+       "Tetairoa McMillan"
+      ],
+      "give_pos": [
+       "RB",
+       "QB"
+      ],
+      "get_pos": [
+       "WR",
+       "WR"
+      ],
+      "my_gain_per_week": 0.15,
+      "their_gain_per_week": 3.85,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 15,
+     "team": "DA BEARS FORCE ONE",
+     "trade": {
+      "give": [
+       "C.J. Stroud",
+       "KC Concepcion"
+      ],
+      "get": [
+       "Jeremiyah Love",
+       "Xavier Worthy"
+      ],
+      "give_pos": [
+       "QB",
+       "WR"
+      ],
+      "get_pos": [
+       "RB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.28,
+      "their_gain_per_week": 1.41,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 16,
+     "team": "TEXAS CHUPACABRAS",
+     "trade": null
+    },
+    {
+     "team_id": 19,
+     "team": "Maryland Menace",
+     "trade": {
+      "give": [
+       "Javonte Williams",
+       "Chris Rodriguez Jr."
+      ],
+      "get": [
+       "Chris Olave",
+       "DJ Moore"
+      ],
+      "give_pos": [
+       "RB",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "WR"
+      ],
+      "my_gain_per_week": 0.17,
+      "their_gain_per_week": 0.98,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 20,
+     "team": "Dangerous  Nights Crew",
+     "trade": {
+      "give": [
+       "Jayden Daniels",
+       "Chris Rodriguez Jr."
+      ],
+      "get": [
+       "Carnell Tate",
+       "Travis Kelce"
+      ],
+      "give_pos": [
+       "QB",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "TE"
+      ],
+      "my_gain_per_week": 1.43,
+      "their_gain_per_week": 1.59,
+      "kind": "win-win"
+     }
+    }
+   ],
+   "draft_value": [
+    {
+     "team_id": "1",
+     "team": "EVIL EMPIRE",
+     "biggest_bust": {
+      "player": "Justin Herbert",
+      "pos": "QB",
+      "round": 9,
+      "pick": 98,
+      "points": 62.44,
+      "peer_avg_points": 121.51,
+      "vs_peers": -59.07
+     },
+     "biggest_steal": {
+      "player": "Christian Watson",
+      "pos": "WR",
+      "round": 6,
+      "pick": 71,
+      "points": 104.8,
+      "peer_avg_points": 41.97,
+      "vs_peers": 62.83
+     }
+    },
+    {
+     "team_id": "5",
+     "team": "Letter of the Day is \"TD\"",
+     "biggest_bust": {
+      "player": "Baker Mayfield",
+      "pos": "QB",
+      "round": 14,
+      "pick": 168,
+      "points": 41.76,
+      "peer_avg_points": 103.41,
+      "vs_peers": -61.65
+     },
+     "biggest_steal": {
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "round": 1,
+      "pick": 1,
+      "points": 139.0,
+      "peer_avg_points": 99.93,
+      "vs_peers": 39.07
+     }
+    },
+    {
+     "team_id": "6",
+     "team": "Ben Jarvis Green Ellis LLP",
+     "biggest_bust": {
+      "player": "Saquon Barkley",
+      "pos": "RB",
+      "round": 2,
+      "pick": 13,
+      "points": 32.1,
+      "peer_avg_points": 91.44,
+      "vs_peers": -59.34
+     },
+     "biggest_steal": {
+      "player": "Jordan Love",
+      "pos": "QB",
+      "round": 14,
+      "pick": 157,
+      "points": 148.84,
+      "peer_avg_points": 66.97,
+      "vs_peers": 81.88
+     }
+    },
+    {
+     "team_id": "7",
+     "team": "D'Quan's Friend",
+     "biggest_bust": {
+      "player": "De'Von Achane",
+      "pos": "RB",
+      "round": 2,
+      "pick": 14,
+      "points": 17.6,
+      "peer_avg_points": 89.95,
+      "vs_peers": -72.35
+     },
+     "biggest_steal": {
+      "player": "Brock Purdy",
+      "pos": "QB",
+      "round": 9,
+      "pick": 107,
+      "points": 146.02,
+      "peer_avg_points": 107.14,
+      "vs_peers": 38.88
+     }
+    },
+    {
+     "team_id": "10",
+     "team": "The Fe-Brees Brothers",
+     "biggest_bust": {
+      "player": "Jordan Mason",
+      "pos": "RB",
+      "round": 9,
+      "pick": 99,
+      "points": 18.7,
+      "peer_avg_points": 52.06,
+      "vs_peers": -33.36
+     },
+     "biggest_steal": {
+      "player": "Tre Tucker",
+      "pos": "WR",
+      "round": 13,
+      "pick": 147,
+      "points": 70.8,
+      "peer_avg_points": 33.42,
+      "vs_peers": 37.38
+     }
+    },
+    {
+     "team_id": "11",
+     "team": "Bake N' Shake",
+     "biggest_bust": {
+      "player": "Travis Etienne Jr.",
+      "pos": "RB",
+      "round": 3,
+      "pick": 30,
+      "points": 19.9,
+      "peer_avg_points": 66.36,
+      "vs_peers": -46.46
+     },
+     "biggest_steal": {
+      "player": "Chuba Hubbard",
+      "pos": "RB",
+      "round": 8,
+      "pick": 91,
+      "points": 111.0,
+      "peer_avg_points": 40.11,
+      "vs_peers": 70.89
+     }
+    },
+    {
+     "team_id": "14",
+     "team": "Spokane Beers",
+     "biggest_bust": {
+      "player": "Jaxson Dart",
+      "pos": "QB",
+      "round": 7,
+      "pick": 79,
+      "points": 27.4,
+      "peer_avg_points": 99.19,
+      "vs_peers": -71.79
+     },
+     "biggest_steal": {
+      "player": "Jaylen Warren",
+      "pos": "RB",
+      "round": 6,
+      "pick": 66,
+      "points": 95.5,
+      "peer_avg_points": 47.9,
+      "vs_peers": 47.6
+     }
+    },
+    {
+     "team_id": "15",
+     "team": "DA BEARS FORCE ONE",
+     "biggest_bust": {
+      "player": "Rico Dowdle",
+      "pos": "RB",
+      "round": 6,
+      "pick": 63,
+      "points": 20.0,
+      "peer_avg_points": 67.73,
+      "vs_peers": -47.73
+     },
+     "biggest_steal": {
+      "player": "Aaron Jones Sr.",
+      "pos": "RB",
+      "round": 10,
+      "pick": 111,
+      "points": 60.8,
+      "peer_avg_points": 34.3,
+      "vs_peers": 26.5
+     }
+    },
+    {
+     "team_id": "16",
+     "team": "TEXAS CHUPACABRAS",
+     "biggest_bust": {
+      "player": "Kyler Murray",
+      "pos": "QB",
+      "round": 11,
+      "pick": 128,
+      "points": 53.68,
+      "peer_avg_points": 125.68,
+      "vs_peers": -72.0
+     },
+     "biggest_steal": {
+      "player": "Josh Allen",
+      "pos": "QB",
+      "round": 3,
+      "pick": 32,
+      "points": 160.26,
+      "peer_avg_points": 101.07,
+      "vs_peers": 59.19
+     }
+    },
+    {
+     "team_id": "18",
+     "team": "Elements of  Intrigue",
+     "biggest_bust": {
+      "player": "Jordyn Tyson",
+      "pos": "WR",
+      "round": 12,
+      "pick": 140,
+      "points": 0.0,
+      "peer_avg_points": 45.95,
+      "vs_peers": -45.95
+     },
+     "biggest_steal": {
+      "player": "Javonte Williams",
+      "pos": "RB",
+      "round": 2,
+      "pick": 20,
+      "points": 111.5,
+      "peer_avg_points": 64.72,
+      "vs_peers": 46.78
+     }
+    },
+    {
+     "team_id": "19",
+     "team": "Maryland Menace",
+     "biggest_bust": {
+      "player": "TreVeyon Henderson",
+      "pos": "RB",
+      "round": 7,
+      "pick": 81,
+      "points": 28.8,
+      "peer_avg_points": 50.78,
+      "vs_peers": -21.98
+     },
+     "biggest_steal": {
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "round": 2,
+      "pick": 16,
+      "points": 129.7,
+      "peer_avg_points": 74.54,
+      "vs_peers": 55.16
+     }
+    },
+    {
+     "team_id": "20",
+     "team": "Dangerous  Nights Crew",
+     "biggest_bust": {
+      "player": "Breece Hall",
+      "pos": "RB",
+      "round": 3,
+      "pick": 28,
+      "points": 32.5,
+      "peer_avg_points": 74.4,
+      "vs_peers": -41.9
+     },
+     "biggest_steal": {
+      "player": "Denzel Boston",
+      "pos": "WR",
+      "round": 14,
+      "pick": 165,
+      "points": 57.2,
+      "peer_avg_points": 21.18,
+      "vs_peers": 36.02
+     }
+    }
+   ],
+   "faab": {
+    "budget_assumed": null,
+    "complete_history": null,
+    "only_executed_claims_visible": false,
+    "by_team": [
+     {
+      "team_id": "18",
+      "team": "Elements of  Intrigue",
+      "waiver_bids_won": 16,
+      "waiver_bids_lost": 14,
+      "waiver_bids_placed": 30,
+      "faab_spent": 54,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "waiver_bids_won": 15,
+      "waiver_bids_lost": 12,
+      "waiver_bids_placed": 27,
+      "faab_spent": 38,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "6",
+      "team": "Ben Jarvis Green Ellis LLP",
+      "waiver_bids_won": 8,
+      "waiver_bids_lost": 3,
+      "waiver_bids_placed": 11,
+      "faab_spent": 64,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Jared Goff",
+        "pos": "QB",
+        "bid": 23,
+        "week": 3,
+        "result": "won",
+        "starts": 6,
+        "points": 101.14,
+        "above_pos_avg": -12.92,
+        "points_per_dollar": 4.4
+       },
+       {
+        "player": "Ollie Gordon II",
+        "pos": "RB",
+        "bid": 16,
+        "week": 4,
+        "result": "won",
+        "starts": 5,
+        "points": 60.4,
+        "above_pos_avg": 4.49,
+        "points_per_dollar": 3.77
+       }
+      ]
+     },
+     {
+      "team_id": "11",
+      "team": "Bake N' Shake",
+      "waiver_bids_won": 8,
+      "waiver_bids_lost": 5,
+      "waiver_bids_placed": 13,
+      "faab_spent": 29,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Jaylin Noel",
+        "pos": "WR",
+        "bid": 13,
+        "week": 7,
+        "result": "won",
+        "starts": 1,
+        "points": -0.3,
+        "above_pos_avg": -8.94,
+        "points_per_dollar": -0.02
+       }
+      ]
+     },
+     {
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
+      "waiver_bids_won": 6,
+      "waiver_bids_lost": 1,
+      "waiver_bids_placed": 7,
+      "faab_spent": 36,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Keon Coleman",
+        "pos": "WR",
+        "bid": 11,
+        "week": 5,
+        "result": "won",
+        "starts": 1,
+        "points": 0.4,
+        "above_pos_avg": -8.24,
+        "points_per_dollar": 0.04
+       }
+      ]
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "waiver_bids_won": 5,
+      "waiver_bids_lost": 3,
+      "waiver_bids_placed": 8,
+      "faab_spent": 17,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Jared Goff",
+        "pos": "QB",
+        "bid": 15,
+        "week": 3,
+        "result": "lost"
+       }
+      ]
+     },
+     {
+      "team_id": "5",
+      "team": "Letter of the Day is \"TD\"",
+      "waiver_bids_won": 4,
+      "waiver_bids_lost": 3,
+      "waiver_bids_placed": 7,
+      "faab_spent": 37,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Elijah Mitchell",
+        "pos": "RB",
+        "bid": 15,
+        "week": 9,
+        "result": "won",
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       },
+       {
+        "player": "Emanuel Wilson",
+        "pos": "RB",
+        "bid": 13,
+        "week": 3,
+        "result": "won",
+        "starts": 4,
+        "points": 57.9,
+        "above_pos_avg": 13.17,
+        "points_per_dollar": 4.45
+       }
+      ]
+     },
+     {
+      "team_id": "10",
+      "team": "The Fe-Brees Brothers",
+      "waiver_bids_won": 3,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 3,
+      "faab_spent": 11,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "20",
+      "team": "Dangerous  Nights Crew",
+      "waiver_bids_won": 3,
+      "waiver_bids_lost": 1,
+      "waiver_bids_placed": 4,
+      "faab_spent": 6,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "14",
+      "team": "Spokane Beers",
+      "waiver_bids_won": 1,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 1,
+      "faab_spent": 1,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "7",
+      "team": "D'Quan's Friend",
+      "waiver_bids_won": 0,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "15",
+      "team": "DA BEARS FORCE ONE",
+      "waiver_bids_won": 0,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     }
+    ]
+   }
+  },
+  "inspire11": {
+   "league_name": "Inspire League - Chicago vs MSP*",
+   "weeks_analyzed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "positions": {
+    "QB": {
+     "league_avg_per_week": 17.4,
+     "teams": [
+      {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "rank": 1,
+       "avg_per_week": 23.62,
+       "vs_league": 6.22,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "10",
+       "team": "1st and 11",
+       "rank": 2,
+       "avg_per_week": 22.48,
+       "vs_league": 5.08,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "rank": 3,
+       "avg_per_week": 18.86,
+       "vs_league": 1.46,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "rank": 4,
+       "avg_per_week": 18.36,
+       "vs_league": 0.96,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "rank": 5,
+       "avg_per_week": 17.81,
+       "vs_league": 0.41,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "1",
+       "team": "Mike D",
+       "rank": 6,
+       "avg_per_week": 16.99,
+       "vs_league": -0.41,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "rank": 7,
+       "avg_per_week": 16.49,
+       "vs_league": -0.91,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "rank": 8,
+       "avg_per_week": 16.15,
+       "vs_league": -1.25,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "rank": 9,
+       "avg_per_week": 16.09,
+       "vs_league": -1.31,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "rank": 10,
+       "avg_per_week": 15.7,
+       "vs_league": -1.7,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "rank": 11,
+       "avg_per_week": 14.85,
+       "vs_league": -2.55,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "rank": 12,
+       "avg_per_week": 11.4,
+       "vs_league": -6.0,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Go Pack Go",
+        "pts": 35.66
+       },
+       "worst": {
+        "team": "Nate's Nifty Team",
+        "pts": -0.38
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Go Pack Go",
+        "pts": 40.82
+       },
+       "worst": {
+        "team": "1st and 11",
+        "pts": 0.8
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Nate's Nifty Team",
+        "pts": 31.28
+       },
+       "worst": {
+        "team": "Bruno's Best Team",
+        "pts": 11.68
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "1st and 11",
+        "pts": 23.72
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 9.56
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Go Pack Go",
+        "pts": 30.5
+       },
+       "worst": {
+        "team": "Team Hansen",
+        "pts": 7.92
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 27.34
+       },
+       "worst": {
+        "team": "Keith's Team",
+        "pts": 6.92
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "1st and 11",
+        "pts": 28.88
+       },
+       "worst": {
+        "team": "Team Hansen",
+        "pts": 6.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "1st and 11",
+        "pts": 39.48
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": -1.9
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Bruno's Best Team",
+        "pts": 35.36
+       },
+       "worst": {
+        "team": "Keith's Team",
+        "pts": 3.82
+       }
+      }
+     ]
+    },
+    "RB": {
+     "league_avg_per_week": 34.16,
+     "teams": [
+      {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "rank": 1,
+       "avg_per_week": 48.61,
+       "vs_league": 14.45,
+       "weeks_leading": 4
+      },
+      {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "rank": 2,
+       "avg_per_week": 46.87,
+       "vs_league": 12.71,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "1",
+       "team": "Mike D",
+       "rank": 3,
+       "avg_per_week": 44.86,
+       "vs_league": 10.7,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "rank": 4,
+       "avg_per_week": 42.2,
+       "vs_league": 8.04,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "rank": 5,
+       "avg_per_week": 34.7,
+       "vs_league": 0.54,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "rank": 6,
+       "avg_per_week": 33.14,
+       "vs_league": -1.01,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "rank": 7,
+       "avg_per_week": 32.34,
+       "vs_league": -1.81,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "rank": 8,
+       "avg_per_week": 31.54,
+       "vs_league": -2.61,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "rank": 9,
+       "avg_per_week": 25.88,
+       "vs_league": -8.28,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "1st and 11",
+       "rank": 10,
+       "avg_per_week": 24.96,
+       "vs_league": -9.2,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "rank": 11,
+       "avg_per_week": 23.83,
+       "vs_league": -10.32,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "rank": 12,
+       "avg_per_week": 20.94,
+       "vs_league": -13.21,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Keith's Team",
+        "pts": 66.3
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 14.4
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Jordan's Scary Team",
+        "pts": 47.8
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 16.6
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Jordan's Scary Team",
+        "pts": 58.7
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 12.9
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Jordan's Scary Team",
+        "pts": 78.5
+       },
+       "worst": {
+        "team": "1st and 11",
+        "pts": 3.0
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Go Pack Go",
+        "pts": 66.9
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 11.9
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Team Hansen",
+        "pts": 45.8
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 12.3
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Fantasy Baseball Team",
+        "pts": 77.1
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 18.5
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Jordan's Scary Team",
+        "pts": 51.8
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 20.8
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Go Pack Go",
+        "pts": 67.9
+       },
+       "worst": {
+        "team": "Dayton's Daring Team",
+        "pts": 10.1
+       }
+      }
+     ]
+    },
+    "WR": {
+     "league_avg_per_week": 35.5,
+     "teams": [
+      {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "rank": 1,
+       "avg_per_week": 55.35,
+       "vs_league": 19.85,
+       "weeks_leading": 4
+      },
+      {
+       "team_id": "1",
+       "team": "Mike D",
+       "rank": 2,
+       "avg_per_week": 42.6,
+       "vs_league": 7.1,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "rank": 3,
+       "avg_per_week": 40.31,
+       "vs_league": 4.81,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "10",
+       "team": "1st and 11",
+       "rank": 4,
+       "avg_per_week": 38.81,
+       "vs_league": 3.31,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "rank": 5,
+       "avg_per_week": 36.42,
+       "vs_league": 0.92,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "rank": 6,
+       "avg_per_week": 35.76,
+       "vs_league": 0.26,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "rank": 7,
+       "avg_per_week": 35.72,
+       "vs_league": 0.22,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "rank": 8,
+       "avg_per_week": 32.89,
+       "vs_league": -2.61,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "rank": 9,
+       "avg_per_week": 30.92,
+       "vs_league": -4.58,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "rank": 10,
+       "avg_per_week": 27.01,
+       "vs_league": -8.49,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "rank": 11,
+       "avg_per_week": 25.16,
+       "vs_league": -10.34,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "rank": 12,
+       "avg_per_week": 25.03,
+       "vs_league": -10.47,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 69.1
+       },
+       "worst": {
+        "team": "Mike D",
+        "pts": 14.5
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 57.7
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 16.8
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Nate's Nifty Team",
+        "pts": 58.9
+       },
+       "worst": {
+        "team": "Go Pack Go",
+        "pts": 11.6
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "1st and 11",
+        "pts": 60.4
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 8.4
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 84.2
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 17.9
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 63.3
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 14.7
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 60.1
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 10.9
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Mike D",
+        "pts": 74.1
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 12.7
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "1st and 11",
+        "pts": 60.8
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 12.9
+       }
+      }
+     ]
+    },
+    "TE": {
+     "league_avg_per_week": 12.11,
+     "teams": [
+      {
+       "team_id": "1",
+       "team": "Mike D",
+       "rank": 1,
+       "avg_per_week": 18.73,
+       "vs_league": 6.62,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "rank": 2,
+       "avg_per_week": 17.81,
+       "vs_league": 5.7,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "rank": 3,
+       "avg_per_week": 17.62,
+       "vs_league": 5.51,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "10",
+       "team": "1st and 11",
+       "rank": 4,
+       "avg_per_week": 13.24,
+       "vs_league": 1.13,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "rank": 5,
+       "avg_per_week": 11.89,
+       "vs_league": -0.22,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "rank": 6,
+       "avg_per_week": 11.66,
+       "vs_league": -0.46,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "rank": 7,
+       "avg_per_week": 11.37,
+       "vs_league": -0.74,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "rank": 8,
+       "avg_per_week": 10.87,
+       "vs_league": -1.24,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "rank": 9,
+       "avg_per_week": 10.13,
+       "vs_league": -1.98,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "rank": 10,
+       "avg_per_week": 10.04,
+       "vs_league": -2.07,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "rank": 11,
+       "avg_per_week": 7.31,
+       "vs_league": -4.8,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "rank": 12,
+       "avg_per_week": 4.66,
+       "vs_league": -7.46,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Mike D",
+        "pts": 24.5
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Bruno's Best Team",
+        "pts": 25.1
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 1.4
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 27.6
+       },
+       "worst": {
+        "team": "Keith's Team",
+        "pts": 1.5
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Fantasy Baseball Team",
+        "pts": 24.9
+       },
+       "worst": {
+        "team": "Bruno's Best Team",
+        "pts": 3.5
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 32.4
+       },
+       "worst": {
+        "team": "Team Hansen",
+        "pts": 1.4
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 42.4
+       },
+       "worst": {
+        "team": "Team Hansen",
+        "pts": 1.9
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Mike D",
+        "pts": 27.1
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 2.8
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 28.2
+       },
+       "worst": {
+        "team": "Keith's Team",
+        "pts": 2.6
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 25.7
+       },
+       "worst": {
+        "team": "Nate's Nifty Team",
+        "pts": 1.9
+       }
+      }
+     ]
+    },
+    "K": {
+     "league_avg_per_week": 8.54,
+     "teams": [
+      {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "rank": 1,
+       "avg_per_week": 11.56,
+       "vs_league": 3.02,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "rank": 2,
+       "avg_per_week": 11.56,
+       "vs_league": 3.02,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "rank": 3,
+       "avg_per_week": 11.22,
+       "vs_league": 2.69,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "rank": 4,
+       "avg_per_week": 10.22,
+       "vs_league": 1.69,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "rank": 5,
+       "avg_per_week": 8.89,
+       "vs_league": 0.35,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "rank": 6,
+       "avg_per_week": 8.44,
+       "vs_league": -0.09,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "10",
+       "team": "1st and 11",
+       "rank": 7,
+       "avg_per_week": 8.33,
+       "vs_league": -0.2,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "1",
+       "team": "Mike D",
+       "rank": 8,
+       "avg_per_week": 7.67,
+       "vs_league": -0.87,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "rank": 9,
+       "avg_per_week": 7.11,
+       "vs_league": -1.43,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "rank": 10,
+       "avg_per_week": 6.67,
+       "vs_league": -1.87,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "rank": 11,
+       "avg_per_week": 5.44,
+       "vs_league": -3.09,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "rank": 12,
+       "avg_per_week": 5.33,
+       "vs_league": -3.2,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 19.0
+       },
+       "worst": {
+        "team": "Dayton's Daring Team",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Bruno's Best Team",
+        "pts": 17.0
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "Jordan's Scary Team",
+        "pts": 17.0
+       },
+       "worst": {
+        "team": "Go Pack Go",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 19.0
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 5.0
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "1st and 11",
+        "pts": 23.0
+       },
+       "worst": {
+        "team": "Dayton's Daring Team",
+        "pts": 2.0
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Mike D",
+        "pts": 12.0
+       },
+       "worst": {
+        "team": "Bruno's Best Team",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "Bruno's Best Team",
+        "pts": 14.0
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Team Hansen",
+        "pts": 16.0
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 0.0
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Keith's Team",
+        "pts": 17.0
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": 3.0
+       }
+      }
+     ]
+    },
+    "DEF": {
+     "league_avg_per_week": 6.54,
+     "teams": [
+      {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "rank": 1,
+       "avg_per_week": 9.22,
+       "vs_league": 2.69,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "10",
+       "team": "1st and 11",
+       "rank": 2,
+       "avg_per_week": 9.11,
+       "vs_league": 2.57,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "rank": 3,
+       "avg_per_week": 8.11,
+       "vs_league": 1.57,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "1",
+       "team": "Mike D",
+       "rank": 4,
+       "avg_per_week": 7.0,
+       "vs_league": 0.46,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "rank": 5,
+       "avg_per_week": 6.78,
+       "vs_league": 0.24,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "rank": 6,
+       "avg_per_week": 6.0,
+       "vs_league": -0.54,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "rank": 7,
+       "avg_per_week": 5.89,
+       "vs_league": -0.65,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "rank": 8,
+       "avg_per_week": 5.89,
+       "vs_league": -0.65,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "rank": 9,
+       "avg_per_week": 5.67,
+       "vs_league": -0.87,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "rank": 10,
+       "avg_per_week": 5.44,
+       "vs_league": -1.09,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "rank": 11,
+       "avg_per_week": 4.78,
+       "vs_league": -1.76,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "rank": 12,
+       "avg_per_week": 4.56,
+       "vs_league": -1.98,
+       "weeks_leading": 0
+      }
+     ],
+     "weekly": [
+      {
+       "week": 1,
+       "best": {
+        "team": "Bruno's Best Team",
+        "pts": 19.0
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": -4.0
+       }
+      },
+      {
+       "week": 2,
+       "best": {
+        "team": "Dayton's Daring Team",
+        "pts": 20.0
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 3,
+       "best": {
+        "team": "1st and 11",
+        "pts": 19.0
+       },
+       "worst": {
+        "team": "Go Pack Go",
+        "pts": -1.0
+       }
+      },
+      {
+       "week": 4,
+       "best": {
+        "team": "Team Hansen",
+        "pts": 16.0
+       },
+       "worst": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 5,
+       "best": {
+        "team": "Mike D",
+        "pts": 20.0
+       },
+       "worst": {
+        "team": "Team Hansen",
+        "pts": -2.0
+       }
+      },
+      {
+       "week": 6,
+       "best": {
+        "team": "Kevin's Top-Notch Team",
+        "pts": 14.0
+       },
+       "worst": {
+        "team": "Jordan's Scary Team",
+        "pts": -2.0
+       }
+      },
+      {
+       "week": 7,
+       "best": {
+        "team": "1st and 11",
+        "pts": 11.0
+       },
+       "worst": {
+        "team": "34=GOAT (Bonnet\u2019s Team)",
+        "pts": -3.0
+       }
+      },
+      {
+       "week": 8,
+       "best": {
+        "team": "Jordan's Scary Team",
+        "pts": 21.0
+       },
+       "worst": {
+        "team": "Fantasy Baseball Team",
+        "pts": 1.0
+       }
+      },
+      {
+       "week": 9,
+       "best": {
+        "team": "Keith's Team",
+        "pts": 14.0
+       },
+       "worst": {
+        "team": "Dayton's Daring Team",
+        "pts": -5.0
+       }
+      }
+     ]
+    }
+   },
+   "projections": [
+    {
+     "team_id": "1",
+     "team": "Mike D",
+     "games": 9,
+     "avg_diff": 10.71,
+     "stdev": 24.49,
+     "weeks_over": 6,
+     "weeks_under": 3,
+     "best_week": {
+      "week": 5,
+      "actual": 179.62,
+      "projected": 128.36,
+      "diff": 51.26
+     },
+     "worst_week": {
+      "week": 1,
+      "actual": 93.7,
+      "projected": 119.55,
+      "diff": -25.85
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 93.7,
+       "projected": 119.55,
+       "diff": -25.85
+      },
+      {
+       "week": 2,
+       "actual": 159.98,
+       "projected": 121.94,
+       "diff": 38.04
+      },
+      {
+       "week": 3,
+       "actual": 133.1,
+       "projected": 125.53,
+       "diff": 7.57
+      },
+      {
+       "week": 4,
+       "actual": 114.68,
+       "projected": 126.71,
+       "diff": -12.03
+      },
+      {
+       "week": 5,
+       "actual": 179.62,
+       "projected": 128.36,
+       "diff": 51.26
+      },
+      {
+       "week": 6,
+       "actual": 119.58,
+       "projected": 132.44,
+       "diff": -12.86
+      },
+      {
+       "week": 7,
+       "actual": 145.5,
+       "projected": 134.14,
+       "diff": 11.36
+      },
+      {
+       "week": 8,
+       "actual": 162.58,
+       "projected": 128.42,
+       "diff": 34.16
+      },
+      {
+       "week": 9,
+       "actual": 131.86,
+       "projected": 127.1,
+       "diff": 4.76
+      }
+     ]
+    },
+    {
+     "team_id": "9",
+     "team": "Jordan's Scary Team",
+     "games": 9,
+     "avg_diff": 3.35,
+     "stdev": 23.87,
+     "weeks_over": 5,
+     "weeks_under": 4,
+     "best_week": {
+      "week": 4,
+      "actual": 171.44,
+      "projected": 133.14,
+      "diff": 38.3
+     },
+     "worst_week": {
+      "week": 7,
+      "actual": 97.98,
+      "projected": 129.84,
+      "diff": -31.86
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 99.3,
+       "projected": 121.04,
+       "diff": -21.74
+      },
+      {
+       "week": 2,
+       "actual": 151.56,
+       "projected": 125.41,
+       "diff": 26.15
+      },
+      {
+       "week": 3,
+       "actual": 148.84,
+       "projected": 121.38,
+       "diff": 27.46
+      },
+      {
+       "week": 4,
+       "actual": 171.44,
+       "projected": 133.14,
+       "diff": 38.3
+      },
+      {
+       "week": 5,
+       "actual": 140.04,
+       "projected": 124.74,
+       "diff": 15.3
+      },
+      {
+       "week": 6,
+       "actual": 97.32,
+       "projected": 121.19,
+       "diff": -23.87
+      },
+      {
+       "week": 7,
+       "actual": 97.98,
+       "projected": 129.84,
+       "diff": -31.86
+      },
+      {
+       "week": 8,
+       "actual": 142.3,
+       "projected": 138.06,
+       "diff": 4.24
+      },
+      {
+       "week": 9,
+       "actual": 131.28,
+       "projected": 135.15,
+       "diff": -3.87
+      }
+     ]
+    },
+    {
+     "team_id": "2",
+     "team": "Dayton's Daring Team",
+     "games": 9,
+     "avg_diff": 2.11,
+     "stdev": 27.33,
+     "weeks_over": 6,
+     "weeks_under": 3,
+     "best_week": {
+      "week": 1,
+      "actual": 144.94,
+      "projected": 106.6,
+      "diff": 38.34
+     },
+     "worst_week": {
+      "week": 9,
+      "actual": 91.2,
+      "projected": 136.75,
+      "diff": -45.55
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 144.94,
+       "projected": 106.6,
+       "diff": 38.34
+      },
+      {
+       "week": 2,
+       "actual": 117.18,
+       "projected": 115.82,
+       "diff": 1.36
+      },
+      {
+       "week": 3,
+       "actual": 136.52,
+       "projected": 119.18,
+       "diff": 17.34
+      },
+      {
+       "week": 4,
+       "actual": 90.08,
+       "projected": 127.91,
+       "diff": -37.83
+      },
+      {
+       "week": 5,
+       "actual": 165.54,
+       "projected": 128.71,
+       "diff": 36.83
+      },
+      {
+       "week": 6,
+       "actual": 125.54,
+       "projected": 130.02,
+       "diff": -4.48
+      },
+      {
+       "week": 7,
+       "actual": 131.02,
+       "projected": 127.95,
+       "diff": 3.07
+      },
+      {
+       "week": 8,
+       "actual": 133.44,
+       "projected": 123.51,
+       "diff": 9.93
+      },
+      {
+       "week": 9,
+       "actual": 91.2,
+       "projected": 136.75,
+       "diff": -45.55
+      }
+     ]
+    },
+    {
+     "team_id": "10",
+     "team": "1st and 11",
+     "games": 9,
+     "avg_diff": 1.51,
+     "stdev": 16.99,
+     "weeks_over": 6,
+     "weeks_under": 3,
+     "best_week": {
+      "week": 8,
+      "actual": 137.08,
+      "projected": 111.02,
+      "diff": 26.06
+     },
+     "worst_week": {
+      "week": 1,
+      "actual": 90.36,
+      "projected": 121.03,
+      "diff": -30.67
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 90.36,
+       "projected": 121.03,
+       "diff": -30.67
+      },
+      {
+       "week": 2,
+       "actual": 98.0,
+       "projected": 120.0,
+       "diff": -22.0
+      },
+      {
+       "week": 3,
+       "actual": 135.88,
+       "projected": 121.67,
+       "diff": 14.21
+      },
+      {
+       "week": 4,
+       "actual": 120.12,
+       "projected": 106.62,
+       "diff": 13.5
+      },
+      {
+       "week": 5,
+       "actual": 105.7,
+       "projected": 110.83,
+       "diff": -5.13
+      },
+      {
+       "week": 6,
+       "actual": 107.92,
+       "projected": 102.98,
+       "diff": 4.94
+      },
+      {
+       "week": 7,
+       "actual": 125.88,
+       "projected": 119.44,
+       "diff": 6.44
+      },
+      {
+       "week": 8,
+       "actual": 137.08,
+       "projected": 111.02,
+       "diff": 26.06
+      },
+      {
+       "week": 9,
+       "actual": 131.44,
+       "projected": 125.19,
+       "diff": 6.25
+      }
+     ]
+    },
+    {
+     "team_id": "7",
+     "team": "Bruno's Best Team",
+     "games": 9,
+     "avg_diff": -0.2,
+     "stdev": 24.61,
+     "weeks_over": 5,
+     "weeks_under": 4,
+     "best_week": {
+      "week": 8,
+      "actual": 110.1,
+      "projected": 77.86,
+      "diff": 32.24
+     },
+     "worst_week": {
+      "week": 5,
+      "actual": 75.24,
+      "projected": 119.09,
+      "diff": -43.85
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 137.42,
+       "projected": 112.57,
+       "diff": 24.85
+      },
+      {
+       "week": 2,
+       "actual": 108.22,
+       "projected": 122.07,
+       "diff": -13.85
+      },
+      {
+       "week": 3,
+       "actual": 131.88,
+       "projected": 116.78,
+       "diff": 15.1
+      },
+      {
+       "week": 4,
+       "actual": 116.78,
+       "projected": 124.94,
+       "diff": -8.16
+      },
+      {
+       "week": 5,
+       "actual": 75.24,
+       "projected": 119.09,
+       "diff": -43.85
+      },
+      {
+       "week": 6,
+       "actual": 90.58,
+       "projected": 121.25,
+       "diff": -30.67
+      },
+      {
+       "week": 7,
+       "actual": 116.42,
+       "projected": 114.88,
+       "diff": 1.54
+      },
+      {
+       "week": 8,
+       "actual": 110.1,
+       "projected": 77.86,
+       "diff": 32.24
+      },
+      {
+       "week": 9,
+       "actual": 132.56,
+       "projected": 111.55,
+       "diff": 21.01
+      }
+     ]
+    },
+    {
+     "team_id": "5",
+     "team": "Go Pack Go",
+     "games": 9,
+     "avg_diff": -0.26,
+     "stdev": 25.3,
+     "weeks_over": 6,
+     "weeks_under": 3,
+     "best_week": {
+      "week": 5,
+      "actual": 148.8,
+      "projected": 113.95,
+      "diff": 34.85
+     },
+     "worst_week": {
+      "week": 6,
+      "actual": 88.8,
+      "projected": 127.0,
+      "diff": -38.2
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 129.26,
+       "projected": 114.98,
+       "diff": 14.28
+      },
+      {
+       "week": 2,
+       "actual": 133.12,
+       "projected": 111.78,
+       "diff": 21.34
+      },
+      {
+       "week": 3,
+       "actual": 79.26,
+       "projected": 117.35,
+       "diff": -38.09
+      },
+      {
+       "week": 4,
+       "actual": 127.62,
+       "projected": 126.94,
+       "diff": 0.68
+      },
+      {
+       "week": 5,
+       "actual": 148.8,
+       "projected": 113.95,
+       "diff": 34.85
+      },
+      {
+       "week": 6,
+       "actual": 88.8,
+       "projected": 127.0,
+       "diff": -38.2
+      },
+      {
+       "week": 7,
+       "actual": 99.16,
+       "projected": 122.52,
+       "diff": -23.36
+      },
+      {
+       "week": 8,
+       "actual": 127.32,
+       "projected": 120.95,
+       "diff": 6.37
+      },
+      {
+       "week": 9,
+       "actual": 146.16,
+       "projected": 126.39,
+       "diff": 19.77
+      }
+     ]
+    },
+    {
+     "team_id": "6",
+     "team": "Team Hansen",
+     "games": 9,
+     "avg_diff": -2.35,
+     "stdev": 26.35,
+     "weeks_over": 4,
+     "weeks_under": 5,
+     "best_week": {
+      "week": 8,
+      "actual": 149.54,
+      "projected": 105.24,
+      "diff": 44.3
+     },
+     "worst_week": {
+      "week": 5,
+      "actual": 71.6,
+      "projected": 119.63,
+      "diff": -48.03
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 97.84,
+       "projected": 116.51,
+       "diff": -18.67
+      },
+      {
+       "week": 2,
+       "actual": 121.48,
+       "projected": 113.07,
+       "diff": 8.41
+      },
+      {
+       "week": 3,
+       "actual": 133.14,
+       "projected": 113.62,
+       "diff": 19.52
+      },
+      {
+       "week": 4,
+       "actual": 141.8,
+       "projected": 122.11,
+       "diff": 19.69
+      },
+      {
+       "week": 5,
+       "actual": 71.6,
+       "projected": 119.63,
+       "diff": -48.03
+      },
+      {
+       "week": 6,
+       "actual": 110.08,
+       "projected": 116.75,
+       "diff": -6.67
+      },
+      {
+       "week": 7,
+       "actual": 91.8,
+       "projected": 109.96,
+       "diff": -18.16
+      },
+      {
+       "week": 8,
+       "actual": 149.54,
+       "projected": 105.24,
+       "diff": 44.3
+      },
+      {
+       "week": 9,
+       "actual": 101.78,
+       "projected": 123.35,
+       "diff": -21.57
+      }
+     ]
+    },
+    {
+     "team_id": "11",
+     "team": "34=GOAT (Bonnet\u2019s Team)",
+     "games": 9,
+     "avg_diff": -4.67,
+     "stdev": 20.17,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 6,
+      "actual": 122.24,
+      "projected": 96.35,
+      "diff": 25.89
+     },
+     "worst_week": {
+      "week": 8,
+      "actual": 84.0,
+      "projected": 115.78,
+      "diff": -31.78
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 133.8,
+       "projected": 117.69,
+       "diff": 16.11
+      },
+      {
+       "week": 2,
+       "actual": 108.76,
+       "projected": 109.88,
+       "diff": -1.12
+      },
+      {
+       "week": 3,
+       "actual": 88.88,
+       "projected": 110.17,
+       "diff": -21.29
+      },
+      {
+       "week": 4,
+       "actual": 130.28,
+       "projected": 107.33,
+       "diff": 22.95
+      },
+      {
+       "week": 5,
+       "actual": 90.04,
+       "projected": 105.7,
+       "diff": -15.66
+      },
+      {
+       "week": 6,
+       "actual": 122.24,
+       "projected": 96.35,
+       "diff": 25.89
+      },
+      {
+       "week": 7,
+       "actual": 86.48,
+       "projected": 105.08,
+       "diff": -18.6
+      },
+      {
+       "week": 8,
+       "actual": 84.0,
+       "projected": 115.78,
+       "diff": -31.78
+      },
+      {
+       "week": 9,
+       "actual": 93.08,
+       "projected": 111.65,
+       "diff": -18.57
+      }
+     ]
+    },
+    {
+     "team_id": "8",
+     "team": "Fantasy Baseball Team",
+     "games": 9,
+     "avg_diff": -6.34,
+     "stdev": 26.68,
+     "weeks_over": 2,
+     "weeks_under": 7,
+     "best_week": {
+      "week": 7,
+      "actual": 127.22,
+      "projected": 79.35,
+      "diff": 47.87
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 83.88,
+      "projected": 118.96,
+      "diff": -35.08
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 114.76,
+       "projected": 119.83,
+       "diff": -5.07
+      },
+      {
+       "week": 2,
+       "actual": 83.88,
+       "projected": 118.96,
+       "diff": -35.08
+      },
+      {
+       "week": 3,
+       "actual": 80.84,
+       "projected": 109.04,
+       "diff": -28.2
+      },
+      {
+       "week": 4,
+       "actual": 132.76,
+       "projected": 102.02,
+       "diff": 30.74
+      },
+      {
+       "week": 5,
+       "actual": 68.14,
+       "projected": 98.83,
+       "diff": -30.69
+      },
+      {
+       "week": 6,
+       "actual": 85.9,
+       "projected": 98.81,
+       "diff": -12.91
+      },
+      {
+       "week": 7,
+       "actual": 127.22,
+       "projected": 79.35,
+       "diff": 47.87
+      },
+      {
+       "week": 8,
+       "actual": 65.4,
+       "projected": 84.03,
+       "diff": -18.63
+      },
+      {
+       "week": 9,
+       "actual": 98.58,
+       "projected": 103.67,
+       "diff": -5.09
+      }
+     ]
+    },
+    {
+     "team_id": "3",
+     "team": "Kevin's Top-Notch Team",
+     "games": 9,
+     "avg_diff": -11.35,
+     "stdev": 30.7,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 5,
+      "actual": 153.9,
+      "projected": 101.34,
+      "diff": 52.56
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 68.86,
+      "projected": 117.52,
+      "diff": -48.66
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 116.22,
+       "projected": 114.01,
+       "diff": 2.21
+      },
+      {
+       "week": 2,
+       "actual": 68.86,
+       "projected": 117.52,
+       "diff": -48.66
+      },
+      {
+       "week": 3,
+       "actual": 82.12,
+       "projected": 117.76,
+       "diff": -35.64
+      },
+      {
+       "week": 4,
+       "actual": 70.42,
+       "projected": 105.07,
+       "diff": -34.65
+      },
+      {
+       "week": 5,
+       "actual": 153.9,
+       "projected": 101.34,
+       "diff": 52.56
+      },
+      {
+       "week": 6,
+       "actual": 127.0,
+       "projected": 105.88,
+       "diff": 21.12
+      },
+      {
+       "week": 7,
+       "actual": 111.82,
+       "projected": 116.44,
+       "diff": -4.62
+      },
+      {
+       "week": 8,
+       "actual": 100.98,
+       "projected": 121.57,
+       "diff": -20.59
+      },
+      {
+       "week": 9,
+       "actual": 81.96,
+       "projected": 115.8,
+       "diff": -33.84
+      }
+     ]
+    },
+    {
+     "team_id": "12",
+     "team": "Nate's Nifty Team",
+     "games": 9,
+     "avg_diff": -12.46,
+     "stdev": 19.11,
+     "weeks_over": 3,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 4,
+      "actual": 130.82,
+      "projected": 118.04,
+      "diff": 12.78
+     },
+     "worst_week": {
+      "week": 1,
+      "actual": 68.22,
+      "projected": 110.23,
+      "diff": -42.01
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 68.22,
+       "projected": 110.23,
+       "diff": -42.01
+      },
+      {
+       "week": 2,
+       "actual": 102.28,
+       "projected": 121.81,
+       "diff": -19.53
+      },
+      {
+       "week": 3,
+       "actual": 134.08,
+       "projected": 123.25,
+       "diff": 10.83
+      },
+      {
+       "week": 4,
+       "actual": 130.82,
+       "projected": 118.04,
+       "diff": 12.78
+      },
+      {
+       "week": 5,
+       "actual": 127.36,
+       "projected": 115.31,
+       "diff": 12.05
+      },
+      {
+       "week": 6,
+       "actual": 109.16,
+       "projected": 120.62,
+       "diff": -11.46
+      },
+      {
+       "week": 7,
+       "actual": 84.62,
+       "projected": 115.78,
+       "diff": -31.16
+      },
+      {
+       "week": 8,
+       "actual": 92.9,
+       "projected": 109.35,
+       "diff": -16.45
+      },
+      {
+       "week": 9,
+       "actual": 90.58,
+       "projected": 117.79,
+       "diff": -27.21
+      }
+     ]
+    },
+    {
+     "team_id": "4",
+     "team": "Keith's Team",
+     "games": 9,
+     "avg_diff": -16.32,
+     "stdev": 23.71,
+     "weeks_over": 2,
+     "weeks_under": 7,
+     "best_week": {
+      "week": 1,
+      "actual": 151.06,
+      "projected": 127.1,
+      "diff": 23.96
+     },
+     "worst_week": {
+      "week": 8,
+      "actual": 78.1,
+      "projected": 125.72,
+      "diff": -47.62
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 151.06,
+       "projected": 127.1,
+       "diff": 23.96
+      },
+      {
+       "week": 2,
+       "actual": 98.9,
+       "projected": 128.73,
+       "diff": -29.83
+      },
+      {
+       "week": 3,
+       "actual": 115.44,
+       "projected": 129.91,
+       "diff": -14.47
+      },
+      {
+       "week": 4,
+       "actual": 102.48,
+       "projected": 128.78,
+       "diff": -26.3
+      },
+      {
+       "week": 5,
+       "actual": 144.58,
+       "projected": 122.69,
+       "diff": 21.89
+      },
+      {
+       "week": 6,
+       "actual": 82.72,
+       "projected": 104.61,
+       "diff": -21.89
+      },
+      {
+       "week": 7,
+       "actual": 113.88,
+       "projected": 124.68,
+       "diff": -10.8
+      },
+      {
+       "week": 8,
+       "actual": 78.1,
+       "projected": 125.72,
+       "diff": -47.62
+      },
+      {
+       "week": 9,
+       "actual": 76.12,
+       "projected": 117.94,
+       "diff": -41.82
+      }
+     ]
+    }
+   ],
+   "decisions": {
+    "by_team": [
+     {
+      "team_id": "7",
+      "team": "Bruno's Best Team",
+      "weeks": 9,
+      "total_points_left": 227.8,
+      "avg_per_week": 25.31,
+      "weeks_15_plus_left": 6,
+      "efficiency": 0.817,
+      "avoidable_losses": [
+       {
+        "week": 3,
+        "scored": 131.88,
+        "opp": 135.88,
+        "optimal": 155.18,
+        "opp_team": "1st and 11"
+       },
+       {
+        "week": 6,
+        "scored": 90.58,
+        "opp": 109.16,
+        "optimal": 110.1,
+        "opp_team": "Nate's Nifty Team"
+       },
+       {
+        "week": 8,
+        "scored": 110.1,
+        "opp": 133.44,
+        "optimal": 147.06,
+        "opp_team": "Dayton's Daring Team"
+       }
+      ]
+     },
+     {
+      "team_id": "8",
+      "team": "Fantasy Baseball Team",
+      "weeks": 9,
+      "total_points_left": 192.38,
+      "avg_per_week": 21.38,
+      "weeks_15_plus_left": 6,
+      "efficiency": 0.817,
+      "avoidable_losses": [
+       {
+        "week": 6,
+        "scored": 85.9,
+        "opp": 88.8,
+        "optimal": 91.6,
+        "opp_team": "Go Pack Go"
+       },
+       {
+        "week": 8,
+        "scored": 65.4,
+        "opp": 84.0,
+        "optimal": 103.48,
+        "opp_team": "34=GOAT (Bonnet\u2019s Team)"
+       }
+      ]
+     },
+     {
+      "team_id": "2",
+      "team": "Dayton's Daring Team",
+      "weeks": 9,
+      "total_points_left": 173.66,
+      "avg_per_week": 19.3,
+      "weeks_15_plus_left": 5,
+      "efficiency": 0.867,
+      "avoidable_losses": [
+       {
+        "week": 9,
+        "scored": 91.2,
+        "opp": 98.58,
+        "optimal": 112.54,
+        "opp_team": "Fantasy Baseball Team"
+       }
+      ]
+     },
+     {
+      "team_id": "4",
+      "team": "Keith's Team",
+      "weeks": 9,
+      "total_points_left": 158.44,
+      "avg_per_week": 17.6,
+      "weeks_15_plus_left": 5,
+      "efficiency": 0.859,
+      "avoidable_losses": [
+       {
+        "week": 4,
+        "scored": 102.48,
+        "opp": 116.78,
+        "optimal": 131.68,
+        "opp_team": "Bruno's Best Team"
+       },
+       {
+        "week": 6,
+        "scored": 82.72,
+        "opp": 97.32,
+        "optimal": 104.02,
+        "opp_team": "Jordan's Scary Team"
+       },
+       {
+        "week": 9,
+        "scored": 76.12,
+        "opp": 101.78,
+        "optimal": 109.88,
+        "opp_team": "Team Hansen"
+       }
+      ]
+     },
+     {
+      "team_id": "10",
+      "team": "1st and 11",
+      "weeks": 9,
+      "total_points_left": 153.82,
+      "avg_per_week": 17.09,
+      "weeks_15_plus_left": 5,
+      "efficiency": 0.872,
+      "avoidable_losses": [
+       {
+        "week": 6,
+        "scored": 107.92,
+        "opp": 119.58,
+        "optimal": 126.12,
+        "opp_team": "Mike D"
+       }
+      ]
+     },
+     {
+      "team_id": "3",
+      "team": "Kevin's Top-Notch Team",
+      "weeks": 9,
+      "total_points_left": 152.24,
+      "avg_per_week": 16.92,
+      "weeks_15_plus_left": 4,
+      "efficiency": 0.857,
+      "avoidable_losses": []
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "weeks": 9,
+      "total_points_left": 145.62,
+      "avg_per_week": 16.18,
+      "weeks_15_plus_left": 4,
+      "efficiency": 0.895,
+      "avoidable_losses": [
+       {
+        "week": 1,
+        "scored": 93.7,
+        "opp": 116.22,
+        "optimal": 124.86,
+        "opp_team": "Kevin's Top-Notch Team"
+       }
+      ]
+     },
+     {
+      "team_id": "6",
+      "team": "Team Hansen",
+      "weeks": 9,
+      "total_points_left": 141.94,
+      "avg_per_week": 15.77,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.878,
+      "avoidable_losses": [
+       {
+        "week": 1,
+        "scored": 97.84,
+        "opp": 114.76,
+        "optimal": 125.36,
+        "opp_team": "Fantasy Baseball Team"
+       }
+      ]
+     },
+     {
+      "team_id": "9",
+      "team": "Jordan's Scary Team",
+      "weeks": 9,
+      "total_points_left": 141.84,
+      "avg_per_week": 15.76,
+      "weeks_15_plus_left": 5,
+      "efficiency": 0.893,
+      "avoidable_losses": [
+       {
+        "week": 7,
+        "scored": 97.98,
+        "opp": 99.16,
+        "optimal": 123.88,
+        "opp_team": "Go Pack Go"
+       }
+      ]
+     },
+     {
+      "team_id": "12",
+      "team": "Nate's Nifty Team",
+      "weeks": 9,
+      "total_points_left": 140.06,
+      "avg_per_week": 15.56,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.87,
+      "avoidable_losses": []
+     },
+     {
+      "team_id": "11",
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "weeks": 9,
+      "total_points_left": 139.38,
+      "avg_per_week": 15.49,
+      "weeks_15_plus_left": 4,
+      "efficiency": 0.871,
+      "avoidable_losses": [
+       {
+        "week": 6,
+        "scored": 122.24,
+        "opp": 127.0,
+        "optimal": 136.84,
+        "opp_team": "Kevin's Top-Notch Team"
+       }
+      ]
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "weeks": 9,
+      "total_points_left": 122.52,
+      "avg_per_week": 13.61,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.898,
+      "avoidable_losses": []
+     }
+    ],
+    "costliest_calls": [
+     {
+      "team": "Nate's Nifty Team",
+      "week": 1,
+      "bench": "Jalen Coker",
+      "bench_pts": 33.8,
+      "starter": "Drake London",
+      "starter_pts": 5.5,
+      "gain": 28.3
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "week": 1,
+      "bench": "Isaiah Likely",
+      "bench_pts": 27.8,
+      "starter": "Colston Loveland",
+      "starter_pts": 0.0,
+      "gain": 27.8
+     },
+     {
+      "team": "Fantasy Baseball Team",
+      "week": 7,
+      "bench": "Amon-Ra St. Brown",
+      "bench_pts": 24.2,
+      "starter": "Romeo Doubs",
+      "starter_pts": 0.0,
+      "gain": 24.2
+     },
+     {
+      "team": "Go Pack Go",
+      "week": 9,
+      "bench": "Jordan Love",
+      "bench_pts": 36.18,
+      "starter": "Josh Allen",
+      "starter_pts": 12.86,
+      "gain": 23.32
+     },
+     {
+      "team": "Bruno's Best Team",
+      "week": 8,
+      "bench": "Drake Maye",
+      "bench_pts": 22.46,
+      "starter": "C.J. Stroud",
+      "starter_pts": 0.0,
+      "gain": 22.46
+     },
+     {
+      "team": "Dayton's Daring Team",
+      "week": 4,
+      "bench": "Malik Nabers",
+      "bench_pts": 23.2,
+      "starter": "Parker Washington",
+      "starter_pts": 2.0,
+      "gain": 21.2
+     },
+     {
+      "team": "Jordan's Scary Team",
+      "week": 1,
+      "bench": "Chuba Hubbard",
+      "bench_pts": 23.7,
+      "starter": "Courtland Sutton",
+      "starter_pts": 3.1,
+      "gain": 20.6
+     },
+     {
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "week": 8,
+      "bench": "Emmett Johnson",
+      "bench_pts": 25.3,
+      "starter": "Omarion Hampton",
+      "starter_pts": 4.7,
+      "gain": 20.6
+     },
+     {
+      "team": "Keith's Team",
+      "week": 9,
+      "bench": "Tank Dell",
+      "bench_pts": 20.5,
+      "starter": "Ladd McConkey",
+      "starter_pts": 0.0,
+      "gain": 20.5
+     },
+     {
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "week": 7,
+      "bench": "KC Concepcion",
+      "bench_pts": 23.2,
+      "starter": "Darius Cooper",
+      "starter_pts": 2.7,
+      "gain": 20.5
+     },
+     {
+      "team": "Keith's Team",
+      "week": 6,
+      "bench": "Kyle Pitts Sr.",
+      "bench_pts": 23.0,
+      "starter": "Pat Freiermuth",
+      "starter_pts": 3.1,
+      "gain": 19.9
+     },
+     {
+      "team": "Dayton's Daring Team",
+      "week": 1,
+      "bench": "Christian Watson",
+      "bench_pts": 32.7,
+      "starter": "Malik Nabers",
+      "starter_pts": 12.9,
+      "gain": 19.8
+     },
+     {
+      "team": "Fantasy Baseball Team",
+      "week": 4,
+      "bench": "Romeo Doubs",
+      "bench_pts": 23.8,
+      "starter": "Chris Brooks",
+      "starter_pts": 4.5,
+      "gain": 19.3
+     },
+     {
+      "team": "Keith's Team",
+      "week": 8,
+      "bench": "Bo Nix",
+      "bench_pts": 19.28,
+      "starter": "Lamar Jackson",
+      "starter_pts": 0.0,
+      "gain": 19.28
+     },
+     {
+      "team": "Bruno's Best Team",
+      "week": 5,
+      "bench": "Drake Maye",
+      "bench_pts": 39.46,
+      "starter": "C.J. Stroud",
+      "starter_pts": 20.94,
+      "gain": 18.52
+     }
+    ]
+   },
+   "players": {
+    "positional_average_per_start": {
+     "QB": 17.4,
+     "RB": 14.41,
+     "WR": 13.74,
+     "TE": 11.58,
+     "K": 8.54,
+     "DEF": 6.54
+    },
+    "team_mvps": [
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "mvp": {
+       "team_id": "1",
+       "team": "Mike D",
+       "player": "Trey McBride",
+       "pos": "TE",
+       "starts": 9,
+       "points": 162.8,
+       "above_pos_avg": 58.62,
+       "ppg": 18.09
+      },
+      "weakest_link": {
+       "team_id": "1",
+       "team": "Mike D",
+       "player": "Rhamondre Stevenson",
+       "pos": "RB",
+       "starts": 8,
+       "points": 96.2,
+       "above_pos_avg": -19.08,
+       "ppg": 12.03
+      }
+     },
+     {
+      "team_id": "2",
+      "team": "Dayton's Daring Team",
+      "mvp": {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "player": "Jaxon Smith-Njigba",
+       "pos": "WR",
+       "starts": 9,
+       "points": 232.06,
+       "above_pos_avg": 108.39,
+       "ppg": 25.78
+      },
+      "weakest_link": {
+       "team_id": "2",
+       "team": "Dayton's Daring Team",
+       "player": "David Montgomery",
+       "pos": "RB",
+       "starts": 5,
+       "points": 45.5,
+       "above_pos_avg": -26.55,
+       "ppg": 9.1
+      }
+     },
+     {
+      "team_id": "3",
+      "team": "Kevin's Top-Notch Team",
+      "mvp": {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "player": "Will Reichard",
+       "pos": "K",
+       "starts": 8,
+       "points": 89.0,
+       "above_pos_avg": 20.7,
+       "ppg": 11.12
+      },
+      "weakest_link": {
+       "team_id": "3",
+       "team": "Kevin's Top-Notch Team",
+       "player": "Saquon Barkley",
+       "pos": "RB",
+       "starts": 6,
+       "points": 43.6,
+       "above_pos_avg": -42.86,
+       "ppg": 7.27
+      }
+     },
+     {
+      "team_id": "4",
+      "team": "Keith's Team",
+      "mvp": {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "player": "Jahmyr Gibbs",
+       "pos": "RB",
+       "starts": 8,
+       "points": 209.2,
+       "above_pos_avg": 93.92,
+       "ppg": 26.15
+      },
+      "weakest_link": {
+       "team_id": "4",
+       "team": "Keith's Team",
+       "player": "Kyle Pitts Sr.",
+       "pos": "TE",
+       "starts": 7,
+       "points": 34.8,
+       "above_pos_avg": -46.23,
+       "ppg": 4.97
+      }
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "mvp": {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "player": "Kenneth Walker III",
+       "pos": "RB",
+       "starts": 8,
+       "points": 196.4,
+       "above_pos_avg": 81.12,
+       "ppg": 24.55
+      },
+      "weakest_link": {
+       "team_id": "5",
+       "team": "Go Pack Go",
+       "player": "Jaylen Waddle",
+       "pos": "WR",
+       "starts": 8,
+       "points": 75.6,
+       "above_pos_avg": -34.33,
+       "ppg": 9.45
+      }
+     },
+     {
+      "team_id": "6",
+      "team": "Team Hansen",
+      "mvp": {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "player": "Jonathan Taylor",
+       "pos": "RB",
+       "starts": 9,
+       "points": 153.6,
+       "above_pos_avg": 23.91,
+       "ppg": 17.07
+      },
+      "weakest_link": {
+       "team_id": "6",
+       "team": "Team Hansen",
+       "player": "Bo Nix",
+       "pos": "QB",
+       "starts": 2,
+       "points": 13.36,
+       "above_pos_avg": -21.44,
+       "ppg": 6.68
+      }
+     },
+     {
+      "team_id": "7",
+      "team": "Bruno's Best Team",
+      "mvp": {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "player": "Bijan Robinson",
+       "pos": "RB",
+       "starts": 9,
+       "points": 180.0,
+       "above_pos_avg": 50.31,
+       "ppg": 20.0
+      },
+      "weakest_link": {
+       "team_id": "7",
+       "team": "Bruno's Best Team",
+       "player": "Denzel Boston",
+       "pos": "WR",
+       "starts": 7,
+       "points": 68.3,
+       "above_pos_avg": -27.89,
+       "ppg": 9.76
+      }
+     },
+     {
+      "team_id": "8",
+      "team": "Fantasy Baseball Team",
+      "mvp": {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "player": "Amon-Ra St. Brown",
+       "pos": "WR",
+       "starts": 6,
+       "points": 120.8,
+       "above_pos_avg": 38.35,
+       "ppg": 20.13
+      },
+      "weakest_link": {
+       "team_id": "8",
+       "team": "Fantasy Baseball Team",
+       "player": "Cam Skattebo",
+       "pos": "RB",
+       "starts": 9,
+       "points": 70.4,
+       "above_pos_avg": -59.29,
+       "ppg": 7.82
+      }
+     },
+     {
+      "team_id": "9",
+      "team": "Jordan's Scary Team",
+      "mvp": {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "player": "Ja'Marr Chase",
+       "pos": "WR",
+       "starts": 8,
+       "points": 159.7,
+       "above_pos_avg": 49.77,
+       "ppg": 19.96
+      },
+      "weakest_link": {
+       "team_id": "9",
+       "team": "Jordan's Scary Team",
+       "player": "Chargers D/ST",
+       "pos": "DEF",
+       "starts": 2,
+       "points": 4.0,
+       "above_pos_avg": -9.07,
+       "ppg": 2.0
+      }
+     },
+     {
+      "team_id": "10",
+      "team": "1st and 11",
+      "mvp": {
+       "team_id": "10",
+       "team": "1st and 11",
+       "player": "CeeDee Lamb",
+       "pos": "WR",
+       "starts": 9,
+       "points": 201.8,
+       "above_pos_avg": 78.13,
+       "ppg": 22.42
+      },
+      "weakest_link": {
+       "team_id": "10",
+       "team": "1st and 11",
+       "player": "Terry McLaurin",
+       "pos": "WR",
+       "starts": 5,
+       "points": 46.0,
+       "above_pos_avg": -22.71,
+       "ppg": 9.2
+      }
+     },
+     {
+      "team_id": "11",
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "mvp": {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "player": "Zay Flowers",
+       "pos": "WR",
+       "starts": 6,
+       "points": 97.5,
+       "above_pos_avg": 15.05,
+       "ppg": 16.25
+      },
+      "weakest_link": {
+       "team_id": "11",
+       "team": "34=GOAT (Bonnet\u2019s Team)",
+       "player": "Omarion Hampton",
+       "pos": "RB",
+       "starts": 8,
+       "points": 68.2,
+       "above_pos_avg": -47.08,
+       "ppg": 8.53
+      }
+     },
+     {
+      "team_id": "12",
+      "team": "Nate's Nifty Team",
+      "mvp": {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "player": "James Cook III",
+       "pos": "RB",
+       "starts": 8,
+       "points": 148.4,
+       "above_pos_avg": 33.12,
+       "ppg": 18.55
+      },
+      "weakest_link": {
+       "team_id": "12",
+       "team": "Nate's Nifty Team",
+       "player": "Jalen Coker",
+       "pos": "WR",
+       "starts": 5,
+       "points": 37.6,
+       "above_pos_avg": -31.11,
+       "ppg": 7.52
+      }
+     }
+    ],
+    "league_top": [
+     {
+      "team_id": "2",
+      "team": "Dayton's Daring Team",
+      "player": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "starts": 9,
+      "points": 232.06,
+      "above_pos_avg": 108.39,
+      "ppg": 25.78
+     },
+     {
+      "team_id": "4",
+      "team": "Keith's Team",
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "starts": 8,
+      "points": 209.2,
+      "above_pos_avg": 93.92,
+      "ppg": 26.15
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "starts": 8,
+      "points": 196.4,
+      "above_pos_avg": 81.12,
+      "ppg": 24.55
+     },
+     {
+      "team_id": "10",
+      "team": "1st and 11",
+      "player": "CeeDee Lamb",
+      "pos": "WR",
+      "starts": 9,
+      "points": 201.8,
+      "above_pos_avg": 78.13,
+      "ppg": 22.42
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "player": "Puka Nacua",
+      "pos": "WR",
+      "starts": 7,
+      "points": 173.6,
+      "above_pos_avg": 77.41,
+      "ppg": 24.8
+     },
+     {
+      "team_id": "2",
+      "team": "Dayton's Daring Team",
+      "player": "Brock Bowers",
+      "pos": "TE",
+      "starts": 7,
+      "points": 146.0,
+      "above_pos_avg": 64.97,
+      "ppg": 20.86
+     },
+     {
+      "team_id": "10",
+      "team": "1st and 11",
+      "player": "Joe Burrow",
+      "pos": "QB",
+      "starts": 7,
+      "points": 182.96,
+      "above_pos_avg": 61.16,
+      "ppg": 26.14
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "player": "Trey McBride",
+      "pos": "TE",
+      "starts": 9,
+      "points": 162.8,
+      "above_pos_avg": 58.62,
+      "ppg": 18.09
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "player": "Josh Allen",
+      "pos": "QB",
+      "starts": 7,
+      "points": 174.12,
+      "above_pos_avg": 52.32,
+      "ppg": 24.87
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "player": "Christian McCaffrey",
+      "pos": "RB",
+      "starts": 8,
+      "points": 166.7,
+      "above_pos_avg": 51.42,
+      "ppg": 20.84
+     },
+     {
+      "team_id": "7",
+      "team": "Bruno's Best Team",
+      "player": "Bijan Robinson",
+      "pos": "RB",
+      "starts": 9,
+      "points": 180.0,
+      "above_pos_avg": 50.31,
+      "ppg": 20.0
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "player": "Tee Higgins",
+      "pos": "WR",
+      "starts": 8,
+      "points": 159.8,
+      "above_pos_avg": 49.87,
+      "ppg": 19.97
+     },
+     {
+      "team_id": "9",
+      "team": "Jordan's Scary Team",
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "starts": 8,
+      "points": 159.7,
+      "above_pos_avg": 49.77,
+      "ppg": 19.96
+     },
+     {
+      "team_id": "8",
+      "team": "Fantasy Baseball Team",
+      "player": "Amon-Ra St. Brown",
+      "pos": "WR",
+      "starts": 6,
+      "points": 120.8,
+      "above_pos_avg": 38.35,
+      "ppg": 20.13
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "player": "Matthew Golden",
+      "pos": "WR",
+      "starts": 5,
+      "points": 105.9,
+      "above_pos_avg": 37.19,
+      "ppg": 21.18
+     }
+    ]
+   },
+   "consistency": [
+    {
+     "team_id": "1",
+     "team": "Mike D",
+     "avg": 137.84,
+     "stdev": 25.35,
+     "high": 179.62,
+     "low": 93.7,
+     "above_median_weeks": "7-2"
+    },
+    {
+     "team_id": "9",
+     "team": "Jordan's Scary Team",
+     "avg": 131.12,
+     "stdev": 25.42,
+     "high": 171.44,
+     "low": 97.32,
+     "above_median_weeks": "6-3"
+    },
+    {
+     "team_id": "2",
+     "team": "Dayton's Daring Team",
+     "avg": 126.16,
+     "stdev": 22.83,
+     "high": 165.54,
+     "low": 90.08,
+     "above_median_weeks": "7-2"
+    },
+    {
+     "team_id": "5",
+     "team": "Go Pack Go",
+     "avg": 119.94,
+     "stdev": 23.45,
+     "high": 148.8,
+     "low": 79.26,
+     "above_median_weeks": "6-3"
+    },
+    {
+     "team_id": "10",
+     "team": "1st and 11",
+     "avg": 116.93,
+     "stdev": 16.12,
+     "high": 137.08,
+     "low": 90.36,
+     "above_median_weeks": "4-5"
+    },
+    {
+     "team_id": "7",
+     "team": "Bruno's Best Team",
+     "avg": 113.24,
+     "stdev": 19.21,
+     "high": 137.42,
+     "low": 75.24,
+     "above_median_weeks": "3-6"
+    },
+    {
+     "team_id": "6",
+     "team": "Team Hansen",
+     "avg": 113.23,
+     "stdev": 23.97,
+     "high": 149.54,
+     "low": 71.6,
+     "above_median_weeks": "6-3"
+    },
+    {
+     "team_id": "4",
+     "team": "Keith's Team",
+     "avg": 107.03,
+     "stdev": 25.68,
+     "high": 151.06,
+     "low": 76.12,
+     "above_median_weeks": "3-6"
+    },
+    {
+     "team_id": "12",
+     "team": "Nate's Nifty Team",
+     "avg": 104.45,
+     "stdev": 21.49,
+     "high": 134.08,
+     "low": 68.22,
+     "above_median_weeks": "3-6"
+    },
+    {
+     "team_id": "11",
+     "team": "34=GOAT (Bonnet\u2019s Team)",
+     "avg": 104.17,
+     "stdev": 18.81,
+     "high": 133.8,
+     "low": 84.0,
+     "above_median_weeks": "4-5"
+    },
+    {
+     "team_id": "3",
+     "team": "Kevin's Top-Notch Team",
+     "avg": 101.48,
+     "stdev": 26.89,
+     "high": 153.9,
+     "low": 68.86,
+     "above_median_weeks": "3-6"
+    },
+    {
+     "team_id": "8",
+     "team": "Fantasy Baseball Team",
+     "avg": 95.28,
+     "stdev": 23.26,
+     "high": 132.76,
+     "low": 65.4,
+     "above_median_weeks": "2-7"
+    }
+   ],
+   "pickups": {
+    "complete_history": null,
+    "by_team": [
+     {
+      "team_id": "10",
+      "team": "1st and 11",
+      "adds": 14,
+      "points_from_adds": 143.72,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "3",
+      "team": "Kevin's Top-Notch Team",
+      "adds": 7,
+      "points_from_adds": 118.0,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "4",
+      "team": "Keith's Team",
+      "adds": 5,
+      "points_from_adds": 86.02,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "9",
+      "team": "Jordan's Scary Team",
+      "adds": 6,
+      "points_from_adds": 80.5,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "11",
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "adds": 9,
+      "points_from_adds": 44.78,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "2",
+      "team": "Dayton's Daring Team",
+      "adds": 3,
+      "points_from_adds": 39.84,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "adds": 2,
+      "points_from_adds": 24.0,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "6",
+      "team": "Team Hansen",
+      "adds": 4,
+      "points_from_adds": 21.0,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "8",
+      "team": "Fantasy Baseball Team",
+      "adds": 1,
+      "points_from_adds": 9.5,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "12",
+      "team": "Nate's Nifty Team",
+      "adds": 2,
+      "points_from_adds": 4.0,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "adds": 1,
+      "points_from_adds": 0.0,
+      "faab_spent": 0.0,
+      "points_per_faab_dollar": null
+     }
+    ],
+    "top_pickups": [
+     {
+      "team": "1st and 11",
+      "player": "Vikings D/ST",
+      "week": 3,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 6,
+      "points": 64.0
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "player": "Ollie Gordon II",
+      "week": 4,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 46.4
+     },
+     {
+      "team": "1st and 11",
+      "player": "DeMario Douglas",
+      "week": 7,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 3,
+      "points": 37.1
+     },
+     {
+      "team": "Jordan's Scary Team",
+      "player": "Jaguars D/ST",
+      "week": 5,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 35.0
+     },
+     {
+      "team": "Jordan's Scary Team",
+      "player": "Jaguars D/ST",
+      "week": 8,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 33.0
+     },
+     {
+      "team": "Keith's Team",
+      "player": "Jacoby Brissett",
+      "week": 5,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 32.2
+     },
+     {
+      "team": "Team Hansen",
+      "player": "Devaughn Vele",
+      "week": 2,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 23.0
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "player": "Chiefs D/ST",
+      "week": 2,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 23.0
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "player": "Broncos D/ST",
+      "week": 5,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 3,
+      "points": 23.0
+     },
+     {
+      "team": "Dayton's Daring Team",
+      "player": "Bryce Young",
+      "week": 6,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 1,
+      "points": 19.84
+     },
+     {
+      "team": "Keith's Team",
+      "player": "Chris Boswell",
+      "week": 7,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 19.0
+     },
+     {
+      "team": "1st and 11",
+      "player": "Kirk Cousins",
+      "week": 6,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 1,
+      "points": 18.52
+     }
+    ],
+    "top_drop_regrets": [
+     {
+      "team": "Nate's Nifty Team",
+      "dropped": "Vikings D/ST",
+      "week": 2,
+      "points_for_others": 64.0,
+      "starts_elsewhere": 6
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "dropped": "Rams D/ST",
+      "week": 2,
+      "points_for_others": 31.0,
+      "starts_elsewhere": 4
+     },
+     {
+      "team": "1st and 11",
+      "dropped": "Broncos D/ST",
+      "week": 3,
+      "points_for_others": 23.0,
+      "starts_elsewhere": 3
+     },
+     {
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "dropped": "Bryce Young",
+      "week": 6,
+      "points_for_others": 19.84,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "Keith's Team",
+      "dropped": "Cam Little",
+      "week": 7,
+      "points_for_others": 17.0,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "dropped": "Dominic Zvada",
+      "week": 7,
+      "points_for_others": 17.0,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "dropped": "Dominic Zvada",
+      "week": 8,
+      "points_for_others": 17.0,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "Team Hansen",
+      "dropped": "Giants D/ST",
+      "week": 5,
+      "points_for_others": 14.0,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "dropped": "Makai Lemon",
+      "week": 6,
+      "points_for_others": 12.1,
+      "starts_elsewhere": 1
+     },
+     {
+      "team": "Kevin's Top-Notch Team",
+      "dropped": "Chiefs D/ST",
+      "week": 7,
+      "points_for_others": 12.0,
+      "starts_elsewhere": 1
+     }
+    ]
+   },
+   "trades": [],
+   "mvp_detail": [
+    {
+     "team_id": "1",
+     "team": "Mike D",
+     "player": "Trey McBride",
+     "pos": "TE",
+     "starts": 9,
+     "points": 162.8,
+     "ppg": 18.09,
+     "positional_avg_per_start": 11.58,
+     "above_avg_total": 58.62,
+     "above_avg_per_start": 6.51,
+     "pct_above_avg": 56.27,
+     "share_of_team_points": 13.12
+    },
+    {
+     "team_id": "2",
+     "team": "Dayton's Daring Team",
+     "player": "Jaxon Smith-Njigba",
+     "pos": "WR",
+     "starts": 9,
+     "points": 232.06,
+     "ppg": 25.78,
+     "positional_avg_per_start": 13.74,
+     "above_avg_total": 108.39,
+     "above_avg_per_start": 12.04,
+     "pct_above_avg": 87.64,
+     "share_of_team_points": 20.44
+    },
+    {
+     "team_id": "3",
+     "team": "Kevin's Top-Notch Team",
+     "player": "Will Reichard",
+     "pos": "K",
+     "starts": 8,
+     "points": 89.0,
+     "ppg": 11.12,
+     "positional_avg_per_start": 8.54,
+     "above_avg_total": 20.7,
+     "above_avg_per_start": 2.59,
+     "pct_above_avg": 30.31,
+     "share_of_team_points": 9.75
+    },
+    {
+     "team_id": "4",
+     "team": "Keith's Team",
+     "player": "Jahmyr Gibbs",
+     "pos": "RB",
+     "starts": 8,
+     "points": 209.2,
+     "ppg": 26.15,
+     "positional_avg_per_start": 14.41,
+     "above_avg_total": 93.92,
+     "above_avg_per_start": 11.74,
+     "pct_above_avg": 81.48,
+     "share_of_team_points": 21.72
+    },
+    {
+     "team_id": "5",
+     "team": "Go Pack Go",
+     "player": "Kenneth Walker III",
+     "pos": "RB",
+     "starts": 8,
+     "points": 196.4,
+     "ppg": 24.55,
+     "positional_avg_per_start": 14.41,
+     "above_avg_total": 81.12,
+     "above_avg_per_start": 10.14,
+     "pct_above_avg": 70.37,
+     "share_of_team_points": 18.19
+    },
+    {
+     "team_id": "6",
+     "team": "Team Hansen",
+     "player": "Jonathan Taylor",
+     "pos": "RB",
+     "starts": 9,
+     "points": 153.6,
+     "ppg": 17.07,
+     "positional_avg_per_start": 14.41,
+     "above_avg_total": 23.91,
+     "above_avg_per_start": 2.66,
+     "pct_above_avg": 18.44,
+     "share_of_team_points": 15.07
+    },
+    {
+     "team_id": "7",
+     "team": "Bruno's Best Team",
+     "player": "Bijan Robinson",
+     "pos": "RB",
+     "starts": 9,
+     "points": 180.0,
+     "ppg": 20.0,
+     "positional_avg_per_start": 14.41,
+     "above_avg_total": 50.31,
+     "above_avg_per_start": 5.59,
+     "pct_above_avg": 38.8,
+     "share_of_team_points": 17.66
+    },
+    {
+     "team_id": "8",
+     "team": "Fantasy Baseball Team",
+     "player": "Amon-Ra St. Brown",
+     "pos": "WR",
+     "starts": 6,
+     "points": 120.8,
+     "ppg": 20.13,
+     "positional_avg_per_start": 13.74,
+     "above_avg_total": 38.35,
+     "above_avg_per_start": 6.39,
+     "pct_above_avg": 46.52,
+     "share_of_team_points": 14.09
+    },
+    {
+     "team_id": "9",
+     "team": "Jordan's Scary Team",
+     "player": "Ja'Marr Chase",
+     "pos": "WR",
+     "starts": 8,
+     "points": 159.7,
+     "ppg": 19.96,
+     "positional_avg_per_start": 13.74,
+     "above_avg_total": 49.77,
+     "above_avg_per_start": 6.22,
+     "pct_above_avg": 45.27,
+     "share_of_team_points": 13.53
+    },
+    {
+     "team_id": "10",
+     "team": "1st and 11",
+     "player": "CeeDee Lamb",
+     "pos": "WR",
+     "starts": 9,
+     "points": 201.8,
+     "ppg": 22.42,
+     "positional_avg_per_start": 13.74,
+     "above_avg_total": 78.13,
+     "above_avg_per_start": 8.68,
+     "pct_above_avg": 63.17,
+     "share_of_team_points": 19.18
+    },
+    {
+     "team_id": "11",
+     "team": "34=GOAT (Bonnet\u2019s Team)",
+     "player": "Zay Flowers",
+     "pos": "WR",
+     "starts": 6,
+     "points": 97.5,
+     "ppg": 16.25,
+     "positional_avg_per_start": 13.74,
+     "above_avg_total": 15.05,
+     "above_avg_per_start": 2.51,
+     "pct_above_avg": 18.26,
+     "share_of_team_points": 10.4
+    },
+    {
+     "team_id": "12",
+     "team": "Nate's Nifty Team",
+     "player": "James Cook III",
+     "pos": "RB",
+     "starts": 8,
+     "points": 148.4,
+     "ppg": 18.55,
+     "positional_avg_per_start": 14.41,
+     "above_avg_total": 33.12,
+     "above_avg_per_start": 4.14,
+     "pct_above_avg": 28.73,
+     "share_of_team_points": 15.79
+    }
+   ],
+   "keepers": null,
+   "trade_ideas": [
+    {
+     "team_id": 1,
+     "team": "Mike D",
+     "trade": null
+    },
+    {
+     "team_id": 2,
+     "team": "Dayton's Daring Team",
+     "trade": {
+      "give": [
+       "Joe Burrow",
+       "Josh Jacobs"
+      ],
+      "get": [
+       "Jaxon Smith-Njigba",
+       "Bryce Young"
+      ],
+      "give_pos": [
+       "QB",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "QB"
+      ],
+      "my_gain_per_week": 0.21,
+      "their_gain_per_week": 1.51,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 3,
+     "team": "Kevin's Top-Notch Team",
+     "trade": {
+      "give": [
+       "George Kittle",
+       "Josh Jacobs"
+      ],
+      "get": [
+       "DJ Moore",
+       "Isaiah Likely"
+      ],
+      "give_pos": [
+       "TE",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "TE"
+      ],
+      "my_gain_per_week": 0.16,
+      "their_gain_per_week": 0.34,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 4,
+     "team": "Keith's Team",
+     "trade": null
+    },
+    {
+     "team_id": 5,
+     "team": "Go Pack Go",
+     "trade": {
+      "give": [
+       "Josh Jacobs",
+       "Treylon Burks"
+      ],
+      "get": [
+       "Puka Nacua",
+       "Aaron Jones Sr."
+      ],
+      "give_pos": [
+       "RB",
+       "WR"
+      ],
+      "get_pos": [
+       "WR",
+       "RB"
+      ],
+      "my_gain_per_week": 0.26,
+      "their_gain_per_week": 0.5,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 6,
+     "team": "Team Hansen",
+     "trade": null
+    },
+    {
+     "team_id": 7,
+     "team": "Bruno's Best Team",
+     "trade": {
+      "give": [
+       "George Kittle",
+       "Josh Jacobs"
+      ],
+      "get": [
+       "Chris Olave",
+       "Travis Kelce"
+      ],
+      "give_pos": [
+       "TE",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "TE"
+      ],
+      "my_gain_per_week": 0.09,
+      "their_gain_per_week": 0.16,
+      "kind": "pickups-neutral"
+     }
+    },
+    {
+     "team_id": 8,
+     "team": "Fantasy Baseball Team",
+     "trade": null
+    },
+    {
+     "team_id": 9,
+     "team": "Jordan's Scary Team",
+     "trade": {
+      "give": [
+       "George Kittle",
+       "Josh Jacobs"
+      ],
+      "get": [
+       "Kyren Williams",
+       "Brenton Strange"
+      ],
+      "give_pos": [
+       "TE",
+       "RB"
+      ],
+      "get_pos": [
+       "RB",
+       "TE"
+      ],
+      "my_gain_per_week": 0.34,
+      "their_gain_per_week": 1.01,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 11,
+     "team": "34=GOAT (Bonnet\u2019s Team)",
+     "trade": null
+    },
+    {
+     "team_id": 12,
+     "team": "Nate's Nifty Team",
+     "trade": null
+    }
+   ],
+   "draft_value": [
+    {
+     "team_id": "1",
+     "team": "Mike D",
+     "biggest_bust": {
+      "player": "Tyjae Spears",
+      "pos": "RB",
+      "round": 11,
+      "pick": 123,
+      "points": 12.1,
+      "peer_avg_points": 35.95,
+      "vs_peers": -23.85
+     },
+     "biggest_steal": {
+      "player": "Jaylen Warren",
+      "pos": "RB",
+      "round": 7,
+      "pick": 75,
+      "points": 95.5,
+      "peer_avg_points": 33.76,
+      "vs_peers": 61.74
+     }
+    },
+    {
+     "team_id": "2",
+     "team": "Dayton's Daring Team",
+     "biggest_bust": {
+      "player": "Baker Mayfield",
+      "pos": "QB",
+      "round": 12,
+      "pick": 139,
+      "points": 41.76,
+      "peer_avg_points": 109.49,
+      "vs_peers": -67.73
+     },
+     "biggest_steal": {
+      "player": "Jaxon Smith-Njigba",
+      "pos": "WR",
+      "round": 1,
+      "pick": 6,
+      "points": 138.16,
+      "peer_avg_points": 63.97,
+      "vs_peers": 74.19
+     }
+    },
+    {
+     "team_id": "3",
+     "team": "Kevin's Top-Notch Team",
+     "biggest_bust": {
+      "player": "Saquon Barkley",
+      "pos": "RB",
+      "round": 2,
+      "pick": 15,
+      "points": 32.1,
+      "peer_avg_points": 76.42,
+      "vs_peers": -44.32
+     },
+     "biggest_steal": {
+      "player": "Braelon Allen",
+      "pos": "RB",
+      "round": 14,
+      "pick": 159,
+      "points": 61.3,
+      "peer_avg_points": 25.11,
+      "vs_peers": 36.19
+     }
+    },
+    {
+     "team_id": "4",
+     "team": "Keith's Team",
+     "biggest_bust": {
+      "player": "Michael Pittman Jr.",
+      "pos": "WR",
+      "round": 6,
+      "pick": 72,
+      "points": 8.9,
+      "peer_avg_points": 45.18,
+      "vs_peers": -36.28
+     },
+     "biggest_steal": {
+      "player": "Jahmyr Gibbs",
+      "pos": "RB",
+      "round": 1,
+      "pick": 1,
+      "points": 139.0,
+      "peer_avg_points": 86.53,
+      "vs_peers": 52.47
+     }
+    },
+    {
+     "team_id": "5",
+     "team": "Go Pack Go",
+     "biggest_bust": {
+      "player": "Jayden Reed",
+      "pos": "WR",
+      "round": 10,
+      "pick": 117,
+      "points": 2.4,
+      "peer_avg_points": 28.59,
+      "vs_peers": -26.19
+     },
+     "biggest_steal": {
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "round": 3,
+      "pick": 28,
+      "points": 129.7,
+      "peer_avg_points": 71.31,
+      "vs_peers": 58.39
+     }
+    },
+    {
+     "team_id": "6",
+     "team": "Team Hansen",
+     "biggest_bust": {
+      "player": "Alec Pierce",
+      "pos": "WR",
+      "round": 8,
+      "pick": 92,
+      "points": 7.2,
+      "peer_avg_points": 42.31,
+      "vs_peers": -35.11
+     },
+     "biggest_steal": {
+      "player": "Jonathan Taylor",
+      "pos": "RB",
+      "round": 1,
+      "pick": 5,
+      "points": 120.5,
+      "peer_avg_points": 81.22,
+      "vs_peers": 39.28
+     }
+    },
+    {
+     "team_id": "7",
+     "team": "Bruno's Best Team",
+     "biggest_bust": {
+      "player": "Jeremiyah Love",
+      "pos": "RB",
+      "round": 3,
+      "pick": 26,
+      "points": 40.1,
+      "peer_avg_points": 75.56,
+      "vs_peers": -35.46
+     },
+     "biggest_steal": {
+      "player": "Drake Maye",
+      "pos": "QB",
+      "round": 4,
+      "pick": 47,
+      "points": 138.46,
+      "peer_avg_points": 81.59,
+      "vs_peers": 56.87
+     }
+    },
+    {
+     "team_id": "8",
+     "team": "Fantasy Baseball Team",
+     "biggest_bust": {
+      "player": "A.J. Brown",
+      "pos": "WR",
+      "round": 2,
+      "pick": 18,
+      "points": 10.1,
+      "peer_avg_points": 72.08,
+      "vs_peers": -61.98
+     },
+     "biggest_steal": {
+      "player": "Javonte Williams",
+      "pos": "RB",
+      "round": 3,
+      "pick": 31,
+      "points": 111.5,
+      "peer_avg_points": 70.69,
+      "vs_peers": 40.81
+     }
+    },
+    {
+     "team_id": "9",
+     "team": "Jordan's Scary Team",
+     "biggest_bust": {
+      "player": "Zach Charbonnet",
+      "pos": "RB",
+      "round": 12,
+      "pick": 137,
+      "points": 0.0,
+      "peer_avg_points": 29.78,
+      "vs_peers": -29.78
+     },
+     "biggest_steal": {
+      "player": "Chuba Hubbard",
+      "pos": "RB",
+      "round": 8,
+      "pick": 89,
+      "points": 111.0,
+      "peer_avg_points": 37.4,
+      "vs_peers": 73.6
+     }
+    },
+    {
+     "team_id": "10",
+     "team": "1st and 11",
+     "biggest_bust": {
+      "player": "Jaxson Dart",
+      "pos": "QB",
+      "round": 10,
+      "pick": 109,
+      "points": 27.4,
+      "peer_avg_points": 119.86,
+      "vs_peers": -92.46
+     },
+     "biggest_steal": {
+      "player": "Joe Burrow",
+      "pos": "QB",
+      "round": 6,
+      "pick": 61,
+      "points": 130.12,
+      "peer_avg_points": 81.59,
+      "vs_peers": 48.53
+     }
+    },
+    {
+     "team_id": "11",
+     "team": "34=GOAT (Bonnet\u2019s Team)",
+     "biggest_bust": {
+      "player": "Jonathon Brooks",
+      "pos": "RB",
+      "round": 8,
+      "pick": 86,
+      "points": 7.3,
+      "peer_avg_points": 55.69,
+      "vs_peers": -48.39
+     },
+     "biggest_steal": {
+      "player": "Zay Flowers",
+      "pos": "WR",
+      "round": 3,
+      "pick": 35,
+      "points": 82.2,
+      "peer_avg_points": 55.85,
+      "vs_peers": 26.35
+     }
+    },
+    {
+     "team_id": "12",
+     "team": "Nate's Nifty Team",
+     "biggest_bust": {
+      "player": "Kyler Murray",
+      "pos": "QB",
+      "round": 12,
+      "pick": 136,
+      "points": 53.68,
+      "peer_avg_points": 109.92,
+      "vs_peers": -56.24
+     },
+     "biggest_steal": {
+      "player": "Brock Purdy",
+      "pos": "QB",
+      "round": 10,
+      "pick": 112,
+      "points": 146.02,
+      "peer_avg_points": 90.2,
+      "vs_peers": 55.82
+     }
+    }
+   ],
+   "faab": {
+    "budget_assumed": null,
+    "complete_history": null,
+    "only_executed_claims_visible": false,
+    "by_team": [
+     {
+      "team_id": "10",
+      "team": "1st and 11",
+      "waiver_bids_won": 14,
+      "waiver_bids_lost": 7,
+      "waiver_bids_placed": 21,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "11",
+      "team": "34=GOAT (Bonnet\u2019s Team)",
+      "waiver_bids_won": 9,
+      "waiver_bids_lost": 5,
+      "waiver_bids_placed": 14,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "3",
+      "team": "Kevin's Top-Notch Team",
+      "waiver_bids_won": 7,
+      "waiver_bids_lost": 5,
+      "waiver_bids_placed": 12,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "9",
+      "team": "Jordan's Scary Team",
+      "waiver_bids_won": 6,
+      "waiver_bids_lost": 4,
+      "waiver_bids_placed": 10,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "4",
+      "team": "Keith's Team",
+      "waiver_bids_won": 5,
+      "waiver_bids_lost": 4,
+      "waiver_bids_placed": 9,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "6",
+      "team": "Team Hansen",
+      "waiver_bids_won": 4,
+      "waiver_bids_lost": 1,
+      "waiver_bids_placed": 5,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "2",
+      "team": "Dayton's Daring Team",
+      "waiver_bids_won": 3,
+      "waiver_bids_lost": 2,
+      "waiver_bids_placed": 5,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "5",
+      "team": "Go Pack Go",
+      "waiver_bids_won": 2,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 2,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "12",
+      "team": "Nate's Nifty Team",
+      "waiver_bids_won": 2,
+      "waiver_bids_lost": 1,
+      "waiver_bids_placed": 3,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "1",
+      "team": "Mike D",
+      "waiver_bids_won": 1,
+      "waiver_bids_lost": 1,
+      "waiver_bids_placed": 2,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "8",
+      "team": "Fantasy Baseball Team",
+      "waiver_bids_won": 1,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 1,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "7",
+      "team": "Bruno's Best Team",
+      "waiver_bids_won": 0,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 0,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     }
+    ]
+   }
+  }
+ }
+}
