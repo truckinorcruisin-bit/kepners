@@ -4,46 +4,46 @@
  "season": 2026,
  "scoring": "STD",
  "type": "ROS",
- "generated": "2026-11-03T19:55:36.424432+00:00",
- "last_updated": "11/03",
+ "generated": "2026-11-10T20:09:31.586130+00:00",
+ "last_updated": "11/10",
  "api_tier": "free",
  "complete": false,
  "stale_positions": [],
  "positions": {
   "QB": {
-   "count": 63,
+   "count": 64,
    "returned": 10,
    "limit": 10,
    "api_tier": "free",
-   "last_updated": "11/03",
-   "total_experts": 3,
+   "last_updated": "11/10",
+   "total_experts": 5,
    "complete": false
   },
   "RB": {
-   "count": 112,
+   "count": 111,
    "returned": 10,
    "limit": 10,
    "api_tier": "free",
-   "last_updated": "11/03",
+   "last_updated": "11/10",
    "total_experts": 4,
    "complete": false
   },
   "WR": {
-   "count": 138,
+   "count": 139,
    "returned": 10,
    "limit": 10,
    "api_tier": "free",
-   "last_updated": "11/03",
-   "total_experts": 3,
+   "last_updated": "11/10",
+   "total_experts": 4,
    "complete": false
   },
   "TE": {
-   "count": 68,
+   "count": 66,
    "returned": 10,
    "limit": 10,
    "api_tier": "free",
-   "last_updated": "11/03",
-   "total_experts": 3,
+   "last_updated": "11/10",
+   "total_experts": 4,
    "complete": false
   },
   "K": {
@@ -51,8 +51,8 @@
    "returned": 10,
    "limit": 10,
    "api_tier": "free",
-   "last_updated": "11/03",
-   "total_experts": 6,
+   "last_updated": "11/10",
+   "total_experts": 7,
    "complete": false
   },
   "DST": {
@@ -60,8 +60,8 @@
    "returned": 10,
    "limit": 10,
    "api_tier": "free",
-   "last_updated": "11/03",
-   "total_experts": 6,
+   "last_updated": "11/10",
+   "total_experts": 7,
    "complete": false
   }
  },
@@ -93,8 +93,8 @@
    "tier": null,
    "best": 2.0,
    "worst": 4.0,
-   "avg": 3.0,
-   "std": 0.82
+   "avg": 2.4,
+   "std": 0.8
   },
   {
    "fp_id": 19797,
@@ -107,39 +107,9 @@
    "pos_rank": "QB3",
    "tier": null,
    "best": 2.0,
-   "worst": 5.0,
-   "avg": 4.0,
-   "std": 1.41
-  },
-  {
-   "fp_id": 19780,
-   "name": "Trevor Lawrence",
-   "team": "JAC",
-   "pos": "QB",
-   "yahoo_id": "33389",
-   "bye": 7,
-   "ecr": 4,
-   "pos_rank": "QB4",
-   "tier": null,
-   "best": 2.0,
    "worst": 7.0,
-   "avg": 4.67,
-   "std": 2.05
-  },
-  {
-   "fp_id": 15501,
-   "name": "Jared Goff",
-   "team": "DET",
-   "pos": "QB",
-   "yahoo_id": "29235",
-   "bye": 6,
-   "ecr": 5,
-   "pos_rank": "QB5",
-   "tier": null,
-   "best": 3.0,
-   "worst": 8.0,
-   "avg": 5.0,
-   "std": 2.16
+   "avg": 4.0,
+   "std": 1.79
   },
   {
    "fp_id": 23046,
@@ -148,11 +118,11 @@
    "pos": "QB",
    "yahoo_id": "40881",
    "bye": 11,
-   "ecr": 6,
-   "pos_rank": "QB6",
+   "ecr": 4,
+   "pos_rank": "QB4",
    "tier": null,
    "best": 3.0,
-   "worst": 6.0,
+   "worst": 7.0,
    "avg": 5.0,
    "std": 1.41
   },
@@ -163,13 +133,28 @@
    "pos": "QB",
    "yahoo_id": "40900",
    "bye": 10,
-   "ecr": 7,
-   "pos_rank": "QB7",
+   "ecr": 5,
+   "pos_rank": "QB5",
    "tier": null,
    "best": 4.0,
-   "worst": 7.0,
-   "avg": 5.67,
-   "std": 1.25
+   "worst": 8.0,
+   "avg": 5.4,
+   "std": 1.5
+  },
+  {
+   "fp_id": 19780,
+   "name": "Trevor Lawrence",
+   "team": "JAC",
+   "pos": "QB",
+   "yahoo_id": "33389",
+   "bye": 7,
+   "ecr": 6,
+   "pos_rank": "QB6",
+   "tier": null,
+   "best": 3.0,
+   "worst": 8.0,
+   "avg": 5.6,
+   "std": 1.74
   },
   {
    "fp_id": 19246,
@@ -178,28 +163,43 @@
    "pos": "QB",
    "yahoo_id": "32696",
    "bye": 11,
+   "ecr": 7,
+   "pos_rank": "QB7",
+   "tier": null,
+   "best": 4.0,
+   "worst": 7.0,
+   "avg": 6.0,
+   "std": 1.1
+  },
+  {
+   "fp_id": 15501,
+   "name": "Jared Goff",
+   "team": "DET",
+   "pos": "QB",
+   "yahoo_id": "29235",
+   "bye": 6,
    "ecr": 8,
    "pos_rank": "QB8",
    "tier": null,
-   "best": 8.0,
-   "worst": 10.0,
-   "avg": 8.67,
-   "std": 0.94
+   "best": 3.0,
+   "worst": 9.0,
+   "avg": 7.2,
+   "std": 2.4
   },
   {
-   "fp_id": 16413,
-   "name": "Patrick Mahomes II",
-   "team": "KC",
+   "fp_id": 15600,
+   "name": "Dak Prescott",
+   "team": "DAL",
    "pos": "QB",
-   "yahoo_id": "30123",
-   "bye": 5,
+   "yahoo_id": "29369",
+   "bye": 14,
    "ecr": 9,
    "pos_rank": "QB9",
    "tier": null,
-   "best": 7.0,
-   "worst": 13.0,
-   "avg": 9.67,
-   "std": 2.49
+   "best": 8.0,
+   "worst": 11.0,
+   "avg": 9.6,
+   "std": 1.02
   },
   {
    "fp_id": 22902,
@@ -211,10 +211,10 @@
    "ecr": 10,
    "pos_rank": "QB10",
    "tier": null,
-   "best": 9.0,
-   "worst": 11.0,
-   "avg": 10.0,
-   "std": 0.82
+   "best": 8.0,
+   "worst": 13.0,
+   "avg": 10.6,
+   "std": 1.62
   },
   {
    "fp_id": 22968,
@@ -232,19 +232,34 @@
    "std": 0.0
   },
   {
+   "fp_id": 23021,
+   "name": "Kenneth Walker III",
+   "team": "KC",
+   "pos": "RB",
+   "yahoo_id": "33996",
+   "bye": 5,
+   "ecr": 2,
+   "pos_rank": "RB2",
+   "tier": null,
+   "best": 2.0,
+   "worst": 4.0,
+   "avg": 2.75,
+   "std": 0.83
+  },
+  {
    "fp_id": 23133,
    "name": "Bijan Robinson",
    "team": "ATL",
    "pos": "RB",
    "yahoo_id": "40055",
    "bye": 11,
-   "ecr": 2,
-   "pos_rank": "RB2",
+   "ecr": 3,
+   "pos_rank": "RB3",
    "tier": null,
    "best": 2.0,
-   "worst": 2.0,
-   "avg": 2.0,
-   "std": 0.0
+   "worst": 4.0,
+   "avg": 3.0,
+   "std": 1.0
   },
   {
    "fp_id": 22958,
@@ -253,8 +268,8 @@
    "pos": "RB",
    "yahoo_id": "34019",
    "bye": 7,
-   "ecr": 3,
-   "pos_rank": "RB3",
+   "ecr": 4,
+   "pos_rank": "RB4",
    "tier": null,
    "best": 3.0,
    "worst": 5.0,
@@ -262,34 +277,19 @@
    "std": 0.87
   },
   {
-   "fp_id": 23021,
-   "name": "Kenneth Walker III",
-   "team": "KC",
+   "fp_id": 22739,
+   "name": "Javonte Williams",
+   "team": "DAL",
    "pos": "RB",
-   "yahoo_id": "33996",
-   "bye": 5,
-   "ecr": 4,
-   "pos_rank": "RB4",
-   "tier": null,
-   "best": 3.0,
-   "worst": 4.0,
-   "avg": 3.75,
-   "std": 0.43
-  },
-  {
-   "fp_id": 23059,
-   "name": "Kyren Williams",
-   "team": "LAR",
-   "pos": "RB",
-   "yahoo_id": "34120",
-   "bye": 11,
+   "yahoo_id": "33423",
+   "bye": 14,
    "ecr": 5,
    "pos_rank": "RB5",
    "tier": null,
    "best": 5.0,
-   "worst": 7.0,
-   "avg": 6.25,
-   "std": 0.83
+   "worst": 9.0,
+   "avg": 6.5,
+   "std": 1.5
   },
   {
    "fp_id": 16393,
@@ -303,38 +303,8 @@
    "tier": null,
    "best": 4.0,
    "worst": 9.0,
-   "avg": 7.5,
-   "std": 2.06
-  },
-  {
-   "fp_id": 19217,
-   "name": "Jonathan Taylor",
-   "team": "IND",
-   "pos": "RB",
-   "yahoo_id": "32711",
-   "bye": 13,
-   "ecr": 7,
-   "pos_rank": "RB7",
-   "tier": null,
-   "best": 5.0,
-   "worst": 10.0,
-   "avg": 7.5,
-   "std": 2.5
-  },
-  {
-   "fp_id": 22739,
-   "name": "Javonte Williams",
-   "team": "DAL",
-   "pos": "RB",
-   "yahoo_id": "33423",
-   "bye": 14,
-   "ecr": 8,
-   "pos_rank": "RB8",
-   "tier": null,
-   "best": 7.0,
-   "worst": 9.0,
-   "avg": 7.75,
-   "std": 0.83
+   "avg": 7.0,
+   "std": 1.87
   },
   {
    "fp_id": 19210,
@@ -343,28 +313,58 @@
    "pos": "RB",
    "yahoo_id": "32705",
    "bye": 10,
-   "ecr": 9,
-   "pos_rank": "RB9",
+   "ecr": 7,
+   "pos_rank": "RB7",
    "tier": null,
    "best": 6.0,
    "worst": 12.0,
-   "avg": 8.75,
-   "std": 2.77
+   "avg": 8.25,
+   "std": 2.28
   },
   {
-   "fp_id": 19792,
-   "name": "Chuba Hubbard",
-   "team": "CAR",
+   "fp_id": 23059,
+   "name": "Kyren Williams",
+   "team": "LAR",
    "pos": "RB",
-   "yahoo_id": "33514",
-   "bye": 5,
+   "yahoo_id": "34120",
+   "bye": 11,
+   "ecr": 8,
+   "pos_rank": "RB8",
+   "tier": null,
+   "best": 5.0,
+   "worst": 13.0,
+   "avg": 8.75,
+   "std": 3.03
+  },
+  {
+   "fp_id": 19217,
+   "name": "Jonathan Taylor",
+   "team": "IND",
+   "pos": "RB",
+   "yahoo_id": "32711",
+   "bye": 13,
+   "ecr": 9,
+   "pos_rank": "RB9",
+   "tier": null,
+   "best": 5.0,
+   "worst": 15.0,
+   "avg": 9.0,
+   "std": 3.94
+  },
+  {
+   "fp_id": 25981,
+   "name": "Bucky Irving",
+   "team": "TB",
+   "pos": "RB",
+   "yahoo_id": "40993",
+   "bye": 10,
    "ecr": 10,
    "pos_rank": "RB10",
    "tier": null,
-   "best": 8.0,
-   "worst": 14.0,
-   "avg": 10.0,
-   "std": 2.45
+   "best": 7.0,
+   "worst": 11.0,
+   "avg": 9.0,
+   "std": 1.58
   },
   {
    "fp_id": 23070,
@@ -382,34 +382,19 @@
    "std": 0.0
   },
   {
-   "fp_id": 23180,
-   "name": "Puka Nacua",
-   "team": "LAR",
-   "pos": "WR",
-   "yahoo_id": "40168",
-   "bye": 11,
-   "ecr": 2,
-   "pos_rank": "WR2",
-   "tier": null,
-   "best": 2.0,
-   "worst": 3.0,
-   "avg": 2.33,
-   "std": 0.47
-  },
-  {
    "fp_id": 19788,
    "name": "Ja'Marr Chase",
    "team": "CIN",
    "pos": "WR",
    "yahoo_id": "33393",
    "bye": 6,
-   "ecr": 3,
-   "pos_rank": "WR3",
+   "ecr": 2,
+   "pos_rank": "WR2",
    "tier": null,
    "best": 2.0,
    "worst": 3.0,
-   "avg": 2.67,
-   "std": 0.47
+   "avg": 2.5,
+   "std": 0.5
   },
   {
    "fp_id": 19799,
@@ -418,8 +403,8 @@
    "pos": "WR",
    "yahoo_id": "33500",
    "bye": 6,
-   "ecr": 4,
-   "pos_rank": "WR4",
+   "ecr": 3,
+   "pos_rank": "WR3",
    "tier": null,
    "best": 4.0,
    "worst": 4.0,
@@ -433,13 +418,13 @@
    "pos": "WR",
    "yahoo_id": "32687",
    "bye": 14,
-   "ecr": 5,
-   "pos_rank": "WR5",
+   "ecr": 4,
+   "pos_rank": "WR4",
    "tier": null,
-   "best": 5.0,
+   "best": 3.0,
    "worst": 5.0,
-   "avg": 5.0,
-   "std": 0.0
+   "avg": 4.5,
+   "std": 0.87
   },
   {
    "fp_id": 23886,
@@ -448,13 +433,13 @@
    "pos": "WR",
    "yahoo_id": "33989",
    "bye": 11,
-   "ecr": 6,
-   "pos_rank": "WR6",
+   "ecr": 5,
+   "pos_rank": "WR5",
    "tier": null,
    "best": 6.0,
-   "worst": 9.0,
-   "avg": 7.0,
-   "std": 1.41
+   "worst": 6.0,
+   "avg": 6.0,
+   "std": 0.0
   },
   {
    "fp_id": 25409,
@@ -463,28 +448,28 @@
    "pos": "WR",
    "yahoo_id": "40899",
    "bye": 8,
+   "ecr": 6,
+   "pos_rank": "WR6",
+   "tier": null,
+   "best": 5.0,
+   "worst": 8.0,
+   "avg": 6.75,
+   "std": 1.09
+  },
+  {
+   "fp_id": 23180,
+   "name": "Puka Nacua",
+   "team": "LAR",
+   "pos": "WR",
+   "yahoo_id": "40168",
+   "bye": 11,
    "ecr": 7,
    "pos_rank": "WR7",
    "tier": null,
-   "best": 7.0,
-   "worst": 7.0,
-   "avg": 7.0,
-   "std": 0.0
-  },
-  {
-   "fp_id": 23163,
-   "name": "Drake London",
-   "team": "ATL",
-   "pos": "WR",
-   "yahoo_id": "33963",
-   "bye": 11,
-   "ecr": 8,
-   "pos_rank": "WR8",
-   "tier": null,
-   "best": 8.0,
-   "worst": 11.0,
-   "avg": 9.33,
-   "std": 1.25
+   "best": 2.0,
+   "worst": 25.0,
+   "avg": 8.0,
+   "std": 9.82
   },
   {
    "fp_id": 19211,
@@ -493,13 +478,28 @@
    "pos": "WR",
    "yahoo_id": "32703",
    "bye": 6,
+   "ecr": 8,
+   "pos_rank": "WR8",
+   "tier": null,
+   "best": 7.0,
+   "worst": 9.0,
+   "avg": 8.0,
+   "std": 1.0
+  },
+  {
+   "fp_id": 26024,
+   "name": "Matthew Golden",
+   "team": "GB",
+   "pos": "WR",
+   "yahoo_id": "41808",
+   "bye": 11,
    "ecr": 9,
    "pos_rank": "WR9",
    "tier": null,
-   "best": 9.0,
-   "worst": 10.0,
-   "avg": 9.67,
-   "std": 0.47
+   "best": 8.0,
+   "worst": 11.0,
+   "avg": 9.5,
+   "std": 1.12
   },
   {
    "fp_id": 20111,
@@ -513,8 +513,8 @@
    "tier": null,
    "best": 8.0,
    "worst": 11.0,
-   "avg": 10.0,
-   "std": 1.41
+   "avg": 9.75,
+   "std": 1.09
   },
   {
    "fp_id": 22955,
@@ -557,9 +557,9 @@
    "pos_rank": "TE3",
    "tier": null,
    "best": 3.0,
-   "worst": 3.0,
-   "avg": 3.0,
-   "std": 0.0
+   "worst": 4.0,
+   "avg": 3.25,
+   "std": 0.43
   },
   {
    "fp_id": 26006,
@@ -571,25 +571,25 @@
    "ecr": 4,
    "pos_rank": "TE4",
    "tier": null,
-   "best": 4.0,
+   "best": 3.0,
    "worst": 6.0,
-   "avg": 5.0,
-   "std": 0.82
+   "avg": 4.25,
+   "std": 1.09
   },
   {
-   "fp_id": 22978,
-   "name": "Sam LaPorta",
-   "team": "DET",
+   "fp_id": 23781,
+   "name": "Isaiah Likely",
+   "team": "NYG",
    "pos": "TE",
-   "yahoo_id": "40064",
-   "bye": 6,
+   "yahoo_id": "34095",
+   "bye": 8,
    "ecr": 5,
    "pos_rank": "TE5",
    "tier": null,
    "best": 4.0,
    "worst": 7.0,
-   "avg": 5.67,
-   "std": 1.25
+   "avg": 5.75,
+   "std": 1.3
   },
   {
    "fp_id": 25298,
@@ -601,25 +601,25 @@
    "ecr": 6,
    "pos_rank": "TE6",
    "tier": null,
-   "best": 4.0,
+   "best": 5.0,
    "worst": 9.0,
    "avg": 6.0,
-   "std": 2.16
+   "std": 1.73
   },
   {
-   "fp_id": 23781,
-   "name": "Isaiah Likely",
-   "team": "NYG",
+   "fp_id": 22978,
+   "name": "Sam LaPorta",
+   "team": "DET",
    "pos": "TE",
-   "yahoo_id": "34095",
-   "bye": 8,
+   "yahoo_id": "40064",
+   "bye": 6,
    "ecr": 7,
    "pos_rank": "TE7",
    "tier": null,
-   "best": 5.0,
+   "best": 6.0,
    "worst": 7.0,
-   "avg": 6.33,
-   "std": 0.94
+   "avg": 6.5,
+   "std": 0.5
   },
   {
    "fp_id": 25247,
@@ -632,9 +632,9 @@
    "pos_rank": "TE8",
    "tier": null,
    "best": 8.0,
-   "worst": 9.0,
-   "avg": 8.33,
-   "std": 0.47
+   "worst": 8.0,
+   "avg": 8.0,
+   "std": 0.0
   },
   {
    "fp_id": 27050,
@@ -647,24 +647,24 @@
    "pos_rank": "TE9",
    "tier": null,
    "best": 6.0,
-   "worst": 16.0,
-   "avg": 11.0,
-   "std": 4.08
+   "worst": 15.0,
+   "avg": 10.25,
+   "std": 3.19
   },
   {
-   "fp_id": 25345,
-   "name": "Brenton Strange",
-   "team": "JAC",
+   "fp_id": 11594,
+   "name": "Travis Kelce",
+   "team": "KC",
    "pos": "TE",
-   "yahoo_id": "40078",
-   "bye": 7,
+   "yahoo_id": "26686",
+   "bye": 5,
    "ecr": 10,
    "pos_rank": "TE10",
    "tier": null,
    "best": 9.0,
-   "worst": 12.0,
-   "avg": 11.0,
-   "std": 1.41
+   "worst": 13.0,
+   "avg": 10.75,
+   "std": 1.48
   },
   {
    "fp_id": 26068,
@@ -677,9 +677,9 @@
    "pos_rank": "K1",
    "tier": null,
    "best": 1.0,
-   "worst": 2.0,
-   "avg": 1.67,
-   "std": 0.47
+   "worst": 3.0,
+   "avg": 1.8,
+   "std": 0.75
   },
   {
    "fp_id": 15756,
@@ -692,9 +692,9 @@
    "pos_rank": "K2",
    "tier": null,
    "best": 1.0,
-   "worst": 4.0,
-   "avg": 2.17,
-   "std": 1.34
+   "worst": 3.0,
+   "avg": 2.0,
+   "std": 0.63
   },
   {
    "fp_id": 26475,
@@ -706,10 +706,10 @@
    "ecr": 3,
    "pos_rank": "K3",
    "tier": null,
-   "best": 3.0,
-   "worst": 7.0,
-   "avg": 4.17,
-   "std": 1.46
+   "best": 2.0,
+   "worst": 4.0,
+   "avg": 3.0,
+   "std": 0.63
   },
   {
    "fp_id": 26341,
@@ -721,10 +721,10 @@
    "ecr": 4,
    "pos_rank": "K4",
    "tier": null,
-   "best": 1.0,
-   "worst": 8.0,
-   "avg": 4.67,
-   "std": 2.29
+   "best": 3.0,
+   "worst": 6.0,
+   "avg": 4.8,
+   "std": 1.17
   },
   {
    "fp_id": 23297,
@@ -736,10 +736,10 @@
    "ecr": 5,
    "pos_rank": "K5",
    "tier": null,
-   "best": 3.0,
-   "worst": 10.0,
-   "avg": 5.67,
-   "std": 2.29
+   "best": 4.0,
+   "worst": 6.0,
+   "avg": 4.8,
+   "std": 0.75
   },
   {
    "fp_id": 14003,
@@ -751,10 +751,10 @@
    "ecr": 6,
    "pos_rank": "K6",
    "tier": null,
-   "best": 3.0,
-   "worst": 11.0,
-   "avg": 6.83,
-   "std": 2.79
+   "best": 5.0,
+   "worst": 9.0,
+   "avg": 7.0,
+   "std": 1.67
   },
   {
    "fp_id": 13731,
@@ -766,55 +766,55 @@
    "ecr": 7,
    "pos_rank": "K7",
    "tier": null,
-   "best": 6.0,
-   "worst": 14.0,
-   "avg": 10.0,
-   "std": 2.65
+   "best": 7.0,
+   "worst": 9.0,
+   "avg": 8.2,
+   "std": 0.75
   },
   {
-   "fp_id": 26763,
-   "name": "Spencer Shrader",
-   "team": "IND",
+   "fp_id": 17575,
+   "name": "Eddy Pineiro",
+   "team": "SF",
    "pos": "K",
-   "yahoo_id": "41499",
-   "bye": 13,
+   "yahoo_id": "31482",
+   "bye": 8,
    "ecr": 8,
    "pos_rank": "K8",
    "tier": null,
-   "best": 2.0,
-   "worst": 17.0,
-   "avg": 10.33,
-   "std": 4.75
+   "best": 7.0,
+   "worst": 16.0,
+   "avg": 9.0,
+   "std": 3.52
   },
   {
-   "fp_id": 19760,
-   "name": "Tyler Bass",
-   "team": "BUF",
+   "fp_id": 19058,
+   "name": "Chase McLaughlin",
+   "team": "TB",
    "pos": "K",
-   "yahoo_id": "32858",
-   "bye": 7,
+   "yahoo_id": "32417",
+   "bye": 10,
    "ecr": 9,
    "pos_rank": "K9",
    "tier": null,
-   "best": 4.0,
-   "worst": 15.0,
-   "avg": 10.33,
-   "std": 3.99
+   "best": 8.0,
+   "worst": 12.0,
+   "avg": 10.0,
+   "std": 1.41
   },
   {
-   "fp_id": 26075,
-   "name": "Jake Bates",
-   "team": "DET",
+   "fp_id": 13029,
+   "name": "Chris Boswell",
+   "team": "PIT",
    "pos": "K",
-   "yahoo_id": "40835",
-   "bye": 6,
+   "yahoo_id": "28188",
+   "bye": 9,
    "ecr": 10,
    "pos_rank": "K10",
    "tier": null,
-   "best": 5.0,
-   "worst": 16.0,
-   "avg": 10.67,
-   "std": 3.4
+   "best": 7.0,
+   "worst": 14.0,
+   "avg": 10.8,
+   "std": 2.48
   },
   {
    "fp_id": 8170,
@@ -827,9 +827,9 @@
    "pos_rank": "DST1",
    "tier": null,
    "best": 1.0,
-   "worst": 2.0,
-   "avg": 1.33,
-   "std": 0.47
+   "worst": 3.0,
+   "avg": 1.8,
+   "std": 0.75
   },
   {
    "fp_id": 8260,
@@ -842,9 +842,9 @@
    "pos_rank": "DST2",
    "tier": null,
    "best": 1.0,
-   "worst": 4.0,
-   "avg": 2.33,
-   "std": 0.94
+   "worst": 3.0,
+   "avg": 2.0,
+   "std": 0.63
   },
   {
    "fp_id": 8090,
@@ -857,9 +857,9 @@
    "pos_rank": "DST3",
    "tier": null,
    "best": 3.0,
-   "worst": 6.0,
-   "avg": 4.5,
-   "std": 1.12
+   "worst": 5.0,
+   "avg": 4.0,
+   "std": 0.63
   },
   {
    "fp_id": 8140,
@@ -871,10 +871,10 @@
    "ecr": 4,
    "pos_rank": "DST4",
    "tier": null,
-   "best": 3.0,
+   "best": 2.0,
    "worst": 7.0,
-   "avg": 4.67,
-   "std": 1.49
+   "avg": 4.6,
+   "std": 1.85
   },
   {
    "fp_id": 8120,
@@ -886,10 +886,10 @@
    "ecr": 5,
    "pos_rank": "DST5",
    "tier": null,
-   "best": 1.0,
-   "worst": 12.0,
-   "avg": 4.83,
-   "std": 3.72
+   "best": 2.0,
+   "worst": 10.0,
+   "avg": 5.6,
+   "std": 2.73
   },
   {
    "fp_id": 8240,
@@ -901,40 +901,10 @@
    "ecr": 6,
    "pos_rank": "DST6",
    "tier": null,
-   "best": 3.0,
+   "best": 6.0,
    "worst": 9.0,
-   "avg": 6.67,
-   "std": 1.97
-  },
-  {
-   "fp_id": 8150,
-   "name": "Kansas City Chiefs",
-   "team": "KC",
-   "pos": "DST",
-   "yahoo_id": "100012",
-   "bye": 5,
-   "ecr": 7,
-   "pos_rank": "DST7",
-   "tier": null,
-   "best": 5.0,
-   "worst": 16.0,
-   "avg": 8.17,
-   "std": 3.72
-  },
-  {
-   "fp_id": 8270,
-   "name": "San Francisco 49ers",
-   "team": "SF",
-   "pos": "DST",
-   "yahoo_id": "100025",
-   "bye": 8,
-   "ecr": 8,
-   "pos_rank": "DST8",
-   "tier": null,
-   "best": 9.0,
-   "worst": 12.0,
-   "avg": 10.33,
-   "std": 1.11
+   "avg": 7.4,
+   "std": 1.2
   },
   {
    "fp_id": 8280,
@@ -943,13 +913,43 @@
    "pos": "DST",
    "yahoo_id": "100014",
    "bye": 11,
+   "ecr": 7,
+   "pos_rank": "DST7",
+   "tier": null,
+   "best": 5.0,
+   "worst": 16.0,
+   "avg": 9.2,
+   "std": 4.17
+  },
+  {
+   "fp_id": 8150,
+   "name": "Kansas City Chiefs",
+   "team": "KC",
+   "pos": "DST",
+   "yahoo_id": "100012",
+   "bye": 5,
+   "ecr": 8,
+   "pos_rank": "DST8",
+   "tier": null,
+   "best": 7.0,
+   "worst": 15.0,
+   "avg": 9.4,
+   "std": 3.01
+  },
+  {
+   "fp_id": 8270,
+   "name": "San Francisco 49ers",
+   "team": "SF",
+   "pos": "DST",
+   "yahoo_id": "100025",
+   "bye": 8,
    "ecr": 9,
    "pos_rank": "DST9",
    "tier": null,
-   "best": 5.0,
-   "worst": 21.0,
-   "avg": 10.5,
-   "std": 5.56
+   "best": 9.0,
+   "worst": 12.0,
+   "avg": 10.0,
+   "std": 1.1
   },
   {
    "fp_id": 8180,
@@ -961,10 +961,10 @@
    "ecr": 10,
    "pos_rank": "DST10",
    "tier": null,
-   "best": 7.0,
-   "worst": 18.0,
-   "avg": 10.83,
-   "std": 3.72
+   "best": 9.0,
+   "worst": 15.0,
+   "avg": 11.8,
+   "std": 2.48
   }
  ]
 }
