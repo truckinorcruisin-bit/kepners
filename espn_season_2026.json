@@ -1,12 +1,12 @@
 {
  "year": 2026,
- "generated": "2026-11-10T21:04:39.893993+00:00",
+ "generated": "2026-11-17T11:52:16.388680+00:00",
  "leagues": {
   "zimmer": {
    "league_key": "670427",
    "league_name": "Player Hater Ball",
    "settings": {
-    "current_week": 10,
+    "current_week": 11,
     "roster_slots": [
      "QB",
      "RB",
@@ -32,23 +32,23 @@
      "name": "EVIL EMPIRE",
      "manager": "Zach Zimmer",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 894.28,
-      "optimal_points": 985.0,
-      "points_left": 90.72,
-      "efficiency": 0.908
+      "weeks": 10,
+      "starter_points": 977.68,
+      "optimal_points": 1071.3,
+      "points_left": 93.62,
+      "efficiency": 0.913
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 894.28,
-      "pa": 971.02,
-      "avg_pf": 99.36,
-      "all_play": "61-38",
-      "expected_wins": 5.55,
-      "luck": -1.55,
+      "record": "4-6",
+      "games": 10,
+      "pf": 977.68,
+      "pa": 1056.68,
+      "avg_pf": 97.77,
+      "all_play": "64-46",
+      "expected_wins": 5.82,
+      "luck": -1.82,
       "close_wins": 1,
-      "close_losses": 2,
+      "close_losses": 3,
       "high_score": 150.38,
       "low_score": 56.58,
       "scores": [
@@ -105,47 +105,46 @@
         "pts": 123.88,
         "opp": "11",
         "opp_pts": 91.46
+       },
+       {
+        "week": 10,
+        "pts": 83.4,
+        "opp": "7",
+        "opp_pts": 85.66
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "7",
-       "opp_name": "D'Quan's Friend",
-       "opp_avg_pf": 86.31,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "20",
        "opp_name": "Dangerous  Nights Crew",
-       "opp_avg_pf": 89.88,
+       "opp_avg_pf": 93.69,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "16",
        "opp_name": "TEXAS CHUPACABRAS",
-       "opp_avg_pf": 91.33,
+       "opp_avg_pf": 91.49,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "6",
        "opp_name": "Ben Jarvis Green Ellis LLP",
-       "opp_avg_pf": 73.85,
+       "opp_avg_pf": 74.67,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "15",
        "opp_name": "DA BEARS FORCE ONE",
-       "opp_avg_pf": 77.87,
+       "opp_avg_pf": 76.63,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 83.85
+     "remaining_opp_avg_pf": 84.12
     },
     "5": {
      "team_id": "5",
@@ -153,24 +152,24 @@
      "name": "Letter of the Day is \"TD\"",
      "manager": "Jim Young",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 921.74,
-      "optimal_points": 1021.06,
-      "points_left": 99.32,
-      "efficiency": 0.903
+      "weeks": 10,
+      "starter_points": 1087.86,
+      "optimal_points": 1190.58,
+      "points_left": 102.72,
+      "efficiency": 0.914
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 921.74,
-      "pa": 786.32,
-      "avg_pf": 102.42,
-      "all_play": "67-32",
-      "expected_wins": 6.09,
+      "record": "8-2",
+      "games": 10,
+      "pf": 1087.86,
+      "pa": 892.18,
+      "avg_pf": 108.79,
+      "all_play": "78-32",
+      "expected_wins": 7.09,
       "luck": 0.91,
       "close_wins": 3,
       "close_losses": 2,
-      "high_score": 136.44,
+      "high_score": 166.12,
       "low_score": 62.42,
       "scores": [
        {
@@ -226,47 +225,46 @@
         "pts": 89.1,
         "opp": "18",
         "opp_pts": 68.06
+       },
+       {
+        "week": 10,
+        "pts": 166.12,
+        "opp": "19",
+        "opp_pts": 105.86
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "19",
-       "opp_name": "Maryland Menace",
-       "opp_avg_pf": 113.85,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "11",
        "opp_name": "Bake N' Shake",
-       "opp_avg_pf": 92.95,
+       "opp_avg_pf": 93.12,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "7",
        "opp_name": "D'Quan's Friend",
-       "opp_avg_pf": 86.31,
+       "opp_avg_pf": 86.24,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "20",
        "opp_name": "Dangerous  Nights Crew",
-       "opp_avg_pf": 89.88,
+       "opp_avg_pf": 93.69,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "16",
        "opp_name": "TEXAS CHUPACABRAS",
-       "opp_avg_pf": 91.33,
+       "opp_avg_pf": 91.49,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 94.86
+     "remaining_opp_avg_pf": 91.14
     },
     "6": {
      "team_id": "6",
@@ -274,21 +272,21 @@
      "name": "Ben Jarvis Green Ellis LLP",
      "manager": "Matthew Letten",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 664.62,
-      "optimal_points": 743.22,
-      "points_left": 78.6,
-      "efficiency": 0.894
+      "weeks": 10,
+      "starter_points": 746.74,
+      "optimal_points": 831.44,
+      "points_left": 84.7,
+      "efficiency": 0.898
      },
      "derived": {
-      "record": "3-6",
-      "games": 9,
-      "pf": 664.62,
-      "pa": 814.0,
-      "avg_pf": 73.85,
-      "all_play": "23-76",
-      "expected_wins": 2.09,
-      "luck": 0.91,
+      "record": "3-7",
+      "games": 10,
+      "pf": 746.74,
+      "pa": 918.88,
+      "avg_pf": 74.67,
+      "all_play": "25-85",
+      "expected_wins": 2.27,
+      "luck": 0.73,
       "close_wins": 2,
       "close_losses": 1,
       "high_score": 89.66,
@@ -347,47 +345,46 @@
         "pts": 52.5,
         "opp": "20",
         "opp_pts": 101.28
+       },
+       {
+        "week": 10,
+        "pts": 82.12,
+        "opp": "10",
+        "opp_pts": 104.88
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "10",
-       "opp_name": "The Fe-Brees Brothers",
-       "opp_avg_pf": 87.04,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "16",
        "opp_name": "TEXAS CHUPACABRAS",
-       "opp_avg_pf": 91.33,
+       "opp_avg_pf": 91.49,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "18",
        "opp_name": "Elements of  Intrigue",
-       "opp_avg_pf": 91.06,
+       "opp_avg_pf": 92.15,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "1",
        "opp_name": "EVIL EMPIRE",
-       "opp_avg_pf": 99.36,
+       "opp_avg_pf": 97.77,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "19",
        "opp_name": "Maryland Menace",
-       "opp_avg_pf": 113.85,
+       "opp_avg_pf": 113.05,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 96.53
+     "remaining_opp_avg_pf": 98.61
     },
     "7": {
      "team_id": "7",
@@ -395,22 +392,22 @@
      "name": "D'Quan's Friend",
      "manager": "Oliver Reed",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 776.78,
-      "optimal_points": 846.98,
-      "points_left": 70.2,
-      "efficiency": 0.917
+      "weeks": 10,
+      "starter_points": 862.44,
+      "optimal_points": 944.54,
+      "points_left": 82.1,
+      "efficiency": 0.913
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 776.78,
-      "pa": 757.36,
-      "avg_pf": 86.31,
-      "all_play": "45-54",
-      "expected_wins": 4.09,
-      "luck": -0.09,
-      "close_wins": 0,
+      "record": "5-5",
+      "games": 10,
+      "pf": 862.44,
+      "pa": 840.76,
+      "avg_pf": 86.24,
+      "all_play": "49-61",
+      "expected_wins": 4.45,
+      "luck": 0.55,
+      "close_wins": 1,
       "close_losses": 1,
       "high_score": 109.56,
       "low_score": 56.68,
@@ -468,47 +465,46 @@
         "pts": 64.42,
         "opp": "16",
         "opp_pts": 42.44
+       },
+       {
+        "week": 10,
+        "pts": 85.66,
+        "opp": "1",
+        "opp_pts": 83.4
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "1",
-       "opp_name": "EVIL EMPIRE",
-       "opp_avg_pf": 99.36,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "15",
        "opp_name": "DA BEARS FORCE ONE",
-       "opp_avg_pf": 77.87,
+       "opp_avg_pf": 76.63,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "5",
        "opp_name": "Letter of the Day is \"TD\"",
-       "opp_avg_pf": 102.42,
+       "opp_avg_pf": 108.79,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "14",
        "opp_name": "Spokane Beers",
-       "opp_avg_pf": 78.95,
+       "opp_avg_pf": 77.43,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "10",
        "opp_name": "The Fe-Brees Brothers",
-       "opp_avg_pf": 87.04,
+       "opp_avg_pf": 88.82,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.13
+     "remaining_opp_avg_pf": 87.92
     },
     "10": {
      "team_id": "10",
@@ -516,21 +512,21 @@
      "name": "The Fe-Brees Brothers",
      "manager": "Andrew Piotrowski",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 783.36,
-      "optimal_points": 868.76,
+      "weeks": 10,
+      "starter_points": 888.24,
+      "optimal_points": 973.64,
       "points_left": 85.4,
-      "efficiency": 0.902
+      "efficiency": 0.912
      },
      "derived": {
-      "record": "6-3",
-      "games": 9,
-      "pf": 783.36,
-      "pa": 754.36,
-      "avg_pf": 87.04,
-      "all_play": "44-55",
-      "expected_wins": 4.0,
-      "luck": 2.0,
+      "record": "7-3",
+      "games": 10,
+      "pf": 888.24,
+      "pa": 836.48,
+      "avg_pf": 88.82,
+      "all_play": "52-58",
+      "expected_wins": 4.73,
+      "luck": 2.27,
       "close_wins": 1,
       "close_losses": 0,
       "high_score": 119.44,
@@ -589,47 +585,46 @@
         "pts": 99.18,
         "opp": "14",
         "opp_pts": 60.58
+       },
+       {
+        "week": 10,
+        "pts": 104.88,
+        "opp": "6",
+        "opp_pts": 82.12
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "6",
-       "opp_name": "Ben Jarvis Green Ellis LLP",
-       "opp_avg_pf": 73.85,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "18",
        "opp_name": "Elements of  Intrigue",
-       "opp_avg_pf": 91.06,
+       "opp_avg_pf": 92.15,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "19",
        "opp_name": "Maryland Menace",
-       "opp_avg_pf": 113.85,
+       "opp_avg_pf": 113.05,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "11",
        "opp_name": "Bake N' Shake",
-       "opp_avg_pf": 92.95,
+       "opp_avg_pf": 93.12,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "7",
        "opp_name": "D'Quan's Friend",
-       "opp_avg_pf": 86.31,
+       "opp_avg_pf": 86.24,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 91.6
+     "remaining_opp_avg_pf": 96.14
     },
     "11": {
      "team_id": "11",
@@ -637,21 +632,21 @@
      "name": "Bake N' Shake",
      "manager": "Dan Beringer",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 836.54,
-      "optimal_points": 921.18,
-      "points_left": 84.64,
-      "efficiency": 0.908
+      "weeks": 10,
+      "starter_points": 931.16,
+      "optimal_points": 1042.24,
+      "points_left": 111.08,
+      "efficiency": 0.893
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 836.54,
-      "pa": 780.96,
-      "avg_pf": 92.95,
-      "all_play": "54-45",
-      "expected_wins": 4.91,
-      "luck": 2.09,
+      "record": "8-2",
+      "games": 10,
+      "pf": 931.16,
+      "pa": 846.44,
+      "avg_pf": 93.12,
+      "all_play": "60-50",
+      "expected_wins": 5.45,
+      "luck": 2.55,
       "close_wins": 5,
       "close_losses": 0,
       "high_score": 120.36,
@@ -710,47 +705,46 @@
         "pts": 91.46,
         "opp": "1",
         "opp_pts": 123.88
+       },
+       {
+        "week": 10,
+        "pts": 94.62,
+        "opp": "15",
+        "opp_pts": 65.48
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "15",
-       "opp_name": "DA BEARS FORCE ONE",
-       "opp_avg_pf": 77.87,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "5",
        "opp_name": "Letter of the Day is \"TD\"",
-       "opp_avg_pf": 102.42,
+       "opp_avg_pf": 108.79,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "14",
        "opp_name": "Spokane Beers",
-       "opp_avg_pf": 78.95,
+       "opp_avg_pf": 77.43,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "10",
        "opp_name": "The Fe-Brees Brothers",
-       "opp_avg_pf": 87.04,
+       "opp_avg_pf": 88.82,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "18",
        "opp_name": "Elements of  Intrigue",
-       "opp_avg_pf": 91.06,
+       "opp_avg_pf": 92.15,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 87.47
+     "remaining_opp_avg_pf": 91.8
     },
     "14": {
      "team_id": "14",
@@ -758,19 +752,19 @@
      "name": "Spokane Beers",
      "manager": "Cole Davis",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 710.54,
-      "optimal_points": 812.16,
-      "points_left": 101.62,
-      "efficiency": 0.875
+      "weeks": 10,
+      "starter_points": 774.34,
+      "optimal_points": 888.96,
+      "points_left": 114.62,
+      "efficiency": 0.871
      },
      "derived": {
-      "record": "1-8",
-      "games": 9,
-      "pf": 710.54,
-      "pa": 860.82,
-      "avg_pf": 78.95,
-      "all_play": "31-68",
+      "record": "1-9",
+      "games": 10,
+      "pf": 774.34,
+      "pa": 962.78,
+      "avg_pf": 77.43,
+      "all_play": "31-79",
       "expected_wins": 2.82,
       "luck": -1.82,
       "close_wins": 0,
@@ -831,47 +825,46 @@
         "pts": 60.58,
         "opp": "10",
         "opp_pts": 99.18
+       },
+       {
+        "week": 10,
+        "pts": 63.8,
+        "opp": "18",
+        "opp_pts": 101.96
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "18",
-       "opp_name": "Elements of  Intrigue",
-       "opp_avg_pf": 91.06,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "19",
        "opp_name": "Maryland Menace",
-       "opp_avg_pf": 113.85,
+       "opp_avg_pf": 113.05,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "11",
        "opp_name": "Bake N' Shake",
-       "opp_avg_pf": 92.95,
+       "opp_avg_pf": 93.12,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "7",
        "opp_name": "D'Quan's Friend",
-       "opp_avg_pf": 86.31,
+       "opp_avg_pf": 86.24,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "20",
        "opp_name": "Dangerous  Nights Crew",
-       "opp_avg_pf": 89.88,
+       "opp_avg_pf": 93.69,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 94.81
+     "remaining_opp_avg_pf": 96.53
     },
     "15": {
      "team_id": "15",
@@ -879,21 +872,21 @@
      "name": "DA BEARS FORCE ONE",
      "manager": "Michael Violi",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 700.82,
-      "optimal_points": 822.02,
-      "points_left": 121.2,
-      "efficiency": 0.853
+      "weeks": 10,
+      "starter_points": 766.3,
+      "optimal_points": 910.4,
+      "points_left": 144.1,
+      "efficiency": 0.842
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 700.82,
-      "pa": 862.76,
-      "avg_pf": 77.87,
-      "all_play": "33-66",
-      "expected_wins": 3.0,
-      "luck": 1.0,
+      "record": "4-6",
+      "games": 10,
+      "pf": 766.3,
+      "pa": 957.38,
+      "avg_pf": 76.63,
+      "all_play": "34-76",
+      "expected_wins": 3.09,
+      "luck": 0.91,
       "close_wins": 3,
       "close_losses": 0,
       "high_score": 110.46,
@@ -952,47 +945,46 @@
         "pts": 71.3,
         "opp": "19",
         "opp_pts": 144.94
+       },
+       {
+        "week": 10,
+        "pts": 65.48,
+        "opp": "11",
+        "opp_pts": 94.62
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "11",
-       "opp_name": "Bake N' Shake",
-       "opp_avg_pf": 92.95,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "7",
        "opp_name": "D'Quan's Friend",
-       "opp_avg_pf": 86.31,
+       "opp_avg_pf": 86.24,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "20",
        "opp_name": "Dangerous  Nights Crew",
-       "opp_avg_pf": 89.88,
+       "opp_avg_pf": 93.69,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "16",
        "opp_name": "TEXAS CHUPACABRAS",
-       "opp_avg_pf": 91.33,
+       "opp_avg_pf": 91.49,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "1",
        "opp_name": "EVIL EMPIRE",
-       "opp_avg_pf": 99.36,
+       "opp_avg_pf": 97.77,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 91.97
+     "remaining_opp_avg_pf": 92.3
     },
     "16": {
      "team_id": "16",
@@ -1000,21 +992,21 @@
      "name": "TEXAS CHUPACABRAS",
      "manager": "Pablo De Luna",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 821.98,
-      "optimal_points": 926.48,
-      "points_left": 104.5,
-      "efficiency": 0.887
+      "weeks": 10,
+      "starter_points": 914.92,
+      "optimal_points": 1023.92,
+      "points_left": 109.0,
+      "efficiency": 0.894
      },
      "derived": {
-      "record": "3-6",
-      "games": 9,
-      "pf": 821.98,
-      "pa": 865.52,
-      "avg_pf": 91.33,
-      "all_play": "52-47",
-      "expected_wins": 4.73,
-      "luck": -1.73,
+      "record": "3-7",
+      "games": 10,
+      "pf": 914.92,
+      "pa": 993.44,
+      "avg_pf": 91.49,
+      "all_play": "57-53",
+      "expected_wins": 5.18,
+      "luck": -2.18,
       "close_wins": 1,
       "close_losses": 2,
       "high_score": 115.36,
@@ -1073,47 +1065,46 @@
         "pts": 42.44,
         "opp": "7",
         "opp_pts": 64.42
+       },
+       {
+        "week": 10,
+        "pts": 92.94,
+        "opp": "20",
+        "opp_pts": 127.92
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "20",
-       "opp_name": "Dangerous  Nights Crew",
-       "opp_avg_pf": 89.88,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "6",
        "opp_name": "Ben Jarvis Green Ellis LLP",
-       "opp_avg_pf": 73.85,
+       "opp_avg_pf": 74.67,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "1",
        "opp_name": "EVIL EMPIRE",
-       "opp_avg_pf": 99.36,
+       "opp_avg_pf": 97.77,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "15",
        "opp_name": "DA BEARS FORCE ONE",
-       "opp_avg_pf": 77.87,
+       "opp_avg_pf": 76.63,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "5",
        "opp_name": "Letter of the Day is \"TD\"",
-       "opp_avg_pf": 102.42,
+       "opp_avg_pf": 108.79,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 88.68
+     "remaining_opp_avg_pf": 89.47
     },
     "18": {
      "team_id": "18",
@@ -1121,21 +1112,21 @@
      "name": "Elements of  Intrigue",
      "manager": "sean mullins",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 819.52,
-      "optimal_points": 941.5,
-      "points_left": 121.98,
+      "weeks": 10,
+      "starter_points": 921.48,
+      "optimal_points": 1059.56,
+      "points_left": 138.08,
       "efficiency": 0.87
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 819.52,
-      "pa": 793.96,
-      "avg_pf": 91.06,
-      "all_play": "54-45",
-      "expected_wins": 4.91,
-      "luck": -0.91,
+      "record": "5-5",
+      "games": 10,
+      "pf": 921.48,
+      "pa": 857.76,
+      "avg_pf": 92.15,
+      "all_play": "61-49",
+      "expected_wins": 5.55,
+      "luck": -0.55,
       "close_wins": 0,
       "close_losses": 1,
       "high_score": 123.76,
@@ -1194,47 +1185,46 @@
         "pts": 68.06,
         "opp": "5",
         "opp_pts": 89.1
+       },
+       {
+        "week": 10,
+        "pts": 101.96,
+        "opp": "14",
+        "opp_pts": 63.8
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "14",
-       "opp_name": "Spokane Beers",
-       "opp_avg_pf": 78.95,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "10",
        "opp_name": "The Fe-Brees Brothers",
-       "opp_avg_pf": 87.04,
+       "opp_avg_pf": 88.82,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "6",
        "opp_name": "Ben Jarvis Green Ellis LLP",
-       "opp_avg_pf": 73.85,
+       "opp_avg_pf": 74.67,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "19",
        "opp_name": "Maryland Menace",
-       "opp_avg_pf": 113.85,
+       "opp_avg_pf": 113.05,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "11",
        "opp_name": "Bake N' Shake",
-       "opp_avg_pf": 92.95,
+       "opp_avg_pf": 93.12,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.33
+     "remaining_opp_avg_pf": 92.42
     },
     "19": {
      "team_id": "19",
@@ -1242,21 +1232,21 @@
      "name": "Maryland Menace",
      "manager": "Matt McKenna",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1024.66,
-      "optimal_points": 1102.9,
-      "points_left": 78.24,
-      "efficiency": 0.929
+      "weeks": 10,
+      "starter_points": 1130.52,
+      "optimal_points": 1209.66,
+      "points_left": 79.14,
+      "efficiency": 0.935
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 1024.66,
-      "pa": 748.9,
-      "avg_pf": 113.85,
-      "all_play": "78-21",
-      "expected_wins": 7.09,
-      "luck": -0.09,
+      "record": "7-3",
+      "games": 10,
+      "pf": 1130.52,
+      "pa": 915.02,
+      "avg_pf": 113.05,
+      "all_play": "87-23",
+      "expected_wins": 7.91,
+      "luck": -0.91,
       "close_wins": 0,
       "close_losses": 2,
       "high_score": 144.94,
@@ -1315,47 +1305,46 @@
         "pts": 144.94,
         "opp": "15",
         "opp_pts": 71.3
+       },
+       {
+        "week": 10,
+        "pts": 105.86,
+        "opp": "5",
+        "opp_pts": 166.12
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "5",
-       "opp_name": "Letter of the Day is \"TD\"",
-       "opp_avg_pf": 102.42,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "14",
        "opp_name": "Spokane Beers",
-       "opp_avg_pf": 78.95,
+       "opp_avg_pf": 77.43,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "10",
        "opp_name": "The Fe-Brees Brothers",
-       "opp_avg_pf": 87.04,
+       "opp_avg_pf": 88.82,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "18",
        "opp_name": "Elements of  Intrigue",
-       "opp_avg_pf": 91.06,
+       "opp_avg_pf": 92.15,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "6",
        "opp_name": "Ben Jarvis Green Ellis LLP",
-       "opp_avg_pf": 73.85,
+       "opp_avg_pf": 74.67,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 86.66
+     "remaining_opp_avg_pf": 83.27
     },
     "20": {
      "team_id": "20",
@@ -1363,24 +1352,24 @@
      "name": "Dangerous  Nights Crew",
      "manager": "Sean Wilkinson",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 808.94,
-      "optimal_points": 942.04,
-      "points_left": 133.1,
-      "efficiency": 0.859
+      "weeks": 10,
+      "starter_points": 936.86,
+      "optimal_points": 1085.16,
+      "points_left": 148.3,
+      "efficiency": 0.863
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 808.94,
-      "pa": 767.8,
-      "avg_pf": 89.88,
-      "all_play": "52-47",
-      "expected_wins": 4.73,
-      "luck": -0.73,
+      "record": "5-5",
+      "games": 10,
+      "pf": 936.86,
+      "pa": 860.74,
+      "avg_pf": 93.69,
+      "all_play": "62-48",
+      "expected_wins": 5.64,
+      "luck": -0.64,
       "close_wins": 0,
       "close_losses": 3,
-      "high_score": 107.56,
+      "high_score": 127.92,
       "low_score": 70.5,
       "scores": [
        {
@@ -1436,47 +1425,46 @@
         "pts": 101.28,
         "opp": "6",
         "opp_pts": 52.5
+       },
+       {
+        "week": 10,
+        "pts": 127.92,
+        "opp": "16",
+        "opp_pts": 92.94
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "16",
-       "opp_name": "TEXAS CHUPACABRAS",
-       "opp_avg_pf": 91.33,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "1",
        "opp_name": "EVIL EMPIRE",
-       "opp_avg_pf": 99.36,
+       "opp_avg_pf": 97.77,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "15",
        "opp_name": "DA BEARS FORCE ONE",
-       "opp_avg_pf": 77.87,
+       "opp_avg_pf": 76.63,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "5",
        "opp_name": "Letter of the Day is \"TD\"",
-       "opp_avg_pf": 102.42,
+       "opp_avg_pf": 108.79,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "14",
        "opp_name": "Spokane Beers",
-       "opp_avg_pf": 78.95,
+       "opp_avg_pf": 77.43,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.99
+     "remaining_opp_avg_pf": 90.16
     }
    },
    "weeks": {
@@ -2689,133 +2677,133 @@
     "10": [
      {
       "week": 10,
-      "status": "preevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "1",
-        "name": "EVIL EMPIRE",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "7",
-        "name": "D'Quan's Friend",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "5",
-        "name": "Letter of the Day is \"TD\"",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "19",
-        "name": "Maryland Menace",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "10",
       "teams": [
        {
         "team_id": "6",
         "name": "Ben Jarvis Green Ellis LLP",
-        "points": null,
-        "projected": null
+        "points": 82.12,
+        "projected": 89.83
        },
        {
         "team_id": "10",
         "name": "The Fe-Brees Brothers",
-        "points": null,
-        "projected": null
+        "points": 104.88,
+        "projected": 93.07
        }
       ]
      },
      {
       "week": 10,
-      "status": "preevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "11",
-        "name": "Bake N' Shake",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "15",
-        "name": "DA BEARS FORCE ONE",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "14",
-        "name": "Spokane Beers",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "18",
-        "name": "Elements of  Intrigue",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "20",
       "teams": [
        {
         "team_id": "16",
         "name": "TEXAS CHUPACABRAS",
-        "points": null,
-        "projected": null
+        "points": 92.94,
+        "projected": 97.8
        },
        {
         "team_id": "20",
         "name": "Dangerous  Nights Crew",
-        "points": null,
-        "projected": null
+        "points": 127.92,
+        "projected": 88.41
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "18",
+      "teams": [
+       {
+        "team_id": "18",
+        "name": "Elements of  Intrigue",
+        "points": 101.96,
+        "projected": 87.76
+       },
+       {
+        "team_id": "14",
+        "name": "Spokane Beers",
+        "points": 63.8,
+        "projected": 92.74
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "7",
+      "teams": [
+       {
+        "team_id": "1",
+        "name": "EVIL EMPIRE",
+        "points": 83.4,
+        "projected": 104.84
+       },
+       {
+        "team_id": "7",
+        "name": "D'Quan's Friend",
+        "points": 85.66,
+        "projected": 81.34
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "5",
+      "teams": [
+       {
+        "team_id": "19",
+        "name": "Maryland Menace",
+        "points": 105.86,
+        "projected": 91.64
+       },
+       {
+        "team_id": "5",
+        "name": "Letter of the Day is \"TD\"",
+        "points": 166.12,
+        "projected": 94.67
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "11",
+      "teams": [
+       {
+        "team_id": "15",
+        "name": "DA BEARS FORCE ONE",
+        "points": 65.48,
+        "projected": 69.49
+       },
+       {
+        "team_id": "11",
+        "name": "Bake N' Shake",
+        "points": 94.62,
+        "projected": 106.49
        }
       ]
      }
@@ -4456,6 +4444,128 @@
        "pts": 9.4
       },
       "projected_starters": 98.24
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Bijan Robinson",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 13.7,
+        "proj": 14.91
+       },
+       {
+        "name": "A.J. Brown",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 2.7,
+        "proj": 8.84
+       },
+       {
+        "name": "Kyren Williams",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.2,
+        "proj": 15.31
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 0.5,
+        "proj": 10.15
+       },
+       {
+        "name": "Christian Watson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.7,
+        "proj": 10.0
+       },
+       {
+        "name": "Isaiah Likely",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 18.7,
+        "proj": 7.35
+       },
+       {
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 29.1,
+        "proj": 15.17
+       },
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 10.8,
+        "proj": 16.09
+       },
+       {
+        "name": "Packers D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 1.0,
+        "proj": 7.02
+       }
+      ],
+      "bench": [
+       {
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Mike Evans",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 3.4,
+        "proj": 8.03
+       },
+       {
+        "name": "Germie Bernard",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 1.0,
+        "proj": 5.92
+       },
+       {
+        "name": "Mike Washington Jr.",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 2.7,
+        "proj": 5.52
+       },
+       {
+        "name": "Bam Knight",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 1.9,
+        "proj": 5.11
+       }
+      ],
+      "starter_points": 83.4,
+      "bench_points": 9.0,
+      "optimal_points": 86.3,
+      "points_left": 2.9,
+      "efficiency": 0.966,
+      "top_bench": {
+       "name": "Jakobi Meyers",
+       "pos": "WR",
+       "pts": 3.4
+      },
+      "projected_starters": 104.84
      }
     },
     "5": {
@@ -5556,6 +5666,128 @@
        "pts": 13.7
       },
       "projected_starters": 103.99
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Jahmyr Gibbs",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 37.2,
+        "proj": 19.4
+       },
+       {
+        "name": "Nico Collins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 15.4,
+        "proj": 9.19
+       },
+       {
+        "name": "George Pickens",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 32.5,
+        "proj": 7.53
+       },
+       {
+        "name": "Jadarian Price",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 10.4,
+        "proj": 9.88
+       },
+       {
+        "name": "Parker Washington",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 21.2,
+        "proj": 10.85
+       },
+       {
+        "name": "Sam LaPorta",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.6,
+        "proj": 6.99
+       },
+       {
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 34.42,
+        "proj": 16.55
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 1.4,
+        "proj": 6.63
+       },
+       {
+        "name": "Seahawks D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 12.0,
+        "proj": 7.65
+       }
+      ],
+      "bench": [
+       {
+        "name": "Broncos D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Elijah Mitchell",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Kirk Cousins",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 15.38,
+        "proj": 12.98
+       },
+       {
+        "name": "Audric Estime",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 1.1,
+        "proj": 4.7
+       },
+       {
+        "name": "Mack Hollins",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 4.8,
+        "proj": 6.39
+       },
+       {
+        "name": "Jaydn Ott",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       }
+      ],
+      "starter_points": 166.12,
+      "bench_points": 21.28,
+      "optimal_points": 169.52,
+      "points_left": 3.4,
+      "efficiency": 0.98,
+      "top_bench": {
+       "name": "Kirk Cousins",
+       "pos": "QB",
+       "pts": 15.38
+      },
+      "projected_starters": 94.67
      }
     },
     "6": {
@@ -6656,6 +6888,128 @@
        "pts": 12.76
       },
       "projected_starters": 103.0
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Justin Jefferson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 7.4,
+        "proj": 12.03
+       },
+       {
+        "name": "Quinshon Judkins",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 13.1,
+        "proj": 10.28
+       },
+       {
+        "name": "Kyle Pitts Sr.",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 3.0,
+        "proj": 5.44
+       },
+       {
+        "name": "Rachaad White",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 5.2,
+        "proj": 8.56
+       },
+       {
+        "name": "Kaelon Black",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 12.6,
+        "proj": 6.91
+       },
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.42,
+        "proj": 17.29
+       },
+       {
+        "name": "Ollie Gordon II",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 11.5,
+        "proj": 14.31
+       },
+       {
+        "name": "Jaguars D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 3.0,
+        "proj": 7.57
+       },
+       {
+        "name": "Adonai Mitchell",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 5.9,
+        "proj": 7.44
+       }
+      ],
+      "bench": [
+       {
+        "name": "Saquon Barkley",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 11.3,
+        "proj": 6.79
+       },
+       {
+        "name": "Austin Ekeler",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 5.2,
+        "proj": 6.92
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       }
+      ],
+      "starter_points": 82.12,
+      "bench_points": 16.5,
+      "optimal_points": 88.22,
+      "points_left": 6.1,
+      "efficiency": 0.931,
+      "top_bench": {
+       "name": "Josh Downs",
+       "pos": "WR",
+       "pts": 11.3
+      },
+      "projected_starters": 89.83
      }
     },
     "7": {
@@ -7756,6 +8110,128 @@
        "pts": 25.28
       },
       "projected_starters": 71.45
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "CeeDee Lamb",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 13.2,
+        "proj": 13.17
+       },
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 5.4,
+        "proj": 9.15
+       },
+       {
+        "name": "George Kittle",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 7.4,
+        "proj": 10.21
+       },
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 19.76,
+        "proj": 16.98
+       },
+       {
+        "name": "Braelon Allen",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 4.6,
+        "proj": 5.97
+       },
+       {
+        "name": "Bills D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 14.0,
+        "proj": 7.03
+       },
+       {
+        "name": "Kimani Vidal",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 1.4,
+        "proj": 5.84
+       },
+       {
+        "name": "Xavier Hutchinson",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 11.8,
+        "proj": 6.88
+       },
+       {
+        "name": "Konata Mumpfield",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 8.1,
+        "proj": 6.11
+       }
+      ],
+      "bench": [
+       {
+        "name": "Lamar Jackson",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "J.K. Dobbins",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 31.66,
+        "proj": 20.72
+       },
+       {
+        "name": "Jake Ferguson",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "RJ Harvey",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       }
+      ],
+      "starter_points": 85.66,
+      "bench_points": 31.66,
+      "optimal_points": 97.56,
+      "points_left": 11.9,
+      "efficiency": 0.878,
+      "top_bench": {
+       "name": "Brock Purdy",
+       "pos": "QB",
+       "pts": 31.66
+      },
+      "projected_starters": 81.34
      }
     },
     "10": {
@@ -8856,6 +9332,128 @@
        "pts": 7.0
       },
       "projected_starters": 111.7
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Chase Brown",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 20.3,
+        "proj": 8.7
+       },
+       {
+        "name": "Brock Bowers",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.8,
+        "proj": 9.47
+       },
+       {
+        "name": "Bhayshul Tuten",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 17.3,
+        "proj": 15.2
+       },
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 26.78,
+        "proj": 21.47
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 5.9,
+        "proj": 7.65
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 6.5,
+        "proj": 12.21
+       },
+       {
+        "name": "Caleb Douglas",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 7.1,
+        "proj": 5.42
+       },
+       {
+        "name": "Chiefs D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 13.0,
+        "proj": 6.72
+       },
+       {
+        "name": "Malachi Fields",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.2,
+        "proj": 6.23
+       }
+      ],
+      "bench": [
+       {
+        "name": "Puka Nacua",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Marvin Harrison Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Makai Lemon",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.9,
+        "proj": 5.32
+       },
+       {
+        "name": "Demarcus Robinson",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 4.5
+       }
+      ],
+      "starter_points": 104.88,
+      "bench_points": 0.9,
+      "optimal_points": 104.88,
+      "points_left": 0.0,
+      "efficiency": 1.0,
+      "top_bench": {
+       "name": "Tre Tucker",
+       "pos": "WR",
+       "pts": 0.9
+      },
+      "projected_starters": 93.07
      }
     },
     "11": {
@@ -9956,6 +10554,128 @@
        "pts": 20.34
       },
       "projected_starters": 102.23
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Jaxon Smith-Njigba",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 23.1,
+        "proj": 14.78
+       },
+       {
+        "name": "Travis Etienne Jr.",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 3.4,
+        "proj": 8.19
+       },
+       {
+        "name": "Drake Maye",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 3.02,
+        "proj": 21.97
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 7.0,
+        "proj": 11.56
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 29.2,
+        "proj": 16.44
+       },
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 9.4,
+        "proj": 12.69
+       },
+       {
+        "name": "Tank Dell",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 2.1,
+        "proj": 7.11
+       },
+       {
+        "name": "Darren Waller",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 2.4,
+        "proj": 5.5
+       },
+       {
+        "name": "Colts D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 15.0,
+        "proj": 8.25
+       }
+      ],
+      "bench": [
+       {
+        "name": "Omarion Hampton",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 16.5,
+        "proj": 6.59
+       },
+       {
+        "name": "Colston Loveland",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Bryce Young",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 8.1,
+        "proj": 18.8
+       },
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 10.36,
+        "proj": 5.64
+       },
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Kaleb Johnson",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 4.2,
+        "proj": 5.75
+       }
+      ],
+      "starter_points": 94.62,
+      "bench_points": 39.16,
+      "optimal_points": 121.06,
+      "points_left": 26.44,
+      "efficiency": 0.782,
+      "top_bench": {
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "pts": 16.5
+      },
+      "projected_starters": 106.49
      }
     },
     "14": {
@@ -11056,6 +11776,128 @@
        "pts": 5.8
       },
       "projected_starters": 69.51
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Ja'Marr Chase",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 23.1,
+        "proj": 14.31
+       },
+       {
+        "name": "Drake London",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 10.9,
+        "proj": 9.33
+       },
+       {
+        "name": "Tetairoa McMillan",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.5,
+        "proj": 10.83
+       },
+       {
+        "name": "Tyler Warren",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 0.4,
+        "proj": 5.74
+       },
+       {
+        "name": "Jaylen Warren",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 4.1,
+        "proj": 12.86
+       },
+       {
+        "name": "MarShawn Lloyd",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.9,
+        "proj": 5.47
+       },
+       {
+        "name": "Jalen Coker",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 0.3,
+        "proj": 7.43
+       },
+       {
+        "name": "Ravens D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 2.0,
+        "proj": 9.18
+       },
+       {
+        "name": "Drew Lock",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 15.6,
+        "proj": 17.59
+       }
+      ],
+      "bench": [
+       {
+        "name": "Malik Nabers",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 2.4,
+        "proj": 10.07
+       },
+       {
+        "name": "Jaxson Dart",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 5.5,
+        "proj": 6.45
+       },
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 8.2,
+        "proj": 3.97
+       },
+       {
+        "name": "Kenyon Sadiq",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.3,
+        "proj": 2.26
+       },
+       {
+        "name": "Isiah Pacheco",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       }
+      ],
+      "starter_points": 63.8,
+      "bench_points": 16.4,
+      "optimal_points": 76.8,
+      "points_left": 13.0,
+      "efficiency": 0.831,
+      "top_bench": {
+       "name": "Mark Andrews",
+       "pos": "TE",
+       "pts": 8.2
+      },
+      "projected_starters": 92.74
      }
     },
     "15": {
@@ -12135,6 +12977,121 @@
        "pts": 7.4
       },
       "projected_starters": 73.6
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Amon-Ra St. Brown",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 21.8,
+        "proj": 12.39
+       },
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 9.1,
+        "proj": 5.91
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 0.0,
+        "proj": 6.46
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 11.5,
+        "proj": 6.47
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "slot": "FLEX",
+        "pts": 2.2,
+        "proj": 5.3
+       },
+       {
+        "name": "Tyler Shough",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 9.98,
+        "proj": 17.47
+       },
+       {
+        "name": "Alvin Kamara",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 13.4,
+        "proj": 5.38
+       },
+       {
+        "name": "Cowboys D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": -5.0,
+        "proj": 3.99
+       },
+       {
+        "name": "Corey Kiner",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 2.5,
+        "proj": 6.12
+       }
+      ],
+      "bench": [
+       {
+        "name": "Jeremiyah Love",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Cam Skattebo",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 24.2,
+        "proj": 10.35
+       },
+       {
+        "name": "Rico Dowdle",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 3.4,
+        "proj": 7.34
+       },
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Geno Smith",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 5.92,
+        "proj": 14.79
+       }
+      ],
+      "starter_points": 65.48,
+      "bench_points": 33.52,
+      "optimal_points": 88.38,
+      "points_left": 22.9,
+      "efficiency": 0.741,
+      "top_bench": {
+       "name": "Cam Skattebo",
+       "pos": "RB",
+       "pts": 24.2
+      },
+      "projected_starters": 69.49
      }
     },
     "16": {
@@ -13235,6 +14192,128 @@
        "pts": 4.8
       },
       "projected_starters": 84.27
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Derrick Henry",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 14.0,
+        "proj": 16.93
+       },
+       {
+        "name": "Ashton Jeanty",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 6.4,
+        "proj": 9.4
+       },
+       {
+        "name": "Josh Allen",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 22.34,
+        "proj": 24.3
+       },
+       {
+        "name": "Jameson Williams",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 5.0,
+        "proj": 8.13
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 15.9,
+        "proj": 11.49
+       },
+       {
+        "name": "Dalton Kincaid",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 5.8,
+        "proj": 5.59
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.1,
+        "proj": 5.53
+       },
+       {
+        "name": "DeMario Douglas",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 0.4,
+        "proj": 6.82
+       },
+       {
+        "name": "Rams D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 17.0,
+        "proj": 9.61
+       }
+      ],
+      "bench": [
+       {
+        "name": "Emeka Egbuka",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jaylen Waddle",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "T.J. Hockenson",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Dylan Sampson",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 3.7,
+        "proj": 5.58
+       },
+       {
+        "name": "Devaughn Vele",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 1.4,
+        "proj": 4.32
+       },
+       {
+        "name": "Jordan Watkins",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 4.9,
+        "proj": 2.87
+       }
+      ],
+      "starter_points": 92.94,
+      "bench_points": 10.0,
+      "optimal_points": 97.44,
+      "points_left": 4.5,
+      "efficiency": 0.954,
+      "top_bench": {
+       "name": "Jordan Watkins",
+       "pos": "WR",
+       "pts": 4.9
+      },
+      "projected_starters": 97.8
      }
     },
     "18": {
@@ -14335,6 +15414,128 @@
        "pts": 35.36
       },
       "projected_starters": 101.31
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Jonathan Taylor",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 10.3,
+        "proj": 14.86
+       },
+       {
+        "name": "Javonte Williams",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 6.7,
+        "proj": 12.36
+       },
+       {
+        "name": "Rashee Rice",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 8.2,
+        "proj": 7.82
+       },
+       {
+        "name": "Jayden Daniels",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.76,
+        "proj": 17.67
+       },
+       {
+        "name": "Blake Corum",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 17.9,
+        "proj": 10.21
+       },
+       {
+        "name": "Vikings D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 22.0,
+        "proj": 6.43
+       },
+       {
+        "name": "Chris Rodriguez Jr.",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 0.5,
+        "proj": 6.42
+       },
+       {
+        "name": "Brenton Strange",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 6.9,
+        "proj": 5.79
+       },
+       {
+        "name": "KC Concepcion",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 8.7,
+        "proj": 6.2
+       }
+      ],
+      "bench": [
+       {
+        "name": "D'Andre Swift",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jordyn Tyson",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 8.0,
+        "proj": 5.22
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 20.44,
+        "proj": 18.27
+       },
+       {
+        "name": "Ryan Flournoy",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 13.1,
+        "proj": 4.99
+       },
+       {
+        "name": "Omar Cooper Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 5.74
+       },
+       {
+        "name": "Antonio Williams",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 10.2,
+        "proj": 4.48
+       }
+      ],
+      "starter_points": 101.96,
+      "bench_points": 51.74,
+      "optimal_points": 118.06,
+      "points_left": 16.1,
+      "efficiency": 0.864,
+      "top_bench": {
+       "name": "C.J. Stroud",
+       "pos": "QB",
+       "pts": 20.44
+      },
+      "projected_starters": 87.76
      }
     },
     "19": {
@@ -15435,6 +16636,128 @@
        "pts": 9.4
       },
       "projected_starters": 112.63
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "James Cook III",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 21.7,
+        "proj": 18.88
+       },
+       {
+        "name": "Chris Olave",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 3.0,
+        "proj": 9.65
+       },
+       {
+        "name": "Tee Higgins",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 6.6,
+        "proj": 9.98
+       },
+       {
+        "name": "Joe Burrow",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 33.16,
+        "proj": 19.03
+       },
+       {
+        "name": "Tucker Kraft",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.9,
+        "proj": 5.39
+       },
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 14.3,
+        "proj": 6.28
+       },
+       {
+        "name": "DJ Moore",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 15.4,
+        "proj": 9.56
+       },
+       {
+        "name": "Texans D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 6.0,
+        "proj": 7.92
+       },
+       {
+        "name": "Justice Hill",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.8,
+        "proj": 4.95
+       }
+      ],
+      "bench": [
+       {
+        "name": "Kenneth Walker III",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Luther Burden III",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Juwan Johnson",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 2.8,
+        "proj": 4.39
+       },
+       {
+        "name": "Patriots D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": -2.0,
+        "proj": 4.88
+       },
+       {
+        "name": "Jonah Coleman",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Treylon Burks",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 2.7,
+        "proj": 6.22
+       }
+      ],
+      "starter_points": 105.86,
+      "bench_points": 3.5,
+      "optimal_points": 106.76,
+      "points_left": 0.9,
+      "efficiency": 0.992,
+      "top_bench": {
+       "name": "Juwan Johnson",
+       "pos": "TE",
+       "pts": 2.8
+      },
+      "projected_starters": 91.64
      }
     },
     "20": {
@@ -16535,6 +17858,128 @@
        "pts": 13.3
       },
       "projected_starters": 99.15
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Christian McCaffrey",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 42.3,
+        "proj": 17.14
+       },
+       {
+        "name": "Breece Hall",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 10.8,
+        "proj": 9.88
+       },
+       {
+        "name": "Garrett Wilson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 8.6,
+        "proj": 7.77
+       },
+       {
+        "name": "Patrick Mahomes",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 35.42,
+        "proj": 18.55
+       },
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 3.0,
+        "proj": 7.26
+       },
+       {
+        "name": "Deebo Samuel Sr.",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 22.9,
+        "proj": 8.39
+       },
+       {
+        "name": "Denzel Boston",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.6,
+        "proj": 8.86
+       },
+       {
+        "name": "Browns D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 3.0,
+        "proj": 5.41
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 0.3,
+        "proj": 5.15
+       }
+      ],
+      "bench": [
+       {
+        "name": "Trey McBride",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 3.7,
+        "proj": 6.9
+       },
+       {
+        "name": "Bucky Irving",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Carnell Tate",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 13.4,
+        "proj": 7.26
+       },
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Romeo Doubs",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       }
+      ],
+      "starter_points": 127.92,
+      "bench_points": 17.1,
+      "optimal_points": 143.12,
+      "points_left": 15.2,
+      "efficiency": 0.894,
+      "top_bench": {
+       "name": "DK Metcalf",
+       "pos": "WR",
+       "pts": 13.4
+      },
+      "projected_starters": 88.41
      }
     }
    },
@@ -17914,7 +19359,7 @@
    "league_key": "1117534113",
    "league_name": "Inspire League - Chicago vs MSP*",
    "settings": {
-    "current_week": 10,
+    "current_week": 11,
     "roster_slots": [
      "QB",
      "RB",
@@ -17941,23 +19386,23 @@
      "name": "Mike D",
      "manager": "Michael Dendinger",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1240.6,
-      "optimal_points": 1386.22,
-      "points_left": 145.62,
-      "efficiency": 0.895
+      "weeks": 10,
+      "starter_points": 1365.86,
+      "optimal_points": 1512.48,
+      "points_left": 146.62,
+      "efficiency": 0.903
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 1240.6,
-      "pa": 988.02,
-      "avg_pf": 137.84,
-      "all_play": "72-27",
-      "expected_wins": 6.55,
-      "luck": 0.45,
+      "record": "7-3",
+      "games": 10,
+      "pf": 1365.86,
+      "pa": 1122.9,
+      "avg_pf": 136.59,
+      "all_play": "77-33",
+      "expected_wins": 7.0,
+      "luck": 0.0,
       "close_wins": 0,
-      "close_losses": 0,
+      "close_losses": 1,
       "high_score": 179.62,
       "low_score": 93.7,
       "scores": [
@@ -18014,47 +19459,46 @@
         "pts": 131.86,
         "opp": "12",
         "opp_pts": 90.58
+       },
+       {
+        "week": 10,
+        "pts": 125.26,
+        "opp": "11",
+        "opp_pts": 134.88
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "11",
-       "opp_name": "34=GOAT (Bonnet\u2019s Team)",
-       "opp_avg_pf": 104.17,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "2",
        "opp_name": "Dayton's Daring Team",
-       "opp_avg_pf": 126.16,
+       "opp_avg_pf": 123.09,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "3",
        "opp_name": "Kevin's Top-Notch Team",
-       "opp_avg_pf": 101.48,
+       "opp_avg_pf": 105.89,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "7",
        "opp_name": "Bruno's Best Team",
-       "opp_avg_pf": 113.24,
+       "opp_avg_pf": 108.63,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "8",
        "opp_name": "Fantasy Baseball Team",
-       "opp_avg_pf": 95.28,
+       "opp_avg_pf": 96.56,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 108.07
+     "remaining_opp_avg_pf": 108.54
     },
     "2": {
      "team_id": "2",
@@ -18062,21 +19506,21 @@
      "name": "Dayton's Daring Team",
      "manager": "Dayton Paul",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1135.46,
-      "optimal_points": 1309.12,
-      "points_left": 173.66,
-      "efficiency": 0.867
+      "weeks": 10,
+      "starter_points": 1230.88,
+      "optimal_points": 1434.34,
+      "points_left": 203.46,
+      "efficiency": 0.858
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 1135.46,
-      "pa": 919.96,
-      "avg_pf": 126.16,
-      "all_play": "68-31",
-      "expected_wins": 6.18,
-      "luck": 0.82,
+      "record": "7-3",
+      "games": 10,
+      "pf": 1230.88,
+      "pa": 1066.78,
+      "avg_pf": 123.09,
+      "all_play": "70-40",
+      "expected_wins": 6.36,
+      "luck": 0.64,
       "close_wins": 0,
       "close_losses": 1,
       "high_score": 165.54,
@@ -18135,47 +19579,46 @@
         "pts": 91.2,
         "opp": "8",
         "opp_pts": 98.58
+       },
+       {
+        "week": 10,
+        "pts": 95.42,
+        "opp": "9",
+        "opp_pts": 146.82
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "9",
-       "opp_name": "Jordan's Scary Team",
-       "opp_avg_pf": 131.12,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "1",
        "opp_name": "Mike D",
-       "opp_avg_pf": 137.84,
+       "opp_avg_pf": 136.59,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "10",
        "opp_name": "1st and 11",
-       "opp_avg_pf": 116.93,
+       "opp_avg_pf": 115.7,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "4",
        "opp_name": "Keith's Team",
-       "opp_avg_pf": 107.03,
+       "opp_avg_pf": 110.72,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "5",
        "opp_name": "Go Pack Go",
-       "opp_avg_pf": 119.94,
+       "opp_avg_pf": 116.52,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 122.57
+     "remaining_opp_avg_pf": 119.88
     },
     "3": {
      "team_id": "3",
@@ -18183,21 +19626,21 @@
      "name": "Kevin's Top-Notch Team",
      "manager": "Kevin Zugschwert",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 913.28,
-      "optimal_points": 1065.52,
+      "weeks": 10,
+      "starter_points": 1058.92,
+      "optimal_points": 1211.16,
       "points_left": 152.24,
-      "efficiency": 0.857
+      "efficiency": 0.874
      },
      "derived": {
-      "record": "3-6",
-      "games": 9,
-      "pf": 913.28,
-      "pa": 1097.48,
-      "avg_pf": 101.48,
-      "all_play": "38-61",
-      "expected_wins": 3.45,
-      "luck": -0.45,
+      "record": "4-6",
+      "games": 10,
+      "pf": 1058.92,
+      "pa": 1205.6,
+      "avg_pf": 105.89,
+      "all_play": "47-63",
+      "expected_wins": 4.27,
+      "luck": -0.27,
       "close_wins": 1,
       "close_losses": 0,
       "high_score": 153.9,
@@ -18256,47 +19699,46 @@
         "pts": 81.96,
         "opp": "7",
         "opp_pts": 132.56
+       },
+       {
+        "week": 10,
+        "pts": 145.64,
+        "opp": "8",
+        "opp_pts": 108.12
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "8",
-       "opp_name": "Fantasy Baseball Team",
-       "opp_avg_pf": 95.28,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "9",
        "opp_name": "Jordan's Scary Team",
-       "opp_avg_pf": 131.12,
+       "opp_avg_pf": 132.69,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "1",
        "opp_name": "Mike D",
-       "opp_avg_pf": 137.84,
+       "opp_avg_pf": 136.59,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "10",
        "opp_name": "1st and 11",
-       "opp_avg_pf": 116.93,
+       "opp_avg_pf": 115.7,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "4",
        "opp_name": "Keith's Team",
-       "opp_avg_pf": 107.03,
+       "opp_avg_pf": 110.72,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 117.64
+     "remaining_opp_avg_pf": 123.92
     },
     "4": {
      "team_id": "4",
@@ -18304,21 +19746,21 @@
      "name": "Keith's Team",
      "manager": "Keith Quiring",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 963.28,
-      "optimal_points": 1121.72,
-      "points_left": 158.44,
-      "efficiency": 0.859
+      "weeks": 10,
+      "starter_points": 1107.2,
+      "optimal_points": 1272.04,
+      "points_left": 164.84,
+      "efficiency": 0.87
      },
      "derived": {
-      "record": "3-6",
-      "games": 9,
-      "pf": 963.28,
-      "pa": 999.7,
-      "avg_pf": 107.03,
-      "all_play": "34-65",
-      "expected_wins": 3.09,
-      "luck": -0.09,
+      "record": "4-6",
+      "games": 10,
+      "pf": 1107.2,
+      "pa": 1085.44,
+      "avg_pf": 110.72,
+      "all_play": "42-68",
+      "expected_wins": 3.82,
+      "luck": 0.18,
       "close_wins": 0,
       "close_losses": 0,
       "high_score": 151.06,
@@ -18377,47 +19819,46 @@
         "pts": 76.12,
         "opp": "6",
         "opp_pts": 101.78
+       },
+       {
+        "week": 10,
+        "pts": 143.92,
+        "opp": "5",
+        "opp_pts": 85.74
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "5",
-       "opp_name": "Go Pack Go",
-       "opp_avg_pf": 119.94,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "12",
        "opp_name": "Nate's Nifty Team",
-       "opp_avg_pf": 104.45,
+       "opp_avg_pf": 107.43,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "11",
        "opp_name": "34=GOAT (Bonnet\u2019s Team)",
-       "opp_avg_pf": 104.17,
+       "opp_avg_pf": 107.24,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "2",
        "opp_name": "Dayton's Daring Team",
-       "opp_avg_pf": 126.16,
+       "opp_avg_pf": 123.09,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "3",
        "opp_name": "Kevin's Top-Notch Team",
-       "opp_avg_pf": 101.48,
+       "opp_avg_pf": 105.89,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 111.24
+     "remaining_opp_avg_pf": 110.91
     },
     "5": {
      "team_id": "5",
@@ -18425,21 +19866,21 @@
      "name": "Go Pack Go",
      "manager": "Krenar Hazari",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1079.5,
-      "optimal_points": 1202.02,
-      "points_left": 122.52,
-      "efficiency": 0.898
+      "weeks": 10,
+      "starter_points": 1165.24,
+      "optimal_points": 1292.76,
+      "points_left": 127.52,
+      "efficiency": 0.901
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 1079.5,
-      "pa": 937.06,
-      "avg_pf": 119.94,
-      "all_play": "53-46",
-      "expected_wins": 4.82,
-      "luck": 2.18,
+      "record": "7-3",
+      "games": 10,
+      "pf": 1165.24,
+      "pa": 1080.98,
+      "avg_pf": 116.52,
+      "all_play": "54-56",
+      "expected_wins": 4.91,
+      "luck": 2.09,
       "close_wins": 2,
       "close_losses": 0,
       "high_score": 148.8,
@@ -18498,47 +19939,46 @@
         "pts": 146.16,
         "opp": "10",
         "opp_pts": 131.44
+       },
+       {
+        "week": 10,
+        "pts": 85.74,
+        "opp": "4",
+        "opp_pts": 143.92
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "4",
-       "opp_name": "Keith's Team",
-       "opp_avg_pf": 107.03,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "6",
        "opp_name": "Team Hansen",
-       "opp_avg_pf": 113.23,
+       "opp_avg_pf": 116.93,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "12",
        "opp_name": "Nate's Nifty Team",
-       "opp_avg_pf": 104.45,
+       "opp_avg_pf": 107.43,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "11",
        "opp_name": "34=GOAT (Bonnet\u2019s Team)",
-       "opp_avg_pf": 104.17,
+       "opp_avg_pf": 107.24,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "2",
        "opp_name": "Dayton's Daring Team",
-       "opp_avg_pf": 126.16,
+       "opp_avg_pf": 123.09,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 111.01
+     "remaining_opp_avg_pf": 113.67
     },
     "6": {
      "team_id": "6",
@@ -18546,24 +19986,24 @@
      "name": "Team Hansen",
      "manager": "Nick Hansen",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1019.06,
-      "optimal_points": 1161.0,
-      "points_left": 141.94,
-      "efficiency": 0.878
+      "weeks": 10,
+      "starter_points": 1169.28,
+      "optimal_points": 1320.12,
+      "points_left": 150.84,
+      "efficiency": 0.886
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 1019.06,
-      "pa": 1104.3,
-      "avg_pf": 113.23,
-      "all_play": "54-45",
-      "expected_wins": 4.91,
+      "record": "5-5",
+      "games": 10,
+      "pf": 1169.28,
+      "pa": 1171.44,
+      "avg_pf": 116.93,
+      "all_play": "65-45",
+      "expected_wins": 5.91,
       "luck": -0.91,
       "close_wins": 0,
       "close_losses": 0,
-      "high_score": 149.54,
+      "high_score": 150.22,
       "low_score": 71.6,
       "scores": [
        {
@@ -18619,47 +20059,46 @@
         "pts": 101.78,
         "opp": "4",
         "opp_pts": 76.12
+       },
+       {
+        "week": 10,
+        "pts": 150.22,
+        "opp": "7",
+        "opp_pts": 67.14
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "7",
-       "opp_name": "Bruno's Best Team",
-       "opp_avg_pf": 113.24,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "5",
        "opp_name": "Go Pack Go",
-       "opp_avg_pf": 119.94,
+       "opp_avg_pf": 116.52,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "8",
        "opp_name": "Fantasy Baseball Team",
-       "opp_avg_pf": 95.28,
+       "opp_avg_pf": 96.56,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "12",
        "opp_name": "Nate's Nifty Team",
-       "opp_avg_pf": 104.45,
+       "opp_avg_pf": 107.43,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "9",
        "opp_name": "Jordan's Scary Team",
-       "opp_avg_pf": 131.12,
+       "opp_avg_pf": 132.69,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 112.81
+     "remaining_opp_avg_pf": 113.3
     },
     "7": {
      "team_id": "7",
@@ -18667,25 +20106,25 @@
      "name": "Bruno's Best Team",
      "manager": "Bruno Prentice",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1019.2,
-      "optimal_points": 1247.0,
-      "points_left": 227.8,
-      "efficiency": 0.817
+      "weeks": 10,
+      "starter_points": 1086.34,
+      "optimal_points": 1351.74,
+      "points_left": 265.4,
+      "efficiency": 0.804
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 1019.2,
-      "pa": 1057.48,
-      "avg_pf": 113.24,
-      "all_play": "50-49",
+      "record": "4-6",
+      "games": 10,
+      "pf": 1086.34,
+      "pa": 1207.7,
+      "avg_pf": 108.63,
+      "all_play": "50-60",
       "expected_wins": 4.55,
       "luck": -0.55,
       "close_wins": 0,
       "close_losses": 1,
       "high_score": 137.42,
-      "low_score": 75.24,
+      "low_score": 67.14,
       "scores": [
        {
         "week": 1,
@@ -18740,47 +20179,46 @@
         "pts": 132.56,
         "opp": "3",
         "opp_pts": 81.96
+       },
+       {
+        "week": 10,
+        "pts": 67.14,
+        "opp": "6",
+        "opp_pts": 150.22
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "6",
-       "opp_name": "Team Hansen",
-       "opp_avg_pf": 113.23,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "8",
        "opp_name": "Fantasy Baseball Team",
-       "opp_avg_pf": 95.28,
+       "opp_avg_pf": 96.56,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "9",
        "opp_name": "Jordan's Scary Team",
-       "opp_avg_pf": 131.12,
+       "opp_avg_pf": 132.69,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "1",
        "opp_name": "Mike D",
-       "opp_avg_pf": 137.84,
+       "opp_avg_pf": 136.59,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "10",
        "opp_name": "1st and 11",
-       "opp_avg_pf": 116.93,
+       "opp_avg_pf": 115.7,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 118.88
+     "remaining_opp_avg_pf": 120.39
     },
     "8": {
      "team_id": "8",
@@ -18788,21 +20226,21 @@
      "name": "Fantasy Baseball Team",
      "manager": "Eric Mathis",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 857.48,
-      "optimal_points": 1049.86,
-      "points_left": 192.38,
-      "efficiency": 0.817
+      "weeks": 10,
+      "starter_points": 965.6,
+      "optimal_points": 1196.38,
+      "points_left": 230.78,
+      "efficiency": 0.807
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 857.48,
-      "pa": 995.82,
-      "avg_pf": 95.28,
-      "all_play": "31-68",
-      "expected_wins": 2.82,
-      "luck": 1.18,
+      "record": "4-6",
+      "games": 10,
+      "pf": 965.6,
+      "pa": 1141.46,
+      "avg_pf": 96.56,
+      "all_play": "35-75",
+      "expected_wins": 3.18,
+      "luck": 0.82,
       "close_wins": 1,
       "close_losses": 1,
       "high_score": 132.76,
@@ -18861,47 +20299,46 @@
         "pts": 98.58,
         "opp": "2",
         "opp_pts": 91.2
+       },
+       {
+        "week": 10,
+        "pts": 108.12,
+        "opp": "3",
+        "opp_pts": 145.64
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "3",
-       "opp_name": "Kevin's Top-Notch Team",
-       "opp_avg_pf": 101.48,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "7",
        "opp_name": "Bruno's Best Team",
-       "opp_avg_pf": 113.24,
+       "opp_avg_pf": 108.63,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "6",
        "opp_name": "Team Hansen",
-       "opp_avg_pf": 113.23,
+       "opp_avg_pf": 116.93,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "9",
        "opp_name": "Jordan's Scary Team",
-       "opp_avg_pf": 131.12,
+       "opp_avg_pf": 132.69,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "1",
        "opp_name": "Mike D",
-       "opp_avg_pf": 137.84,
+       "opp_avg_pf": 136.59,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 119.38
+     "remaining_opp_avg_pf": 123.71
     },
     "9": {
      "team_id": "9",
@@ -18909,21 +20346,21 @@
      "name": "Jordan's Scary Team",
      "manager": "Jordan Miller",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1180.06,
-      "optimal_points": 1321.9,
-      "points_left": 141.84,
-      "efficiency": 0.893
+      "weeks": 10,
+      "starter_points": 1326.88,
+      "optimal_points": 1484.02,
+      "points_left": 157.14,
+      "efficiency": 0.894
      },
      "derived": {
-      "record": "7-2",
-      "games": 9,
-      "pf": 1180.06,
-      "pa": 942.68,
-      "avg_pf": 131.12,
-      "all_play": "65-34",
-      "expected_wins": 5.91,
-      "luck": 1.09,
+      "record": "8-2",
+      "games": 10,
+      "pf": 1326.88,
+      "pa": 1038.1,
+      "avg_pf": 132.69,
+      "all_play": "75-35",
+      "expected_wins": 6.82,
+      "luck": 1.18,
       "close_wins": 0,
       "close_losses": 1,
       "high_score": 171.44,
@@ -18982,47 +20419,46 @@
         "pts": 131.28,
         "opp": "11",
         "opp_pts": 93.08
+       },
+       {
+        "week": 10,
+        "pts": 146.82,
+        "opp": "2",
+        "opp_pts": 95.42
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "2",
-       "opp_name": "Dayton's Daring Team",
-       "opp_avg_pf": 126.16,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "3",
        "opp_name": "Kevin's Top-Notch Team",
-       "opp_avg_pf": 101.48,
+       "opp_avg_pf": 105.89,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "7",
        "opp_name": "Bruno's Best Team",
-       "opp_avg_pf": 113.24,
+       "opp_avg_pf": 108.63,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "8",
        "opp_name": "Fantasy Baseball Team",
-       "opp_avg_pf": 95.28,
+       "opp_avg_pf": 96.56,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "6",
        "opp_name": "Team Hansen",
-       "opp_avg_pf": 113.23,
+       "opp_avg_pf": 116.93,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 109.88
+     "remaining_opp_avg_pf": 107.0
     },
     "10": {
      "team_id": "10",
@@ -19030,21 +20466,21 @@
      "name": "1st and 11",
      "manager": "sean mullins",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 1052.38,
-      "optimal_points": 1206.2,
-      "points_left": 153.82,
-      "efficiency": 0.872
+      "weeks": 10,
+      "starter_points": 1157.04,
+      "optimal_points": 1351.56,
+      "points_left": 194.52,
+      "efficiency": 0.856
      },
      "derived": {
-      "record": "4-5",
-      "games": 9,
-      "pf": 1052.38,
-      "pa": 1054.12,
-      "avg_pf": 116.93,
-      "all_play": "50-49",
-      "expected_wins": 4.55,
-      "luck": -0.55,
+      "record": "4-6",
+      "games": 10,
+      "pf": 1157.04,
+      "pa": 1188.38,
+      "avg_pf": 115.7,
+      "all_play": "53-57",
+      "expected_wins": 4.82,
+      "luck": -0.82,
       "close_wins": 1,
       "close_losses": 0,
       "high_score": 137.08,
@@ -19103,47 +20539,46 @@
         "pts": 131.44,
         "opp": "5",
         "opp_pts": 146.16
+       },
+       {
+        "week": 10,
+        "pts": 104.66,
+        "opp": "12",
+        "opp_pts": 134.26
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "12",
-       "opp_name": "Nate's Nifty Team",
-       "opp_avg_pf": 104.45,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "11",
        "opp_name": "34=GOAT (Bonnet\u2019s Team)",
-       "opp_avg_pf": 104.17,
+       "opp_avg_pf": 107.24,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "2",
        "opp_name": "Dayton's Daring Team",
-       "opp_avg_pf": 126.16,
+       "opp_avg_pf": 123.09,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "3",
        "opp_name": "Kevin's Top-Notch Team",
-       "opp_avg_pf": 101.48,
+       "opp_avg_pf": 105.89,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "7",
        "opp_name": "Bruno's Best Team",
-       "opp_avg_pf": 113.24,
+       "opp_avg_pf": 108.63,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 109.9
+     "remaining_opp_avg_pf": 111.21
     },
     "11": {
      "team_id": "11",
@@ -19151,24 +20586,24 @@
      "name": "34=GOAT (Bonnet\u2019s Team)",
      "manager": "Jason Bonnet",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 937.56,
-      "optimal_points": 1076.94,
-      "points_left": 139.38,
-      "efficiency": 0.871
+      "weeks": 10,
+      "starter_points": 1072.44,
+      "optimal_points": 1232.12,
+      "points_left": 159.68,
+      "efficiency": 0.87
      },
      "derived": {
-      "record": "1-8",
-      "games": 9,
-      "pf": 937.56,
-      "pa": 1165.7,
-      "avg_pf": 104.17,
-      "all_play": "43-56",
-      "expected_wins": 3.91,
-      "luck": -2.91,
-      "close_wins": 0,
+      "record": "2-8",
+      "games": 10,
+      "pf": 1072.44,
+      "pa": 1290.96,
+      "avg_pf": 107.24,
+      "all_play": "50-60",
+      "expected_wins": 4.55,
+      "luck": -2.55,
+      "close_wins": 1,
       "close_losses": 1,
-      "high_score": 133.8,
+      "high_score": 134.88,
       "low_score": 84.0,
       "scores": [
        {
@@ -19224,47 +20659,46 @@
         "pts": 93.08,
         "opp": "9",
         "opp_pts": 131.28
+       },
+       {
+        "week": 10,
+        "pts": 134.88,
+        "opp": "1",
+        "opp_pts": 125.26
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "1",
-       "opp_name": "Mike D",
-       "opp_avg_pf": 137.84,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "10",
        "opp_name": "1st and 11",
-       "opp_avg_pf": 116.93,
+       "opp_avg_pf": 115.7,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "4",
        "opp_name": "Keith's Team",
-       "opp_avg_pf": 107.03,
+       "opp_avg_pf": 110.72,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "5",
        "opp_name": "Go Pack Go",
-       "opp_avg_pf": 119.94,
+       "opp_avg_pf": 116.52,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "12",
        "opp_name": "Nate's Nifty Team",
-       "opp_avg_pf": 104.45,
+       "opp_avg_pf": 107.43,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 117.24
+     "remaining_opp_avg_pf": 112.59
     },
     "12": {
      "team_id": "12",
@@ -19272,24 +20706,24 @@
      "name": "Nate's Nifty Team",
      "manager": "Nate Stephenson",
      "lineup_season": {
-      "weeks": 9,
-      "starter_points": 940.02,
-      "optimal_points": 1080.08,
-      "points_left": 140.06,
-      "efficiency": 0.87
+      "weeks": 10,
+      "starter_points": 1074.28,
+      "optimal_points": 1216.84,
+      "points_left": 142.56,
+      "efficiency": 0.883
      },
      "derived": {
-      "record": "3-6",
-      "games": 9,
-      "pf": 940.02,
-      "pa": 1075.56,
-      "avg_pf": 104.45,
-      "all_play": "36-63",
-      "expected_wins": 3.27,
-      "luck": -0.27,
+      "record": "4-6",
+      "games": 10,
+      "pf": 1074.28,
+      "pa": 1180.22,
+      "avg_pf": 107.43,
+      "all_play": "42-68",
+      "expected_wins": 3.82,
+      "luck": 0.18,
       "close_wins": 0,
       "close_losses": 0,
-      "high_score": 134.08,
+      "high_score": 134.26,
       "low_score": 68.22,
       "scores": [
        {
@@ -19345,47 +20779,46 @@
         "pts": 90.58,
         "opp": "1",
         "opp_pts": 131.86
+       },
+       {
+        "week": 10,
+        "pts": 134.26,
+        "opp": "10",
+        "opp_pts": 104.66
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 10,
-       "opp_team_id": "10",
-       "opp_name": "1st and 11",
-       "opp_avg_pf": 116.93,
-       "is_playoffs": false
-      },
-      {
        "week": 11,
        "opp_team_id": "4",
        "opp_name": "Keith's Team",
-       "opp_avg_pf": 107.03,
+       "opp_avg_pf": 110.72,
        "is_playoffs": false
       },
       {
        "week": 12,
        "opp_team_id": "5",
        "opp_name": "Go Pack Go",
-       "opp_avg_pf": 119.94,
+       "opp_avg_pf": 116.52,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "6",
        "opp_name": "Team Hansen",
-       "opp_avg_pf": 113.23,
+       "opp_avg_pf": 116.93,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "11",
        "opp_name": "34=GOAT (Bonnet\u2019s Team)",
-       "opp_avg_pf": 104.17,
+       "opp_avg_pf": 107.24,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 112.26
+     "remaining_opp_avg_pf": 112.85
     }
    },
    "weeks": {
@@ -20598,133 +22031,133 @@
     "10": [
      {
       "week": 10,
-      "status": "preevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "1",
-        "name": "Mike D",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "11",
-        "name": "34=GOAT (Bonnet\u2019s Team)",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "2",
-        "name": "Dayton's Daring Team",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "9",
-        "name": "Jordan's Scary Team",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "3",
-        "name": "Kevin's Top-Notch Team",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "8",
-        "name": "Fantasy Baseball Team",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
-      "teams": [
-       {
-        "team_id": "4",
-        "name": "Keith's Team",
-        "points": null,
-        "projected": null
-       },
-       {
-        "team_id": "5",
-        "name": "Go Pack Go",
-        "points": null,
-        "projected": null
-       }
-      ]
-     },
-     {
-      "week": 10,
-      "status": "preevent",
-      "is_playoffs": false,
-      "is_consolation": false,
-      "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "6",
       "teams": [
        {
         "team_id": "6",
         "name": "Team Hansen",
-        "points": null,
-        "projected": null
+        "points": 150.22,
+        "projected": 122.58
        },
        {
         "team_id": "7",
         "name": "Bruno's Best Team",
-        "points": null,
-        "projected": null
+        "points": 67.14,
+        "projected": 113.71
        }
       ]
      },
      {
       "week": 10,
-      "status": "preevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "4",
       "teams": [
        {
-        "team_id": "10",
-        "name": "1st and 11",
-        "points": null,
-        "projected": null
+        "team_id": "5",
+        "name": "Go Pack Go",
+        "points": 85.74,
+        "projected": 86.95
        },
+       {
+        "team_id": "4",
+        "name": "Keith's Team",
+        "points": 143.92,
+        "projected": 109.66
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "3",
+      "teams": [
+       {
+        "team_id": "8",
+        "name": "Fantasy Baseball Team",
+        "points": 108.12,
+        "projected": 102.02
+       },
+       {
+        "team_id": "3",
+        "name": "Kevin's Top-Notch Team",
+        "points": 145.64,
+        "projected": 108.22
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "12",
+      "teams": [
        {
         "team_id": "12",
         "name": "Nate's Nifty Team",
-        "points": null,
-        "projected": null
+        "points": 134.26,
+        "projected": 113.51
+       },
+       {
+        "team_id": "10",
+        "name": "1st and 11",
+        "points": 104.66,
+        "projected": 112.12
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "9",
+      "teams": [
+       {
+        "team_id": "9",
+        "name": "Jordan's Scary Team",
+        "points": 146.82,
+        "projected": 139.74
+       },
+       {
+        "team_id": "2",
+        "name": "Dayton's Daring Team",
+        "points": 95.42,
+        "projected": 115.93
+       }
+      ]
+     },
+     {
+      "week": 10,
+      "status": "postevent",
+      "is_playoffs": false,
+      "is_consolation": false,
+      "is_tied": false,
+      "winner_team_id": "11",
+      "teams": [
+       {
+        "team_id": "11",
+        "name": "34=GOAT (Bonnet\u2019s Team)",
+        "points": 134.88,
+        "projected": 114.87
+       },
+       {
+        "team_id": "1",
+        "name": "Mike D",
+        "points": 125.26,
+        "projected": 127.29
        }
       ]
      }
@@ -22428,6 +23861,135 @@
        "pts": 19.0
       },
       "projected_starters": 127.1
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Christian McCaffrey",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 46.3,
+        "proj": 21.76
+       },
+       {
+        "name": "Trey McBride",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 8.7,
+        "proj": 14.1
+       },
+       {
+        "name": "Tee Higgins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.6,
+        "proj": 16.15
+       },
+       {
+        "name": "Jayden Daniels",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.76,
+        "proj": 17.67
+       },
+       {
+        "name": "Jaylen Warren",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 9.1,
+        "proj": 15.53
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 12.0,
+        "proj": 17.17
+       },
+       {
+        "name": "Dalton Kincaid",
+        "pos": "TE",
+        "slot": "FLEX",
+        "pts": 7.8,
+        "proj": 8.85
+       },
+       {
+        "name": "Harrison Butker",
+        "pos": "K",
+        "slot": "K",
+        "pts": 5.0,
+        "proj": 9.31
+       },
+       {
+        "name": "Commanders D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 4.0,
+        "proj": 6.75
+       }
+      ],
+      "bench": [
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 1.5,
+        "proj": 13.42
+       },
+       {
+        "name": "Wan'Dale Robinson",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 4.0,
+        "proj": 10.34
+       },
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 19.76,
+        "proj": 16.98
+       },
+       {
+        "name": "Tyjae Spears",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 3.8,
+        "proj": 6.1
+       },
+       {
+        "name": "Justice Hill",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 8.8,
+        "proj": 7.36
+       },
+       {
+        "name": "49ers D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": -1.0,
+        "proj": 4.49
+       },
+       {
+        "name": "Jake Bates",
+        "pos": "K",
+        "slot": "BEN",
+        "pts": 5.0,
+        "proj": 9.32
+       }
+      ],
+      "starter_points": 125.26,
+      "bench_points": 41.86,
+      "optimal_points": 126.26,
+      "points_left": 1.0,
+      "efficiency": 0.992,
+      "top_bench": {
+       "name": "Matthew Stafford",
+       "pos": "QB",
+       "pts": 19.76
+      },
+      "projected_starters": 127.29
      }
     },
     "2": {
@@ -23584,6 +25146,135 @@
        "pts": 20.34
       },
       "projected_starters": 136.75
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Jaxon Smith-Njigba",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 31.1,
+        "proj": 22.29
+       },
+       {
+        "name": "Brock Bowers",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 3.8,
+        "proj": 15.41
+       },
+       {
+        "name": "Malik Nabers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 7.4,
+        "proj": 16.07
+       },
+       {
+        "name": "Christian Watson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.7,
+        "proj": 15.67
+       },
+       {
+        "name": "Rico Dowdle",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 5.4,
+        "proj": 9.76
+       },
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.42,
+        "proj": 17.29
+       },
+       {
+        "name": "Patriots D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": -2.0,
+        "proj": 3.52
+       },
+       {
+        "name": "Kaelon Black",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 14.6,
+        "proj": 7.59
+       },
+       {
+        "name": "Matt Gay",
+        "pos": "K",
+        "slot": "K",
+        "pts": 8.0,
+        "proj": 8.33
+       }
+      ],
+      "bench": [
+       {
+        "name": "D'Andre Swift",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "David Montgomery",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Parker Washington",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 28.2,
+        "proj": 14.41
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 15.3,
+        "proj": 10.42
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 4.2,
+        "proj": 8.77
+       },
+       {
+        "name": "Bryce Young",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 8.1,
+        "proj": 18.8
+       },
+       {
+        "name": "Kimani Vidal",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 3.4,
+        "proj": 7.79
+       }
+      ],
+      "starter_points": 95.42,
+      "bench_points": 59.2,
+      "optimal_points": 125.22,
+      "points_left": 29.8,
+      "efficiency": 0.762,
+      "top_bench": {
+       "name": "Parker Washington",
+       "pos": "WR",
+       "pts": 28.2
+      },
+      "projected_starters": 115.93
      }
     },
     "3": {
@@ -24747,6 +26438,135 @@
        "pts": 11.8
       },
       "projected_starters": 115.8
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Justin Jefferson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 16.4,
+        "proj": 18.79
+       },
+       {
+        "name": "DJ Moore",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 19.4,
+        "proj": 13.34
+       },
+       {
+        "name": "Blake Corum",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 20.9,
+        "proj": 11.58
+       },
+       {
+        "name": "Isaiah Likely",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 27.7,
+        "proj": 12.21
+       },
+       {
+        "name": "Will Reichard",
+        "pos": "K",
+        "slot": "K",
+        "pts": 12.0,
+        "proj": 9.41
+       },
+       {
+        "name": "Ollie Gordon II",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 15.5,
+        "proj": 15.67
+       },
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 13.36,
+        "proj": 8.93
+       },
+       {
+        "name": "Bengals D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 5.0,
+        "proj": 5.31
+       },
+       {
+        "name": "Kirk Cousins",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 15.38,
+        "proj": 12.98
+       }
+      ],
+      "bench": [
+       {
+        "name": "Saquon Barkley",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Colston Loveland",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Mike Evans",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Braelon Allen",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 5.6,
+        "proj": 7.86
+       },
+       {
+        "name": "Broncos D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Antonio Williams",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 12.2,
+        "proj": 7.79
+       }
+      ],
+      "starter_points": 145.64,
+      "bench_points": 17.8,
+      "optimal_points": 145.64,
+      "points_left": 0.0,
+      "efficiency": 1.0,
+      "top_bench": {
+       "name": "Antonio Williams",
+       "pos": "WR",
+       "pts": 12.2
+      },
+      "projected_starters": 108.22
      }
     },
     "4": {
@@ -25903,6 +27723,135 @@
        "pts": 20.5
       },
       "projected_starters": 117.94
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Jahmyr Gibbs",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 44.2,
+        "proj": 23.86
+       },
+       {
+        "name": "Ashton Jeanty",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 10.4,
+        "proj": 13.59
+       },
+       {
+        "name": "George Pickens",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 43.5,
+        "proj": 12.25
+       },
+       {
+        "name": "Kyle Pitts Sr.",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 7.0,
+        "proj": 9.17
+       },
+       {
+        "name": "Tank Dell",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 5.1,
+        "proj": 10.19
+       },
+       {
+        "name": "Rams D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 16.0,
+        "proj": 8.27
+       },
+       {
+        "name": "Dominic Zvada",
+        "pos": "K",
+        "slot": "K",
+        "pts": 2.0,
+        "proj": 8.22
+       },
+       {
+        "name": "Mack Hollins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 9.8,
+        "proj": 9.32
+       },
+       {
+        "name": "Geno Smith",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 5.92,
+        "proj": 14.79
+       }
+      ],
+      "bench": [
+       {
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Michael Pittman Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 9.82
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 5.9,
+        "proj": 9.23
+       },
+       {
+        "name": "Pat Freiermuth",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 11.5,
+        "proj": 8.77
+       },
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Giants D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 5.0,
+        "proj": 5.36
+       }
+      ],
+      "starter_points": 143.92,
+      "bench_points": 22.4,
+      "optimal_points": 150.32,
+      "points_left": 6.4,
+      "efficiency": 0.957,
+      "top_bench": {
+       "name": "Pat Freiermuth",
+       "pos": "TE",
+       "pts": 11.5
+      },
+      "projected_starters": 109.66
      }
     },
     "5": {
@@ -27066,6 +29015,135 @@
        "pts": 36.18
       },
       "projected_starters": 126.39
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Josh Allen",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 22.34,
+        "proj": 24.3
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 12.5,
+        "proj": 8.57
+       },
+       {
+        "name": "Ryan Flournoy",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 19.1,
+        "proj": 8.37
+       },
+       {
+        "name": "Packers D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 4.0,
+        "proj": 5.53
+       },
+       {
+        "name": "Dalton Schultz",
+        "pos": "TE",
+        "slot": "FLEX",
+        "pts": 8.1,
+        "proj": 7.53
+       },
+       {
+        "name": "Tutu Atwell",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.1,
+        "proj": 8.9
+       },
+       {
+        "name": "Charlie Smyth",
+        "pos": "K",
+        "slot": "K",
+        "pts": 7.0,
+        "proj": 8.76
+       },
+       {
+        "name": "Kaleb Johnson",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 4.2,
+        "proj": 6.53
+       },
+       {
+        "name": "Darren Waller",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 4.4,
+        "proj": 8.46
+       }
+      ],
+      "bench": [
+       {
+        "name": "Kenneth Walker III",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Bucky Irving",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jaylen Waddle",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Marvin Harrison Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 10.8,
+        "proj": 16.09
+       },
+       {
+        "name": "Chiefs D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 9.0,
+        "proj": 4.89
+       },
+       {
+        "name": "Cairo Santos",
+        "pos": "K",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       }
+      ],
+      "starter_points": 85.74,
+      "bench_points": 19.8,
+      "optimal_points": 90.74,
+      "points_left": 5.0,
+      "efficiency": 0.945,
+      "top_bench": {
+       "name": "Jordan Love",
+       "pos": "QB",
+       "pts": 10.8
+      },
+      "projected_starters": 86.95
      }
     },
     "6": {
@@ -28222,6 +30300,135 @@
        "pts": 17.0
       },
       "projected_starters": 123.35
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Jonathan Taylor",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 12.3,
+        "proj": 17.85
+       },
+       {
+        "name": "Nico Collins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 24.4,
+        "proj": 13.73
+       },
+       {
+        "name": "Rashee Rice",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 13.2,
+        "proj": 13.35
+       },
+       {
+        "name": "Bhayshul Tuten",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 20.3,
+        "proj": 17.26
+       },
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 16.1,
+        "proj": 10.09
+       },
+       {
+        "name": "Patrick Mahomes",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 35.42,
+        "proj": 18.55
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 7.5,
+        "proj": 14.19
+       },
+       {
+        "name": "Tyler Bass",
+        "pos": "K",
+        "slot": "K",
+        "pts": 7.0,
+        "proj": 11.23
+       },
+       {
+        "name": "Colts D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 14.0,
+        "proj": 6.33
+       }
+      ],
+      "bench": [
+       {
+        "name": "Emeka Egbuka",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Alvin Kamara",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 16.4,
+        "proj": 8.11
+       },
+       {
+        "name": "Devaughn Vele",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 3.4,
+        "proj": 7.38
+       },
+       {
+        "name": "Chris Godwin Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Caleb Douglas",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 10.1,
+        "proj": 8.71
+       },
+       {
+        "name": "Corey Kiner",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 2.5,
+        "proj": 6.83
+       },
+       {
+        "name": "Konata Mumpfield",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 11.1,
+        "proj": 8.84
+       }
+      ],
+      "starter_points": 150.22,
+      "bench_points": 43.5,
+      "optimal_points": 159.12,
+      "points_left": 8.9,
+      "efficiency": 0.944,
+      "top_bench": {
+       "name": "Alvin Kamara",
+       "pos": "RB",
+       "pts": 16.4
+      },
+      "projected_starters": 122.58
      }
     },
     "7": {
@@ -29385,6 +31592,135 @@
        "pts": 18.26
       },
       "projected_starters": 111.55
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Bijan Robinson",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 17.7,
+        "proj": 18.63
+       },
+       {
+        "name": "Chris Olave",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.0,
+        "proj": 15.78
+       },
+       {
+        "name": "Jameson Williams",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 9.0,
+        "proj": 12.09
+       },
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 5.0,
+        "proj": 11.55
+       },
+       {
+        "name": "Brandon Aubrey",
+        "pos": "K",
+        "slot": "K",
+        "pts": 12.0,
+        "proj": 10.47
+       },
+       {
+        "name": "Steelers D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": -7.0,
+        "proj": 5.46
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 1.4,
+        "proj": 8.73
+       },
+       {
+        "name": "Denzel Boston",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 2.6,
+        "proj": 12.73
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.44,
+        "proj": 18.27
+       }
+      ],
+      "bench": [
+       {
+        "name": "Jeremiyah Love",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Drake Maye",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 3.02,
+        "proj": 21.97
+       },
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 20.3,
+        "proj": 10.27
+       },
+       {
+        "name": "J.K. Dobbins",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 7.5,
+        "proj": 10.17
+       },
+       {
+        "name": "Deebo Samuel Sr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 25.9,
+        "proj": 11.7
+       },
+       {
+        "name": "Juwan Johnson",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 4.8,
+        "proj": 7.28
+       }
+      ],
+      "starter_points": 67.14,
+      "bench_points": 61.52,
+      "optimal_points": 104.74,
+      "points_left": 37.6,
+      "efficiency": 0.641,
+      "top_bench": {
+       "name": "Deebo Samuel Sr.",
+       "pos": "WR",
+       "pts": 25.9
+      },
+      "projected_starters": 113.71
      }
     },
     "8": {
@@ -30548,6 +32884,135 @@
        "pts": 10.0
       },
       "projected_starters": 103.67
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Amon-Ra St. Brown",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 25.8,
+        "proj": 20.35
+       },
+       {
+        "name": "A.J. Brown",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.7,
+        "proj": 12.55
+       },
+       {
+        "name": "Javonte Williams",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 7.7,
+        "proj": 14.83
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 23.9,
+        "proj": 13.47
+       },
+       {
+        "name": "Texans D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 5.0,
+        "proj": 7.11
+       },
+       {
+        "name": "J.J. McCarthy",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 17.12,
+        "proj": 15.21
+       },
+       {
+        "name": "Cam Little",
+        "pos": "K",
+        "slot": "K",
+        "pts": 19.0,
+        "proj": 9.84
+       },
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "AJ Barner",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 4.9,
+        "proj": 8.66
+       }
+      ],
+      "bench": [
+       {
+        "name": "Cam Skattebo",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 27.2,
+        "proj": 11.52
+       },
+       {
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Seahawks D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 12.0,
+        "proj": 7.0
+       },
+       {
+        "name": "Chris Brooks",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 1.3,
+        "proj": 4.78
+       },
+       {
+        "name": "Sam Darnold",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Adonai Mitchell",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 8.9,
+        "proj": 10.34
+       }
+      ],
+      "starter_points": 108.12,
+      "bench_points": 49.4,
+      "optimal_points": 146.52,
+      "points_left": 38.4,
+      "efficiency": 0.738,
+      "top_bench": {
+       "name": "Cam Skattebo",
+       "pos": "RB",
+       "pts": 27.2
+      },
+      "projected_starters": 102.02
      }
     },
     "9": {
@@ -31711,6 +34176,135 @@
        "pts": 19.7
       },
       "projected_starters": 135.15
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Ja'Marr Chase",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 34.1,
+        "proj": 22.91
+       },
+       {
+        "name": "Derrick Henry",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 19.0,
+        "proj": 18.19
+       },
+       {
+        "name": "Kyren Williams",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 5.2,
+        "proj": 18.63
+       },
+       {
+        "name": "Tetairoa McMillan",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.5,
+        "proj": 16.0
+       },
+       {
+        "name": "Tyler Warren",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 2.4,
+        "proj": 10.61
+       },
+       {
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 34.42,
+        "proj": 16.55
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 34.2,
+        "proj": 19.99
+       },
+       {
+        "name": "Spencer Shrader",
+        "pos": "K",
+        "slot": "K",
+        "pts": 8.0,
+        "proj": 10.63
+       },
+       {
+        "name": "Jaguars D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 3.0,
+        "proj": 6.23
+       }
+      ],
+      "bench": [
+       {
+        "name": "Rachaad White",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 6.2,
+        "proj": 10.85
+       },
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 9.4,
+        "proj": 14.52
+       },
+       {
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 1.9,
+        "proj": 8.42
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 11.1,
+        "proj": 8.69
+       },
+       {
+        "name": "Brenton Strange",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 8.9,
+        "proj": 9.57
+       },
+       {
+        "name": "Bears D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Tyler Shough",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 9.98,
+        "proj": 17.47
+       }
+      ],
+      "starter_points": 146.82,
+      "bench_points": 47.48,
+      "optimal_points": 162.12,
+      "points_left": 15.3,
+      "efficiency": 0.906,
+      "top_bench": {
+       "name": "Keenan Allen",
+       "pos": "WR",
+       "pts": 11.1
+      },
+      "projected_starters": 139.74
      }
     },
     "10": {
@@ -32874,6 +35468,135 @@
        "pts": 13.8
       },
       "projected_starters": 125.19
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "CeeDee Lamb",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 20.2,
+        "proj": 20.84
+       },
+       {
+        "name": "Breece Hall",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 14.8,
+        "proj": 12.13
+       },
+       {
+        "name": "Joe Burrow",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 33.16,
+        "proj": 19.03
+       },
+       {
+        "name": "George Kittle",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 13.4,
+        "proj": 15.35
+       },
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 15.4,
+        "proj": 10.57
+       },
+       {
+        "name": "Jason Myers",
+        "pos": "K",
+        "slot": "K",
+        "pts": 2.0,
+        "proj": 9.04
+       },
+       {
+        "name": "DeMario Douglas",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.4,
+        "proj": 10.02
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 0.3,
+        "proj": 7.38
+       },
+       {
+        "name": "Ravens D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 4.0,
+        "proj": 7.76
+       }
+      ],
+      "bench": [
+       {
+        "name": "Josh Jacobs",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jonah Coleman",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Vikings D/ST",
+        "pos": "DEF",
+        "slot": "BEN",
+        "pts": 21.0,
+        "proj": 4.96
+       },
+       {
+        "name": "Roschon Johnson",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Omar Cooper Jr.",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 9.45
+       },
+       {
+        "name": "Makai Lemon",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jordyn Tyson",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 19.0,
+        "proj": 8.56
+       }
+      ],
+      "starter_points": 104.66,
+      "bench_points": 40.0,
+      "optimal_points": 145.36,
+      "points_left": 40.7,
+      "efficiency": 0.72,
+      "top_bench": {
+       "name": "Vikings D/ST",
+       "pos": "DEF",
+       "pts": 21.0
+      },
+      "projected_starters": 112.12
      }
     },
     "11": {
@@ -34037,6 +36760,135 @@
        "pts": 11.7
       },
       "projected_starters": 111.65
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "Chase Brown",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 28.3,
+        "proj": 13.53
+       },
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.4,
+        "proj": 14.59
+       },
+       {
+        "name": "Sam LaPorta",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 2.6,
+        "proj": 11.44
+       },
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 26.78,
+        "proj": 21.47
+       },
+       {
+        "name": "KC Concepcion",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.7,
+        "proj": 10.62
+       },
+       {
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 35.1,
+        "proj": 18.3
+       },
+       {
+        "name": "Germie Bernard",
+        "pos": "WR",
+        "slot": "FLEX",
+        "pts": 1.0,
+        "proj": 10.89
+       },
+       {
+        "name": "Chad Ryland",
+        "pos": "K",
+        "slot": "K",
+        "pts": 8.0,
+        "proj": 7.81
+       },
+       {
+        "name": "Bills D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 10.0,
+        "proj": 6.22
+       }
+      ],
+      "bench": [
+       {
+        "name": "Omarion Hampton",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 17.5,
+        "proj": 7.94
+       },
+       {
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Luther Burden III",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Mike Washington Jr.",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 3.7,
+        "proj": 5.98
+       },
+       {
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 15.62,
+        "proj": 14.79
+       },
+       {
+        "name": "Chig Okonkwo",
+        "pos": "TE",
+        "slot": "BEN",
+        "pts": 6.4,
+        "proj": 8.25
+       },
+       {
+        "name": "Audric Estime",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 2.1,
+        "proj": 4.96
+       }
+      ],
+      "starter_points": 134.88,
+      "bench_points": 45.32,
+      "optimal_points": 155.18,
+      "points_left": 20.3,
+      "efficiency": 0.869,
+      "top_bench": {
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "pts": 17.5
+      },
+      "projected_starters": 114.87
      }
     },
     "12": {
@@ -35200,6 +38052,135 @@
        "pts": 10.6
       },
       "projected_starters": 117.79
+     },
+     "10": {
+      "starters": [
+       {
+        "name": "James Cook III",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 21.7,
+        "proj": 20.54
+       },
+       {
+        "name": "Drake London",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 16.9,
+        "proj": 14.84
+       },
+       {
+        "name": "Garrett Wilson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 15.6,
+        "proj": 12.71
+       },
+       {
+        "name": "Quinshon Judkins",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 16.1,
+        "proj": 11.8
+       },
+       {
+        "name": "Jadarian Price",
+        "pos": "RB",
+        "slot": "FLEX",
+        "pts": 11.4,
+        "proj": 11.86
+       },
+       {
+        "name": "Tucker Kraft",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 2.9,
+        "proj": 9.38
+       },
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 31.66,
+        "proj": 20.72
+       },
+       {
+        "name": "Eddy Pineiro",
+        "pos": "K",
+        "slot": "K",
+        "pts": 8.0,
+        "proj": 7.18
+       },
+       {
+        "name": "Panthers D/ST",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 10.0,
+        "proj": 4.48
+       }
+      ],
+      "bench": [
+       {
+        "name": "Kenny Gainwell",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 6.4,
+        "proj": 11.61
+       },
+       {
+        "name": "Jalen Coker",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.3,
+        "proj": 11.26
+       },
+       {
+        "name": "Kyler Murray",
+        "pos": "QB",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Tyreek Hill",
+        "pos": "WR",
+        "slot": "BEN",
+        "pts": 0.0,
+        "proj": 0.0
+       },
+       {
+        "name": "Samaje Perine",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 13.9,
+        "proj": 5.81
+       },
+       {
+        "name": "Bam Knight",
+        "pos": "RB",
+        "slot": "BEN",
+        "pts": 1.9,
+        "proj": 7.0
+       }
+      ],
+      "starter_points": 134.26,
+      "bench_points": 22.5,
+      "optimal_points": 136.76,
+      "points_left": 2.5,
+      "efficiency": 0.982,
+      "top_bench": {
+       "name": "Samaje Perine",
+       "pos": "RB",
+       "pts": 13.9
+      },
+      "projected_starters": 113.51
      }
     }
    },
