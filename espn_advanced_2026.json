@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated_from": "2026-11-17T11:52:16.388680+00:00",
+ "generated_from": "2026-11-17T22:42:40.129475+00:00",
  "leagues": {
   "zimmer": {
    "league_name": "Player Hater Ball",
@@ -3265,10 +3265,10 @@
      {
       "team_id": "6",
       "team": "Ben Jarvis Green Ellis LLP",
-      "adds": 8,
+      "adds": 9,
       "points_from_adds": 281.26,
-      "faab_spent": 64.0,
-      "points_per_faab_dollar": 4.39
+      "faab_spent": 65.0,
+      "points_per_faab_dollar": 4.33
      },
      {
       "team_id": "18",
@@ -3281,10 +3281,18 @@
      {
       "team_id": "1",
       "team": "EVIL EMPIRE",
-      "adds": 15,
-      "points_from_adds": 168.06,
-      "faab_spent": 38.0,
-      "points_per_faab_dollar": 4.42
+      "adds": 17,
+      "points_from_adds": 169.06,
+      "faab_spent": 44.0,
+      "points_per_faab_dollar": 3.84
+     },
+     {
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
+      "adds": 8,
+      "points_from_adds": 75.12,
+      "faab_spent": 42.0,
+      "points_per_faab_dollar": 1.79
      },
      {
       "team_id": "10",
@@ -3295,20 +3303,12 @@
       "points_per_faab_dollar": 5.72
      },
      {
-      "team_id": "16",
-      "team": "TEXAS CHUPACABRAS",
-      "adds": 6,
-      "points_from_adds": 58.12,
-      "faab_spent": 36.0,
-      "points_per_faab_dollar": 1.61
-     },
-     {
       "team_id": "5",
       "team": "Letter of the Day is \"TD\"",
-      "adds": 4,
+      "adds": 5,
       "points_from_adds": 57.9,
-      "faab_spent": 37.0,
-      "points_per_faab_dollar": 1.56
+      "faab_spent": 42.0,
+      "points_per_faab_dollar": 1.38
      },
      {
       "team_id": "19",
@@ -3321,10 +3321,10 @@
      {
       "team_id": "11",
       "team": "Bake N' Shake",
-      "adds": 8,
-      "points_from_adds": 22.7,
-      "faab_spent": 29.0,
-      "points_per_faab_dollar": 0.78
+      "adds": 11,
+      "points_from_adds": 27.2,
+      "faab_spent": 74.0,
+      "points_per_faab_dollar": 0.37
      },
      {
       "team_id": "20",
@@ -3735,19 +3735,23 @@
      "team": "EVIL EMPIRE",
      "trade": {
       "give": [
+       "Rashee Rice",
        "C.J. Stroud"
       ],
       "get": [
-       "Germie Bernard"
+       "A.J. Brown",
+       "Jakobi Meyers"
       ],
       "give_pos": [
+       "WR",
        "QB"
       ],
       "get_pos": [
+       "WR",
        "WR"
       ],
-      "my_gain_per_week": 0.32,
-      "their_gain_per_week": 1.3,
+      "my_gain_per_week": 0.16,
+      "their_gain_per_week": 2.21,
       "kind": "win-win"
      }
     },
@@ -3756,23 +3760,23 @@
      "team": "Letter of the Day is \"TD\"",
      "trade": {
       "give": [
-       "Jayden Daniels",
-       "Brenton Strange"
+       "Blake Corum",
+       "C.J. Stroud"
       ],
       "get": [
-       "Sam LaPorta",
+       "David Montgomery",
        "Dak Prescott"
       ],
       "give_pos": [
-       "QB",
-       "TE"
-      ],
-      "get_pos": [
-       "TE",
+       "RB",
        "QB"
       ],
-      "my_gain_per_week": 0.15,
-      "their_gain_per_week": 1.93,
+      "get_pos": [
+       "RB",
+       "QB"
+      ],
+      "my_gain_per_week": 0.12,
+      "their_gain_per_week": 1.72,
       "kind": "win-win"
      }
     },
@@ -3781,10 +3785,10 @@
      "team": "Ben Jarvis Green Ellis LLP",
      "trade": {
       "give": [
-       "C.J. Stroud"
+       "Jayden Daniels"
       ],
       "get": [
-       "Adonai Mitchell"
+       "DeVonta Smith"
       ],
       "give_pos": [
        "QB"
@@ -3792,8 +3796,8 @@
       "get_pos": [
        "WR"
       ],
-      "my_gain_per_week": 0.49,
-      "their_gain_per_week": 1.1,
+      "my_gain_per_week": 0.55,
+      "their_gain_per_week": 0.87,
       "kind": "win-win"
      }
     },
@@ -3802,58 +3806,94 @@
      "team": "D'Quan's Friend",
      "trade": {
       "give": [
-       "D'Andre Swift",
-       "KC Concepcion"
+       "Jordyn Tyson",
+       "C.J. Stroud"
       ],
       "get": [
-       "CeeDee Lamb",
-       "De'Von Achane"
+       "Lamar Jackson",
+       "Zay Flowers"
       ],
       "give_pos": [
-       "RB",
-       "WR"
+       "WR",
+       "QB"
       ],
       "get_pos": [
-       "WR",
-       "RB"
+       "QB",
+       "WR"
       ],
-      "my_gain_per_week": 0.38,
-      "their_gain_per_week": 2.0,
+      "my_gain_per_week": 0.12,
+      "their_gain_per_week": 0.34,
       "kind": "win-win"
      }
     },
     {
      "team_id": 10,
      "team": "The Fe-Brees Brothers",
-     "trade": null
+     "trade": {
+      "give": [
+       "Chris Rodriguez Jr."
+      ],
+      "get": [
+       "Puka Nacua"
+      ],
+      "give_pos": [
+       "RB"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.0,
+      "their_gain_per_week": 0.32,
+      "kind": "pickups-neutral"
+     }
     },
     {
      "team_id": 11,
      "team": "Bake N' Shake",
-     "trade": null
-    },
-    {
-     "team_id": 14,
-     "team": "Spokane Beers",
      "trade": {
       "give": [
-       "Jonathan Taylor",
+       "D'Andre Swift",
        "Jayden Daniels"
       ],
       "get": [
-       "Drake London",
-       "Tetairoa McMillan"
+       "Travis Etienne Jr.",
+       "Matthew Golden"
       ],
       "give_pos": [
        "RB",
        "QB"
       ],
       "get_pos": [
-       "WR",
+       "RB",
        "WR"
       ],
-      "my_gain_per_week": 0.15,
-      "their_gain_per_week": 3.85,
+      "my_gain_per_week": 0.14,
+      "their_gain_per_week": 2.17,
+      "kind": "win-win"
+     }
+    },
+    {
+     "team_id": 14,
+     "team": "Spokane Beers",
+     "trade": {
+      "give": [
+       "Jayden Daniels",
+       "Blake Corum"
+      ],
+      "get": [
+       "Malik Nabers",
+       "Jaxson Dart"
+      ],
+      "give_pos": [
+       "QB",
+       "RB"
+      ],
+      "get_pos": [
+       "WR",
+       "QB"
+      ],
+      "my_gain_per_week": 0.23,
+      "their_gain_per_week": 11.83,
       "kind": "win-win"
      }
     },
@@ -3862,23 +3902,23 @@
      "team": "DA BEARS FORCE ONE",
      "trade": {
       "give": [
-       "C.J. Stroud",
-       "KC Concepcion"
+       "D'Andre Swift",
+       "Jayden Daniels"
       ],
       "get": [
        "Jeremiyah Love",
-       "Xavier Worthy"
+       "Cam Skattebo"
       ],
       "give_pos": [
-       "QB",
-       "WR"
+       "RB",
+       "QB"
       ],
       "get_pos": [
        "RB",
-       "WR"
+       "RB"
       ],
-      "my_gain_per_week": 0.28,
-      "their_gain_per_week": 1.41,
+      "my_gain_per_week": 0.44,
+      "their_gain_per_week": 1.83,
       "kind": "win-win"
      }
     },
@@ -3892,23 +3932,23 @@
      "team": "Maryland Menace",
      "trade": {
       "give": [
-       "Javonte Williams",
-       "Chris Rodriguez Jr."
+       "D'Andre Swift",
+       "Jordyn Tyson"
       ],
       "get": [
-       "Chris Olave",
-       "DJ Moore"
+       "Tee Higgins",
+       "Stefon Diggs"
       ],
       "give_pos": [
        "RB",
-       "RB"
+       "WR"
       ],
       "get_pos": [
        "WR",
        "WR"
       ],
-      "my_gain_per_week": 0.17,
-      "their_gain_per_week": 0.98,
+      "my_gain_per_week": 0.12,
+      "their_gain_per_week": 0.88,
       "kind": "win-win"
      }
     },
@@ -3918,22 +3958,22 @@
      "trade": {
       "give": [
        "Jayden Daniels",
-       "Chris Rodriguez Jr."
+       "Blake Corum"
       ],
       "get": [
-       "Carnell Tate",
-       "Travis Kelce"
+       "Trey McBride",
+       "Carnell Tate"
       ],
       "give_pos": [
        "QB",
        "RB"
       ],
       "get_pos": [
-       "WR",
-       "TE"
+       "TE",
+       "WR"
       ],
-      "my_gain_per_week": 1.43,
-      "their_gain_per_week": 1.59,
+      "my_gain_per_week": 0.12,
+      "their_gain_per_week": 1.25,
       "kind": "win-win"
      }
     }
@@ -4210,6 +4250,25 @@
     "only_executed_claims_visible": false,
     "by_team": [
      {
+      "team_id": "1",
+      "team": "EVIL EMPIRE",
+      "waiver_bids_won": 17,
+      "waiver_bids_lost": 15,
+      "waiver_bids_placed": 32,
+      "faab_spent": 44,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Tank Dell",
+        "pos": "WR",
+        "bid": 15,
+        "week": 10,
+        "result": "lost"
+       }
+      ]
+     },
+     {
       "team_id": "18",
       "team": "Elements of  Intrigue",
       "waiver_bids_won": 16,
@@ -4221,23 +4280,68 @@
       "big_bids": []
      },
      {
-      "team_id": "1",
-      "team": "EVIL EMPIRE",
-      "waiver_bids_won": 15,
-      "waiver_bids_lost": 12,
-      "waiver_bids_placed": 27,
-      "faab_spent": 38,
+      "team_id": "11",
+      "team": "Bake N' Shake",
+      "waiver_bids_won": 11,
+      "waiver_bids_lost": 6,
+      "waiver_bids_placed": 17,
+      "faab_spent": 74,
       "faab_budget": 100,
       "free_agent_adds": 0,
-      "big_bids": []
+      "big_bids": [
+       {
+        "player": "Tank Dell",
+        "pos": "WR",
+        "bid": 23,
+        "week": 10,
+        "result": "won",
+        "starts": 1,
+        "points": 2.1,
+        "above_pos_avg": -6.65,
+        "points_per_dollar": 0.09
+       },
+       {
+        "player": "Jaylin Noel",
+        "pos": "WR",
+        "bid": 13,
+        "week": 7,
+        "result": "won",
+        "starts": 1,
+        "points": -0.3,
+        "above_pos_avg": -9.05,
+        "points_per_dollar": -0.02
+       },
+       {
+        "player": "Darren Waller",
+        "pos": "TE",
+        "bid": 11,
+        "week": 10,
+        "result": "won",
+        "starts": 1,
+        "points": 2.4,
+        "above_pos_avg": -4.25,
+        "points_per_dollar": 0.22
+       },
+       {
+        "player": "Kaleb Johnson",
+        "pos": "RB",
+        "bid": 11,
+        "week": 10,
+        "result": "won",
+        "starts": 0,
+        "points": 0,
+        "above_pos_avg": 0,
+        "points_per_dollar": 0.0
+       }
+      ]
      },
      {
       "team_id": "6",
       "team": "Ben Jarvis Green Ellis LLP",
-      "waiver_bids_won": 8,
+      "waiver_bids_won": 9,
       "waiver_bids_lost": 3,
-      "waiver_bids_placed": 11,
-      "faab_spent": 64,
+      "waiver_bids_placed": 12,
+      "faab_spent": 65,
       "faab_budget": 100,
       "free_agent_adds": 0,
       "big_bids": [
@@ -4266,38 +4370,22 @@
       ]
      },
      {
-      "team_id": "11",
-      "team": "Bake N' Shake",
+      "team_id": "16",
+      "team": "TEXAS CHUPACABRAS",
       "waiver_bids_won": 8,
-      "waiver_bids_lost": 5,
-      "waiver_bids_placed": 13,
-      "faab_spent": 29,
+      "waiver_bids_lost": 2,
+      "waiver_bids_placed": 10,
+      "faab_spent": 42,
       "faab_budget": 100,
       "free_agent_adds": 0,
       "big_bids": [
        {
-        "player": "Jaylin Noel",
+        "player": "Tank Dell",
         "pos": "WR",
-        "bid": 13,
-        "week": 7,
-        "result": "won",
-        "starts": 1,
-        "points": -0.3,
-        "above_pos_avg": -9.05,
-        "points_per_dollar": -0.02
-       }
-      ]
-     },
-     {
-      "team_id": "16",
-      "team": "TEXAS CHUPACABRAS",
-      "waiver_bids_won": 6,
-      "waiver_bids_lost": 1,
-      "waiver_bids_placed": 7,
-      "faab_spent": 36,
-      "faab_budget": 100,
-      "free_agent_adds": 0,
-      "big_bids": [
+        "bid": 11,
+        "week": 10,
+        "result": "lost"
+       },
        {
         "player": "Keon Coleman",
         "pos": "WR",
@@ -4312,31 +4400,12 @@
       ]
      },
      {
-      "team_id": "19",
-      "team": "Maryland Menace",
+      "team_id": "5",
+      "team": "Letter of the Day is \"TD\"",
       "waiver_bids_won": 5,
       "waiver_bids_lost": 3,
       "waiver_bids_placed": 8,
-      "faab_spent": 17,
-      "faab_budget": 100,
-      "free_agent_adds": 0,
-      "big_bids": [
-       {
-        "player": "Jared Goff",
-        "pos": "QB",
-        "bid": 15,
-        "week": 3,
-        "result": "lost"
-       }
-      ]
-     },
-     {
-      "team_id": "5",
-      "team": "Letter of the Day is \"TD\"",
-      "waiver_bids_won": 4,
-      "waiver_bids_lost": 3,
-      "waiver_bids_placed": 7,
-      "faab_spent": 37,
+      "faab_spent": 42,
       "faab_budget": 100,
       "free_agent_adds": 0,
       "big_bids": [
@@ -4361,6 +4430,25 @@
         "points": 57.9,
         "above_pos_avg": 13.08,
         "points_per_dollar": 4.45
+       }
+      ]
+     },
+     {
+      "team_id": "19",
+      "team": "Maryland Menace",
+      "waiver_bids_won": 5,
+      "waiver_bids_lost": 5,
+      "waiver_bids_placed": 10,
+      "faab_spent": 17,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": [
+       {
+        "player": "Jared Goff",
+        "pos": "QB",
+        "bid": 15,
+        "week": 3,
+        "result": "lost"
        }
       ]
      },
@@ -7664,24 +7752,24 @@
      {
       "team_id": "3",
       "team": "Kevin's Top-Notch Team",
-      "adds": 7,
-      "points_from_adds": 146.86,
+      "adds": 8,
+      "points_from_adds": 162.24,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
      },
      {
       "team_id": "10",
       "team": "1st and 11",
-      "adds": 14,
-      "points_from_adds": 145.12,
+      "adds": 15,
+      "points_from_adds": 149.12,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
      },
      {
       "team_id": "4",
       "team": "Keith's Team",
-      "adds": 5,
-      "points_from_adds": 88.02,
+      "adds": 6,
+      "points_from_adds": 97.82,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
      },
@@ -7696,8 +7784,8 @@
      {
       "team_id": "11",
       "team": "34=GOAT (Bonnet\u2019s Team)",
-      "adds": 9,
-      "points_from_adds": 53.78,
+      "adds": 11,
+      "points_from_adds": 63.78,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
      },
@@ -7720,7 +7808,7 @@
      {
       "team_id": "6",
       "team": "Team Hansen",
-      "adds": 4,
+      "adds": 5,
       "points_from_adds": 21.0,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
@@ -7728,7 +7816,7 @@
      {
       "team_id": "8",
       "team": "Fantasy Baseball Team",
-      "adds": 1,
+      "adds": 2,
       "points_from_adds": 9.5,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
@@ -8116,23 +8204,23 @@
      "team": "Dayton's Daring Team",
      "trade": {
       "give": [
-       "Joe Burrow",
-       "Josh Jacobs"
+       "Josh Jacobs",
+       "Jonah Coleman"
       ],
       "get": [
        "Jaxon Smith-Njigba",
-       "Bryce Young"
+       "David Montgomery"
       ],
       "give_pos": [
-       "QB",
+       "RB",
        "RB"
       ],
       "get_pos": [
        "WR",
-       "QB"
+       "RB"
       ],
-      "my_gain_per_week": 0.21,
-      "their_gain_per_week": 1.51,
+      "my_gain_per_week": 0.22,
+      "their_gain_per_week": 0.32,
       "kind": "win-win"
      }
     },
@@ -8141,53 +8229,69 @@
      "team": "Kevin's Top-Notch Team",
      "trade": {
       "give": [
-       "George Kittle",
+       "Joe Burrow",
        "Josh Jacobs"
       ],
       "get": [
-       "DJ Moore",
-       "Isaiah Likely"
+       "Caleb Williams",
+       "Ollie Gordon II"
       ],
       "give_pos": [
-       "TE",
+       "QB",
        "RB"
       ],
       "get_pos": [
-       "WR",
-       "TE"
+       "QB",
+       "RB"
       ],
-      "my_gain_per_week": 0.16,
-      "their_gain_per_week": 0.34,
-      "kind": "win-win"
+      "my_gain_per_week": 0.02,
+      "their_gain_per_week": 0.37,
+      "kind": "pickups-neutral"
      }
     },
     {
      "team_id": 4,
      "team": "Keith's Team",
-     "trade": null
+     "trade": {
+      "give": [
+       "Jordyn Tyson"
+      ],
+      "get": [
+       "Ladd McConkey"
+      ],
+      "give_pos": [
+       "WR"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.0,
+      "their_gain_per_week": 0.16,
+      "kind": "pickups-neutral"
+     }
     },
     {
      "team_id": 5,
      "team": "Go Pack Go",
      "trade": {
       "give": [
-       "Josh Jacobs",
-       "Treylon Burks"
+       "CeeDee Lamb",
+       "Jonah Coleman"
       ],
       "get": [
-       "Puka Nacua",
-       "Aaron Jones Sr."
+       "Kenneth Walker III",
+       "Marvin Harrison Jr."
       ],
       "give_pos": [
-       "RB",
-       "WR"
-      ],
-      "get_pos": [
        "WR",
        "RB"
       ],
-      "my_gain_per_week": 0.26,
-      "their_gain_per_week": 0.5,
+      "get_pos": [
+       "RB",
+       "WR"
+      ],
+      "my_gain_per_week": 0.24,
+      "their_gain_per_week": 0.58,
       "kind": "win-win"
      }
     },
@@ -8201,24 +8305,20 @@
      "team": "Bruno's Best Team",
      "trade": {
       "give": [
-       "George Kittle",
        "Josh Jacobs"
       ],
       "get": [
-       "Chris Olave",
-       "Travis Kelce"
+       "Deebo Samuel Sr."
       ],
       "give_pos": [
-       "TE",
        "RB"
       ],
       "get_pos": [
-       "WR",
-       "TE"
+       "WR"
       ],
-      "my_gain_per_week": 0.09,
-      "their_gain_per_week": 0.16,
-      "kind": "pickups-neutral"
+      "my_gain_per_week": 0.21,
+      "their_gain_per_week": 0.69,
+      "kind": "win-win"
      }
     },
     {
@@ -8231,23 +8331,23 @@
      "team": "Jordan's Scary Team",
      "trade": {
       "give": [
-       "George Kittle",
+       "CeeDee Lamb",
        "Josh Jacobs"
       ],
       "get": [
        "Kyren Williams",
-       "Brenton Strange"
+       "Tetairoa McMillan"
       ],
       "give_pos": [
-       "TE",
+       "WR",
        "RB"
       ],
       "get_pos": [
        "RB",
-       "TE"
+       "WR"
       ],
-      "my_gain_per_week": 0.34,
-      "their_gain_per_week": 1.01,
+      "my_gain_per_week": 0.16,
+      "their_gain_per_week": 1.15,
       "kind": "win-win"
      }
     },
@@ -8536,9 +8636,9 @@
      {
       "team_id": "10",
       "team": "1st and 11",
-      "waiver_bids_won": 14,
-      "waiver_bids_lost": 7,
-      "waiver_bids_placed": 21,
+      "waiver_bids_won": 15,
+      "waiver_bids_lost": 9,
+      "waiver_bids_placed": 24,
       "faab_spent": 0,
       "faab_budget": 100,
       "free_agent_adds": 0,
@@ -8547,9 +8647,9 @@
      {
       "team_id": "11",
       "team": "34=GOAT (Bonnet\u2019s Team)",
-      "waiver_bids_won": 9,
+      "waiver_bids_won": 11,
       "waiver_bids_lost": 5,
-      "waiver_bids_placed": 14,
+      "waiver_bids_placed": 16,
       "faab_spent": 0,
       "faab_budget": 100,
       "free_agent_adds": 0,
@@ -8558,9 +8658,20 @@
      {
       "team_id": "3",
       "team": "Kevin's Top-Notch Team",
-      "waiver_bids_won": 7,
+      "waiver_bids_won": 8,
       "waiver_bids_lost": 5,
-      "waiver_bids_placed": 12,
+      "waiver_bids_placed": 13,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
+      "team_id": "4",
+      "team": "Keith's Team",
+      "waiver_bids_won": 6,
+      "waiver_bids_lost": 5,
+      "waiver_bids_placed": 11,
       "faab_spent": 0,
       "faab_budget": 100,
       "free_agent_adds": 0,
@@ -8578,22 +8689,11 @@
       "big_bids": []
      },
      {
-      "team_id": "4",
-      "team": "Keith's Team",
-      "waiver_bids_won": 5,
-      "waiver_bids_lost": 4,
-      "waiver_bids_placed": 9,
-      "faab_spent": 0,
-      "faab_budget": 100,
-      "free_agent_adds": 0,
-      "big_bids": []
-     },
-     {
       "team_id": "6",
       "team": "Team Hansen",
-      "waiver_bids_won": 4,
-      "waiver_bids_lost": 1,
-      "waiver_bids_placed": 5,
+      "waiver_bids_won": 5,
+      "waiver_bids_lost": 2,
+      "waiver_bids_placed": 7,
       "faab_spent": 0,
       "faab_budget": 100,
       "free_agent_adds": 0,
@@ -8622,6 +8722,17 @@
       "big_bids": []
      },
      {
+      "team_id": "8",
+      "team": "Fantasy Baseball Team",
+      "waiver_bids_won": 2,
+      "waiver_bids_lost": 0,
+      "waiver_bids_placed": 2,
+      "faab_spent": 0,
+      "faab_budget": 100,
+      "free_agent_adds": 0,
+      "big_bids": []
+     },
+     {
       "team_id": "12",
       "team": "Nate's Nifty Team",
       "waiver_bids_won": 2,
@@ -8638,17 +8749,6 @@
       "waiver_bids_won": 1,
       "waiver_bids_lost": 1,
       "waiver_bids_placed": 2,
-      "faab_spent": 0,
-      "faab_budget": 100,
-      "free_agent_adds": 0,
-      "big_bids": []
-     },
-     {
-      "team_id": "8",
-      "team": "Fantasy Baseball Team",
-      "waiver_bids_won": 1,
-      "waiver_bids_lost": 0,
-      "waiver_bids_placed": 1,
       "faab_spent": 0,
       "faab_budget": 100,
       "free_agent_adds": 0,
