@@ -1,0 +1,2343 @@
+{
+ "year": 2026,
+ "generated": "2026-11-19T20:58:45.514248+00:00",
+ "source": "espn proTeamSchedules_wl",
+ "teams": {
+  "IND": {
+   "bye": 13,
+   "games": {
+    "1": {
+     "opp": "BAL",
+     "home": true
+    },
+    "2": {
+     "opp": "KC",
+     "home": false
+    },
+    "3": {
+     "opp": "HOU",
+     "home": true
+    },
+    "4": {
+     "opp": "WAS",
+     "home": false
+    },
+    "5": {
+     "opp": "PIT",
+     "home": false
+    },
+    "6": {
+     "opp": "TEN",
+     "home": true
+    },
+    "7": {
+     "opp": "MIN",
+     "home": false
+    },
+    "8": {
+     "opp": "JAX",
+     "home": false
+    },
+    "9": {
+     "opp": "DAL",
+     "home": true
+    },
+    "10": {
+     "opp": "MIA",
+     "home": true
+    },
+    "11": {
+     "opp": "HOU",
+     "home": false
+    },
+    "12": {
+     "opp": "NYG",
+     "home": true
+    },
+    "14": {
+     "opp": "PHI",
+     "home": false
+    },
+    "15": {
+     "opp": "TEN",
+     "home": false
+    },
+    "16": {
+     "opp": "CIN",
+     "home": true
+    },
+    "17": {
+     "opp": "CLE",
+     "home": false
+    },
+    "18": {
+     "opp": "JAX",
+     "home": true
+    }
+   }
+  },
+  "KC": {
+   "bye": 5,
+   "games": {
+    "1": {
+     "opp": "DEN",
+     "home": true
+    },
+    "2": {
+     "opp": "IND",
+     "home": true
+    },
+    "3": {
+     "opp": "MIA",
+     "home": false
+    },
+    "4": {
+     "opp": "LV",
+     "home": false
+    },
+    "6": {
+     "opp": "LAC",
+     "home": true
+    },
+    "7": {
+     "opp": "SEA",
+     "home": false
+    },
+    "8": {
+     "opp": "DEN",
+     "home": false
+    },
+    "9": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "10": {
+     "opp": "ATL",
+     "home": false
+    },
+    "11": {
+     "opp": "ARI",
+     "home": true
+    },
+    "12": {
+     "opp": "BUF",
+     "home": false
+    },
+    "13": {
+     "opp": "LAR",
+     "home": false
+    },
+    "14": {
+     "opp": "CIN",
+     "home": false
+    },
+    "15": {
+     "opp": "NE",
+     "home": true
+    },
+    "16": {
+     "opp": "SF",
+     "home": true
+    },
+    "17": {
+     "opp": "LAC",
+     "home": false
+    },
+    "18": {
+     "opp": "LV",
+     "home": true
+    }
+   }
+  },
+  "LV": {
+   "bye": 13,
+   "games": {
+    "1": {
+     "opp": "MIA",
+     "home": true
+    },
+    "2": {
+     "opp": "LAC",
+     "home": false
+    },
+    "3": {
+     "opp": "NO",
+     "home": false
+    },
+    "4": {
+     "opp": "KC",
+     "home": true
+    },
+    "5": {
+     "opp": "NE",
+     "home": false
+    },
+    "6": {
+     "opp": "BUF",
+     "home": true
+    },
+    "7": {
+     "opp": "LAR",
+     "home": true
+    },
+    "8": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "9": {
+     "opp": "SF",
+     "home": false
+    },
+    "10": {
+     "opp": "SEA",
+     "home": true
+    },
+    "11": {
+     "opp": "DEN",
+     "home": false
+    },
+    "12": {
+     "opp": "CLE",
+     "home": false
+    },
+    "14": {
+     "opp": "LAC",
+     "home": true
+    },
+    "15": {
+     "opp": "DEN",
+     "home": true
+    },
+    "16": {
+     "opp": "TEN",
+     "home": true
+    },
+    "17": {
+     "opp": "ARI",
+     "home": false
+    },
+    "18": {
+     "opp": "KC",
+     "home": false
+    }
+   }
+  },
+  "LAR": {
+   "bye": 11,
+   "games": {
+    "1": {
+     "opp": "SF",
+     "home": true
+    },
+    "2": {
+     "opp": "NYG",
+     "home": true
+    },
+    "3": {
+     "opp": "DEN",
+     "home": false
+    },
+    "4": {
+     "opp": "PHI",
+     "home": false
+    },
+    "5": {
+     "opp": "BUF",
+     "home": true
+    },
+    "6": {
+     "opp": "ARI",
+     "home": true
+    },
+    "7": {
+     "opp": "LV",
+     "home": false
+    },
+    "8": {
+     "opp": "LAC",
+     "home": true
+    },
+    "9": {
+     "opp": "WAS",
+     "home": false
+    },
+    "10": {
+     "opp": "ARI",
+     "home": false
+    },
+    "12": {
+     "opp": "GB",
+     "home": true
+    },
+    "13": {
+     "opp": "KC",
+     "home": true
+    },
+    "14": {
+     "opp": "SF",
+     "home": false
+    },
+    "15": {
+     "opp": "DAL",
+     "home": true
+    },
+    "16": {
+     "opp": "SEA",
+     "home": false
+    },
+    "17": {
+     "opp": "TB",
+     "home": false
+    },
+    "18": {
+     "opp": "SEA",
+     "home": true
+    }
+   }
+  },
+  "MIA": {
+   "bye": 6,
+   "games": {
+    "1": {
+     "opp": "LV",
+     "home": false
+    },
+    "2": {
+     "opp": "SF",
+     "home": false
+    },
+    "3": {
+     "opp": "KC",
+     "home": true
+    },
+    "4": {
+     "opp": "MIN",
+     "home": false
+    },
+    "5": {
+     "opp": "CIN",
+     "home": true
+    },
+    "7": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "8": {
+     "opp": "NE",
+     "home": true
+    },
+    "9": {
+     "opp": "DET",
+     "home": true
+    },
+    "10": {
+     "opp": "IND",
+     "home": false
+    },
+    "11": {
+     "opp": "BUF",
+     "home": false
+    },
+    "12": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "13": {
+     "opp": "DEN",
+     "home": false
+    },
+    "14": {
+     "opp": "CHI",
+     "home": true
+    },
+    "15": {
+     "opp": "GB",
+     "home": false
+    },
+    "16": {
+     "opp": "LAC",
+     "home": true
+    },
+    "17": {
+     "opp": "BUF",
+     "home": true
+    },
+    "18": {
+     "opp": "NE",
+     "home": false
+    }
+   }
+  },
+  "MIN": {
+   "bye": 6,
+   "games": {
+    "1": {
+     "opp": "GB",
+     "home": true
+    },
+    "2": {
+     "opp": "CHI",
+     "home": false
+    },
+    "3": {
+     "opp": "TB",
+     "home": false
+    },
+    "4": {
+     "opp": "MIA",
+     "home": true
+    },
+    "5": {
+     "opp": "NO",
+     "home": false
+    },
+    "7": {
+     "opp": "IND",
+     "home": true
+    },
+    "8": {
+     "opp": "DET",
+     "home": false
+    },
+    "9": {
+     "opp": "BUF",
+     "home": true
+    },
+    "10": {
+     "opp": "GB",
+     "home": false
+    },
+    "11": {
+     "opp": "SF",
+     "home": false
+    },
+    "12": {
+     "opp": "ATL",
+     "home": true
+    },
+    "13": {
+     "opp": "CAR",
+     "home": true
+    },
+    "14": {
+     "opp": "NE",
+     "home": false
+    },
+    "15": {
+     "opp": "DET",
+     "home": true
+    },
+    "16": {
+     "opp": "WAS",
+     "home": true
+    },
+    "17": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "18": {
+     "opp": "CHI",
+     "home": true
+    }
+   }
+  },
+  "NE": {
+   "bye": 11,
+   "games": {
+    "1": {
+     "opp": "SEA",
+     "home": false
+    },
+    "2": {
+     "opp": "PIT",
+     "home": true
+    },
+    "3": {
+     "opp": "JAX",
+     "home": false
+    },
+    "4": {
+     "opp": "BUF",
+     "home": false
+    },
+    "5": {
+     "opp": "LV",
+     "home": true
+    },
+    "6": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "7": {
+     "opp": "CHI",
+     "home": false
+    },
+    "8": {
+     "opp": "MIA",
+     "home": false
+    },
+    "9": {
+     "opp": "GB",
+     "home": true
+    },
+    "10": {
+     "opp": "DET",
+     "home": false
+    },
+    "12": {
+     "opp": "LAC",
+     "home": false
+    },
+    "13": {
+     "opp": "BUF",
+     "home": true
+    },
+    "14": {
+     "opp": "MIN",
+     "home": true
+    },
+    "15": {
+     "opp": "KC",
+     "home": false
+    },
+    "16": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "17": {
+     "opp": "DEN",
+     "home": true
+    },
+    "18": {
+     "opp": "MIA",
+     "home": true
+    }
+   }
+  },
+  "NO": {
+   "bye": 8,
+   "games": {
+    "1": {
+     "opp": "DET",
+     "home": false
+    },
+    "2": {
+     "opp": "BAL",
+     "home": false
+    },
+    "3": {
+     "opp": "LV",
+     "home": true
+    },
+    "4": {
+     "opp": "ATL",
+     "home": true
+    },
+    "5": {
+     "opp": "MIN",
+     "home": true
+    },
+    "6": {
+     "opp": "NYG",
+     "home": false
+    },
+    "7": {
+     "opp": "PIT",
+     "home": true
+    },
+    "9": {
+     "opp": "CLE",
+     "home": true
+    },
+    "10": {
+     "opp": "CAR",
+     "home": true
+    },
+    "11": {
+     "opp": "CHI",
+     "home": false
+    },
+    "12": {
+     "opp": "CIN",
+     "home": false
+    },
+    "13": {
+     "opp": "GB",
+     "home": true
+    },
+    "14": {
+     "opp": "CAR",
+     "home": false
+    },
+    "15": {
+     "opp": "TB",
+     "home": false
+    },
+    "16": {
+     "opp": "ARI",
+     "home": true
+    },
+    "17": {
+     "opp": "ATL",
+     "home": false
+    },
+    "18": {
+     "opp": "TB",
+     "home": true
+    }
+   }
+  },
+  "NYG": {
+   "bye": 8,
+   "games": {
+    "1": {
+     "opp": "DAL",
+     "home": true
+    },
+    "2": {
+     "opp": "LAR",
+     "home": false
+    },
+    "3": {
+     "opp": "TEN",
+     "home": true
+    },
+    "4": {
+     "opp": "ARI",
+     "home": true
+    },
+    "5": {
+     "opp": "WAS",
+     "home": false
+    },
+    "6": {
+     "opp": "NO",
+     "home": true
+    },
+    "7": {
+     "opp": "HOU",
+     "home": false
+    },
+    "9": {
+     "opp": "PHI",
+     "home": false
+    },
+    "10": {
+     "opp": "WAS",
+     "home": true
+    },
+    "11": {
+     "opp": "JAX",
+     "home": true
+    },
+    "12": {
+     "opp": "IND",
+     "home": false
+    },
+    "13": {
+     "opp": "SF",
+     "home": true
+    },
+    "14": {
+     "opp": "SEA",
+     "home": false
+    },
+    "15": {
+     "opp": "CLE",
+     "home": true
+    },
+    "16": {
+     "opp": "DET",
+     "home": false
+    },
+    "17": {
+     "opp": "DAL",
+     "home": false
+    },
+    "18": {
+     "opp": "PHI",
+     "home": true
+    }
+   }
+  },
+  "NYJ": {
+   "bye": 13,
+   "games": {
+    "1": {
+     "opp": "TEN",
+     "home": false
+    },
+    "2": {
+     "opp": "GB",
+     "home": true
+    },
+    "3": {
+     "opp": "DET",
+     "home": false
+    },
+    "4": {
+     "opp": "CHI",
+     "home": false
+    },
+    "5": {
+     "opp": "CLE",
+     "home": true
+    },
+    "6": {
+     "opp": "NE",
+     "home": false
+    },
+    "7": {
+     "opp": "MIA",
+     "home": true
+    },
+    "8": {
+     "opp": "LV",
+     "home": true
+    },
+    "9": {
+     "opp": "KC",
+     "home": false
+    },
+    "10": {
+     "opp": "BUF",
+     "home": true
+    },
+    "11": {
+     "opp": "LAC",
+     "home": false
+    },
+    "12": {
+     "opp": "MIA",
+     "home": false
+    },
+    "14": {
+     "opp": "DEN",
+     "home": true
+    },
+    "15": {
+     "opp": "ARI",
+     "home": false
+    },
+    "16": {
+     "opp": "NE",
+     "home": true
+    },
+    "17": {
+     "opp": "MIN",
+     "home": true
+    },
+    "18": {
+     "opp": "BUF",
+     "home": false
+    }
+   }
+  },
+  "PHI": {
+   "bye": 10,
+   "games": {
+    "1": {
+     "opp": "WAS",
+     "home": true
+    },
+    "2": {
+     "opp": "TEN",
+     "home": false
+    },
+    "3": {
+     "opp": "CHI",
+     "home": false
+    },
+    "4": {
+     "opp": "LAR",
+     "home": true
+    },
+    "5": {
+     "opp": "JAX",
+     "home": false
+    },
+    "6": {
+     "opp": "CAR",
+     "home": true
+    },
+    "7": {
+     "opp": "DAL",
+     "home": true
+    },
+    "8": {
+     "opp": "WAS",
+     "home": false
+    },
+    "9": {
+     "opp": "NYG",
+     "home": true
+    },
+    "11": {
+     "opp": "PIT",
+     "home": true
+    },
+    "12": {
+     "opp": "DAL",
+     "home": false
+    },
+    "13": {
+     "opp": "ARI",
+     "home": false
+    },
+    "14": {
+     "opp": "IND",
+     "home": true
+    },
+    "15": {
+     "opp": "SEA",
+     "home": true
+    },
+    "16": {
+     "opp": "HOU",
+     "home": true
+    },
+    "17": {
+     "opp": "SF",
+     "home": false
+    },
+    "18": {
+     "opp": "NYG",
+     "home": false
+    }
+   }
+  },
+  "ARI": {
+   "bye": 14,
+   "games": {
+    "1": {
+     "opp": "LAC",
+     "home": false
+    },
+    "2": {
+     "opp": "SEA",
+     "home": true
+    },
+    "3": {
+     "opp": "SF",
+     "home": false
+    },
+    "4": {
+     "opp": "NYG",
+     "home": false
+    },
+    "5": {
+     "opp": "DET",
+     "home": true
+    },
+    "6": {
+     "opp": "LAR",
+     "home": false
+    },
+    "7": {
+     "opp": "DEN",
+     "home": true
+    },
+    "8": {
+     "opp": "DAL",
+     "home": false
+    },
+    "9": {
+     "opp": "SEA",
+     "home": false
+    },
+    "10": {
+     "opp": "LAR",
+     "home": true
+    },
+    "11": {
+     "opp": "KC",
+     "home": false
+    },
+    "12": {
+     "opp": "WAS",
+     "home": true
+    },
+    "13": {
+     "opp": "PHI",
+     "home": true
+    },
+    "15": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "16": {
+     "opp": "NO",
+     "home": false
+    },
+    "17": {
+     "opp": "LV",
+     "home": true
+    },
+    "18": {
+     "opp": "SF",
+     "home": true
+    }
+   }
+  },
+  "PIT": {
+   "bye": 9,
+   "games": {
+    "1": {
+     "opp": "ATL",
+     "home": true
+    },
+    "2": {
+     "opp": "NE",
+     "home": false
+    },
+    "3": {
+     "opp": "CIN",
+     "home": true
+    },
+    "4": {
+     "opp": "CLE",
+     "home": false
+    },
+    "5": {
+     "opp": "IND",
+     "home": true
+    },
+    "6": {
+     "opp": "TB",
+     "home": false
+    },
+    "7": {
+     "opp": "NO",
+     "home": false
+    },
+    "8": {
+     "opp": "CLE",
+     "home": true
+    },
+    "10": {
+     "opp": "CIN",
+     "home": false
+    },
+    "11": {
+     "opp": "PHI",
+     "home": false
+    },
+    "12": {
+     "opp": "DEN",
+     "home": true
+    },
+    "13": {
+     "opp": "HOU",
+     "home": true
+    },
+    "14": {
+     "opp": "JAX",
+     "home": false
+    },
+    "15": {
+     "opp": "BAL",
+     "home": true
+    },
+    "16": {
+     "opp": "CAR",
+     "home": true
+    },
+    "17": {
+     "opp": "TEN",
+     "home": false
+    },
+    "18": {
+     "opp": "BAL",
+     "home": false
+    }
+   }
+  },
+  "LAC": {
+   "bye": 7,
+   "games": {
+    "1": {
+     "opp": "ARI",
+     "home": true
+    },
+    "2": {
+     "opp": "LV",
+     "home": true
+    },
+    "3": {
+     "opp": "BUF",
+     "home": false
+    },
+    "4": {
+     "opp": "SEA",
+     "home": false
+    },
+    "5": {
+     "opp": "DEN",
+     "home": true
+    },
+    "6": {
+     "opp": "KC",
+     "home": false
+    },
+    "8": {
+     "opp": "LAR",
+     "home": false
+    },
+    "9": {
+     "opp": "HOU",
+     "home": true
+    },
+    "10": {
+     "opp": "BAL",
+     "home": false
+    },
+    "11": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "12": {
+     "opp": "NE",
+     "home": true
+    },
+    "13": {
+     "opp": "TB",
+     "home": false
+    },
+    "14": {
+     "opp": "LV",
+     "home": false
+    },
+    "15": {
+     "opp": "SF",
+     "home": true
+    },
+    "16": {
+     "opp": "MIA",
+     "home": false
+    },
+    "17": {
+     "opp": "KC",
+     "home": true
+    },
+    "18": {
+     "opp": "DEN",
+     "home": false
+    }
+   }
+  },
+  "SF": {
+   "bye": 8,
+   "games": {
+    "1": {
+     "opp": "LAR",
+     "home": false
+    },
+    "2": {
+     "opp": "MIA",
+     "home": true
+    },
+    "3": {
+     "opp": "ARI",
+     "home": true
+    },
+    "4": {
+     "opp": "DEN",
+     "home": true
+    },
+    "5": {
+     "opp": "SEA",
+     "home": false
+    },
+    "6": {
+     "opp": "WAS",
+     "home": true
+    },
+    "7": {
+     "opp": "ATL",
+     "home": false
+    },
+    "9": {
+     "opp": "LV",
+     "home": true
+    },
+    "10": {
+     "opp": "DAL",
+     "home": false
+    },
+    "11": {
+     "opp": "MIN",
+     "home": true
+    },
+    "12": {
+     "opp": "SEA",
+     "home": true
+    },
+    "13": {
+     "opp": "NYG",
+     "home": false
+    },
+    "14": {
+     "opp": "LAR",
+     "home": true
+    },
+    "15": {
+     "opp": "LAC",
+     "home": false
+    },
+    "16": {
+     "opp": "KC",
+     "home": false
+    },
+    "17": {
+     "opp": "PHI",
+     "home": true
+    },
+    "18": {
+     "opp": "ARI",
+     "home": false
+    }
+   }
+  },
+  "SEA": {
+   "bye": 11,
+   "games": {
+    "1": {
+     "opp": "NE",
+     "home": true
+    },
+    "2": {
+     "opp": "ARI",
+     "home": false
+    },
+    "3": {
+     "opp": "WAS",
+     "home": false
+    },
+    "4": {
+     "opp": "LAC",
+     "home": true
+    },
+    "5": {
+     "opp": "SF",
+     "home": true
+    },
+    "6": {
+     "opp": "DEN",
+     "home": false
+    },
+    "7": {
+     "opp": "KC",
+     "home": true
+    },
+    "8": {
+     "opp": "CHI",
+     "home": true
+    },
+    "9": {
+     "opp": "ARI",
+     "home": true
+    },
+    "10": {
+     "opp": "LV",
+     "home": false
+    },
+    "12": {
+     "opp": "SF",
+     "home": false
+    },
+    "13": {
+     "opp": "DAL",
+     "home": true
+    },
+    "14": {
+     "opp": "NYG",
+     "home": true
+    },
+    "15": {
+     "opp": "PHI",
+     "home": false
+    },
+    "16": {
+     "opp": "LAR",
+     "home": true
+    },
+    "17": {
+     "opp": "CAR",
+     "home": false
+    },
+    "18": {
+     "opp": "LAR",
+     "home": false
+    }
+   }
+  },
+  "TB": {
+   "bye": 10,
+   "games": {
+    "1": {
+     "opp": "CIN",
+     "home": false
+    },
+    "2": {
+     "opp": "CLE",
+     "home": true
+    },
+    "3": {
+     "opp": "MIN",
+     "home": true
+    },
+    "4": {
+     "opp": "GB",
+     "home": true
+    },
+    "5": {
+     "opp": "DAL",
+     "home": false
+    },
+    "6": {
+     "opp": "PIT",
+     "home": true
+    },
+    "7": {
+     "opp": "CAR",
+     "home": false
+    },
+    "8": {
+     "opp": "ATL",
+     "home": true
+    },
+    "9": {
+     "opp": "CHI",
+     "home": false
+    },
+    "11": {
+     "opp": "DET",
+     "home": false
+    },
+    "12": {
+     "opp": "CAR",
+     "home": true
+    },
+    "13": {
+     "opp": "LAC",
+     "home": true
+    },
+    "14": {
+     "opp": "BAL",
+     "home": false
+    },
+    "15": {
+     "opp": "NO",
+     "home": true
+    },
+    "16": {
+     "opp": "ATL",
+     "home": false
+    },
+    "17": {
+     "opp": "LAR",
+     "home": true
+    },
+    "18": {
+     "opp": "NO",
+     "home": false
+    }
+   }
+  },
+  "WAS": {
+   "bye": 7,
+   "games": {
+    "1": {
+     "opp": "PHI",
+     "home": false
+    },
+    "2": {
+     "opp": "DAL",
+     "home": false
+    },
+    "3": {
+     "opp": "SEA",
+     "home": true
+    },
+    "4": {
+     "opp": "IND",
+     "home": true
+    },
+    "5": {
+     "opp": "NYG",
+     "home": true
+    },
+    "6": {
+     "opp": "SF",
+     "home": false
+    },
+    "8": {
+     "opp": "PHI",
+     "home": true
+    },
+    "9": {
+     "opp": "LAR",
+     "home": true
+    },
+    "10": {
+     "opp": "NYG",
+     "home": false
+    },
+    "11": {
+     "opp": "CIN",
+     "home": true
+    },
+    "12": {
+     "opp": "ARI",
+     "home": false
+    },
+    "13": {
+     "opp": "TEN",
+     "home": false
+    },
+    "14": {
+     "opp": "HOU",
+     "home": true
+    },
+    "15": {
+     "opp": "ATL",
+     "home": true
+    },
+    "16": {
+     "opp": "MIN",
+     "home": false
+    },
+    "17": {
+     "opp": "JAX",
+     "home": false
+    },
+    "18": {
+     "opp": "DAL",
+     "home": true
+    }
+   }
+  },
+  "CAR": {
+   "bye": 5,
+   "games": {
+    "1": {
+     "opp": "CHI",
+     "home": true
+    },
+    "2": {
+     "opp": "ATL",
+     "home": false
+    },
+    "3": {
+     "opp": "CLE",
+     "home": false
+    },
+    "4": {
+     "opp": "DET",
+     "home": true
+    },
+    "6": {
+     "opp": "PHI",
+     "home": false
+    },
+    "7": {
+     "opp": "TB",
+     "home": true
+    },
+    "8": {
+     "opp": "GB",
+     "home": false
+    },
+    "9": {
+     "opp": "DEN",
+     "home": true
+    },
+    "10": {
+     "opp": "NO",
+     "home": false
+    },
+    "11": {
+     "opp": "BAL",
+     "home": true
+    },
+    "12": {
+     "opp": "TB",
+     "home": false
+    },
+    "13": {
+     "opp": "MIN",
+     "home": false
+    },
+    "14": {
+     "opp": "NO",
+     "home": true
+    },
+    "15": {
+     "opp": "CIN",
+     "home": true
+    },
+    "16": {
+     "opp": "PIT",
+     "home": false
+    },
+    "17": {
+     "opp": "SEA",
+     "home": true
+    },
+    "18": {
+     "opp": "ATL",
+     "home": true
+    }
+   }
+  },
+  "JAX": {
+   "bye": 7,
+   "games": {
+    "1": {
+     "opp": "CLE",
+     "home": true
+    },
+    "2": {
+     "opp": "DEN",
+     "home": false
+    },
+    "3": {
+     "opp": "NE",
+     "home": true
+    },
+    "4": {
+     "opp": "CIN",
+     "home": false
+    },
+    "5": {
+     "opp": "PHI",
+     "home": true
+    },
+    "6": {
+     "opp": "HOU",
+     "home": true
+    },
+    "8": {
+     "opp": "IND",
+     "home": true
+    },
+    "9": {
+     "opp": "BAL",
+     "home": false
+    },
+    "10": {
+     "opp": "TEN",
+     "home": false
+    },
+    "11": {
+     "opp": "NYG",
+     "home": false
+    },
+    "12": {
+     "opp": "TEN",
+     "home": true
+    },
+    "13": {
+     "opp": "CHI",
+     "home": false
+    },
+    "14": {
+     "opp": "PIT",
+     "home": true
+    },
+    "15": {
+     "opp": "HOU",
+     "home": false
+    },
+    "16": {
+     "opp": "DAL",
+     "home": false
+    },
+    "17": {
+     "opp": "WAS",
+     "home": true
+    },
+    "18": {
+     "opp": "IND",
+     "home": false
+    }
+   }
+  },
+  "BAL": {
+   "bye": 13,
+   "games": {
+    "1": {
+     "opp": "IND",
+     "home": false
+    },
+    "2": {
+     "opp": "NO",
+     "home": true
+    },
+    "3": {
+     "opp": "DAL",
+     "home": false
+    },
+    "4": {
+     "opp": "TEN",
+     "home": true
+    },
+    "5": {
+     "opp": "ATL",
+     "home": false
+    },
+    "6": {
+     "opp": "CLE",
+     "home": false
+    },
+    "7": {
+     "opp": "CIN",
+     "home": true
+    },
+    "8": {
+     "opp": "BUF",
+     "home": false
+    },
+    "9": {
+     "opp": "JAX",
+     "home": true
+    },
+    "10": {
+     "opp": "LAC",
+     "home": true
+    },
+    "11": {
+     "opp": "CAR",
+     "home": false
+    },
+    "12": {
+     "opp": "HOU",
+     "home": false
+    },
+    "14": {
+     "opp": "TB",
+     "home": true
+    },
+    "15": {
+     "opp": "PIT",
+     "home": false
+    },
+    "16": {
+     "opp": "CLE",
+     "home": true
+    },
+    "17": {
+     "opp": "CIN",
+     "home": false
+    },
+    "18": {
+     "opp": "PIT",
+     "home": true
+    }
+   }
+  },
+  "HOU": {
+   "bye": 8,
+   "games": {
+    "1": {
+     "opp": "BUF",
+     "home": true
+    },
+    "2": {
+     "opp": "CIN",
+     "home": true
+    },
+    "3": {
+     "opp": "IND",
+     "home": false
+    },
+    "4": {
+     "opp": "DAL",
+     "home": true
+    },
+    "5": {
+     "opp": "TEN",
+     "home": false
+    },
+    "6": {
+     "opp": "JAX",
+     "home": false
+    },
+    "7": {
+     "opp": "NYG",
+     "home": true
+    },
+    "9": {
+     "opp": "LAC",
+     "home": false
+    },
+    "10": {
+     "opp": "CLE",
+     "home": false
+    },
+    "11": {
+     "opp": "IND",
+     "home": true
+    },
+    "12": {
+     "opp": "BAL",
+     "home": true
+    },
+    "13": {
+     "opp": "PIT",
+     "home": false
+    },
+    "14": {
+     "opp": "WAS",
+     "home": false
+    },
+    "15": {
+     "opp": "JAX",
+     "home": true
+    },
+    "16": {
+     "opp": "PHI",
+     "home": false
+    },
+    "17": {
+     "opp": "GB",
+     "home": false
+    },
+    "18": {
+     "opp": "TEN",
+     "home": true
+    }
+   }
+  },
+  "ATL": {
+   "bye": 11,
+   "games": {
+    "1": {
+     "opp": "PIT",
+     "home": false
+    },
+    "2": {
+     "opp": "CAR",
+     "home": true
+    },
+    "3": {
+     "opp": "GB",
+     "home": false
+    },
+    "4": {
+     "opp": "NO",
+     "home": false
+    },
+    "5": {
+     "opp": "BAL",
+     "home": true
+    },
+    "6": {
+     "opp": "CHI",
+     "home": true
+    },
+    "7": {
+     "opp": "SF",
+     "home": true
+    },
+    "8": {
+     "opp": "TB",
+     "home": false
+    },
+    "9": {
+     "opp": "CIN",
+     "home": true
+    },
+    "10": {
+     "opp": "KC",
+     "home": true
+    },
+    "12": {
+     "opp": "MIN",
+     "home": false
+    },
+    "13": {
+     "opp": "DET",
+     "home": true
+    },
+    "14": {
+     "opp": "CLE",
+     "home": false
+    },
+    "15": {
+     "opp": "WAS",
+     "home": false
+    },
+    "16": {
+     "opp": "TB",
+     "home": true
+    },
+    "17": {
+     "opp": "NO",
+     "home": true
+    },
+    "18": {
+     "opp": "CAR",
+     "home": false
+    }
+   }
+  },
+  "BUF": {
+   "bye": 7,
+   "games": {
+    "1": {
+     "opp": "HOU",
+     "home": false
+    },
+    "2": {
+     "opp": "DET",
+     "home": true
+    },
+    "3": {
+     "opp": "LAC",
+     "home": true
+    },
+    "4": {
+     "opp": "NE",
+     "home": true
+    },
+    "5": {
+     "opp": "LAR",
+     "home": false
+    },
+    "6": {
+     "opp": "LV",
+     "home": false
+    },
+    "8": {
+     "opp": "BAL",
+     "home": true
+    },
+    "9": {
+     "opp": "MIN",
+     "home": false
+    },
+    "10": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "11": {
+     "opp": "MIA",
+     "home": true
+    },
+    "12": {
+     "opp": "KC",
+     "home": true
+    },
+    "13": {
+     "opp": "NE",
+     "home": false
+    },
+    "14": {
+     "opp": "GB",
+     "home": false
+    },
+    "15": {
+     "opp": "CHI",
+     "home": true
+    },
+    "16": {
+     "opp": "DEN",
+     "home": false
+    },
+    "17": {
+     "opp": "MIA",
+     "home": false
+    },
+    "18": {
+     "opp": "NYJ",
+     "home": true
+    }
+   }
+  },
+  "CHI": {
+   "bye": 10,
+   "games": {
+    "1": {
+     "opp": "CAR",
+     "home": false
+    },
+    "2": {
+     "opp": "MIN",
+     "home": true
+    },
+    "3": {
+     "opp": "PHI",
+     "home": true
+    },
+    "4": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "5": {
+     "opp": "GB",
+     "home": false
+    },
+    "6": {
+     "opp": "ATL",
+     "home": false
+    },
+    "7": {
+     "opp": "NE",
+     "home": true
+    },
+    "8": {
+     "opp": "SEA",
+     "home": false
+    },
+    "9": {
+     "opp": "TB",
+     "home": true
+    },
+    "11": {
+     "opp": "NO",
+     "home": true
+    },
+    "12": {
+     "opp": "DET",
+     "home": false
+    },
+    "13": {
+     "opp": "JAX",
+     "home": true
+    },
+    "14": {
+     "opp": "MIA",
+     "home": false
+    },
+    "15": {
+     "opp": "BUF",
+     "home": false
+    },
+    "16": {
+     "opp": "GB",
+     "home": true
+    },
+    "17": {
+     "opp": "DET",
+     "home": true
+    },
+    "18": {
+     "opp": "MIN",
+     "home": false
+    }
+   }
+  },
+  "CIN": {
+   "bye": 6,
+   "games": {
+    "1": {
+     "opp": "TB",
+     "home": true
+    },
+    "2": {
+     "opp": "HOU",
+     "home": false
+    },
+    "3": {
+     "opp": "PIT",
+     "home": false
+    },
+    "4": {
+     "opp": "JAX",
+     "home": true
+    },
+    "5": {
+     "opp": "MIA",
+     "home": false
+    },
+    "7": {
+     "opp": "BAL",
+     "home": false
+    },
+    "8": {
+     "opp": "TEN",
+     "home": true
+    },
+    "9": {
+     "opp": "ATL",
+     "home": false
+    },
+    "10": {
+     "opp": "PIT",
+     "home": true
+    },
+    "11": {
+     "opp": "WAS",
+     "home": false
+    },
+    "12": {
+     "opp": "NO",
+     "home": true
+    },
+    "13": {
+     "opp": "CLE",
+     "home": false
+    },
+    "14": {
+     "opp": "KC",
+     "home": true
+    },
+    "15": {
+     "opp": "CAR",
+     "home": false
+    },
+    "16": {
+     "opp": "IND",
+     "home": false
+    },
+    "17": {
+     "opp": "BAL",
+     "home": true
+    },
+    "18": {
+     "opp": "CLE",
+     "home": true
+    }
+   }
+  },
+  "CLE": {
+   "bye": 11,
+   "games": {
+    "1": {
+     "opp": "JAX",
+     "home": false
+    },
+    "2": {
+     "opp": "TB",
+     "home": false
+    },
+    "3": {
+     "opp": "CAR",
+     "home": true
+    },
+    "4": {
+     "opp": "PIT",
+     "home": true
+    },
+    "5": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "6": {
+     "opp": "BAL",
+     "home": true
+    },
+    "7": {
+     "opp": "TEN",
+     "home": false
+    },
+    "8": {
+     "opp": "PIT",
+     "home": false
+    },
+    "9": {
+     "opp": "NO",
+     "home": false
+    },
+    "10": {
+     "opp": "HOU",
+     "home": true
+    },
+    "12": {
+     "opp": "LV",
+     "home": true
+    },
+    "13": {
+     "opp": "CIN",
+     "home": true
+    },
+    "14": {
+     "opp": "ATL",
+     "home": true
+    },
+    "15": {
+     "opp": "NYG",
+     "home": false
+    },
+    "16": {
+     "opp": "BAL",
+     "home": false
+    },
+    "17": {
+     "opp": "IND",
+     "home": true
+    },
+    "18": {
+     "opp": "CIN",
+     "home": false
+    }
+   }
+  },
+  "DAL": {
+   "bye": 14,
+   "games": {
+    "1": {
+     "opp": "NYG",
+     "home": false
+    },
+    "2": {
+     "opp": "WAS",
+     "home": true
+    },
+    "3": {
+     "opp": "BAL",
+     "home": true
+    },
+    "4": {
+     "opp": "HOU",
+     "home": false
+    },
+    "5": {
+     "opp": "TB",
+     "home": true
+    },
+    "6": {
+     "opp": "GB",
+     "home": false
+    },
+    "7": {
+     "opp": "PHI",
+     "home": false
+    },
+    "8": {
+     "opp": "ARI",
+     "home": true
+    },
+    "9": {
+     "opp": "IND",
+     "home": false
+    },
+    "10": {
+     "opp": "SF",
+     "home": true
+    },
+    "11": {
+     "opp": "TEN",
+     "home": true
+    },
+    "12": {
+     "opp": "PHI",
+     "home": true
+    },
+    "13": {
+     "opp": "SEA",
+     "home": false
+    },
+    "15": {
+     "opp": "LAR",
+     "home": false
+    },
+    "16": {
+     "opp": "JAX",
+     "home": true
+    },
+    "17": {
+     "opp": "NYG",
+     "home": true
+    },
+    "18": {
+     "opp": "WAS",
+     "home": false
+    }
+   }
+  },
+  "DEN": {
+   "bye": 10,
+   "games": {
+    "1": {
+     "opp": "KC",
+     "home": false
+    },
+    "2": {
+     "opp": "JAX",
+     "home": true
+    },
+    "3": {
+     "opp": "LAR",
+     "home": true
+    },
+    "4": {
+     "opp": "SF",
+     "home": false
+    },
+    "5": {
+     "opp": "LAC",
+     "home": false
+    },
+    "6": {
+     "opp": "SEA",
+     "home": true
+    },
+    "7": {
+     "opp": "ARI",
+     "home": false
+    },
+    "8": {
+     "opp": "KC",
+     "home": true
+    },
+    "9": {
+     "opp": "CAR",
+     "home": false
+    },
+    "11": {
+     "opp": "LV",
+     "home": true
+    },
+    "12": {
+     "opp": "PIT",
+     "home": false
+    },
+    "13": {
+     "opp": "MIA",
+     "home": true
+    },
+    "14": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "15": {
+     "opp": "LV",
+     "home": false
+    },
+    "16": {
+     "opp": "BUF",
+     "home": true
+    },
+    "17": {
+     "opp": "NE",
+     "home": false
+    },
+    "18": {
+     "opp": "LAC",
+     "home": true
+    }
+   }
+  },
+  "DET": {
+   "bye": 6,
+   "games": {
+    "1": {
+     "opp": "NO",
+     "home": true
+    },
+    "2": {
+     "opp": "BUF",
+     "home": false
+    },
+    "3": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "4": {
+     "opp": "CAR",
+     "home": false
+    },
+    "5": {
+     "opp": "ARI",
+     "home": false
+    },
+    "7": {
+     "opp": "GB",
+     "home": true
+    },
+    "8": {
+     "opp": "MIN",
+     "home": true
+    },
+    "9": {
+     "opp": "MIA",
+     "home": false
+    },
+    "10": {
+     "opp": "NE",
+     "home": true
+    },
+    "11": {
+     "opp": "TB",
+     "home": true
+    },
+    "12": {
+     "opp": "CHI",
+     "home": true
+    },
+    "13": {
+     "opp": "ATL",
+     "home": false
+    },
+    "14": {
+     "opp": "TEN",
+     "home": true
+    },
+    "15": {
+     "opp": "MIN",
+     "home": false
+    },
+    "16": {
+     "opp": "NYG",
+     "home": true
+    },
+    "17": {
+     "opp": "CHI",
+     "home": false
+    },
+    "18": {
+     "opp": "GB",
+     "home": false
+    }
+   }
+  },
+  "GB": {
+   "bye": 11,
+   "games": {
+    "1": {
+     "opp": "MIN",
+     "home": false
+    },
+    "2": {
+     "opp": "NYJ",
+     "home": false
+    },
+    "3": {
+     "opp": "ATL",
+     "home": true
+    },
+    "4": {
+     "opp": "TB",
+     "home": false
+    },
+    "5": {
+     "opp": "CHI",
+     "home": true
+    },
+    "6": {
+     "opp": "DAL",
+     "home": true
+    },
+    "7": {
+     "opp": "DET",
+     "home": false
+    },
+    "8": {
+     "opp": "CAR",
+     "home": true
+    },
+    "9": {
+     "opp": "NE",
+     "home": false
+    },
+    "10": {
+     "opp": "MIN",
+     "home": true
+    },
+    "12": {
+     "opp": "LAR",
+     "home": false
+    },
+    "13": {
+     "opp": "NO",
+     "home": false
+    },
+    "14": {
+     "opp": "BUF",
+     "home": true
+    },
+    "15": {
+     "opp": "MIA",
+     "home": true
+    },
+    "16": {
+     "opp": "CHI",
+     "home": false
+    },
+    "17": {
+     "opp": "HOU",
+     "home": true
+    },
+    "18": {
+     "opp": "DET",
+     "home": true
+    }
+   }
+  },
+  "TEN": {
+   "bye": 9,
+   "games": {
+    "1": {
+     "opp": "NYJ",
+     "home": true
+    },
+    "2": {
+     "opp": "PHI",
+     "home": true
+    },
+    "3": {
+     "opp": "NYG",
+     "home": false
+    },
+    "4": {
+     "opp": "BAL",
+     "home": false
+    },
+    "5": {
+     "opp": "HOU",
+     "home": true
+    },
+    "6": {
+     "opp": "IND",
+     "home": false
+    },
+    "7": {
+     "opp": "CLE",
+     "home": true
+    },
+    "8": {
+     "opp": "CIN",
+     "home": false
+    },
+    "10": {
+     "opp": "JAX",
+     "home": true
+    },
+    "11": {
+     "opp": "DAL",
+     "home": false
+    },
+    "12": {
+     "opp": "JAX",
+     "home": false
+    },
+    "13": {
+     "opp": "WAS",
+     "home": true
+    },
+    "14": {
+     "opp": "DET",
+     "home": false
+    },
+    "15": {
+     "opp": "IND",
+     "home": true
+    },
+    "16": {
+     "opp": "LV",
+     "home": false
+    },
+    "17": {
+     "opp": "PIT",
+     "home": true
+    },
+    "18": {
+     "opp": "HOU",
+     "home": false
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,4645 @@
+{
+ "year": 2026,
+ "generated": "2026-11-19T20:58:45.514248+00:00",
+ "weeks": [
+  14,
+  15,
+  16,
+  17
+ ],
+ "source": "fantasyteamadvice.com playoff strength of schedule (SAFPA)",
+ "scoring_basis": "ppr",
+ "note": "safpa = points per game the opposing defense allows at this position versus a league-average defense, adjusted for the quality of offenses faced. Computed on PPR scoring: trust the ranking and direction; for RB/WR/TE in standard leagues the size is slightly overstated.",
+ "positions": {
+  "ALL": {
+   "cuts": [
+    -6.59,
+    -1.23,
+    3.05,
+    8.85
+   ],
+   "teams": {
+    "JAX": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": -2.91,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "HOU",
+       "home": false,
+       "safpa": 2.16,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 18.69,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": 9.12,
+       "label": "smash"
+      }
+     }
+    },
+    "ARI": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "NYJ",
+       "home": true,
+       "safpa": -0.86,
+       "label": "average"
+      },
+      "16": {
+       "opp": "NO",
+       "home": false,
+       "safpa": 8.85,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "LV",
+       "home": true,
+       "safpa": 11.31,
+       "label": "smash"
+      }
+     }
+    },
+    "TEN": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 12.75,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 3.16,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 11.31,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": -2.91,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "MIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "NE",
+       "home": false,
+       "safpa": 3.05,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 12.75,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": 9.12,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": -0.86,
+       "label": "average"
+      }
+     }
+    },
+    "DEN": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": -0.86,
+       "label": "average"
+      },
+      "15": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 11.31,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.35,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "NE",
+       "home": false,
+       "safpa": 3.05,
+       "label": "favorable"
+      }
+     }
+    },
+    "IND": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -2.27,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 13.56,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": 5.6,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -2.07,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "PIT": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -5.8,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": -1.15,
+       "label": "average"
+      },
+      "16": {
+       "opp": "CAR",
+       "home": true,
+       "safpa": 6.3,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 13.56,
+       "label": "smash"
+      }
+     }
+    },
+    "LV": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": -1.23,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -2.46,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 13.56,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": 2.59,
+       "label": "average"
+      }
+     }
+    },
+    "CHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -6.59,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "BUF",
+       "home": false,
+       "safpa": 3.35,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "GB",
+       "home": true,
+       "safpa": 2.54,
+       "label": "average"
+      },
+      "17": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 12.75,
+       "label": "smash"
+      }
+     }
+    },
+    "KC": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": 5.6,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "NE",
+       "home": true,
+       "safpa": 3.05,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "SF",
+       "home": true,
+       "safpa": 1.51,
+       "label": "average"
+      },
+      "17": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": -1.23,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "CIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -1.15,
+       "label": "average"
+      },
+      "15": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 6.3,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "IND",
+       "home": false,
+       "safpa": 3.16,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": -1.15,
+       "label": "average"
+      }
+     }
+    },
+    "NYG": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -23.43,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -2.07,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 12.75,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 18.69,
+       "label": "smash"
+      }
+     }
+    },
+    "MIA": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": 0.92,
+       "label": "average"
+      },
+      "15": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 2.54,
+       "label": "average"
+      },
+      "16": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": -1.23,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.35,
+       "label": "favorable"
+      }
+     }
+    },
+    "LAC": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 11.31,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "SF",
+       "home": true,
+       "safpa": 1.51,
+       "label": "average"
+      },
+      "16": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -6.59,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -1.15,
+       "label": "average"
+      }
+     }
+    },
+    "HOU": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": 9.12,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -5.8,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -2.27,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 2.54,
+       "label": "average"
+      }
+     }
+    },
+    "CLE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 3.5,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "NYG",
+       "home": false,
+       "safpa": -3.75,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": -1.15,
+       "label": "average"
+      },
+      "17": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 3.16,
+       "label": "favorable"
+      }
+     }
+    },
+    "GB": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.35,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "MIA",
+       "home": true,
+       "safpa": -6.59,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": 0.92,
+       "label": "average"
+      },
+      "17": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 2.16,
+       "label": "average"
+      }
+     }
+    },
+    "ATL": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -2.07,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": 9.12,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -17.1,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 8.85,
+       "label": "smash"
+      }
+     }
+    },
+    "TB": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": -1.15,
+       "label": "average"
+      },
+      "15": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 8.85,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 3.5,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -13.88,
+       "label": "avoid"
+      }
+     }
+    },
+    "NO": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 6.3,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -17.1,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "ARI",
+       "home": true,
+       "safpa": 2.59,
+       "label": "average"
+      },
+      "17": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 3.5,
+       "label": "favorable"
+      }
+     }
+    },
+    "BUF": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 2.54,
+       "label": "average"
+      },
+      "15": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": 0.92,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DEN",
+       "home": false,
+       "safpa": -2.46,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -6.59,
+       "label": "avoid"
+      }
+     }
+    },
+    "CAR": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 8.85,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": 5.6,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": -2.91,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -23.43,
+       "label": "avoid"
+      }
+     }
+    },
+    "SEA": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -3.75,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -2.27,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -13.88,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 6.3,
+       "label": "favorable"
+      }
+     }
+    },
+    "DET": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 13.56,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -24.71,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -3.75,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": 0.92,
+       "label": "average"
+      }
+     }
+    },
+    "BAL": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -17.1,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": -2.91,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -2.07,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": 5.6,
+       "label": "favorable"
+      }
+     }
+    },
+    "PHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 3.16,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -23.43,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 2.16,
+       "label": "average"
+      },
+      "17": {
+       "opp": "SF",
+       "home": false,
+       "safpa": 1.51,
+       "label": "average"
+      }
+     }
+    },
+    "SF": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -13.88,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": -1.23,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -1.15,
+       "label": "average"
+      },
+      "17": {
+       "opp": "PHI",
+       "home": true,
+       "safpa": -2.27,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "LAR": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "SF",
+       "home": false,
+       "safpa": 1.51,
+       "label": "average"
+      },
+      "15": {
+       "opp": "DAL",
+       "home": true,
+       "safpa": 18.69,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -23.43,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -17.1,
+       "label": "avoid"
+      }
+     }
+    },
+    "NYJ": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -2.46,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": 2.59,
+       "label": "average"
+      },
+      "16": {
+       "opp": "NE",
+       "home": true,
+       "safpa": 3.05,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -24.71,
+       "label": "avoid"
+      }
+     }
+    },
+    "WAS": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 2.16,
+       "label": "average"
+      },
+      "15": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 3.5,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -24.71,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -5.8,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "NE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -24.71,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -1.15,
+       "label": "average"
+      },
+      "16": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": -0.86,
+       "label": "average"
+      },
+      "17": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -2.46,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "DAL": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "LAR",
+       "home": false,
+       "safpa": -13.88,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -5.8,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -3.75,
+       "label": "unfavorable"
+      }
+     }
+    }
+   }
+  },
+  "QB": {
+   "cuts": [
+    -3.05,
+    -0.73,
+    1.15,
+    2.99
+   ],
+   "teams": {
+    "MIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "NE",
+       "home": false,
+       "safpa": 0.22,
+       "label": "average"
+      },
+      "15": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 4.39,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": 3.07,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 0.1,
+       "label": "average"
+      }
+     }
+    },
+    "JAX": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": -2.51,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "HOU",
+       "home": false,
+       "safpa": 0.88,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 4.87,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": 3.07,
+       "label": "smash"
+      }
+     }
+    },
+    "IND": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": 0.79,
+       "label": "average"
+      },
+      "15": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 2.99,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": 2.92,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -0.95,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "TEN": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 4.39,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 0.93,
+       "label": "average"
+      },
+      "16": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 2.84,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": -2.51,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "ARI": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "NYJ",
+       "home": true,
+       "safpa": 0.1,
+       "label": "average"
+      },
+      "16": {
+       "opp": "NO",
+       "home": false,
+       "safpa": 1.15,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "LV",
+       "home": true,
+       "safpa": 2.84,
+       "label": "favorable"
+      }
+     }
+    },
+    "LV": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": -2.1,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -0.47,
+       "label": "average"
+      },
+      "16": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 2.99,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": 4.52,
+       "label": "smash"
+      }
+     }
+    },
+    "CLE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 1.31,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "NYG",
+       "home": false,
+       "safpa": 1.95,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": 0.69,
+       "label": "average"
+      },
+      "17": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 0.93,
+       "label": "average"
+      }
+     }
+    },
+    "DEN": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 0.1,
+       "label": "average"
+      },
+      "15": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 2.84,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": -0.73,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "NE",
+       "home": false,
+       "safpa": 0.22,
+       "label": "average"
+      }
+     }
+    },
+    "GB": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": -0.73,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "MIA",
+       "home": true,
+       "safpa": -1.2,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": 3.36,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 0.88,
+       "label": "average"
+      }
+     }
+    },
+    "KC": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": 2.92,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "NE",
+       "home": true,
+       "safpa": 0.22,
+       "label": "average"
+      },
+      "16": {
+       "opp": "SF",
+       "home": true,
+       "safpa": 1.25,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": -2.1,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "LAC": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 2.84,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "SF",
+       "home": true,
+       "safpa": 1.25,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -1.2,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -1.36,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "NYG": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -6.95,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -0.95,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 4.39,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 4.87,
+       "label": "smash"
+      }
+     }
+    },
+    "PIT": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -3.36,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": 0.69,
+       "label": "average"
+      },
+      "16": {
+       "opp": "CAR",
+       "home": true,
+       "safpa": 0.83,
+       "label": "average"
+      },
+      "17": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 2.99,
+       "label": "smash"
+      }
+     }
+    },
+    "CIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -1.36,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 0.83,
+       "label": "average"
+      },
+      "16": {
+       "opp": "IND",
+       "home": false,
+       "safpa": 0.93,
+       "label": "average"
+      },
+      "17": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": 0.69,
+       "label": "average"
+      }
+     }
+    },
+    "CHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -1.2,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "BUF",
+       "home": false,
+       "safpa": -0.73,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "GB",
+       "home": true,
+       "safpa": -1.9,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 4.39,
+       "label": "smash"
+      }
+     }
+    },
+    "NO": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 0.83,
+       "label": "average"
+      },
+      "15": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -6.1,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "ARI",
+       "home": true,
+       "safpa": 4.52,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 1.31,
+       "label": "favorable"
+      }
+     }
+    },
+    "SEA": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": 1.95,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": 0.79,
+       "label": "average"
+      },
+      "16": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -3.05,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 0.83,
+       "label": "average"
+      }
+     }
+    },
+    "TB": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": 0.69,
+       "label": "average"
+      },
+      "15": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 1.15,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 1.31,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -3.05,
+       "label": "avoid"
+      }
+     }
+    },
+    "BUF": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "GB",
+       "home": false,
+       "safpa": -1.9,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": 3.36,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "DEN",
+       "home": false,
+       "safpa": -0.47,
+       "label": "average"
+      },
+      "17": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -1.2,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "DET": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 2.99,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -8.66,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": 1.95,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": 3.36,
+       "label": "smash"
+      }
+     }
+    },
+    "MIA": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": 3.36,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "GB",
+       "home": false,
+       "safpa": -1.9,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": -2.1,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": -0.73,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "HOU": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": 3.07,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -3.36,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": 0.79,
+       "label": "average"
+      },
+      "17": {
+       "opp": "GB",
+       "home": false,
+       "safpa": -1.9,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "ATL": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -0.95,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": 3.07,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -6.1,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 1.15,
+       "label": "favorable"
+      }
+     }
+    },
+    "PHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 0.93,
+       "label": "average"
+      },
+      "15": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -6.95,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 0.88,
+       "label": "average"
+      },
+      "17": {
+       "opp": "SF",
+       "home": false,
+       "safpa": 1.25,
+       "label": "favorable"
+      }
+     }
+    },
+    "NYJ": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -0.47,
+       "label": "average"
+      },
+      "15": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": 4.52,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "NE",
+       "home": true,
+       "safpa": 0.22,
+       "label": "average"
+      },
+      "17": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -8.66,
+       "label": "avoid"
+      }
+     }
+    },
+    "CAR": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 1.15,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": 2.92,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": -2.51,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -6.95,
+       "label": "avoid"
+      }
+     }
+    },
+    "SF": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -3.05,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": -2.1,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -1.36,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "PHI",
+       "home": true,
+       "safpa": 0.79,
+       "label": "average"
+      }
+     }
+    },
+    "DAL": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "LAR",
+       "home": false,
+       "safpa": -3.05,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -3.36,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": 1.95,
+       "label": "favorable"
+      }
+     }
+    },
+    "BAL": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -6.1,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": -2.51,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -0.95,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": 2.92,
+       "label": "favorable"
+      }
+     }
+    },
+    "LAR": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "SF",
+       "home": false,
+       "safpa": 1.25,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "DAL",
+       "home": true,
+       "safpa": 4.87,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -6.95,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -6.1,
+       "label": "avoid"
+      }
+     }
+    },
+    "WAS": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 0.88,
+       "label": "average"
+      },
+      "15": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 1.31,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -8.66,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -3.36,
+       "label": "avoid"
+      }
+     }
+    },
+    "NE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -8.66,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -1.36,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 0.1,
+       "label": "average"
+      },
+      "17": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -0.47,
+       "label": "average"
+      }
+     }
+    }
+   }
+  },
+  "RB": {
+   "cuts": [
+    -2.87,
+    -1.55,
+    0.88,
+    2.33
+   ],
+   "teams": {
+    "ARI": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "NYJ",
+       "home": true,
+       "safpa": 1.8,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "NO",
+       "home": false,
+       "safpa": 7.06,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "LV",
+       "home": true,
+       "safpa": 1.94,
+       "label": "favorable"
+      }
+     }
+    },
+    "JAX": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": 0.82,
+       "label": "average"
+      },
+      "15": {
+       "opp": "HOU",
+       "home": false,
+       "safpa": 0.88,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 9.33,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": -1.21,
+       "label": "average"
+      }
+     }
+    },
+    "DEN": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 1.8,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 1.94,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.06,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "NE",
+       "home": false,
+       "safpa": -0.31,
+       "label": "average"
+      }
+     }
+    },
+    "TEN": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "DET",
+       "home": false,
+       "safpa": -2.18,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 4.57,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 1.94,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": 0.82,
+       "label": "average"
+      }
+     }
+    },
+    "MIA": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": -0.3,
+       "label": "average"
+      },
+      "15": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 2.33,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": 0.05,
+       "label": "average"
+      },
+      "17": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.06,
+       "label": "smash"
+      }
+     }
+    },
+    "CIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -1.65,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 4.33,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "IND",
+       "home": false,
+       "safpa": 4.57,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": -2.22,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "GB": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.06,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "MIA",
+       "home": true,
+       "safpa": 1.37,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": -0.3,
+       "label": "average"
+      },
+      "17": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 0.88,
+       "label": "favorable"
+      }
+     }
+    },
+    "CHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": 1.37,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "BUF",
+       "home": false,
+       "safpa": 3.06,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "GB",
+       "home": true,
+       "safpa": 2.33,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "DET",
+       "home": true,
+       "safpa": -2.18,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "CLE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 1.91,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "NYG",
+       "home": false,
+       "safpa": -0.99,
+       "label": "average"
+      },
+      "16": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": -2.22,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 4.57,
+       "label": "smash"
+      }
+     }
+    },
+    "CAR": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 7.06,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": -1.55,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": 0.82,
+       "label": "average"
+      },
+      "17": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -3.52,
+       "label": "avoid"
+      }
+     }
+    },
+    "TB": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": -2.22,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 7.06,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 1.91,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -4.1,
+       "label": "avoid"
+      }
+     }
+    },
+    "PIT": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -1.39,
+       "label": "average"
+      },
+      "15": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": -2.22,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "CAR",
+       "home": true,
+       "safpa": 4.33,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 1.39,
+       "label": "favorable"
+      }
+     }
+    },
+    "NYG": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -3.52,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -1.86,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "DET",
+       "home": false,
+       "safpa": -2.18,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 9.33,
+       "label": "smash"
+      }
+     }
+    },
+    "BUF": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 2.33,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": -0.3,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DEN",
+       "home": false,
+       "safpa": -2.04,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": 1.37,
+       "label": "favorable"
+      }
+     }
+    },
+    "PHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 4.57,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -3.52,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 0.88,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "SF",
+       "home": false,
+       "safpa": -1.28,
+       "label": "average"
+      }
+     }
+    },
+    "LAC": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 1.94,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "SF",
+       "home": true,
+       "safpa": -1.28,
+       "label": "average"
+      },
+      "16": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": 1.37,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -1.65,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "MIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "NE",
+       "home": false,
+       "safpa": -0.31,
+       "label": "average"
+      },
+      "15": {
+       "opp": "DET",
+       "home": true,
+       "safpa": -2.18,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": -1.21,
+       "label": "average"
+      },
+      "17": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 1.8,
+       "label": "favorable"
+      }
+     }
+    },
+    "LAR": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "SF",
+       "home": false,
+       "safpa": -1.28,
+       "label": "average"
+      },
+      "15": {
+       "opp": "DAL",
+       "home": true,
+       "safpa": 9.33,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -3.52,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -6.57,
+       "label": "avoid"
+      }
+     }
+    },
+    "ATL": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -1.86,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": -1.21,
+       "label": "average"
+      },
+      "16": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -6.57,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 7.06,
+       "label": "smash"
+      }
+     }
+    },
+    "KC": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": -1.55,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "NE",
+       "home": true,
+       "safpa": -0.31,
+       "label": "average"
+      },
+      "16": {
+       "opp": "SF",
+       "home": true,
+       "safpa": -1.28,
+       "label": "average"
+      },
+      "17": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": 0.05,
+       "label": "average"
+      }
+     }
+    },
+    "NO": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 4.33,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -6.57,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "ARI",
+       "home": true,
+       "safpa": -2.73,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 1.91,
+       "label": "favorable"
+      }
+     }
+    },
+    "HOU": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": -1.21,
+       "label": "average"
+      },
+      "15": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -1.39,
+       "label": "average"
+      },
+      "16": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -2.87,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 2.33,
+       "label": "smash"
+      }
+     }
+    },
+    "LV": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": 0.05,
+       "label": "average"
+      },
+      "15": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -2.04,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 1.39,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": -2.73,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "WAS": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 0.88,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 1.91,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -4.87,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -1.39,
+       "label": "average"
+      }
+     }
+    },
+    "SEA": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -0.99,
+       "label": "average"
+      },
+      "15": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -2.87,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -4.1,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 4.33,
+       "label": "smash"
+      }
+     }
+    },
+    "DET": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 1.39,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -4.87,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -0.99,
+       "label": "average"
+      },
+      "17": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": -0.3,
+       "label": "average"
+      }
+     }
+    },
+    "IND": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -2.87,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 1.39,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": -1.55,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -1.86,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "NE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -4.87,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -1.65,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 1.8,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -2.04,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "SF": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -4.1,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": 0.05,
+       "label": "average"
+      },
+      "16": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -1.65,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "PHI",
+       "home": true,
+       "safpa": -2.87,
+       "label": "avoid"
+      }
+     }
+    },
+    "DAL": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "LAR",
+       "home": false,
+       "safpa": -4.1,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -1.39,
+       "label": "average"
+      },
+      "17": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -0.99,
+       "label": "average"
+      }
+     }
+    },
+    "BAL": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -6.57,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": 0.82,
+       "label": "average"
+      },
+      "16": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -1.86,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": -1.55,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "NYJ": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -2.04,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": -2.73,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NE",
+       "home": true,
+       "safpa": -0.31,
+       "label": "average"
+      },
+      "17": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -4.87,
+       "label": "avoid"
+      }
+     }
+    }
+   }
+  },
+  "WR": {
+   "cuts": [
+    -5.05,
+    -1.3,
+    1.25,
+    4.67
+   ],
+   "teams": {
+    "KC": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": -0.23,
+       "label": "average"
+      },
+      "15": {
+       "opp": "NE",
+       "home": true,
+       "safpa": 7.0,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "SF",
+       "home": true,
+       "safpa": 2.12,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": 5.95,
+       "label": "smash"
+      }
+     }
+    },
+    "IND": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": 2.95,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 10.71,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": -0.23,
+       "label": "average"
+      },
+      "17": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -0.15,
+       "label": "average"
+      }
+     }
+    },
+    "MIA": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": -1.85,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 4.67,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": 5.95,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.58,
+       "label": "favorable"
+      }
+     }
+    },
+    "DEN": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": -3.41,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 3.2,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.58,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "NE",
+       "home": false,
+       "safpa": 7.0,
+       "label": "smash"
+      }
+     }
+    },
+    "PIT": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": 0.51,
+       "label": "average"
+      },
+      "15": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": -0.28,
+       "label": "average"
+      },
+      "16": {
+       "opp": "CAR",
+       "home": true,
+       "safpa": -0.63,
+       "label": "average"
+      },
+      "17": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": 10.71,
+       "label": "smash"
+      }
+     }
+    },
+    "LV": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": 5.95,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -3.91,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 10.71,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": -3.11,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "HOU": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": -0.42,
+       "label": "average"
+      },
+      "15": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": 0.51,
+       "label": "average"
+      },
+      "16": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": 2.95,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 4.67,
+       "label": "smash"
+      }
+     }
+    },
+    "JAX": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": -1.3,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "HOU",
+       "home": false,
+       "safpa": 2.9,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 4.2,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": -0.42,
+       "label": "average"
+      }
+     }
+    },
+    "TB": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": -0.28,
+       "label": "average"
+      },
+      "15": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 0.96,
+       "label": "average"
+      },
+      "16": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 5.48,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -0.89,
+       "label": "average"
+      }
+     }
+    },
+    "SF": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -0.89,
+       "label": "average"
+      },
+      "15": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": 5.95,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -3.05,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "PHI",
+       "home": true,
+       "safpa": 2.95,
+       "label": "favorable"
+      }
+     }
+    },
+    "MIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "NE",
+       "home": false,
+       "safpa": 7.0,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 1.25,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": -0.42,
+       "label": "average"
+      },
+      "17": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": -3.41,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "CHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -7.5,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "BUF",
+       "home": false,
+       "safpa": 3.58,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "GB",
+       "home": true,
+       "safpa": 4.67,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 1.25,
+       "label": "favorable"
+      }
+     }
+    },
+    "ARI": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "NYJ",
+       "home": true,
+       "safpa": -3.41,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NO",
+       "home": false,
+       "safpa": 0.96,
+       "label": "average"
+      },
+      "17": {
+       "opp": "LV",
+       "home": true,
+       "safpa": 3.2,
+       "label": "favorable"
+      }
+     }
+    },
+    "WAS": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 2.9,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 5.48,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -8.22,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": 0.51,
+       "label": "average"
+      }
+     }
+    },
+    "TEN": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 1.25,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "IND",
+       "home": true,
+       "safpa": -3.28,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 3.2,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": -1.3,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "NYG": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -7.24,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -0.15,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 1.25,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": 4.2,
+       "label": "favorable"
+      }
+     }
+    },
+    "GB": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": 3.58,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "MIA",
+       "home": true,
+       "safpa": -7.5,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": -1.85,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 2.9,
+       "label": "favorable"
+      }
+     }
+    },
+    "CLE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": 5.48,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "NYG",
+       "home": false,
+       "safpa": -5.05,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": -0.28,
+       "label": "average"
+      },
+      "17": {
+       "opp": "IND",
+       "home": true,
+       "safpa": -3.28,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "NO": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": -0.63,
+       "label": "average"
+      },
+      "15": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -5.06,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "ARI",
+       "home": true,
+       "safpa": -3.11,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": 5.48,
+       "label": "smash"
+      }
+     }
+    },
+    "SEA": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -5.05,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": 2.95,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -0.89,
+       "label": "average"
+      },
+      "17": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": -0.63,
+       "label": "average"
+      }
+     }
+    },
+    "DET": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": 10.71,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -8.22,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -5.05,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": -1.85,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "ATL": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": -0.15,
+       "label": "average"
+      },
+      "15": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": -0.42,
+       "label": "average"
+      },
+      "16": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -5.06,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 0.96,
+       "label": "average"
+      }
+     }
+    },
+    "LAC": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 3.2,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "SF",
+       "home": true,
+       "safpa": 2.12,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -7.5,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -3.05,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "PHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "IND",
+       "home": true,
+       "safpa": -3.28,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -7.24,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": 2.9,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "SF",
+       "home": false,
+       "safpa": 2.12,
+       "label": "favorable"
+      }
+     }
+    },
+    "LAR": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "SF",
+       "home": false,
+       "safpa": 2.12,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "DAL",
+       "home": true,
+       "safpa": 4.2,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -7.24,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "TB",
+       "home": false,
+       "safpa": -5.06,
+       "label": "avoid"
+      }
+     }
+    },
+    "BAL": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "TB",
+       "home": true,
+       "safpa": -5.06,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": -1.3,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": -0.15,
+       "label": "average"
+      },
+      "17": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": -0.23,
+       "label": "average"
+      }
+     }
+    },
+    "DAL": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "LAR",
+       "home": false,
+       "safpa": -0.89,
+       "label": "average"
+      },
+      "16": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": 0.51,
+       "label": "average"
+      },
+      "17": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": -5.05,
+       "label": "avoid"
+      }
+     }
+    },
+    "CIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "KC",
+       "home": true,
+       "safpa": -3.05,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": -0.63,
+       "label": "average"
+      },
+      "16": {
+       "opp": "IND",
+       "home": false,
+       "safpa": -3.28,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": -0.28,
+       "label": "average"
+      }
+     }
+    },
+    "CAR": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "NO",
+       "home": true,
+       "safpa": 0.96,
+       "label": "average"
+      },
+      "15": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": -0.23,
+       "label": "average"
+      },
+      "16": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": -1.3,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -7.24,
+       "label": "avoid"
+      }
+     }
+    },
+    "NYJ": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -3.91,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": -3.11,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NE",
+       "home": true,
+       "safpa": 7.0,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -8.22,
+       "label": "avoid"
+      }
+     }
+    },
+    "BUF": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "GB",
+       "home": false,
+       "safpa": 4.67,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": -1.85,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "DEN",
+       "home": false,
+       "safpa": -3.91,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": -7.5,
+       "label": "avoid"
+      }
+     }
+    },
+    "NE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -8.22,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "KC",
+       "home": false,
+       "safpa": -3.05,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": -3.41,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": -3.91,
+       "label": "unfavorable"
+      }
+     }
+    }
+   }
+  },
+  "TE": {
+   "cuts": [
+    -3.28,
+    -1.43,
+    0.53,
+    3.61
+   ],
+   "teams": {
+    "TEN": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 9.29,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 1.99,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 3.19,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": 1.02,
+       "label": "favorable"
+      }
+     }
+    },
+    "MIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "NE",
+       "home": false,
+       "safpa": -3.86,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 9.29,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": 7.53,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 0.53,
+       "label": "favorable"
+      }
+     }
+    },
+    "CIN": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "KC",
+       "home": true,
+       "safpa": 4.43,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 2.12,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "IND",
+       "home": false,
+       "safpa": 1.99,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": 0.12,
+       "label": "average"
+      }
+     }
+    },
+    "ATL": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": 0.29,
+       "label": "average"
+      },
+      "15": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": 7.53,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "TB",
+       "home": true,
+       "safpa": 0.46,
+       "label": "average"
+      },
+      "17": {
+       "opp": "NO",
+       "home": true,
+       "safpa": -0.49,
+       "label": "average"
+      }
+     }
+    },
+    "LAC": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 3.19,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "SF",
+       "home": true,
+       "safpa": -0.73,
+       "label": "average"
+      },
+      "16": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": 0.59,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "KC",
+       "home": true,
+       "safpa": 4.43,
+       "label": "smash"
+      }
+     }
+    },
+    "NE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -2.49,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "KC",
+       "home": false,
+       "safpa": 4.43,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 0.53,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": 3.8,
+       "label": "smash"
+      }
+     }
+    },
+    "BAL": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "TB",
+       "home": true,
+       "safpa": 0.46,
+       "label": "average"
+      },
+      "15": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": 1.02,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": 0.29,
+       "label": "average"
+      },
+      "17": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": 3.61,
+       "label": "smash"
+      }
+     }
+    },
+    "JAX": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "PIT",
+       "home": true,
+       "safpa": 1.02,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "HOU",
+       "home": false,
+       "safpa": -2.93,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": -0.34,
+       "label": "average"
+      },
+      "17": {
+       "opp": "WAS",
+       "home": true,
+       "safpa": 7.53,
+       "label": "smash"
+      }
+     }
+    },
+    "CHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": 0.59,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "BUF",
+       "home": false,
+       "safpa": -1.43,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "GB",
+       "home": true,
+       "safpa": -3.23,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "DET",
+       "home": true,
+       "safpa": 9.29,
+       "label": "smash"
+      }
+     }
+    },
+    "NO": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 2.12,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "TB",
+       "home": false,
+       "safpa": 0.46,
+       "label": "average"
+      },
+      "16": {
+       "opp": "ARI",
+       "home": true,
+       "safpa": 3.77,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": -1.5,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "ARI": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "NYJ",
+       "home": true,
+       "safpa": 0.53,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "NO",
+       "home": false,
+       "safpa": -0.49,
+       "label": "average"
+      },
+      "17": {
+       "opp": "LV",
+       "home": true,
+       "safpa": 3.19,
+       "label": "favorable"
+      }
+     }
+    },
+    "NYG": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -5.86,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "CLE",
+       "home": true,
+       "safpa": 0.29,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DET",
+       "home": false,
+       "safpa": 9.29,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "DAL",
+       "home": false,
+       "safpa": -0.34,
+       "label": "average"
+      }
+     }
+    },
+    "NYJ": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": 3.8,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": 3.77,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "NE",
+       "home": true,
+       "safpa": -3.86,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "MIN",
+       "home": true,
+       "safpa": -2.49,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "CLE": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": -1.5,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "NYG",
+       "home": false,
+       "safpa": 0.22,
+       "label": "average"
+      },
+      "16": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": 0.12,
+       "label": "average"
+      },
+      "17": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 1.99,
+       "label": "favorable"
+      }
+     }
+    },
+    "LV": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": -5.13,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "DEN",
+       "home": true,
+       "safpa": 3.8,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": -1.67,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "ARI",
+       "home": false,
+       "safpa": 3.77,
+       "label": "smash"
+      }
+     }
+    },
+    "BUF": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "GB",
+       "home": false,
+       "safpa": -3.23,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": -1.02,
+       "label": "average"
+      },
+      "16": {
+       "opp": "DEN",
+       "home": false,
+       "safpa": 3.8,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "MIA",
+       "home": false,
+       "safpa": 0.59,
+       "label": "favorable"
+      }
+     }
+    },
+    "HOU": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "WAS",
+       "home": false,
+       "safpa": 7.53,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -1.81,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -3.28,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "GB",
+       "home": false,
+       "safpa": -3.23,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "IND": {
+     "bye": 13,
+     "weeks": {
+      "14": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -3.28,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": -1.67,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": 3.61,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "CLE",
+       "home": false,
+       "safpa": 0.29,
+       "label": "average"
+      }
+     }
+    },
+    "PIT": {
+     "bye": 9,
+     "weeks": {
+      "14": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -1.81,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "BAL",
+       "home": true,
+       "safpa": 0.12,
+       "label": "average"
+      },
+      "16": {
+       "opp": "CAR",
+       "home": true,
+       "safpa": 2.12,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "TEN",
+       "home": false,
+       "safpa": -1.67,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "DEN": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "NYJ",
+       "home": false,
+       "safpa": 0.53,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "LV",
+       "home": false,
+       "safpa": 3.19,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": -1.43,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "NE",
+       "home": false,
+       "safpa": -3.86,
+       "label": "avoid"
+      }
+     }
+    },
+    "CAR": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "NO",
+       "home": true,
+       "safpa": -0.49,
+       "label": "average"
+      },
+      "15": {
+       "opp": "CIN",
+       "home": true,
+       "safpa": 3.61,
+       "label": "smash"
+      },
+      "16": {
+       "opp": "PIT",
+       "home": false,
+       "safpa": 1.02,
+       "label": "favorable"
+      },
+      "17": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -5.86,
+       "label": "avoid"
+      }
+     }
+    },
+    "GB": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": -1.43,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "MIA",
+       "home": true,
+       "safpa": 0.59,
+       "label": "favorable"
+      },
+      "16": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": -1.02,
+       "label": "average"
+      },
+      "17": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": -2.93,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "DET": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "TEN",
+       "home": true,
+       "safpa": -1.67,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -2.49,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": 0.22,
+       "label": "average"
+      },
+      "17": {
+       "opp": "CHI",
+       "home": false,
+       "safpa": -1.02,
+       "label": "average"
+      }
+     }
+    },
+    "KC": {
+     "bye": 5,
+     "weeks": {
+      "14": {
+       "opp": "CIN",
+       "home": false,
+       "safpa": 3.61,
+       "label": "smash"
+      },
+      "15": {
+       "opp": "NE",
+       "home": true,
+       "safpa": -3.86,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "SF",
+       "home": true,
+       "safpa": -0.73,
+       "label": "average"
+      },
+      "17": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": -5.13,
+       "label": "avoid"
+      }
+     }
+    },
+    "LAR": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "SF",
+       "home": false,
+       "safpa": -0.73,
+       "label": "average"
+      },
+      "15": {
+       "opp": "DAL",
+       "home": true,
+       "safpa": -0.34,
+       "label": "average"
+      },
+      "16": {
+       "opp": "SEA",
+       "home": false,
+       "safpa": -5.86,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "TB",
+       "home": false,
+       "safpa": 0.46,
+       "label": "average"
+      }
+     }
+    },
+    "SEA": {
+     "bye": 11,
+     "weeks": {
+      "14": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": 0.22,
+       "label": "average"
+      },
+      "15": {
+       "opp": "PHI",
+       "home": false,
+       "safpa": -3.28,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -5.98,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "CAR",
+       "home": false,
+       "safpa": 2.12,
+       "label": "favorable"
+      }
+     }
+    },
+    "PHI": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "IND",
+       "home": true,
+       "safpa": 1.99,
+       "label": "favorable"
+      },
+      "15": {
+       "opp": "SEA",
+       "home": true,
+       "safpa": -5.86,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": -2.93,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "SF",
+       "home": false,
+       "safpa": -0.73,
+       "label": "average"
+      }
+     }
+    },
+    "TB": {
+     "bye": 10,
+     "weeks": {
+      "14": {
+       "opp": "BAL",
+       "home": false,
+       "safpa": 0.12,
+       "label": "average"
+      },
+      "15": {
+       "opp": "NO",
+       "home": true,
+       "safpa": -0.49,
+       "label": "average"
+      },
+      "16": {
+       "opp": "ATL",
+       "home": false,
+       "safpa": -1.5,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -5.98,
+       "label": "avoid"
+      }
+     }
+    },
+    "WAS": {
+     "bye": 7,
+     "weeks": {
+      "14": {
+       "opp": "HOU",
+       "home": true,
+       "safpa": -2.93,
+       "label": "unfavorable"
+      },
+      "15": {
+       "opp": "ATL",
+       "home": true,
+       "safpa": -1.5,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "MIN",
+       "home": false,
+       "safpa": -2.49,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "JAX",
+       "home": false,
+       "safpa": -1.81,
+       "label": "unfavorable"
+      }
+     }
+    },
+    "SF": {
+     "bye": 8,
+     "weeks": {
+      "14": {
+       "opp": "LAR",
+       "home": true,
+       "safpa": -5.98,
+       "label": "avoid"
+      },
+      "15": {
+       "opp": "LAC",
+       "home": false,
+       "safpa": -5.13,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "KC",
+       "home": false,
+       "safpa": 4.43,
+       "label": "smash"
+      },
+      "17": {
+       "opp": "PHI",
+       "home": true,
+       "safpa": -3.28,
+       "label": "avoid"
+      }
+     }
+    },
+    "DAL": {
+     "bye": 14,
+     "weeks": {
+      "15": {
+       "opp": "LAR",
+       "home": false,
+       "safpa": -5.98,
+       "label": "avoid"
+      },
+      "16": {
+       "opp": "JAX",
+       "home": true,
+       "safpa": -1.81,
+       "label": "unfavorable"
+      },
+      "17": {
+       "opp": "NYG",
+       "home": true,
+       "safpa": 0.22,
+       "label": "average"
+      }
+     }
+    },
+    "MIA": {
+     "bye": 6,
+     "weeks": {
+      "14": {
+       "opp": "CHI",
+       "home": true,
+       "safpa": -1.02,
+       "label": "average"
+      },
+      "15": {
+       "opp": "GB",
+       "home": false,
+       "safpa": -3.23,
+       "label": "unfavorable"
+      },
+      "16": {
+       "opp": "LAC",
+       "home": true,
+       "safpa": -5.13,
+       "label": "avoid"
+      },
+      "17": {
+       "opp": "BUF",
+       "home": true,
+       "safpa": -1.43,
+       "label": "unfavorable"
+      }
+     }
+    }
+   }
+  }
+ }
+}
