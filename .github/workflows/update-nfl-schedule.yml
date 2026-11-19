@@ -1,0 +1,56 @@
+name: Update NFL Schedule + Matchups
+
+# Writes nfl_schedule_<year>.json (ESPN: opponent / home-away / bye for every team, every week) and
+# matchup_ratings_<year>.json (per-position matchup bumps for weeks 14-17 from FantasyTeamAdvice's public
+# SAFPA pages). The script validates both (32 teams, A-vs-B symmetry, bye weeks agree across ESPN / FTA /
+# the hardcoded map) and refuses to write anything if they don't -- a failed run leaves the last good files.
+#
+# Tuesday 15:00 UTC: after Monday Night Football, an hour after the Yahoo season pull (14:00), so the matchup
+# numbers include the weekend's games. No secrets needed. Touches neither the ESPN cookies nor the Yahoo
+# token, so it needs no concurrency group with the Yahoo workflows.
+on:
+  schedule:
+    - cron: '0 15 * * 2'
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year'
+        required: false
+        default: '2026'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: Pull schedule and matchup ratings
+        run: |
+          set -o pipefail
+          python update_nfl_matchups.py "${{ github.event.inputs.year || '2026' }}" 2>&1 | tee matchups_run.log
+          exit "${PIPESTATUS[0]}"
+
+      - name: Commit updated files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add nfl_schedule_*.json matchup_ratings_*.json
+          git diff --staged --quiet || git commit -m "Update NFL schedule + matchup ratings for ${{ github.event.inputs.year || '2026' }}"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push rejected (likely another workflow pushed to main first) -- rebasing and retrying ($i/5)..."
+            git pull --rebase origin main
+          done
+          echo "::error::git push failed after 5 retries. If this keeps happening, check for a genuine merge conflict that needs manual resolution."
+          exit 1

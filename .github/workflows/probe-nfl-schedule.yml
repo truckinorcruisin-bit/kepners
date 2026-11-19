@@ -1,0 +1,44 @@
+name: Probe NFL Schedule + Matchup Sources
+
+# Run manually from the Actions tab. READ-ONLY and writes NO data files: it fetches the ESPN schedule and
+# the FantasyTeamAdvice playoff-SoS pages, prints the structure it sees, and uploads the raw responses as a
+# downloadable artifact ("nfl-probe") so a shape change can be diagnosed without guessing.
+# Run this BEFORE the first "Update NFL Schedule + Matchups" run, and again if that workflow ever fails.
+# No secrets needed; touches neither ESPN login cookies nor the Yahoo token.
+on:
+  workflow_dispatch:
+    inputs:
+      year:
+        description: 'Season year'
+        required: false
+        default: '2026'
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests beautifulsoup4 lxml
+
+      - name: Probe sources
+        run: |
+          set -o pipefail
+          python update_nfl_matchups.py "${{ github.event.inputs.year || '2026' }}" --probe 2>&1 | tee probe_run.log
+          exit "${PIPESTATUS[0]}"
+
+      - name: Upload raw responses
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: nfl-probe
+          path: |
+            probe_out/
+            probe_run.log
