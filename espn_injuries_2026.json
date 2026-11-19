@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-11-17T21:28:21.953720+00:00",
+ "generated": "2026-11-19T01:22:58.784706+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 1003,
  "injuries": [
@@ -10,41 +10,6 @@
    "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-19"
-  },
-  {
-   "id": 4362504,
-   "name": "Brevin Jordan",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-19"
-  },
-  {
-   "id": 4432708,
-   "name": "Marvin Harrison Jr.",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-19"
-  },
-  {
-   "id": 4362523,
-   "name": "Will Mallory",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-19"
-  },
-  {
-   "id": 4429059,
-   "name": "Woody Marks",
-   "pos": "RB",
-   "status": "DOUBTFUL",
-   "ret": "2026-11-19"
-  },
-  {
-   "id": 4685526,
-   "name": "Adam Randall",
-   "pos": "RB",
-   "status": "INJURY_RESERVE",
-   "ret": "2026-11-22"
   },
   {
    "id": 3917668,
@@ -75,10 +40,10 @@
    "ret": "2026-11-22"
   },
   {
-   "id": 4596602,
-   "name": "Brashard Smith",
+   "id": 4882093,
+   "name": "Bhayshul Tuten",
    "pos": "RB",
-   "status": "INJURY_RESERVE",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
   {
@@ -110,9 +75,9 @@
    "ret": "2026-11-22"
   },
   {
-   "id": 5081999,
-   "name": "CJ Donaldson",
-   "pos": "RB",
+   "id": 4869645,
+   "name": "Caleb Douglas",
+   "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -145,6 +110,13 @@
    "ret": "2026-11-22"
   },
   {
+   "id": 4241263,
+   "name": "Charlie Kolar",
+   "pos": "TE",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
    "id": 4869961,
    "name": "Chris Bell",
    "pos": "WR",
@@ -154,6 +126,13 @@
   {
    "id": 4698191,
    "name": "Chris Collier",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4362619,
+   "name": "Chris Rodriguez Jr.",
    "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
@@ -169,6 +148,13 @@
    "id": 4036211,
    "name": "DJ Turner",
    "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4385690,
+   "name": "Dalton Kincaid",
+   "pos": "TE",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -194,6 +180,13 @@
    "ret": "2026-11-22"
   },
   {
+   "id": 2576925,
+   "name": "Darren Waller",
+   "pos": "TE",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
    "id": 4241478,
    "name": "DeVonta Smith",
    "pos": "WR",
@@ -203,13 +196,6 @@
   {
    "id": 4036026,
    "name": "Dez Fitzpatrick",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-22"
-  },
-  {
-   "id": 4432775,
-   "name": "Dont'e Thornton Jr.",
    "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
@@ -250,8 +236,29 @@
    "ret": "2026-11-22"
   },
   {
+   "id": 4569371,
+   "name": "Isaiah Williams",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
    "id": 4431506,
    "name": "Ja'Corey Brooks",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4573699,
+   "name": "Jackson Hawes",
+   "pos": "TE",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 3916433,
+   "name": "Jakobi Meyers",
    "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
@@ -274,20 +281,6 @@
    "id": 4430681,
    "name": "Jared Wayne",
    "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-22"
-  },
-  {
-   "id": 3886598,
-   "name": "Jauan Jennings",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-22"
-  },
-  {
-   "id": 4685489,
-   "name": "Jaydn Ott",
-   "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -320,15 +313,15 @@
    "ret": "2026-11-22"
   },
   {
-   "id": 4567048,
-   "name": "Kenneth Walker III",
-   "pos": "RB",
+   "id": 4880281,
+   "name": "Jordyn Tyson",
+   "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
   {
-   "id": 4608686,
-   "name": "Kyle Monangai",
+   "id": 4567048,
+   "name": "Kenneth Walker III",
    "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
@@ -337,6 +330,20 @@
    "id": 4612826,
    "name": "Ladd McConkey",
    "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4911851,
+   "name": "LeQuint Allen Jr.",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4241464,
+   "name": "Mac Jones",
+   "pos": "QB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -390,6 +397,13 @@
    "ret": "2026-11-22"
   },
   {
+   "id": 4429501,
+   "name": "Ray Davis",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
    "id": 4431492,
    "name": "Roman Wilson",
    "pos": "WR",
@@ -400,6 +414,13 @@
    "id": 4608362,
    "name": "Shane Zylstra",
    "pos": "TE",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4912274,
+   "name": "Sione Vaki",
+   "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -425,10 +446,24 @@
    "ret": "2026-11-22"
   },
   {
+   "id": 4372780,
+   "name": "Tommy Tremble",
+   "pos": "TE",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
    "id": 4383351,
    "name": "Trey Lance",
    "pos": "QB",
    "status": "INJURY_RESERVE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4428557,
+   "name": "Tyjae Spears",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
   {
@@ -443,13 +478,6 @@
    "name": "Tyree Jackson",
    "pos": "TE",
    "status": "QUESTIONABLE",
-   "ret": "2026-11-22"
-  },
-  {
-   "id": 4241476,
-   "name": "Tyrell Shavers",
-   "pos": "WR",
-   "status": "OUT",
    "ret": "2026-11-22"
   },
   {
@@ -544,6 +572,13 @@
    "ret": "2026-11-25"
   },
   {
+   "id": 4596602,
+   "name": "Brashard Smith",
+   "pos": "RB",
+   "status": "INJURY_RESERVE",
+   "ret": "2026-11-26"
+  },
+  {
    "id": 4242355,
    "name": "Jake Ferguson",
    "pos": "TE",
@@ -575,6 +610,13 @@
    "id": 4360438,
    "name": "Brandon Aiyuk",
    "pos": "WR",
+   "status": "OUT",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4362504,
+   "name": "Brevin Jordan",
+   "pos": "TE",
    "status": "OUT",
    "ret": "2026-11-29"
   },
@@ -621,13 +663,6 @@
    "ret": "2026-11-29"
   },
   {
-   "id": 3045147,
-   "name": "James Conner",
-   "pos": "RB",
-   "status": "INJURY_RESERVE",
-   "ret": "2026-11-29"
-  },
-  {
    "id": 4429939,
    "name": "Jawhar Jordan",
    "pos": "RB",
@@ -659,6 +694,13 @@
    "id": 3917315,
    "name": "Kyler Murray",
    "pos": "QB",
+   "status": "OUT",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4432708,
+   "name": "Marvin Harrison Jr.",
+   "pos": "WR",
    "status": "OUT",
    "ret": "2026-11-29"
   },
@@ -702,6 +744,20 @@
    "name": "Tyreek Hill",
    "pos": "WR",
    "status": "QUESTIONABLE",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4362523,
+   "name": "Will Mallory",
+   "pos": "TE",
+   "status": "OUT",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4429059,
+   "name": "Woody Marks",
+   "pos": "RB",
+   "status": "OUT",
    "ret": "2026-11-29"
   },
   {
@@ -796,13 +852,6 @@
    "ret": "2026-12-13"
   },
   {
-   "id": 4430723,
-   "name": "Jared Wiley",
-   "pos": "TE",
-   "status": "OUT",
-   "ret": "2026-12-13"
-  },
-  {
    "id": 4242512,
    "name": "Malik Willis",
    "pos": "QB",
@@ -815,6 +864,13 @@
    "pos": "RB",
    "status": "INJURY_RESERVE",
    "ret": "2026-12-13"
+  },
+  {
+   "id": 3045147,
+   "name": "James Conner",
+   "pos": "RB",
+   "status": "INJURY_RESERVE",
+   "ret": "2026-12-20"
   },
   {
    "id": 4569382,
@@ -859,11 +915,11 @@
    "ret": "2026-12-20"
   },
   {
-   "id": 4569587,
-   "name": "Wan'Dale Robinson",
-   "pos": "WR",
+   "id": 4430723,
+   "name": "Jared Wiley",
+   "pos": "TE",
    "status": "INJURY_RESERVE",
-   "ret": "2026-12-20"
+   "ret": "2026-12-21"
   },
   {
    "id": 4432710,
@@ -1247,6 +1303,13 @@
    "id": 4035671,
    "name": "Tyler Huntley",
    "pos": "QB",
+   "status": "INJURY_RESERVE",
+   "ret": "2027-02-15"
+  },
+  {
+   "id": 4569587,
+   "name": "Wan'Dale Robinson",
+   "pos": "WR",
    "status": "INJURY_RESERVE",
    "ret": "2027-02-15"
   },
