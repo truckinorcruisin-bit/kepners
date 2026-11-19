@@ -830,6 +830,28 @@
     border:1px dashed var(--line-2);}
   .mgr-comingsoon{font-size:10px;color:var(--dim);line-height:1.6;padding:10px 12px;
     border:1px dashed var(--line-2);background:var(--panel);}
+  /* ===== Playoff outlook: opponent + position-specific matchup bump for the playoff weeks ===== */
+  .po-fmt{font-size:10.5px;color:var(--txt);line-height:1.6;margin-bottom:4px;}
+  .po-note{font-size:9.5px;color:var(--dim);line-height:1.6;margin:4px 0 8px;}
+  .po-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;}
+  .po-tbl{border-collapse:collapse;width:100%;min-width:300px;font-size:10.5px;}
+  .po-tbl th{font-size:9px;letter-spacing:0.06em;text-transform:uppercase;color:var(--dim);font-weight:400;
+    text-align:center;padding:4px 5px;border-bottom:1px solid var(--line);white-space:nowrap;}
+  .po-tbl th.po-l,.po-tbl td.po-l{text-align:left;}
+  .po-tbl td{padding:5px 5px;border-bottom:1px solid var(--line);text-align:center;white-space:nowrap;}
+  .po-pl{color:var(--txt);}
+  .po-pl small{color:var(--dim);font-size:9px;margin-left:4px;}
+  .po-opp{display:block;font-size:9px;color:var(--dim);}
+  .po-v{display:block;font-weight:600;}
+  .po-smash{background:rgba(52,211,153,0.20);color:var(--green);}
+  .po-favorable{background:rgba(52,211,153,0.09);color:var(--green);}
+  .po-average{color:var(--txt);}
+  .po-unfavorable{background:rgba(248,113,113,0.09);color:var(--red);}
+  .po-avoid{background:rgba(248,113,113,0.20);color:var(--red);}
+  .po-bye{color:var(--red);font-weight:600;}
+  .po-none{color:var(--dim);}
+  .po-sum{font-size:10px;line-height:1.7;color:var(--txt);margin:6px 0;}
+  .po-sum b.g{color:var(--green);} .po-sum b.r{color:var(--red);}
 
   /* power rankings over time */
   .mgr-ph-chart{width:100%;height:auto;display:block;margin:4px 0 8px;}
@@ -1100,6 +1122,9 @@ let WAIVERS=null, TRENDING=null;
 // Weekly power-ranking snapshots (power_history.py, written by build_inseason.py).
 // One entry per league per NFL week -- see that file for why it's never daily.
 let POWER_HIST=null;
+let MATCHUPS=null;      // matchup_ratings_<year>.json: per-position SAFPA bump by team/week (weeks 14-17)
+let NFL_SCHED=null;     // nfl_schedule_<year>.json: opponent / home-away / bye for every team, every week
+let PLAYOFF_RULES=null; // league_rules.json: playoff weeks / seeds / byes per league
 // activeView is the NEW top-level nav (Manager/Draft/Players). activeMode
 // stays exactly what it was -- the Draft view's OWN internal sub-nav
 // (draft/prep/history/replay) -- and is only consulted while
@@ -1332,6 +1357,20 @@ async function boot(){
     const rP = await fetch(`power_rankings_history.json?t=${Date.now()}`);
     if(rP.ok) POWER_HIST = await rP.json();
   }catch(e){ /* the history chart shows its own empty state */ }
+  // Playoff outlook inputs. All three are optional: without them the Playoff outlook section shows its
+  // own "run the workflow" message instead of a blank.
+  try{
+    const rM = await fetch(`matchup_ratings_${SEASON_YEAR}.json?t=${Date.now()}`);
+    if(rM.ok) MATCHUPS = await rM.json();
+  }catch(e){ /* matchup bumps just don't render */ }
+  try{
+    const rN = await fetch(`nfl_schedule_${SEASON_YEAR}.json?t=${Date.now()}`);
+    if(rN.ok) NFL_SCHED = await rN.json();
+  }catch(e){ /* opponents fall back to the matchup file */ }
+  try{
+    const rR = await fetch(`league_rules.json?t=${Date.now()}`);
+    if(rR.ok) PLAYOFF_RULES = await rR.json();
+  }catch(e){ /* PO_FALLBACK below covers the three known leagues */ }
 
   computeSeanOverallRanks();
   renderLeagueTabs();
@@ -3368,6 +3407,102 @@ function renderTradeBuilder(el){
   });
 }
 
+
+// ===== Playoff outlook =====================================================================
+// Opponent + the position-specific matchup bump for each playoff week, for everyone on your roster.
+// Bump = points per game the opposing DEFENSE allows at that position versus a league-average defense
+// (FantasyTeamAdvice SAFPA: already adjusted for the quality of offenses that defense has faced).
+// It is PPR-based, so in our standard leagues read it as a ranking and a direction; the size is slightly
+// overstated for RB/WR/TE.  K and DEF show the opponent only -- the DST direction is graded the other way
+// round on the source and hasn't been verified for this grid yet.
+const PO_FALLBACK = {
+  kepners:{weeks:[15,16,17], teams:6, byes:2, bye_week:15},
+  miami:  {weeks:[16,17],    teams:4, byes:0, bye_week:null},
+  zimmer: {weeks:[15,16,17], teams:6, byes:2, bye_week:15}
+};
+const PO_ALIAS = {LVR:'LV',JAC:'JAX',WSH:'WAS',LA:'LAR',GNB:'GB',KAN:'KC',NWE:'NE',NOR:'NO',SFO:'SF',TAM:'TB',ARZ:'ARI'};
+function poTeamKey(t){
+  if(!t) return null;
+  t = String(t).trim().toUpperCase();
+  return PO_ALIAS[t] || t;
+}
+function poRules(key){
+  const r = PLAYOFF_RULES && PLAYOFF_RULES[key] && PLAYOFF_RULES[key].playoffs;
+  return r || PO_FALLBACK[key] || null;
+}
+// One player-week cell: {opp, home, safpa|null, label|null, bye}
+function poCell(pos, team, wk){
+  const t = poTeamKey(team), w = String(wk);
+  const P = MATCHUPS && MATCHUPS.positions && MATCHUPS.positions[pos];
+  const m = P && P.teams && P.teams[t];
+  if(m && m.weeks && m.weeks[w]) return {opp:m.weeks[w].opp, home:m.weeks[w].home, safpa:m.weeks[w].safpa, label:m.weeks[w].label, bye:false};
+  const sch = NFL_SCHED && NFL_SCHED.teams && NFL_SCHED.teams[t];
+  if(sch){
+    if(sch.games && sch.games[w]) return {opp:sch.games[w].opp, home:sch.games[w].home, safpa:null, label:null, bye:false};
+    if(sch.bye && Number(sch.bye)===Number(wk)) return {opp:null, home:null, safpa:null, label:null, bye:true};
+  }
+  // matchup file knows the bye even if the schedule file is missing
+  const A = MATCHUPS && MATCHUPS.positions && MATCHUPS.positions.ALL && MATCHUPS.positions.ALL.teams[t];
+  if(A && A.bye && Number(A.bye)===Number(wk)) return {opp:null, home:null, safpa:null, label:null, bye:true};
+  return null;
+}
+function mgrPlayoffOutlookHtml(key, lg, me){
+  const R = poRules(key);
+  if(!R) return `<div class="mgr-empty">No playoff format is configured for this league yet.</div>`;
+  const nT = (lg.teams||[]).length;
+  const wks = R.weeks;
+  const fmt = `Playoffs: Weeks ${wks[0]}–${wks[wks.length-1]} · top ${R.teams} of ${nT} make it`
+    + (R.byes ? ` · seeds 1–${R.byes} skip Week ${R.bye_week}` : ' · no bye');
+  if(!MATCHUPS && !NFL_SCHED){
+    return `<div class="po-fmt">${fmt}</div>
+      <div class="mgr-empty">No schedule data yet. Run <b>Update NFL Schedule + Matchups</b> from the Actions tab
+      (run <b>Probe NFL Schedule + Matchup Sources</b> first if it has never run).</div>`;
+  }
+  const POS_ORDER = ['QB','RB','WR','TE','DEF','K'];
+  const BUMP_POS = new Set(['QB','RB','WR','TE']);
+  const players = (me.roster||[])
+    .filter(p=>p.lineup_slot!=='IR' && POS_ORDER.includes(p.position))
+    .sort((a,b)=> POS_ORDER.indexOf(a.position)-POS_ORDER.indexOf(b.position) || (b.effective_per_week||0)-(a.effective_per_week||0));
+  const rows = players.map(p=>{
+    const cells = wks.map(w=>poCell(BUMP_POS.has(p.position)?p.position:'ALL', p.pro_team, w));
+    const bumps = cells.filter(c=>c && c.safpa!=null).map(c=>c.safpa);
+    const avg = (BUMP_POS.has(p.position) && bumps.length===wks.length) ? bumps.reduce((a,b)=>a+b,0)/bumps.length : null;
+    return {p, cells, avg};
+  });
+  const fmtV = v => (v>0?'+':'')+v.toFixed(1);
+  const cellHtml = (c, showBump) => {
+    if(!c) return `<td class="po-none">—</td>`;
+    if(c.bye) return `<td class="po-bye">BYE</td>`;
+    const opp = `${c.home?'vs':'@'} ${escapeHtml(c.opp)}`;
+    if(!showBump || c.safpa==null) return `<td><span class="po-opp">${opp}</span><span class="po-v po-none">—</span></td>`;
+    return `<td class="po-${c.label||'average'}"><span class="po-opp">${opp}</span><span class="po-v">${fmtV(c.safpa)}</span></td>`;
+  };
+  const avgCls = v => v==null ? 'po-none' : (v>=3?'po-smash':(v>=1?'po-favorable':(v<=-3?'po-avoid':(v<=-1?'po-unfavorable':'po-average'))));
+  const head = `<tr><th class="po-l">Player</th>${wks.map(w=>`<th>Wk ${w}</th>`).join('')}<th>Avg</th></tr>`;
+  const body = rows.map(r=>`<tr>
+      <td class="po-l po-pl">${escapeHtml(r.p.name)}<small>${r.p.position} · ${escapeHtml(poTeamKey(r.p.pro_team)||'')}</small></td>
+      ${r.cells.map(c=>cellHtml(c, BUMP_POS.has(r.p.position))).join('')}
+      <td class="${avgCls(r.avg)}">${r.avg==null?'—':`<span class="po-v">${fmtV(r.avg)}</span>`}</td>
+    </tr>`).join('');
+  // best / worst playoff windows among players who actually matter (projected 3+ pts/wk)
+  const ranked = rows.filter(r=>r.avg!=null && (r.p.effective_per_week||0)>=3).sort((a,b)=>b.avg-a.avg);
+  const nm = r=>`${escapeHtml(r.p.name)} (${fmtV(r.avg)})`;
+  const summary = ranked.length>=4
+    ? `<div class="po-sum"><b class="g">Best playoff windows:</b> ${ranked.slice(0,3).map(nm).join(', ')}<br>
+        <b class="r">Toughest:</b> ${ranked.slice(-3).reverse().map(nm).join(', ')}</div>` : '';
+  const gen = MATCHUPS && MATCHUPS.generated ? MATCHUPS.generated.slice(0,10) : '';
+  const byeNote = R.byes
+    ? `If you earn a bye you only play Weeks ${wks.slice(1)[0]}–${wks[wks.length-1]}, so those weeks are the ones that decide a title; Week ${R.bye_week} only matters if you're a 3–${R.teams} seed.`
+    : `No bye here: every playoff team plays both weeks, so the two columns count equally.`;
+  return `<div class="po-fmt">${fmt}</div>
+    <div class="po-note">${byeNote}</div>
+    ${summary}
+    <div class="po-wrap"><table class="po-tbl"><thead>${head}</thead><tbody>${body}</tbody></table></div>
+    <div class="po-note">Number = points per game the opposing defense allows at that position vs. an average defense
+      (schedule-adjusted; green = easier). Source: FantasyTeamAdvice SAFPA${gen?`, pulled ${gen}`:''}. It's PPR-based, so in a
+      standard league trust the ranking more than the size. K and DEF show the opponent only. Roster is as of the last in-season pull.</div>`;
+}
+
 function renderManagerLeagueDetail(el, key){
   const lg = INSEASON.leagues[key];
   const me = mgrMyTeam(lg);
@@ -3547,6 +3682,9 @@ function renderManagerLeagueDetail(el, key){
       a flex-eligible bench player has to beat to be worth starting. The right-hand number is
       how far above or below that bar he is, per week.</div>
     ${benchRows || '<div class="mgr-empty">No bench players with projections.</div>'}
+
+    <div class="mgr-section-lbl">Playoff outlook</div>
+    ${mgrPlayoffOutlookHtml(key, lg, me)}
 
     <div class="mgr-section-lbl">League power rankings</div>
     <div class="mgr-boards">

@@ -10,6 +10,18 @@
       "cost_rounds_advance": 2,
       "cost_rule": "Keeper costs 2 rounds earlier than the round in which the player was drafted the prior season (e.g. drafted round 8 -> kept at a round 6 cost).",
       "eligibility": "Player must have been drafted the prior season. Players added via waiver/free agency (undrafted) cannot be kept."
+    },
+    "playoffs": {
+      "start_week": 15,
+      "weeks": [
+        15,
+        16,
+        17
+      ],
+      "teams": 6,
+      "byes": 2,
+      "bye_week": 15,
+      "note": "Top 2 seeds get a Week 15 bye; seeds 3-6 play Week 15. Confirmed in Yahoo league settings (start week 15, 6 teams)."
     }
   },
   "miami": {
@@ -33,7 +45,18 @@
     "manager_renames": {
       "Greene": "Milligan"
     },
-    "_manager_rename_note": "Greene transferred his team to Milligan for 2026. convert_bigboard.py applies these renames to the Miami Team sheet, so the workbook doesn't have to be edited."
+    "_manager_rename_note": "Greene transferred his team to Milligan for 2026. convert_bigboard.py applies these renames to the Miami Team sheet, so the workbook doesn't have to be edited.",
+    "playoffs": {
+      "start_week": 16,
+      "weeks": [
+        16,
+        17
+      ],
+      "teams": 4,
+      "byes": 0,
+      "bye_week": null,
+      "note": "Semifinals Week 16, final Week 17, top 4 of 8. Confirmed in Yahoo league settings (start week 16, 4 teams)."
+    }
   },
   "zimmer": {
     "platform": "espn",
@@ -141,6 +164,18 @@
         "manager": "Dangerous Nights Crew",
         "isMe": false
       }
-    ]
+    ],
+    "playoffs": {
+      "start_week": 15,
+      "weeks": [
+        15,
+        16,
+        17
+      ],
+      "teams": 6,
+      "byes": 2,
+      "bye_week": 15,
+      "note": "Top 2 seeds get a Week 15 bye; seeds 3-6 play Week 15. Per Sean; not yet cross-checked against ESPN settings."
+    }
   }
 }
