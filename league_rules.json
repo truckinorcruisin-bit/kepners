@@ -177,5 +177,22 @@
       "bye_week": 15,
       "note": "Top 2 seeds get a Week 15 bye; seeds 3-6 play Week 15. Per Sean; not yet cross-checked against ESPN settings."
     }
+  },
+  "inspire11": {
+    "_comment": "Only the playoffs block is used for this league (roster shape comes live from ESPN). convert_bigboard.py ignores it.",
+    "platform": "espn",
+    "teams": 12,
+    "playoffs": {
+      "start_week": 15,
+      "weeks": [
+        15,
+        16,
+        17
+      ],
+      "teams": null,
+      "byes": null,
+      "bye_week": null,
+      "note": "Weeks 15-17 per Sean; number of playoff teams and byes not yet confirmed."
+    }
   }
 }

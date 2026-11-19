@@ -35,10 +35,12 @@ UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
 PAUSE = 1.5            # politeness gap between page fetches
 FTA_BASE = "https://fantasyteamadvice.com/nfl/strength-of-schedule/playoff"
 FTA_WEEKS = [14, 15, 16, 17]
-# tab name -> our position key.  "" is the combined/overall tab.  K and DST are intentionally left out:
-# on FTA's DvP page DST is graded in the opposite direction (our own defense vs their offense), so it
-# needs its own verified handling before it goes in a grid.
-FTA_TABS = {"": "ALL", "qb": "QB", "rb": "RB", "wr": "WR", "te": "TE"}
+# tab name -> our position key.  "" is the combined/overall tab.  On the DST tab FTA grades a team's OWN
+# defense against the offense it faces (positive = good for that team's D/ST).  That direction is checked
+# automatically every run (see dst_direction_check) because it's the one tab that reads the other way round.
+# K is left out for now.
+FTA_TABS = {"": "ALL", "qb": "QB", "rb": "RB", "wr": "WR", "te": "TE", "dst": "DEF"}
+OPTIONAL_POS = {"DEF"}
 ESPN_URL = (f"https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/{YEAR}"
             "?view=proTeamSchedules_wl")
 
@@ -245,6 +247,48 @@ def label_for(x, cuts):
     return "smash"
 
 
+def offense_strength():
+    """Projected fantasy points per week of each NFL team's offense (QB1+RB1-2+WR1-3+TE1), from the ROS
+    projections already in inseason_<year>.json (every rostered and free-agent player, all leagues)."""
+    try:
+        d = json.load(open(f"inseason_{YEAR}.json"))
+    except Exception:                                                  # noqa: BLE001
+        return {}
+    seen, by_team = set(), {}
+    for L in (d.get("leagues") or {}).values():
+        pool = [p for t in L.get("teams", []) for p in t.get("roster", [])] + list(L.get("freeAgents", []))
+        for p in pool:
+            nm, pos, tm = p.get("name"), p.get("position"), norm_team(p.get("pro_team"))
+            v = p.get("effective_per_week") or p.get("ros_per_week")
+            if not nm or nm in seen or pos not in ("QB", "RB", "WR", "TE") or not tm or v is None:
+                continue
+            seen.add(nm)
+            by_team.setdefault(tm, {}).setdefault(pos, []).append(float(v))
+    take = {"QB": 1, "RB": 2, "WR": 3, "TE": 1}
+    return {t: sum(sum(sorted(v.get(pos, []), reverse=True)[:n]) for pos, n in take.items())
+            for t, v in by_team.items()}
+
+
+def dst_direction_check(def_tbl):
+    """A D/ST should score MORE against a WEAK offense. So across every (team, week) cell, the DST value
+    should be negatively correlated with the opposing offense's projected strength. Returns (corr, n, ok)."""
+    off = offense_strength()
+    xs, ys = [], []
+    for t, d in def_tbl.items():
+        for g in d["weeks"].values():
+            if g["opp"] in off:
+                xs.append(g["safpa"]); ys.append(off[g["opp"]])
+    n = len(xs)
+    if n < 30:
+        return None, n, None
+    mx, my = sum(xs) / n, sum(ys) / n
+    sxy = sum((a - mx) * (b - my) for a, b in zip(xs, ys))
+    sxx = sum((a - mx) ** 2 for a in xs); syy = sum((b - my) ** 2 for b in ys)
+    corr = sxy / ((sxx * syy) ** 0.5) if sxx > 0 and syy > 0 else 0.0
+    # ok=True only for a clearly negative relationship; near zero = can't tell (None); positive = suspect
+    return round(corr, 3), n, (True if corr <= -0.1 else (None if corr < 0.1 else False))
+
+
 # ---------------------------------------------------------------------------------------------
 # validation
 # ---------------------------------------------------------------------------------------------
@@ -313,15 +357,24 @@ def main():
     for tab, pos in FTA_TABS.items():
         qs = "&".join(f"weeks%5B%5D={w}" for w in FTA_WEEKS)
         url = f"{FTA_BASE}?{('tab=' + tab + '&') if tab else ''}{qs}"
+        # DEF is the newest tab: if it alone breaks, drop it with a warning rather than blocking the
+        # QB-TE numbers that already work.
+        soft = pos in OPTIONAL_POS
         try:
             html = http_get(url)
         except Exception as e:                                        # noqa: BLE001
+            if soft:
+                print(f"::warning::FTA {pos} page fetch failed ({e}); continuing without {pos}")
+                continue
             fail(f"FTA {pos} page fetch failed: {e}")
         if PROBE:
             open(f"probe_out/fta_{tab or 'all'}.html", "w", encoding="utf-8").write(html)
         try:
             fta[pos] = parse_fta(html)
         except Exception as e:                                        # noqa: BLE001
+            if soft:
+                print(f"::warning::FTA {pos} parse failed ({e}); continuing without {pos}")
+                continue
             fail(f"FTA {pos} parse failed: {e} -- run the probe workflow and send me probe_out/")
         print(f"FTA {pos}: {len(fta[pos])} teams")
         time.sleep(PAUSE)
@@ -333,7 +386,15 @@ def main():
         print("Probe finished; no data files written.")
         return
 
-    problems = validate(espn, fta)
+    # validate DEF on its own first; if it's off, drop it (with a warning) instead of blocking everything
+    if "DEF" in fta:
+        dprob = [p for p in validate(None, {"DEF": fta["DEF"]}) if p.startswith("FTA DEF")]
+        if dprob:
+            for p in dprob:
+                print(f"::warning::{p}")
+            print("::warning::dropping DEF matchups this run; QB-TE still update")
+            fta.pop("DEF")
+    problems = validate(espn, {k: v for k, v in fta.items() if k not in OPTIONAL_POS})
     if problems:
         for p in problems:
             print(f"::error::{p}")
@@ -351,6 +412,13 @@ def main():
                            for t, d in fta["ALL"].items()}}
     json.dump(sched, open(f"nfl_schedule_{YEAR}.json", "w"), indent=1)
 
+    dcorr, dn, dok = dst_direction_check(fta["DEF"]) if "DEF" in fta else (None, 0, None)
+    print(f"DST direction check: corr(DST value, opposing offense strength) = {dcorr} over {dn} cells "
+          f"-> {'OK (negative, as expected)' if dok else ('NOT VERIFIED (too weak to tell)' if dok is None else 'SUSPECT')}")
+    if dok is False:
+        print("::warning::DST values rise against STRONGER offenses -- the tab may read the other way round. "
+              "The site will flag the defense numbers as unverified until this passes.")
+
     positions = {}
     for pos, tbl in fta.items():
         cuts = label_cuts([g["safpa"] for d in tbl.values() for g in d["weeks"].values()])
@@ -367,6 +435,7 @@ def main():
                  "scoring: trust the ranking and direction; for RB/WR/TE in standard leagues the "
                  "size is slightly overstated."),
         "positions": positions,
+        "dst_check": {"corr": dcorr, "cells": dn, "ok": dok},
     }
     json.dump(ratings, open(f"matchup_ratings_{YEAR}.json", "w"), indent=1)
     print(f"Wrote nfl_schedule_{YEAR}.json and matchup_ratings_{YEAR}.json")
