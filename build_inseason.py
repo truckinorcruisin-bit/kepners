@@ -678,6 +678,31 @@ def load_draft_indexes():
                 idx.setdefault(key, {})[k] = {"round": pk["round"], "overall": pk.get("overall_pick"),
                                              "keeper": bool(pk.get("is_keeper")),
                                              "name": pk.get("player"), "pos": pk.get("position")}
+    # Kepners has no hand-parsed <year> draft file (kepners_draft_history.json only holds finished seasons), but
+    # Yahoo's own draft results -- all 192 picks, pulled into yahoo_season_<year>.json by the Update Yahoo
+    # Season workflow -- are on file. Yahoo doesn't flag keepers, so a pick is a keeper when the live Google-Sheet
+    # keeper list (kepners_draft_order.json) names that player at that same round (all 22 line up exactly).
+    if "kepners" not in idx:
+        ys = load_json(f"yahoo_season_{YEAR}.json", "Yahoo season detail")
+        picks = ((((ys or {}).get("leagues") or {}).get("kepners") or {}).get("draft")) or []
+        order = load_json("kepners_draft_order.json", "Kepners draft order / keepers") or {}
+        kept = set()
+        for row in order.get("draft_order") or []:
+            for i in (1, 2):
+                nm, rd = row.get(f"keeper{i}_name"), row.get(f"keeper{i}_round")
+                if nm and rd:
+                    kept.add((normalize_name(nm), int(rd)))
+        n_kept = 0
+        for pk in picks:
+            k = join_key(pk.get("player"), pk.get("pos"))
+            if k and pk.get("round"):
+                is_k = (normalize_name(pk.get("player")), int(pk["round"])) in kept
+                n_kept += is_k
+                idx.setdefault("kepners", {})[k] = {"round": pk["round"], "overall": pk.get("pick"),
+                                                    "keeper": is_k, "name": pk.get("player"),
+                                                    "pos": pk.get("pos")}
+        if picks:
+            print(f"  kepners draft: {len(picks)} Yahoo picks, {n_kept} of {len(kept)} sheet keepers matched")
     espn = load_json(f"espn_drafts_{YEAR}.json", "ESPN league drafts")
     for key, d in ((espn or {}).get("leagues") or {}).items():
         for pk in d.get("picks") or []:

@@ -860,6 +860,12 @@
   .po-total td.po-l{font-size:9.5px;letter-spacing:0.04em;color:var(--txt);}
   .po-mine td.po-l{color:var(--amber);}
   .po-warn{font-size:10px;color:var(--red);line-height:1.6;margin:4px 0 6px;}
+  .po-pick{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:2px 0 6px;font-size:10px;color:var(--dim);}
+  .po-pick select{background:var(--panel);color:var(--txt);border:1px solid var(--line-2);font:inherit;font-size:11px;padding:4px 6px;max-width:100%;}
+  .po-viewing{color:var(--amber);font-size:10px;}
+  .po-chips{display:flex;gap:6px;margin:2px 0 8px;}
+  .po-chip{background:var(--panel);color:var(--dim);border:1px solid var(--line-2);font:inherit;font-size:10px;padding:5px 12px;cursor:pointer;}
+  .po-chip.on{color:var(--amber);border-color:var(--amber);}
 
   /* power rankings over time */
   .mgr-ph-chart{width:100%;height:auto;display:block;margin:4px 0 8px;}
@@ -3423,6 +3429,13 @@ function renderTradeBuilder(el){
 // Bump = points per game the opposing defense allows at that position versus a league-average defense
 // (FantasyTeamAdvice SAFPA, schedule-adjusted). For DEF it's flipped: points a D/ST scores against
 // that opposing OFFENSE versus average. QB-TE bumps are PPR-based (size slightly overstated in standard).
+// View state for the Playoff outlook: which team is being viewed and which free-agent position tab is open,
+// per league. Re-rendering keeps the page where it was so switching doesn't jump to the top.
+const poTeamSel = {};   // league key -> team_id being viewed (default: your team)
+const poFaPos = {};     // league key -> 'QB' | 'RB' | 'WR' | 'TE'
+function poRerender(){ const y = window.scrollY; render(); window.scrollTo(0, y); }
+function poSetTeam(key, id){ poTeamSel[key] = id; poRerender(); }
+function poSetFaPos(key, pos){ poFaPos[key] = pos; poRerender(); }
 const PO_FALLBACK = {
   kepners:  {weeks:[15,16,17], teams:6, byes:2, bye_week:15},
   miami:    {weeks:[16,17],    teams:4, byes:0, bye_week:null},
@@ -3478,8 +3491,18 @@ function poDefVerified(){
   const c = MATCHUPS && MATCHUPS.dst_check;
   return !!(c && c.ok === true);
 }
-function mgrPlayoffOutlookHtml(key, lg, me){
+function mgrPlayoffOutlookHtml(key, lg, myTeam){
   const R = poRules(key);
+  // which team are we looking at?
+  const teams = lg.teams || [];
+  const selId = poTeamSel[key];
+  const me = teams.find(t=>String(t.team_id)===String(selId)) || myTeam;
+  const isMe = !!me.is_me;
+  const who = isMe ? 'yours' : 'theirs';
+  const teamOpts = teams.slice().sort((a,b)=> (b.is_me?1:0)-(a.is_me?1:0) || String(a.team_name).localeCompare(String(b.team_name)))
+    .map(t=>`<option value="${escapeHtml(String(t.team_id))}" ${t===me?'selected':''}>${escapeHtml(t.team_name)}${t.is_me?' (you)':(t.manager?` · ${escapeHtml(t.manager)}`:'')}</option>`).join('');
+  const picker = `<div class="po-pick"><label>Team <select onchange="poSetTeam('${key}', this.value)">${teamOpts}</select></label>
+    ${isMe?'':`<span class="po-viewing">Viewing ${escapeHtml(me.team_name)}</span>`}</div>`;
   if(!R) return `<div class="mgr-empty">No playoff format is configured for this league yet.</div>`;
   const nT = (lg.teams||[]).length;
   const wks = R.weeks;
@@ -3487,7 +3510,7 @@ function mgrPlayoffOutlookHtml(key, lg, me){
     + (R.teams ? ` · top ${R.teams} of ${nT} make it` : ` · playoff seeds not set yet`)
     + (R.byes ? ` · seeds 1–${R.byes} skip Week ${R.bye_week}` : (R.byes===0 ? ' · no bye' : ''));
   if(!MATCHUPS && !NFL_SCHED){
-    return `<div class="po-fmt">${fmt}</div>
+    return `${picker}<div class="po-fmt">${fmt}</div>
       <div class="mgr-empty">No schedule data yet. Run <b>Update NFL Schedule + Matchups</b> from the Actions tab
       (run <b>Probe NFL Schedule + Matchup Sources</b> first if it has never run).</div>`;
   }
@@ -3533,14 +3556,14 @@ function mgrPlayoffOutlookHtml(key, lg, me){
   const ranked = sRows.filter(x=>x.r && x.r.avg!=null && !(x.r.p.position==='DEF' && !poDefVerified())).map(x=>x.r).sort((a,b)=>b.avg-a.avg);
   const nm = r=>`${escapeHtml(r.p.name)} (${poFmtV(r.avg)})`;
   const summary = ranked.length>=4
-    ? `<div class="po-sum"><b class="g">Starters with the best playoff matchups:</b> ${ranked.slice(0,3).map(nm).join(', ')}<br>
+    ? `<div class="po-sum"><b class="g">${isMe?'Your starters':'Their starters'} with the best playoff matchups:</b> ${ranked.slice(0,3).map(nm).join(', ')}<br>
         <b class="r">Toughest:</b> ${ranked.slice(-3).reverse().map(nm).join(', ')}</div>` : '';
   const gen = MATCHUPS && MATCHUPS.generated ? MATCHUPS.generated.slice(0,10) : '';
   const byeNote = R.byes
     ? `If you earn a bye you only play Weeks ${wks[1]}–${wks[wks.length-1]}, so those decide a title; Week ${R.bye_week} only matters as a ${R.byes+1}–${R.teams} seed.`
     : (R.byes===0 ? `No bye here: every playoff team plays every week, so the columns count equally.`
                   : `Tell me how many teams make it and whether the top seeds get a bye, and this will weight the weeks.`);
-  return `<div class="po-fmt">${fmt}</div>
+  return `${picker}<div class="po-fmt">${fmt}</div>
     <div class="po-note">${byeNote}</div>
     ${summary}
     <div class="po-wrap"><table class="po-tbl"><thead>${head}</thead><tbody>${body}</tbody></table></div>
@@ -3549,11 +3572,14 @@ function mgrPlayoffOutlookHtml(key, lg, me){
       "Lineup matchup total" adds up your starters' bumps for the week. Source: FantasyTeamAdvice SAFPA${gen?`, pulled ${gen}`:''};
       QB–TE numbers are PPR-based, so in standard trust the ranking more than the size. K shows the opponent only.</div>
     <div class="mgr-section-lbl">Defense planner (playoff weeks)</div>
-    ${mgrDefensePlannerHtml(key, lg, me, wks)}`;
+    ${mgrDefensePlannerHtml(key, lg, me, wks, who)}
+    <div class="mgr-section-lbl">Top free agents for the playoffs</div>
+    ${mgrPlayoffFreeAgentsHtml(key, lg, me, wks, who)}`;
 }
 // Defense planner: your D/ST(s) vs the free-agent D/STs over the playoff weeks.
 // Projection per week = ESPN rest-of-season pts/wk for that D/ST + that week's matchup bump.
-function mgrDefensePlannerHtml(key, lg, me, wks){
+function mgrDefensePlannerHtml(key, lg, me, wks, who){
+  who = who || 'yours';
   const hasDef = MATCHUPS && MATCHUPS.positions && MATCHUPS.positions.DEF;
   if(!hasDef) return `<div class="mgr-empty">No defense matchup data yet — re-run <b>Update NFL Schedule + Matchups</b>
     (this version adds the D/ST tab).</div>`;
@@ -3575,10 +3601,10 @@ function mgrDefensePlannerHtml(key, lg, me, wks){
   const body = show.map(r=>{
     const gain = (!r.isMine && isFinite(myBest)) ? r.total - myBest : null;
     return `<tr class="${r.isMine?'po-mine':''}">
-      <td class="po-l po-pl">${escapeHtml(r.p.name)}<small>${r.isMine?'yours':'free agent'}</small></td>
+      <td class="po-l po-pl">${escapeHtml(r.p.name)}<small>${r.isMine?who:'free agent'}</small></td>
       <td>${r.base.toFixed(1)}</td>
       ${r.cells.map(c=>poCellHtml(c, true)).join('')}
-      <td><span class="po-v">${r.total.toFixed(1)}</span>${gain!=null?`<span class="po-opp">${poFmtV(gain)} vs yours</span>`:''}</td>
+      <td><span class="po-v">${r.total.toFixed(1)}</span>${gain!=null?`<span class="po-opp">${poFmtV(gain)} vs ${who}</span>`:''}</td>
     </tr>`;
   }).join('');
   const warn = verified ? '' : `<div class="po-warn">⚠ The D/ST matchup direction hasn't passed its automatic check yet
@@ -3587,6 +3613,94 @@ function mgrDefensePlannerHtml(key, lg, me, wks){
   return `${warn}<div class="po-wrap"><table class="po-tbl">${'<thead>'+head+'</thead>'}<tbody>${body}</tbody></table></div>
     <div class="po-note">Proj total = ESPN rest-of-season pts/wk + each week's matchup bump, summed over the playoff weeks.
       Scoring for D/ST differs a little between ESPN and Yahoo, so compare defenses to each other rather than to the exact number.${yahooNote}</div>`;
+}
+
+
+// Top free agents for the playoff weeks, one position at a time.
+// Playoff proj = ESPN rest-of-season pts/wk + that week's matchup bump, summed over the playoff weeks
+// (0 for a bye). "vs starter" compares that to the weakest starter the player could replace at that
+// position (FLEX included for RB/WR/TE) on the team being viewed.
+// The matchup bump is for the whole position group (e.g. all of a team's WRs together), so a player only
+// gets his share of it: bump x (his projection / his team's total projection at that position). Without
+// this a WR3 on 2 pts/wk would "gain" the full +7 a soft secondary gives up to the entire WR room.
+// FTA's bumps are PPR points; the site's projections (and our leagues) are standard. Rough PPR->standard
+// ratio by position, so a TE's reception-heavy PPR bump doesn't swamp a standard projection.
+const PO_STD_FACTOR = {QB:1.0, RB:0.8, WR:0.62, TE:0.62, DEF:1.0};
+let PO_GROUP_TOTALS = null;
+function poGroupTotals(){
+  if(PO_GROUP_TOTALS) return PO_GROUP_TOTALS;
+  const seen = new Set(), tot = {};
+  const lgs = (INSEASON && INSEASON.leagues) ? Object.values(INSEASON.leagues) : [];
+  lgs.forEach(L=>{
+    const pool = (L.teams||[]).flatMap(t=>t.roster||[]).concat(L.freeAgents||[]);
+    pool.forEach(p=>{
+      if(!p || !p.name || seen.has(p.name)) return;
+      seen.add(p.name);
+      const k = `${poTeamKey(p.pro_team)}|${p.position}`;
+      tot[k] = (tot[k]||0) + (p.effective_per_week||0);
+    });
+  });
+  // league-wide median group total per position: used as a floor so a team whose other receivers are
+  // missing from the data (or who are all hurt) can't hand a fringe player most of the bump.
+  const med = {};
+  ['QB','RB','WR','TE'].forEach(pos=>{
+    const v = Object.entries(tot).filter(([k])=>k.endsWith('|'+pos)).map(([,x])=>x).sort((a,b)=>a-b);
+    med[pos] = v.length ? v[Math.floor(v.length/2)] : 0;
+  });
+  PO_GROUP_TOTALS = {tot, med};
+  return PO_GROUP_TOTALS;
+}
+function poShare(p){
+  if(p.position==='DEF') return 1;
+  const G = poGroupTotals();
+  const t = Math.max(G.tot[`${poTeamKey(p.pro_team)}|${p.position}`] || 0, G.med[p.position] || 0);
+  const b = p.effective_per_week || 0;
+  return t > 0 ? Math.min(1, b / t) : 0;
+}
+function poPlayoffProj(p, wks){
+  const base = p.effective_per_week || 0;
+  const pos = PO_BUMP_POS.has(p.position) ? p.position : 'ALL';
+  const share = PO_BUMP_POS.has(p.position) ? poShare(p) : 0;
+  const cells = wks.map(w=>poCell(pos, p.pro_team, w));
+  const k = PO_STD_FACTOR[p.position] || 1;
+  const total = cells.reduce((a,c)=> a + ((!c || c.bye) ? 0 : base + (c.safpa!=null ? c.safpa*share*k : 0)), 0);
+  return {cells, total, base, share};
+}
+function mgrPlayoffFreeAgentsHtml(key, lg, me, wks, who){
+  const POS = ['QB','RB','WR','TE'];
+  const pos = poFaPos[key] || 'RB';
+  const fas = (lg.freeAgents||[]).filter(p=>POS.includes(p.position));
+  if(!fas.length) return `<div class="mgr-empty">No free agents in the last in-season pull.</div>`;
+  const chips = `<div class="po-chips">${POS.map(p=>
+    `<button class="po-chip ${p===pos?'on':''}" onclick="poSetFaPos('${key}','${p}')">${p}</button>`).join('')}</div>`;
+  // the weakest starter this position could replace
+  const byName = new Map((me.roster||[]).map(p=>[p.name,p]));
+  const flexOk = ['RB','WR','TE'].includes(pos);
+  const elig = (me.positionStrength||[]).filter(s=> s.position===pos || (flexOk && /^FLEX/.test(s.slot)))
+    .map(s=>({slot:s.slot, p: byName.get(s.player)})).filter(x=>x.p);
+  const base = elig.map(x=>({slot:x.slot, p:x.p, proj:poPlayoffProj(x.p, wks).total})).sort((a,b)=>a.proj-b.proj)[0] || null;
+  const rows = fas.filter(p=>p.position===pos).map(p=>({p, ...poPlayoffProj(p, wks)}))
+    .sort((a,b)=>b.total-a.total).slice(0,10);
+  const head = `<tr><th class="po-l">Player</th><th>ROS/wk</th>${wks.map(w=>`<th>Wk ${w}</th>`).join('')}<th>Playoff proj</th></tr>`;
+  const badge = p => (typeof mgrInjuryBadgeHtml==='function') ? mgrInjuryBadgeHtml(p) : '';
+  const body = rows.map(r=>{
+    const gain = base ? r.total - base.proj : null;
+    const own = r.p.percent_owned!=null ? ` · ${Math.round(r.p.percent_owned)}% owned` : '';
+    return `<tr>
+      <td class="po-l po-pl">${escapeHtml(r.p.name)}${badge(r.p)}<small>${escapeHtml(poTeamKey(r.p.pro_team)||'')}${own}</small></td>
+      <td>${r.base.toFixed(1)}</td>
+      ${r.cells.map(c=>poCellHtml(c, true)).join('')}
+      <td class="${gain==null?'':(gain>0?'po-favorable':'')}"><span class="po-v">${r.total.toFixed(1)}</span>${gain!=null?`<span class="po-opp">${poFmtV(gain)} vs ${who}</span>`:''}</td>
+    </tr>`;
+  }).join('');
+  const baseNote = base
+    ? `"vs ${who}" compares with the weakest starter a ${pos} could replace${flexOk?' (its own slots or FLEX)':''}: ${escapeHtml(base.p.name)} (${escapeHtml(base.slot)}, ${base.proj.toFixed(1)} over these weeks).`
+    : '';
+  const yahooNote = (lg.platform==='yahoo') ? ' Free agents here are inferred (ESPN pool minus Yahoo rosters) — confirm in Yahoo before claiming.' : '';
+  return `${chips}<div class="po-wrap"><table class="po-tbl"><thead>${head}</thead><tbody>${body||`<tr><td colspan="${wks.length+3}" class="po-none">No ${pos} free agents.</td></tr>`}</tbody></table></div>
+    <div class="po-note">Playoff proj = ESPN rest-of-season pts/wk plus his share of each week's matchup bump, summed over the
+      playoff weeks. The cell numbers are the bump for the whole position group; a player gets the slice that matches his share
+      of his team's projected points at that position, converted from PPR to standard scoring. ${baseNote}${yahooNote}</div>`;
 }
 
 function renderManagerLeagueDetail(el, key){
