@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-11-19T01:23:04.011754+00:00",
+ "generated": "2026-11-20T01:54:24.715225+00:00",
  "leagues": {
   "zimmer": {
    "platform": "espn",
@@ -13,8 +13,8 @@
      "team_name": "EVIL EMPIRE",
      "manager": "Zach Zimmer",
      "faab_spent": 50,
-     "waiver_rank": 12,
-     "acquisitions": 28
+     "waiver_rank": 11,
+     "acquisitions": 29
     },
     "5": {
      "team_id": 5,
@@ -46,15 +46,15 @@
      "manager": "Andrew Piotrowski",
      "faab_spent": 11,
      "waiver_rank": 4,
-     "acquisitions": 12
+     "acquisitions": 13
     },
     "11": {
      "team_id": 11,
      "team_name": "Bake N' Shake",
      "manager": "Dan Beringer",
      "faab_spent": 100,
-     "waiver_rank": 11,
-     "acquisitions": 29
+     "waiver_rank": 12,
+     "acquisitions": 30
     },
     "14": {
      "team_id": 14,
@@ -94,7 +94,7 @@
      "manager": "Matt McKenna",
      "faab_spent": 17,
      "waiver_rank": 7,
-     "acquisitions": 13
+     "acquisitions": 15
     },
     "20": {
      "team_id": 20,
@@ -102,7 +102,7 @@
      "manager": "Sean Wilkinson",
      "faab_spent": 6,
      "waiver_rank": 5,
-     "acquisitions": 8
+     "acquisitions": 9
     }
    },
    "priorBudget": 100,
@@ -3935,6 +3935,22 @@
       "id": 4427728,
       "name": "Bam Knight"
      }
+    },
+    {
+     "season": 2026,
+     "week": 11,
+     "date": 1795079455725,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 11,
+     "bid": 0,
+     "add": {
+      "id": 4569603,
+      "name": "Malik Washington",
+      "position": "WR"
+     },
+     "drop": null
     },
     {
      "season": 2026,
@@ -11000,7 +11016,7 @@
      "manager": "Krenar Hazari",
      "faab_spent": 0,
      "waiver_rank": 6,
-     "acquisitions": 10
+     "acquisitions": 12
     },
     "6": {
      "team_id": 6,
@@ -11024,7 +11040,7 @@
      "manager": "Eric Mathis",
      "faab_spent": 0,
      "waiver_rank": 2,
-     "acquisitions": 8
+     "acquisitions": 9
     },
     "9": {
      "team_id": 9,
@@ -13710,6 +13726,41 @@
     {
      "season": 2026,
      "week": 11,
+     "date": 1794957495436,
+     "type": "WAIVER",
+     "status": "PENDING",
+     "won": false,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": -16027,
+      "name": "Buccaneers D/ST",
+      "position": "D/ST"
+     },
+     "drop": {
+      "id": -16033,
+      "name": "Ravens D/ST"
+     }
+    },
+    {
+     "season": 2026,
+     "week": 11,
+     "date": 1794990475713,
+     "type": "WAIVER",
+     "status": "EXECUTED",
+     "won": true,
+     "team_id": 10,
+     "bid": 0,
+     "add": {
+      "id": 2971573,
+      "name": "Ka'imi Fairbairn",
+      "position": "K"
+     },
+     "drop": null
+    },
+    {
+     "season": 2026,
+     "week": 11,
      "date": 1794957526181,
      "type": "WAIVER",
      "status": "PENDING",
@@ -13748,25 +13799,6 @@
     {
      "season": 2026,
      "week": 11,
-     "date": 1794957495436,
-     "type": "WAIVER",
-     "status": "PENDING",
-     "won": false,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": -16027,
-      "name": "Buccaneers D/ST",
-      "position": "D/ST"
-     },
-     "drop": {
-      "id": -16033,
-      "name": "Ravens D/ST"
-     }
-    },
-    {
-     "season": 2026,
-     "week": 11,
      "date": 1794990475713,
      "type": "WAIVER",
      "status": "FAILED_INVALIDPLAYERSOURCE",
@@ -13777,22 +13809,6 @@
       "id": 3116365,
       "name": "Mark Andrews",
       "position": "TE"
-     },
-     "drop": null
-    },
-    {
-     "season": 2026,
-     "week": 11,
-     "date": 1794990475713,
-     "type": "WAIVER",
-     "status": "EXECUTED",
-     "won": true,
-     "team_id": 10,
-     "bid": 0,
-     "add": {
-      "id": 2971573,
-      "name": "Ka'imi Fairbairn",
-      "position": "K"
      },
      "drop": null
     },

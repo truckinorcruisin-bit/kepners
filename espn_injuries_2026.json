@@ -1,16 +1,9 @@
 {
  "year": 2026,
- "generated": "2026-11-19T01:22:58.784706+00:00",
+ "generated": "2026-11-20T01:54:19.225998+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 1003,
  "injuries": [
-  {
-   "id": 4429684,
-   "name": "Anthony Gould",
-   "pos": "WR",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-19"
-  },
   {
    "id": 3917668,
    "name": "Alec Ingold",
@@ -92,6 +85,13 @@
    "id": 4871023,
    "name": "Carnell Tate",
    "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4430841,
+   "name": "Carson Beck",
+   "pos": "QB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -183,13 +183,6 @@
    "id": 2576925,
    "name": "Darren Waller",
    "pos": "TE",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-22"
-  },
-  {
-   "id": 4241478,
-   "name": "DeVonta Smith",
-   "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -313,6 +306,13 @@
    "ret": "2026-11-22"
   },
   {
+   "id": 4685397,
+   "name": "Jordan James",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
    "id": 4880281,
    "name": "Jordyn Tyson",
    "pos": "WR",
@@ -337,6 +337,13 @@
    "id": 4911851,
    "name": "LeQuint Allen Jr.",
    "pos": "RB",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4372096,
+   "name": "Luke Schoonmaker",
+   "pos": "TE",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -439,13 +446,6 @@
    "ret": "2026-11-22"
   },
   {
-   "id": 4696700,
-   "name": "Tip Reiman",
-   "pos": "TE",
-   "status": "OUT",
-   "ret": "2026-11-22"
-  },
-  {
    "id": 4372780,
    "name": "Tommy Tremble",
    "pos": "TE",
@@ -513,13 +513,6 @@
    "name": "Andrei Iosivas",
    "pos": "WR",
    "status": "INJURY_RESERVE",
-   "ret": "2026-11-23"
-  },
-  {
-   "id": 4361088,
-   "name": "Colson Yankoff",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
    "ret": "2026-11-23"
   },
   {
@@ -719,6 +712,13 @@
    "ret": "2026-11-29"
   },
   {
+   "id": 4683423,
+   "name": "Riley Leonard",
+   "pos": "QB",
+   "status": "OUT",
+   "ret": "2026-11-29"
+  },
+  {
    "id": 4361432,
    "name": "Romeo Doubs",
    "pos": "WR",
@@ -737,6 +737,13 @@
    "name": "Tanner McLachlan",
    "pos": "TE",
    "status": "QUESTIONABLE",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4696700,
+   "name": "Tip Reiman",
+   "pos": "TE",
+   "status": "OUT",
    "ret": "2026-11-29"
   },
   {
