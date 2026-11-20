@@ -4,7 +4,7 @@
  "season": 2026,
  "scoring": "STD",
  "type": "ROS",
- "generated": "2026-11-20T01:54:29.399236+00:00",
+ "generated": "2026-11-20T15:04:19.923876+00:00",
  "last_updated": "11/19",
  "api_tier": "free",
  "complete": false,
@@ -25,7 +25,7 @@
    "limit": 10,
    "api_tier": "free",
    "last_updated": "11/19",
-   "total_experts": 7,
+   "total_experts": 6,
    "complete": false
   },
   "WR": {
@@ -34,7 +34,7 @@
    "limit": 10,
    "api_tier": "free",
    "last_updated": "11/19",
-   "total_experts": 7,
+   "total_experts": 6,
    "complete": false
   },
   "TE": {
@@ -242,9 +242,9 @@
    "pos_rank": "RB2",
    "tier": null,
    "best": 2.0,
-   "worst": 3.0,
-   "avg": 2.4,
-   "std": 0.49
+   "worst": 5.0,
+   "avg": 2.83,
+   "std": 1.07
   },
   {
    "fp_id": 23133,
@@ -256,10 +256,10 @@
    "ecr": 3,
    "pos_rank": "RB3",
    "tier": null,
-   "best": 3.0,
+   "best": 2.0,
    "worst": 4.0,
-   "avg": 3.6,
-   "std": 0.49
+   "avg": 3.5,
+   "std": 0.76
   },
   {
    "fp_id": 16393,
@@ -273,8 +273,8 @@
    "tier": null,
    "best": 2.0,
    "worst": 8.0,
-   "avg": 4.2,
-   "std": 2.04
+   "avg": 4.5,
+   "std": 2.57
   },
   {
    "fp_id": 22958,
@@ -286,10 +286,10 @@
    "ecr": 5,
    "pos_rank": "RB5",
    "tier": null,
-   "best": 4.0,
+   "best": 3.0,
    "worst": 5.0,
-   "avg": 4.8,
-   "std": 0.4
+   "avg": 4.5,
+   "std": 0.76
   },
   {
    "fp_id": 25981,
@@ -301,10 +301,10 @@
    "ecr": 6,
    "pos_rank": "RB6",
    "tier": null,
-   "best": 6.0,
-   "worst": 7.0,
-   "avg": 6.6,
-   "std": 0.49
+   "best": 5.0,
+   "worst": 12.0,
+   "avg": 7.33,
+   "std": 2.21
   },
   {
    "fp_id": 22739,
@@ -317,9 +317,9 @@
    "pos_rank": "RB7",
    "tier": null,
    "best": 6.0,
-   "worst": 9.0,
-   "avg": 7.6,
-   "std": 1.02
+   "worst": 10.0,
+   "avg": 7.5,
+   "std": 1.38
   },
   {
    "fp_id": 19792,
@@ -331,10 +331,10 @@
    "ecr": 8,
    "pos_rank": "RB8",
    "tier": null,
-   "best": 7.0,
+   "best": 6.0,
    "worst": 10.0,
-   "avg": 8.8,
-   "std": 0.98
+   "avg": 8.33,
+   "std": 1.37
   },
   {
    "fp_id": 19210,
@@ -346,10 +346,10 @@
    "ecr": 9,
    "pos_rank": "RB9",
    "tier": null,
-   "best": 7.0,
-   "worst": 13.0,
-   "avg": 9.0,
-   "std": 2.1
+   "best": 6.0,
+   "worst": 15.0,
+   "avg": 9.83,
+   "std": 3.13
   },
   {
    "fp_id": 27297,
@@ -363,8 +363,8 @@
    "tier": null,
    "best": 10.0,
    "worst": 12.0,
-   "avg": 10.6,
-   "std": 0.8
+   "avg": 10.5,
+   "std": 0.76
   },
   {
    "fp_id": 23070,
@@ -377,9 +377,9 @@
    "pos_rank": "WR1",
    "tier": null,
    "best": 1.0,
-   "worst": 1.0,
-   "avg": 1.0,
-   "std": 0.0
+   "worst": 2.0,
+   "avg": 1.17,
+   "std": 0.37
   },
   {
    "fp_id": 19788,
@@ -391,10 +391,10 @@
    "ecr": 2,
    "pos_rank": "WR2",
    "tier": null,
-   "best": 2.0,
+   "best": 1.0,
    "worst": 2.0,
-   "avg": 2.0,
-   "std": 0.0
+   "avg": 1.83,
+   "std": 0.37
   },
   {
    "fp_id": 19202,
@@ -437,9 +437,9 @@
    "pos_rank": "WR5",
    "tier": null,
    "best": 5.0,
-   "worst": 6.0,
-   "avg": 5.6,
-   "std": 0.49
+   "worst": 8.0,
+   "avg": 6.0,
+   "std": 1.0
   },
   {
    "fp_id": 25409,
@@ -452,9 +452,9 @@
    "pos_rank": "WR6",
    "tier": null,
    "best": 5.0,
-   "worst": 8.0,
-   "avg": 6.6,
-   "std": 1.02
+   "worst": 10.0,
+   "avg": 6.67,
+   "std": 1.7
   },
   {
    "fp_id": 19211,
@@ -466,10 +466,10 @@
    "ecr": 7,
    "pos_rank": "WR7",
    "tier": null,
-   "best": 6.0,
-   "worst": 7.0,
-   "avg": 6.6,
-   "std": 0.49
+   "best": 5.0,
+   "worst": 11.0,
+   "avg": 7.0,
+   "std": 1.91
   },
   {
    "fp_id": 26024,
@@ -483,8 +483,8 @@
    "tier": null,
    "best": 7.0,
    "worst": 8.0,
-   "avg": 7.8,
-   "std": 0.4
+   "avg": 7.67,
+   "std": 0.47
   },
   {
    "fp_id": 19236,
@@ -496,25 +496,25 @@
    "ecr": 9,
    "pos_rank": "WR9",
    "tier": null,
-   "best": 9.0,
+   "best": 8.0,
    "worst": 9.0,
-   "avg": 9.0,
-   "std": 0.0
+   "avg": 8.83,
+   "std": 0.37
   },
   {
-   "fp_id": 23106,
-   "name": "Parker Washington",
-   "team": "JAC",
+   "fp_id": 23163,
+   "name": "Drake London",
+   "team": "ATL",
    "pos": "WR",
-   "yahoo_id": "40234",
-   "bye": 7,
+   "yahoo_id": "33963",
+   "bye": 11,
    "ecr": 10,
    "pos_rank": "WR10",
    "tier": null,
-   "best": 10.0,
+   "best": 5.0,
    "worst": 16.0,
-   "avg": 11.4,
-   "std": 2.33
+   "avg": 11.33,
+   "std": 3.45
   },
   {
    "fp_id": 22955,

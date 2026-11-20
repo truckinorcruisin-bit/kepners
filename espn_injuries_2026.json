@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-11-20T01:54:19.225998+00:00",
+ "generated": "2026-11-20T15:04:09.737722+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 1003,
  "injuries": [
@@ -218,6 +218,13 @@
    "id": 4879650,
    "name": "Grant DuBose",
    "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-22"
+  },
+  {
+   "id": 4045305,
+   "name": "Ian Thomas",
+   "pos": "TE",
    "status": "QUESTIONABLE",
    "ret": "2026-11-22"
   },
@@ -684,6 +691,13 @@
    "ret": "2026-11-29"
   },
   {
+   "id": 4429022,
+   "name": "Kayshon Boutte",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-29"
+  },
+  {
    "id": 3917315,
    "name": "Kyler Murray",
    "pos": "QB",
@@ -730,6 +744,13 @@
    "name": "Sam Darnold",
    "pos": "QB",
    "status": "OUT",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4686468,
+   "name": "Seth McGowan",
+   "pos": "RB",
+   "status": "QUESTIONABLE",
    "ret": "2026-11-29"
   },
   {
