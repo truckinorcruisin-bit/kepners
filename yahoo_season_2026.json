@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-11-17T21:59:00.651817+00:00",
+ "generated": "2026-11-24T23:21:38.017608+00:00",
  "leagues": {
   "kepners": {
    "league_key": "470.l.102398",
@@ -8,7 +8,7 @@
    "settings": {
     "start_week": 1,
     "end_week": 17,
-    "current_week": 11,
+    "current_week": 12,
     "playoff_start_week": 15,
     "num_playoff_teams": 6,
     "uses_playoff": "1",
@@ -41,21 +41,21 @@
      "name": "Football Guy's Guy",
      "manager": "Shark",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 868.72,
-      "optimal_points": 1033.16,
-      "points_left": 164.44,
-      "efficiency": 0.841
+      "weeks": 11,
+      "starter_points": 965.0,
+      "optimal_points": 1140.04,
+      "points_left": 175.04,
+      "efficiency": 0.846
      },
      "derived": {
-      "record": "2-8",
-      "games": 10,
-      "pf": 868.72,
-      "pa": 970.04,
-      "avg_pf": 86.87,
-      "all_play": "36-74",
-      "expected_wins": 3.27,
-      "luck": -1.27,
+      "record": "3-8",
+      "games": 11,
+      "pf": 965.0,
+      "pa": 1034.64,
+      "avg_pf": 87.73,
+      "all_play": "44-77",
+      "expected_wins": 4.0,
+      "luck": -1.0,
       "close_wins": 0,
       "close_losses": 3,
       "high_score": 109.58,
@@ -120,40 +120,39 @@
         "pts": 107.22,
         "opp": "8",
         "opp_pts": 108.92
+       },
+       {
+        "week": 11,
+        "pts": 96.28,
+        "opp": "3",
+        "opp_pts": 64.6
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "3",
-       "opp_name": "Burrito",
-       "opp_avg_pf": 84.08,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "12",
        "opp_name": "The Pickups",
-       "opp_avg_pf": 109.97,
+       "opp_avg_pf": 108.45,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "4",
        "opp_name": "Dad\u2019s To The Bone",
-       "opp_avg_pf": 99.88,
+       "opp_avg_pf": 95.98,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "6",
        "opp_name": "Matty Dawg Pound",
-       "opp_avg_pf": 90.69,
+       "opp_avg_pf": 90.89,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 96.16
+     "remaining_opp_avg_pf": 98.44
     },
     "2": {
      "team_id": "2",
@@ -161,21 +160,21 @@
      "name": "BrowneyeVibeSesh",
      "manager": "Vibe",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 919.72,
-      "optimal_points": 1010.98,
+      "weeks": 11,
+      "starter_points": 994.46,
+      "optimal_points": 1085.72,
       "points_left": 91.26,
-      "efficiency": 0.91
+      "efficiency": 0.916
      },
      "derived": {
-      "record": "5-5",
-      "games": 10,
-      "pf": 919.72,
-      "pa": 944.44,
-      "avg_pf": 91.97,
-      "all_play": "56-54",
-      "expected_wins": 5.09,
-      "luck": -0.09,
+      "record": "6-5",
+      "games": 11,
+      "pf": 994.46,
+      "pa": 1001.4,
+      "avg_pf": 90.41,
+      "all_play": "59-62",
+      "expected_wins": 5.36,
+      "luck": 0.64,
       "close_wins": 1,
       "close_losses": 2,
       "high_score": 113.06,
@@ -240,40 +239,39 @@
         "pts": 107.3,
         "opp": "6",
         "opp_pts": 96.28
+       },
+       {
+        "week": 11,
+        "pts": 74.74,
+        "opp": "4",
+        "opp_pts": 56.96
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "4",
-       "opp_name": "Dad\u2019s To The Bone",
-       "opp_avg_pf": 99.88,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "7",
        "opp_name": "Orson Welles",
-       "opp_avg_pf": 83.75,
+       "opp_avg_pf": 85.29,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "10",
        "opp_name": "Shaq List",
-       "opp_avg_pf": 82.15,
+       "opp_avg_pf": 81.3,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "11",
        "opp_name": "The Herdsmen",
-       "opp_avg_pf": 89.59,
+       "opp_avg_pf": 90.89,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 88.84
+     "remaining_opp_avg_pf": 85.83
     },
     "3": {
      "team_id": "3",
@@ -281,21 +279,21 @@
      "name": "Burrito",
      "manager": "Steve",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 840.84,
-      "optimal_points": 1058.44,
-      "points_left": 217.6,
-      "efficiency": 0.794
+      "weeks": 11,
+      "starter_points": 905.44,
+      "optimal_points": 1123.64,
+      "points_left": 218.2,
+      "efficiency": 0.806
      },
      "derived": {
-      "record": "4-6",
-      "games": 10,
-      "pf": 840.84,
-      "pa": 894.96,
-      "avg_pf": 84.08,
-      "all_play": "40-70",
-      "expected_wins": 3.64,
-      "luck": 0.36,
+      "record": "4-7",
+      "games": 11,
+      "pf": 905.44,
+      "pa": 991.24,
+      "avg_pf": 82.31,
+      "all_play": "41-80",
+      "expected_wins": 3.73,
+      "luck": 0.27,
       "close_wins": 1,
       "close_losses": 1,
       "high_score": 109.66,
@@ -360,40 +358,39 @@
         "pts": 59.82,
         "opp": "12",
         "opp_pts": 101.16
+       },
+       {
+        "week": 11,
+        "pts": 64.6,
+        "opp": "1",
+        "opp_pts": 96.28
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "1",
-       "opp_name": "Football Guy's Guy",
-       "opp_avg_pf": 86.87,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "8",
        "opp_name": "Phony Grossi",
-       "opp_avg_pf": 92.59,
+       "opp_avg_pf": 92.9,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "9",
        "opp_name": "Ranus The Hiddeer",
-       "opp_avg_pf": 99.84,
+       "opp_avg_pf": 100.37,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "5",
        "opp_name": "Denim Like A DeJean",
-       "opp_avg_pf": 93.7,
+       "opp_avg_pf": 93.76,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 93.25
+     "remaining_opp_avg_pf": 95.68
     },
     "4": {
      "team_id": "4",
@@ -401,25 +398,25 @@
      "name": "Dad\u2019s To The Bone",
      "manager": "Brad Nemeth",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 998.8,
-      "optimal_points": 1111.5,
-      "points_left": 112.7,
-      "efficiency": 0.899
+      "weeks": 11,
+      "starter_points": 1055.76,
+      "optimal_points": 1171.26,
+      "points_left": 115.5,
+      "efficiency": 0.901
      },
      "derived": {
-      "record": "5-5",
-      "games": 10,
-      "pf": 998.8,
-      "pa": 960.54,
-      "avg_pf": 99.88,
-      "all_play": "66-44",
+      "record": "5-6",
+      "games": 11,
+      "pf": 1055.76,
+      "pa": 1035.28,
+      "avg_pf": 95.98,
+      "all_play": "66-55",
       "expected_wins": 6.0,
       "luck": -1.0,
       "close_wins": 1,
       "close_losses": 2,
       "high_score": 144.72,
-      "low_score": 78.3,
+      "low_score": 56.96,
       "scores": [
        {
         "week": 1,
@@ -480,40 +477,39 @@
         "pts": 108.34,
         "opp": "7",
         "opp_pts": 88.02
+       },
+       {
+        "week": 11,
+        "pts": 56.96,
+        "opp": "2",
+        "opp_pts": 74.74
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "2",
-       "opp_name": "BrowneyeVibeSesh",
-       "opp_avg_pf": 91.97,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "6",
        "opp_name": "Matty Dawg Pound",
-       "opp_avg_pf": 90.69,
+       "opp_avg_pf": 90.89,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "1",
        "opp_name": "Football Guy's Guy",
-       "opp_avg_pf": 86.87,
+       "opp_avg_pf": 87.73,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "12",
        "opp_name": "The Pickups",
-       "opp_avg_pf": 109.97,
+       "opp_avg_pf": 108.45,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 94.88
+     "remaining_opp_avg_pf": 95.69
     },
     "5": {
      "team_id": "5",
@@ -521,21 +517,21 @@
      "name": "Denim Like A DeJean",
      "manager": "Robinho",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 937.02,
-      "optimal_points": 995.64,
-      "points_left": 58.62,
-      "efficiency": 0.941
+      "weeks": 11,
+      "starter_points": 1031.38,
+      "optimal_points": 1106.6,
+      "points_left": 75.22,
+      "efficiency": 0.932
      },
      "derived": {
-      "record": "6-4",
-      "games": 10,
-      "pf": 937.02,
-      "pa": 872.28,
-      "avg_pf": 93.7,
-      "all_play": "59-51",
-      "expected_wins": 5.36,
-      "luck": 0.64,
+      "record": "7-4",
+      "games": 11,
+      "pf": 1031.38,
+      "pa": 945.12,
+      "avg_pf": 93.76,
+      "all_play": "65-56",
+      "expected_wins": 5.91,
+      "luck": 1.09,
       "close_wins": 3,
       "close_losses": 1,
       "high_score": 123.36,
@@ -600,40 +596,39 @@
         "pts": 123.36,
         "opp": "11",
         "opp_pts": 67.24
+       },
+       {
+        "week": 11,
+        "pts": 94.36,
+        "opp": "10",
+        "opp_pts": 72.84
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "10",
-       "opp_name": "Shaq List",
-       "opp_avg_pf": 82.15,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "9",
        "opp_name": "Ranus The Hiddeer",
-       "opp_avg_pf": 99.84,
+       "opp_avg_pf": 100.37,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "8",
        "opp_name": "Phony Grossi",
-       "opp_avg_pf": 92.59,
+       "opp_avg_pf": 92.9,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "3",
        "opp_name": "Burrito",
-       "opp_avg_pf": 84.08,
+       "opp_avg_pf": 82.31,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.67
+     "remaining_opp_avg_pf": 91.86
     },
     "6": {
      "team_id": "6",
@@ -641,23 +636,23 @@
      "name": "Matty Dawg Pound",
      "manager": "Matty",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 906.86,
-      "optimal_points": 961.26,
-      "points_left": 54.4,
-      "efficiency": 0.943
+      "weeks": 11,
+      "starter_points": 999.78,
+      "optimal_points": 1061.78,
+      "points_left": 62.0,
+      "efficiency": 0.942
      },
      "derived": {
-      "record": "5-5",
-      "games": 10,
-      "pf": 906.86,
-      "pa": 897.92,
-      "avg_pf": 90.69,
-      "all_play": "53-57",
-      "expected_wins": 4.82,
-      "luck": 0.18,
+      "record": "5-6",
+      "games": 11,
+      "pf": 999.78,
+      "pa": 998.58,
+      "avg_pf": 90.89,
+      "all_play": "57-64",
+      "expected_wins": 5.18,
+      "luck": -0.18,
       "close_wins": 3,
-      "close_losses": 2,
+      "close_losses": 3,
       "high_score": 118.12,
       "low_score": 55.46,
       "scores": [
@@ -720,40 +715,39 @@
         "pts": 96.28,
         "opp": "2",
         "opp_pts": 107.3
+       },
+       {
+        "week": 11,
+        "pts": 92.92,
+        "opp": "7",
+        "opp_pts": 100.66
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "7",
-       "opp_name": "Orson Welles",
-       "opp_avg_pf": 83.75,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "4",
        "opp_name": "Dad\u2019s To The Bone",
-       "opp_avg_pf": 99.88,
+       "opp_avg_pf": 95.98,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "12",
        "opp_name": "The Pickups",
-       "opp_avg_pf": 109.97,
+       "opp_avg_pf": 108.45,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "1",
        "opp_name": "Football Guy's Guy",
-       "opp_avg_pf": 86.87,
+       "opp_avg_pf": 87.73,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 95.12
+     "remaining_opp_avg_pf": 97.39
     },
     "7": {
      "team_id": "7",
@@ -761,22 +755,22 @@
      "name": "Orson Welles",
      "manager": "mark neary",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 837.48,
-      "optimal_points": 949.98,
+      "weeks": 11,
+      "starter_points": 938.14,
+      "optimal_points": 1050.64,
       "points_left": 112.5,
-      "efficiency": 0.882
+      "efficiency": 0.893
      },
      "derived": {
-      "record": "6-4",
-      "games": 10,
-      "pf": 837.48,
-      "pa": 890.7,
-      "avg_pf": 83.75,
-      "all_play": "44-66",
-      "expected_wins": 4.0,
-      "luck": 2.0,
-      "close_wins": 5,
+      "record": "7-4",
+      "games": 11,
+      "pf": 938.14,
+      "pa": 983.62,
+      "avg_pf": 85.29,
+      "all_play": "53-68",
+      "expected_wins": 4.82,
+      "luck": 2.18,
+      "close_wins": 6,
       "close_losses": 0,
       "high_score": 114.28,
       "low_score": 52.08,
@@ -840,40 +834,39 @@
         "pts": 88.02,
         "opp": "4",
         "opp_pts": 108.34
+       },
+       {
+        "week": 11,
+        "pts": 100.66,
+        "opp": "6",
+        "opp_pts": 92.92
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "6",
-       "opp_name": "Matty Dawg Pound",
-       "opp_avg_pf": 90.69,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "2",
        "opp_name": "BrowneyeVibeSesh",
-       "opp_avg_pf": 91.97,
+       "opp_avg_pf": 90.41,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "11",
        "opp_name": "The Herdsmen",
-       "opp_avg_pf": 89.59,
+       "opp_avg_pf": 90.89,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "10",
        "opp_name": "Shaq List",
-       "opp_avg_pf": 82.15,
+       "opp_avg_pf": 81.3,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 88.6
+     "remaining_opp_avg_pf": 87.53
     },
     "8": {
      "team_id": "8",
@@ -881,22 +874,22 @@
      "name": "Phony Grossi",
      "manager": "Matt",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 925.92,
-      "optimal_points": 1081.5,
-      "points_left": 155.58,
-      "efficiency": 0.856
+      "weeks": 11,
+      "starter_points": 1021.88,
+      "optimal_points": 1183.76,
+      "points_left": 161.88,
+      "efficiency": 0.863
      },
      "derived": {
-      "record": "7-3",
-      "games": 10,
-      "pf": 925.92,
-      "pa": 826.0,
-      "avg_pf": 92.59,
-      "all_play": "57-53",
-      "expected_wins": 5.18,
-      "luck": 1.82,
-      "close_wins": 2,
+      "record": "8-3",
+      "games": 11,
+      "pf": 1021.88,
+      "pa": 919.3,
+      "avg_pf": 92.9,
+      "all_play": "64-57",
+      "expected_wins": 5.82,
+      "luck": 2.18,
+      "close_wins": 3,
       "close_losses": 2,
       "high_score": 116.94,
       "low_score": 55.98,
@@ -960,40 +953,39 @@
         "pts": 108.92,
         "opp": "1",
         "opp_pts": 107.22
+       },
+       {
+        "week": 11,
+        "pts": 95.96,
+        "opp": "12",
+        "opp_pts": 93.3
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "12",
-       "opp_name": "The Pickups",
-       "opp_avg_pf": 109.97,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "3",
        "opp_name": "Burrito",
-       "opp_avg_pf": 84.08,
+       "opp_avg_pf": 82.31,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "5",
        "opp_name": "Denim Like A DeJean",
-       "opp_avg_pf": 93.7,
+       "opp_avg_pf": 93.76,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "9",
        "opp_name": "Ranus The Hiddeer",
-       "opp_avg_pf": 99.84,
+       "opp_avg_pf": 100.37,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 96.9
+     "remaining_opp_avg_pf": 92.15
     },
     "9": {
      "team_id": "9",
@@ -1001,22 +993,22 @@
      "name": "Ranus The Hiddeer",
      "manager": "Michael Scott",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 998.38,
-      "optimal_points": 1103.22,
-      "points_left": 104.84,
-      "efficiency": 0.905
+      "weeks": 11,
+      "starter_points": 1104.08,
+      "optimal_points": 1209.92,
+      "points_left": 105.84,
+      "efficiency": 0.913
      },
      "derived": {
-      "record": "7-3",
-      "games": 10,
-      "pf": 998.38,
-      "pa": 966.84,
-      "avg_pf": 99.84,
-      "all_play": "79-31",
-      "expected_wins": 7.18,
+      "record": "8-3",
+      "games": 11,
+      "pf": 1104.08,
+      "pa": 1070.8,
+      "avg_pf": 100.37,
+      "all_play": "90-31",
+      "expected_wins": 8.18,
       "luck": -0.18,
-      "close_wins": 3,
+      "close_wins": 4,
       "close_losses": 1,
       "high_score": 120.3,
       "low_score": 74.98,
@@ -1080,40 +1072,39 @@
         "pts": 115.96,
         "opp": "10",
         "opp_pts": 93.48
+       },
+       {
+        "week": 11,
+        "pts": 105.7,
+        "opp": "11",
+        "opp_pts": 103.96
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "11",
-       "opp_name": "The Herdsmen",
-       "opp_avg_pf": 89.59,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "5",
        "opp_name": "Denim Like A DeJean",
-       "opp_avg_pf": 93.7,
+       "opp_avg_pf": 93.76,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "3",
        "opp_name": "Burrito",
-       "opp_avg_pf": 84.08,
+       "opp_avg_pf": 82.31,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "8",
        "opp_name": "Phony Grossi",
-       "opp_avg_pf": 92.59,
+       "opp_avg_pf": 92.9,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.99
+     "remaining_opp_avg_pf": 89.66
     },
     "10": {
      "team_id": "10",
@@ -1121,21 +1112,21 @@
      "name": "Shaq List",
      "manager": "Pat Dittoe",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 821.48,
-      "optimal_points": 983.3,
-      "points_left": 161.82,
-      "efficiency": 0.835
+      "weeks": 11,
+      "starter_points": 894.32,
+      "optimal_points": 1057.68,
+      "points_left": 163.36,
+      "efficiency": 0.846
      },
      "derived": {
-      "record": "1-9",
-      "games": 10,
-      "pf": 821.48,
-      "pa": 983.1,
-      "avg_pf": 82.15,
-      "all_play": "36-74",
-      "expected_wins": 3.27,
-      "luck": -2.27,
+      "record": "1-10",
+      "games": 11,
+      "pf": 894.32,
+      "pa": 1077.46,
+      "avg_pf": 81.3,
+      "all_play": "38-83",
+      "expected_wins": 3.45,
+      "luck": -2.45,
       "close_wins": 0,
       "close_losses": 2,
       "high_score": 99.94,
@@ -1200,40 +1191,39 @@
         "pts": 93.48,
         "opp": "9",
         "opp_pts": 115.96
+       },
+       {
+        "week": 11,
+        "pts": 72.84,
+        "opp": "5",
+        "opp_pts": 94.36
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "5",
-       "opp_name": "Denim Like A DeJean",
-       "opp_avg_pf": 93.7,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "11",
        "opp_name": "The Herdsmen",
-       "opp_avg_pf": 89.59,
+       "opp_avg_pf": 90.89,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "2",
        "opp_name": "BrowneyeVibeSesh",
-       "opp_avg_pf": 91.97,
+       "opp_avg_pf": 90.41,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "7",
        "opp_name": "Orson Welles",
-       "opp_avg_pf": 83.75,
+       "opp_avg_pf": 85.29,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.75
+     "remaining_opp_avg_pf": 88.86
     },
     "11": {
      "team_id": "11",
@@ -1241,23 +1231,23 @@
      "name": "The Herdsmen",
      "manager": "Ryan",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 895.88,
-      "optimal_points": 1016.02,
-      "points_left": 120.14,
-      "efficiency": 0.882
+      "weeks": 11,
+      "starter_points": 999.84,
+      "optimal_points": 1130.58,
+      "points_left": 130.74,
+      "efficiency": 0.884
      },
      "derived": {
-      "record": "4-6",
-      "games": 10,
-      "pf": 895.88,
-      "pa": 928.66,
-      "avg_pf": 89.59,
-      "all_play": "48-62",
-      "expected_wins": 4.36,
-      "luck": -0.36,
+      "record": "4-7",
+      "games": 11,
+      "pf": 999.84,
+      "pa": 1034.36,
+      "avg_pf": 90.89,
+      "all_play": "58-63",
+      "expected_wins": 5.27,
+      "luck": -1.27,
       "close_wins": 0,
-      "close_losses": 2,
+      "close_losses": 3,
       "high_score": 125.68,
       "low_score": 57.2,
       "scores": [
@@ -1320,40 +1310,39 @@
         "pts": 67.24,
         "opp": "5",
         "opp_pts": 123.36
+       },
+       {
+        "week": 11,
+        "pts": 103.96,
+        "opp": "9",
+        "opp_pts": 105.7
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "9",
-       "opp_name": "Ranus The Hiddeer",
-       "opp_avg_pf": 99.84,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "10",
        "opp_name": "Shaq List",
-       "opp_avg_pf": 82.15,
+       "opp_avg_pf": 81.3,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "7",
        "opp_name": "Orson Welles",
-       "opp_avg_pf": 83.75,
+       "opp_avg_pf": 85.29,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "2",
        "opp_name": "BrowneyeVibeSesh",
-       "opp_avg_pf": 91.97,
+       "opp_avg_pf": 90.41,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 89.43
+     "remaining_opp_avg_pf": 85.67
     },
     "12": {
      "team_id": "12",
@@ -1361,23 +1350,23 @@
      "name": "The Pickups",
      "manager": "Mullins",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1099.7,
-      "optimal_points": 1181.74,
-      "points_left": 82.04,
-      "efficiency": 0.931
+      "weeks": 11,
+      "starter_points": 1193.0,
+      "optimal_points": 1288.44,
+      "points_left": 95.44,
+      "efficiency": 0.926
      },
      "derived": {
-      "record": "8-2",
-      "games": 10,
-      "pf": 1099.7,
-      "pa": 915.32,
-      "avg_pf": 109.97,
-      "all_play": "86-24",
-      "expected_wins": 7.82,
-      "luck": 0.18,
+      "record": "8-3",
+      "games": 11,
+      "pf": 1193.0,
+      "pa": 1011.28,
+      "avg_pf": 108.45,
+      "all_play": "91-30",
+      "expected_wins": 8.27,
+      "luck": -0.27,
       "close_wins": 1,
-      "close_losses": 2,
+      "close_losses": 3,
       "high_score": 133.72,
       "low_score": 87.18,
       "scores": [
@@ -1440,40 +1429,39 @@
         "pts": 101.16,
         "opp": "3",
         "opp_pts": 59.82
+       },
+       {
+        "week": 11,
+        "pts": 93.3,
+        "opp": "8",
+        "opp_pts": 95.96
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "8",
-       "opp_name": "Phony Grossi",
-       "opp_avg_pf": 92.59,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "1",
        "opp_name": "Football Guy's Guy",
-       "opp_avg_pf": 86.87,
+       "opp_avg_pf": 87.73,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "6",
        "opp_name": "Matty Dawg Pound",
-       "opp_avg_pf": 90.69,
+       "opp_avg_pf": 90.89,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "4",
        "opp_name": "Dad\u2019s To The Bone",
-       "opp_avg_pf": 99.88,
+       "opp_avg_pf": 95.98,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 92.51
+     "remaining_opp_avg_pf": 91.53
     }
    },
    "weeks": {
@@ -2820,133 +2808,133 @@
     "11": [
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "1",
       "teams": [
        {
         "team_id": "1",
         "name": "Football Guy's Guy",
-        "points": 0.0,
-        "projected": 88.49
+        "points": 96.28,
+        "projected": 89.42
        },
        {
         "team_id": "3",
         "name": "Burrito",
-        "points": 0.0,
-        "projected": 61.23
+        "points": 64.6,
+        "projected": 75.18
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "2",
       "teams": [
        {
         "team_id": "2",
         "name": "BrowneyeVibeSesh",
-        "points": 0.0,
-        "projected": 70.26
+        "points": 74.74,
+        "projected": 79.24
        },
        {
         "team_id": "4",
         "name": "Dad\u2019s To The Bone",
-        "points": 0.0,
-        "projected": 79.42
+        "points": 56.96,
+        "projected": 90.28
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "5",
       "teams": [
        {
         "team_id": "5",
         "name": "Denim Like A DeJean",
-        "points": 0.0,
-        "projected": 98.75
+        "points": 94.36,
+        "projected": 99.39
        },
        {
         "team_id": "10",
         "name": "Shaq List",
-        "points": 0.0,
-        "projected": 65.38
+        "points": 72.84,
+        "projected": 97.96
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "7",
       "teams": [
        {
         "team_id": "6",
         "name": "Matty Dawg Pound",
-        "points": 0.0,
-        "projected": 53.59
+        "points": 92.92,
+        "projected": 89.77
        },
        {
         "team_id": "7",
         "name": "Orson Welles",
-        "points": 0.0,
-        "projected": 73.84
+        "points": 100.66,
+        "projected": 90.53
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "8",
       "teams": [
        {
         "team_id": "8",
         "name": "Phony Grossi",
-        "points": 0.0,
-        "projected": 90.88
+        "points": 95.96,
+        "projected": 96.17
        },
        {
         "team_id": "12",
         "name": "The Pickups",
-        "points": 0.0,
-        "projected": 87.59
+        "points": 93.3,
+        "projected": 95.59
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "9",
       "teams": [
        {
         "team_id": "9",
         "name": "Ranus The Hiddeer",
-        "points": 0.0,
-        "projected": 77.97
+        "points": 105.7,
+        "projected": 90.72
        },
        {
         "team_id": "11",
         "name": "The Herdsmen",
-        "points": 0.0,
-        "projected": 101.2
+        "points": 103.96,
+        "projected": 103.58
        }
       ]
      }
@@ -2954,7 +2942,7 @@
     "12": [
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -2964,19 +2952,19 @@
         "team_id": "1",
         "name": "Football Guy's Guy",
         "points": 0.0,
-        "projected": 83.19
+        "projected": 86.98
        },
        {
         "team_id": "12",
         "name": "The Pickups",
         "points": 0.0,
-        "projected": 95.91
+        "projected": 106.25
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -2986,19 +2974,19 @@
         "team_id": "2",
         "name": "BrowneyeVibeSesh",
         "points": 0.0,
-        "projected": 87.99
+        "projected": 95.43
        },
        {
         "team_id": "7",
         "name": "Orson Welles",
         "points": 0.0,
-        "projected": 74.95
+        "projected": 78.63
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -3008,19 +2996,19 @@
         "team_id": "3",
         "name": "Burrito",
         "points": 0.0,
-        "projected": 74.92
+        "projected": 92.85
        },
        {
         "team_id": "8",
         "name": "Phony Grossi",
         "points": 0.0,
-        "projected": 98.66
+        "projected": 100.37
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -3030,19 +3018,19 @@
         "team_id": "4",
         "name": "Dad\u2019s To The Bone",
         "points": 0.0,
-        "projected": 92.51
+        "projected": 90.6
        },
        {
         "team_id": "6",
         "name": "Matty Dawg Pound",
         "points": 0.0,
-        "projected": 89.34
+        "projected": 90.83
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -3052,19 +3040,19 @@
         "team_id": "5",
         "name": "Denim Like A DeJean",
         "points": 0.0,
-        "projected": 97.4
+        "projected": 93.83
        },
        {
         "team_id": "9",
         "name": "Ranus The Hiddeer",
         "points": 0.0,
-        "projected": 80.85
+        "projected": 87.66
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -3074,13 +3062,13 @@
         "team_id": "10",
         "name": "Shaq List",
         "points": 0.0,
-        "projected": 89.99
+        "projected": 87.49
        },
        {
         "team_id": "11",
         "name": "The Herdsmen",
         "points": 0.0,
-        "projected": 96.04
+        "projected": 97.79
        }
       ]
      }
@@ -3098,13 +3086,13 @@
         "team_id": "1",
         "name": "Football Guy's Guy",
         "points": 0.0,
-        "projected": 83.23
+        "projected": 87.9
        },
        {
         "team_id": "4",
         "name": "Dad\u2019s To The Bone",
         "points": 0.0,
-        "projected": 81.67
+        "projected": 78.96
        }
       ]
      },
@@ -3120,13 +3108,13 @@
         "team_id": "2",
         "name": "BrowneyeVibeSesh",
         "points": 0.0,
-        "projected": 78.03
+        "projected": 83.45
        },
        {
         "team_id": "10",
         "name": "Shaq List",
         "points": 0.0,
-        "projected": 76.94
+        "projected": 65.72
        }
       ]
      },
@@ -3142,13 +3130,13 @@
         "team_id": "3",
         "name": "Burrito",
         "points": 0.0,
-        "projected": 62.16
+        "projected": 80.35
        },
        {
         "team_id": "9",
         "name": "Ranus The Hiddeer",
         "points": 0.0,
-        "projected": 77.35
+        "projected": 65.66
        }
       ]
      },
@@ -3164,13 +3152,13 @@
         "team_id": "5",
         "name": "Denim Like A DeJean",
         "points": 0.0,
-        "projected": 77.88
+        "projected": 78.1
        },
        {
         "team_id": "8",
         "name": "Phony Grossi",
         "points": 0.0,
-        "projected": 93.93
+        "projected": 95.93
        }
       ]
      },
@@ -3186,13 +3174,13 @@
         "team_id": "6",
         "name": "Matty Dawg Pound",
         "points": 0.0,
-        "projected": 60.69
+        "projected": 78.91
        },
        {
         "team_id": "12",
         "name": "The Pickups",
         "points": 0.0,
-        "projected": 80.66
+        "projected": 94.41
        }
       ]
      },
@@ -3208,13 +3196,13 @@
         "team_id": "7",
         "name": "Orson Welles",
         "points": 0.0,
-        "projected": 58.36
+        "projected": 65.17
        },
        {
         "team_id": "11",
         "name": "The Herdsmen",
         "points": 0.0,
-        "projected": 80.05
+        "projected": 80.01
        }
       ]
      }
@@ -3232,13 +3220,13 @@
         "team_id": "1",
         "name": "Football Guy's Guy",
         "points": 0.0,
-        "projected": 82.67
+        "projected": 86.14
        },
        {
         "team_id": "6",
         "name": "Matty Dawg Pound",
         "points": 0.0,
-        "projected": 71.93
+        "projected": 79.41
        }
       ]
      },
@@ -3254,13 +3242,13 @@
         "team_id": "2",
         "name": "BrowneyeVibeSesh",
         "points": 0.0,
-        "projected": 79.99
+        "projected": 81.92
        },
        {
         "team_id": "11",
         "name": "The Herdsmen",
         "points": 0.0,
-        "projected": 78.18
+        "projected": 77.71
        }
       ]
      },
@@ -3276,13 +3264,13 @@
         "team_id": "3",
         "name": "Burrito",
         "points": 0.0,
-        "projected": 65.16
+        "projected": 74.99
        },
        {
         "team_id": "5",
         "name": "Denim Like A DeJean",
         "points": 0.0,
-        "projected": 85.31
+        "projected": 84.67
        }
       ]
      },
@@ -3298,13 +3286,13 @@
         "team_id": "4",
         "name": "Dad\u2019s To The Bone",
         "points": 0.0,
-        "projected": 87.89
+        "projected": 87.81
        },
        {
         "team_id": "12",
         "name": "The Pickups",
         "points": 0.0,
-        "projected": 87.57
+        "projected": 101.37
        }
       ]
      },
@@ -3320,13 +3308,13 @@
         "team_id": "7",
         "name": "Orson Welles",
         "points": 0.0,
-        "projected": 78.69
+        "projected": 83.87
        },
        {
         "team_id": "10",
         "name": "Shaq List",
         "points": 0.0,
-        "projected": 86.45
+        "projected": 80.62
        }
       ]
      },
@@ -3342,13 +3330,13 @@
         "team_id": "8",
         "name": "Phony Grossi",
         "points": 0.0,
-        "projected": 99.57
+        "projected": 100.0
        },
        {
         "team_id": "9",
         "name": "Ranus The Hiddeer",
         "points": 0.0,
-        "projected": 81.68
+        "projected": 64.22
        }
       ]
      }
@@ -4475,6 +4463,118 @@
        "pos": "RB",
        "pts": 13.4
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Aaron Rodgers",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 15.98
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 26.0
+       },
+       {
+        "name": "Jaylen Warren",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 2.9
+       },
+       {
+        "name": "Parker Washington",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 10.3
+       },
+       {
+        "name": "Jakobi Meyers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 8.5
+       },
+       {
+        "name": "Jaylen Waddle",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.1
+       },
+       {
+        "name": "T.J. Hockenson",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 5.5
+       },
+       {
+        "name": "Chris Boswell",
+        "pos": "K",
+        "slot": "K",
+        "pts": 13.0
+       },
+       {
+        "name": "Bills",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 8.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Drake London",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jacoby Brissett",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 13.74
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Michael Wilson",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Saquon Barkley",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 13.5
+       },
+       {
+        "name": "Alvin Kamara",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 6.2
+       },
+       {
+        "name": "Elic Ayomanor",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 2.7
+       }
+      ],
+      "starter_points": 96.28,
+      "bench_points": 36.14,
+      "optimal_points": 106.88,
+      "points_left": 10.6,
+      "efficiency": 0.901,
+      "top_bench": {
+       "name": "Jacoby Brissett",
+       "pos": "QB",
+       "pts": 13.74
+      }
      }
     },
     "2": {
@@ -5596,6 +5696,118 @@
        "name": "Jordan Mason",
        "pos": "RB",
        "pts": 5.9
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 14.34
+       },
+       {
+        "name": "Christian McCaffrey",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 12.2
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.7
+       },
+       {
+        "name": "Quentin Johnston",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.0
+       },
+       {
+        "name": "Carnell Tate",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.8
+       },
+       {
+        "name": "Ladd McConkey",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 15.7
+       },
+       {
+        "name": "Brock Bowers",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 0.0
+       },
+       {
+        "name": "Brandon Aubrey",
+        "pos": "K",
+        "slot": "K",
+        "pts": 10.0
+       },
+       {
+        "name": "Cowboys",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 6.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Cooper Kupp",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Christian Watson",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Blake Corum",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Drew Lock",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "A.J. Brown",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jake Ferguson",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Mack Hollins",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 74.74,
+      "bench_points": 0,
+      "optimal_points": 74.74,
+      "points_left": 0.0,
+      "efficiency": 1.0,
+      "top_bench": {
+       "name": "Cooper Kupp",
+       "pos": "WR",
+       "pts": 0.0
       }
      }
     },
@@ -6719,6 +6931,118 @@
        "pos": "QB",
        "pts": 19.76
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Kirk Cousins",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 7.4
+       },
+       {
+        "name": "Kenneth Walker III",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 0.0
+       },
+       {
+        "name": "Kenny Gainwell",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 5.9
+       },
+       {
+        "name": "CeeDee Lamb",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 19.2
+       },
+       {
+        "name": "DJ Moore",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 15.1
+       },
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.5
+       },
+       {
+        "name": "Isaiah Likely",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 3.5
+       },
+       {
+        "name": "Matt Gay",
+        "pos": "K",
+        "slot": "K",
+        "pts": 6.0
+       },
+       {
+        "name": "Bengals",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 3.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Matthew Stafford",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Tyler Warren",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 2.2
+       },
+       {
+        "name": "Keaton Mitchell",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.6
+       },
+       {
+        "name": "Audric Estime",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Drake Maye",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 4.5
+       },
+       {
+        "name": "Malik Washington",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 4.1
+       }
+      ],
+      "starter_points": 64.6,
+      "bench_points": 11.4,
+      "optimal_points": 65.2,
+      "points_left": 0.6,
+      "efficiency": 0.991,
+      "top_bench": {
+       "name": "Rome Odunze",
+       "pos": "WR",
+       "pts": 4.5
+      }
      }
     },
     "4": {
@@ -7840,6 +8164,118 @@
        "name": "Corey Kiner",
        "pos": "RB",
        "pts": 2.5
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Josh Allen",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 12.16
+       },
+       {
+        "name": "James Cook III",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 15.2
+       },
+       {
+        "name": "Chase Brown",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.6
+       },
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 8.4
+       },
+       {
+        "name": "Caleb Douglas",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.0
+       },
+       {
+        "name": "Keenan Allen",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.8
+       },
+       {
+        "name": "Dallas Goedert",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 3.8
+       },
+       {
+        "name": "Cairo Santos",
+        "pos": "K",
+        "slot": "K",
+        "pts": 7.0
+       },
+       {
+        "name": "Vikings",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 0.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Omar Cooper Jr.",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Josh Jacobs",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jordan Addison",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 1.8
+       },
+       {
+        "name": "Michael Mayer",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.4
+       },
+       {
+        "name": "Chig Okonkwo",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 6.6
+       }
+      ],
+      "starter_points": 56.96,
+      "bench_points": 8.8,
+      "optimal_points": 59.76,
+      "points_left": 2.8,
+      "efficiency": 0.953,
+      "top_bench": {
+       "name": "Chig Okonkwo",
+       "pos": "TE",
+       "pts": 6.6
       }
      }
     },
@@ -8963,6 +9399,118 @@
        "pos": "DEF",
        "pts": 11.0
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Jayden Daniels",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 17.06
+       },
+       {
+        "name": "Derrick Henry",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 15.1
+       },
+       {
+        "name": "Ollie Gordon II",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 6.7
+       },
+       {
+        "name": "Tee Higgins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 10.3
+       },
+       {
+        "name": "George Pickens",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 16.8
+       },
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 0.2
+       },
+       {
+        "name": "Sam LaPorta",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 6.2
+       },
+       {
+        "name": "Tyler Bass",
+        "pos": "K",
+        "slot": "K",
+        "pts": 18.0
+       },
+       {
+        "name": "Lions",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 4.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Demarcus Robinson",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Xavier Worthy",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 9.8
+       },
+       {
+        "name": "Hunter Henry",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Bo Nix",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 11.5
+       },
+       {
+        "name": "Tyreek Hill",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "David Montgomery",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 12.4
+       },
+       {
+        "name": "Rams",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 94.36,
+      "bench_points": 33.7,
+      "optimal_points": 110.96,
+      "points_left": 16.6,
+      "efficiency": 0.85,
+      "top_bench": {
+       "name": "David Montgomery",
+       "pos": "RB",
+       "pts": 12.4
+      }
      }
     },
     "6": {
@@ -10084,6 +10632,118 @@
        "name": "Ka'imi Fairbairn",
        "pos": "K",
        "pts": 7.0
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Cam Ward",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 22.22
+       },
+       {
+        "name": "Jonathan Taylor",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 2.7
+       },
+       {
+        "name": "Rico Dowdle",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.4
+       },
+       {
+        "name": "Nico Collins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.8
+       },
+       {
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.1
+       },
+       {
+        "name": "Mike Evans",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 16.9
+       },
+       {
+        "name": "Trey McBride",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 5.8
+       },
+       {
+        "name": "Cam Little",
+        "pos": "K",
+        "slot": "K",
+        "pts": 13.0
+       },
+       {
+        "name": "Broncos",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 13.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Deshaun Watson",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 1.0
+       },
+       {
+        "name": "KC Concepcion Jr.",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 10.3
+       },
+       {
+        "name": "Chris Rodriguez Jr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 4.1
+       },
+       {
+        "name": "Ka'imi Fairbairn",
+        "pos": "K",
+        "slot": "BN",
+        "pts": 6.0
+       },
+       {
+        "name": "Colts",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 3.0
+       }
+      ],
+      "starter_points": 92.92,
+      "bench_points": 24.4,
+      "optimal_points": 100.52,
+      "points_left": 7.6,
+      "efficiency": 0.924,
+      "top_bench": {
+       "name": "Khalil Shakir",
+       "pos": "WR",
+       "pts": 10.3
       }
      }
     },
@@ -11207,6 +11867,118 @@
        "pos": "RB",
        "pts": 12.6
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Patrick Mahomes",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 24.96
+       },
+       {
+        "name": "Ashton Jeanty",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 22.9
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 11.0
+       },
+       {
+        "name": "Rashee Rice",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 5.3
+       },
+       {
+        "name": "Emeka Egbuka",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.8
+       },
+       {
+        "name": "Xavier Hutchinson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.3
+       },
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 19.4
+       },
+       {
+        "name": "Eddy Pineiro",
+        "pos": "K",
+        "slot": "K",
+        "pts": 5.0
+       },
+       {
+        "name": "Ravens",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 9.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Wan'Dale Robinson",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Konata Mumpfield",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Puka Nacua",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Juwan Johnson",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Kaelon Black",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 1.5
+       },
+       {
+        "name": "Travis Etienne Jr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 7.6
+       }
+      ],
+      "starter_points": 100.66,
+      "bench_points": 9.1,
+      "optimal_points": 100.66,
+      "points_left": 0.0,
+      "efficiency": 1.0,
+      "top_bench": {
+       "name": "Travis Etienne Jr.",
+       "pos": "RB",
+       "pts": 7.6
+      }
      }
     },
     "8": {
@@ -12328,6 +13100,118 @@
        "name": "Cam Skattebo",
        "pos": "RB",
        "pts": 24.2
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Jared Goff",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.36
+       },
+       {
+        "name": "Jahmyr Gibbs",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 23.8
+       },
+       {
+        "name": "Bhayshul Tuten",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 5.3
+       },
+       {
+        "name": "Tetairoa McMillan",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 13.1
+       },
+       {
+        "name": "Jameson Williams",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 15.3
+       },
+       {
+        "name": "Deebo Samuel Sr.",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.7
+       },
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.4
+       },
+       {
+        "name": "Will Reichard",
+        "pos": "K",
+        "slot": "K",
+        "pts": 5.0
+       },
+       {
+        "name": "Chiefs",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 7.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Mike Gesicki",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 7.7
+       },
+       {
+        "name": "Denzel Boston",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Cam Skattebo",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 2.8
+       },
+       {
+        "name": "Marvin Harrison Jr.",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jordyn Tyson",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 1.0
+       },
+       {
+        "name": "Tank Dell",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 2.7
+       },
+       {
+        "name": "Buccaneers",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 95.96,
+      "bench_points": 14.2,
+      "optimal_points": 102.26,
+      "points_left": 6.3,
+      "efficiency": 0.938,
+      "top_bench": {
+       "name": "Mike Gesicki",
+       "pos": "TE",
+       "pts": 7.7
       }
      }
     },
@@ -13451,6 +14335,118 @@
        "pos": "QB",
        "pts": 34.42
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 35.9
+       },
+       {
+        "name": "D'Andre Swift",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 9.9
+       },
+       {
+        "name": "Braelon Allen",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 8.4
+       },
+       {
+        "name": "Amon-Ra St. Brown",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 9.7
+       },
+       {
+        "name": "Adonai Mitchell",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.0
+       },
+       {
+        "name": "Antonio Williams",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 12.2
+       },
+       {
+        "name": "Brenton Strange",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.6
+       },
+       {
+        "name": "Evan McPherson",
+        "pos": "K",
+        "slot": "K",
+        "pts": 10.0
+       },
+       {
+        "name": "Texans",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 15.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Germie Bernard",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 4.0
+       },
+       {
+        "name": "Rachaad White",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 22.2
+       },
+       {
+        "name": "Tucker Kraft",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jaxon Smith-Njigba",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Quinshon Judkins",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 105.7,
+      "bench_points": 26.2,
+      "optimal_points": 106.7,
+      "points_left": 1.0,
+      "efficiency": 0.991,
+      "top_bench": {
+       "name": "Brock Purdy",
+       "pos": "QB",
+       "pts": 22.2
+      }
      }
     },
     "10": {
@@ -14572,6 +15568,118 @@
        "name": "Emmett Johnson",
        "pos": "RB",
        "pts": 29.1
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 12.74
+       },
+       {
+        "name": "Breece Hall",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 16.0
+       },
+       {
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 20.3
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 5.9
+       },
+       {
+        "name": "Jalen Coker",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.7
+       },
+       {
+        "name": "Ja'Marr Chase",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.1
+       },
+       {
+        "name": "Dalton Schultz",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.1
+       },
+       {
+        "name": "Cameron Dicker",
+        "pos": "K",
+        "slot": "K",
+        "pts": 8.0
+       },
+       {
+        "name": "Chargers",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 1.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Kyle Pitts Sr.",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Kyren Williams",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 10.3
+       },
+       {
+        "name": "Tyler Shough",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 14.28
+       },
+       {
+        "name": "Terry McLaurin",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "TreVeyon Henderson",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Trey Smack",
+        "pos": "K",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 72.84,
+      "bench_points": 24.58,
+      "optimal_points": 74.38,
+      "points_left": 1.54,
+      "efficiency": 0.979,
+      "top_bench": {
+       "name": "Tyler Shough",
+       "pos": "QB",
+       "pts": 14.28
       }
      }
     },
@@ -15695,6 +16803,118 @@
        "pos": "RB",
        "pts": 16.5
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 20.46
+       },
+       {
+        "name": "Javonte Williams",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 21.1
+       },
+       {
+        "name": "Jonah Coleman",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 30.9
+       },
+       {
+        "name": "Justin Jefferson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 6.7
+       },
+       {
+        "name": "Garrett Wilson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.9
+       },
+       {
+        "name": "Courtland Sutton",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 0.0
+       },
+       {
+        "name": "Colston Loveland",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 8.9
+       },
+       {
+        "name": "Jake Bates",
+        "pos": "K",
+        "slot": "K",
+        "pts": 9.0
+       },
+       {
+        "name": "Jaguars",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 3.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 2.3
+       },
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Devaughn Vele",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 7.6
+       },
+       {
+        "name": "Omarion Hampton",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 9.3
+       },
+       {
+        "name": "Tre' Harris",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 2.8
+       },
+       {
+        "name": "Steelers",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 6.0
+       }
+      ],
+      "starter_points": 103.96,
+      "bench_points": 28.0,
+      "optimal_points": 114.56,
+      "points_left": 10.6,
+      "efficiency": 0.907,
+      "top_bench": {
+       "name": "Omarion Hampton",
+       "pos": "RB",
+       "pts": 9.3
+      }
      }
     },
     "12": {
@@ -16816,6 +18036,118 @@
        "name": "Samaje Perine",
        "pos": "RB",
        "pts": 9.9
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Joe Burrow",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 19.9
+       },
+       {
+        "name": "Bucky Irving",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 16.0
+       },
+       {
+        "name": "J.K. Dobbins",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 0.0
+       },
+       {
+        "name": "Malik Nabers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.5
+       },
+       {
+        "name": "Chris Olave",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 10.2
+       },
+       {
+        "name": "Luther Burden III",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.3
+       },
+       {
+        "name": "George Kittle",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 15.4
+       },
+       {
+        "name": "Spencer Shrader",
+        "pos": "K",
+        "slot": "K",
+        "pts": 3.0
+       },
+       {
+        "name": "Bears",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 16.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Ryan Flournoy",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 1.1
+       },
+       {
+        "name": "Jadarian Price",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Bijan Robinson",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Tre Tucker",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 5.0
+       },
+       {
+        "name": "Makai Lemon",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.3
+       },
+       {
+        "name": "Samaje Perine",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 9.7
+       },
+       {
+        "name": "Packers",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 93.3,
+      "bench_points": 16.1,
+      "optimal_points": 106.7,
+      "points_left": 13.4,
+      "efficiency": 0.874,
+      "top_bench": {
+       "name": "Samaje Perine",
+       "pos": "RB",
+       "pts": 9.7
       }
      }
     }
@@ -18586,7 +19918,7 @@
    "settings": {
     "start_week": 1,
     "end_week": 17,
-    "current_week": 11,
+    "current_week": 12,
     "playoff_start_week": 16,
     "num_playoff_teams": 4,
     "uses_playoff": "1",
@@ -18619,21 +19951,21 @@
      "name": "MakeMyTeamGreatAgain",
      "manager": "Jeff",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 945.48,
-      "optimal_points": 1099.12,
+      "weeks": 11,
+      "starter_points": 1026.28,
+      "optimal_points": 1179.92,
       "points_left": 153.64,
-      "efficiency": 0.86
+      "efficiency": 0.87
      },
      "derived": {
-      "record": "3-7",
-      "games": 10,
-      "pf": 945.48,
-      "pa": 1157.42,
-      "avg_pf": 94.55,
-      "all_play": "23-47",
-      "expected_wins": 3.29,
-      "luck": -0.29,
+      "record": "3-8",
+      "games": 11,
+      "pf": 1026.28,
+      "pa": 1250.72,
+      "avg_pf": 93.3,
+      "all_play": "24-53",
+      "expected_wins": 3.43,
+      "luck": -0.43,
       "close_wins": 2,
       "close_losses": 2,
       "high_score": 117.16,
@@ -18698,47 +20030,46 @@
         "pts": 97.26,
         "opp": "2",
         "opp_pts": 149.06
+       },
+       {
+        "week": 11,
+        "pts": 80.8,
+        "opp": "5",
+        "opp_pts": 93.3
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "5",
-       "opp_name": "Ya Boi",
-       "opp_avg_pf": 97.4,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "7",
        "opp_name": "Michael Scott's Team",
-       "opp_avg_pf": 101.05,
+       "opp_avg_pf": 100.61,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "3",
        "opp_name": "Fogle\u2019s Moguls",
-       "opp_avg_pf": 108.67,
+       "opp_avg_pf": 109.59,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "8",
        "opp_name": "Ryan's Pierced Pigskin Posse",
-       "opp_avg_pf": 105.34,
+       "opp_avg_pf": 105.8,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "6",
        "opp_name": "Kevin Jack's Team",
-       "opp_avg_pf": 106.19,
+       "opp_avg_pf": 103.61,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 103.73
+     "remaining_opp_avg_pf": 104.9
     },
     "2": {
      "team_id": "2",
@@ -18746,20 +20077,20 @@
      "name": "Monkey Business",
      "manager": "Kevin",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1215.32,
-      "optimal_points": 1367.22,
-      "points_left": 151.9,
-      "efficiency": 0.889
+      "weeks": 11,
+      "starter_points": 1339.22,
+      "optimal_points": 1508.62,
+      "points_left": 169.4,
+      "efficiency": 0.888
      },
      "derived": {
-      "record": "8-2",
-      "games": 10,
-      "pf": 1215.32,
-      "pa": 973.28,
-      "avg_pf": 121.53,
-      "all_play": "49-21",
-      "expected_wins": 7.0,
+      "record": "9-2",
+      "games": 11,
+      "pf": 1339.22,
+      "pa": 1083.74,
+      "avg_pf": 121.75,
+      "all_play": "56-21",
+      "expected_wins": 8.0,
       "luck": 1.0,
       "close_wins": 1,
       "close_losses": 0,
@@ -18825,47 +20156,46 @@
         "pts": 149.06,
         "opp": "1",
         "opp_pts": 97.26
+       },
+       {
+        "week": 11,
+        "pts": 123.9,
+        "opp": "8",
+        "opp_pts": 110.46
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "8",
-       "opp_name": "Ryan's Pierced Pigskin Posse",
-       "opp_avg_pf": 105.34,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "6",
        "opp_name": "Kevin Jack's Team",
-       "opp_avg_pf": 106.19,
+       "opp_avg_pf": 103.61,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "4",
        "opp_name": "Hannah Lee's Revenge",
-       "opp_avg_pf": 116.45,
+       "opp_avg_pf": 113.78,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "3",
        "opp_name": "Fogle\u2019s Moguls",
-       "opp_avg_pf": 108.67,
+       "opp_avg_pf": 109.59,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "5",
        "opp_name": "Ya Boi",
-       "opp_avg_pf": 97.4,
+       "opp_avg_pf": 97.03,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 106.81
+     "remaining_opp_avg_pf": 106.0
     },
     "3": {
      "team_id": "3",
@@ -18873,21 +20203,21 @@
      "name": "Fogle\u2019s Moguls",
      "manager": "Patrick",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1086.68,
-      "optimal_points": 1240.08,
+      "weeks": 11,
+      "starter_points": 1205.54,
+      "optimal_points": 1358.94,
       "points_left": 153.4,
-      "efficiency": 0.876
+      "efficiency": 0.887
      },
      "derived": {
-      "record": "6-4",
-      "games": 10,
-      "pf": 1086.68,
-      "pa": 1003.24,
-      "avg_pf": 108.67,
-      "all_play": "34-36",
-      "expected_wins": 4.86,
-      "luck": 1.14,
+      "record": "7-4",
+      "games": 11,
+      "pf": 1205.54,
+      "pa": 1099.48,
+      "avg_pf": 109.59,
+      "all_play": "40-37",
+      "expected_wins": 5.71,
+      "luck": 1.29,
       "close_wins": 1,
       "close_losses": 1,
       "high_score": 151.6,
@@ -18952,47 +20282,46 @@
         "pts": 117.56,
         "opp": "6",
         "opp_pts": 108.3
+       },
+       {
+        "week": 11,
+        "pts": 118.86,
+        "opp": "7",
+        "opp_pts": 96.24
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "7",
-       "opp_name": "Michael Scott's Team",
-       "opp_avg_pf": 101.05,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "4",
        "opp_name": "Hannah Lee's Revenge",
-       "opp_avg_pf": 116.45,
+       "opp_avg_pf": 113.78,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "1",
        "opp_name": "MakeMyTeamGreatAgain",
-       "opp_avg_pf": 94.55,
+       "opp_avg_pf": 93.3,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "2",
        "opp_name": "Monkey Business",
-       "opp_avg_pf": 121.53,
+       "opp_avg_pf": 121.75,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "8",
        "opp_name": "Ryan's Pierced Pigskin Posse",
-       "opp_avg_pf": 105.34,
+       "opp_avg_pf": 105.8,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 107.78
+     "remaining_opp_avg_pf": 108.66
     },
     "4": {
      "team_id": "4",
@@ -19000,22 +20329,22 @@
      "name": "Hannah Lee's Revenge",
      "manager": "Mullins",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1164.48,
-      "optimal_points": 1301.66,
-      "points_left": 137.18,
-      "efficiency": 0.895
+      "weeks": 11,
+      "starter_points": 1251.54,
+      "optimal_points": 1390.42,
+      "points_left": 138.88,
+      "efficiency": 0.9
      },
      "derived": {
-      "record": "7-3",
-      "games": 10,
-      "pf": 1164.48,
-      "pa": 1031.52,
-      "avg_pf": 116.45,
-      "all_play": "48-22",
-      "expected_wins": 6.86,
-      "luck": 0.14,
-      "close_wins": 1,
+      "record": "8-3",
+      "games": 11,
+      "pf": 1251.54,
+      "pa": 1109.26,
+      "avg_pf": 113.78,
+      "all_play": "50-27",
+      "expected_wins": 7.14,
+      "luck": 0.86,
+      "close_wins": 2,
       "close_losses": 0,
       "high_score": 150.86,
       "low_score": 82.22,
@@ -19079,47 +20408,46 @@
         "pts": 139.94,
         "opp": "8",
         "opp_pts": 135.04
+       },
+       {
+        "week": 11,
+        "pts": 87.06,
+        "opp": "6",
+        "opp_pts": 77.74
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "6",
-       "opp_name": "Kevin Jack's Team",
-       "opp_avg_pf": 106.19,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "3",
        "opp_name": "Fogle\u2019s Moguls",
-       "opp_avg_pf": 108.67,
+       "opp_avg_pf": 109.59,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "2",
        "opp_name": "Monkey Business",
-       "opp_avg_pf": 121.53,
+       "opp_avg_pf": 121.75,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "5",
        "opp_name": "Ya Boi",
-       "opp_avg_pf": 97.4,
+       "opp_avg_pf": 97.03,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "7",
        "opp_name": "Michael Scott's Team",
-       "opp_avg_pf": 101.05,
+       "opp_avg_pf": 100.61,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 106.97
+     "remaining_opp_avg_pf": 107.25
     },
     "5": {
      "team_id": "5",
@@ -19127,21 +20455,21 @@
      "name": "Ya Boi",
      "manager": "Brad Nemeth",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 973.98,
-      "optimal_points": 1076.08,
-      "points_left": 102.1,
-      "efficiency": 0.905
+      "weeks": 11,
+      "starter_points": 1067.28,
+      "optimal_points": 1199.88,
+      "points_left": 132.6,
+      "efficiency": 0.889
      },
      "derived": {
-      "record": "4-6",
-      "games": 10,
-      "pf": 973.98,
-      "pa": 1062.44,
-      "avg_pf": 97.4,
-      "all_play": "26-44",
-      "expected_wins": 3.71,
-      "luck": 0.29,
+      "record": "5-6",
+      "games": 11,
+      "pf": 1067.28,
+      "pa": 1143.24,
+      "avg_pf": 97.03,
+      "all_play": "29-48",
+      "expected_wins": 4.14,
+      "luck": 0.86,
       "close_wins": 1,
       "close_losses": 1,
       "high_score": 132.52,
@@ -19206,47 +20534,46 @@
         "pts": 132.52,
         "opp": "7",
         "opp_pts": 97.28
+       },
+       {
+        "week": 11,
+        "pts": 93.3,
+        "opp": "1",
+        "opp_pts": 80.8
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "1",
-       "opp_name": "MakeMyTeamGreatAgain",
-       "opp_avg_pf": 94.55,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "8",
        "opp_name": "Ryan's Pierced Pigskin Posse",
-       "opp_avg_pf": 105.34,
+       "opp_avg_pf": 105.8,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "6",
        "opp_name": "Kevin Jack's Team",
-       "opp_avg_pf": 106.19,
+       "opp_avg_pf": 103.61,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "4",
        "opp_name": "Hannah Lee's Revenge",
-       "opp_avg_pf": 116.45,
+       "opp_avg_pf": 113.78,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "2",
        "opp_name": "Monkey Business",
-       "opp_avg_pf": 121.53,
+       "opp_avg_pf": 121.75,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 108.81
+     "remaining_opp_avg_pf": 111.23
     },
     "6": {
      "team_id": "6",
@@ -19254,23 +20581,23 @@
      "name": "Kevin Jack's Team",
      "manager": "Kevin Jack",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1061.92,
-      "optimal_points": 1229.62,
-      "points_left": 167.7,
+      "weeks": 11,
+      "starter_points": 1139.66,
+      "optimal_points": 1319.18,
+      "points_left": 179.52,
       "efficiency": 0.864
      },
      "derived": {
-      "record": "2-8",
-      "games": 10,
-      "pf": 1061.92,
-      "pa": 1085.48,
-      "avg_pf": 106.19,
-      "all_play": "34-36",
+      "record": "2-9",
+      "games": 11,
+      "pf": 1139.66,
+      "pa": 1172.54,
+      "avg_pf": 103.61,
+      "all_play": "34-43",
       "expected_wins": 4.86,
       "luck": -2.86,
       "close_wins": 0,
-      "close_losses": 5,
+      "close_losses": 6,
       "high_score": 134.98,
       "low_score": 70.36,
       "scores": [
@@ -19333,47 +20660,46 @@
         "pts": 108.3,
         "opp": "3",
         "opp_pts": 117.56
+       },
+       {
+        "week": 11,
+        "pts": 77.74,
+        "opp": "4",
+        "opp_pts": 87.06
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "4",
-       "opp_name": "Hannah Lee's Revenge",
-       "opp_avg_pf": 116.45,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "2",
        "opp_name": "Monkey Business",
-       "opp_avg_pf": 121.53,
+       "opp_avg_pf": 121.75,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "5",
        "opp_name": "Ya Boi",
-       "opp_avg_pf": 97.4,
+       "opp_avg_pf": 97.03,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "7",
        "opp_name": "Michael Scott's Team",
-       "opp_avg_pf": 101.05,
+       "opp_avg_pf": 100.61,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "1",
        "opp_name": "MakeMyTeamGreatAgain",
-       "opp_avg_pf": 94.55,
+       "opp_avg_pf": 93.3,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 106.2
+     "remaining_opp_avg_pf": 103.17
     },
     "7": {
      "team_id": "7",
@@ -19381,21 +20707,21 @@
      "name": "Michael Scott's Team",
      "manager": "Michael Scott",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1010.46,
-      "optimal_points": 1161.08,
-      "points_left": 150.62,
-      "efficiency": 0.87
+      "weeks": 11,
+      "starter_points": 1106.7,
+      "optimal_points": 1263.62,
+      "points_left": 156.92,
+      "efficiency": 0.876
      },
      "derived": {
-      "record": "5-5",
-      "games": 10,
-      "pf": 1010.46,
-      "pa": 1132.82,
-      "avg_pf": 101.05,
-      "all_play": "34-36",
-      "expected_wins": 4.86,
-      "luck": 0.14,
+      "record": "5-6",
+      "games": 11,
+      "pf": 1106.7,
+      "pa": 1251.68,
+      "avg_pf": 100.61,
+      "all_play": "38-39",
+      "expected_wins": 5.43,
+      "luck": -0.43,
       "close_wins": 3,
       "close_losses": 0,
       "high_score": 127.62,
@@ -19460,47 +20786,46 @@
         "pts": 97.28,
         "opp": "5",
         "opp_pts": 132.52
+       },
+       {
+        "week": 11,
+        "pts": 96.24,
+        "opp": "3",
+        "opp_pts": 118.86
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "3",
-       "opp_name": "Fogle\u2019s Moguls",
-       "opp_avg_pf": 108.67,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "1",
        "opp_name": "MakeMyTeamGreatAgain",
-       "opp_avg_pf": 94.55,
+       "opp_avg_pf": 93.3,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "8",
        "opp_name": "Ryan's Pierced Pigskin Posse",
-       "opp_avg_pf": 105.34,
+       "opp_avg_pf": 105.8,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "6",
        "opp_name": "Kevin Jack's Team",
-       "opp_avg_pf": 106.19,
+       "opp_avg_pf": 103.61,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "4",
        "opp_name": "Hannah Lee's Revenge",
-       "opp_avg_pf": 116.45,
+       "opp_avg_pf": 113.78,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 106.24
+     "remaining_opp_avg_pf": 104.12
     },
     "8": {
      "team_id": "8",
@@ -19508,21 +20833,21 @@
      "name": "Ryan's Pierced Pigskin Posse",
      "manager": "zach lubeck",
      "lineup_season": {
-      "weeks": 10,
-      "starter_points": 1053.36,
-      "optimal_points": 1197.4,
-      "points_left": 144.04,
-      "efficiency": 0.88
+      "weeks": 11,
+      "starter_points": 1163.82,
+      "optimal_points": 1314.36,
+      "points_left": 150.54,
+      "efficiency": 0.885
      },
      "derived": {
-      "record": "5-5",
-      "games": 10,
-      "pf": 1053.36,
-      "pa": 1065.48,
-      "avg_pf": 105.34,
-      "all_play": "32-38",
-      "expected_wins": 4.57,
-      "luck": 0.43,
+      "record": "5-6",
+      "games": 11,
+      "pf": 1163.82,
+      "pa": 1189.38,
+      "avg_pf": 105.8,
+      "all_play": "37-40",
+      "expected_wins": 5.29,
+      "luck": -0.29,
       "close_wins": 1,
       "close_losses": 1,
       "high_score": 142.88,
@@ -19587,47 +20912,46 @@
         "pts": 135.04,
         "opp": "4",
         "opp_pts": 139.94
+       },
+       {
+        "week": 11,
+        "pts": 110.46,
+        "opp": "2",
+        "opp_pts": 123.9
        }
       ]
      },
      "remaining_schedule": [
       {
-       "week": 11,
-       "opp_team_id": "2",
-       "opp_name": "Monkey Business",
-       "opp_avg_pf": 121.53,
-       "is_playoffs": false
-      },
-      {
        "week": 12,
        "opp_team_id": "5",
        "opp_name": "Ya Boi",
-       "opp_avg_pf": 97.4,
+       "opp_avg_pf": 97.03,
        "is_playoffs": false
       },
       {
        "week": 13,
        "opp_team_id": "7",
        "opp_name": "Michael Scott's Team",
-       "opp_avg_pf": 101.05,
+       "opp_avg_pf": 100.61,
        "is_playoffs": false
       },
       {
        "week": 14,
        "opp_team_id": "1",
        "opp_name": "MakeMyTeamGreatAgain",
-       "opp_avg_pf": 94.55,
+       "opp_avg_pf": 93.3,
        "is_playoffs": false
       },
       {
        "week": 15,
        "opp_team_id": "3",
        "opp_name": "Fogle\u2019s Moguls",
-       "opp_avg_pf": 108.67,
+       "opp_avg_pf": 109.59,
        "is_playoffs": false
       }
      ],
-     "remaining_opp_avg_pf": 104.64
+     "remaining_opp_avg_pf": 100.13
     }
    },
    "weeks": {
@@ -20534,89 +21858,89 @@
     "11": [
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "5",
       "teams": [
        {
         "team_id": "1",
         "name": "MakeMyTeamGreatAgain",
-        "points": 0.0,
-        "projected": 60.82
+        "points": 80.8,
+        "projected": 91.42
        },
        {
         "team_id": "5",
         "name": "Ya Boi",
-        "points": 0.0,
-        "projected": 95.6
+        "points": 93.3,
+        "projected": 106.66
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "2",
       "teams": [
        {
         "team_id": "2",
         "name": "Monkey Business",
-        "points": 0.0,
-        "projected": 109.45
+        "points": 123.9,
+        "projected": 116.27
        },
        {
         "team_id": "8",
         "name": "Ryan's Pierced Pigskin Posse",
-        "points": 0.0,
-        "projected": 94.26
+        "points": 110.46,
+        "projected": 104.54
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "3",
       "teams": [
        {
         "team_id": "3",
         "name": "Fogle\u2019s Moguls",
-        "points": 0.0,
-        "projected": 109.74
+        "points": 118.86,
+        "projected": 108.95
        },
        {
         "team_id": "7",
         "name": "Michael Scott's Team",
-        "points": 0.0,
-        "projected": 89.71
+        "points": 96.24,
+        "projected": 102.09
        }
       ]
      },
      {
       "week": 11,
-      "status": "midevent",
+      "status": "postevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
-      "winner_team_id": null,
+      "winner_team_id": "4",
       "teams": [
        {
         "team_id": "4",
         "name": "Hannah Lee's Revenge",
-        "points": 0.0,
-        "projected": 94.02
+        "points": 87.06,
+        "projected": 113.92
        },
        {
         "team_id": "6",
         "name": "Kevin Jack's Team",
-        "points": 0.0,
-        "projected": 82.54
+        "points": 77.74,
+        "projected": 113.43
        }
       ]
      }
@@ -20624,7 +21948,7 @@
     "12": [
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -20634,19 +21958,19 @@
         "team_id": "1",
         "name": "MakeMyTeamGreatAgain",
         "points": 0.0,
-        "projected": 100.81
+        "projected": 100.67
        },
        {
         "team_id": "7",
         "name": "Michael Scott's Team",
         "points": 0.0,
-        "projected": 101.12
+        "projected": 99.92
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -20656,19 +21980,19 @@
         "team_id": "2",
         "name": "Monkey Business",
         "points": 0.0,
-        "projected": 123.26
+        "projected": 124.28
        },
        {
         "team_id": "6",
         "name": "Kevin Jack's Team",
         "points": 0.0,
-        "projected": 97.45
+        "projected": 105.68
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -20678,19 +22002,19 @@
         "team_id": "3",
         "name": "Fogle\u2019s Moguls",
         "points": 0.0,
-        "projected": 115.05
+        "projected": 117.18
        },
        {
         "team_id": "4",
         "name": "Hannah Lee's Revenge",
         "points": 0.0,
-        "projected": 91.43
+        "projected": 101.4
        }
       ]
      },
      {
       "week": 12,
-      "status": "preevent",
+      "status": "midevent",
       "is_playoffs": false,
       "is_consolation": false,
       "is_tied": false,
@@ -20700,13 +22024,13 @@
         "team_id": "5",
         "name": "Ya Boi",
         "points": 0.0,
-        "projected": 95.68
+        "projected": 99.81
        },
        {
         "team_id": "8",
         "name": "Ryan's Pierced Pigskin Posse",
         "points": 0.0,
-        "projected": 93.0
+        "projected": 95.92
        }
       ]
      }
@@ -20724,13 +22048,13 @@
         "team_id": "1",
         "name": "MakeMyTeamGreatAgain",
         "points": 0.0,
-        "projected": 63.09
+        "projected": 60.93
        },
        {
         "team_id": "3",
         "name": "Fogle\u2019s Moguls",
         "points": 0.0,
-        "projected": 107.9
+        "projected": 109.06
        }
       ]
      },
@@ -20746,13 +22070,13 @@
         "team_id": "2",
         "name": "Monkey Business",
         "points": 0.0,
-        "projected": 113.76
+        "projected": 115.04
        },
        {
         "team_id": "4",
         "name": "Hannah Lee's Revenge",
         "points": 0.0,
-        "projected": 78.3
+        "projected": 80.17
        }
       ]
      },
@@ -20768,13 +22092,13 @@
         "team_id": "5",
         "name": "Ya Boi",
         "points": 0.0,
-        "projected": 87.0
+        "projected": 90.93
        },
        {
         "team_id": "6",
         "name": "Kevin Jack's Team",
         "points": 0.0,
-        "projected": 94.23
+        "projected": 100.89
        }
       ]
      },
@@ -20790,13 +22114,13 @@
         "team_id": "7",
         "name": "Michael Scott's Team",
         "points": 0.0,
-        "projected": 93.12
+        "projected": 84.88
        },
        {
         "team_id": "8",
         "name": "Ryan's Pierced Pigskin Posse",
         "points": 0.0,
-        "projected": 74.82
+        "projected": 89.67
        }
       ]
      }
@@ -20814,13 +22138,13 @@
         "team_id": "1",
         "name": "MakeMyTeamGreatAgain",
         "points": 0.0,
-        "projected": 104.91
+        "projected": 102.73
        },
        {
         "team_id": "8",
         "name": "Ryan's Pierced Pigskin Posse",
         "points": 0.0,
-        "projected": 58.58
+        "projected": 74.18
        }
       ]
      },
@@ -20836,13 +22160,13 @@
         "team_id": "2",
         "name": "Monkey Business",
         "points": 0.0,
-        "projected": 112.63
+        "projected": 113.41
        },
        {
         "team_id": "3",
         "name": "Fogle\u2019s Moguls",
         "points": 0.0,
-        "projected": 113.42
+        "projected": 115.67
        }
       ]
      },
@@ -20858,13 +22182,13 @@
         "team_id": "4",
         "name": "Hannah Lee's Revenge",
         "points": 0.0,
-        "projected": 91.61
+        "projected": 99.19
        },
        {
         "team_id": "5",
         "name": "Ya Boi",
         "points": 0.0,
-        "projected": 60.87
+        "projected": 60.03
        }
       ]
      },
@@ -20880,13 +22204,13 @@
         "team_id": "6",
         "name": "Kevin Jack's Team",
         "points": 0.0,
-        "projected": 98.24
+        "projected": 101.55
        },
        {
         "team_id": "7",
         "name": "Michael Scott's Team",
         "points": 0.0,
-        "projected": 83.96
+        "projected": 82.33
        }
       ]
      }
@@ -20904,13 +22228,13 @@
         "team_id": "1",
         "name": "MakeMyTeamGreatAgain",
         "points": 0.0,
-        "projected": 110.96
+        "projected": 104.82
        },
        {
         "team_id": "6",
         "name": "Kevin Jack's Team",
         "points": 0.0,
-        "projected": 103.25
+        "projected": 100.64
        }
       ]
      },
@@ -20926,13 +22250,13 @@
         "team_id": "2",
         "name": "Monkey Business",
         "points": 0.0,
-        "projected": 112.5
+        "projected": 113.08
        },
        {
         "team_id": "5",
         "name": "Ya Boi",
         "points": 0.0,
-        "projected": 89.37
+        "projected": 95.94
        }
       ]
      },
@@ -20948,13 +22272,13 @@
         "team_id": "3",
         "name": "Fogle\u2019s Moguls",
         "points": 0.0,
-        "projected": 116.83
+        "projected": 118.65
        },
        {
         "team_id": "8",
         "name": "Ryan's Pierced Pigskin Posse",
         "points": 0.0,
-        "projected": 85.2
+        "projected": 95.3
        }
       ]
      },
@@ -20970,13 +22294,13 @@
         "team_id": "4",
         "name": "Hannah Lee's Revenge",
         "points": 0.0,
-        "projected": 97.29
+        "projected": 104.51
        },
        {
         "team_id": "7",
         "name": "Michael Scott's Team",
         "points": 0.0,
-        "projected": 89.53
+        "projected": 87.34
        }
       ]
      }
@@ -22103,6 +23427,118 @@
        "pos": "RB",
        "pts": 12.6
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Brock Purdy",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 22.2
+       },
+       {
+        "name": "Jonathan Taylor",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 2.7
+       },
+       {
+        "name": "Derrick Henry",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 16.1
+       },
+       {
+        "name": "Zay Flowers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 8.4
+       },
+       {
+        "name": "Adonai Mitchell",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.0
+       },
+       {
+        "name": "Tyler Warren",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 2.2
+       },
+       {
+        "name": "Kenny Gainwell",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 5.9
+       },
+       {
+        "name": "Khalil Shakir",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 10.3
+       },
+       {
+        "name": "Bills",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 10.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Kaelon Black",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 1.5
+       },
+       {
+        "name": "Omar Cooper Jr.",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Zach Charbonnet",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Quinshon Judkins",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Matthew Golden",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Denzel Boston",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Browns",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 80.8,
+      "bench_points": 1.5,
+      "optimal_points": 80.8,
+      "points_left": 0.0,
+      "efficiency": 1.0,
+      "top_bench": {
+       "name": "Kaelon Black",
+       "pos": "RB",
+       "pts": 1.5
+      }
      }
     },
     "2": {
@@ -23225,6 +24661,118 @@
        "pos": "QB",
        "pts": 16.38
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Joe Burrow",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 19.9
+       },
+       {
+        "name": "Jahmyr Gibbs",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 23.8
+       },
+       {
+        "name": "Bucky Irving",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 16.0
+       },
+       {
+        "name": "Tee Higgins",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 10.3
+       },
+       {
+        "name": "Parker Washington",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 10.3
+       },
+       {
+        "name": "Chig Okonkwo",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 6.6
+       },
+       {
+        "name": "Chris Olave",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 10.2
+       },
+       {
+        "name": "Nico Collins",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 11.8
+       },
+       {
+        "name": "Broncos",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 15.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Harold Fannin Jr.",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Ashton Jeanty",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 22.9
+       },
+       {
+        "name": "Aaron Jones Sr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 10.3
+       },
+       {
+        "name": "DJ Moore",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 15.1
+       },
+       {
+        "name": "Kirk Cousins",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 8.4
+       },
+       {
+        "name": "Rico Dowdle",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 3.4
+       },
+       {
+        "name": "Rams",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 123.9,
+      "bench_points": 60.1,
+      "optimal_points": 141.4,
+      "points_left": 17.5,
+      "efficiency": 0.876,
+      "top_bench": {
+       "name": "Ashton Jeanty",
+       "pos": "RB",
+       "pts": 22.9
+      }
      }
     },
     "3": {
@@ -24334,6 +25882,118 @@
        "name": "Vikings",
        "pos": "DEF",
        "pts": 22.0
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Jayden Daniels",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 17.06
+       },
+       {
+        "name": "Chuba Hubbard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 26.0
+       },
+       {
+        "name": "Jonah Coleman",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 30.9
+       },
+       {
+        "name": "Justin Jefferson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 7.7
+       },
+       {
+        "name": "Tetairoa McMillan",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 13.1
+       },
+       {
+        "name": "Juwan Johnson",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 0.0
+       },
+       {
+        "name": "Chase Brown",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 3.6
+       },
+       {
+        "name": "Stefon Diggs",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 4.5
+       },
+       {
+        "name": "Texans",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 16.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Brock Bowers",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Drake London",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Bijan Robinson",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Emeka Egbuka",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 1.8
+       },
+       {
+        "name": "Corey Kiner",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jordan Love",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Vikings",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 1.0
+       }
+      ],
+      "starter_points": 118.86,
+      "bench_points": 2.8,
+      "optimal_points": 118.86,
+      "points_left": 0.0,
+      "efficiency": 1.0,
+      "top_bench": {
+       "name": "Emeka Egbuka",
+       "pos": "WR",
+       "pts": 1.8
       }
      }
     },
@@ -25457,6 +27117,118 @@
        "pos": "WR",
        "pts": 9.6
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Josh Allen",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 14.16
+       },
+       {
+        "name": "Emmett Johnson",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 20.3
+       },
+       {
+        "name": "Breece Hall",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 16.0
+       },
+       {
+        "name": "Rashee Rice",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 5.3
+       },
+       {
+        "name": "Garrett Wilson",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.9
+       },
+       {
+        "name": "T.J. Hockenson",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 5.5
+       },
+       {
+        "name": "Ollie Gordon II",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 6.7
+       },
+       {
+        "name": "Christian McCaffrey",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 12.2
+       },
+       {
+        "name": "Chargers",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 3.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Kyle Pitts Sr.",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Christian Watson",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Jordan Mason",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 3.7
+       },
+       {
+        "name": "Braelon Allen",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 8.4
+       },
+       {
+        "name": "KC Concepcion Jr.",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Chris Rodriguez Jr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 4.1
+       },
+       {
+        "name": "Buccaneers",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 1.0
+       }
+      ],
+      "starter_points": 87.06,
+      "bench_points": 17.2,
+      "optimal_points": 88.76,
+      "points_left": 1.7,
+      "efficiency": 0.981,
+      "top_bench": {
+       "name": "Braelon Allen",
+       "pos": "RB",
+       "pts": 8.4
+      }
      }
     },
     "5": {
@@ -26579,6 +28351,118 @@
        "pos": "QB",
        "pts": 11.98
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Dak Prescott",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 35.9
+       },
+       {
+        "name": "James Cook III",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 15.2
+       },
+       {
+        "name": "Cam Skattebo",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 3.8
+       },
+       {
+        "name": "Amon-Ra St. Brown",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 9.7
+       },
+       {
+        "name": "Carnell Tate",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.8
+       },
+       {
+        "name": "Trey McBride",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 5.8
+       },
+       {
+        "name": "Jordyn Tyson",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 1.0
+       },
+       {
+        "name": "Ryan Flournoy",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 1.1
+       },
+       {
+        "name": "Chiefs",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 9.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Rachaad White",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Caleb Douglas",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 3.0
+       },
+       {
+        "name": "Mike Washington Jr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 4.2
+       },
+       {
+        "name": "Travis Kelce",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 19.4
+       },
+       {
+        "name": "Tyler Shough",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 15.28
+       },
+       {
+        "name": "Davante Adams",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Bears",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 18.0
+       }
+      ],
+      "starter_points": 93.3,
+      "bench_points": 59.88,
+      "optimal_points": 123.8,
+      "points_left": 30.5,
+      "efficiency": 0.754,
+      "top_bench": {
+       "name": "Travis Kelce",
+       "pos": "TE",
+       "pts": 19.4
+      }
      }
     },
     "6": {
@@ -27676,6 +29560,118 @@
        "name": "Omarion Hampton",
        "pos": "RB",
        "pts": 16.5
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Caleb Williams",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 15.34
+       },
+       {
+        "name": "Jaylen Warren",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 2.9
+       },
+       {
+        "name": "Tony Pollard",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 11.0
+       },
+       {
+        "name": "Jalen Coker",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 4.7
+       },
+       {
+        "name": "Ja'Marr Chase",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 3.1
+       },
+       {
+        "name": "Isaiah Likely",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 3.5
+       },
+       {
+        "name": "D'Andre Swift",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 10.9
+       },
+       {
+        "name": "Omarion Hampton",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 9.3
+       },
+       {
+        "name": "49ers",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 17.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Deebo Samuel Sr.",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 4.7
+       },
+       {
+        "name": "Bryce Young",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 16.96
+       },
+       {
+        "name": "Kyren Williams",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Devin Singletary",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 1.0
+       },
+       {
+        "name": "Colston Loveland",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 8.9
+       },
+       {
+        "name": "Jaylen Waddle",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 6.1
+       },
+       {
+        "name": "Seahawks",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 0.0
+       }
+      ],
+      "starter_points": 77.74,
+      "bench_points": 37.66,
+      "optimal_points": 89.56,
+      "points_left": 11.82,
+      "efficiency": 0.868,
+      "top_bench": {
+       "name": "Bryce Young",
+       "pos": "QB",
+       "pts": 16.96
       }
      }
     },
@@ -28799,6 +30795,118 @@
        "pos": "QB",
        "pts": 22.42
       }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Trevor Lawrence",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 14.74
+       },
+       {
+        "name": "Javonte Williams",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 21.1
+       },
+       {
+        "name": "Saquon Barkley",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 13.5
+       },
+       {
+        "name": "Malik Nabers",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 11.5
+       },
+       {
+        "name": "Luther Burden III",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 1.3
+       },
+       {
+        "name": "Mark Andrews",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 1.4
+       },
+       {
+        "name": "Jameson Williams",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 15.3
+       },
+       {
+        "name": "David Montgomery",
+        "pos": "RB",
+        "slot": "W/R/T",
+        "pts": 12.4
+       },
+       {
+        "name": "Jaguars",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 5.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "Rome Odunze",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 4.5
+       },
+       {
+        "name": "Tucker Kraft",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Travis Etienne Jr.",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 7.6
+       },
+       {
+        "name": "Jaxon Smith-Njigba",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Woody Marks",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Blake Corum",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Josh Downs",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 5.9
+       }
+      ],
+      "starter_points": 96.24,
+      "bench_points": 18.0,
+      "optimal_points": 102.54,
+      "points_left": 6.3,
+      "efficiency": 0.939,
+      "top_bench": {
+       "name": "Travis Etienne Jr.",
+       "pos": "RB",
+       "pts": 7.6
+      }
      }
     },
     "8": {
@@ -29890,6 +31998,118 @@
        "name": "Saints",
        "pos": "DEF",
        "pts": 7.0
+      }
+     },
+     "11": {
+      "starters": [
+       {
+        "name": "Patrick Mahomes",
+        "pos": "QB",
+        "slot": "QB",
+        "pts": 24.96
+       },
+       {
+        "name": "Bhayshul Tuten",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 5.3
+       },
+       {
+        "name": "Kyle Monangai",
+        "pos": "RB",
+        "slot": "RB",
+        "pts": 1.8
+       },
+       {
+        "name": "CeeDee Lamb",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 19.2
+       },
+       {
+        "name": "George Pickens",
+        "pos": "WR",
+        "slot": "WR",
+        "pts": 16.8
+       },
+       {
+        "name": "George Kittle",
+        "pos": "TE",
+        "slot": "TE",
+        "pts": 15.4
+       },
+       {
+        "name": "DeVonta Smith",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 4.1
+       },
+       {
+        "name": "Mike Evans",
+        "pos": "WR",
+        "slot": "W/R/T",
+        "pts": 16.9
+       },
+       {
+        "name": "Lions",
+        "pos": "DEF",
+        "slot": "DEF",
+        "pts": 6.0
+       }
+      ],
+      "bench": [
+       {
+        "name": "DK Metcalf",
+        "pos": "WR",
+        "slot": "BN",
+        "pts": 0.2
+       },
+       {
+        "name": "Tyler Allgeier",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 2.3
+       },
+       {
+        "name": "C.J. Stroud",
+        "pos": "QB",
+        "slot": "BN",
+        "pts": 21.46
+       },
+       {
+        "name": "Alvin Kamara",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 6.2
+       },
+       {
+        "name": "Rhamondre Stevenson",
+        "pos": "RB",
+        "slot": "BN",
+        "pts": 0.0
+       },
+       {
+        "name": "Sam LaPorta",
+        "pos": "TE",
+        "slot": "BN",
+        "pts": 6.2
+       },
+       {
+        "name": "Colts",
+        "pos": "DEF",
+        "slot": "BN",
+        "pts": 5.0
+       }
+      ],
+      "starter_points": 110.46,
+      "bench_points": 41.36,
+      "optimal_points": 116.96,
+      "points_left": 6.5,
+      "efficiency": 0.944,
+      "top_bench": {
+       "name": "C.J. Stroud",
+       "pos": "QB",
+       "pts": 21.46
       }
      }
     }

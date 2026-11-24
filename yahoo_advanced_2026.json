@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated_from": "2026-11-17T21:59:00.651817+00:00",
+ "generated_from": "2026-11-24T23:21:38.017608+00:00",
  "leagues": {
   "kepners": {
    "league_name": "Kepners Keepers",
@@ -14,106 +14,107 @@
     7,
     8,
     9,
-    10
+    10,
+    11
    ],
    "positions": {
     "QB": {
-     "league_avg_per_week": 19.04,
+     "league_avg_per_week": 19.0,
      "teams": [
       {
        "team_id": "12",
        "team": "The Pickups",
        "rank": 1,
-       "avg_per_week": 24.32,
-       "vs_league": 5.28,
+       "avg_per_week": 23.92,
+       "vs_league": 4.92,
        "weeks_leading": 3
-      },
-      {
-       "team_id": "4",
-       "team": "Dad\u2019s To The Bone",
-       "rank": 2,
-       "avg_per_week": 23.51,
-       "vs_league": 4.47,
-       "weeks_leading": 1
       },
       {
        "team_id": "9",
        "team": "Ranus The Hiddeer",
+       "rank": 2,
+       "avg_per_week": 22.7,
+       "vs_league": 3.7,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "4",
+       "team": "Dad\u2019s To The Bone",
        "rank": 3,
-       "avg_per_week": 21.38,
-       "vs_league": 2.34,
+       "avg_per_week": 22.48,
+       "vs_league": 3.48,
        "weeks_leading": 1
       },
       {
        "team_id": "11",
        "team": "The Herdsmen",
        "rank": 4,
-       "avg_per_week": 21.26,
-       "vs_league": 2.22,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "10",
-       "team": "Shaq List",
-       "rank": 5,
-       "avg_per_week": 20.8,
-       "vs_league": 1.76,
+       "avg_per_week": 21.19,
+       "vs_league": 2.18,
        "weeks_leading": 1
       },
       {
        "team_id": "7",
        "team": "Orson Welles",
+       "rank": 5,
+       "avg_per_week": 20.6,
+       "vs_league": 1.6,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "10",
+       "team": "Shaq List",
        "rank": 6,
-       "avg_per_week": 20.17,
-       "vs_league": 1.13,
+       "avg_per_week": 20.07,
+       "vs_league": 1.06,
        "weeks_leading": 1
       },
       {
        "team_id": "5",
        "team": "Denim Like A DeJean",
        "rank": 7,
-       "avg_per_week": 19.98,
-       "vs_league": 0.94,
+       "avg_per_week": 19.72,
+       "vs_league": 0.72,
        "weeks_leading": 1
       },
       {
        "team_id": "2",
        "team": "BrowneyeVibeSesh",
        "rank": 8,
-       "avg_per_week": 16.78,
-       "vs_league": -2.26,
+       "avg_per_week": 16.56,
+       "vs_league": -2.44,
        "weeks_leading": 1
       },
       {
        "team_id": "8",
        "team": "Phony Grossi",
        "rank": 9,
-       "avg_per_week": 16.12,
-       "vs_league": -2.92,
+       "avg_per_week": 16.51,
+       "vs_league": -2.5,
        "weeks_leading": 0
       },
       {
        "team_id": "1",
        "team": "Football Guy's Guy",
        "rank": 10,
-       "avg_per_week": 15.66,
-       "vs_league": -3.38,
+       "avg_per_week": 15.69,
+       "vs_league": -3.31,
        "weeks_leading": 0
       },
       {
        "team_id": "6",
        "team": "Matty Dawg Pound",
        "rank": 11,
-       "avg_per_week": 14.41,
-       "vs_league": -4.63,
+       "avg_per_week": 15.12,
+       "vs_league": -3.89,
        "weeks_leading": 0
       },
       {
        "team_id": "3",
        "team": "Burrito",
        "rank": 12,
-       "avg_per_week": 14.09,
-       "vs_league": -4.95,
+       "avg_per_week": 13.49,
+       "vs_league": -5.52,
        "weeks_leading": 0
       }
      ],
@@ -227,107 +228,118 @@
         "team": "Burrito",
         "pts": 3.02
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Ranus The Hiddeer",
+        "pts": 35.9
+       },
+       "worst": {
+        "team": "Burrito",
+        "pts": 7.4
+       }
       }
      ]
     },
     "RB": {
-     "league_avg_per_week": 24.57,
+     "league_avg_per_week": 24.48,
      "teams": [
       {
        "team_id": "8",
        "team": "Phony Grossi",
        "rank": 1,
-       "avg_per_week": 34.66,
-       "vs_league": 10.09,
+       "avg_per_week": 34.15,
+       "vs_league": 9.67,
        "weeks_leading": 2
       },
       {
        "team_id": "12",
        "team": "The Pickups",
        "rank": 2,
-       "avg_per_week": 31.02,
-       "vs_league": 6.45,
-       "weeks_leading": 2
-      },
-      {
-       "team_id": "2",
-       "team": "BrowneyeVibeSesh",
-       "rank": 3,
-       "avg_per_week": 26.75,
-       "vs_league": 2.18,
+       "avg_per_week": 29.65,
+       "vs_league": 5.17,
        "weeks_leading": 2
       },
       {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
+       "rank": 3,
+       "avg_per_week": 25.8,
+       "vs_league": 1.32,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "2",
+       "team": "BrowneyeVibeSesh",
        "rank": 4,
-       "avg_per_week": 26.5,
-       "vs_league": 1.93,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "3",
-       "team": "Burrito",
-       "rank": 5,
-       "avg_per_week": 23.68,
-       "vs_league": -0.89,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "5",
-       "team": "Denim Like A DeJean",
-       "rank": 6,
-       "avg_per_week": 22.94,
-       "vs_league": -1.63,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "9",
-       "team": "Ranus The Hiddeer",
-       "rank": 7,
-       "avg_per_week": 22.75,
-       "vs_league": -1.82,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "1",
-       "team": "Football Guy's Guy",
-       "rank": 8,
-       "avg_per_week": 22.58,
-       "vs_league": -1.99,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "7",
-       "team": "Orson Welles",
-       "rank": 9,
-       "avg_per_week": 22.25,
-       "vs_league": -2.32,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "6",
-       "team": "Matty Dawg Pound",
-       "rank": 10,
-       "avg_per_week": 21.12,
-       "vs_league": -3.45,
+       "avg_per_week": 25.76,
+       "vs_league": 1.28,
        "weeks_leading": 2
       },
       {
        "team_id": "11",
        "team": "The Herdsmen",
-       "rank": 11,
-       "avg_per_week": 21.08,
-       "vs_league": -3.49,
+       "rank": 5,
+       "avg_per_week": 23.89,
+       "vs_league": -0.59,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "7",
+       "team": "Orson Welles",
+       "rank": 6,
+       "avg_per_week": 23.31,
+       "vs_league": -1.17,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "1",
+       "team": "Football Guy's Guy",
+       "rank": 7,
+       "avg_per_week": 23.15,
+       "vs_league": -1.33,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "5",
+       "team": "Denim Like A DeJean",
+       "rank": 8,
+       "avg_per_week": 22.83,
+       "vs_league": -1.65,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "9",
+       "team": "Ranus The Hiddeer",
+       "rank": 9,
+       "avg_per_week": 22.35,
+       "vs_league": -2.14,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "3",
+       "team": "Burrito",
+       "rank": 10,
+       "avg_per_week": 22.06,
+       "vs_league": -2.42,
        "weeks_leading": 0
       },
       {
        "team_id": "10",
        "team": "Shaq List",
-       "rank": 12,
-       "avg_per_week": 19.53,
-       "vs_league": -5.04,
+       "rank": 11,
+       "avg_per_week": 21.05,
+       "vs_league": -3.43,
        "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Matty Dawg Pound",
+       "rank": 12,
+       "avg_per_week": 19.75,
+       "vs_league": -4.73,
+       "weeks_leading": 2
       }
      ],
      "weekly": [
@@ -440,106 +452,117 @@
         "team": "Burrito",
         "pts": 1.5
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "The Herdsmen",
+        "pts": 52.0
+       },
+       "worst": {
+        "team": "Burrito",
+        "pts": 5.9
+       }
       }
      ]
     },
     "WR": {
-     "league_avg_per_week": 26.02,
+     "league_avg_per_week": 25.78,
      "teams": [
       {
        "team_id": "9",
        "team": "Ranus The Hiddeer",
        "rank": 1,
-       "avg_per_week": 34.48,
-       "vs_league": 8.46,
+       "avg_per_week": 33.61,
+       "vs_league": 7.82,
        "weeks_leading": 3
       },
       {
        "team_id": "5",
        "team": "Denim Like A DeJean",
        "rank": 2,
-       "avg_per_week": 28.88,
-       "vs_league": 2.86,
+       "avg_per_week": 28.74,
+       "vs_league": 2.96,
        "weeks_leading": 1
       },
       {
        "team_id": "3",
        "team": "Burrito",
        "rank": 3,
-       "avg_per_week": 27.39,
-       "vs_league": 1.37,
-       "weeks_leading": 1
+       "avg_per_week": 28.43,
+       "vs_league": 2.65,
+       "weeks_leading": 2
       },
       {
-       "team_id": "12",
-       "team": "The Pickups",
+       "team_id": "6",
+       "team": "Matty Dawg Pound",
        "rank": 4,
-       "avg_per_week": 26.51,
-       "vs_league": 0.49,
-       "weeks_leading": 1
+       "avg_per_week": 26.99,
+       "vs_league": 1.21,
+       "weeks_leading": 0
       },
       {
        "team_id": "1",
        "team": "Football Guy's Guy",
        "rank": 5,
-       "avg_per_week": 26.43,
-       "vs_league": 0.41,
+       "avg_per_week": 26.29,
+       "vs_league": 0.51,
        "weeks_leading": 0
       },
       {
-       "team_id": "6",
-       "team": "Matty Dawg Pound",
+       "team_id": "12",
+       "team": "The Pickups",
        "rank": 6,
-       "avg_per_week": 26.41,
-       "vs_league": 0.39,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "11",
-       "team": "The Herdsmen",
-       "rank": 7,
-       "avg_per_week": 25.35,
-       "vs_league": -0.67,
+       "avg_per_week": 26.19,
+       "vs_league": 0.41,
        "weeks_leading": 1
       },
       {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
-       "rank": 8,
-       "avg_per_week": 25.24,
-       "vs_league": -0.78,
+       "rank": 7,
+       "avg_per_week": 24.33,
+       "vs_league": -1.45,
        "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "The Herdsmen",
+       "rank": 8,
+       "avg_per_week": 24.01,
+       "vs_league": -1.77,
+       "weeks_leading": 1
       },
       {
        "team_id": "2",
        "team": "BrowneyeVibeSesh",
        "rank": 9,
-       "avg_per_week": 23.5,
-       "vs_league": -2.52,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "10",
-       "team": "Shaq List",
-       "rank": 10,
-       "avg_per_week": 22.92,
-       "vs_league": -3.1,
+       "avg_per_week": 23.95,
+       "vs_league": -1.83,
        "weeks_leading": 1
       },
       {
        "team_id": "8",
        "team": "Phony Grossi",
+       "rank": 10,
+       "avg_per_week": 23.73,
+       "vs_league": -2.05,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "10",
+       "team": "Shaq List",
        "rank": 11,
-       "avg_per_week": 22.79,
-       "vs_league": -3.23,
+       "avg_per_week": 22.08,
+       "vs_league": -3.7,
        "weeks_leading": 1
       },
       {
        "team_id": "7",
        "team": "Orson Welles",
        "rank": 12,
-       "avg_per_week": 22.29,
-       "vs_league": -3.73,
+       "avg_per_week": 21.03,
+       "vs_league": -4.75,
        "weeks_leading": 0
       }
      ],
@@ -653,106 +676,117 @@
         "team": "Phony Grossi",
         "pts": 10.1
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Burrito",
+        "pts": 38.8
+       },
+       "worst": {
+        "team": "Orson Welles",
+        "pts": 8.4
+       }
       }
      ]
     },
     "TE": {
-     "league_avg_per_week": 6.76,
+     "league_avg_per_week": 6.7,
      "teams": [
       {
        "team_id": "2",
        "team": "BrowneyeVibeSesh",
        "rank": 1,
-       "avg_per_week": 10.54,
-       "vs_league": 3.78,
+       "avg_per_week": 9.58,
+       "vs_league": 2.88,
        "weeks_leading": 5
-      },
-      {
-       "team_id": "6",
-       "team": "Matty Dawg Pound",
-       "rank": 2,
-       "avg_per_week": 9.35,
-       "vs_league": 2.59,
-       "weeks_leading": 1
       },
       {
        "team_id": "12",
        "team": "The Pickups",
+       "rank": 2,
+       "avg_per_week": 9.51,
+       "vs_league": 2.81,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "6",
+       "team": "Matty Dawg Pound",
        "rank": 3,
-       "avg_per_week": 8.92,
-       "vs_league": 2.16,
+       "avg_per_week": 9.03,
+       "vs_league": 2.33,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "7",
+       "team": "Orson Welles",
+       "rank": 4,
+       "avg_per_week": 7.35,
+       "vs_league": 0.65,
        "weeks_leading": 1
       },
       {
        "team_id": "5",
        "team": "Denim Like A DeJean",
-       "rank": 4,
-       "avg_per_week": 7.0,
-       "vs_league": 0.24,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "7",
-       "team": "Orson Welles",
        "rank": 5,
-       "avg_per_week": 6.14,
-       "vs_league": -0.62,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "3",
-       "team": "Burrito",
-       "rank": 6,
-       "avg_per_week": 6.12,
-       "vs_league": -0.64,
+       "avg_per_week": 6.93,
+       "vs_league": 0.23,
        "weeks_leading": 0
       },
       {
        "team_id": "1",
        "team": "Football Guy's Guy",
-       "rank": 7,
-       "avg_per_week": 6.0,
-       "vs_league": -0.76,
+       "rank": 6,
+       "avg_per_week": 5.95,
+       "vs_league": -0.74,
        "weeks_leading": 0
       },
       {
-       "team_id": "9",
-       "team": "Ranus The Hiddeer",
+       "team_id": "3",
+       "team": "Burrito",
+       "rank": 7,
+       "avg_per_week": 5.88,
+       "vs_league": -0.82,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "11",
+       "team": "The Herdsmen",
        "rank": 8,
-       "avg_per_week": 5.63,
-       "vs_league": -1.13,
+       "avg_per_week": 5.72,
+       "vs_league": -0.98,
        "weeks_leading": 0
       },
       {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
        "rank": 9,
-       "avg_per_week": 5.63,
-       "vs_league": -1.13,
+       "avg_per_week": 5.46,
+       "vs_league": -1.23,
        "weeks_leading": 1
+      },
+      {
+       "team_id": "9",
+       "team": "Ranus The Hiddeer",
+       "rank": 10,
+       "avg_per_week": 5.26,
+       "vs_league": -1.43,
+       "weeks_leading": 0
       },
       {
        "team_id": "8",
        "team": "Phony Grossi",
-       "rank": 10,
-       "avg_per_week": 5.52,
-       "vs_league": -1.24,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "11",
-       "team": "The Herdsmen",
        "rank": 11,
-       "avg_per_week": 5.4,
-       "vs_league": -1.36,
-       "weeks_leading": 0
+       "avg_per_week": 5.15,
+       "vs_league": -1.55,
+       "weeks_leading": 1
       },
       {
        "team_id": "10",
        "team": "Shaq List",
        "rank": 12,
-       "avg_per_week": 4.9,
-       "vs_league": -1.86,
+       "avg_per_week": 4.55,
+       "vs_league": -2.14,
        "weeks_leading": 1
       }
      ],
@@ -866,6 +900,17 @@
         "team": "Burrito",
         "pts": 0.4
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Orson Welles",
+        "pts": 19.4
+       },
+       "worst": {
+        "team": "BrowneyeVibeSesh",
+        "pts": 0.0
+       }
       }
      ]
     },
@@ -876,22 +921,30 @@
        "team_id": "6",
        "team": "Matty Dawg Pound",
        "rank": 1,
-       "avg_per_week": 11.8,
-       "vs_league": 2.88,
+       "avg_per_week": 11.91,
+       "vs_league": 2.98,
        "weeks_leading": 2
       },
       {
        "team_id": "12",
        "team": "The Pickups",
        "rank": 2,
-       "avg_per_week": 11.3,
-       "vs_league": 2.38,
+       "avg_per_week": 10.55,
+       "vs_league": 1.62,
        "weeks_leading": 1
+      },
+      {
+       "team_id": "5",
+       "team": "Denim Like A DeJean",
+       "rank": 3,
+       "avg_per_week": 10.18,
+       "vs_league": 1.26,
+       "weeks_leading": 2
       },
       {
        "team_id": "9",
        "team": "Ranus The Hiddeer",
-       "rank": 3,
+       "rank": 4,
        "avg_per_week": 10.0,
        "vs_league": 1.08,
        "weeks_leading": 1
@@ -899,73 +952,65 @@
       {
        "team_id": "1",
        "team": "Football Guy's Guy",
-       "rank": 4,
-       "avg_per_week": 9.6,
-       "vs_league": 0.68,
+       "rank": 5,
+       "avg_per_week": 9.91,
+       "vs_league": 0.98,
        "weeks_leading": 1
       },
       {
        "team_id": "2",
        "team": "BrowneyeVibeSesh",
-       "rank": 5,
-       "avg_per_week": 9.4,
-       "vs_league": 0.48,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "5",
-       "team": "Denim Like A DeJean",
        "rank": 6,
-       "avg_per_week": 9.4,
-       "vs_league": 0.48,
+       "avg_per_week": 9.45,
+       "vs_league": 0.53,
        "weeks_leading": 1
       },
       {
        "team_id": "3",
        "team": "Burrito",
        "rank": 7,
-       "avg_per_week": 8.7,
-       "vs_league": -0.22,
+       "avg_per_week": 8.45,
+       "vs_league": -0.47,
        "weeks_leading": 1
       },
       {
        "team_id": "11",
        "team": "The Herdsmen",
        "rank": 8,
-       "avg_per_week": 7.8,
-       "vs_league": -1.12,
+       "avg_per_week": 7.91,
+       "vs_league": -1.02,
        "weeks_leading": 0
       },
       {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
        "rank": 9,
-       "avg_per_week": 7.6,
-       "vs_league": -1.32,
+       "avg_per_week": 7.55,
+       "vs_league": -1.38,
        "weeks_leading": 1
       },
       {
        "team_id": "7",
        "team": "Orson Welles",
        "rank": 10,
-       "avg_per_week": 7.6,
-       "vs_league": -1.32,
+       "avg_per_week": 7.36,
+       "vs_league": -1.56,
        "weeks_leading": 1
       },
       {
        "team_id": "8",
        "team": "Phony Grossi",
        "rank": 11,
-       "avg_per_week": 7.1,
-       "vs_league": -1.82,
+       "avg_per_week": 6.91,
+       "vs_league": -2.02,
        "weeks_leading": 0
       },
       {
        "team_id": "10",
        "team": "Shaq List",
        "rank": 12,
-       "avg_per_week": 6.8,
-       "vs_league": -2.12,
+       "avg_per_week": 6.91,
+       "vs_league": -2.02,
        "weeks_leading": 0
       }
      ],
@@ -1079,106 +1124,117 @@
         "team": "Dad\u2019s To The Bone",
         "pts": 2.0
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Denim Like A DeJean",
+        "pts": 18.0
+       },
+       "worst": {
+        "team": "The Pickups",
+        "pts": 3.0
+       }
       }
      ]
     },
     "DEF": {
-     "league_avg_per_week": 6.78,
+     "league_avg_per_week": 6.8,
      "teams": [
       {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
        "rank": 1,
-       "avg_per_week": 11.4,
-       "vs_league": 4.62,
+       "avg_per_week": 10.36,
+       "vs_league": 3.56,
        "weeks_leading": 4
-      },
-      {
-       "team_id": "11",
-       "team": "The Herdsmen",
-       "rank": 2,
-       "avg_per_week": 8.7,
-       "vs_league": 1.92,
-       "weeks_leading": 2
       },
       {
        "team_id": "12",
        "team": "The Pickups",
+       "rank": 2,
+       "avg_per_week": 8.64,
+       "vs_league": 1.83,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "11",
+       "team": "The Herdsmen",
        "rank": 3,
-       "avg_per_week": 7.9,
-       "vs_league": 1.12,
-       "weeks_leading": 1
+       "avg_per_week": 8.18,
+       "vs_league": 1.38,
+       "weeks_leading": 2
       },
       {
        "team_id": "6",
        "team": "Matty Dawg Pound",
        "rank": 4,
-       "avg_per_week": 7.6,
-       "vs_league": 0.82,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "10",
-       "team": "Shaq List",
-       "rank": 5,
-       "avg_per_week": 7.2,
-       "vs_league": 0.42,
+       "avg_per_week": 8.09,
+       "vs_league": 1.29,
        "weeks_leading": 0
       },
       {
        "team_id": "1",
        "team": "Football Guy's Guy",
-       "rank": 6,
-       "avg_per_week": 6.6,
-       "vs_league": -0.18,
+       "rank": 5,
+       "avg_per_week": 6.73,
+       "vs_league": -0.08,
        "weeks_leading": 1
+      },
+      {
+       "team_id": "10",
+       "team": "Shaq List",
+       "rank": 6,
+       "avg_per_week": 6.64,
+       "vs_league": -0.17,
+       "weeks_leading": 0
       },
       {
        "team_id": "8",
        "team": "Phony Grossi",
        "rank": 7,
-       "avg_per_week": 6.4,
-       "vs_league": -0.38,
+       "avg_per_week": 6.45,
+       "vs_league": -0.35,
        "weeks_leading": 1
       },
       {
        "team_id": "9",
        "team": "Ranus The Hiddeer",
        "rank": 8,
-       "avg_per_week": 5.6,
-       "vs_league": -1.18,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "5",
-       "team": "Denim Like A DeJean",
-       "rank": 9,
-       "avg_per_week": 5.5,
-       "vs_league": -1.28,
+       "avg_per_week": 6.45,
+       "vs_league": -0.35,
        "weeks_leading": 0
       },
       {
        "team_id": "7",
        "team": "Orson Welles",
+       "rank": 9,
+       "avg_per_week": 5.64,
+       "vs_league": -1.17,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "5",
+       "team": "Denim Like A DeJean",
        "rank": 10,
-       "avg_per_week": 5.3,
-       "vs_league": -1.48,
+       "avg_per_week": 5.36,
+       "vs_league": -1.44,
        "weeks_leading": 0
       },
       {
        "team_id": "2",
        "team": "BrowneyeVibeSesh",
        "rank": 11,
-       "avg_per_week": 5.0,
-       "vs_league": -1.78,
+       "avg_per_week": 5.09,
+       "vs_league": -1.71,
        "weeks_leading": 0
       },
       {
        "team_id": "3",
        "team": "Burrito",
        "rank": 12,
-       "avg_per_week": 4.1,
-       "vs_league": -2.68,
+       "avg_per_week": 4.0,
+       "vs_league": -2.8,
        "weeks_leading": 1
       }
      ],
@@ -1292,6 +1348,17 @@
         "team": "Orson Welles",
         "pts": 2.0
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "The Pickups",
+        "pts": 16.0
+       },
+       "worst": {
+        "team": "Dad\u2019s To The Bone",
+        "pts": 0.0
+       }
       }
      ]
     }
@@ -1300,11 +1367,11 @@
     {
      "team_id": "12",
      "team": "The Pickups",
-     "games": 10,
-     "avg_diff": 10.58,
-     "stdev": 13.73,
+     "games": 11,
+     "avg_diff": 9.41,
+     "stdev": 13.61,
      "weeks_over": 8,
-     "weeks_under": 2,
+     "weeks_under": 3,
      "best_week": {
       "week": 4,
       "actual": 133.72,
@@ -1377,100 +1444,23 @@
        "actual": 101.16,
        "projected": 100.57,
        "diff": 0.59
-      }
-     ]
-    },
-    {
-     "team_id": "4",
-     "team": "Dad\u2019s To The Bone",
-     "games": 10,
-     "avg_diff": 7.64,
-     "stdev": 17.43,
-     "weeks_over": 5,
-     "weeks_under": 5,
-     "best_week": {
-      "week": 2,
-      "actual": 144.72,
-      "projected": 93.56,
-      "diff": 51.16
-     },
-     "worst_week": {
-      "week": 4,
-      "actual": 88.72,
-      "projected": 105.34,
-      "diff": -16.62
-     },
-     "weekly": [
-      {
-       "week": 1,
-       "actual": 104.16,
-       "projected": 92.3,
-       "diff": 11.86
       },
       {
-       "week": 2,
-       "actual": 144.72,
-       "projected": 93.56,
-       "diff": 51.16
-      },
-      {
-       "week": 3,
-       "actual": 92.26,
-       "projected": 95.21,
-       "diff": -2.95
-      },
-      {
-       "week": 4,
-       "actual": 88.72,
-       "projected": 105.34,
-       "diff": -16.62
-      },
-      {
-       "week": 5,
-       "actual": 116.0,
-       "projected": 100.16,
-       "diff": 15.84
-      },
-      {
-       "week": 6,
-       "actual": 78.3,
-       "projected": 80.26,
-       "diff": -1.96
-      },
-      {
-       "week": 7,
-       "actual": 92.88,
-       "projected": 83.72,
-       "diff": 9.16
-      },
-      {
-       "week": 8,
-       "actual": 94.86,
-       "projected": 98.52,
-       "diff": -3.66
-      },
-      {
-       "week": 9,
-       "actual": 78.56,
-       "projected": 79.92,
-       "diff": -1.36
-      },
-      {
-       "week": 10,
-       "actual": 108.34,
-       "projected": 93.38,
-       "diff": 14.96
+       "week": 11,
+       "actual": 93.3,
+       "projected": 95.59,
+       "diff": -2.29
       }
      ]
     },
     {
      "team_id": "2",
      "team": "BrowneyeVibeSesh",
-     "games": 10,
-     "avg_diff": 6.1,
-     "stdev": 14.75,
+     "games": 11,
+     "avg_diff": 5.14,
+     "stdev": 14.39,
      "weeks_over": 7,
-     "weeks_under": 3,
+     "weeks_under": 4,
      "best_week": {
       "week": 1,
       "actual": 113.06,
@@ -1543,16 +1533,111 @@
        "actual": 107.3,
        "projected": 87.3,
        "diff": 20.0
+      },
+      {
+       "week": 11,
+       "actual": 74.74,
+       "projected": 79.24,
+       "diff": -4.5
+      }
+     ]
+    },
+    {
+     "team_id": "4",
+     "team": "Dad\u2019s To The Bone",
+     "games": 11,
+     "avg_diff": 3.92,
+     "stdev": 20.36,
+     "weeks_over": 5,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 2,
+      "actual": 144.72,
+      "projected": 93.56,
+      "diff": 51.16
+     },
+     "worst_week": {
+      "week": 11,
+      "actual": 56.96,
+      "projected": 90.28,
+      "diff": -33.32
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 104.16,
+       "projected": 92.3,
+       "diff": 11.86
+      },
+      {
+       "week": 2,
+       "actual": 144.72,
+       "projected": 93.56,
+       "diff": 51.16
+      },
+      {
+       "week": 3,
+       "actual": 92.26,
+       "projected": 95.21,
+       "diff": -2.95
+      },
+      {
+       "week": 4,
+       "actual": 88.72,
+       "projected": 105.34,
+       "diff": -16.62
+      },
+      {
+       "week": 5,
+       "actual": 116.0,
+       "projected": 100.16,
+       "diff": 15.84
+      },
+      {
+       "week": 6,
+       "actual": 78.3,
+       "projected": 80.26,
+       "diff": -1.96
+      },
+      {
+       "week": 7,
+       "actual": 92.88,
+       "projected": 83.72,
+       "diff": 9.16
+      },
+      {
+       "week": 8,
+       "actual": 94.86,
+       "projected": 98.52,
+       "diff": -3.66
+      },
+      {
+       "week": 9,
+       "actual": 78.56,
+       "projected": 79.92,
+       "diff": -1.36
+      },
+      {
+       "week": 10,
+       "actual": 108.34,
+       "projected": 93.38,
+       "diff": 14.96
+      },
+      {
+       "week": 11,
+       "actual": 56.96,
+       "projected": 90.28,
+       "diff": -33.32
       }
      ]
     },
     {
      "team_id": "6",
      "team": "Matty Dawg Pound",
-     "games": 10,
-     "avg_diff": 0.71,
-     "stdev": 15.83,
-     "weeks_over": 6,
+     "games": 11,
+     "avg_diff": 0.93,
+     "stdev": 15.11,
+     "weeks_over": 7,
      "weeks_under": 4,
      "best_week": {
       "week": 4,
@@ -1626,99 +1711,22 @@
        "actual": 96.28,
        "projected": 84.55,
        "diff": 11.73
-      }
-     ]
-    },
-    {
-     "team_id": "5",
-     "team": "Denim Like A DeJean",
-     "games": 10,
-     "avg_diff": -0.87,
-     "stdev": 15.22,
-     "weeks_over": 4,
-     "weeks_under": 6,
-     "best_week": {
-      "week": 10,
-      "actual": 123.36,
-      "projected": 100.11,
-      "diff": 23.25
-     },
-     "worst_week": {
-      "week": 2,
-      "actual": 66.24,
-      "projected": 100.62,
-      "diff": -34.38
-     },
-     "weekly": [
-      {
-       "week": 1,
-       "actual": 98.36,
-       "projected": 92.51,
-       "diff": 5.85
       },
       {
-       "week": 2,
-       "actual": 66.24,
-       "projected": 100.62,
-       "diff": -34.38
-      },
-      {
-       "week": 3,
-       "actual": 105.54,
-       "projected": 94.32,
-       "diff": 11.22
-      },
-      {
-       "week": 4,
-       "actual": 93.86,
-       "projected": 96.05,
-       "diff": -2.19
-      },
-      {
-       "week": 5,
-       "actual": 104.66,
-       "projected": 91.56,
-       "diff": 13.1
-      },
-      {
-       "week": 6,
-       "actual": 85.2,
-       "projected": 88.87,
-       "diff": -3.67
-      },
-      {
-       "week": 7,
-       "actual": 90.28,
-       "projected": 93.48,
-       "diff": -3.2
-      },
-      {
-       "week": 8,
-       "actual": 95.58,
-       "projected": 99.15,
-       "diff": -3.57
-      },
-      {
-       "week": 9,
-       "actual": 73.94,
-       "projected": 89.07,
-       "diff": -15.13
-      },
-      {
-       "week": 10,
-       "actual": 123.36,
-       "projected": 100.11,
-       "diff": 23.25
+       "week": 11,
+       "actual": 92.92,
+       "projected": 89.77,
+       "diff": 3.15
       }
      ]
     },
     {
      "team_id": "9",
      "team": "Ranus The Hiddeer",
-     "games": 10,
-     "avg_diff": -1.02,
-     "stdev": 16.97,
-     "weeks_over": 4,
+     "games": 11,
+     "avg_diff": 0.43,
+     "stdev": 16.82,
+     "weeks_over": 5,
      "weeks_under": 6,
      "best_week": {
       "week": 1,
@@ -1792,17 +1800,112 @@
        "actual": 115.96,
        "projected": 101.27,
        "diff": 14.69
+      },
+      {
+       "week": 11,
+       "actual": 105.7,
+       "projected": 90.72,
+       "diff": 14.98
+      }
+     ]
+    },
+    {
+     "team_id": "5",
+     "team": "Denim Like A DeJean",
+     "games": 11,
+     "avg_diff": -1.25,
+     "stdev": 14.56,
+     "weeks_over": 4,
+     "weeks_under": 7,
+     "best_week": {
+      "week": 10,
+      "actual": 123.36,
+      "projected": 100.11,
+      "diff": 23.25
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 66.24,
+      "projected": 100.62,
+      "diff": -34.38
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 98.36,
+       "projected": 92.51,
+       "diff": 5.85
+      },
+      {
+       "week": 2,
+       "actual": 66.24,
+       "projected": 100.62,
+       "diff": -34.38
+      },
+      {
+       "week": 3,
+       "actual": 105.54,
+       "projected": 94.32,
+       "diff": 11.22
+      },
+      {
+       "week": 4,
+       "actual": 93.86,
+       "projected": 96.05,
+       "diff": -2.19
+      },
+      {
+       "week": 5,
+       "actual": 104.66,
+       "projected": 91.56,
+       "diff": 13.1
+      },
+      {
+       "week": 6,
+       "actual": 85.2,
+       "projected": 88.87,
+       "diff": -3.67
+      },
+      {
+       "week": 7,
+       "actual": 90.28,
+       "projected": 93.48,
+       "diff": -3.2
+      },
+      {
+       "week": 8,
+       "actual": 95.58,
+       "projected": 99.15,
+       "diff": -3.57
+      },
+      {
+       "week": 9,
+       "actual": 73.94,
+       "projected": 89.07,
+       "diff": -15.13
+      },
+      {
+       "week": 10,
+       "actual": 123.36,
+       "projected": 100.11,
+       "diff": 23.25
+      },
+      {
+       "week": 11,
+       "actual": 94.36,
+       "projected": 99.39,
+       "diff": -5.03
       }
      ]
     },
     {
      "team_id": "8",
      "team": "Phony Grossi",
-     "games": 10,
-     "avg_diff": -2.08,
-     "stdev": 17.45,
+     "games": 11,
+     "avg_diff": -1.91,
+     "stdev": 16.65,
      "weeks_over": 5,
-     "weeks_under": 5,
+     "weeks_under": 6,
      "best_week": {
       "week": 5,
       "actual": 116.94,
@@ -1875,99 +1978,22 @@
        "actual": 108.92,
        "projected": 97.9,
        "diff": 11.02
-      }
-     ]
-    },
-    {
-     "team_id": "3",
-     "team": "Burrito",
-     "games": 10,
-     "avg_diff": -2.31,
-     "stdev": 12.46,
-     "weeks_over": 5,
-     "weeks_under": 5,
-     "best_week": {
-      "week": 9,
-      "actual": 109.66,
-      "projected": 94.01,
-      "diff": 15.65
-     },
-     "worst_week": {
-      "week": 3,
-      "actual": 53.96,
-      "projected": 78.51,
-      "diff": -24.55
-     },
-     "weekly": [
-      {
-       "week": 1,
-       "actual": 87.7,
-       "projected": 89.43,
-       "diff": -1.73
       },
       {
-       "week": 2,
-       "actual": 100.02,
-       "projected": 97.04,
-       "diff": 2.98
-      },
-      {
-       "week": 3,
-       "actual": 53.96,
-       "projected": 78.51,
-       "diff": -24.55
-      },
-      {
-       "week": 4,
-       "actual": 96.18,
-       "projected": 84.41,
-       "diff": 11.77
-      },
-      {
-       "week": 5,
-       "actual": 80.82,
-       "projected": 73.48,
-       "diff": 7.34
-      },
-      {
-       "week": 6,
-       "actual": 85.98,
-       "projected": 85.78,
-       "diff": 0.2
-      },
-      {
-       "week": 7,
-       "actual": 80.94,
-       "projected": 86.92,
-       "diff": -5.98
-      },
-      {
-       "week": 8,
-       "actual": 85.76,
-       "projected": 92.93,
-       "diff": -7.17
-      },
-      {
-       "week": 9,
-       "actual": 109.66,
-       "projected": 94.01,
-       "diff": 15.65
-      },
-      {
-       "week": 10,
-       "actual": 59.82,
-       "projected": 81.41,
-       "diff": -21.59
+       "week": 11,
+       "actual": 95.96,
+       "projected": 96.17,
+       "diff": -0.21
       }
      ]
     },
     {
      "team_id": "7",
      "team": "Orson Welles",
-     "games": 10,
-     "avg_diff": -3.42,
-     "stdev": 16.8,
-     "weeks_over": 4,
+     "games": 11,
+     "avg_diff": -2.19,
+     "stdev": 16.49,
+     "weeks_over": 5,
      "weeks_under": 6,
      "best_week": {
       "week": 5,
@@ -2041,16 +2067,111 @@
        "actual": 88.02,
        "projected": 83.01,
        "diff": 5.01
+      },
+      {
+       "week": 11,
+       "actual": 100.66,
+       "projected": 90.53,
+       "diff": 10.13
+      }
+     ]
+    },
+    {
+     "team_id": "3",
+     "team": "Burrito",
+     "games": 11,
+     "avg_diff": -3.06,
+     "stdev": 12.11,
+     "weeks_over": 5,
+     "weeks_under": 6,
+     "best_week": {
+      "week": 9,
+      "actual": 109.66,
+      "projected": 94.01,
+      "diff": 15.65
+     },
+     "worst_week": {
+      "week": 3,
+      "actual": 53.96,
+      "projected": 78.51,
+      "diff": -24.55
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 87.7,
+       "projected": 89.43,
+       "diff": -1.73
+      },
+      {
+       "week": 2,
+       "actual": 100.02,
+       "projected": 97.04,
+       "diff": 2.98
+      },
+      {
+       "week": 3,
+       "actual": 53.96,
+       "projected": 78.51,
+       "diff": -24.55
+      },
+      {
+       "week": 4,
+       "actual": 96.18,
+       "projected": 84.41,
+       "diff": 11.77
+      },
+      {
+       "week": 5,
+       "actual": 80.82,
+       "projected": 73.48,
+       "diff": 7.34
+      },
+      {
+       "week": 6,
+       "actual": 85.98,
+       "projected": 85.78,
+       "diff": 0.2
+      },
+      {
+       "week": 7,
+       "actual": 80.94,
+       "projected": 86.92,
+       "diff": -5.98
+      },
+      {
+       "week": 8,
+       "actual": 85.76,
+       "projected": 92.93,
+       "diff": -7.17
+      },
+      {
+       "week": 9,
+       "actual": 109.66,
+       "projected": 94.01,
+       "diff": 15.65
+      },
+      {
+       "week": 10,
+       "actual": 59.82,
+       "projected": 81.41,
+       "diff": -21.59
+      },
+      {
+       "week": 11,
+       "actual": 64.6,
+       "projected": 75.18,
+       "diff": -10.58
       }
      ]
     },
     {
      "team_id": "11",
      "team": "The Herdsmen",
-     "games": 10,
-     "avg_diff": -3.6,
-     "stdev": 20.78,
-     "weeks_over": 4,
+     "games": 11,
+     "avg_diff": -3.24,
+     "stdev": 19.85,
+     "weeks_over": 5,
      "weeks_under": 6,
      "best_week": {
       "week": 9,
@@ -2124,99 +2245,22 @@
        "actual": 67.24,
        "projected": 91.94,
        "diff": -24.7
-      }
-     ]
-    },
-    {
-     "team_id": "10",
-     "team": "Shaq List",
-     "games": 10,
-     "avg_diff": -4.68,
-     "stdev": 13.73,
-     "weeks_over": 4,
-     "weeks_under": 6,
-     "best_week": {
-      "week": 6,
-      "actual": 86.54,
-      "projected": 71.76,
-      "diff": 14.78
-     },
-     "worst_week": {
-      "week": 1,
-      "actual": 62.8,
-      "projected": 93.23,
-      "diff": -30.43
-     },
-     "weekly": [
-      {
-       "week": 1,
-       "actual": 62.8,
-       "projected": 93.23,
-       "diff": -30.43
       },
       {
-       "week": 2,
-       "actual": 79.38,
-       "projected": 92.29,
-       "diff": -12.91
-      },
-      {
-       "week": 3,
-       "actual": 90.8,
-       "projected": 89.04,
-       "diff": 1.76
-      },
-      {
-       "week": 4,
-       "actual": 75.84,
-       "projected": 77.26,
-       "diff": -1.42
-      },
-      {
-       "week": 5,
-       "actual": 99.94,
-       "projected": 86.05,
-       "diff": 13.89
-      },
-      {
-       "week": 6,
-       "actual": 86.54,
-       "projected": 71.76,
-       "diff": 14.78
-      },
-      {
-       "week": 7,
-       "actual": 65.62,
-       "projected": 88.73,
-       "diff": -23.11
-      },
-      {
-       "week": 8,
-       "actual": 84.9,
-       "projected": 90.13,
-       "diff": -5.23
-      },
-      {
-       "week": 9,
-       "actual": 82.18,
-       "projected": 87.78,
-       "diff": -5.6
-      },
-      {
-       "week": 10,
-       "actual": 93.48,
-       "projected": 91.98,
-       "diff": 1.5
+       "week": 11,
+       "actual": 103.96,
+       "projected": 103.58,
+       "diff": 0.38
       }
      ]
     },
     {
      "team_id": "1",
      "team": "Football Guy's Guy",
-     "games": 10,
-     "avg_diff": -4.99,
-     "stdev": 15.25,
-     "weeks_over": 4,
+     "games": 11,
+     "avg_diff": -3.91,
+     "stdev": 14.94,
+     "weeks_over": 5,
      "weeks_under": 6,
      "best_week": {
       "week": 5,
@@ -2290,6 +2334,101 @@
        "actual": 107.22,
        "projected": 95.24,
        "diff": 11.98
+      },
+      {
+       "week": 11,
+       "actual": 96.28,
+       "projected": 89.42,
+       "diff": 6.86
+      }
+     ]
+    },
+    {
+     "team_id": "10",
+     "team": "Shaq List",
+     "games": 11,
+     "avg_diff": -6.54,
+     "stdev": 14.35,
+     "weeks_over": 4,
+     "weeks_under": 7,
+     "best_week": {
+      "week": 6,
+      "actual": 86.54,
+      "projected": 71.76,
+      "diff": 14.78
+     },
+     "worst_week": {
+      "week": 1,
+      "actual": 62.8,
+      "projected": 93.23,
+      "diff": -30.43
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 62.8,
+       "projected": 93.23,
+       "diff": -30.43
+      },
+      {
+       "week": 2,
+       "actual": 79.38,
+       "projected": 92.29,
+       "diff": -12.91
+      },
+      {
+       "week": 3,
+       "actual": 90.8,
+       "projected": 89.04,
+       "diff": 1.76
+      },
+      {
+       "week": 4,
+       "actual": 75.84,
+       "projected": 77.26,
+       "diff": -1.42
+      },
+      {
+       "week": 5,
+       "actual": 99.94,
+       "projected": 86.05,
+       "diff": 13.89
+      },
+      {
+       "week": 6,
+       "actual": 86.54,
+       "projected": 71.76,
+       "diff": 14.78
+      },
+      {
+       "week": 7,
+       "actual": 65.62,
+       "projected": 88.73,
+       "diff": -23.11
+      },
+      {
+       "week": 8,
+       "actual": 84.9,
+       "projected": 90.13,
+       "diff": -5.23
+      },
+      {
+       "week": 9,
+       "actual": 82.18,
+       "projected": 87.78,
+       "diff": -5.6
+      },
+      {
+       "week": 10,
+       "actual": 93.48,
+       "projected": 91.98,
+       "diff": 1.5
+      },
+      {
+       "week": 11,
+       "actual": 72.84,
+       "projected": 97.96,
+       "diff": -25.12
       }
      ]
     }
@@ -2299,11 +2438,11 @@
      {
       "team_id": "3",
       "team": "Burrito",
-      "weeks": 10,
-      "total_points_left": 217.6,
-      "avg_per_week": 21.76,
+      "weeks": 11,
+      "total_points_left": 218.2,
+      "avg_per_week": 19.84,
       "weeks_15_plus_left": 7,
-      "efficiency": 0.794,
+      "efficiency": 0.806,
       "avoidable_losses": [
        {
         "week": 1,
@@ -2338,11 +2477,11 @@
      {
       "team_id": "1",
       "team": "Football Guy's Guy",
-      "weeks": 10,
-      "total_points_left": 164.44,
-      "avg_per_week": 16.44,
+      "weeks": 11,
+      "total_points_left": 175.04,
+      "avg_per_week": 15.91,
       "weeks_15_plus_left": 4,
-      "efficiency": 0.841,
+      "efficiency": 0.846,
       "avoidable_losses": [
        {
         "week": 1,
@@ -2384,11 +2523,11 @@
      {
       "team_id": "10",
       "team": "Shaq List",
-      "weeks": 10,
-      "total_points_left": 161.82,
-      "avg_per_week": 16.18,
+      "weeks": 11,
+      "total_points_left": 163.36,
+      "avg_per_week": 14.85,
       "weeks_15_plus_left": 4,
-      "efficiency": 0.835,
+      "efficiency": 0.846,
       "avoidable_losses": [
        {
         "week": 2,
@@ -2430,11 +2569,11 @@
      {
       "team_id": "8",
       "team": "Phony Grossi",
-      "weeks": 10,
-      "total_points_left": 155.58,
-      "avg_per_week": 15.56,
+      "weeks": 11,
+      "total_points_left": 161.88,
+      "avg_per_week": 14.72,
       "weeks_15_plus_left": 4,
-      "efficiency": 0.856,
+      "efficiency": 0.863,
       "avoidable_losses": [
        {
         "week": 2,
@@ -2455,11 +2594,11 @@
      {
       "team_id": "11",
       "team": "The Herdsmen",
-      "weeks": 10,
-      "total_points_left": 120.14,
-      "avg_per_week": 12.01,
+      "weeks": 11,
+      "total_points_left": 130.74,
+      "avg_per_week": 11.89,
       "weeks_15_plus_left": 3,
-      "efficiency": 0.882,
+      "efficiency": 0.884,
       "avoidable_losses": [
        {
         "week": 2,
@@ -2474,17 +2613,24 @@
         "opp": 85.66,
         "optimal": 97.58,
         "opp_team": "BrowneyeVibeSesh"
+       },
+       {
+        "week": 11,
+        "scored": 103.96,
+        "opp": 105.7,
+        "optimal": 114.56,
+        "opp_team": "Ranus The Hiddeer"
        }
       ]
      },
      {
       "team_id": "4",
       "team": "Dad\u2019s To The Bone",
-      "weeks": 10,
-      "total_points_left": 112.7,
-      "avg_per_week": 11.27,
+      "weeks": 11,
+      "total_points_left": 115.5,
+      "avg_per_week": 10.5,
       "weeks_15_plus_left": 2,
-      "efficiency": 0.899,
+      "efficiency": 0.901,
       "avoidable_losses": [
        {
         "week": 1,
@@ -2512,41 +2658,31 @@
      {
       "team_id": "7",
       "team": "Orson Welles",
-      "weeks": 10,
+      "weeks": 11,
       "total_points_left": 112.5,
-      "avg_per_week": 11.25,
+      "avg_per_week": 10.23,
       "weeks_15_plus_left": 3,
-      "efficiency": 0.882,
+      "efficiency": 0.893,
       "avoidable_losses": []
      },
      {
       "team_id": "9",
       "team": "Ranus The Hiddeer",
-      "weeks": 10,
-      "total_points_left": 104.84,
-      "avg_per_week": 10.48,
+      "weeks": 11,
+      "total_points_left": 105.84,
+      "avg_per_week": 9.62,
       "weeks_15_plus_left": 3,
-      "efficiency": 0.905,
-      "avoidable_losses": []
-     },
-     {
-      "team_id": "2",
-      "team": "BrowneyeVibeSesh",
-      "weeks": 10,
-      "total_points_left": 91.26,
-      "avg_per_week": 9.13,
-      "weeks_15_plus_left": 2,
-      "efficiency": 0.91,
+      "efficiency": 0.913,
       "avoidable_losses": []
      },
      {
       "team_id": "12",
       "team": "The Pickups",
-      "weeks": 10,
-      "total_points_left": 82.04,
-      "avg_per_week": 8.2,
+      "weeks": 11,
+      "total_points_left": 95.44,
+      "avg_per_week": 8.68,
       "weeks_15_plus_left": 3,
-      "efficiency": 0.931,
+      "efficiency": 0.926,
       "avoidable_losses": [
        {
         "week": 2,
@@ -2561,17 +2697,34 @@
         "opp": 98.46,
         "optimal": 109.14,
         "opp_team": "Ranus The Hiddeer"
+       },
+       {
+        "week": 11,
+        "scored": 93.3,
+        "opp": 95.96,
+        "optimal": 106.7,
+        "opp_team": "Phony Grossi"
        }
       ]
      },
      {
+      "team_id": "2",
+      "team": "BrowneyeVibeSesh",
+      "weeks": 11,
+      "total_points_left": 91.26,
+      "avg_per_week": 8.3,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.916,
+      "avoidable_losses": []
+     },
+     {
       "team_id": "5",
       "team": "Denim Like A DeJean",
-      "weeks": 10,
-      "total_points_left": 58.62,
-      "avg_per_week": 5.86,
-      "weeks_15_plus_left": 1,
-      "efficiency": 0.941,
+      "weeks": 11,
+      "total_points_left": 75.22,
+      "avg_per_week": 6.84,
+      "weeks_15_plus_left": 2,
+      "efficiency": 0.932,
       "avoidable_losses": [
        {
         "week": 8,
@@ -2585,11 +2738,11 @@
      {
       "team_id": "6",
       "team": "Matty Dawg Pound",
-      "weeks": 10,
-      "total_points_left": 54.4,
-      "avg_per_week": 5.44,
+      "weeks": 11,
+      "total_points_left": 62.0,
+      "avg_per_week": 5.64,
       "weeks_15_plus_left": 1,
-      "efficiency": 0.943,
+      "efficiency": 0.942,
       "avoidable_losses": [
        {
         "week": 9,
@@ -2741,12 +2894,12 @@
    },
    "players": {
     "positional_average_per_start": {
-     "QB": 19.04,
-     "RB": 12.29,
-     "WR": 8.67,
-     "TE": 6.76,
-     "K": 8.93,
-     "DEF": 6.78
+     "QB": 19.0,
+     "RB": 12.24,
+     "WR": 8.59,
+     "TE": 6.7,
+     "K": 8.92,
+     "DEF": 6.8
     },
     "team_mvps": [
      {
@@ -2755,12 +2908,12 @@
       "mvp": {
        "team_id": "1",
        "team": "Football Guy's Guy",
-       "player": "Parker Washington",
-       "pos": "WR",
-       "starts": 9,
-       "points": 101.8,
-       "above_pos_avg": 23.75,
-       "ppg": 11.31
+       "player": "Chuba Hubbard",
+       "pos": "RB",
+       "starts": 8,
+       "points": 130.2,
+       "above_pos_avg": 32.27,
+       "ppg": 16.27
       },
       "weakest_link": {
        "team_id": "1",
@@ -2769,7 +2922,7 @@
        "pos": "RB",
        "starts": 4,
        "points": 19.0,
-       "above_pos_avg": -30.14,
+       "above_pos_avg": -29.96,
        "ppg": 4.75
       }
      },
@@ -2781,20 +2934,20 @@
        "team": "BrowneyeVibeSesh",
        "player": "Christian McCaffrey",
        "pos": "RB",
-       "starts": 8,
-       "points": 152.3,
-       "above_pos_avg": 54.01,
-       "ppg": 19.04
+       "starts": 9,
+       "points": 164.5,
+       "above_pos_avg": 54.33,
+       "ppg": 18.28
       },
       "weakest_link": {
        "team_id": "2",
        "team": "BrowneyeVibeSesh",
        "player": "Jordan Mason",
        "pos": "RB",
-       "starts": 3,
-       "points": 18.1,
-       "above_pos_avg": -18.76,
-       "ppg": 6.03
+       "starts": 4,
+       "points": 21.8,
+       "above_pos_avg": -27.16,
+       "ppg": 5.45
       }
      },
      {
@@ -2803,12 +2956,12 @@
       "mvp": {
        "team_id": "3",
        "team": "Burrito",
-       "player": "Kenneth Walker III",
-       "pos": "RB",
-       "starts": 8,
-       "points": 170.4,
-       "above_pos_avg": 72.11,
-       "ppg": 21.3
+       "player": "CeeDee Lamb",
+       "pos": "WR",
+       "starts": 11,
+       "points": 164.2,
+       "above_pos_avg": 69.67,
+       "ppg": 14.93
       },
       "weakest_link": {
        "team_id": "3",
@@ -2817,7 +2970,7 @@
        "pos": "RB",
        "starts": 4,
        "points": 10.0,
-       "above_pos_avg": -39.14,
+       "above_pos_avg": -38.96,
        "ppg": 2.5
       }
      },
@@ -2827,22 +2980,22 @@
       "mvp": {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
-       "player": "Josh Allen",
-       "pos": "QB",
-       "starts": 9,
-       "points": 222.02,
-       "above_pos_avg": 50.65,
-       "ppg": 24.67
+       "player": "James Cook III",
+       "pos": "RB",
+       "starts": 10,
+       "points": 173.3,
+       "above_pos_avg": 50.89,
+       "ppg": 17.33
       },
       "weakest_link": {
        "team_id": "4",
        "team": "Dad\u2019s To The Bone",
        "player": "Chase Brown",
        "pos": "RB",
-       "starts": 7,
-       "points": 67.1,
-       "above_pos_avg": -18.9,
-       "ppg": 9.59
+       "starts": 8,
+       "points": 70.7,
+       "above_pos_avg": -27.23,
+       "ppg": 8.84
       }
      },
      {
@@ -2853,20 +3006,20 @@
        "team": "Denim Like A DeJean",
        "player": "Tee Higgins",
        "pos": "WR",
-       "starts": 9,
-       "points": 118.4,
-       "above_pos_avg": 40.35,
-       "ppg": 13.16
+       "starts": 10,
+       "points": 128.7,
+       "above_pos_avg": 42.76,
+       "ppg": 12.87
       },
       "weakest_link": {
        "team_id": "5",
        "team": "Denim Like A DeJean",
-       "player": "David Montgomery",
-       "pos": "RB",
-       "starts": 5,
-       "points": 38.5,
-       "above_pos_avg": -22.93,
-       "ppg": 7.7
+       "player": "DK Metcalf",
+       "pos": "WR",
+       "starts": 10,
+       "points": 58.5,
+       "above_pos_avg": -27.44,
+       "ppg": 5.85
       }
      },
      {
@@ -2877,20 +3030,20 @@
        "team": "Matty Dawg Pound",
        "player": "Trey McBride",
        "pos": "TE",
-       "starts": 10,
-       "points": 93.5,
-       "above_pos_avg": 25.87,
-       "ppg": 9.35
+       "starts": 11,
+       "points": 99.3,
+       "above_pos_avg": 25.62,
+       "ppg": 9.03
       },
       "weakest_link": {
        "team_id": "6",
        "team": "Matty Dawg Pound",
-       "player": "Devin Singletary",
+       "player": "Rico Dowdle",
        "pos": "RB",
-       "starts": 2,
-       "points": 4.2,
-       "above_pos_avg": -20.37,
-       "ppg": 2.1
+       "starts": 3,
+       "points": 9.9,
+       "above_pos_avg": -26.82,
+       "ppg": 3.3
       }
      },
      {
@@ -2899,22 +3052,22 @@
       "mvp": {
        "team_id": "7",
        "team": "Orson Welles",
-       "player": "Tony Pollard",
-       "pos": "RB",
-       "starts": 5,
-       "points": 95.7,
-       "above_pos_avg": 34.27,
-       "ppg": 19.14
+       "player": "Puka Nacua",
+       "pos": "WR",
+       "starts": 8,
+       "points": 103.6,
+       "above_pos_avg": 34.85,
+       "ppg": 12.95
       },
       "weakest_link": {
        "team_id": "7",
        "team": "Orson Welles",
-       "player": "Ashton Jeanty",
-       "pos": "RB",
-       "starts": 9,
-       "points": 77.0,
-       "above_pos_avg": -33.57,
-       "ppg": 8.56
+       "player": "Wan'Dale Robinson",
+       "pos": "WR",
+       "starts": 5,
+       "points": 18.9,
+       "above_pos_avg": -24.07,
+       "ppg": 3.78
       }
      },
      {
@@ -2925,10 +3078,10 @@
        "team": "Phony Grossi",
        "player": "Jahmyr Gibbs",
        "pos": "RB",
-       "starts": 9,
-       "points": 212.4,
-       "above_pos_avg": 101.83,
-       "ppg": 23.6
+       "starts": 10,
+       "points": 236.2,
+       "above_pos_avg": 113.79,
+       "ppg": 23.62
       },
       "weakest_link": {
        "team_id": "8",
@@ -2937,7 +3090,7 @@
        "pos": "RB",
        "starts": 7,
        "points": 59.4,
-       "above_pos_avg": -26.6,
+       "above_pos_avg": -26.29,
        "ppg": 8.49
       }
      },
@@ -2951,7 +3104,7 @@
        "pos": "WR",
        "starts": 10,
        "points": 184.16,
-       "above_pos_avg": 97.44,
+       "above_pos_avg": 98.22,
        "ppg": 18.42
       },
       "weakest_link": {
@@ -2961,7 +3114,7 @@
        "pos": "WR",
        "starts": 6,
        "points": 18.3,
-       "above_pos_avg": -33.73,
+       "above_pos_avg": -33.26,
        "ppg": 3.05
       }
      },
@@ -2973,20 +3126,20 @@
        "team": "Shaq List",
        "player": "Ja'Marr Chase",
        "pos": "WR",
-       "starts": 9,
-       "points": 129.8,
-       "above_pos_avg": 51.75,
-       "ppg": 14.42
+       "starts": 10,
+       "points": 132.9,
+       "above_pos_avg": 46.96,
+       "ppg": 13.29
       },
       "weakest_link": {
        "team_id": "10",
        "team": "Shaq List",
        "player": "Josh Downs",
        "pos": "WR",
-       "starts": 9,
-       "points": 46.2,
-       "above_pos_avg": -31.85,
-       "ppg": 5.13
+       "starts": 10,
+       "points": 52.1,
+       "above_pos_avg": -33.84,
+       "ppg": 5.21
       }
      },
      {
@@ -2999,7 +3152,7 @@
        "pos": "WR",
        "starts": 6,
        "points": 77.9,
-       "above_pos_avg": 25.87,
+       "above_pos_avg": 26.34,
        "ppg": 12.98
       },
       "weakest_link": {
@@ -3009,7 +3162,7 @@
        "pos": "RB",
        "starts": 2,
        "points": 7.7,
-       "above_pos_avg": -16.87,
+       "above_pos_avg": -16.78,
        "ppg": 3.85
       }
      },
@@ -3021,10 +3174,10 @@
        "team": "The Pickups",
        "player": "Joe Burrow",
        "pos": "QB",
-       "starts": 8,
-       "points": 209.72,
-       "above_pos_avg": 57.39,
-       "ppg": 26.21
+       "starts": 9,
+       "points": 229.62,
+       "above_pos_avg": 58.6,
+       "ppg": 25.51
       },
       "weakest_link": {
        "team_id": "12",
@@ -3033,7 +3186,7 @@
        "pos": "WR",
        "starts": 2,
        "points": 4.3,
-       "above_pos_avg": -13.04,
+       "above_pos_avg": -12.89,
        "ppg": 2.15
       }
      }
@@ -3044,10 +3197,10 @@
       "team": "Phony Grossi",
       "player": "Jahmyr Gibbs",
       "pos": "RB",
-      "starts": 9,
-      "points": 212.4,
-      "above_pos_avg": 101.83,
-      "ppg": 23.6
+      "starts": 10,
+      "points": 236.2,
+      "above_pos_avg": 113.79,
+      "ppg": 23.62
      },
      {
       "team_id": "9",
@@ -3056,78 +3209,68 @@
       "pos": "WR",
       "starts": 10,
       "points": 184.16,
-      "above_pos_avg": 97.44,
+      "above_pos_avg": 98.22,
       "ppg": 18.42
-     },
-     {
-      "team_id": "3",
-      "team": "Burrito",
-      "player": "Kenneth Walker III",
-      "pos": "RB",
-      "starts": 8,
-      "points": 170.4,
-      "above_pos_avg": 72.11,
-      "ppg": 21.3
      },
      {
       "team_id": "3",
       "team": "Burrito",
       "player": "CeeDee Lamb",
       "pos": "WR",
-      "starts": 10,
-      "points": 145.0,
-      "above_pos_avg": 58.28,
-      "ppg": 14.5
+      "starts": 11,
+      "points": 164.2,
+      "above_pos_avg": 69.67,
+      "ppg": 14.93
+     },
+     {
+      "team_id": "3",
+      "team": "Burrito",
+      "player": "Kenneth Walker III",
+      "pos": "RB",
+      "starts": 9,
+      "points": 170.4,
+      "above_pos_avg": 60.23,
+      "ppg": 18.93
      },
      {
       "team_id": "12",
       "team": "The Pickups",
       "player": "Joe Burrow",
       "pos": "QB",
-      "starts": 8,
-      "points": 209.72,
-      "above_pos_avg": 57.39,
-      "ppg": 26.21
+      "starts": 9,
+      "points": 229.62,
+      "above_pos_avg": 58.6,
+      "ppg": 25.51
      },
      {
       "team_id": "2",
       "team": "BrowneyeVibeSesh",
       "player": "Christian McCaffrey",
       "pos": "RB",
-      "starts": 8,
-      "points": 152.3,
-      "above_pos_avg": 54.01,
-      "ppg": 19.04
-     },
-     {
-      "team_id": "10",
-      "team": "Shaq List",
-      "player": "Ja'Marr Chase",
-      "pos": "WR",
       "starts": 9,
-      "points": 129.8,
-      "above_pos_avg": 51.75,
-      "ppg": 14.42
-     },
-     {
-      "team_id": "4",
-      "team": "Dad\u2019s To The Bone",
-      "player": "Josh Allen",
-      "pos": "QB",
-      "starts": 9,
-      "points": 222.02,
-      "above_pos_avg": 50.65,
-      "ppg": 24.67
+      "points": 164.5,
+      "above_pos_avg": 54.33,
+      "ppg": 18.28
      },
      {
       "team_id": "4",
       "team": "Dad\u2019s To The Bone",
       "player": "James Cook III",
       "pos": "RB",
-      "starts": 9,
-      "points": 158.1,
-      "above_pos_avg": 47.53,
-      "ppg": 17.57
+      "starts": 10,
+      "points": 173.3,
+      "above_pos_avg": 50.89,
+      "ppg": 17.33
+     },
+     {
+      "team_id": "10",
+      "team": "Shaq List",
+      "player": "Ja'Marr Chase",
+      "pos": "WR",
+      "starts": 10,
+      "points": 132.9,
+      "above_pos_avg": 46.96,
+      "ppg": 13.29
      },
      {
       "team_id": "2",
@@ -3136,38 +3279,38 @@
       "pos": "WR",
       "starts": 10,
       "points": 131.6,
-      "above_pos_avg": 44.88,
+      "above_pos_avg": 45.66,
       "ppg": 13.16
      },
      {
       "team_id": "4",
       "team": "Dad\u2019s To The Bone",
-      "player": "Vikings",
-      "pos": "DEF",
-      "starts": 8,
-      "points": 98.0,
-      "above_pos_avg": 43.8,
-      "ppg": 12.25
+      "player": "Josh Allen",
+      "pos": "QB",
+      "starts": 10,
+      "points": 234.18,
+      "above_pos_avg": 44.15,
+      "ppg": 23.42
      },
      {
       "team_id": "5",
       "team": "Denim Like A DeJean",
       "player": "Tee Higgins",
       "pos": "WR",
-      "starts": 9,
-      "points": 118.4,
-      "above_pos_avg": 40.35,
-      "ppg": 13.16
+      "starts": 10,
+      "points": 128.7,
+      "above_pos_avg": 42.76,
+      "ppg": 12.87
      },
      {
       "team_id": "9",
       "team": "Ranus The Hiddeer",
       "player": "Amon-Ra St. Brown",
       "pos": "WR",
-      "starts": 9,
-      "points": 118.4,
-      "above_pos_avg": 40.35,
-      "ppg": 13.16
+      "starts": 10,
+      "points": 128.1,
+      "above_pos_avg": 42.16,
+      "ppg": 12.81
      },
      {
       "team_id": "12",
@@ -3176,18 +3319,28 @@
       "pos": "RB",
       "starts": 10,
       "points": 162.7,
-      "above_pos_avg": 39.84,
+      "above_pos_avg": 40.29,
       "ppg": 16.27
      },
      {
-      "team_id": "2",
-      "team": "BrowneyeVibeSesh",
-      "player": "Brock Bowers",
-      "pos": "TE",
-      "starts": 7,
-      "points": 82.2,
-      "above_pos_avg": 34.86,
-      "ppg": 11.74
+      "team_id": "4",
+      "team": "Dad\u2019s To The Bone",
+      "player": "Vikings",
+      "pos": "DEF",
+      "starts": 9,
+      "points": 98.0,
+      "above_pos_avg": 36.77,
+      "ppg": 10.89
+     },
+     {
+      "team_id": "7",
+      "team": "Orson Welles",
+      "player": "Puka Nacua",
+      "pos": "WR",
+      "starts": 8,
+      "points": 103.6,
+      "above_pos_avg": 34.85,
+      "ppg": 12.95
      }
     ]
    },
@@ -3195,110 +3348,110 @@
     {
      "team_id": "12",
      "team": "The Pickups",
-     "avg": 109.97,
+     "avg": 108.45,
      "stdev": 15.93,
      "high": 133.72,
      "low": 87.18,
-     "above_median_weeks": "7-3"
-    },
-    {
-     "team_id": "4",
-     "team": "Dad\u2019s To The Bone",
-     "avg": 99.88,
-     "stdev": 18.81,
-     "high": 144.72,
-     "low": 78.3,
-     "above_median_weeks": "7-3"
+     "above_median_weeks": "7-4"
     },
     {
      "team_id": "9",
      "team": "Ranus The Hiddeer",
-     "avg": 99.84,
-     "stdev": 14.07,
+     "avg": 100.37,
+     "stdev": 13.52,
      "high": 120.3,
      "low": 74.98,
-     "above_median_weeks": "7-3"
+     "above_median_weeks": "8-3"
+    },
+    {
+     "team_id": "4",
+     "team": "Dad\u2019s To The Bone",
+     "avg": 95.98,
+     "stdev": 21.77,
+     "high": 144.72,
+     "low": 56.96,
+     "above_median_weeks": "7-4"
     },
     {
      "team_id": "5",
      "team": "Denim Like A DeJean",
-     "avg": 93.7,
-     "stdev": 15.47,
+     "avg": 93.76,
+     "stdev": 14.75,
      "high": 123.36,
      "low": 66.24,
-     "above_median_weeks": "6-4"
+     "above_median_weeks": "7-4"
     },
     {
      "team_id": "8",
      "team": "Phony Grossi",
-     "avg": 92.59,
-     "stdev": 17.3,
+     "avg": 92.9,
+     "stdev": 16.52,
      "high": 116.94,
      "low": 55.98,
-     "above_median_weeks": "5-5"
-    },
-    {
-     "team_id": "2",
-     "team": "BrowneyeVibeSesh",
-     "avg": 91.97,
-     "stdev": 12.21,
-     "high": 113.06,
-     "low": 69.22,
-     "above_median_weeks": "5-5"
+     "above_median_weeks": "6-5"
     },
     {
      "team_id": "6",
      "team": "Matty Dawg Pound",
-     "avg": 90.69,
-     "stdev": 18.17,
+     "avg": 90.89,
+     "stdev": 17.34,
      "high": 118.12,
      "low": 55.46,
-     "above_median_weeks": "5-5"
+     "above_median_weeks": "5-6"
     },
     {
      "team_id": "11",
      "team": "The Herdsmen",
-     "avg": 89.59,
-     "stdev": 22.04,
+     "avg": 90.89,
+     "stdev": 21.42,
      "high": 125.68,
      "low": 57.2,
-     "above_median_weeks": "4-6"
+     "above_median_weeks": "5-6"
+    },
+    {
+     "team_id": "2",
+     "team": "BrowneyeVibeSesh",
+     "avg": 90.41,
+     "stdev": 12.65,
+     "high": 113.06,
+     "low": 69.22,
+     "above_median_weeks": "5-6"
     },
     {
      "team_id": "1",
      "team": "Football Guy's Guy",
-     "avg": 86.87,
-     "stdev": 14.11,
+     "avg": 87.73,
+     "stdev": 13.72,
      "high": 109.58,
      "low": 64.28,
-     "above_median_weeks": "3-7"
-    },
-    {
-     "team_id": "3",
-     "team": "Burrito",
-     "avg": 84.08,
-     "stdev": 16.1,
-     "high": 109.66,
-     "low": 53.96,
-     "above_median_weeks": "4-6"
+     "above_median_weeks": "4-7"
     },
     {
      "team_id": "7",
      "team": "Orson Welles",
-     "avg": 83.75,
-     "stdev": 15.9,
+     "avg": 85.29,
+     "stdev": 15.92,
      "high": 114.28,
      "low": 52.08,
-     "above_median_weeks": "4-6"
+     "above_median_weeks": "5-6"
+    },
+    {
+     "team_id": "3",
+     "team": "Burrito",
+     "avg": 82.31,
+     "stdev": 16.34,
+     "high": 109.66,
+     "low": 53.96,
+     "above_median_weeks": "4-7"
     },
     {
      "team_id": "10",
      "team": "Shaq List",
-     "avg": 82.15,
-     "stdev": 11.14,
+     "avg": 81.3,
+     "stdev": 10.96,
      "high": 99.94,
      "low": 62.8,
-     "above_median_weeks": "3-7"
+     "above_median_weeks": "3-8"
     }
    ],
    "pickups": {
@@ -3308,33 +3461,33 @@
       "team_id": "9",
       "team": "Ranus The Hiddeer",
       "adds": 19,
-      "points_from_adds": 168.5,
+      "points_from_adds": 189.9,
       "faab_spent": 23.0,
-      "points_per_faab_dollar": 7.33
-     },
-     {
-      "team_id": "8",
-      "team": "Phony Grossi",
-      "adds": 10,
-      "points_from_adds": 136.72,
-      "faab_spent": 31.0,
-      "points_per_faab_dollar": 4.41
+      "points_per_faab_dollar": 8.26
      },
      {
       "team_id": "11",
       "team": "The Herdsmen",
       "adds": 13,
-      "points_from_adds": 134.24,
+      "points_from_adds": 185.6,
       "faab_spent": 23.0,
-      "points_per_faab_dollar": 5.84
+      "points_per_faab_dollar": 8.07
+     },
+     {
+      "team_id": "8",
+      "team": "Phony Grossi",
+      "adds": 10,
+      "points_from_adds": 148.72,
+      "faab_spent": 31.0,
+      "points_per_faab_dollar": 4.8
      },
      {
       "team_id": "5",
       "team": "Denim Like A DeJean",
       "adds": 7,
-      "points_from_adds": 121.6,
+      "points_from_adds": 146.3,
       "faab_spent": 15.0,
-      "points_per_faab_dollar": 8.11
+      "points_per_faab_dollar": 9.75
      },
      {
       "team_id": "6",
@@ -3348,33 +3501,33 @@
       "team_id": "3",
       "team": "Burrito",
       "adds": 8,
-      "points_from_adds": 95.8,
+      "points_from_adds": 101.8,
       "faab_spent": 32.0,
-      "points_per_faab_dollar": 2.99
-     },
-     {
-      "team_id": "1",
-      "team": "Football Guy's Guy",
-      "adds": 12,
-      "points_from_adds": 81.62,
-      "faab_spent": 6.0,
-      "points_per_faab_dollar": 13.6
-     },
-     {
-      "team_id": "4",
-      "team": "Dad\u2019s To The Bone",
-      "adds": 10,
-      "points_from_adds": 80.38,
-      "faab_spent": 65.0,
-      "points_per_faab_dollar": 1.24
+      "points_per_faab_dollar": 3.18
      },
      {
       "team_id": "10",
       "team": "Shaq List",
       "adds": 5,
-      "points_from_adds": 79.4,
+      "points_from_adds": 100.8,
       "faab_spent": 0.0,
       "points_per_faab_dollar": null
+     },
+     {
+      "team_id": "1",
+      "team": "Football Guy's Guy",
+      "adds": 12,
+      "points_from_adds": 97.6,
+      "faab_spent": 6.0,
+      "points_per_faab_dollar": 16.27
+     },
+     {
+      "team_id": "4",
+      "team": "Dad\u2019s To The Bone",
+      "adds": 10,
+      "points_from_adds": 83.38,
+      "faab_spent": 65.0,
+      "points_per_faab_dollar": 1.28
      },
      {
       "team_id": "12",
@@ -3403,6 +3556,15 @@
     ],
     "top_pickups": [
      {
+      "team": "Denim Like A DeJean",
+      "player": "Tyler Bass",
+      "week": 5,
+      "bid": 0,
+      "type": "WAIVER",
+      "starts": 6,
+      "points": 83.0
+     },
+     {
       "team": "Shaq List",
       "player": "Packers",
       "week": 2,
@@ -3412,13 +3574,13 @@
       "points": 71.0
      },
      {
-      "team": "Denim Like A DeJean",
-      "player": "Tyler Bass",
-      "week": 5,
+      "team": "The Herdsmen",
+      "player": "Jonah Coleman",
+      "week": 2,
       "bid": 0,
-      "type": "WAIVER",
-      "starts": 5,
-      "points": 65.0
+      "type": "FREEAGENT",
+      "starts": 3,
+      "points": 62.1
      },
      {
       "team": "Matty Dawg Pound",
@@ -3444,17 +3606,8 @@
       "week": 4,
       "bid": 7,
       "type": "WAIVER",
-      "starts": 4,
-      "points": 48.1
-     },
-     {
-      "team": "Denim Like A DeJean",
-      "player": "Ollie Gordon II",
-      "week": 4,
-      "bid": 10,
-      "type": "WAIVER",
-      "starts": 4,
-      "points": 41.1
+      "starts": 5,
+      "points": 56.5
      },
      {
       "team": "Football Guy's Guy",
@@ -3462,8 +3615,17 @@
       "week": 5,
       "bid": 0,
       "type": "FREEAGENT",
-      "starts": 2,
-      "points": 37.62
+      "starts": 3,
+      "points": 53.6
+     },
+     {
+      "team": "Denim Like A DeJean",
+      "player": "Ollie Gordon II",
+      "week": 4,
+      "bid": 10,
+      "type": "WAIVER",
+      "starts": 5,
+      "points": 47.8
      },
      {
       "team": "Phony Grossi",
@@ -3471,8 +3633,26 @@
       "week": 6,
       "bid": 5,
       "type": "WAIVER",
-      "starts": 4,
-      "points": 37.0
+      "starts": 5,
+      "points": 44.0
+     },
+     {
+      "team": "Ranus The Hiddeer",
+      "player": "Evan McPherson",
+      "week": 7,
+      "bid": 0,
+      "type": "FREEAGENT",
+      "starts": 5,
+      "points": 41.0
+     },
+     {
+      "team": "The Herdsmen",
+      "player": "C.J. Stroud",
+      "week": 3,
+      "bid": 0,
+      "type": "FREEAGENT",
+      "starts": 2,
+      "points": 40.9
      },
      {
       "team": "Phony Grossi",
@@ -3480,38 +3660,18 @@
       "week": 7,
       "bid": 15,
       "type": "WAIVER",
-      "starts": 4,
-      "points": 35.0
-     },
-     {
-      "team": "Ranus The Hiddeer",
-      "player": "Will Reichard",
-      "week": 4,
-      "bid": 0,
-      "type": "FREEAGENT",
-      "starts": 2,
-      "points": 35.0
-     },
-     {
-      "team": "Burrito",
-      "player": "49ers",
-      "week": 2,
-      "bid": 16,
-      "type": "WAIVER",
-      "starts": 6,
-      "points": 34.0
-     },
-     {
-      "team": "Burrito",
-      "player": "Matt Gay",
-      "week": 7,
-      "bid": 0,
-      "type": "FREEAGENT",
-      "starts": 4,
-      "points": 34.0
+      "starts": 5,
+      "points": 40.0
      }
     ],
     "top_drop_regrets": [
+     {
+      "team": "Ranus The Hiddeer",
+      "dropped": "Cam Little",
+      "week": 4,
+      "points_for_others": 72.0,
+      "starts_elsewhere": 6
+     },
      {
       "team": "BrowneyeVibeSesh",
       "dropped": "Deshaun Watson",
@@ -3520,45 +3680,45 @@
       "starts_elsewhere": 4
      },
      {
-      "team": "Ranus The Hiddeer",
-      "dropped": "Cam Little",
-      "week": 4,
-      "points_for_others": 59.0,
-      "starts_elsewhere": 5
-     },
-     {
       "team": "Burrito",
       "dropped": "Cam Little",
       "week": 7,
-      "points_for_others": 42.0,
-      "starts_elsewhere": 3
-     },
-     {
-      "team": "Ranus The Hiddeer",
-      "dropped": "Jaguars",
-      "week": 2,
-      "points_for_others": 36.0,
-      "starts_elsewhere": 4
-     },
-     {
-      "team": "Ranus The Hiddeer",
-      "dropped": "Will Reichard",
-      "week": 6,
-      "points_for_others": 35.0,
-      "starts_elsewhere": 4
-     },
-     {
-      "team": "Ranus The Hiddeer",
-      "dropped": "Matt Gay",
-      "week": 6,
-      "points_for_others": 34.0,
+      "points_for_others": 55.0,
       "starts_elsewhere": 4
      },
      {
       "team": "The Herdsmen",
       "dropped": "Evan McPherson",
       "week": 6,
-      "points_for_others": 31.0,
+      "points_for_others": 41.0,
+      "starts_elsewhere": 5
+     },
+     {
+      "team": "Ranus The Hiddeer",
+      "dropped": "Will Reichard",
+      "week": 6,
+      "points_for_others": 40.0,
+      "starts_elsewhere": 5
+     },
+     {
+      "team": "Ranus The Hiddeer",
+      "dropped": "Matt Gay",
+      "week": 6,
+      "points_for_others": 40.0,
+      "starts_elsewhere": 5
+     },
+     {
+      "team": "Ranus The Hiddeer",
+      "dropped": "Jaguars",
+      "week": 2,
+      "points_for_others": 39.0,
+      "starts_elsewhere": 5
+     },
+     {
+      "team": "BrowneyeVibeSesh",
+      "dropped": "Bears",
+      "week": 3,
+      "points_for_others": 38.0,
       "starts_elsewhere": 4
      },
      {
@@ -3569,17 +3729,10 @@
       "starts_elsewhere": 3
      },
      {
-      "team": "BrowneyeVibeSesh",
-      "dropped": "Bears",
+      "team": "The Herdsmen",
+      "dropped": "Cairo Santos",
       "week": 3,
-      "points_for_others": 22.0,
-      "starts_elsewhere": 3
-     },
-     {
-      "team": "Burrito",
-      "dropped": "Cooper Kupp",
-      "week": 1,
-      "points_for_others": 19.3,
+      "points_for_others": 25.0,
       "starts_elsewhere": 3
      }
     ]
@@ -3610,114 +3763,114 @@
     {
      "team_id": "1",
      "team": "Football Guy's Guy",
-     "player": "Parker Washington",
-     "pos": "WR",
-     "starts": 9,
-     "points": 101.8,
-     "ppg": 11.31,
-     "positional_avg_per_start": 8.67,
-     "above_avg_total": 23.75,
-     "above_avg_per_start": 2.64,
-     "pct_above_avg": 30.44,
-     "share_of_team_points": 11.72
+     "player": "Chuba Hubbard",
+     "pos": "RB",
+     "starts": 8,
+     "points": 130.2,
+     "ppg": 16.27,
+     "positional_avg_per_start": 12.24,
+     "above_avg_total": 32.27,
+     "above_avg_per_start": 4.03,
+     "pct_above_avg": 32.96,
+     "share_of_team_points": 13.49
     },
     {
      "team_id": "2",
      "team": "BrowneyeVibeSesh",
      "player": "Christian McCaffrey",
      "pos": "RB",
-     "starts": 8,
-     "points": 152.3,
-     "ppg": 19.04,
-     "positional_avg_per_start": 12.29,
-     "above_avg_total": 54.01,
-     "above_avg_per_start": 6.75,
-     "pct_above_avg": 54.96,
-     "share_of_team_points": 16.56
+     "starts": 9,
+     "points": 164.5,
+     "ppg": 18.28,
+     "positional_avg_per_start": 12.24,
+     "above_avg_total": 54.33,
+     "above_avg_per_start": 6.04,
+     "pct_above_avg": 49.32,
+     "share_of_team_points": 16.54
     },
     {
      "team_id": "3",
      "team": "Burrito",
-     "player": "Kenneth Walker III",
-     "pos": "RB",
-     "starts": 8,
-     "points": 170.4,
-     "ppg": 21.3,
-     "positional_avg_per_start": 12.29,
-     "above_avg_total": 72.11,
-     "above_avg_per_start": 9.01,
-     "pct_above_avg": 73.37,
-     "share_of_team_points": 20.27
+     "player": "CeeDee Lamb",
+     "pos": "WR",
+     "starts": 11,
+     "points": 164.2,
+     "ppg": 14.93,
+     "positional_avg_per_start": 8.59,
+     "above_avg_total": 69.67,
+     "above_avg_per_start": 6.33,
+     "pct_above_avg": 73.7,
+     "share_of_team_points": 18.13
     },
     {
      "team_id": "4",
      "team": "Dad\u2019s To The Bone",
-     "player": "Josh Allen",
-     "pos": "QB",
-     "starts": 9,
-     "points": 222.02,
-     "ppg": 24.67,
-     "positional_avg_per_start": 19.04,
-     "above_avg_total": 50.65,
-     "above_avg_per_start": 5.63,
-     "pct_above_avg": 29.56,
-     "share_of_team_points": 22.23
+     "player": "James Cook III",
+     "pos": "RB",
+     "starts": 10,
+     "points": 173.3,
+     "ppg": 17.33,
+     "positional_avg_per_start": 12.24,
+     "above_avg_total": 50.89,
+     "above_avg_per_start": 5.09,
+     "pct_above_avg": 41.58,
+     "share_of_team_points": 16.41
     },
     {
      "team_id": "5",
      "team": "Denim Like A DeJean",
      "player": "Tee Higgins",
      "pos": "WR",
-     "starts": 9,
-     "points": 118.4,
-     "ppg": 13.16,
-     "positional_avg_per_start": 8.67,
-     "above_avg_total": 40.35,
-     "above_avg_per_start": 4.48,
-     "pct_above_avg": 51.71,
-     "share_of_team_points": 12.64
+     "starts": 10,
+     "points": 128.7,
+     "ppg": 12.87,
+     "positional_avg_per_start": 8.59,
+     "above_avg_total": 42.76,
+     "above_avg_per_start": 4.28,
+     "pct_above_avg": 49.76,
+     "share_of_team_points": 12.48
     },
     {
      "team_id": "6",
      "team": "Matty Dawg Pound",
      "player": "Trey McBride",
      "pos": "TE",
-     "starts": 10,
-     "points": 93.5,
-     "ppg": 9.35,
-     "positional_avg_per_start": 6.76,
-     "above_avg_total": 25.87,
-     "above_avg_per_start": 2.59,
-     "pct_above_avg": 38.26,
-     "share_of_team_points": 10.31
+     "starts": 11,
+     "points": 99.3,
+     "ppg": 9.03,
+     "positional_avg_per_start": 6.7,
+     "above_avg_total": 25.62,
+     "above_avg_per_start": 2.33,
+     "pct_above_avg": 34.78,
+     "share_of_team_points": 9.93
     },
     {
      "team_id": "7",
      "team": "Orson Welles",
-     "player": "Tony Pollard",
-     "pos": "RB",
-     "starts": 5,
-     "points": 95.7,
-     "ppg": 19.14,
-     "positional_avg_per_start": 12.29,
-     "above_avg_total": 34.27,
-     "above_avg_per_start": 6.85,
-     "pct_above_avg": 55.79,
-     "share_of_team_points": 11.43
+     "player": "Puka Nacua",
+     "pos": "WR",
+     "starts": 8,
+     "points": 103.6,
+     "ppg": 12.95,
+     "positional_avg_per_start": 8.59,
+     "above_avg_total": 34.85,
+     "above_avg_per_start": 4.36,
+     "pct_above_avg": 50.69,
+     "share_of_team_points": 11.04
     },
     {
      "team_id": "8",
      "team": "Phony Grossi",
      "player": "Jahmyr Gibbs",
      "pos": "RB",
-     "starts": 9,
-     "points": 212.4,
-     "ppg": 23.6,
-     "positional_avg_per_start": 12.29,
-     "above_avg_total": 101.83,
-     "above_avg_per_start": 11.31,
-     "pct_above_avg": 92.09,
-     "share_of_team_points": 22.94
+     "starts": 10,
+     "points": 236.2,
+     "ppg": 23.62,
+     "positional_avg_per_start": 12.24,
+     "above_avg_total": 113.79,
+     "above_avg_per_start": 11.38,
+     "pct_above_avg": 92.96,
+     "share_of_team_points": 23.11
     },
     {
      "team_id": "9",
@@ -3727,25 +3880,25 @@
      "starts": 10,
      "points": 184.16,
      "ppg": 18.42,
-     "positional_avg_per_start": 8.67,
-     "above_avg_total": 97.44,
-     "above_avg_per_start": 9.74,
-     "pct_above_avg": 112.37,
-     "share_of_team_points": 18.45
+     "positional_avg_per_start": 8.59,
+     "above_avg_total": 98.22,
+     "above_avg_per_start": 9.82,
+     "pct_above_avg": 114.3,
+     "share_of_team_points": 16.68
     },
     {
      "team_id": "10",
      "team": "Shaq List",
      "player": "Ja'Marr Chase",
      "pos": "WR",
-     "starts": 9,
-     "points": 129.8,
-     "ppg": 14.42,
-     "positional_avg_per_start": 8.67,
-     "above_avg_total": 51.75,
-     "above_avg_per_start": 5.75,
-     "pct_above_avg": 66.31,
-     "share_of_team_points": 15.8
+     "starts": 10,
+     "points": 132.9,
+     "ppg": 13.29,
+     "positional_avg_per_start": 8.59,
+     "above_avg_total": 46.96,
+     "above_avg_per_start": 4.7,
+     "pct_above_avg": 54.65,
+     "share_of_team_points": 14.86
     },
     {
      "team_id": "11",
@@ -3755,25 +3908,25 @@
      "starts": 6,
      "points": 77.9,
      "ppg": 12.98,
-     "positional_avg_per_start": 8.67,
-     "above_avg_total": 25.87,
-     "above_avg_per_start": 4.31,
-     "pct_above_avg": 49.72,
-     "share_of_team_points": 8.7
+     "positional_avg_per_start": 8.59,
+     "above_avg_total": 26.34,
+     "above_avg_per_start": 4.39,
+     "pct_above_avg": 51.08,
+     "share_of_team_points": 7.79
     },
     {
      "team_id": "12",
      "team": "The Pickups",
      "player": "Joe Burrow",
      "pos": "QB",
-     "starts": 8,
-     "points": 209.72,
-     "ppg": 26.21,
-     "positional_avg_per_start": 19.04,
-     "above_avg_total": 57.39,
-     "above_avg_per_start": 7.17,
-     "pct_above_avg": 37.68,
-     "share_of_team_points": 19.07
+     "starts": 9,
+     "points": 229.62,
+     "ppg": 25.51,
+     "positional_avg_per_start": 19.0,
+     "above_avg_total": 58.6,
+     "above_avg_per_start": 6.51,
+     "pct_above_avg": 34.26,
+     "share_of_team_points": 19.25
     }
    ],
    "keepers": [
@@ -3787,10 +3940,10 @@
        "cost_round": 7,
        "adp_round": 8,
        "season_points": 111.0,
-       "starts": 7,
-       "above_avg_per_start": 2.6,
-       "ros_per_week": 7.19,
-       "ros_pos_rank": "7 of 58"
+       "starts": 8,
+       "above_avg_per_start": 4.03,
+       "ros_per_week": 6.52,
+       "ros_pos_rank": "6 of 55"
       }
      ]
     },
@@ -3805,9 +3958,9 @@
        "adp_round": 8,
        "season_points": 59.5,
        "starts": 9,
-       "above_avg_per_start": -1.5,
-       "ros_per_week": 4.4,
-       "ros_pos_rank": "23 of 58"
+       "above_avg_per_start": -1.45,
+       "ros_per_week": 4.16,
+       "ros_pos_rank": "26 of 55"
       },
       {
        "player": "Brock Bowers",
@@ -3815,10 +3968,10 @@
        "cost_round": 6,
        "adp_round": 2,
        "season_points": 61.5,
-       "starts": 7,
-       "above_avg_per_start": 4.98,
-       "ros_per_week": 3.93,
-       "ros_pos_rank": "2 of 18"
+       "starts": 8,
+       "above_avg_per_start": 3.58,
+       "ros_per_week": 3.58,
+       "ros_pos_rank": "2 of 21"
       }
      ]
     },
@@ -3833,9 +3986,9 @@
        "adp_round": 5,
        "season_points": 138.46,
        "starts": 6,
-       "above_avg_per_start": -5.21,
-       "ros_per_week": 2.65,
-       "ros_pos_rank": "20 of 22"
+       "above_avg_per_start": -5.18,
+       "ros_per_week": 0.0,
+       "ros_pos_rank": "22 of 22"
       },
       {
        "player": "De'Von Achane",
@@ -3844,9 +3997,9 @@
        "adp_round": 2,
        "season_points": 17.6,
        "starts": 3,
-       "above_avg_per_start": -6.42,
+       "above_avg_per_start": -6.37,
        "ros_per_week": 0.0,
-       "ros_pos_rank": "54 of 58"
+       "ros_pos_rank": "53 of 55"
       }
      ]
     },
@@ -3861,9 +4014,9 @@
        "adp_round": null,
        "season_points": 41.7,
        "starts": 6,
-       "above_avg_per_start": 0.35,
+       "above_avg_per_start": 0.42,
        "ros_per_week": 2.46,
-       "ros_pos_rank": "9 of 18"
+       "ros_pos_rank": "8 of 21"
       },
       {
        "player": "Chase Brown",
@@ -3871,10 +4024,10 @@
        "cost_round": 5,
        "adp_round": 2,
        "season_points": 46.8,
-       "starts": 7,
-       "above_avg_per_start": -2.7,
-       "ros_per_week": 5.15,
-       "ros_pos_rank": "18 of 58"
+       "starts": 8,
+       "above_avg_per_start": -3.4,
+       "ros_per_week": 4.36,
+       "ros_pos_rank": "19 of 55"
       }
      ]
     },
@@ -3888,10 +4041,10 @@
        "cost_round": 2,
        "adp_round": 3,
        "season_points": 60.5,
-       "starts": 9,
-       "above_avg_per_start": 2.19,
-       "ros_per_week": 3.8,
-       "ros_pos_rank": "21 of 70"
+       "starts": 10,
+       "above_avg_per_start": 2.87,
+       "ros_per_week": 3.38,
+       "ros_pos_rank": "19 of 69"
       }
      ]
     },
@@ -3905,10 +4058,10 @@
        "cost_round": 5,
        "adp_round": 2,
        "season_points": 52.1,
-       "starts": 7,
-       "above_avg_per_start": 2.61,
-       "ros_per_week": 4.94,
-       "ros_pos_rank": "9 of 70"
+       "starts": 8,
+       "above_avg_per_start": 2.76,
+       "ros_per_week": 4.08,
+       "ros_pos_rank": "11 of 69"
       },
       {
        "player": "Rico Dowdle",
@@ -3916,10 +4069,10 @@
        "cost_round": 13,
        "adp_round": 7,
        "season_points": 20.0,
-       "starts": 2,
-       "above_avg_per_start": -9.04,
-       "ros_per_week": 3.3,
-       "ros_pos_rank": "34 of 58"
+       "starts": 3,
+       "above_avg_per_start": -8.94,
+       "ros_per_week": 2.68,
+       "ros_pos_rank": "38 of 55"
       }
      ]
     },
@@ -3933,10 +4086,10 @@
        "cost_round": 4,
        "adp_round": 3,
        "season_points": 25.0,
-       "starts": 6,
-       "above_avg_per_start": -2.32,
-       "ros_per_week": 3.57,
-       "ros_pos_rank": "26 of 70"
+       "starts": 7,
+       "above_avg_per_start": -2.39,
+       "ros_per_week": 2.78,
+       "ros_pos_rank": "35 of 69"
       },
       {
        "player": "Travis Etienne Jr.",
@@ -3945,9 +4098,9 @@
        "adp_round": null,
        "season_points": 19.9,
        "starts": 1,
-       "above_avg_per_start": -4.49,
-       "ros_per_week": 4.16,
-       "ros_pos_rank": "27 of 58"
+       "above_avg_per_start": -4.44,
+       "ros_per_week": 4.19,
+       "ros_pos_rank": "24 of 55"
       }
      ]
     },
@@ -3962,9 +4115,9 @@
        "adp_round": 4,
        "season_points": 59.4,
        "starts": 7,
-       "above_avg_per_start": -3.8,
-       "ros_per_week": 6.39,
-       "ros_pos_rank": "10 of 58"
+       "above_avg_per_start": -3.76,
+       "ros_per_week": 5.43,
+       "ros_pos_rank": "11 of 55"
       }
      ]
     },
@@ -3978,10 +4131,10 @@
        "cost_round": 9,
        "adp_round": 7,
        "season_points": 128.14,
-       "starts": 4,
-       "above_avg_per_start": 0.11,
-       "ros_per_week": 7.48,
-       "ros_pos_rank": "11 of 22"
+       "starts": 5,
+       "above_avg_per_start": 3.5,
+       "ros_per_week": 6.3,
+       "ros_pos_rank": "15 of 22"
       },
       {
        "player": "Jaxon Smith-Njigba",
@@ -3990,9 +4143,9 @@
        "adp_round": 1,
        "season_points": 138.16,
        "starts": 10,
-       "above_avg_per_start": 9.74,
-       "ros_per_week": 5.72,
-       "ros_pos_rank": "3 of 70"
+       "above_avg_per_start": 9.82,
+       "ros_per_week": 5.66,
+       "ros_pos_rank": "2 of 69"
       }
      ]
     },
@@ -4007,9 +4160,9 @@
        "adp_round": null,
        "season_points": 43.1,
        "starts": 10,
-       "above_avg_per_start": -1.86,
-       "ros_per_week": 2.11,
-       "ros_pos_rank": "13 of 18"
+       "above_avg_per_start": -1.8,
+       "ros_per_week": 2.15,
+       "ros_pos_rank": "11 of 21"
       },
       {
        "player": "Alec Pierce",
@@ -4018,9 +4171,9 @@
        "adp_round": 8,
        "season_points": 7.2,
        "starts": 1,
-       "above_avg_per_start": -7.57,
+       "above_avg_per_start": -7.49,
        "ros_per_week": 0.0,
-       "ros_pos_rank": "69 of 70"
+       "ros_pos_rank": "68 of 69"
       }
      ]
     },
@@ -4034,10 +4187,10 @@
        "cost_round": 6,
        "adp_round": 3,
        "season_points": 111.5,
-       "starts": 9,
-       "above_avg_per_start": 0.6,
-       "ros_per_week": 5.74,
-       "ros_pos_rank": "15 of 58"
+       "starts": 10,
+       "above_avg_per_start": 1.47,
+       "ros_per_week": 4.49,
+       "ros_pos_rank": "16 of 55"
       },
       {
        "player": "Colston Loveland",
@@ -4045,10 +4198,10 @@
        "cost_round": 9,
        "adp_round": 4,
        "season_points": 36.4,
-       "starts": 9,
-       "above_avg_per_start": -1.62,
-       "ros_per_week": 3.42,
-       "ros_pos_rank": "5 of 18"
+       "starts": 10,
+       "above_avg_per_start": -1.18,
+       "ros_per_week": 2.47,
+       "ros_pos_rank": "7 of 21"
       }
      ]
     },
@@ -4062,10 +4215,10 @@
        "cost_round": 8,
        "adp_round": 5,
        "season_points": 91.6,
-       "starts": 9,
-       "above_avg_per_start": 2.95,
-       "ros_per_week": 7.34,
-       "ros_pos_rank": "5 of 58"
+       "starts": 10,
+       "above_avg_per_start": 3.07,
+       "ros_per_week": 7.12,
+       "ros_pos_rank": "3 of 55"
       },
       {
        "player": "Luther Burden III",
@@ -4073,10 +4226,10 @@
        "cost_round": 11,
        "adp_round": null,
        "season_points": 62.0,
-       "starts": 8,
-       "above_avg_per_start": 0.64,
-       "ros_per_week": 4.21,
-       "ros_pos_rank": "12 of 70"
+       "starts": 9,
+       "above_avg_per_start": -0.17,
+       "ros_per_week": 3.18,
+       "ros_pos_rank": "26 of 69"
       }
      ]
     }
@@ -4095,27 +4248,7 @@
     {
      "team_id": "3",
      "team": "Burrito",
-     "trade": {
-      "give": [
-       "Luther Burden III",
-       "Bryce Young"
-      ],
-      "get": [
-       "Drake Maye",
-       "DJ Moore"
-      ],
-      "give_pos": [
-       "WR",
-       "QB"
-      ],
-      "get_pos": [
-       "QB",
-       "WR"
-      ],
-      "my_gain_per_week": 0.31,
-      "their_gain_per_week": 1.09,
-      "kind": "win-win"
-     }
+     "trade": null
     },
     {
      "team_id": "4",
@@ -4130,27 +4263,7 @@
     {
      "team_id": "6",
      "team": "Matty Dawg Pound",
-     "trade": {
-      "give": [
-       "Malik Nabers",
-       "Bryce Young"
-      ],
-      "get": [
-       "Deshaun Watson",
-       "Nico Collins"
-      ],
-      "give_pos": [
-       "WR",
-       "QB"
-      ],
-      "get_pos": [
-       "QB",
-       "WR"
-      ],
-      "my_gain_per_week": 0.24,
-      "their_gain_per_week": 0.17,
-      "kind": "win-win"
-     }
+     "trade": null
     },
     {
      "team_id": "7",
@@ -4489,7 +4602,7 @@
         "result": "won",
         "starts": 4,
         "points": 26.5,
-        "above_pos_avg": -8.19,
+        "above_pos_avg": -7.87,
         "points_per_dollar": 0.88
        },
        {
@@ -4500,7 +4613,7 @@
         "result": "won",
         "starts": 3,
         "points": 23.3,
-        "above_pos_avg": -2.72,
+        "above_pos_avg": -2.48,
         "points_per_dollar": 1.17
        }
       ]
@@ -4532,10 +4645,10 @@
         "bid": 10,
         "week": 4,
         "result": "won",
-        "starts": 4,
-        "points": 41.1,
-        "above_pos_avg": -8.04,
-        "points_per_dollar": 4.11
+        "starts": 5,
+        "points": 47.8,
+        "above_pos_avg": -13.4,
+        "points_per_dollar": 4.78
        }
       ]
      },
@@ -4555,10 +4668,10 @@
         "bid": 15,
         "week": 7,
         "result": "won",
-        "starts": 4,
-        "points": 35.0,
-        "above_pos_avg": -0.7,
-        "points_per_dollar": 2.33
+        "starts": 5,
+        "points": 40.0,
+        "above_pos_avg": -4.62,
+        "points_per_dollar": 2.67
        }
       ]
      },
@@ -4580,7 +4693,7 @@
         "result": "won",
         "starts": 6,
         "points": 34.0,
-        "above_pos_avg": -6.65,
+        "above_pos_avg": -6.82,
         "points_per_dollar": 2.12
        },
        {
@@ -4678,74 +4791,75 @@
     7,
     8,
     9,
-    10
+    10,
+    11
    ],
    "positions": {
     "QB": {
-     "league_avg_per_week": 20.24,
+     "league_avg_per_week": 20.27,
      "teams": [
       {
        "team_id": "2",
        "team": "Monkey Business",
        "rank": 1,
-       "avg_per_week": 25.88,
-       "vs_league": 5.64,
+       "avg_per_week": 25.34,
+       "vs_league": 5.07,
        "weeks_leading": 3
       },
       {
        "team_id": "4",
        "team": "Hannah Lee's Revenge",
        "rank": 2,
-       "avg_per_week": 24.8,
-       "vs_league": 4.56,
+       "avg_per_week": 23.83,
+       "vs_league": 3.57,
        "weeks_leading": 2
+      },
+      {
+       "team_id": "5",
+       "team": "Ya Boi",
+       "rank": 3,
+       "avg_per_week": 20.49,
+       "vs_league": 0.22,
+       "weeks_leading": 3
       },
       {
        "team_id": "1",
        "team": "MakeMyTeamGreatAgain",
-       "rank": 3,
-       "avg_per_week": 19.99,
-       "vs_league": -0.25,
+       "rank": 4,
+       "avg_per_week": 20.19,
+       "vs_league": -0.07,
        "weeks_leading": 1
       },
       {
        "team_id": "6",
        "team": "Kevin Jack's Team",
-       "rank": 4,
-       "avg_per_week": 19.22,
-       "vs_league": -1.02,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "5",
-       "team": "Ya Boi",
        "rank": 5,
-       "avg_per_week": 18.95,
-       "vs_league": -1.29,
-       "weeks_leading": 2
+       "avg_per_week": 18.87,
+       "vs_league": -1.4,
+       "weeks_leading": 1
       },
       {
        "team_id": "8",
        "team": "Ryan's Pierced Pigskin Posse",
        "rank": 6,
-       "avg_per_week": 18.24,
-       "vs_league": -2.0,
+       "avg_per_week": 18.85,
+       "vs_league": -1.42,
        "weeks_leading": 1
       },
       {
        "team_id": "3",
        "team": "Fogle\u2019s Moguls",
        "rank": 7,
-       "avg_per_week": 17.49,
-       "vs_league": -2.75,
+       "avg_per_week": 17.45,
+       "vs_league": -2.81,
        "weeks_leading": 0
       },
       {
        "team_id": "7",
        "team": "Michael Scott's Team",
        "rank": 8,
-       "avg_per_week": 17.34,
-       "vs_league": -2.9,
+       "avg_per_week": 17.1,
+       "vs_league": -3.16,
        "weeks_leading": 0
       }
      ],
@@ -4859,74 +4973,85 @@
         "team": "Kevin Jack's Team",
         "pts": 8.1
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Ya Boi",
+        "pts": 35.9
+       },
+       "worst": {
+        "team": "Hannah Lee's Revenge",
+        "pts": 14.16
+       }
       }
      ]
     },
     "RB": {
-     "league_avg_per_week": 40.7,
+     "league_avg_per_week": 40.27,
      "teams": [
       {
        "team_id": "4",
        "team": "Hannah Lee's Revenge",
        "rank": 1,
-       "avg_per_week": 54.89,
-       "vs_league": 14.19,
+       "avg_per_week": 54.92,
+       "vs_league": 14.65,
        "weeks_leading": 3
       },
       {
        "team_id": "6",
        "team": "Kevin Jack's Team",
        "rank": 2,
-       "avg_per_week": 51.05,
-       "vs_league": 10.35,
-       "weeks_leading": 2
-      },
-      {
-       "team_id": "2",
-       "team": "Monkey Business",
-       "rank": 3,
-       "avg_per_week": 42.2,
-       "vs_league": 1.5,
-       "weeks_leading": 1
-      },
-      {
-       "team_id": "1",
-       "team": "MakeMyTeamGreatAgain",
-       "rank": 4,
-       "avg_per_week": 41.69,
-       "vs_league": 0.99,
+       "avg_per_week": 49.51,
+       "vs_league": 9.24,
        "weeks_leading": 2
       },
       {
        "team_id": "3",
        "team": "Fogle\u2019s Moguls",
+       "rank": 3,
+       "avg_per_week": 42.73,
+       "vs_league": 2.46,
+       "weeks_leading": 3
+      },
+      {
+       "team_id": "2",
+       "team": "Monkey Business",
+       "rank": 4,
+       "avg_per_week": 41.98,
+       "vs_league": 1.71,
+       "weeks_leading": 1
+      },
+      {
+       "team_id": "1",
+       "team": "MakeMyTeamGreatAgain",
        "rank": 5,
-       "avg_per_week": 40.95,
-       "vs_league": 0.25,
+       "avg_per_week": 40.14,
+       "vs_league": -0.12,
        "weeks_leading": 2
       },
       {
        "team_id": "7",
        "team": "Michael Scott's Team",
        "rank": 6,
-       "avg_per_week": 33.76,
-       "vs_league": -6.94,
+       "avg_per_week": 34.96,
+       "vs_league": -5.3,
        "weeks_leading": 0
       },
       {
        "team_id": "5",
        "team": "Ya Boi",
        "rank": 7,
-       "avg_per_week": 33.54,
-       "vs_league": -7.16,
+       "avg_per_week": 32.22,
+       "vs_league": -8.05,
        "weeks_leading": 0
       },
       {
        "team_id": "8",
        "team": "Ryan's Pierced Pigskin Posse",
        "rank": 8,
-       "avg_per_week": 27.54,
-       "vs_league": -13.16,
+       "avg_per_week": 25.68,
+       "vs_league": -14.59,
        "weeks_leading": 0
       }
      ],
@@ -5040,74 +5165,85 @@
         "team": "Kevin Jack's Team",
         "pts": 23.2
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Fogle\u2019s Moguls",
+        "pts": 60.5
+       },
+       "worst": {
+        "team": "Ryan's Pierced Pigskin Posse",
+        "pts": 7.1
+       }
       }
      ]
     },
     "WR": {
-     "league_avg_per_week": 28.42,
+     "league_avg_per_week": 28.28,
      "teams": [
       {
        "team_id": "8",
        "team": "Ryan's Pierced Pigskin Posse",
        "rank": 1,
-       "avg_per_week": 42.3,
-       "vs_league": 13.88,
-       "weeks_leading": 3
+       "avg_per_week": 43.64,
+       "vs_league": 15.35,
+       "weeks_leading": 4
       },
       {
        "team_id": "2",
        "team": "Monkey Business",
        "rank": 2,
-       "avg_per_week": 34.51,
-       "vs_league": 6.09,
+       "avg_per_week": 35.25,
+       "vs_league": 6.96,
        "weeks_leading": 3
       },
       {
        "team_id": "7",
        "team": "Michael Scott's Team",
        "rank": 3,
-       "avg_per_week": 34.32,
-       "vs_league": 5.9,
+       "avg_per_week": 33.75,
+       "vs_league": 5.47,
        "weeks_leading": 3
       },
       {
        "team_id": "3",
        "team": "Fogle\u2019s Moguls",
        "rank": 4,
-       "avg_per_week": 25.64,
-       "vs_league": -2.78,
+       "avg_per_week": 25.61,
+       "vs_league": -2.68,
        "weeks_leading": 0
       },
       {
        "team_id": "5",
        "team": "Ya Boi",
        "rank": 5,
-       "avg_per_week": 25.47,
-       "vs_league": -2.95,
+       "avg_per_week": 25.3,
+       "vs_league": -2.98,
        "weeks_leading": 1
       },
       {
        "team_id": "4",
        "team": "Hannah Lee's Revenge",
        "rank": 6,
-       "avg_per_week": 24.2,
-       "vs_league": -4.22,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "6",
-       "team": "Kevin Jack's Team",
-       "rank": 7,
-       "avg_per_week": 20.79,
-       "vs_league": -7.63,
+       "avg_per_week": 22.84,
+       "vs_league": -5.45,
        "weeks_leading": 0
       },
       {
        "team_id": "1",
        "team": "MakeMyTeamGreatAgain",
+       "rank": 7,
+       "avg_per_week": 20.28,
+       "vs_league": -8.0,
+       "weeks_leading": 0
+      },
+      {
+       "team_id": "6",
+       "team": "Kevin Jack's Team",
        "rank": 8,
-       "avg_per_week": 20.14,
-       "vs_league": -8.28,
+       "avg_per_week": 19.61,
+       "vs_league": -8.67,
        "weeks_leading": 0
       }
      ],
@@ -5221,74 +5357,85 @@
         "team": "Hannah Lee's Revenge",
         "pts": 11.9
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Ryan's Pierced Pigskin Posse",
+        "pts": 57.0
+       },
+       "worst": {
+        "team": "Kevin Jack's Team",
+        "pts": 7.8
+       }
       }
      ]
     },
     "TE": {
-     "league_avg_per_week": 7.44,
+     "league_avg_per_week": 7.22,
      "teams": [
       {
        "team_id": "3",
        "team": "Fogle\u2019s Moguls",
        "rank": 1,
-       "avg_per_week": 12.19,
-       "vs_league": 4.76,
+       "avg_per_week": 11.08,
+       "vs_league": 3.86,
        "weeks_leading": 6
       },
       {
        "team_id": "5",
        "team": "Ya Boi",
        "rank": 2,
-       "avg_per_week": 11.14,
-       "vs_league": 3.71,
+       "avg_per_week": 10.65,
+       "vs_league": 3.44,
        "weeks_leading": 1
       },
       {
        "team_id": "8",
        "team": "Ryan's Pierced Pigskin Posse",
        "rank": 3,
-       "avg_per_week": 8.56,
-       "vs_league": 1.12,
-       "weeks_leading": 1
+       "avg_per_week": 9.18,
+       "vs_league": 1.96,
+       "weeks_leading": 2
       },
       {
        "team_id": "2",
        "team": "Monkey Business",
        "rank": 4,
-       "avg_per_week": 7.64,
-       "vs_league": 0.2,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "7",
-       "team": "Michael Scott's Team",
-       "rank": 5,
-       "avg_per_week": 5.63,
-       "vs_league": -1.81,
+       "avg_per_week": 7.55,
+       "vs_league": 0.33,
        "weeks_leading": 0
       },
       {
        "team_id": "6",
        "team": "Kevin Jack's Team",
-       "rank": 6,
-       "avg_per_week": 5.43,
-       "vs_league": -2.01,
+       "rank": 5,
+       "avg_per_week": 5.25,
+       "vs_league": -1.96,
        "weeks_leading": 1
+      },
+      {
+       "team_id": "7",
+       "team": "Michael Scott's Team",
+       "rank": 6,
+       "avg_per_week": 5.25,
+       "vs_league": -1.97,
+       "weeks_leading": 0
       },
       {
        "team_id": "1",
        "team": "MakeMyTeamGreatAgain",
        "rank": 7,
-       "avg_per_week": 4.83,
-       "vs_league": -2.61,
+       "avg_per_week": 4.59,
+       "vs_league": -2.63,
        "weeks_leading": 0
       },
       {
        "team_id": "4",
        "team": "Hannah Lee's Revenge",
        "rank": 8,
-       "avg_per_week": 4.06,
-       "vs_league": -3.38,
+       "avg_per_week": 4.19,
+       "vs_league": -3.03,
        "weeks_leading": 1
       }
      ],
@@ -5402,6 +5549,17 @@
         "team": "MakeMyTeamGreatAgain",
         "pts": 0.4
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Ryan's Pierced Pigskin Posse",
+        "pts": 15.4
+       },
+       "worst": {
+        "team": "Fogle\u2019s Moguls",
+        "pts": 0.0
+       }
       }
      ]
     },
@@ -5414,7 +5572,7 @@
        "rank": 1,
        "avg_per_week": 0.0,
        "vs_league": 0.0,
-       "weeks_leading": 10
+       "weeks_leading": 11
       },
       {
        "team_id": "2",
@@ -5583,75 +5741,86 @@
         "team": "MakeMyTeamGreatAgain",
         "pts": 0.0
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "MakeMyTeamGreatAgain",
+        "pts": 0.0
+       },
+       "worst": {
+        "team": "MakeMyTeamGreatAgain",
+        "pts": 0.0
+       }
       }
      ]
     },
     "DEF": {
-     "league_avg_per_week": 9.6,
+     "league_avg_per_week": 9.65,
      "teams": [
       {
        "team_id": "3",
        "team": "Fogle\u2019s Moguls",
        "rank": 1,
-       "avg_per_week": 12.4,
-       "vs_league": 2.8,
+       "avg_per_week": 12.73,
+       "vs_league": 3.08,
        "weeks_leading": 2
       },
       {
        "team_id": "2",
        "team": "Monkey Business",
        "rank": 2,
-       "avg_per_week": 11.3,
-       "vs_league": 1.7,
+       "avg_per_week": 11.64,
+       "vs_league": 1.99,
        "weeks_leading": 3
-      },
-      {
-       "team_id": "7",
-       "team": "Michael Scott's Team",
-       "rank": 3,
-       "avg_per_week": 10.0,
-       "vs_league": 0.4,
-       "weeks_leading": 1
       },
       {
        "team_id": "6",
        "team": "Kevin Jack's Team",
+       "rank": 3,
+       "avg_per_week": 10.36,
+       "vs_league": 0.72,
+       "weeks_leading": 2
+      },
+      {
+       "team_id": "7",
+       "team": "Michael Scott's Team",
        "rank": 4,
-       "avg_per_week": 9.7,
-       "vs_league": 0.1,
+       "avg_per_week": 9.55,
+       "vs_league": -0.1,
        "weeks_leading": 1
       },
       {
        "team_id": "8",
        "team": "Ryan's Pierced Pigskin Posse",
        "rank": 5,
-       "avg_per_week": 8.7,
-       "vs_league": -0.9,
-       "weeks_leading": 0
-      },
-      {
-       "team_id": "4",
-       "team": "Hannah Lee's Revenge",
-       "rank": 6,
-       "avg_per_week": 8.5,
-       "vs_league": -1.1,
+       "avg_per_week": 8.45,
+       "vs_league": -1.19,
        "weeks_leading": 0
       },
       {
        "team_id": "5",
        "team": "Ya Boi",
-       "rank": 7,
-       "avg_per_week": 8.3,
-       "vs_league": -1.3,
+       "rank": 6,
+       "avg_per_week": 8.36,
+       "vs_league": -1.28,
        "weeks_leading": 2
       },
       {
        "team_id": "1",
        "team": "MakeMyTeamGreatAgain",
-       "rank": 8,
-       "avg_per_week": 7.9,
-       "vs_league": -1.7,
+       "rank": 7,
+       "avg_per_week": 8.09,
+       "vs_league": -1.56,
        "weeks_leading": 1
+      },
+      {
+       "team_id": "4",
+       "team": "Hannah Lee's Revenge",
+       "rank": 8,
+       "avg_per_week": 8.0,
+       "vs_league": -1.65,
+       "weeks_leading": 0
       }
      ],
      "weekly": [
@@ -5764,6 +5933,17 @@
         "team": "MakeMyTeamGreatAgain",
         "pts": 5.0
        }
+      },
+      {
+       "week": 11,
+       "best": {
+        "team": "Kevin Jack's Team",
+        "pts": 17.0
+       },
+       "worst": {
+        "team": "Hannah Lee's Revenge",
+        "pts": 3.0
+       }
       }
      ]
     }
@@ -5772,10 +5952,10 @@
     {
      "team_id": "2",
      "team": "Monkey Business",
-     "games": 10,
-     "avg_diff": 14.71,
-     "stdev": 22.14,
-     "weeks_over": 7,
+     "games": 11,
+     "avg_diff": 14.07,
+     "stdev": 21.21,
+     "weeks_over": 8,
      "weeks_under": 3,
      "best_week": {
       "week": 8,
@@ -5849,16 +6029,22 @@
        "actual": 149.06,
        "projected": 111.0,
        "diff": 38.06
+      },
+      {
+       "week": 11,
+       "actual": 123.9,
+       "projected": 116.27,
+       "diff": 7.63
       }
      ]
     },
     {
      "team_id": "8",
      "team": "Ryan's Pierced Pigskin Posse",
-     "games": 10,
-     "avg_diff": 8.06,
-     "stdev": 19.81,
-     "weeks_over": 5,
+     "games": 11,
+     "avg_diff": 7.86,
+     "stdev": 18.9,
+     "weeks_over": 6,
      "weeks_under": 5,
      "best_week": {
       "week": 4,
@@ -5932,17 +6118,23 @@
        "actual": 135.04,
        "projected": 95.37,
        "diff": 39.67
+      },
+      {
+       "week": 11,
+       "actual": 110.46,
+       "projected": 104.54,
+       "diff": 5.92
       }
      ]
     },
     {
      "team_id": "4",
      "team": "Hannah Lee's Revenge",
-     "games": 10,
-     "avg_diff": 4.24,
-     "stdev": 27.06,
+     "games": 11,
+     "avg_diff": 1.41,
+     "stdev": 27.31,
      "weeks_over": 6,
-     "weeks_under": 4,
+     "weeks_under": 5,
      "best_week": {
       "week": 1,
       "actual": 150.86,
@@ -6015,17 +6207,23 @@
        "actual": 139.94,
        "projected": 113.85,
        "diff": 26.09
+      },
+      {
+       "week": 11,
+       "actual": 87.06,
+       "projected": 113.92,
+       "diff": -26.86
       }
      ]
     },
     {
      "team_id": "5",
      "team": "Ya Boi",
-     "games": 10,
-     "avg_diff": 1.05,
-     "stdev": 18.39,
+     "games": 11,
+     "avg_diff": -0.26,
+     "stdev": 18.01,
      "weeks_over": 4,
-     "weeks_under": 6,
+     "weeks_under": 7,
      "best_week": {
       "week": 10,
       "actual": 132.52,
@@ -6098,17 +6296,23 @@
        "actual": 132.52,
        "projected": 97.33,
        "diff": 35.19
+      },
+      {
+       "week": 11,
+       "actual": 93.3,
+       "projected": 106.66,
+       "diff": -13.36
       }
      ]
     },
     {
      "team_id": "6",
      "team": "Kevin Jack's Team",
-     "games": 10,
-     "avg_diff": 0.38,
-     "stdev": 17.16,
+     "games": 11,
+     "avg_diff": -2.9,
+     "stdev": 19.37,
      "weeks_over": 6,
-     "weeks_under": 4,
+     "weeks_under": 5,
      "best_week": {
       "week": 8,
       "actual": 134.98,
@@ -6181,99 +6385,22 @@
        "actual": 108.3,
        "projected": 105.27,
        "diff": 3.03
-      }
-     ]
-    },
-    {
-     "team_id": "7",
-     "team": "Michael Scott's Team",
-     "games": 10,
-     "avg_diff": -5.11,
-     "stdev": 17.41,
-     "weeks_over": 4,
-     "weeks_under": 6,
-     "best_week": {
-      "week": 7,
-      "actual": 127.62,
-      "projected": 112.37,
-      "diff": 15.25
-     },
-     "worst_week": {
-      "week": 2,
-      "actual": 68.02,
-      "projected": 108.09,
-      "diff": -40.07
-     },
-     "weekly": [
-      {
-       "week": 1,
-       "actual": 117.92,
-       "projected": 109.13,
-       "diff": 8.79
       },
       {
-       "week": 2,
-       "actual": 68.02,
-       "projected": 108.09,
-       "diff": -40.07
-      },
-      {
-       "week": 3,
-       "actual": 99.34,
-       "projected": 103.56,
-       "diff": -4.22
-      },
-      {
-       "week": 4,
-       "actual": 96.48,
-       "projected": 105.19,
-       "diff": -8.71
-      },
-      {
-       "week": 5,
-       "actual": 113.02,
-       "projected": 106.27,
-       "diff": 6.75
-      },
-      {
-       "week": 6,
-       "actual": 100.08,
-       "projected": 103.54,
-       "diff": -3.46
-      },
-      {
-       "week": 7,
-       "actual": 127.62,
-       "projected": 112.37,
-       "diff": 15.25
-      },
-      {
-       "week": 8,
-       "actual": 115.8,
-       "projected": 102.25,
-       "diff": 13.55
-      },
-      {
-       "week": 9,
-       "actual": 74.9,
-       "projected": 106.23,
-       "diff": -31.33
-      },
-      {
-       "week": 10,
-       "actual": 97.28,
-       "projected": 104.96,
-       "diff": -7.68
+       "week": 11,
+       "actual": 77.74,
+       "projected": 113.43,
+       "diff": -35.69
       }
      ]
     },
     {
      "team_id": "3",
      "team": "Fogle\u2019s Moguls",
-     "games": 10,
-     "avg_diff": -5.45,
-     "stdev": 25.18,
-     "weeks_over": 4,
+     "games": 11,
+     "avg_diff": -4.05,
+     "stdev": 24.42,
+     "weeks_over": 5,
      "weeks_under": 6,
      "best_week": {
       "week": 4,
@@ -6347,17 +6474,112 @@
        "actual": 117.56,
        "projected": 116.44,
        "diff": 1.12
+      },
+      {
+       "week": 11,
+       "actual": 118.86,
+       "projected": 108.95,
+       "diff": 9.91
+      }
+     ]
+    },
+    {
+     "team_id": "7",
+     "team": "Michael Scott's Team",
+     "games": 11,
+     "avg_diff": -5.18,
+     "stdev": 16.6,
+     "weeks_over": 4,
+     "weeks_under": 7,
+     "best_week": {
+      "week": 7,
+      "actual": 127.62,
+      "projected": 112.37,
+      "diff": 15.25
+     },
+     "worst_week": {
+      "week": 2,
+      "actual": 68.02,
+      "projected": 108.09,
+      "diff": -40.07
+     },
+     "weekly": [
+      {
+       "week": 1,
+       "actual": 117.92,
+       "projected": 109.13,
+       "diff": 8.79
+      },
+      {
+       "week": 2,
+       "actual": 68.02,
+       "projected": 108.09,
+       "diff": -40.07
+      },
+      {
+       "week": 3,
+       "actual": 99.34,
+       "projected": 103.56,
+       "diff": -4.22
+      },
+      {
+       "week": 4,
+       "actual": 96.48,
+       "projected": 105.19,
+       "diff": -8.71
+      },
+      {
+       "week": 5,
+       "actual": 113.02,
+       "projected": 106.27,
+       "diff": 6.75
+      },
+      {
+       "week": 6,
+       "actual": 100.08,
+       "projected": 103.54,
+       "diff": -3.46
+      },
+      {
+       "week": 7,
+       "actual": 127.62,
+       "projected": 112.37,
+       "diff": 15.25
+      },
+      {
+       "week": 8,
+       "actual": 115.8,
+       "projected": 102.25,
+       "diff": 13.55
+      },
+      {
+       "week": 9,
+       "actual": 74.9,
+       "projected": 106.23,
+       "diff": -31.33
+      },
+      {
+       "week": 10,
+       "actual": 97.28,
+       "projected": 104.96,
+       "diff": -7.68
+      },
+      {
+       "week": 11,
+       "actual": 96.24,
+       "projected": 102.09,
+       "diff": -5.85
       }
      ]
     },
     {
      "team_id": "1",
      "team": "MakeMyTeamGreatAgain",
-     "games": 10,
-     "avg_diff": -9.82,
-     "stdev": 14.54,
+     "games": 11,
+     "avg_diff": -9.89,
+     "stdev": 13.86,
      "weeks_over": 2,
-     "weeks_under": 8,
+     "weeks_under": 9,
      "best_week": {
       "week": 1,
       "actual": 117.16,
@@ -6430,6 +6652,12 @@
        "actual": 97.26,
        "projected": 112.3,
        "diff": -15.04
+      },
+      {
+       "week": 11,
+       "actual": 80.8,
+       "projected": 91.42,
+       "diff": -10.62
       }
      ]
     }
@@ -6439,9 +6667,9 @@
      {
       "team_id": "6",
       "team": "Kevin Jack's Team",
-      "weeks": 10,
-      "total_points_left": 167.7,
-      "avg_per_week": 16.77,
+      "weeks": 11,
+      "total_points_left": 179.52,
+      "avg_per_week": 16.32,
       "weeks_15_plus_left": 6,
       "efficiency": 0.864,
       "avoidable_losses": [
@@ -6479,17 +6707,52 @@
         "opp": 117.56,
         "optimal": 124.5,
         "opp_team": "Fogle\u2019s Moguls"
+       },
+       {
+        "week": 11,
+        "scored": 77.74,
+        "opp": 87.06,
+        "optimal": 89.56,
+        "opp_team": "Hannah Lee's Revenge"
+       }
+      ]
+     },
+     {
+      "team_id": "2",
+      "team": "Monkey Business",
+      "weeks": 11,
+      "total_points_left": 169.4,
+      "avg_per_week": 15.4,
+      "weeks_15_plus_left": 6,
+      "efficiency": 0.888,
+      "avoidable_losses": []
+     },
+     {
+      "team_id": "7",
+      "team": "Michael Scott's Team",
+      "weeks": 11,
+      "total_points_left": 156.92,
+      "avg_per_week": 14.27,
+      "weeks_15_plus_left": 4,
+      "efficiency": 0.876,
+      "avoidable_losses": [
+       {
+        "week": 2,
+        "scored": 68.02,
+        "opp": 79.18,
+        "optimal": 85.02,
+        "opp_team": "Monkey Business"
        }
       ]
      },
      {
       "team_id": "1",
       "team": "MakeMyTeamGreatAgain",
-      "weeks": 10,
+      "weeks": 11,
       "total_points_left": 153.64,
-      "avg_per_week": 15.36,
+      "avg_per_week": 13.97,
       "weeks_15_plus_left": 4,
-      "efficiency": 0.86,
+      "efficiency": 0.87,
       "avoidable_losses": [
        {
         "week": 5,
@@ -6510,11 +6773,11 @@
      {
       "team_id": "3",
       "team": "Fogle\u2019s Moguls",
-      "weeks": 10,
+      "weeks": 11,
       "total_points_left": 153.4,
-      "avg_per_week": 15.34,
+      "avg_per_week": 13.95,
       "weeks_15_plus_left": 5,
-      "efficiency": 0.876,
+      "efficiency": 0.887,
       "avoidable_losses": [
        {
         "week": 6,
@@ -6526,51 +6789,23 @@
       ]
      },
      {
-      "team_id": "2",
-      "team": "Monkey Business",
-      "weeks": 10,
-      "total_points_left": 151.9,
-      "avg_per_week": 15.19,
-      "weeks_15_plus_left": 5,
-      "efficiency": 0.889,
-      "avoidable_losses": []
-     },
-     {
-      "team_id": "7",
-      "team": "Michael Scott's Team",
-      "weeks": 10,
-      "total_points_left": 150.62,
-      "avg_per_week": 15.06,
-      "weeks_15_plus_left": 4,
-      "efficiency": 0.87,
-      "avoidable_losses": [
-       {
-        "week": 2,
-        "scored": 68.02,
-        "opp": 79.18,
-        "optimal": 85.02,
-        "opp_team": "Monkey Business"
-       }
-      ]
-     },
-     {
       "team_id": "8",
       "team": "Ryan's Pierced Pigskin Posse",
-      "weeks": 10,
-      "total_points_left": 144.04,
-      "avg_per_week": 14.4,
+      "weeks": 11,
+      "total_points_left": 150.54,
+      "avg_per_week": 13.69,
       "weeks_15_plus_left": 6,
-      "efficiency": 0.88,
+      "efficiency": 0.885,
       "avoidable_losses": []
      },
      {
       "team_id": "4",
       "team": "Hannah Lee's Revenge",
-      "weeks": 10,
-      "total_points_left": 137.18,
-      "avg_per_week": 13.72,
+      "weeks": 11,
+      "total_points_left": 138.88,
+      "avg_per_week": 12.63,
       "weeks_15_plus_left": 5,
-      "efficiency": 0.895,
+      "efficiency": 0.9,
       "avoidable_losses": [
        {
         "week": 4,
@@ -6584,11 +6819,11 @@
      {
       "team_id": "5",
       "team": "Ya Boi",
-      "weeks": 10,
-      "total_points_left": 102.1,
-      "avg_per_week": 10.21,
-      "weeks_15_plus_left": 2,
-      "efficiency": 0.905,
+      "weeks": 11,
+      "total_points_left": 132.6,
+      "avg_per_week": 12.05,
+      "weeks_15_plus_left": 3,
+      "efficiency": 0.889,
       "avoidable_losses": [
        {
         "week": 3,
@@ -6665,6 +6900,15 @@
       "gain": 19.5
      },
      {
+      "team": "Ya Boi",
+      "week": 11,
+      "bench": "Travis Kelce",
+      "bench_pts": 19.4,
+      "starter": "Jordyn Tyson",
+      "starter_pts": 1.0,
+      "gain": 18.4
+     },
+     {
       "team": "Ryan's Pierced Pigskin Posse",
       "week": 5,
       "bench": "George Pickens",
@@ -6726,25 +6970,16 @@
       "starter": "Tetairoa McMillan",
       "starter_pts": 1.7,
       "gain": 14.6
-     },
-     {
-      "team": "Ya Boi",
-      "week": 4,
-      "bench": "Ollie Gordon II",
-      "bench_pts": 16.0,
-      "starter": "Travis Kelce",
-      "starter_pts": 1.5,
-      "gain": 14.5
      }
     ]
    },
    "players": {
     "positional_average_per_start": {
-     "QB": 20.24,
-     "RB": 12.97,
-     "WR": 10.11,
-     "TE": 7.08,
-     "DEF": 9.6
+     "QB": 20.26,
+     "RB": 12.93,
+     "WR": 9.96,
+     "TE": 6.9,
+     "DEF": 9.65
     },
     "team_mvps": [
      {
@@ -6753,12 +6988,12 @@
       "mvp": {
        "team_id": "1",
        "team": "MakeMyTeamGreatAgain",
-       "player": "Matthew Golden",
-       "pos": "WR",
-       "starts": 8,
-       "points": 99.7,
-       "above_pos_avg": 18.86,
-       "ppg": 12.46
+       "player": "Brock Purdy",
+       "pos": "QB",
+       "starts": 7,
+       "points": 162.42,
+       "above_pos_avg": 20.57,
+       "ppg": 23.2
       },
       "weakest_link": {
        "team_id": "1",
@@ -6767,7 +7002,7 @@
        "pos": "RB",
        "starts": 8,
        "points": 78.4,
-       "above_pos_avg": -25.38,
+       "above_pos_avg": -25.06,
        "ppg": 9.8
       }
      },
@@ -6779,9 +7014,9 @@
        "team": "Monkey Business",
        "player": "Jahmyr Gibbs",
        "pos": "RB",
-       "starts": 9,
-       "points": 214.4,
-       "above_pos_avg": 97.64,
+       "starts": 10,
+       "points": 238.2,
+       "above_pos_avg": 108.87,
        "ppg": 23.82
       },
       "weakest_link": {
@@ -6791,7 +7026,7 @@
        "pos": "RB",
        "starts": 10,
        "points": 103.7,
-       "above_pos_avg": -26.03,
+       "above_pos_avg": -25.63,
        "ppg": 10.37
       }
      },
@@ -6805,7 +7040,7 @@
        "pos": "TE",
        "starts": 8,
        "points": 101.8,
-       "above_pos_avg": 45.15,
+       "above_pos_avg": 46.57,
        "ppg": 12.72
       },
       "weakest_link": {
@@ -6813,10 +7048,10 @@
        "team": "Fogle\u2019s Moguls",
        "player": "Chase Brown",
        "pos": "RB",
-       "starts": 9,
-       "points": 84.7,
-       "above_pos_avg": -32.06,
-       "ppg": 9.41
+       "starts": 10,
+       "points": 88.3,
+       "above_pos_avg": -41.03,
+       "ppg": 8.83
       }
      },
      {
@@ -6829,7 +7064,7 @@
        "pos": "RB",
        "starts": 8,
        "points": 170.4,
-       "above_pos_avg": 66.62,
+       "above_pos_avg": 66.94,
        "ppg": 21.3
       },
       "weakest_link": {
@@ -6837,10 +7072,10 @@
        "team": "Hannah Lee's Revenge",
        "player": "Rashee Rice",
        "pos": "WR",
-       "starts": 6,
-       "points": 38.1,
-       "above_pos_avg": -22.53,
-       "ppg": 6.35
+       "starts": 7,
+       "points": 43.4,
+       "above_pos_avg": -26.29,
+       "ppg": 6.2
       }
      },
      {
@@ -6851,20 +7086,20 @@
        "team": "Ya Boi",
        "player": "James Cook III",
        "pos": "RB",
-       "starts": 9,
-       "points": 160.1,
-       "above_pos_avg": 43.34,
-       "ppg": 17.79
+       "starts": 10,
+       "points": 175.3,
+       "above_pos_avg": 45.97,
+       "ppg": 17.53
       },
       "weakest_link": {
        "team_id": "5",
        "team": "Ya Boi",
-       "player": "MarShawn Lloyd",
+       "player": "Cam Skattebo",
        "pos": "RB",
-       "starts": 3,
-       "points": 13.1,
-       "above_pos_avg": -25.82,
-       "ppg": 4.37
+       "starts": 9,
+       "points": 88.4,
+       "above_pos_avg": -27.99,
+       "ppg": 9.82
       }
      },
      {
@@ -6873,22 +7108,22 @@
       "mvp": {
        "team_id": "6",
        "team": "Kevin Jack's Team",
-       "player": "Ja'Marr Chase",
-       "pos": "WR",
-       "starts": 9,
-       "points": 129.8,
-       "above_pos_avg": 38.85,
-       "ppg": 14.42
+       "player": "Tony Pollard",
+       "pos": "RB",
+       "starts": 4,
+       "points": 86.1,
+       "above_pos_avg": 34.37,
+       "ppg": 21.53
       },
       "weakest_link": {
        "team_id": "6",
        "team": "Kevin Jack's Team",
        "player": "Jalen Coker",
        "pos": "WR",
-       "starts": 5,
-       "points": 22.1,
-       "above_pos_avg": -28.43,
-       "ppg": 4.42
+       "starts": 6,
+       "points": 26.8,
+       "above_pos_avg": -32.93,
+       "ppg": 4.47
       }
      },
      {
@@ -6901,7 +7136,7 @@
        "pos": "WR",
        "starts": 10,
        "points": 184.16,
-       "above_pos_avg": 83.11,
+       "above_pos_avg": 84.6,
        "ppg": 18.42
       },
       "weakest_link": {
@@ -6909,10 +7144,10 @@
        "team": "Michael Scott's Team",
        "player": "Saquon Barkley",
        "pos": "RB",
-       "starts": 7,
-       "points": 51.7,
-       "above_pos_avg": -39.11,
-       "ppg": 7.39
+       "starts": 8,
+       "points": 65.2,
+       "above_pos_avg": -38.26,
+       "ppg": 8.15
       }
      },
      {
@@ -6923,10 +7158,10 @@
        "team": "Ryan's Pierced Pigskin Posse",
        "player": "CeeDee Lamb",
        "pos": "WR",
-       "starts": 10,
-       "points": 146.0,
-       "above_pos_avg": 44.95,
-       "ppg": 14.6
+       "starts": 11,
+       "points": 165.2,
+       "above_pos_avg": 55.69,
+       "ppg": 15.02
       },
       "weakest_link": {
        "team_id": "8",
@@ -6935,7 +7170,7 @@
        "pos": "QB",
        "starts": 5,
        "points": 65.28,
-       "above_pos_avg": -35.91,
+       "above_pos_avg": -36.04,
        "ppg": 13.06
       }
      }
@@ -6946,9 +7181,9 @@
       "team": "Monkey Business",
       "player": "Jahmyr Gibbs",
       "pos": "RB",
-      "starts": 9,
-      "points": 214.4,
-      "above_pos_avg": 97.64,
+      "starts": 10,
+      "points": 238.2,
+      "above_pos_avg": 108.87,
       "ppg": 23.82
      },
      {
@@ -6958,7 +7193,7 @@
       "pos": "WR",
       "starts": 10,
       "points": 184.16,
-      "above_pos_avg": 83.11,
+      "above_pos_avg": 84.6,
       "ppg": 18.42
      },
      {
@@ -6968,7 +7203,7 @@
       "pos": "RB",
       "starts": 8,
       "points": 170.4,
-      "above_pos_avg": 66.62,
+      "above_pos_avg": 66.94,
       "ppg": 21.3
      },
      {
@@ -6976,30 +7211,30 @@
       "team": "Hannah Lee's Revenge",
       "player": "Christian McCaffrey",
       "pos": "RB",
-      "starts": 9,
-      "points": 174.0,
-      "above_pos_avg": 57.24,
-      "ppg": 19.33
+      "starts": 10,
+      "points": 186.2,
+      "above_pos_avg": 56.87,
+      "ppg": 18.62
      },
      {
       "team_id": "2",
       "team": "Monkey Business",
       "player": "Joe Burrow",
       "pos": "QB",
-      "starts": 9,
-      "points": 239.3,
-      "above_pos_avg": 57.16,
-      "ppg": 26.59
+      "starts": 10,
+      "points": 259.2,
+      "above_pos_avg": 56.55,
+      "ppg": 25.92
      },
      {
-      "team_id": "4",
-      "team": "Hannah Lee's Revenge",
-      "player": "Josh Allen",
-      "pos": "QB",
-      "starts": 9,
-      "points": 230.02,
-      "above_pos_avg": 47.88,
-      "ppg": 25.56
+      "team_id": "8",
+      "team": "Ryan's Pierced Pigskin Posse",
+      "player": "CeeDee Lamb",
+      "pos": "WR",
+      "starts": 11,
+      "points": 165.2,
+      "above_pos_avg": 55.69,
+      "ppg": 15.02
      },
      {
       "team_id": "3",
@@ -7008,58 +7243,48 @@
       "pos": "TE",
       "starts": 8,
       "points": 101.8,
-      "above_pos_avg": 45.15,
+      "above_pos_avg": 46.57,
       "ppg": 12.72
-     },
-     {
-      "team_id": "8",
-      "team": "Ryan's Pierced Pigskin Posse",
-      "player": "CeeDee Lamb",
-      "pos": "WR",
-      "starts": 10,
-      "points": 146.0,
-      "above_pos_avg": 44.95,
-      "ppg": 14.6
      },
      {
       "team_id": "5",
       "team": "Ya Boi",
       "player": "James Cook III",
       "pos": "RB",
-      "starts": 9,
-      "points": 160.1,
-      "above_pos_avg": 43.34,
-      "ppg": 17.79
+      "starts": 10,
+      "points": 175.3,
+      "above_pos_avg": 45.97,
+      "ppg": 17.53
      },
      {
       "team_id": "2",
       "team": "Monkey Business",
       "player": "Bucky Irving",
       "pos": "RB",
-      "starts": 5,
-      "points": 103.9,
-      "above_pos_avg": 39.04,
-      "ppg": 20.78
+      "starts": 6,
+      "points": 119.9,
+      "above_pos_avg": 42.3,
+      "ppg": 19.98
      },
      {
-      "team_id": "6",
-      "team": "Kevin Jack's Team",
-      "player": "Ja'Marr Chase",
-      "pos": "WR",
-      "starts": 9,
-      "points": 129.8,
-      "above_pos_avg": 38.85,
-      "ppg": 14.42
+      "team_id": "4",
+      "team": "Hannah Lee's Revenge",
+      "player": "Josh Allen",
+      "pos": "QB",
+      "starts": 10,
+      "points": 244.18,
+      "above_pos_avg": 41.53,
+      "ppg": 24.42
      },
      {
-      "team_id": "6",
-      "team": "Kevin Jack's Team",
-      "player": "Tony Pollard",
+      "team_id": "3",
+      "team": "Fogle\u2019s Moguls",
+      "player": "Chuba Hubbard",
       "pos": "RB",
-      "starts": 3,
-      "points": 75.1,
-      "above_pos_avg": 36.18,
-      "ppg": 25.03
+      "starts": 9,
+      "points": 155.1,
+      "above_pos_avg": 38.71,
+      "ppg": 17.23
      },
      {
       "team_id": "8",
@@ -7068,8 +7293,18 @@
       "pos": "WR",
       "starts": 7,
       "points": 104.6,
-      "above_pos_avg": 33.86,
+      "above_pos_avg": 34.91,
       "ppg": 14.94
+     },
+     {
+      "team_id": "6",
+      "team": "Kevin Jack's Team",
+      "player": "Tony Pollard",
+      "pos": "RB",
+      "starts": 4,
+      "points": 86.1,
+      "above_pos_avg": 34.37,
+      "ppg": 21.53
      },
      {
       "team_id": "3",
@@ -7078,18 +7313,18 @@
       "pos": "RB",
       "starts": 10,
       "points": 162.7,
-      "above_pos_avg": 32.97,
+      "above_pos_avg": 33.37,
       "ppg": 16.27
      },
      {
-      "team_id": "4",
-      "team": "Hannah Lee's Revenge",
-      "player": "Christian Watson",
+      "team_id": "6",
+      "team": "Kevin Jack's Team",
+      "player": "Ja'Marr Chase",
       "pos": "WR",
       "starts": 10,
-      "points": 132.6,
-      "above_pos_avg": 31.55,
-      "ppg": 13.26
+      "points": 132.9,
+      "above_pos_avg": 33.34,
+      "ppg": 13.29
      }
     ]
    },
@@ -7097,74 +7332,74 @@
     {
      "team_id": "2",
      "team": "Monkey Business",
-     "avg": 121.53,
-     "stdev": 27.16,
+     "avg": 121.75,
+     "stdev": 25.9,
      "high": 164.68,
      "low": 76.72,
-     "above_median_weeks": "7-3"
+     "above_median_weeks": "8-3"
     },
     {
      "team_id": "4",
      "team": "Hannah Lee's Revenge",
-     "avg": 116.45,
-     "stdev": 23.8,
+     "avg": 113.78,
+     "stdev": 24.22,
      "high": 150.86,
      "low": 82.22,
-     "above_median_weeks": "7-3"
+     "above_median_weeks": "7-4"
     },
     {
      "team_id": "3",
      "team": "Fogle\u2019s Moguls",
-     "avg": 108.67,
-     "stdev": 25.28,
+     "avg": 109.59,
+     "stdev": 24.28,
      "high": 151.6,
      "low": 65.54,
-     "above_median_weeks": "5-5"
-    },
-    {
-     "team_id": "6",
-     "team": "Kevin Jack's Team",
-     "avg": 106.19,
-     "stdev": 18.52,
-     "high": 134.98,
-     "low": 70.36,
-     "above_median_weeks": "6-4"
+     "above_median_weeks": "6-5"
     },
     {
      "team_id": "8",
      "team": "Ryan's Pierced Pigskin Posse",
-     "avg": 105.34,
-     "stdev": 22.99,
+     "avg": 105.8,
+     "stdev": 21.97,
      "high": 142.88,
      "low": 76.0,
-     "above_median_weeks": "4-6"
+     "above_median_weeks": "5-6"
+    },
+    {
+     "team_id": "6",
+     "team": "Kevin Jack's Team",
+     "avg": 103.61,
+     "stdev": 19.46,
+     "high": 134.98,
+     "low": 70.36,
+     "above_median_weeks": "6-5"
     },
     {
      "team_id": "7",
      "team": "Michael Scott's Team",
-     "avg": 101.05,
-     "stdev": 17.79,
+     "avg": 100.61,
+     "stdev": 17.02,
      "high": 127.62,
      "low": 68.02,
-     "above_median_weeks": "5-5"
+     "above_median_weeks": "6-5"
     },
     {
      "team_id": "5",
      "team": "Ya Boi",
-     "avg": 97.4,
-     "stdev": 16.12,
+     "avg": 97.03,
+     "stdev": 15.42,
      "high": 132.52,
      "low": 69.54,
-     "above_median_weeks": "4-6"
+     "above_median_weeks": "4-7"
     },
     {
      "team_id": "1",
      "team": "MakeMyTeamGreatAgain",
-     "avg": 94.55,
-     "stdev": 14.39,
+     "avg": 93.3,
+     "stdev": 14.28,
      "high": 117.16,
      "low": 65.1,
-     "above_median_weeks": "2-8"
+     "above_median_weeks": "2-9"
     }
    ],
    "pickups": {
@@ -7174,33 +7409,33 @@
       "team_id": "5",
       "team": "Ya Boi",
       "adds": 12,
-      "points_from_adds": 343.28,
+      "points_from_adds": 388.18,
       "faab_spent": 8.0,
-      "points_per_faab_dollar": 42.91
+      "points_per_faab_dollar": 48.52
      },
      {
       "team_id": "7",
       "team": "Michael Scott's Team",
       "adds": 13,
-      "points_from_adds": 314.76,
+      "points_from_adds": 335.8,
       "faab_spent": 17.0,
-      "points_per_faab_dollar": 18.52
+      "points_per_faab_dollar": 19.75
      },
      {
       "team_id": "1",
       "team": "MakeMyTeamGreatAgain",
       "adds": 13,
-      "points_from_adds": 233.96,
+      "points_from_adds": 256.16,
       "faab_spent": 60.0,
-      "points_per_faab_dollar": 3.9
+      "points_per_faab_dollar": 4.27
      },
      {
       "team_id": "3",
       "team": "Fogle\u2019s Moguls",
       "adds": 14,
-      "points_from_adds": 190.08,
+      "points_from_adds": 220.98,
       "faab_spent": 24.0,
-      "points_per_faab_dollar": 7.92
+      "points_per_faab_dollar": 9.21
      },
      {
       "team_id": "4",
@@ -7242,8 +7477,26 @@
       "week": 3,
       "bid": 6,
       "type": "WAIVER",
-      "starts": 6,
-      "points": 140.22
+      "starts": 7,
+      "points": 162.42
+     },
+     {
+      "team": "Ya Boi",
+      "player": "Dak Prescott",
+      "week": 8,
+      "bid": 8,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 111.62
+     },
+     {
+      "team": "Michael Scott's Team",
+      "player": "Trevor Lawrence",
+      "week": 3,
+      "bid": 0,
+      "type": "FREEAGENT",
+      "starts": 5,
+      "points": 96.78
      },
      {
       "team": "Ya Boi",
@@ -7253,24 +7506,6 @@
       "type": "FREEAGENT",
       "starts": 5,
       "points": 86.36
-     },
-     {
-      "team": "Michael Scott's Team",
-      "player": "Trevor Lawrence",
-      "week": 3,
-      "bid": 0,
-      "type": "FREEAGENT",
-      "starts": 4,
-      "points": 82.04
-     },
-     {
-      "team": "Ya Boi",
-      "player": "Dak Prescott",
-      "week": 8,
-      "bid": 8,
-      "type": "WAIVER",
-      "starts": 3,
-      "points": 75.72
      },
      {
       "team": "Ryan's Pierced Pigskin Posse",
@@ -7305,8 +7540,17 @@
       "week": 4,
       "bid": 3,
       "type": "WAIVER",
-      "starts": 4,
-      "points": 55.5
+      "starts": 5,
+      "points": 56.8
+     },
+     {
+      "team": "Fogle\u2019s Moguls",
+      "player": "Jonah Coleman",
+      "week": 3,
+      "bid": 5,
+      "type": "WAIVER",
+      "starts": 2,
+      "points": 45.7
      },
      {
       "team": "Fogle\u2019s Moguls",
@@ -7319,30 +7563,21 @@
      },
      {
       "team": "Michael Scott's Team",
+      "player": "Jaguars",
+      "week": 8,
+      "bid": 5,
+      "type": "WAIVER",
+      "starts": 4,
+      "points": 45.0
+     },
+     {
+      "team": "Michael Scott's Team",
       "player": "Matthew Stafford",
       "week": 5,
       "bid": 0,
       "type": "FREEAGENT",
       "starts": 2,
       "points": 44.2
-     },
-     {
-      "team": "Michael Scott's Team",
-      "player": "Jaguars",
-      "week": 8,
-      "bid": 5,
-      "type": "WAIVER",
-      "starts": 3,
-      "points": 40.0
-     },
-     {
-      "team": "Fogle\u2019s Moguls",
-      "player": "Vikings",
-      "week": 4,
-      "bid": 6,
-      "type": "WAIVER",
-      "starts": 3,
-      "points": 35.0
      }
     ],
     "top_drop_regrets": [
@@ -7350,22 +7585,29 @@
       "team": "Ryan's Pierced Pigskin Posse",
       "dropped": "Dak Prescott",
       "week": 4,
-      "points_for_others": 90.36,
-      "starts_elsewhere": 4
+      "points_for_others": 126.26,
+      "starts_elsewhere": 5
      },
      {
       "team": "MakeMyTeamGreatAgain",
       "dropped": "Dak Prescott",
       "week": 7,
-      "points_for_others": 75.72,
-      "starts_elsewhere": 3
+      "points_for_others": 111.62,
+      "starts_elsewhere": 4
      },
      {
       "team": "Ya Boi",
       "dropped": "Luther Burden III",
       "week": 3,
-      "points_for_others": 55.5,
-      "starts_elsewhere": 4
+      "points_for_others": 56.8,
+      "starts_elsewhere": 5
+     },
+     {
+      "team": "Hannah Lee's Revenge",
+      "dropped": "Texans",
+      "week": 8,
+      "points_for_others": 38.0,
+      "starts_elsewhere": 3
      },
      {
       "team": "MakeMyTeamGreatAgain",
@@ -7408,13 +7650,6 @@
       "week": 4,
       "points_for_others": 22.7,
       "starts_elsewhere": 3
-     },
-     {
-      "team": "Hannah Lee's Revenge",
-      "dropped": "Texans",
-      "week": 8,
-      "points_for_others": 22.0,
-      "starts_elsewhere": 2
      }
     ]
    },
@@ -7424,8 +7659,8 @@
      "player": "Carnell Tate",
      "from": "Hannah Lee's Revenge",
      "to": "Ya Boi",
-     "points_started_for_new_team": 0,
-     "starts_for_new_team": 0,
+     "points_started_for_new_team": 11.8,
+     "starts_for_new_team": 1,
      "points_started_for_old_team": 0.6,
      "starts_for_old_team": 1
     },
@@ -7444,8 +7679,8 @@
      "player": "Ollie Gordon II",
      "from": "Ya Boi",
      "to": "Hannah Lee's Revenge",
-     "points_started_for_new_team": 41.1,
-     "starts_for_new_team": 4,
+     "points_started_for_new_team": 47.8,
+     "starts_for_new_team": 5,
      "points_started_for_old_team": 14.8,
      "starts_for_old_team": 1
     },
@@ -7454,8 +7689,8 @@
      "player": "Emmett Johnson",
      "from": "Ya Boi",
      "to": "Hannah Lee's Revenge",
-     "points_started_for_new_team": 29.1,
-     "starts_for_new_team": 1,
+     "points_started_for_new_team": 49.4,
+     "starts_for_new_team": 2,
      "points_started_for_old_team": 0,
      "starts_for_old_team": 0
     }
@@ -7464,30 +7699,30 @@
     {
      "team_id": "1",
      "team": "MakeMyTeamGreatAgain",
-     "player": "Matthew Golden",
-     "pos": "WR",
-     "starts": 8,
-     "points": 99.7,
-     "ppg": 12.46,
-     "positional_avg_per_start": 10.11,
-     "above_avg_total": 18.86,
-     "above_avg_per_start": 2.36,
-     "pct_above_avg": 23.33,
-     "share_of_team_points": 10.54
+     "player": "Brock Purdy",
+     "pos": "QB",
+     "starts": 7,
+     "points": 162.42,
+     "ppg": 23.2,
+     "positional_avg_per_start": 20.26,
+     "above_avg_total": 20.57,
+     "above_avg_per_start": 2.94,
+     "pct_above_avg": 14.5,
+     "share_of_team_points": 15.83
     },
     {
      "team_id": "2",
      "team": "Monkey Business",
      "player": "Jahmyr Gibbs",
      "pos": "RB",
-     "starts": 9,
-     "points": 214.4,
+     "starts": 10,
+     "points": 238.2,
      "ppg": 23.82,
-     "positional_avg_per_start": 12.97,
-     "above_avg_total": 97.64,
-     "above_avg_per_start": 10.85,
-     "pct_above_avg": 83.63,
-     "share_of_team_points": 17.64
+     "positional_avg_per_start": 12.93,
+     "above_avg_total": 108.87,
+     "above_avg_per_start": 10.89,
+     "pct_above_avg": 84.18,
+     "share_of_team_points": 17.79
     },
     {
      "team_id": "3",
@@ -7497,11 +7732,11 @@
      "starts": 8,
      "points": 101.8,
      "ppg": 12.72,
-     "positional_avg_per_start": 7.08,
-     "above_avg_total": 45.15,
-     "above_avg_per_start": 5.64,
-     "pct_above_avg": 79.71,
-     "share_of_team_points": 9.37
+     "positional_avg_per_start": 6.9,
+     "above_avg_total": 46.57,
+     "above_avg_per_start": 5.82,
+     "pct_above_avg": 84.3,
+     "share_of_team_points": 8.44
     },
     {
      "team_id": "4",
@@ -7511,39 +7746,39 @@
      "starts": 8,
      "points": 170.4,
      "ppg": 21.3,
-     "positional_avg_per_start": 12.97,
-     "above_avg_total": 66.62,
-     "above_avg_per_start": 8.33,
-     "pct_above_avg": 64.19,
-     "share_of_team_points": 14.63
+     "positional_avg_per_start": 12.93,
+     "above_avg_total": 66.94,
+     "above_avg_per_start": 8.37,
+     "pct_above_avg": 64.7,
+     "share_of_team_points": 13.62
     },
     {
      "team_id": "5",
      "team": "Ya Boi",
      "player": "James Cook III",
      "pos": "RB",
-     "starts": 9,
-     "points": 160.1,
-     "ppg": 17.79,
-     "positional_avg_per_start": 12.97,
-     "above_avg_total": 43.34,
-     "above_avg_per_start": 4.82,
-     "pct_above_avg": 37.12,
-     "share_of_team_points": 16.44
+     "starts": 10,
+     "points": 175.3,
+     "ppg": 17.53,
+     "positional_avg_per_start": 12.93,
+     "above_avg_total": 45.97,
+     "above_avg_per_start": 4.6,
+     "pct_above_avg": 35.55,
+     "share_of_team_points": 16.42
     },
     {
      "team_id": "6",
      "team": "Kevin Jack's Team",
-     "player": "Ja'Marr Chase",
-     "pos": "WR",
-     "starts": 9,
-     "points": 129.8,
-     "ppg": 14.42,
-     "positional_avg_per_start": 10.11,
-     "above_avg_total": 38.85,
-     "above_avg_per_start": 4.32,
-     "pct_above_avg": 42.72,
-     "share_of_team_points": 12.22
+     "player": "Tony Pollard",
+     "pos": "RB",
+     "starts": 4,
+     "points": 86.1,
+     "ppg": 21.53,
+     "positional_avg_per_start": 12.93,
+     "above_avg_total": 34.37,
+     "above_avg_per_start": 8.59,
+     "pct_above_avg": 66.44,
+     "share_of_team_points": 7.55
     },
     {
      "team_id": "7",
@@ -7553,25 +7788,25 @@
      "starts": 10,
      "points": 184.16,
      "ppg": 18.42,
-     "positional_avg_per_start": 10.11,
-     "above_avg_total": 83.11,
-     "above_avg_per_start": 8.31,
-     "pct_above_avg": 82.25,
-     "share_of_team_points": 18.23
+     "positional_avg_per_start": 9.96,
+     "above_avg_total": 84.6,
+     "above_avg_per_start": 8.46,
+     "pct_above_avg": 84.98,
+     "share_of_team_points": 16.64
     },
     {
      "team_id": "8",
      "team": "Ryan's Pierced Pigskin Posse",
      "player": "CeeDee Lamb",
      "pos": "WR",
-     "starts": 10,
-     "points": 146.0,
-     "ppg": 14.6,
-     "positional_avg_per_start": 10.11,
-     "above_avg_total": 44.95,
-     "above_avg_per_start": 4.49,
-     "pct_above_avg": 44.48,
-     "share_of_team_points": 13.86
+     "starts": 11,
+     "points": 165.2,
+     "ppg": 15.02,
+     "positional_avg_per_start": 9.96,
+     "above_avg_total": 55.69,
+     "above_avg_per_start": 5.06,
+     "pct_above_avg": 50.85,
+     "share_of_team_points": 14.19
     }
    ],
    "keepers": [
@@ -7585,10 +7820,10 @@
        "cost_round": null,
        "adp_round": 5,
        "season_points": 39.9,
-       "starts": 8,
-       "above_avg_per_start": -1.27,
-       "ros_per_week": 1.85,
-       "ros_pos_rank": "11 of 11"
+       "starts": 9,
+       "above_avg_per_start": -1.49,
+       "ros_per_week": 1.5,
+       "ros_pos_rank": "13 of 14"
       }
      ]
     },
@@ -7602,10 +7837,10 @@
        "cost_round": null,
        "adp_round": 5,
        "season_points": 91.6,
-       "starts": 5,
-       "above_avg_per_start": 7.81,
-       "ros_per_week": 7.34,
-       "ros_pos_rank": "5 of 48"
+       "starts": 6,
+       "above_avg_per_start": 7.05,
+       "ros_per_week": 7.12,
+       "ros_pos_rank": "3 of 48"
       },
       {
        "player": "Chris Olave",
@@ -7613,9 +7848,9 @@
        "cost_round": null,
        "adp_round": 3,
        "season_points": 75.6,
-       "starts": 9,
-       "above_avg_per_start": -0.28,
-       "ros_per_week": 3.93,
+       "starts": 10,
+       "above_avg_per_start": -0.1,
+       "ros_per_week": 3.7,
        "ros_pos_rank": "16 of 43"
       }
      ]
@@ -7631,9 +7866,9 @@
        "adp_round": 2,
        "season_points": 61.5,
        "starts": 8,
-       "above_avg_per_start": 5.64,
-       "ros_per_week": 3.93,
-       "ros_pos_rank": "2 of 11"
+       "above_avg_per_start": 5.82,
+       "ros_per_week": 3.58,
+       "ros_pos_rank": "2 of 14"
       },
       {
        "player": "Chase Brown",
@@ -7641,10 +7876,10 @@
        "cost_round": null,
        "adp_round": 2,
        "season_points": 46.8,
-       "starts": 9,
-       "above_avg_per_start": -3.56,
-       "ros_per_week": 5.15,
-       "ros_pos_rank": "18 of 48"
+       "starts": 10,
+       "above_avg_per_start": -4.1,
+       "ros_per_week": 4.36,
+       "ros_pos_rank": "19 of 48"
       }
      ]
     },
@@ -7658,10 +7893,10 @@
        "cost_round": null,
        "adp_round": 3,
        "season_points": 25.0,
-       "starts": 6,
+       "starts": 7,
        "above_avg_per_start": -3.76,
-       "ros_per_week": 3.57,
-       "ros_pos_rank": "25 of 43"
+       "ros_per_week": 2.78,
+       "ros_pos_rank": "32 of 43"
       }
      ]
     },
@@ -7685,10 +7920,10 @@
        "cost_round": null,
        "adp_round": 3,
        "season_points": 111.5,
-       "starts": 10,
-       "above_avg_per_start": 1.26,
-       "ros_per_week": 5.74,
-       "ros_pos_rank": "15 of 48"
+       "starts": 11,
+       "above_avg_per_start": 1.92,
+       "ros_per_week": 4.49,
+       "ros_pos_rank": "16 of 48"
       },
       {
        "player": "Travis Etienne Jr.",
@@ -7697,9 +7932,9 @@
        "adp_round": null,
        "season_points": 19.9,
        "starts": 1,
-       "above_avg_per_start": -5.17,
-       "ros_per_week": 4.16,
-       "ros_pos_rank": "27 of 48"
+       "above_avg_per_start": -5.13,
+       "ros_per_week": 4.19,
+       "ros_pos_rank": "24 of 48"
       }
      ]
     },
@@ -7713,55 +7948,51 @@
     {
      "team_id": "1",
      "team": "MakeMyTeamGreatAgain",
-     "trade": null
+     "trade": {
+      "give": [
+       "Kyle Pitts Sr."
+      ],
+      "get": [
+       "Denzel Boston"
+      ],
+      "give_pos": [
+       "TE"
+      ],
+      "get_pos": [
+       "WR"
+      ],
+      "my_gain_per_week": 0.16,
+      "their_gain_per_week": 0.29,
+      "kind": "win-win"
+     }
     },
     {
      "team_id": "2",
      "team": "Monkey Business",
-     "trade": {
-      "give": [
-       "Emmett Johnson",
-       "Kenneth Walker III"
-      ],
-      "get": [
-       "Bucky Irving",
-       "Parker Washington"
-      ],
-      "give_pos": [
-       "RB",
-       "RB"
-      ],
-      "get_pos": [
-       "RB",
-       "WR"
-      ],
-      "my_gain_per_week": 0.1,
-      "their_gain_per_week": 0.59,
-      "kind": "win-win"
-     }
+     "trade": null
     },
     {
      "team_id": "3",
      "team": "Fogle\u2019s Moguls",
      "trade": {
       "give": [
-       "Emmett Johnson",
-       "Kenneth Walker III"
+       "Josh Allen",
+       "Emmett Johnson"
       ],
       "get": [
-       "Justin Jefferson",
-       "Bijan Robinson"
+       "Jayden Daniels",
+       "Tetairoa McMillan"
       ],
       "give_pos": [
-       "RB",
+       "QB",
        "RB"
       ],
       "get_pos": [
-       "WR",
-       "RB"
+       "QB",
+       "WR"
       ],
-      "my_gain_per_week": 0.1,
-      "their_gain_per_week": 0.35,
+      "my_gain_per_week": 0.33,
+      "their_gain_per_week": 0.31,
       "kind": "win-win"
      }
     },
@@ -7771,10 +8002,10 @@
      "trade": {
       "give": [
        "Breece Hall",
-       "Jordan Mason"
+       "Christian McCaffrey"
       ],
       "get": [
-       "Rachaad White",
+       "James Cook III",
        "Travis Kelce"
       ],
       "give_pos": [
@@ -7785,60 +8016,20 @@
        "RB",
        "TE"
       ],
-      "my_gain_per_week": 0.46,
-      "their_gain_per_week": 1.86,
+      "my_gain_per_week": 0.1,
+      "their_gain_per_week": 0.23,
       "kind": "win-win"
      }
     },
     {
      "team_id": "6",
      "team": "Kevin Jack's Team",
-     "trade": {
-      "give": [
-       "Emmett Johnson",
-       "Christian McCaffrey"
-      ],
-      "get": [
-       "Isaiah Likely",
-       "Tony Pollard"
-      ],
-      "give_pos": [
-       "RB",
-       "RB"
-      ],
-      "get_pos": [
-       "TE",
-       "RB"
-      ],
-      "my_gain_per_week": 0.13,
-      "their_gain_per_week": 1.18,
-      "kind": "win-win"
-     }
+     "trade": null
     },
     {
      "team_id": "7",
      "team": "Michael Scott's Team",
-     "trade": {
-      "give": [
-       "Emmett Johnson",
-       "Ollie Gordon II"
-      ],
-      "get": [
-       "Javonte Williams",
-       "Luther Burden III"
-      ],
-      "give_pos": [
-       "RB",
-       "RB"
-      ],
-      "get_pos": [
-       "RB",
-       "WR"
-      ],
-      "my_gain_per_week": 0.24,
-      "their_gain_per_week": 0.4,
-      "kind": "win-win"
-     }
+     "trade": null
     },
     {
      "team_id": "8",
@@ -7849,19 +8040,19 @@
        "Ollie Gordon II"
       ],
       "get": [
-       "George Pickens",
-       "George Kittle"
+       "George Kittle",
+       "DeVonta Smith"
       ],
       "give_pos": [
        "RB",
        "RB"
       ],
       "get_pos": [
-       "WR",
-       "TE"
+       "TE",
+       "WR"
       ],
-      "my_gain_per_week": 0.18,
-      "their_gain_per_week": 1.25,
+      "my_gain_per_week": 0.24,
+      "their_gain_per_week": 0.21,
       "kind": "win-win"
      }
     }
@@ -8090,7 +8281,7 @@
         "result": "won",
         "starts": 2,
         "points": 12.3,
-        "above_pos_avg": -13.65,
+        "above_pos_avg": -13.57,
         "points_per_dollar": 0.4
        },
        {
@@ -8101,7 +8292,7 @@
         "result": "won",
         "starts": 2,
         "points": 1.8,
-        "above_pos_avg": -12.36,
+        "above_pos_avg": -12.01,
         "points_per_dollar": 0.14
        }
       ]
@@ -8135,7 +8326,7 @@
         "result": "won",
         "starts": 3,
         "points": 45.42,
-        "above_pos_avg": -15.29,
+        "above_pos_avg": -15.37,
         "points_per_dollar": 4.54
        }
       ]
@@ -8169,7 +8360,7 @@
         "result": "won",
         "starts": 2,
         "points": 18.3,
-        "above_pos_avg": -7.65,
+        "above_pos_avg": -7.57,
         "points_per_dollar": 1.66
        }
       ]
