@@ -1,6 +1,6 @@
 {
  "year": 2026,
- "generated": "2026-11-24T13:07:26.745902+00:00",
+ "generated": "2026-11-24T22:52:06.760864+00:00",
  "source": "ESPN fantasy API, kona_playercard (player.injuryDetails.expectedReturnDate)",
  "pool_size": 1005,
  "injuries": [
@@ -26,20 +26,6 @@
    "ret": "2026-11-25"
   },
   {
-   "id": 4372070,
-   "name": "Ben VanSumeren",
-   "pos": "RB",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-26"
-  },
-  {
-   "id": 4596602,
-   "name": "Brashard Smith",
-   "pos": "RB",
-   "status": "INJURY_RESERVE",
-   "ret": "2026-11-26"
-  },
-  {
    "id": 3121023,
    "name": "Dallas Goedert",
    "pos": "TE",
@@ -57,7 +43,7 @@
    "id": 4242355,
    "name": "Jake Ferguson",
    "pos": "TE",
-   "status": "QUESTIONABLE",
+   "status": "DOUBTFUL",
    "ret": "2026-11-26"
   },
   {
@@ -75,23 +61,9 @@
    "ret": "2026-11-26"
   },
   {
-   "id": 4240472,
-   "name": "Noah Gray",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-26"
-  },
-  {
    "id": 4426386,
    "name": "Roschon Johnson",
    "pos": "RB",
-   "status": "QUESTIONABLE",
-   "ret": "2026-11-26"
-  },
-  {
-   "id": 4430027,
-   "name": "Sam LaPorta",
-   "pos": "TE",
    "status": "QUESTIONABLE",
    "ret": "2026-11-26"
   },
@@ -115,6 +87,13 @@
    "pos": "RB",
    "status": "QUESTIONABLE",
    "ret": "2026-11-26"
+  },
+  {
+   "id": 4035656,
+   "name": "Ben Skowronek",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-27"
   },
   {
    "id": 4432208,
@@ -217,6 +196,13 @@
   {
    "id": 4401805,
    "name": "Dareke Young",
+   "pos": "WR",
+   "status": "QUESTIONABLE",
+   "ret": "2026-11-29"
+  },
+  {
+   "id": 4832800,
+   "name": "Denzel Boston",
    "pos": "WR",
    "status": "QUESTIONABLE",
    "ret": "2026-11-29"
@@ -425,6 +411,13 @@
    "ret": "2026-11-30"
   },
   {
+   "id": 4596602,
+   "name": "Brashard Smith",
+   "pos": "RB",
+   "status": "INJURY_RESERVE",
+   "ret": "2026-12-03"
+  },
+  {
    "id": 3886809,
    "name": "Andre Baccellia",
    "pos": "WR",
@@ -555,6 +548,13 @@
    "name": "Ihmir Smith-Marsette",
    "pos": "WR",
    "status": "QUESTIONABLE",
+   "ret": "2026-12-06"
+  },
+  {
+   "id": 4241985,
+   "name": "J.K. Dobbins",
+   "pos": "RB",
+   "status": "OUT",
    "ret": "2026-12-06"
   },
   {
@@ -801,6 +801,13 @@
    "pos": "RB",
    "status": "INJURY_RESERVE",
    "ret": "2026-12-25"
+  },
+  {
+   "id": 4372070,
+   "name": "Ben VanSumeren",
+   "pos": "RB",
+   "status": "INJURY_RESERVE",
+   "ret": "2026-12-27"
   },
   {
    "id": 4431452,
@@ -1143,13 +1150,6 @@
    "name": "Robbie Ouzts",
    "pos": "RB",
    "status": "INJURY_RESERVE",
-   "ret": "2027-02-15"
-  },
-  {
-   "id": 4036275,
-   "name": "Sean McKeon",
-   "pos": "TE",
-   "status": "QUESTIONABLE",
    "ret": "2027-02-15"
   },
   {
