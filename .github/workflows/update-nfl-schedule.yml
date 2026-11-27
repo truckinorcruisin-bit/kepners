@@ -11,6 +11,7 @@ name: Update NFL Schedule + Matchups
 on:
   schedule:
     - cron: '0 15 * * 2'
+    - cron: '0 22 * * 2'   # backstop: if the morning run hit a source outage, try again that evening
   workflow_dispatch:
     inputs:
       year:
@@ -21,6 +22,7 @@ on:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 35   # the script now waits out 503s patiently (up to ~2 min per page)
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
