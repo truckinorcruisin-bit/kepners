@@ -3559,6 +3559,10 @@ function mgrPlayoffOutlookHtml(key, lg, myTeam){
     ? `<div class="po-sum"><b class="g">${isMe?'Your starters':'Their starters'} with the best playoff matchups:</b> ${ranked.slice(0,3).map(nm).join(', ')}<br>
         <b class="r">Toughest:</b> ${ranked.slice(-3).reverse().map(nm).join(', ')}</div>` : '';
   const gen = MATCHUPS && MATCHUPS.generated ? MATCHUPS.generated.slice(0,10) : '';
+  // positions the last refresh couldn't reload keep their previous numbers, flagged here
+  const staleP = (MATCHUPS && MATCHUPS.stale_positions) ? Object.entries(MATCHUPS.stale_positions) : [];
+  const staleNote = staleP.length
+    ? `<div class="po-warn">⚠ ${staleP.map(([p,d])=>`${escapeHtml(p)} matchups are from an earlier pull (${escapeHtml(String(d).slice(0,10))})`).join('; ')} — the latest refresh couldn't reach the source for ${staleP.length>1?'them':'it'}.</div>` : '';
   const byeNote = R.byes
     ? `If you earn a bye you only play Weeks ${wks[1]}–${wks[wks.length-1]}, so those decide a title; Week ${R.bye_week} only matters as a ${R.byes+1}–${R.teams} seed.`
     : (R.byes===0 ? `No bye here: every playoff team plays every week, so the columns count equally.`
@@ -3566,6 +3570,7 @@ function mgrPlayoffOutlookHtml(key, lg, myTeam){
   return `${picker}<div class="po-fmt">${fmt}</div>
     <div class="po-note">${byeNote}</div>
     ${summary}
+    ${staleNote}
     <div class="po-wrap"><table class="po-tbl"><thead>${head}</thead><tbody>${body}</tbody></table></div>
     <div class="po-note">Number = points per game the opponent gives up to that position vs. an average opponent
       (schedule-adjusted; green = easier). For DEF it's points a D/ST scores against that offense.

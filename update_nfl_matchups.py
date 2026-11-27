@@ -32,7 +32,9 @@ YEAR = next((int(a) for a in sys.argv[1:] if a.isdigit()), 2026)
 PROBE = "--probe" in sys.argv
 UA = ("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) "
       "Chrome/124.0 Safari/537.36 kepners-draft-control/1.0")
-PAUSE = 1.5            # politeness gap between page fetches
+PAUSE = 6.0            # politeness gap between FTA page fetches (+ up to 3s random jitter)
+BACKOFF = [10, 30, 60, 120]   # waits after a transient failure (503/429/network); Retry-After wins if sent
+TRANSIENT = {429, 500, 502, 503, 504}
 FTA_BASE = "https://fantasyteamadvice.com/nfl/strength-of-schedule/playoff"
 FTA_WEEKS = [14, 15, 16, 17]
 # tab name -> our position key.  "" is the combined/overall tab.  On the DST tab FTA grades a team's OWN
@@ -77,17 +79,44 @@ def fail(msg):
     sys.exit(1)
 
 
-def http_get(url, tries=3, as_json=False):
+def load_prev():
+    """The last good matchup file, if any. Used as a per-position fallback when a page won't load."""
+    try:
+        return json.load(open(f"matchup_ratings_{YEAR}.json"))
+    except Exception:                                                  # noqa: BLE001
+        return None
+
+
+SESSION = requests.Session()
+SESSION.headers.update({
+    "User-Agent": UA,
+    "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+})
+
+
+def http_get(url, tries=5, as_json=False):
+    """GET with patient retries. A 503/429 from a public site is almost always 'slow down' or a brief
+    outage, so wait it out (10s, 30s, 60s, 120s, or the server's Retry-After) instead of failing in 6
+    seconds. Non-transient errors (403/404) get one retry, then fail."""
     last = None
     for i in range(tries):
+        wait = BACKOFF[min(i, len(BACKOFF) - 1)]
         try:
-            r = requests.get(url, headers={"User-Agent": UA, "Accept": "*/*"}, timeout=40)
+            r = SESSION.get(url, timeout=40)
             if r.status_code == 200:
                 return r.json() if as_json else r.text
             last = f"HTTP {r.status_code}"
+            ra = r.headers.get("Retry-After", "")
+            if ra.isdigit():
+                wait = min(int(ra), 180)
+            if r.status_code not in TRANSIENT and i >= 1:
+                break
         except Exception as e:                                       # noqa: BLE001
             last = str(e)
-        time.sleep(2 * (i + 1))
+        if i < tries - 1:
+            print(f"  retry {i + 1}/{tries - 1} for {url.split('?')[0]} after {last}; waiting {wait}s")
+            time.sleep(wait)
     raise RuntimeError(f"GET failed after {tries} tries: {url} ({last})")
 
 
@@ -353,31 +382,48 @@ def main():
         print(f"::warning::ESPN schedule failed: {e}")
 
     # --- FTA ---
+    # A page that won't load (after patient retries) falls back to that position's table from the last good
+    # file, flagged stale, instead of sinking the whole run. The run only goes red when NOTHING is fresh.
+    import random
+    prev = None if PROBE else load_prev()
+    prev_pos = (prev or {}).get("positions") or {}
+    prev_stale = (prev or {}).get("stale_positions") or {}
+    stale = {}
     fta = {}
+    first = True
     for tab, pos in FTA_TABS.items():
         qs = "&".join(f"weeks%5B%5D={w}" for w in FTA_WEEKS)
         url = f"{FTA_BASE}?{('tab=' + tab + '&') if tab else ''}{qs}"
-        # DEF is the newest tab: if it alone breaks, drop it with a warning rather than blocking the
-        # QB-TE numbers that already work.
-        soft = pos in OPTIONAL_POS
+        if not first:
+            time.sleep(PAUSE + random.uniform(0, 3))
+        first = False
+        SESSION.headers["Referer"] = FTA_BASE
         try:
             html = http_get(url)
-        except Exception as e:                                        # noqa: BLE001
-            if soft:
-                print(f"::warning::FTA {pos} page fetch failed ({e}); continuing without {pos}")
-                continue
-            fail(f"FTA {pos} page fetch failed: {e}")
-        if PROBE:
-            open(f"probe_out/fta_{tab or 'all'}.html", "w", encoding="utf-8").write(html)
-        try:
+            if PROBE:
+                open(f"probe_out/fta_{tab or 'all'}.html", "w", encoding="utf-8").write(html)
             fta[pos] = parse_fta(html)
+            print(f"FTA {pos}: {len(fta[pos])} teams")
         except Exception as e:                                        # noqa: BLE001
-            if soft:
-                print(f"::warning::FTA {pos} parse failed ({e}); continuing without {pos}")
-                continue
-            fail(f"FTA {pos} parse failed: {e} -- run the probe workflow and send me probe_out/")
-        print(f"FTA {pos}: {len(fta[pos])} teams")
-        time.sleep(PAUSE)
+            old = (prev_pos.get(pos) or {}).get("teams")
+            if old:
+                fta[pos] = old
+                stale[pos] = prev_stale.get(pos) or (prev or {}).get("generated")
+                print(f"::warning::FTA {pos} unavailable ({e}); keeping the last good {pos} table "
+                      f"from {stale[pos]}")
+            elif pos in OPTIONAL_POS:
+                print(f"::warning::FTA {pos} unavailable ({e}); continuing without {pos}")
+            elif PROBE:
+                print(f"::warning::FTA {pos} failed in probe: {e}")
+            else:
+                fail(f"FTA {pos} failed and there is no earlier data to fall back on: {e}")
+
+    fresh = [p for p in fta if p not in stale]
+    if not PROBE and not fresh:
+        fail("no FTA page loaded this run (all failed); leaving the last good files untouched")
+    if not PROBE and "ALL" in stale and len(stale) < len(fta):
+        # the combined table drives the symmetry check; if only it is stale, still fine to proceed
+        pass
 
     if PROBE:
         for pos, tbl in fta.items():
@@ -400,6 +446,7 @@ def main():
             print(f"::error::{p}")
         fail(f"{len(problems)} validation problem(s); nothing written")
 
+    stale = {k: v for k, v in stale.items() if k in fta}      # DEF may have been dropped by validation
     now = datetime.now(timezone.utc).isoformat()
     # schedule file: ESPN full season if we have it, else the FTA weeks-14-17 slice
     if espn:
@@ -436,6 +483,7 @@ def main():
                  "size is slightly overstated."),
         "positions": positions,
         "dst_check": {"corr": dcorr, "cells": dn, "ok": dok},
+        "stale_positions": stale,
     }
     json.dump(ratings, open(f"matchup_ratings_{YEAR}.json", "w"), indent=1)
     print(f"Wrote nfl_schedule_{YEAR}.json and matchup_ratings_{YEAR}.json")
